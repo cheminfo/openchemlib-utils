@@ -1,5 +1,6 @@
 import { getOCL } from '../getOCL';
 
+import { getAtomsInfo as getAtomsInfoFct } from './getAtomsInfo';
 import { getConnectivityMatrix as getConnectivityMatrixFct } from './getConnectivityMatrix';
 import { makeRacemic as makeRacemicFct } from './makeRacemic';
 import { tagAtom as tagAtomFct } from './tagAtom';
@@ -18,6 +19,10 @@ export function tagAtom(molecule, iAtom, options = {}) {
 
 export function getConnectivityMatrix(molecule, options = {}) {
   getConnectivityMatrixFct(getOCL(OCL, options), molecule);
+}
+
+export function getAtomsInfo(molecule, options = {}) {
+  getAtomsInfoFct(getOCL(OCL, options), molecule);
 }
 
 export function initOCL(externalOCL) {

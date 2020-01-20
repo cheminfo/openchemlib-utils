@@ -1,5 +1,12 @@
 import { getHoseCodesForAtom } from './getHoseCodesForAtom';
 
+/**
+ * Returns the hose code for a specific marked atom
+ * @param {OCL} OCL
+ * @param {string} diastereotopicID
+ * @param {object} options
+ */
+
 export function getHoseCodesFromDiastereotopicID(
   OCL,
   diastereotopicID,

@@ -2,6 +2,14 @@ import { getDiastereotopicAtomIDs } from '../diastereotopic/getDiastereotopicAto
 
 import { getHoseCodesFromDiastereotopicID } from './getHoseCodesFromDiastereotopicID';
 
+/**
+ * Returns an array containing one entry per atom containing
+ * diaID and hose code
+ * @param {OCL} OCL
+ * @param {OCL.Molecule} molecule
+ * @param {object} options
+ */
+
 export function getHoseCodesAndDiastereotopicIDs(OCL, molecule, options) {
   const diaIDs = getDiastereotopicAtomIDs(OCL, molecule).map((oclID) => ({
     oclID,
