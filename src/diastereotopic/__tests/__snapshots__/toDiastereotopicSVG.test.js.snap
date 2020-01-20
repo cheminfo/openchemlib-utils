@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toDiastereotopicSVG CCC 1`] = `
+"<svg id=\\"ocl\\" xmlns=\\"http://www.w3.org/2000/svg\\" version=\\"1.1\\" width=\\"300px\\" height=\\"200px\\" viewBox=\\"0 0 300 200\\">
+  <style> #ocl { pointer-events:none; } #ocl .event  { pointer-events:all; } line { stroke-linecap:round; } polygon { stroke-linejoin:round; } </style>
+  <line x1=\\"170.78\\" y1=\\"106\\" x2=\\"150\\" y2=\\"94\\" stroke=\\"rgb(0,0,0)\\" stroke-width=\\"1.44\\" />
+  <line x1=\\"150\\" y1=\\"94\\" x2=\\"129.22\\" y2=\\"106\\" stroke=\\"rgb(0,0,0)\\" stroke-width=\\"1.44\\" />
+  <line id=\\"ocl:Bond:0\\" class=\\"event\\" x1=\\"170.78\\" y1=\\"106\\" x2=\\"150\\" y2=\\"94\\" stroke-width=\\"8\\" opacity=\\"0\\" />
+  <line id=\\"ocl:Bond:1\\" class=\\"event\\" x1=\\"150\\" y1=\\"94\\" x2=\\"129.22\\" y2=\\"106\\" stroke-width=\\"8\\" opacity=\\"0\\" />
+  <circle id=\\"ocl:Atom:0\\" data-diaid=\\"eM@Df\`Xb\`RP\\\\Jh\\" class=\\"event\\" cx=\\"170.78\\" cy=\\"106\\" r=\\"8\\" opacity=\\"0\\" />
+  <circle id=\\"ocl:Atom:1\\" data-diaid=\\"eM@HzAbJC}IApj\`\\" class=\\"event\\" cx=\\"150\\" cy=\\"94\\" r=\\"8\\" opacity=\\"0\\" />
+  <circle id=\\"ocl:Atom:2\\" data-diaid=\\"eM@Df\`Xb\`RP\\\\Jh\\" class=\\"event\\" cx=\\"129.22\\" cy=\\"106\\" r=\\"8\\" opacity=\\"0\\" />
+</svg>"
+`;
