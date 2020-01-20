@@ -18,10 +18,10 @@ export function getHoseCodesAndDiastereotopicIDs(OCL, molecule, options) {
   diaIDs.forEach(function(diaID) {
     const hoses = getHoseCodesFromDiastereotopicID(OCL, diaID.oclID, options);
     diaID.hoses = [];
-    let level = 0;
+    let sphere = 0;
     for (const hose of hoses) {
       diaID.hoses.push({
-        level: level++,
+        sphere: sphere++,
         oclID: hose,
       });
     }

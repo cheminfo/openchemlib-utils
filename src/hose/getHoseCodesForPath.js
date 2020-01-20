@@ -19,7 +19,7 @@ export function getHoseCodesForPath(OCL, molecule, from, to, pathLength) {
   tagAtom(OCL, molecule, to);
 
   let atoms = [];
-  molecule.getPath(atoms, from, to, pathLength);
+  molecule.getPath(atoms, from, to, pathLength + 1);
   let torsion;
   if (atoms.length === 4) {
     torsion = molecule.calculateTorsion(atoms);
@@ -29,7 +29,7 @@ export function getHoseCodesForPath(OCL, molecule, from, to, pathLength) {
   let max = 0;
   let atomMask = new Array(molecule.getAllAtoms()).fill(false);
   let atomList = new Array(molecule.getAllAtoms()).fill(-1);
-  let pathCodes = [];
+  let hoses = [];
 
   for (let sphere = 0; sphere <= 2; sphere++) {
     if (max === 0) {
@@ -53,18 +53,20 @@ export function getHoseCodesForPath(OCL, molecule, from, to, pathLength) {
       max = newMax;
     }
     molecule.copyMoleculeByAtoms(fragment, atomMask, true, null);
-    pathCodes.push(
-      fragment.getCanonizedIDCode(
+    hoses.push({
+      sphere,
+      oclID: fragment.getCanonizedIDCode(
         OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
       ),
-    );
+    });
   }
 
   return {
     atoms,
+    from,
     to,
     torsion,
-    pathCodes,
+    hoses,
     length: pathLength,
   };
 }
