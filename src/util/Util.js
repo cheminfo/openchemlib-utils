@@ -1,4 +1,4 @@
-import { getOCL } from '../getOCL';
+import { getOCL } from '../OCL';
 
 import { getAtomsInfo as getAtomsInfoFct } from './getAtomsInfo';
 import { getConnectivityMatrix as getConnectivityMatrixFct } from './getConnectivityMatrix';
@@ -7,24 +7,18 @@ import { tagAtom as tagAtomFct } from './tagAtom';
 
 export * from './isCsp3';
 
-export let OCL;
-
 export function makeRacemic(molecule, options = {}) {
-  makeRacemicFct(getOCL(OCL, options), molecule);
+  makeRacemicFct(getOCL(options), molecule);
 }
 
 export function tagAtom(molecule, iAtom, options = {}) {
-  tagAtomFct(getOCL(OCL, options), molecule, iAtom);
+  tagAtomFct(getOCL(options), molecule, iAtom);
 }
 
 export function getConnectivityMatrix(molecule, options = {}) {
-  getConnectivityMatrixFct(getOCL(OCL, options), molecule);
+  getConnectivityMatrixFct(getOCL(options), molecule);
 }
 
 export function getAtomsInfo(molecule, options = {}) {
-  getAtomsInfoFct(getOCL(OCL, options), molecule);
-}
-
-export function initOCL(externalOCL) {
-  OCL = externalOCL;
+  getAtomsInfoFct(getOCL(options), molecule);
 }

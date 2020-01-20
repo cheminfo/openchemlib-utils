@@ -2,16 +2,14 @@ import OCL from 'openchemlib';
 
 import { isCsp3 } from '../util/Util';
 
-import { Dia, Util, Hose, initOCL } from '..';
+import { makeRacemic, initOCL } from '..';
 
 describe('openchemlib-utils', () => {
   it('makeRacemic', () => {
     const molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC');
-    expect(() => Util.makeRacemic(molecule)).toThrow(
-      'OCL has to be initialized',
-    );
+    expect(() => makeRacemic(molecule)).toThrow('OCL has to be initialized');
     initOCL(OCL);
-    Util.makeRacemic(molecule);
+    makeRacemic(molecule);
     expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
   });
 
