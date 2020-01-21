@@ -1,11 +1,14 @@
 import OCL from 'openchemlib';
 
 import { getHoseCodesForPath } from '../getHoseCodesForPath';
+import { initOCL } from '../../OCL';
+
+initOCL(OCL);
 
 describe('getHoseCodesForPath', () => {
   it('CCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(C)CCCC');
-    let path = getHoseCodesForPath(OCL, molecule, 0, 4, 3);
+    let path = getHoseCodesForPath(molecule, 0, 4, 3);
 
     path.hoses.forEach((hose) => {
       hose.oclID = escape(hose.oclID);

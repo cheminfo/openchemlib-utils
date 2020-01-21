@@ -3,7 +3,6 @@ import { makeRacemic } from '../util/makeRacemic';
 
 /**
  * Returns an array of all the different atom diaIDs that are connected
- * {OCL}
  * {OCL.Molecule} molecule
  * {object} [options={}]
  * {string} [options.fromLabel='H']
@@ -12,7 +11,8 @@ import { makeRacemic } from '../util/makeRacemic';
  * {number} [options.maxLength=4]
  */
 
-function getAllCouplings(OCL, molecule, options = {}) {
+function getAllCouplings(molecule, options = {}) {
+  const OCL = getOCL();
   const {
     fromLabel = 'H',
     toLabel = 'H',
@@ -49,8 +49,8 @@ function getAllCouplings(OCL, molecule, options = {}) {
 
         let tmpMolecule = molecule.getCompactCopy();
         makeRacemic(OCL, tmpMolecule);
-        tagAtom(OCL, tmpMolecule, atoms[0]);
-        tagAtom(OCL, tmpMolecule, atoms[atoms.length - 1]);
+        tagAtom(tmpMolecule, atoms[0]);
+        tagAtom(tmpMolecule, atoms[atoms.length - 1]);
 
         let atomMask = new Array(tmpMolecule.getAllAtoms()).fill(false);
         let atomList = [];

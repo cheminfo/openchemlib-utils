@@ -9,7 +9,7 @@ export function getAtomsInfo(molecule) {
   const OCL = getOCL();
   molecule.ensureHelperArrays(OCL.Molecule.cHelperRings);
 
-  let diaIDs = getDiastereotopicAtomIDs(OCL, molecule);
+  let diaIDs = getDiastereotopicAtomIDs(molecule);
 
   let results = [];
   for (let i = 0; i < diaIDs.length; i++) {

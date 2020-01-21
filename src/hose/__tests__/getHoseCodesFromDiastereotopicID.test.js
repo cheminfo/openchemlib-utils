@@ -1,13 +1,13 @@
 import OCL from 'openchemlib';
 
 import { getHoseCodesFromDiastereotopicID } from '../getHoseCodesFromDiastereotopicID';
+import { initOCL } from '../../OCL';
+
+initOCL(OCL);
 
 describe('getHoseCodeFromDiastereotopicID', () => {
   it('CC(Cl)CC', () => {
-    let hoses = getHoseCodesFromDiastereotopicID(
-      OCL,
-      'gJPHADILuTe@X`hOtbCpfuP',
-    );
+    let hoses = getHoseCodesFromDiastereotopicID('gJPHADILuTe@X`hOtbCpfuP');
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'fHdPAqTGzT%5EDvj@',
@@ -19,11 +19,9 @@ describe('getHoseCodeFromDiastereotopicID', () => {
   });
 
   it('CC(Cl)CC maxSphere:2', () => {
-    let hoses = getHoseCodesFromDiastereotopicID(
-      OCL,
-      'gJPHADILuTe@X`hOtbCpfuP',
-      { maxSphereSize: 2 },
-    );
+    let hoses = getHoseCodesFromDiastereotopicID('gJPHADILuTe@X`hOtbCpfuP', {
+      maxSphereSize: 2,
+    });
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'fHdPAqTGzT%5EDvj@',

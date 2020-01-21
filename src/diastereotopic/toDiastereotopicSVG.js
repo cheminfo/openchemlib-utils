@@ -1,6 +1,6 @@
 import { getDiastereotopicAtomIDsAndH } from './getDiastereotopicAtomIDsAndH';
 
-export function toDiastereotopicSVG(OCL, molecule, options = {}) {
+export function toDiastereotopicSVG(molecule, options = {}) {
   let {
     width = 300,
     height = 200,
@@ -11,7 +11,7 @@ export function toDiastereotopicSVG(OCL, molecule, options = {}) {
   let diaIDs = [];
 
   let hydrogenInfo = {};
-  getDiastereotopicAtomIDsAndH(OCL, molecule).forEach(function(line) {
+  getDiastereotopicAtomIDsAndH(molecule).forEach(function(line) {
     hydrogenInfo[line.oclID] = line;
   });
 

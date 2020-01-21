@@ -1,22 +1,23 @@
 import { tagAtom } from '../util/tagAtom';
+import { getOCL } from '../OCL';
 
 let fragment;
 
 /**
  * Returns the hose code for a specific atom number
- * @param {OCL} OCL
  * @param {OCL.Molecule} originalMolecule
  * @param {number} rootAtom
  * @param {object} [options={}]
  * @param {boolean} [options.isTagged] Specify is the atom is already tagged
  */
-export function getHoseCodesForPath(OCL, molecule, from, to, pathLength) {
+export function getHoseCodesForPath(molecule, from, to, pathLength) {
+  const OCL = getOCL();
   molecule = molecule.getCompactCopy();
 
   if (!fragment) fragment = new OCL.Molecule(0, 0);
 
-  tagAtom(OCL, molecule, from);
-  tagAtom(OCL, molecule, to);
+  tagAtom(molecule, from);
+  tagAtom(molecule, to);
 
   let atoms = [];
   molecule.getPath(atoms, from, to, pathLength + 1);

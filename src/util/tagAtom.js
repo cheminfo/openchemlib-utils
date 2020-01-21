@@ -1,9 +1,11 @@
+import { getOCL } from '../OCL';
+
 let xAtomicNumber = 0;
 
-export function tagAtom(OCL, molecule, iAtom) {
+export function tagAtom(molecule, iAtom) {
   molecule.setAtomCustomLabel(iAtom, `${molecule.getAtomLabel(iAtom)}*`);
   if (molecule.getAtomicNo(iAtom) === 1) {
-    molecule.setAtomicNo(iAtom, getXAtomicNumber(OCL));
+    molecule.setAtomicNo(iAtom, getXAtomicNumber());
   } else {
     // we can not use X because we would have problems with valencies if it is
     // expanded hydrogens or not
@@ -12,8 +14,9 @@ export function tagAtom(OCL, molecule, iAtom) {
   }
 }
 
-function getXAtomicNumber(OCL) {
+function getXAtomicNumber() {
   if (!xAtomicNumber) {
+    const OCL = getOCL();
     xAtomicNumber = OCL.Molecule.getAtomicNoFromLabel('X');
   }
   return xAtomicNumber;

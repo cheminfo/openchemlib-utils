@@ -53,8 +53,8 @@ export function getPathsInfo(OCL, molecule, options = {}) {
 
 function getCoupling(molecule, from, to, pathLength, diaIDto) {
   molecule = molecule.getCompactCopy();
-  tagAtom(OCL, molecule, from);
-  tagAtom(OCL, molecule, to);
+  tagAtom(molecule, from);
+  tagAtom(molecule, to);
 
   let atoms = [];
   molecule.getPath(atoms, from, to, pathLength);

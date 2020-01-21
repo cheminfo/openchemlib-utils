@@ -1,3 +1,5 @@
+import { getOCL } from '../OCL';
+
 const { tagAtom } = require('../util/tagAtom');
 const { isCsp3 } = require('../util/isCsp3');
 
@@ -6,18 +8,13 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
 
 /**
  * Returns the hose code for a specific atom number
- * @param {OCL} OCL
  * @param {OCL.Molecule} originalMolecule
  * @param {number} rootAtom
  * @param {object} [options={}]
  * @param {boolean} [options.isTagged] Specify is the atom is already tagged
  */
-export function getHoseCodesForAtom(
-  OCL,
-  originalMolecule,
-  rootAtom,
-  options = {},
-) {
+export function getHoseCodesForAtom(originalMolecule, rootAtom, options = {}) {
+  const OCL = getOCL();
   const {
     minSphereSize = 0,
     maxSphereSize = 4,
@@ -27,7 +24,7 @@ export function getHoseCodesForAtom(
 
   const molecule = originalMolecule.getCompactCopy();
 
-  if (!isTagged) tagAtom(OCL, molecule, rootAtom);
+  if (!isTagged) tagAtom(molecule, rootAtom);
 
   molecule.setFragment(true);
 

@@ -1,11 +1,14 @@
 import OCL from 'openchemlib';
 
 import { getHoseCodesAndDiastereotopicIDs } from '../getHoseCodesAndDiastereotopicIDs';
+import { initOCL } from '../../OCL';
+
+initOCL(OCL);
 
 describe('getHoseCodesAndDiastereotopicIDs', () => {
   it('CC(Cl)CC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
-    let diaIDs = getHoseCodesAndDiastereotopicIDs(OCL, molecule, {
+    let diaIDs = getHoseCodesAndDiastereotopicIDs(molecule, {
       maxSphereSize: 2,
     });
     //need to escape the values

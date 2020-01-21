@@ -1,14 +1,16 @@
-import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
+import { getOCL } from '../OCL';
 
+import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
 // Previously getExtendedDiastereotopicAtomIDs
 
-export function getDiastereotopicAtomIDsAndH(OCL, originalMolecule) {
+export function getDiastereotopicAtomIDsAndH(originalMolecule) {
+  const OCL = getOCL();
   const molecule = originalMolecule.getCompactCopy();
   molecule.addImplicitHydrogens();
   // TODO Temporary code ???
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
 
-  const diaIDs = getDiastereotopicAtomIDs(OCL, molecule);
+  const diaIDs = getDiastereotopicAtomIDs(molecule);
   const newDiaIDs = [];
 
   for (let i = 0; i < diaIDs.length; i++) {

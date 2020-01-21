@@ -1,11 +1,14 @@
 import OCL from 'openchemlib';
 
 import { getHoseCodesForAtom } from '../getHoseCodesForAtom';
+import { initOCL } from '../../OCL';
+
+initOCL(OCL);
 
 describe('getHoseCodesForAtom', () => {
   it('CCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
-    let hoses = getHoseCodesForAtom(OCL, molecule, 0);
+    let hoses = getHoseCodesForAtom(molecule, 0);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'fH@NJ%60%7FRapj%60',

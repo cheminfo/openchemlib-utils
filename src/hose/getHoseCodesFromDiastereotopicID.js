@@ -1,17 +1,17 @@
-import { getHoseCodesForAtom } from './getHoseCodesForAtom';
+import { getOCL } from '../OCL';
 
+import { getHoseCodesForAtom } from './getHoseCodesForAtom';
 /**
  * Returns the hose code for a specific marked atom
- * @param {OCL} OCL
  * @param {string} diastereotopicID
  * @param {object} options
  */
 
 export function getHoseCodesFromDiastereotopicID(
-  OCL,
   diastereotopicID,
   options = {},
 ) {
+  const OCL = getOCL();
   const molecule = OCL.Molecule.fromIDCode(diastereotopicID);
   // One of the atom has to be marked !
   let atomID = -1;
@@ -25,7 +25,7 @@ export function getHoseCodesFromDiastereotopicID(
   }
   if (atomID >= 0) {
     options.isTagged = true;
-    return getHoseCodesForAtom(OCL, molecule, atomID, options);
+    return getHoseCodesForAtom(molecule, atomID, options);
   }
   return undefined;
 }
