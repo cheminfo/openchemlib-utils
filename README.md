@@ -13,11 +13,24 @@
 ## Usage
 
 ```js
-import library from 'openchemlib-utils';
+import OCL from 'openchemlib';
 
-const result = library(args);
-// result is ...
+import { Path, initOCL } from 'openchemlib-utils';
+initOCL(OCL);
+
+const molecule = OCL.Molecule.fromSmiles('CCCCC');
+
+const paths = Path.getPathsInfo(molecule, {
+  fromLabel: 'H',
+  toLabel: 'H',
+  minLength: 1,
+  maxLength: 4,
+});
+
+console.log(paths);
 ```
+
+We will add more examples in `/examples`.
 
 ## [API Documentation](https://cheminfo.github.io/openchemlib-utils/)
 
