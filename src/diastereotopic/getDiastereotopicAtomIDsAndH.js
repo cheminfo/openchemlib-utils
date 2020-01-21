@@ -3,6 +3,11 @@ import { getOCL } from '../OCL';
 import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
 // Previously getExtendedDiastereotopicAtomIDs
 
+/**
+ *
+ * @param {OCL.Molecule} molecule
+ * @memberof Dia
+ */
 export function getDiastereotopicAtomIDsAndH(originalMolecule) {
   const OCL = getOCL();
   const molecule = originalMolecule.getCompactCopy();

@@ -1,10 +1,21 @@
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix';
-import { tagAtom } from '../util/tagAtom';
 import { getAtomsInfo } from '../util/getAtomsInfo';
+import { getOCL } from '../OCL';
+import { getHoseCodesForPath } from '../hose/getHoseCodesForPath';
 
 let fragment;
 
-export function getPathsInfo(OCL, molecule, options = {}) {
+/**
+ *
+ * @param {OCL.Molecule} molecule
+ * @param {object} [options={}]
+ * @param {string} [opions.fromLabel='H']
+ * @param {string} [opions.toLabel='H']
+ * @param {string} [opions.minLenght=1]
+ * @param {string} [opions.maxLength=4]
+ * @memberof Util
+ */
+export function getPathsInfo(molecule, options = {}) {
   const {
     fromLabel = 'H',
     toLabel = 'H',
@@ -12,15 +23,19 @@ export function getPathsInfo(OCL, molecule, options = {}) {
     maxLength = 4,
   } = options;
 
-  fragment = new OCL.Molecule(0, 0);
+  const OCL = getOCL();
+
+  if (!fragment) {
+    fragment = new OCL.Molecule(0, 0);
+  }
 
   let fromAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(fromLabel);
   let toAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(toLabel);
 
   // we need to find all the atoms 'fromLabel' and 'toLabel'
-  let atomsInfo = getAtomsInfo(OCL, molecule);
+  let atomsInfo = getAtomsInfo(molecule);
 
-  let pathLengthMatrix = getConnectivityMatrix(OCL, molecule, {
+  let pathLengthMatrix = getConnectivityMatrix(molecule, {
     pathLength: true,
   });
 
@@ -33,7 +48,7 @@ export function getPathsInfo(OCL, molecule, options = {}) {
             let pathLength = pathLengthMatrix[from][to];
             if (pathLength >= minLength && pathLength <= maxLength) {
               atomsInfo[from].couplings.push(
-                getCoupling(
+                getHoseCodesForPath(
                   molecule,
                   from,
                   to,
@@ -49,61 +64,4 @@ export function getPathsInfo(OCL, molecule, options = {}) {
   }
 
   return atomsInfo;
-}
-
-function getCoupling(molecule, from, to, pathLength, diaIDto) {
-  molecule = molecule.getCompactCopy();
-  tagAtom(molecule, from);
-  tagAtom(molecule, to);
-
-  let atoms = [];
-  molecule.getPath(atoms, from, to, pathLength);
-  let torsion;
-  if (atoms.length === 4) {
-    torsion = molecule.calculateTorsion(atoms);
-  }
-
-  let min = 0;
-  let max = 0;
-  let atomMask = new Array(molecule.getAllAtoms()).fill(false);
-  let atomList = new Array(molecule.getAllAtoms()).fill(-1);
-  let pathCodes = [];
-
-  for (let sphere = 0; sphere <= 2; sphere++) {
-    if (max === 0) {
-      for (let atom of atoms) {
-        atomMask[atom] = true;
-        atomList[max++] = atom;
-      }
-    } else {
-      let newMax = max;
-      for (let i = min; i < max; i++) {
-        let atom = atomList[i];
-        for (let j = 0; j < molecule.getConnAtoms(atom); j++) {
-          let connAtom = molecule.getConnAtom(atom, j);
-          if (!atomMask[connAtom]) {
-            atomMask[connAtom] = true;
-            atomList[newMax++] = connAtom;
-          }
-        }
-      }
-      min = max;
-      max = newMax;
-    }
-    molecule.copyMoleculeByAtoms(fragment, atomMask, true, null);
-    pathCodes.push(
-      fragment.getCanonizedIDCode(
-        OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
-      ),
-    );
-  }
-
-  return {
-    atoms,
-    to,
-    torsion,
-    pathCodes,
-    diaIDto,
-    length: pathLength,
-  };
 }

@@ -5,6 +5,7 @@ import { getHoseCodesForAtom } from './getHoseCodesForAtom';
  * Returns the hose code for a specific marked atom
  * @param {string} diastereotopicID
  * @param {object} options
+ * @memberof Hose
  */
 
 export function getHoseCodesFromDiastereotopicID(

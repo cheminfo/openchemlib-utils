@@ -11,7 +11,7 @@ import { getOCL } from '../OCL';
  * @param {boolean} [options.mass=false] set the nominal mass of the atoms on diagonal
  * @param {boolean} [options.atomicNo=false] set the atomic number of the atom on diagonal
  * @param {boolean} [options.sdt=false] set 1, 2 or 3 depending if single, double or triple bond
- *
+ * @memberof Util
  */
 export function getConnectivityMatrix(molecule, options = {}) {
   const OCL = getOCL();

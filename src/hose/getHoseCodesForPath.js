@@ -5,12 +5,10 @@ let fragment;
 
 /**
  * Returns the hose code for a specific atom number
- * @param {OCL.Molecule} originalMolecule
- * @param {number} rootAtom
- * @param {object} [options={}]
- * @param {boolean} [options.isTagged] Specify is the atom is already tagged
+ * @param {OCL.Molecule} molecule
+ * @memberof Hose
  */
-export function getHoseCodesForPath(molecule, from, to, pathLength) {
+export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const OCL = getOCL();
   molecule = molecule.getCompactCopy();
 
@@ -20,7 +18,7 @@ export function getHoseCodesForPath(molecule, from, to, pathLength) {
   tagAtom(molecule, to);
 
   let atoms = [];
-  molecule.getPath(atoms, from, to, pathLength + 1);
+  molecule.getPath(atoms, from, to, maxLength + 1);
   let torsion;
   if (atoms.length === 4) {
     torsion = molecule.calculateTorsion(atoms);
@@ -68,6 +66,6 @@ export function getHoseCodesForPath(molecule, from, to, pathLength) {
     to,
     torsion,
     hoses,
-    length: pathLength,
+    length: atoms.length - 1,
   };
 }

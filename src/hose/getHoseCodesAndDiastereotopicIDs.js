@@ -6,6 +6,7 @@ import { getHoseCodesFromDiastereotopicID } from './getHoseCodesFromDiastereotop
  * diaID and hose code
  * @param {OCL.Molecule} molecule
  * @param {object} options
+ * @memberof Hose
  */
 
 export function getHoseCodesAndDiastereotopicIDs(molecule, options) {

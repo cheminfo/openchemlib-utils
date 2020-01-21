@@ -4,6 +4,7 @@ import { getDiastereotopicAtomIDs } from '../diastereotopic/getDiastereotopicAto
 /**
  * Returns various information about atoms in the molecule
  * @param {OCL.Molecule} [molecule]
+ * @memberof Util
  */
 export function getAtomsInfo(molecule) {
   const OCL = getOCL();

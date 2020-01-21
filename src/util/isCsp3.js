@@ -2,6 +2,7 @@
  * Check if a specific atom is a sp3 carbon
  * @param {OCL.Molecule} molecule
  * @param {number} atomID
+ * @memberof Util
  */
 
 export function isCsp3(molecule, atomID) {
