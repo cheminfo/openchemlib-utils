@@ -9,6 +9,7 @@
     "src"
   ],
   "scripts": {
+    "build": "rollup -c && cheminfo-build --root OCLUtil",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "cheminfo-build": "^1.0.5",
     "eslint": "^6.8.0",
     "eslint-config-cheminfo": "^2.0.4",
     "eslint-plugin-import": "^2.20.0",
@@ -47,7 +49,9 @@
     "jest": "^24.9.0",
     "openchemlib": "^7.2.3",
     "prettier": "^1.19.1",
-    "rollup": "^1.29.0"
+    "rollup": "^1.29.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
     "ml-floyd-warshall": "^1.0.0",

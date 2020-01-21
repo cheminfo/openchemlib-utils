@@ -1,7 +1,6 @@
 import { getOCL } from '../OCL';
-
-const { tagAtom } = require('../util/tagAtom');
-const { isCsp3 } = require('../util/isCsp3');
+import { tagAtom } from '../util/tagAtom';
+import { isCsp3 } from '../util/isCsp3';
 
 export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
