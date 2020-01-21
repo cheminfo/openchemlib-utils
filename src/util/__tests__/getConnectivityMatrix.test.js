@@ -1,13 +1,16 @@
 import OCL from 'openchemlib';
 
 import { getConnectivityMatrix } from '../getConnectivityMatrix';
+import { initOCL } from '../../OCL';
+
+initOCL(OCL);
 
 describe('getConnectivityMatrix', () => {
   it('propane with expanded hydrogens', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC');
     molecule.addImplicitHydrogens();
 
-    let connectivityMatrix = getConnectivityMatrix(OCL, molecule);
+    let connectivityMatrix = getConnectivityMatrix(molecule);
     expect(connectivityMatrix).toStrictEqual([
       [1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0],
       [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0],
@@ -83,7 +86,7 @@ describe('getConnectivityMatrix', () => {
 
   it('benzene pathLength matrix', () => {
     let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(OCL, molecule, {
+    let connectivityMatrix = getConnectivityMatrix(molecule, {
       pathLength: true,
     });
     expect(connectivityMatrix).toStrictEqual([

@@ -1,7 +1,6 @@
 let OCL;
 
-export function getOCL(options = {}) {
-  if (options.OCL) return options.OCL;
+export function getOCL() {
   if (!OCL) {
     throw new Error('OCL has to be initialized using initOCL(OCL)');
   }

@@ -1,6 +1,12 @@
+import { getOCL } from '../OCL';
 import { getDiastereotopicAtomIDs } from '../diastereotopic/getDiastereotopicAtomIDs';
 
-export function getAtomsInfo(OCL, molecule) {
+/**
+ * Returns various information about atoms in the molecule
+ * @param {OCL.Molecule} [molecule]
+ */
+export function getAtomsInfo(molecule) {
+  const OCL = getOCL();
   molecule.ensureHelperArrays(OCL.Molecule.cHelperRings);
 
   let diaIDs = getDiastereotopicAtomIDs(OCL, molecule);

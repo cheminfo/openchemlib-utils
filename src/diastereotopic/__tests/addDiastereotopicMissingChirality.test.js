@@ -6,7 +6,7 @@ describe('addDiastereotopicMissingChirality', () => {
   it('CC(Cl)CC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
     addDiastereotopicMissingChirality(OCL, molecule);
-    expect(molecule.getIDCode()).toBe('gJPHADILuTb@');
+    expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
   });
 
   it('CCC(C)C', () => {
