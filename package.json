@@ -49,12 +49,12 @@
     "jest": "^24.9.0",
     "openchemlib": "^7.2.3",
     "prettier": "^1.19.1",
-    "rollup": "^1.29.0",
+    "rollup": "^1.29.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
-    "ml-floyd-warshall": "^1.0.0",
+    "ml-floyd-warshall": "^1.0.1",
     "ml-matrix": "^6.4.1"
   }
 }
