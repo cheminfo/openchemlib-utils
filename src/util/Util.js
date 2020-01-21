@@ -1,5 +1,13 @@
-export * from './getAtomsInfo';
-export * from './getConnectivityMatrix';
-export * from './makeRacemic';
-export * from './tagAtom';
-export * from './isCsp3';
+import { getAtomsInfo } from './getAtomsInfo';
+import { getConnectivityMatrix } from './getConnectivityMatrix';
+import { makeRacemic } from './makeRacemic';
+import { tagAtom } from './tagAtom';
+import { isCsp3 } from './isCsp3';
+
+export const Util = {
+  getAtomsInfo,
+  getConnectivityMatrix,
+  makeRacemic,
+  tagAtom,
+  isCsp3,
+};

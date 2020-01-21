@@ -13,7 +13,7 @@ let fragment;
  * @param {string} [opions.toLabel='H']
  * @param {string} [opions.minLenght=1]
  * @param {string} [opions.maxLength=4]
- * @memberof Util
+ * @memberof Path
  */
 export function getPathsInfo(molecule, options = {}) {
   const {
