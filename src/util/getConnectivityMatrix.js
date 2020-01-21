@@ -1,9 +1,10 @@
 import floydWarshall from 'ml-floyd-warshall';
 import { Matrix } from 'ml-matrix';
 
+import { getOCL } from '../OCL';
+
 /**
  * Returns a connectivity matrix
- * @param {OCL} OCL
  * @param {OCL.Molecule} molecule
  * @param {object} [options={}]
  * @param {boolean} [options.pathLength=false] get the path length between atoms
@@ -12,7 +13,8 @@ import { Matrix } from 'ml-matrix';
  * @param {boolean} [options.sdt=false] set 1, 2 or 3 depending if single, double or triple bond
  *
  */
-export function getConnectivityMatrix(OCL, molecule, options = {}) {
+export function getConnectivityMatrix(molecule, options = {}) {
+  const OCL = getOCL();
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
   let nbAtoms = molecule.getAllAtoms();
 

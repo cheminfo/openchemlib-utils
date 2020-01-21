@@ -1,11 +1,14 @@
 import OCL from 'openchemlib';
 
 import { tagAtom } from '../tagAtom';
+import { initOCL } from '../../OCL';
+
+initOCL(OCL);
 
 describe('tagAtom', () => {
   it('CCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC');
-    tagAtom(OCL, molecule, 0);
+    tagAtom(molecule, 0);
     expect(
       escape(
         molecule.getCanonizedIDCode(
@@ -14,7 +17,7 @@ describe('tagAtom', () => {
       ),
     ).toBe('eM@Df%60Xb%60%7FRP%5CJh');
     molecule = OCL.Molecule.fromSmiles('CCC');
-    tagAtom(OCL, molecule, 1);
+    tagAtom(molecule, 1);
     expect(
       escape(
         molecule.getCanonizedIDCode(
