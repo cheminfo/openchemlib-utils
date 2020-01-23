@@ -1,6 +1,15 @@
 <html>
   <head>
     <script src="./openchemlib-utils.js"></script>
+    <script src="https://www.lactame.com/lib/openchemlib/7.2.3/openchemlib-core.js"></script>
+    <script>
+      const { initOCL, Path } = OCLUtils;
+      initOCL(OCL);
+      const molecule = OCL.Molecule.fromSmiles('CCC');
+
+      const paths = Path.getPathsInfo(molecule);
+      console.log(paths);
+    </script>
   </head>
   <body></body>
 </html>

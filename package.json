@@ -9,7 +9,7 @@
     "src"
   ],
   "scripts": {
-    "build": "rollup -c && cheminfo-build --root OCLUtil",
+    "build": "rollup -c && cheminfo-build --entry src/index.js --root OCLUtils",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
@@ -47,15 +47,13 @@
     "eslint-plugin-jest": "^23.6.0",
     "eslint-plugin-prettier": "^3.1.2",
     "esm": "^3.2.25",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "openchemlib": "^7.2.3",
     "prettier": "^1.19.1",
-    "rollup": "^1.29.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup": "^1.29.1"
   },
   "dependencies": {
-    "ml-floyd-warshall": "^1.0.1",
+    "ml-floyd-warshall": "^1.0.2",
     "ml-matrix": "^6.4.1"
   }
 }
