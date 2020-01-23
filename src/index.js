@@ -1,14 +1,18 @@
-/** @namespace Dia */
-export * from './diastereotopic/Dia';
+export * from './diastereotopic/addDiastereotopicMissingChirality';
+export * from './diastereotopic/getDiastereotopicAtomIDs';
+export * from './diastereotopic/getDiastereotopicAtomIDsAndH';
+export * from './diastereotopic/toDiastereotopicSVG';
 
-/** @namespace Hose */
-export * from './hose/Hose';
+export * from './hose/getHoseCodesAndDiastereotopicIDs';
+export * from './hose/getHoseCodesForAtom';
+export * from './hose/getHoseCodesFromDiastereotopicID';
 
-/** @namespace Util */
-export * from './util/Util';
+export * from './util/getAtomsInfo';
+export * from './util/getConnectivityMatrix';
+export * from './util/makeRacemic';
+export * from './util/tagAtom';
+export * from './util/isCsp3';
 
-/** @namespace Path */
-export * from './path/Path';
+export * from './path/getPathsInfo';
 
-/** @namespace */
-export { initOCL } from './OCL';
+export * from './OCL';
