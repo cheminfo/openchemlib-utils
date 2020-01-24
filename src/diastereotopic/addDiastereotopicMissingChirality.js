@@ -8,7 +8,6 @@ import { getOCL } from '../OCL';
  * @param {OCL.Molecule} molecule
  * @param {object} [options={}]
  * @param {number} [options.esrType=cESRTypeAnd]
- * @memberof Dia
  */
 export function addDiastereotopicMissingChirality(molecule, options = {}) {
   const { Molecule } = getOCL();

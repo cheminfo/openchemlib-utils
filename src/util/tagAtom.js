@@ -6,7 +6,6 @@ let xAtomicNumber = 0;
  * Tag an atom to be able to visualize it
  * @param {OCL.Molecule} molecule
  * @param {number} iAtom
- * @memberof Util
  */
 export function tagAtom(molecule, iAtom) {
   molecule.setAtomCustomLabel(iAtom, `${molecule.getAtomLabel(iAtom)}*`);

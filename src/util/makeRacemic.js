@@ -5,7 +5,6 @@ import { getOCL } from '../OCL';
  * @param {OCL.Molecule} [molecule] An instance of a molecule
  * @param {object} [options={}]
  * @param {object} [options.OCL] openchemlib library
- * @memberof Util
  */
 export function makeRacemic(molecule) {
   const { Molecule } = getOCL();

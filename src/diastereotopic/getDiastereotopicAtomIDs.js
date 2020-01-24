@@ -7,7 +7,6 @@ import { addDiastereotopicMissingChirality } from './addDiastereotopicMissingChi
 /**
  * Returns an array of diastereotopic ID (as oclCode)
  * @param {OCL.Molecule} molecule
- * @memberof Dia
  */
 export function getDiastereotopicAtomIDs(molecule) {
   const OCL = getOCL();

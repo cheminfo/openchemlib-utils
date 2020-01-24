@@ -11,7 +11,6 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * @param {number} rootAtom
  * @param {object} [options={}]
  * @param {boolean} [options.isTagged] Specify is the atom is already tagged
- * @memberof Hose
  */
 export function getHoseCodesForAtom(originalMolecule, rootAtom, options = {}) {
   const OCL = getOCL();

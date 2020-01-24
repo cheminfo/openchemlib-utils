@@ -6,7 +6,6 @@ import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
 /**
  *
  * @param {OCL.Molecule} molecule
- * @memberof Dia
  */
 export function getDiastereotopicAtomIDsAndH(originalMolecule) {
   const OCL = getOCL();

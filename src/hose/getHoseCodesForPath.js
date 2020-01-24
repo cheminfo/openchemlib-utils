@@ -6,7 +6,6 @@ let fragment;
 /**
  * Returns the hose code for a specific atom number
  * @param {OCL.Molecule} molecule
- * @memberof Hose
  */
 export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const OCL = getOCL();

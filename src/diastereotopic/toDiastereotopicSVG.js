@@ -4,7 +4,6 @@ import { getDiastereotopicAtomIDsAndH } from './getDiastereotopicAtomIDsAndH';
  * Returns a SVG
  * @param {*} molecule
  * @param {*} [options={}]
- * @memberof Dia
  */
 export function toDiastereotopicSVG(molecule, options = {}) {
   let {
