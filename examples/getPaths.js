@@ -2,13 +2,13 @@
 
 import OCL from 'openchemlib';
 
-import { Path, initOCL } from '../src';
+import { getPathsInfo, initOCL } from '../src';
 
 initOCL(OCL);
 
 const molecule = OCL.Molecule.fromSmiles('CCCCC');
 
-const paths = Path.getPathsInfo(molecule, {
+const paths = getPathsInfo(molecule, {
   fromLabel: 'H',
   toLabel: 'H',
   minLength: 1,
