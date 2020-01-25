@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "ml-floyd-warshall": "^1.0.3",
-    "ml-matrix": "^6.4.1"
+    "ml-matrix": "^6.4.1",
+    "node-dijkstra": "^2.5.0"
   }
 }
