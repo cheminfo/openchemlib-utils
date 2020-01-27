@@ -8,7 +8,8 @@ let xAtomicNumber = 0;
  * @param {number} iAtom
  */
 export function tagAtom(molecule, iAtom) {
-  molecule.setAtomCustomLabel(iAtom, `${molecule.getAtomLabel(iAtom)}*`);
+  let customLabel = `${molecule.getAtomLabel(iAtom)}*`;
+  molecule.setAtomCustomLabel(iAtom, customLabel);
   if (molecule.getAtomicNo(iAtom) === 1) {
     molecule.setAtomicNo(iAtom, getXAtomicNumber());
   } else {
@@ -17,6 +18,7 @@ export function tagAtom(molecule, iAtom) {
     // we can not only use a custom label because it does not count for the canonisation
     molecule.setAtomMass(iAtom, molecule.getAtomMass(iAtom) + 5);
   }
+  return customLabel;
 }
 
 function getXAtomicNumber() {
