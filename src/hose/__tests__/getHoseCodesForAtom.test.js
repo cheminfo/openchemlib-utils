@@ -12,10 +12,10 @@ describe('getHoseCodesForAtom', () => {
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'fH@NJ%60%7FRapj%60',
-      'eF@Hp%5CQP_iHNET',
-      'gC%60HADIMTAqEP_iDSaU@',
-      'gJPHADIMuPGDUA%7EdQNET',
-      'gJPHADIMuPGDUA%7EdQNET',
+      'eF@Hp%5CQP%5EcotdGBj@',
+      'gC%60HADIMUIPNHjCrdKotbIpj%60',
+      'gJPHADIMuTe@xbhOZPnv_iDSaU@',
+      'gJPHADIMuTe@XbhOtbIpj%60',
     ]);
   });
 });

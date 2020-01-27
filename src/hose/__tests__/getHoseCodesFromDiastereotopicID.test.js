@@ -12,9 +12,9 @@ describe('getHoseCodeFromDiastereotopicID', () => {
     expect(hoses).toStrictEqual([
       'fHdPAqTGzT%5EDvj@',
       'eFBBHcAqEA%7EdaxSZh',
-      'gC%60HADIMTAqAP_iDGaMj%60',
-      'gJPHADILuTe@x%60hOtbCpfuP',
-      'gJPHADILuTe@x%60hOtbCpfuP',
+      'gC%60HADIMTAqAP%5Edc%7DH%60%7CImT',
+      'gJPHADILuTe@x%60hOZPlw_iDGaMj%60',
+      'gJPHADILuTe@X%60hOtbCpfuP',
     ]);
   });
 
@@ -23,10 +23,11 @@ describe('getHoseCodeFromDiastereotopicID', () => {
       maxSphereSize: 2,
     });
     hoses = hoses.map((hose) => escape(hose));
+
     expect(hoses).toStrictEqual([
       'fHdPAqTGzT%5EDvj@',
       'eFBBHcAqEA%7EdaxSZh',
-      'gC%60HADIMTAqAP_iDGaMj%60',
+      'gC%60HADIMTAqAP%5Edc%7DH%60%7CImT',
     ]);
   });
 });

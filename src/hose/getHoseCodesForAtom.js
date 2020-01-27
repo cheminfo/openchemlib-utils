@@ -1,6 +1,7 @@
 import { getOCL } from '../OCL';
 import { tagAtom } from '../util/tagAtom';
 import { isCsp3 } from '../util/isCsp3';
+import { makeRacemic } from '../util/makeRacemic';
 
 export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
@@ -23,9 +24,19 @@ export function getHoseCodesForAtom(originalMolecule, rootAtom, options = {}) {
 
   const molecule = originalMolecule.getCompactCopy();
 
-  if (!isTagged) tagAtom(molecule, rootAtom);
-
-  molecule.setFragment(true);
+  if (!isTagged) {
+    let tag = tagAtom(molecule, rootAtom);
+    molecule.addImplicitHydrogens();
+    molecule.addMissingChirality();
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
+    // because ensuring helper reorder atoms we need to look again for it
+    for (let i = 0; i < molecule.getAllAtoms(); i++) {
+      if (tag === molecule.getAtomCustomLabel(i)) {
+        rootAtom = i;
+        break;
+      }
+    }
+  }
 
   let fragment = new OCL.Molecule(0, 0);
   let results = [];
@@ -43,7 +54,7 @@ export function getHoseCodesForAtom(originalMolecule, rootAtom, options = {}) {
       let newMax = max;
       for (let i = min; i < max; i++) {
         let atom = atomList[i];
-        for (let j = 0; j < molecule.getConnAtoms(atom); j++) {
+        for (let j = 0; j < molecule.getAllConnAtoms(atom); j++) {
           let connAtom = molecule.getConnAtom(atom, j);
           if (!atomMask[connAtom]) {
             switch (kind) {
@@ -68,6 +79,7 @@ export function getHoseCodesForAtom(originalMolecule, rootAtom, options = {}) {
     }
     molecule.copyMoleculeByAtoms(fragment, atomMask, true, null);
     if (sphere >= minSphereSize) {
+      makeRacemic(fragment);
       results.push(
         fragment.getCanonizedIDCode(
           OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,

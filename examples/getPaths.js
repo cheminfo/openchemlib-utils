@@ -9,9 +9,9 @@ initOCL(OCL);
 const molecule = OCL.Molecule.fromSmiles('CCO');
 molecule.addImplicitHydrogens();
 const atoms = getPathsInfo(molecule, {
-  fromLabel: 'C',
+  fromLabel: 'H',
   toLabel: 'H',
-  minLength: 3,
+  minLength: 2,
   maxLength: 4,
 });
 

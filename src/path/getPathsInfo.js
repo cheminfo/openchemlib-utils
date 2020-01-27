@@ -40,14 +40,14 @@ export function getPathsInfo(molecule, options = {}) {
   });
 
   for (let from = 0; from < molecule.getAllAtoms(); from++) {
-    atomsInfo[from].couplings = [];
+    atomsInfo[from].paths = [];
     for (let to = 0; to < molecule.getAllAtoms(); to++) {
       if (from !== to) {
         if (molecule.getAtomicNo(from) === fromAtomicNumber) {
           if (molecule.getAtomicNo(to) === toAtomicNumber) {
             let pathLength = pathLengthMatrix[from][to];
             if (pathLength >= minLength && pathLength <= maxLength) {
-              atomsInfo[from].couplings.push(
+              atomsInfo[from].paths.push(
                 getHoseCodesForPath(
                   molecule,
                   from,

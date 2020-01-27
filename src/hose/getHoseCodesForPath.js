@@ -1,5 +1,6 @@
 import { tagAtom } from '../util/tagAtom';
 import { getOCL } from '../OCL';
+import { makeRacemic } from '../util/makeRacemic';
 
 let fragment;
 
@@ -9,12 +10,40 @@ let fragment;
  */
 export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const OCL = getOCL();
+  const originalFrom = from;
+  const originalTo = to;
   molecule = molecule.getCompactCopy();
 
-  if (!fragment) fragment = new OCL.Molecule(0, 0);
+  const tag1 = tagAtom(molecule, from);
+  const tag2 = tagAtom(molecule, to);
 
-  tagAtom(molecule, from);
-  tagAtom(molecule, to);
+  molecule.addImplicitHydrogens();
+  molecule.addMissingChirality();
+
+  molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
+
+  from = -1;
+  to = -1;
+  for (let i = 0; i < molecule.getAllAtoms(); i++) {
+    if (tag1 === tag2) {
+      if (molecule.getAtomCustomLabel(i) === tag1) {
+        if (from === -1) {
+          from = i;
+        } else {
+          to = i;
+        }
+      }
+    } else {
+      if (tag1 === molecule.getAtomCustomLabel(i)) {
+        from = i;
+      }
+      if (tag2 === molecule.getAtomCustomLabel(i)) {
+        to = i;
+      }
+    }
+  }
+
+  if (!fragment) fragment = new OCL.Molecule(0, 0);
 
   let atoms = [];
   molecule.getPath(atoms, from, to, maxLength + 1);
@@ -39,7 +68,7 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
       let newMax = max;
       for (let i = min; i < max; i++) {
         let atom = atomList[i];
-        for (let j = 0; j < molecule.getConnAtoms(atom); j++) {
+        for (let j = 0; j < molecule.getAllConnAtoms(atom); j++) {
           let connAtom = molecule.getConnAtom(atom, j);
           if (!atomMask[connAtom]) {
             atomMask[connAtom] = true;
@@ -50,19 +79,24 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
       min = max;
       max = newMax;
     }
-    molecule.copyMoleculeByAtoms(fragment, atomMask, true, null);
+    let atomMap = [];
+
+    molecule.copyMoleculeByAtoms(fragment, atomMask, true, atomMap);
+    makeRacemic(fragment);
+    let oclID = fragment.getCanonizedIDCode(
+      OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    );
+
     hoses.push({
       sphere,
-      oclID: fragment.getCanonizedIDCode(
-        OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
-      ),
+      oclID,
     });
   }
 
   return {
     atoms,
-    from,
-    to,
+    from: originalFrom,
+    to: originalTo,
     torsion,
     hoses,
     length: atoms.length - 1,

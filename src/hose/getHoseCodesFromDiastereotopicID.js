@@ -13,6 +13,9 @@ export function getHoseCodesFromDiastereotopicID(
 ) {
   const OCL = getOCL();
   const molecule = OCL.Molecule.fromIDCode(diastereotopicID);
+  molecule.addImplicitHydrogens();
+  molecule.addMissingChirality();
+
   // One of the atom has to be marked !
   let atomID = -1;
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
