@@ -6,13 +6,20 @@ import { getPathsInfo, initOCL } from '../src';
 
 initOCL(OCL);
 
-const molecule = OCL.Molecule.fromSmiles('CCCCC');
-
-const paths = getPathsInfo(molecule, {
-  fromLabel: 'H',
+const molecule = OCL.Molecule.fromSmiles('CCO');
+molecule.addImplicitHydrogens();
+const atoms = getPathsInfo(molecule, {
+  fromLabel: 'C',
   toLabel: 'H',
-  minLength: 1,
+  minLength: 3,
   maxLength: 4,
 });
 
-console.log(paths);
+for (let atom of atoms) {
+  console.log(escape(atom.oclID));
+  for (let path of atom.paths) {
+    for (let hose of path.hoses) {
+      console.log('    ' + escape(hose.oclID));
+    }
+  }
+}
