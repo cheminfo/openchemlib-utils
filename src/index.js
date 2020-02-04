@@ -14,5 +14,6 @@ export * from './util/tagAtom';
 export * from './util/isCsp3';
 
 export * from './path/getPathsInfo';
+export * from './path/getShortestPaths';
 
 export * from './OCL';
