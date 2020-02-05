@@ -1,6 +1,6 @@
 {
   "name": "openchemlib-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -43,14 +43,14 @@
     "cheminfo-build": "^1.0.5",
     "eslint": "^6.8.0",
     "eslint-config-cheminfo": "^2.0.4",
-    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.6.0",
     "eslint-plugin-prettier": "^3.1.2",
     "esm": "^3.2.25",
     "jest": "^25.1.0",
     "openchemlib": "^7.2.3",
     "prettier": "^1.19.1",
-    "rollup": "^1.29.1"
+    "rollup": "^1.31.0"
   },
   "dependencies": {
     "ml-floyd-warshall": "^1.0.3",
