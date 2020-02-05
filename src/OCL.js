@@ -8,5 +8,8 @@ export function getOCL() {
 }
 
 export function initOCL(newOCL) {
+  if (OCL) {
+    throw new Error('OCL-utils was already initialized with OCL');
+  }
   OCL = newOCL;
 }

@@ -9,6 +9,9 @@ describe('openchemlib-utils', () => {
     initOCL(OCL);
     makeRacemic(molecule);
     expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
+    expect(() => initOCL(OCL)).toThrow(
+      'OCL-utils was already initialized with OCL',
+    );
   });
 
   it('isCsp3', () => {
