@@ -14,6 +14,13 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const originalTo = to;
   molecule = molecule.getCompactCopy();
 
+  let originalAtoms = []; // path before renumbering
+  molecule.getPath(originalAtoms, from, to, maxLength + 1);
+  let torsion;
+  if (originalAtoms.length === 4) {
+    torsion = molecule.calculateTorsion(originalAtoms);
+  }
+
   const tag1 = tagAtom(molecule, from);
   const tag2 = tagAtom(molecule, to);
 
@@ -47,10 +54,6 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
 
   let atoms = [];
   molecule.getPath(atoms, from, to, maxLength + 1);
-  let torsion;
-  if (atoms.length === 4) {
-    torsion = molecule.calculateTorsion(atoms);
-  }
 
   let min = 0;
   let max = 0;
@@ -94,11 +97,11 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
   }
 
   return {
-    atoms,
+    atoms: originalAtoms,
     from: originalFrom,
     to: originalTo,
     torsion,
     hoses,
-    length: atoms.length - 1,
+    length: originalAtoms.length - 1,
   };
 }

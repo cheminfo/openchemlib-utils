@@ -6,7 +6,7 @@ import { initOCL } from '../../OCL';
 initOCL(OCL);
 
 describe('getHoseCodesForPath', () => {
-  it('CCC', () => {
+  it('CC(C)CCCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(C)CCCC');
     let path = getHoseCodesForPath(molecule, 0, 4, 3);
 
@@ -24,6 +24,29 @@ describe('getHoseCodesForPath', () => {
         { sphere: 2, oclID: 'gNp@DiVjjfHGBEAZCsFSEfb%7C%7E%7FQHGBjkaU@' },
       ],
       length: 3,
+    });
+  });
+
+  it('CC with hydrogens', () => {
+    let molecule = OCL.Molecule.fromSmiles('CC');
+    molecule.addImplicitHydrogens();
+    let path = getHoseCodesForPath(molecule, 6, 7, 3);
+
+    path.hoses.forEach((hose) => {
+      hose.oclID = escape(hose.oclID);
+    });
+
+    expect(path).toStrictEqual({
+      atoms: [6, 1, 7],
+      from: 6,
+      to: 7,
+      torsion: undefined,
+      hoses: [
+        { sphere: 0, oclID: 'eMABYYeIhOzJBIUJIU@' },
+        { sphere: 1, oclID: 'gC%60DALjYRZhCzROtRADjdbUP' },
+        { sphere: 2, oclID: 'gC%60DALjYRZhA%7EbPHeTdRj@' },
+      ],
+      length: 2,
     });
   });
 
