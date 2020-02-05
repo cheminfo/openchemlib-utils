@@ -35,7 +35,7 @@ describe('getShortestPaths', () => {
 
     molecule.addImplicitHydrogens();
     let paths = getShortestPaths(molecule);
-    expect(paths[0]).toEqual([
+    expect(paths[0]).toStrictEqual([
       [0],
       null,
       [0, 2],

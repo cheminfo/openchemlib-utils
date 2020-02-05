@@ -17,7 +17,7 @@ describe('getHoseCodesAndDiastereotopicIDs', () => {
         hoses.push(escape(hose.oclID));
       });
     });
-    expect(hoses).toEqual([
+    expect(hoses).toStrictEqual([
       'fH@NJ%60%7FRapj%60',
       'eF@Hp%5CQP%5EcotdGBj@',
       'eF@HpLQP_iHNET',

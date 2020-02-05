@@ -25,7 +25,7 @@ describe('getPathsInfo', () => {
       }
     }
 
-    expect(Object.keys(hoses)).toEqual([
+    expect(Object.keys(hoses)).toStrictEqual([
       'eMABYYeIhOzJBIUJIU@',
       'gC%60DALjYRZhCzROtRADjdbUP',
       'gJQDBIeSJS%5DTA%7CiFs%7DD%60QJiHeT',
@@ -62,7 +62,7 @@ describe('getPathsInfo', () => {
       }
     }
 
-    expect(Object.keys(hoses)).toEqual([
+    expect(Object.keys(hoses)).toStrictEqual([
       'eMABYYeIhOzJBIUJIU@',
       'gC%60DALjYRZhCzROtRADjdbUP',
       'gC%60DALjYRZhA%7EbPHeTdRj@',
