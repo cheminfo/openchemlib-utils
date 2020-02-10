@@ -12,6 +12,7 @@ export * from './util/getConnectivityMatrix';
 export * from './util/makeRacemic';
 export * from './util/tagAtom';
 export * from './util/isCsp3';
+export * from './util/getMF';
 
 export * from './path/getPathsInfo';
 export * from './path/getShortestPaths';
