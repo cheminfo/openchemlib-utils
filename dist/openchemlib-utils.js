@@ -1,6 +1,6 @@
 /**
  * openchemlib-utils
- * @version v0.1.0
+ * @version v0.2.0
  * @link https://github.com/cheminfo/openchemlib-utils#readme
  * @license MIT
  */
