@@ -69,6 +69,21 @@ describe('getConnectivityMatrix', () => {
     ]);
   });
 
+  it.only('benzene with single, double, triple, aromatic', () => {
+    let molecule = OCL.Molecule.fromSmiles('Cc1ccccc1');
+    let connectivityMatrix = getConnectivityMatrix(molecule, {
+      sdta: true,
+    });
+    expect(connectivityMatrix).toStrictEqual([
+      [1, 1, 0, 0, 0, 0, 0],
+      [1, 1, 4, 0, 0, 0, 4],
+      [0, 4, 1, 4, 0, 0, 0],
+      [0, 0, 4, 1, 4, 0, 0],
+      [0, 0, 0, 4, 1, 4, 0],
+      [0, 0, 0, 0, 4, 1, 4],
+      [0, 4, 0, 0, 0, 4, 1],
+    ]);
+  });
   it('benzene with atomic number on diagonal', () => {
     let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
     let connectivityMatrix = getConnectivityMatrix(molecule, {

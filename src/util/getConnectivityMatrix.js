@@ -11,6 +11,7 @@ import { getOCL } from '../OCL';
  * @param {boolean} [options.mass=false] set the nominal mass of the atoms on diagonal
  * @param {boolean} [options.atomicNo=false] set the atomic number of the atom on diagonal
  * @param {boolean} [options.sdt=false] set 1, 2 or 3 depending if single, double or triple bond
+ * @param {boolean} [options.sdta=false] set 1, 2, 3 or 4 depending if single, double, triple or aromatic  bond
  */
 export function getConnectivityMatrix(molecule, options = {}) {
   const OCL = getOCL();
@@ -41,6 +42,23 @@ export function getConnectivityMatrix(molecule, options = {}) {
       let l = molecule.getAllConnAtoms(i);
       for (let j = 0; j < l; j++) {
         result[i][molecule.getConnAtom(i, j)] = molecule.getConnBondOrder(i, j);
+      }
+    }
+  }
+  if (options.sdta) {
+    for (let i = 0; i < nbAtoms; i++) {
+      let l = molecule.getAllConnAtoms(i);
+      for (let j = 0; j < l; j++) {
+        let bondNumber = molecule.getConnBond(i, j);
+        console.log(bondNumber);
+        if (molecule.isAromaticBond(bondNumber)) {
+          result[i][molecule.getConnAtom(i, j)] = 4;
+        } else {
+          result[i][molecule.getConnAtom(i, j)] = molecule.getConnBondOrder(
+            i,
+            j,
+          );
+        }
       }
     }
   } else {
