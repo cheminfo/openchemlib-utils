@@ -44,6 +44,7 @@ describe('getConnectivityMatrix', () => {
     let connectivityMatrix = getConnectivityMatrix(molecule, {
       sdt: true,
     });
+
     expect(connectivityMatrix).toStrictEqual([
       [1, 2, 0, 0, 0, 1],
       [2, 1, 1, 0, 0, 0],
@@ -69,7 +70,7 @@ describe('getConnectivityMatrix', () => {
     ]);
   });
 
-  it.only('benzene with single, double, triple, aromatic', () => {
+  it('benzene with single, double, triple, aromatic', () => {
     let molecule = OCL.Molecule.fromSmiles('Cc1ccccc1');
     let connectivityMatrix = getConnectivityMatrix(molecule, {
       sdta: true,
@@ -96,6 +97,21 @@ describe('getConnectivityMatrix', () => {
       [0, 0, 1, 6, 1, 0],
       [0, 0, 0, 1, 6, 1],
       [1, 0, 0, 0, 1, 6],
+    ]);
+  });
+
+  it('benzene with negative atomic number on diagonal', () => {
+    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    let connectivityMatrix = getConnectivityMatrix(molecule, {
+      negativeAtomicNo: true,
+    });
+    expect(connectivityMatrix).toStrictEqual([
+      [-6, 1, 0, 0, 0, 1],
+      [1, -6, 1, 0, 0, 0],
+      [0, 1, -6, 1, 0, 0],
+      [0, 0, 1, -6, 1, 0],
+      [0, 0, 0, 1, -6, 1],
+      [1, 0, 0, 0, 1, -6],
     ]);
   });
 
