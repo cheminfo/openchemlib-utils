@@ -1,3 +1,13 @@
+# [0.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v0.2.1...v0.3.0) (2020-02-21)
+
+
+### Features
+
+* add negative atomicNo option ([44f812f](https://github.com/cheminfo/openchemlib-utils/commit/44f812fbd237240592f89485e4f39e655af6281b))
+* add sdta for getConnectivityMatrix ([9fe9640](https://github.com/cheminfo/openchemlib-utils/commit/9fe9640f4e5ab23e2f5837249eff528a2da8bdd6))
+
+
+
 ## 0.0.1 (2020-01-21)
 
 
