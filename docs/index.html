@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>openchemlib-utils 0.0.1 | Documentation</title>
+  <title>openchemlib-utils 0.3.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
   <link href='assets/style.css' rel='stylesheet'>
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>openchemlib-utils</h3>
-          <div class='mb1'><code>0.0.1</code></div>
+          <div class='mb1'><code>0.3.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -28,36 +28,6 @@
                   href='#adddiastereotopicmissingchirality'
                   class="">
                   addDiastereotopicMissingChirality
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#getdiastereotopicatomids'
-                  class="">
-                  getDiastereotopicAtomIDs
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#getdiastereotopicatomidsandh'
-                  class="">
-                  getDiastereotopicAtomIDsAndH
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#todiastereotopicsvg'
-                  class="">
-                  toDiastereotopicSVG
                   
                 </a>
                 
@@ -85,9 +55,9 @@
               
                 
                 <li><a
-                  href='#iscsp3'
+                  href='#getdiastereotopicatomids'
                   class="">
-                  isCsp3
+                  getDiastereotopicAtomIDs
                   
                 </a>
                 
@@ -95,19 +65,9 @@
               
                 
                 <li><a
-                  href='#makeracemic'
+                  href='#getdiastereotopicatomidsandh'
                   class="">
-                  makeRacemic
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#tagatom'
-                  class="">
-                  tagAtom
+                  getDiastereotopicAtomIDsAndH
                   
                 </a>
                 
@@ -155,9 +115,69 @@
               
                 
                 <li><a
+                  href='#getmf'
+                  class="">
+                  getMF
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#getpathsinfo'
                   class="">
                   getPathsInfo
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getshortestpaths'
+                  class="">
+                  getShortestPaths
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iscsp3'
+                  class="">
+                  isCsp3
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#makeracemic'
+                  class="">
+                  makeRacemic
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tagatom'
+                  class="">
+                  tagAtom
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#todiastereotopicsvg'
+                  class="">
+                  toDiastereotopicSVG
                   
                 </a>
                 
@@ -183,7 +203,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/diastereotopic/addDiastereotopicMissingChirality.js#L13-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/diastereotopic/addDiastereotopicMissingChirality.js#L12-L43'>
       <span>src/diastereotopic/addDiastereotopicMissingChirality.js</span>
       </a>
     
@@ -280,223 +300,12 @@ This is the case for example for the valine where the 2 C of the methyl groups a
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getdiastereotopicatomids'>
-      getDiastereotopicAtomIDs
-    </h3>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/diastereotopic/getDiastereotopicAtomIDs.js#L12-L28'>
-      <span>src/diastereotopic/getDiastereotopicAtomIDs.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Returns an array of diastereotopic ID (as oclCode)</p>
-
-    <div class='pre p1 fill-light mt0'>getDiastereotopicAtomIDs(molecule: OCL.Molecule)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='getdiastereotopicatomidsandh'>
-      getDiastereotopicAtomIDsAndH
-    </h3>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/diastereotopic/getDiastereotopicAtomIDsAndH.js#L11-L42'>
-      <span>src/diastereotopic/getDiastereotopicAtomIDsAndH.js</span>
-      </a>
-    
-  </div>
-  
-
-  
-    <div class='pre p1 fill-light mt0'>getDiastereotopicAtomIDsAndH(originalMolecule: any, molecule: OCL.Molecule)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>originalMolecule</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='todiastereotopicsvg'>
-      toDiastereotopicSVG
-    </h3>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/diastereotopic/toDiastereotopicSVG.js#L9-L53'>
-      <span>src/diastereotopic/toDiastereotopicSVG.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Returns a SVG</p>
-
-    <div class='pre p1 fill-light mt0'>toDiastereotopicSVG(molecule: any, options: any)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>options</span> <code class='quiet'>(any
-            = <code>{}</code>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
     <h3 class='fl m0' id='getatomsinfo'>
       getAtomsInfo
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/util/getAtomsInfo.js#L9-L108'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/util/getAtomsInfo.js#L8-L107'>
       <span>src/util/getAtomsInfo.js</span>
       </a>
     
@@ -561,7 +370,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/util/getConnectivityMatrix.js#L16-L60'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/util/getConnectivityMatrix.js#L17-L80'>
       <span>src/util/getConnectivityMatrix.js</span>
       </a>
     
@@ -647,6 +456,17 @@ This is the case for example for the valine where the 2 C of the methyl groups a
 
               
                 <tr>
+  <td class='break-word'><span class='code bold'>options.negativeAtomicNo</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>set the atomic number * -1 of the atom on diagonal
+</span></td>
+</tr>
+
+
+              
+                <tr>
   <td class='break-word'><span class='code bold'>options.sdt</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
   
     (default <code>false</code>)
@@ -657,173 +477,12 @@ This is the case for example for the valine where the 2 C of the methyl groups a
 
 
               
-            </tbody>
-          </table>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='iscsp3'>
-      isCsp3
-    </h3>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/util/isCsp3.js#L8-L18'>
-      <span>src/util/isCsp3.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>Check if a specific atom is a sp3 carbon</p>
-
-    <div class='pre p1 fill-light mt0'>isCsp3(molecule: OCL.Molecule, atomID: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>atomID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='makeracemic'>
-      makeRacemic
-    </h3>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/util/makeRacemic.js#L10-L22'>
-      <span>src/util/makeRacemic.js</span>
-      </a>
-    
-  </div>
-  
-
-  
-    <div class='pre p1 fill-light mt0'>makeRacemic(molecule: OCL.Molecule?, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule?)</code>
-	    An instance of a molecule
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
-            = <code>{}</code>)</code>
-	    
-          </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
                 <tr>
-  <td class='break-word'><span class='code bold'>options.OCL</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  <td class='break-word'><span class='code bold'>options.sdta</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
   </td>
-  <td class='break-word'><span>openchemlib library
+  <td class='break-word'><span>set 1, 2, 3 or 4 depending if single, double, triple or aromatic  bond
 </span></td>
 </tr>
 
@@ -862,21 +521,21 @@ This is the case for example for the valine where the 2 C of the methyl groups a
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='tagatom'>
-      tagAtom
+    <h3 class='fl m0' id='getdiastereotopicatomids'>
+      getDiastereotopicAtomIDs
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/util/tagAtom.js#L11-L21'>
-      <span>src/util/tagAtom.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/diastereotopic/getDiastereotopicAtomIDs.js#L11-L27'>
+      <span>src/diastereotopic/getDiastereotopicAtomIDs.js</span>
       </a>
     
   </div>
   
 
-  <p>Tag an atom to be able to visualize it</p>
+  <p>Returns an array of diastereotopic ID (as oclCode)</p>
 
-    <div class='pre p1 fill-light mt0'>tagAtom(molecule: OCL.Molecule, iAtom: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>getDiastereotopicAtomIDs(molecule: OCL.Molecule)</div>
   
   
 
@@ -899,9 +558,73 @@ This is the case for example for the valine where the 2 C of the methyl groups a
           
         </div>
       
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getdiastereotopicatomidsandh'>
+      getDiastereotopicAtomIDsAndH
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/diastereotopic/getDiastereotopicAtomIDsAndH.js#L10-L41'>
+      <span>src/diastereotopic/getDiastereotopicAtomIDsAndH.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>getDiastereotopicAtomIDsAndH(originalMolecule: any, molecule: OCL.Molecule)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>iAtom</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+            <span class='code bold'>originalMolecule</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
 	    
           </div>
           
@@ -940,7 +663,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/hose/getHoseCodesAndDiastereotopicIDs.js#L12-L29'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/hose/getHoseCodesAndDiastereotopicIDs.js#L11-L28'>
       <span>src/hose/getHoseCodesAndDiastereotopicIDs.js</span>
       </a>
     
@@ -1014,7 +737,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/hose/getHoseCodesForAtom.js#L16-L80'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/hose/getHoseCodesForAtom.js#L16-L91'>
       <span>src/hose/getHoseCodesForAtom.js</span>
       </a>
     
@@ -1121,7 +844,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/hose/getHoseCodesForPath.js#L11-L71'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/hose/getHoseCodesForPath.js#L11-L107'>
       <span>src/hose/getHoseCodesForPath.js</span>
       </a>
     
@@ -1210,7 +933,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/hose/getHoseCodesFromDiastereotopicID.js#L11-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/hose/getHoseCodesFromDiastereotopicID.js#L10-L34'>
       <span>src/hose/getHoseCodesFromDiastereotopicID.js</span>
       </a>
     
@@ -1279,12 +1002,86 @@ diaID and hose code</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='getmf'>
+      getMF
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/util/getMF.js#L9-L37'>
+      <span>src/util/getMF.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Calculate the molecular formula in 'chemcalc' notation taking into account fragments, isotopes and charges
+{OCL.Molecule} [molecule] an instance of OCL.Molecule</p>
+
+    <div class='pre p1 fill-light mt0'>getMF(molecule: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='getpathsinfo'>
       getPathsInfo
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://git@github.com/:cheminfo/openchemlib-utils/blob/74a92d91be99e665a98fa896dc712961df9df2c4/src/path/getPathsInfo.js#L18-L67'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/path/getPathsInfo.js#L18-L67'>
       <span>src/path/getPathsInfo.js</span>
       </a>
     
@@ -1318,6 +1115,407 @@ diaID and hose code</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getshortestpaths'>
+      getShortestPaths
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/path/getShortestPaths.js#L13-L51'>
+      <span>src/path/getShortestPaths.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Get the shortest path between each pair of atoms in the molecule</p>
+
+    <div class='pre p1 fill-light mt0'>getShortestPaths(molecule: OCL.Molecule, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></code>:
+        A matrix containing on each cell (i,j) the shortest path from atom i to atom j
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iscsp3'>
+      isCsp3
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/util/isCsp3.js#L7-L17'>
+      <span>src/util/isCsp3.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a specific atom is a sp3 carbon</p>
+
+    <div class='pre p1 fill-light mt0'>isCsp3(molecule: OCL.Molecule, atomID: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>atomID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='makeracemic'>
+      makeRacemic
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/util/makeRacemic.js#L9-L21'>
+      <span>src/util/makeRacemic.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>makeRacemic(molecule: OCL.Molecule?, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule?)</code>
+	    An instance of a molecule
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.OCL</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?</code>
+  </td>
+  <td class='break-word'><span>openchemlib library
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tagatom'>
+      tagAtom
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/util/tagAtom.js#L10-L22'>
+      <span>src/util/tagAtom.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Tag an atom to be able to visualize it</p>
+
+    <div class='pre p1 fill-light mt0'>tagAtom(molecule: OCL.Molecule, iAtom: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>iAtom</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='todiastereotopicsvg'>
+      toDiastereotopicSVG
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/5de13f2bf279c54986999c15046b1f7c945110c3/src/diastereotopic/toDiastereotopicSVG.js#L8-L52'>
+      <span>src/diastereotopic/toDiastereotopicSVG.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns a SVG</p>
+
+    <div class='pre p1 fill-light mt0'>toDiastereotopicSVG(molecule: any, options: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any
             = <code>{}</code>)</code>
 	    
           </div>
