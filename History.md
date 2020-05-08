@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v0.3.0...v0.4.0) (2020-05-08)
+
+
+### Features
+
+* add heavy atom in getDiastereotopicAtomIDsAndH ([9920a0b](https://github.com/cheminfo/openchemlib-utils/commit/9920a0b990eb1a9266b972dae75753ffb7e3ae66))
+
+
+
 # [0.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v0.2.1...v0.3.0) (2020-02-21)
 
 
