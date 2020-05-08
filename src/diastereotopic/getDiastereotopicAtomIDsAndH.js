@@ -24,6 +24,10 @@ export function getDiastereotopicAtomIDsAndH(originalMolecule) {
       hydrogenOCLIDs: [],
       nbHydrogens: 0,
     };
+    if (molecule.getAtomicNo(i) === 1) {
+      const atom = molecule.getConnAtom(i, 0);
+      newDiaID.heavyAtom = diaIDs[atom];
+    }
     for (let j = 0; j < molecule.getAllConnAtoms(i); j++) {
       const atom = molecule.getConnAtom(i, j);
       if (molecule.getAtomicNo(atom) === 1) {

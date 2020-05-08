@@ -13,5 +13,7 @@ describe('getDiastereotopicAtomIDsAndH', () => {
     expect(diaIDs[0].nbHydrogens).toBe(3);
     expect(diaIDs[0].hydrogenOCLIDs).toHaveLength(1);
     expect(diaIDs[0].hydrogenOCLIDs[0]).toBe('gC`HALiKT@RHDRj@');
+
+    expect(escape(diaIDs[3].heavyAtom)).toBe('eM@Df%60Xb%60%7FRP%5CJh');
   });
 });
