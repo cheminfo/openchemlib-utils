@@ -1,6 +1,8 @@
 import fs from 'fs';
 import { join } from 'path';
+
 import OCL from 'openchemlib';
+
 import { getMF } from '../getMF';
 
 describe('getMF', () => {
