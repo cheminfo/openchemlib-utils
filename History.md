@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v0.4.0...v0.5.0) (2020-06-28)
+
+
+### Features
+
+* add getGroupedDiastereotopicAtomIDs ([fef69d7](https://github.com/cheminfo/openchemlib-utils/commit/fef69d71bf2b5d3935229fe18c7f0792ab5571b6))
+
+
+
 # [0.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v0.3.0...v0.4.0) (2020-05-08)
 
 
