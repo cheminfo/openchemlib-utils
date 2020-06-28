@@ -2,6 +2,7 @@ export * from './diastereotopic/addDiastereotopicMissingChirality';
 export * from './diastereotopic/getDiastereotopicAtomIDs';
 export * from './diastereotopic/getDiastereotopicAtomIDsAndH';
 export * from './diastereotopic/toDiastereotopicSVG';
+export * from './diastereotopic/getGroupedDiastereotopicAtomIDs';
 
 export * from './hose/getHoseCodesAndDiastereotopicIDs';
 export * from './hose/getHoseCodesForAtom';

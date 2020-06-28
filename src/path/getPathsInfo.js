@@ -11,7 +11,7 @@ let fragment;
  * @param {object} [options={}]
  * @param {string} [opions.fromLabel='H']
  * @param {string} [opions.toLabel='H']
- * @param {string} [opions.minLenght=1]
+ * @param {string} [opions.minLength=1]
  * @param {string} [opions.maxLength=4]
 
  */

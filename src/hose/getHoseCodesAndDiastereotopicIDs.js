@@ -12,7 +12,7 @@ export function getHoseCodesAndDiastereotopicIDs(molecule, options) {
   const diaIDs = getDiastereotopicAtomIDs(molecule).map((oclID) => ({
     oclID,
   }));
-  // seems like a very slow approach
+  // TODO: seems like a very slow approach
   diaIDs.forEach(function(diaID) {
     const hoses = getHoseCodesFromDiastereotopicID(diaID.oclID, options);
     diaID.hoses = [];

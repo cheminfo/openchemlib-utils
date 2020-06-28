@@ -6,7 +6,6 @@ import { getOCL } from '../OCL';
  * @param {object} [options={}]
  * @param {string} [opions.fromLabel='H']
  * @param {string} [opions.toLabel='H']
- * @param {string} [opions.minLenght=1]
  * @param {string} [opions.maxLength=4]
  * @returns {Array<Array>} A matrix containing on each cell (i,j) the shortest path from atom i to atom j
  */
