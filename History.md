@@ -1,3 +1,12 @@
+## [0.5.1](https://github.com/cheminfo/openchemlib-utils/compare/v0.5.0...v0.5.1) (2020-09-09)
+
+
+### Bug Fixes
+
+* allow to call initOCL multiple times with the same OCL ([843a4c6](https://github.com/cheminfo/openchemlib-utils/commit/843a4c6fd9c24dbcef61769f6fa4cf3e0bc0cbd0))
+
+
+
 # [0.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v0.4.0...v0.5.0) (2020-06-28)
 
 
