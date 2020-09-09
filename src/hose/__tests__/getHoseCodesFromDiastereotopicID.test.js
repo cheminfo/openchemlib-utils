@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getHoseCodesFromDiastereotopicID } from '../getHoseCodesFromDiastereotopicID';
 import { initOCL } from '../../OCL';
+import { getHoseCodesFromDiastereotopicID } from '../getHoseCodesFromDiastereotopicID';
 
 initOCL(OCL);
 

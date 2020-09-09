@@ -1,5 +1,5 @@
-import { tagAtom } from '../util/tagAtom';
 import { getOCL } from '../OCL';
+import { tagAtom } from '../util/tagAtom';
 
 /**
  * Add either missing chirality of diastereotopic missing chirality

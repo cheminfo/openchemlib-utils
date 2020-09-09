@@ -1,6 +1,6 @@
-import { tagAtom } from '../util/tagAtom';
 import { getOCL } from '../OCL';
 import { makeRacemic } from '../util/makeRacemic';
+import { tagAtom } from '../util/tagAtom';
 
 let fragment;
 

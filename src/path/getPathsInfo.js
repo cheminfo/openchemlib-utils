@@ -1,7 +1,7 @@
-import { getConnectivityMatrix } from '../util/getConnectivityMatrix';
-import { getAtomsInfo } from '../util/getAtomsInfo';
 import { getOCL } from '../OCL';
 import { getHoseCodesForPath } from '../hose/getHoseCodesForPath';
+import { getAtomsInfo } from '../util/getAtomsInfo';
+import { getConnectivityMatrix } from '../util/getConnectivityMatrix';
 
 let fragment;
 

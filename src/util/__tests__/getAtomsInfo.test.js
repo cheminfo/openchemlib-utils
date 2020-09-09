@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getAtomsInfo } from '../getAtomsInfo';
 import { initOCL } from '../../OCL';
+import { getAtomsInfo } from '../getAtomsInfo';
 
 initOCL(OCL);
 

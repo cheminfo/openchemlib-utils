@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getPathsInfo } from '../getPathsInfo';
 import { initOCL } from '../../OCL';
+import { getPathsInfo } from '../getPathsInfo';
 
 initOCL(OCL);
 describe('getPathsInfo', () => {

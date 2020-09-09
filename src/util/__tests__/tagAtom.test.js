@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { tagAtom } from '../tagAtom';
 import { initOCL } from '../../OCL';
+import { tagAtom } from '../tagAtom';
 
 initOCL(OCL);
 

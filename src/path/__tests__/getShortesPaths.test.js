@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getShortestPaths } from '../getShortestPaths';
 import { initOCL } from '../../OCL';
+import { getShortestPaths } from '../getShortestPaths';
 
 initOCL(OCL);
 

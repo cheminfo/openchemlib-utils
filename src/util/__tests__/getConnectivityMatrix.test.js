@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getConnectivityMatrix } from '../getConnectivityMatrix';
 import { initOCL } from '../../OCL';
+import { getConnectivityMatrix } from '../getConnectivityMatrix';
 
 initOCL(OCL);
 

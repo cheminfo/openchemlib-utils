@@ -1,6 +1,6 @@
-import { tagAtom } from '../util/tagAtom';
-import { makeRacemic } from '../util/makeRacemic';
 import { getOCL } from '../OCL';
+import { makeRacemic } from '../util/makeRacemic';
+import { tagAtom } from '../util/tagAtom';
 
 import { addDiastereotopicMissingChirality } from './addDiastereotopicMissingChirality';
 

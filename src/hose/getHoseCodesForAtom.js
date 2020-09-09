@@ -1,7 +1,7 @@
 import { getOCL } from '../OCL';
-import { tagAtom } from '../util/tagAtom';
 import { isCsp3 } from '../util/isCsp3';
 import { makeRacemic } from '../util/makeRacemic';
+import { tagAtom } from '../util/tagAtom';
 
 export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;

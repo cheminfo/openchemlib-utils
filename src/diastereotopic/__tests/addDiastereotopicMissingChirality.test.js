@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { addDiastereotopicMissingChirality } from '../addDiastereotopicMissingChirality';
 import { initOCL } from '../../OCL';
+import { addDiastereotopicMissingChirality } from '../addDiastereotopicMissingChirality';
 
 initOCL(OCL);
 describe('addDiastereotopicMissingChirality', () => {

@@ -16,7 +16,7 @@ export function toDiastereotopicSVG(molecule, options = {}) {
   let diaIDs = [];
 
   let hydrogenInfo = {};
-  getDiastereotopicAtomIDsAndH(molecule).forEach(function(line) {
+  getDiastereotopicAtomIDsAndH(molecule).forEach(function (line) {
     hydrogenInfo[line.oclID] = line;
   });
 
@@ -25,7 +25,7 @@ export function toDiastereotopicSVG(molecule, options = {}) {
       diaIDs.push([]);
     }
     let groupedDiaIDs = molecule.getGroupedDiastereotopicAtomIDs();
-    groupedDiaIDs.forEach(function(diaID) {
+    groupedDiaIDs.forEach(function (diaID) {
       if (
         hydrogenInfo[diaID.oclID] &&
         hydrogenInfo[diaID.oclID].nbHydrogens > 0
@@ -43,7 +43,7 @@ export function toDiastereotopicSVG(molecule, options = {}) {
 
   if (!svg) svg = molecule.toSVG(width, height, prefix);
 
-  svg = svg.replace(/Atom:[0-9]+"/g, function(value) {
+  svg = svg.replace(/Atom:[0-9]+"/g, function (value) {
     let atom = value.replace(/[^0-9]/g, '');
     return `${value} data-diaid="${diaIDs[atom].join(',')}"`;
   });

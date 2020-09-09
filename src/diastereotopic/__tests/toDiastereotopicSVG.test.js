@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { toDiastereotopicSVG } from '../toDiastereotopicSVG';
 import { initOCL } from '../../OCL';
+import { toDiastereotopicSVG } from '../toDiastereotopicSVG';
 
 initOCL(OCL);
 describe('toDiastereotopicSVG', () => {

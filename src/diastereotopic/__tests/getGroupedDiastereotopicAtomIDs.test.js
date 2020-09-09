@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getGroupedDiastereotopicAtomIDs } from '../getGroupedDiastereotopicAtomIDs';
 import { initOCL } from '../../OCL';
+import { getGroupedDiastereotopicAtomIDs } from '../getGroupedDiastereotopicAtomIDs';
 
 initOCL(OCL);
 

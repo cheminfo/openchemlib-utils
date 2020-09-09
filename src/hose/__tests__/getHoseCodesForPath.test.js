@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { getHoseCodesForPath } from '../getHoseCodesForPath';
 import { initOCL } from '../../OCL';
+import { getHoseCodesForPath } from '../getHoseCodesForPath';
 
 initOCL(OCL);
 

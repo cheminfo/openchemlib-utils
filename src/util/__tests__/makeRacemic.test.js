@@ -1,7 +1,7 @@
 import OCL from 'openchemlib';
 
-import { makeRacemic } from '../makeRacemic';
 import { initOCL } from '../../OCL';
+import { makeRacemic } from '../makeRacemic';
 
 initOCL(OCL);
 

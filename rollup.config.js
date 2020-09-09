@@ -4,5 +4,5 @@ export default {
     file: 'lib/index.js',
     format: 'cjs',
   },
-  external: ['ml-matrix', 'ml-floyd-warshall'],
+  external: ['atom-sorter', 'ml-matrix', 'ml-floyd-warshall'],
 };

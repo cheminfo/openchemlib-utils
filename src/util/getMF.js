@@ -12,7 +12,7 @@ export function getMF(molecule) {
   let parts = [];
   let allAtoms = [];
 
-  entries.forEach(function(entry) {
+  entries.forEach(function (entry) {
     let mf = getFragmentMF(entry, allAtoms);
     parts.push(mf);
   });
