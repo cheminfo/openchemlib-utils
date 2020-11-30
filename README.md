@@ -15,12 +15,12 @@
 ```js
 import OCL from 'openchemlib';
 
-import { Path, initOCL } from 'openchemlib-utils';
+import { getPathsInfo, initOCL } from 'openchemlib-utils';
 initOCL(OCL);
 
 const molecule = OCL.Molecule.fromSmiles('CCCCC');
 
-const paths = Path.getPathsInfo(molecule, {
+const paths = getPathsInfo(molecule, {
   fromLabel: 'H',
   toLabel: 'H',
   minLength: 1,
