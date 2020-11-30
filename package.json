@@ -41,13 +41,13 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "cheminfo-build": "^1.1.8",
-    "eslint": "^7.12.1",
+    "eslint": "^7.14.0",
     "eslint-config-cheminfo": "^5.2.2",
     "esm": "^3.2.25",
-    "jest": "^26.6.1",
+    "jest": "^26.6.3",
     "openchemlib": "^7.2.3",
-    "prettier": "^2.1.2",
-    "rollup": "^2.32.1"
+    "prettier": "^2.2.1",
+    "rollup": "^2.34.0"
   },
   "dependencies": {
     "atom-sorter": "^1.1.5",
