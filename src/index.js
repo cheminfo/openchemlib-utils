@@ -8,6 +8,7 @@ export * from './hose/getHoseCodesAndDiastereotopicIDs';
 export * from './hose/getHoseCodesForAtom';
 export * from './hose/getHoseCodesFromDiastereotopicID';
 
+export * from './util/combineSmiles';
 export * from './util/getAtomsInfo';
 export * from './util/getConnectivityMatrix';
 export * from './util/makeRacemic';
