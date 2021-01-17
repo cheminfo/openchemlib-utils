@@ -19,7 +19,7 @@ describe('combineSmiles', () => {
     ];
     const core = 'c1nc([R1])c([R2])c([R3])c([R4])1';
     const results = await combineSmiles(core, fragments);
-    expect(results).toHaveLength(180)
+    expect(results).toHaveLength(180);
     expect(results[0].mw).toBe(137.18134);
     expect(results[0].mf).toBe('C8H11NO');
   });
@@ -31,9 +31,10 @@ describe('combineSmiles', () => {
       { smiles: 'OC[R]', R1: true, R2: true, R3: false, R4: true },
     ];
     const core = 'c1nc([R1])c([R2])c([R3])c([R4])1';
-    const results = await combineSmiles(core, fragments, { onStep: () => counter++ });
-    expect(results).toHaveLength(4)
+    const results = await combineSmiles(core, fragments, {
+      onStep: () => counter++,
+    });
+    expect(results).toHaveLength(4);
     expect(counter).toBe(4);
   });
-
 });

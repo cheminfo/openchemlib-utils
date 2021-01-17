@@ -4,7 +4,7 @@ const MAX_R = 10;
 
 /**
  * Generate molecules and calcule predicted properties form a list of smiles and fragments
- * @param {string} [coreSmiles] 
+ * @param {string} [coreSmiles]
  * @param {array} [fragments] Array of {smiles,R1,R2,...}
  * @param {object} [options={}]
  * @param {function} [options.onStep] method to execute each new molecules
@@ -17,7 +17,7 @@ export async function combineSmiles(coreSmiles, fragments, options = {}) {
 }
 
 async function generate(core, rGroups, options = {}) {
-  const { onStep } = options
+  const { onStep } = options;
   const molecules = {};
   const sizes = new Array(rGroups.length);
   const currents = new Array(rGroups.length);
@@ -53,7 +53,9 @@ async function generate(core, rGroups, options = {}) {
       break;
     }
   }
-  return Object.keys(molecules).map(key => molecules[key]).sort((m1, m2) => m1.mw - m2.mw);
+  return Object.keys(molecules)
+    .map((key) => molecules[key])
+    .sort((m1, m2) => m1.mw - m2.mw);
 }
 
 function appendMolecule(molecules, core, rGroups, currents) {
@@ -68,7 +70,7 @@ function appendMolecule(molecules, core, rGroups, currents) {
   const idCode = currentMol.getIDCode();
 
   if (!molecules[idCode]) {
-    var molecule = {};
+    let molecule = {};
     molecules[idCode] = molecule;
     molecule.smiles = currentMol.toSmiles();
     molecule.combinedSmiles = newSmiles;
@@ -83,7 +85,7 @@ function appendMolecule(molecules, core, rGroups, currents) {
     molecule.PSA = props.polarSurfaceArea;
     molecule.nbRottable = props.rotatableBondCount;
     molecule.nbStereoCenter = props.stereoCenterCount;
-    var mf = currentMol.getMolecularFormula();
+    let mf = currentMol.getMolecularFormula();
     molecule.mf = mf.formula;
     molecule.mw = mf.relativeWeight;
   }
@@ -113,8 +115,8 @@ function getRGroups(core, fragments) {
             if (!rGroups[`R${i}`]) {
               rGroups[`R${i}`] = {
                 group: `R${i}`,
-                smiles: []
-              }
+                smiles: [],
+              };
             }
             rGroups[`R${i}`].smiles.push(smiles.replace(/\[R\]/, `(%5${i})`));
           }
@@ -122,13 +124,13 @@ function getRGroups(core, fragments) {
       }
     }
   }
-  return Object.keys(rGroups).map(key => rGroups[key]);
+  return Object.keys(rGroups).map((key) => rGroups[key]);
 }
 
 function updateRPosition(smiles) {
   // R group should not be at the beginning
-  if (smiles.indexOf('[R]') != 0) return smiles;
-  if (smiles.length == 3) return '[H][R]';
+  if (smiles.indexOf('[R]') !== 0) return smiles;
+  if (smiles.length === 3) return '[H][R]';
   // we are in trouble ... we need to move the R
   let newSmiles = smiles.replace('[R]', '');
   // we need to check where we should put the R group
@@ -136,9 +138,9 @@ function updateRPosition(smiles) {
   for (let j = 0; j < newSmiles.length; j++) {
     let currentChar = newSmiles.charAt(j);
     let currentSubstring = newSmiles.substr(j);
-    if (currentChar == '(') {
+    if (currentChar === '(') {
       level++;
-    } else if (currentChar == ')') {
+    } else if (currentChar === ')') {
       level--;
     } else if (level === 0) {
       if (currentSubstring.match(/^[a-z]/)) {
