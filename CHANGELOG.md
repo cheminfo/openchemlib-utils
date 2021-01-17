@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.5.3...v0.6.0) (2021-01-17)
+
+
+### Features
+
+* add combineSmiles ([87bad19](https://www.github.com/cheminfo/openchemlib-utils/commit/87bad1943f121b9400646b39714fa15885e3602d))
+* add complexity options in combineSmiles ([e54072e](https://www.github.com/cheminfo/openchemlib-utils/commit/e54072e22a0bac34690f7d856ef741e86d47c67e))
+
+
+### Bug Fixes
+
+* Correct readme example ([d22f119](https://www.github.com/cheminfo/openchemlib-utils/commit/d22f1193d51f0ce4d2aa2cec14c127931200b43b))
+
 ### [0.5.3](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.5.2...v0.5.3) (2020-10-28)
 
 
