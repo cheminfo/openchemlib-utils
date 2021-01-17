@@ -39,7 +39,6 @@ describe('combineSmiles', () => {
   });
 
   it('complexity', async () => {
-    let counter = 0;
     const fragments = [
       { smiles: 'CC(=O)[R]', R1: true, R2: false, R3: true, R4: true },
       { smiles: 'OC[R]', R1: true, R2: true, R3: false, R4: true },

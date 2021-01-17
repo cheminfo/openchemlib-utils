@@ -24,7 +24,7 @@ export async function combineSmiles(coreSmiles, fragments, options = {}) {
 function getComplexity(rGroups) {
   let complexity = 1;
   for (let rGroup of rGroups) {
-    complexity *= rGroup.smiles.length
+    complexity *= rGroup.smiles.length;
   }
   return complexity;
 }
