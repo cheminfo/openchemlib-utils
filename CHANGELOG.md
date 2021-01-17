@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.6.0...v0.6.1) (2021-01-17)
+
+
+### Bug Fixes
+
+* correctly export combineSmiles ([a8354c3](https://www.github.com/cheminfo/openchemlib-utils/commit/a8354c37df48ef3648ca36d1c500c954d067dd60))
+
 ## [0.6.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.5.3...v0.6.0) (2021-01-17)
 
 
