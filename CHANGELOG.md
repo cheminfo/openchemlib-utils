@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.5.4](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.5.3...v0.5.4) (2021-01-17)
+
+
+### Bug Fixes
+
+* Correct readme example ([d22f119](https://www.github.com/cheminfo/openchemlib-utils/commit/d22f1193d51f0ce4d2aa2cec14c127931200b43b))
+
 ### [0.5.3](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.5.2...v0.5.3) (2020-10-28)
 
 
