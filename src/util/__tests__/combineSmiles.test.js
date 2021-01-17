@@ -24,7 +24,7 @@ describe('combineSmiles', () => {
     expect(results[0].mf).toBe('C8H11NO');
   });
 
-  it('callback', async () => {
+  it('onStep', async () => {
     let counter = 0;
     const fragments = [
       { smiles: 'CC(=O)[R]', R1: true, R2: false, R3: true, R4: true },
@@ -36,5 +36,18 @@ describe('combineSmiles', () => {
     });
     expect(results).toHaveLength(4);
     expect(counter).toBe(4);
+  });
+
+  it('complexity', async () => {
+    let counter = 0;
+    const fragments = [
+      { smiles: 'CC(=O)[R]', R1: true, R2: false, R3: true, R4: true },
+      { smiles: 'OC[R]', R1: true, R2: true, R3: false, R4: true },
+    ];
+    const core = 'c1nc([R1])c([R2])c([R3])c([R4])1';
+    const results = await combineSmiles(core, fragments, {
+      complexity: true,
+    });
+    expect(results).toBe(4);
   });
 });

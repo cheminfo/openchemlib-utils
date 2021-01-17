@@ -8,12 +8,25 @@ const MAX_R = 10;
  * @param {array} [fragments] Array of {smiles,R1,R2,...}
  * @param {object} [options={}]
  * @param {function} [options.onStep] method to execute each new molecules
- * @return {Promise} promise that resolves to molecules
+ * @param {boolean} [options.complexity] returns only the number of molecules to evaluate
+ * @return {Promise} promise that resolves to molecules or complexity as a number
  */
 export async function combineSmiles(coreSmiles, fragments, options = {}) {
+  const { complexity = false } = options;
   const core = getCore(coreSmiles);
   const rGroups = getRGroups(core, fragments);
+  if (complexity) {
+    return getComplexity(rGroups);
+  }
   return generate(core, rGroups, options);
+}
+
+function getComplexity(rGroups) {
+  let complexity = 1;
+  for (let rGroup of rGroups) {
+    complexity *= rGroup.smiles.length
+  }
+  return complexity;
 }
 
 async function generate(core, rGroups, options = {}) {
