@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.6.1...v0.7.0) (2021-03-01)
+
+
+### Features
+
+* allow to initOCL with keepExisting option ([6f9049a](https://www.github.com/cheminfo/openchemlib-utils/commit/6f9049aaad5416d4beeb117eafe680108d67d2ec))
+
 ### [0.6.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.6.0...v0.6.1) (2021-01-17)
 
 
