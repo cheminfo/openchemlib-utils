@@ -10,6 +10,8 @@ describe('openchemlib-utils', () => {
     initOCL(OCL);
     // Should not throw if called with the same OCL.
     initOCL(OCL);
+    // Should be ok if we keep existing
+    initOCL({}, { keepExisting: true });
     makeRacemic(molecule);
     expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
     expect(() => initOCL(OCL2)).toThrow(
