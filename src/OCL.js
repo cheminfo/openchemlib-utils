@@ -7,8 +7,8 @@ export function getOCL() {
   return OCL;
 }
 /**
- * 
- * @param {OCL} newOCL 
+ *
+ * @param {OCL} newOCL
  * @param {object} [options={}]
  * @param {boolean} [options.keepExisting=false] Will keep current OCL if we initialize more than once
  */
