@@ -13,7 +13,7 @@
 ## Usage
 
 ```js
-import OCL from 'openchemlib';
+import OCL from 'openchemlib'; // version should be greater than 7.4
 
 import { getPathsInfo, initOCL } from 'openchemlib-utils';
 initOCL(OCL);
@@ -31,7 +31,6 @@ console.log(paths);
 ```
 
 We will add more examples in `/examples`.
-
 
 ## [API Documentation](https://cheminfo.github.io/openchemlib-utils/)
 
