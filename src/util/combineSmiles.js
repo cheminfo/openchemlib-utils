@@ -107,7 +107,7 @@ function appendMolecule(molecules, core, rGroups, currents) {
 function getCore(coreSmiles) {
   let core = {
     originalSmiles: coreSmiles,
-    smiles: coreSmiles.replace(/\[R([1-4])\]/g, '%5$1'),
+    smiles: coreSmiles.replace(/\[R(?<group>[1-4])\]/g, '%5$<group>'),
   };
 
   for (let i = 0; i < MAX_R; i++) {
