@@ -12,9 +12,13 @@ export function getHoseCodesAndDiastereotopicIDs(molecule, options) {
   const diaIDs = getDiastereotopicAtomIDs(molecule).map((oclID) => ({
     oclID,
   }));
+  const OCL = molecule.getOCL();
   // TODO: seems like a very slow approach
   diaIDs.forEach(function (diaID) {
-    const hoses = getHoseCodesFromDiastereotopicID(diaID.oclID, options);
+    const hoses = getHoseCodesFromDiastereotopicID(
+      OCL.Molecule.fromIDCode(diaID.oclID),
+      options,
+    );
     diaID.hoses = [];
     let sphere = 0;
     for (const hose of hoses) {
