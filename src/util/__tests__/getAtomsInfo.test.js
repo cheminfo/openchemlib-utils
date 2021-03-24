@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getAtomsInfo } from '../getAtomsInfo';
-
-initOCL(OCL);
 
 describe('getAtomsInfo', () => {
   it('methanol', () => {

@@ -19,4 +19,3 @@ export * from './util/getMF';
 export * from './path/getPathsInfo';
 export * from './path/getShortestPaths';
 
-export * from './OCL';

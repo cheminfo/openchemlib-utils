@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { tagAtom } from '../tagAtom';
-
-initOCL(OCL);
 
 describe('tagAtom', () => {
   it('CCC', () => {

@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getHoseCodesForAtom } from '../getHoseCodesForAtom';
-
-initOCL(OCL);
 
 describe('getHoseCodesForAtom', () => {
   it('CCC', () => {

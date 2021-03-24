@@ -1,9 +1,7 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getDiastereotopicAtomIDsAndH } from '../getDiastereotopicAtomIDsAndH';
 
-initOCL(OCL);
 describe('getDiastereotopicAtomIDsAndH', () => {
   it('propane', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC');

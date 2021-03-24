@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { makeRacemic } from '../makeRacemic';
-
-initOCL(OCL);
 
 describe('makeRacemic', () => {
   it('C[C@H](Cl)CC', () => {

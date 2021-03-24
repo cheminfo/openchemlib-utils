@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getHoseCodesFromDiastereotopicID } from '../getHoseCodesFromDiastereotopicID';
-
-initOCL(OCL);
 
 describe('getHoseCodeFromDiastereotopicID', () => {
   it('CC(Cl)CC', () => {

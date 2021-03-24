@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getConnectivityMatrix } from '../getConnectivityMatrix';
-
-initOCL(OCL);
 
 describe('getConnectivityMatrix', () => {
   it('propane with expanded hydrogens', () => {

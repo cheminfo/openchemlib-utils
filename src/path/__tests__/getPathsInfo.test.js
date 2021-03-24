@@ -1,9 +1,7 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getPathsInfo } from '../getPathsInfo';
 
-initOCL(OCL);
 describe('getPathsInfo', () => {
   it('propane min:1, max:3', () => {
     let molecule = OCL.Molecule.fromSmiles('CCO');

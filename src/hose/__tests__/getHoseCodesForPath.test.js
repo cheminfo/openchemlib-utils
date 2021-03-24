@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getHoseCodesForPath } from '../getHoseCodesForPath';
-
-initOCL(OCL);
 
 describe('getHoseCodesForPath', () => {
   it('CC(C)CCCC', () => {

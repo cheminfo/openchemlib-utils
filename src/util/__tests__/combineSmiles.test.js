@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { combineSmiles } from '../combineSmiles';
-
-initOCL(OCL);
 
 describe('combineSmiles', () => {
   it('real case', async () => {

@@ -1,9 +1,7 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { addDiastereotopicMissingChirality } from '../addDiastereotopicMissingChirality';
 
-initOCL(OCL);
 describe('addDiastereotopicMissingChirality', () => {
   it('CC(Cl)CC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');

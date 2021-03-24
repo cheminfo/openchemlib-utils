@@ -1,9 +1,6 @@
 import OCL from 'openchemlib';
 
-import { initOCL } from '../../OCL';
 import { getGroupedDiastereotopicAtomIDs } from '../getGroupedDiastereotopicAtomIDs';
-
-initOCL(OCL);
 
 describe('getGroupedDiastereotopicIDs test propane', () => {
   it('should yield the right table for all atoms', () => {
