@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.8.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.7.1...v0.8.0) (2021-03-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* 
+
+### Features
+
+* combineSmiles requires to pass OCL ([aa9218a](https://www.github.com/cheminfo/openchemlib-utils/commit/aa9218ad530d5a1a98d90d7215c97e7ed4e35edb))
+* getHoseCodesFromDiastereotopicID requires an OCL.Molecule ([00b8845](https://www.github.com/cheminfo/openchemlib-utils/commit/00b8845682c86dfb45cafc3c195840f285c783c4))
+
+
+### Bug Fixes
+
+* add openchemlib to peer dependencies ([c856127](https://www.github.com/cheminfo/openchemlib-utils/commit/c8561273dc0a224a03949853ace5067c03ecc0e9))
+
 ### [0.7.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.7.0...v0.7.1) (2021-03-24)
 
 
