@@ -4,7 +4,8 @@ import { getHoseCodesFromDiastereotopicID } from '../getHoseCodesFromDiastereoto
 
 describe('getHoseCodeFromDiastereotopicID', () => {
   it('CC(Cl)CC', () => {
-    let hoses = getHoseCodesFromDiastereotopicID('gJPHADILuTe@X`hOtbCpfuP');
+    const molecule = OCL.Molecule.fromIDCode('gJPHADILuTe@X`hOtbCpfuP');
+    let hoses = getHoseCodesFromDiastereotopicID(molecule);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'fHdPAqTGzT%5EDvj@',
@@ -16,7 +17,8 @@ describe('getHoseCodeFromDiastereotopicID', () => {
   });
 
   it('CC(Cl)CC maxSphere:2', () => {
-    let hoses = getHoseCodesFromDiastereotopicID('gJPHADILuTe@X`hOtbCpfuP', {
+    const molecule = OCL.Molecule.fromIDCode('gJPHADILuTe@X`hOtbCpfuP');
+    let hoses = getHoseCodesFromDiastereotopicID(molecule, {
       maxSphereSize: 2,
     });
     hoses = hoses.map((hose) => escape(hose));

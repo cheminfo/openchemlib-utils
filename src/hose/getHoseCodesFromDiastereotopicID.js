@@ -1,18 +1,11 @@
-import { getOCL } from '../OCL';
-
 import { getHoseCodesForAtom } from './getHoseCodesForAtom';
 /**
  * Returns the hose code for a specific marked atom
- * @param {string} diastereotopicID
+ * @param {OCL.Molecule} diastereotopicID
  * @param {object} options
  */
 
-export function getHoseCodesFromDiastereotopicID(
-  diastereotopicID,
-  options = {},
-) {
-  const OCL = getOCL();
-  const molecule = OCL.Molecule.fromIDCode(diastereotopicID);
+export function getHoseCodesFromDiastereotopicID(molecule, options = {}) {
   molecule.addImplicitHydrogens();
   molecule.addMissingChirality();
 
