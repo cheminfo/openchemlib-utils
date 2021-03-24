@@ -53,5 +53,8 @@
     "atom-sorter": "^1.1.9",
     "ml-floyd-warshall": "^1.0.3",
     "ml-matrix": "^6.7.0"
+  },
+  "peerDependencies": {
+    "openchemlib": ">=7.4.0"
   }
 }
