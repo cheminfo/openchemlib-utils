@@ -1,4 +1,3 @@
-import { getOCL } from '../OCL';
 import { getHoseCodesForPath } from '../hose/getHoseCodesForPath';
 import { getAtomsInfo } from '../util/getAtomsInfo';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix';
@@ -23,7 +22,7 @@ export function getPathsInfo(molecule, options = {}) {
     maxLength = 4,
   } = options;
 
-  const OCL = getOCL();
+  const OCL = molecule.getOCL();
 
   if (!fragment) {
     fragment = new OCL.Molecule(0, 0);

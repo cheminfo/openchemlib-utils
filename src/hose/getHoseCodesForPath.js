@@ -1,4 +1,3 @@
-import { getOCL } from '../OCL';
 import { makeRacemic } from '../util/makeRacemic';
 import { tagAtom } from '../util/tagAtom';
 
@@ -9,7 +8,7 @@ let fragment;
  * @param {OCL.Molecule} molecule
  */
 export function getHoseCodesForPath(molecule, from, to, maxLength) {
-  const OCL = getOCL();
+  const OCL = molecule.getOCL();
   const originalFrom = from;
   const originalTo = to;
   molecule = molecule.getCompactCopy();

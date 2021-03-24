@@ -1,5 +1,3 @@
-import { getOCL } from '../OCL';
-
 /**
  * Get the shortest path between each pair of atoms in the molecule
  * @param {OCL.Molecule} molecule
@@ -10,7 +8,7 @@ import { getOCL } from '../OCL';
  * @returns {Array<Array>} A matrix containing on each cell (i,j) the shortest path from atom i to atom j
  */
 export function getShortestPaths(molecule, options = {}) {
-  const OCL = getOCL();
+  const OCL = molecule.getOCL();
   const { fromLabel = '', toLabel = '', maxLength = 3 } = options;
 
   let fromAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(fromLabel);

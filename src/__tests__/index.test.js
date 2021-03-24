@@ -1,26 +1,17 @@
 import OCL from 'openchemlib';
 import OCL2 from 'openchemlib/minimal';
 
-import { isCsp3, makeRacemic, initOCL } from '..';
+import { initOCL } from '..';
 
 describe('openchemlib-utils', () => {
-  it('makeRacemic', () => {
-    const molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC');
-    expect(() => makeRacemic(molecule)).toThrow('OCL has to be initialized');
+  it('initOCL', () => {
     initOCL(OCL);
     // Should not throw if called with the same OCL.
     initOCL(OCL);
     // Should be ok if we keep existing
-    initOCL({}, { keepExisting: true });
-    makeRacemic(molecule);
-    expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
+    initOCL(OCL2, { keepExisting: true });
     expect(() => initOCL(OCL2)).toThrow(
       'OCL-utils was already initialized with a different OCL',
     );
-  });
-
-  it('isCsp3', () => {
-    const molecule = OCL.Molecule.fromSmiles('CCC');
-    expect(isCsp3(molecule, 0)).toBe(true);
   });
 });

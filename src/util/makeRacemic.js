@@ -1,5 +1,3 @@
-import { getOCL } from '../OCL';
-
 /**
  *
  * @param {OCL.Molecule} [molecule] An instance of a molecule
@@ -7,7 +5,7 @@ import { getOCL } from '../OCL';
  * @param {object} [options.OCL] openchemlib library
  */
 export function makeRacemic(molecule) {
-  const { Molecule } = getOCL();
+  const { Molecule } = molecule.getOCL();
 
   // if we don't calculate this we have 2 epimers
   molecule.ensureHelperArrays(Molecule.cHelperCIP);

@@ -1,4 +1,3 @@
-import { getOCL } from '../OCL';
 import { tagAtom } from '../util/tagAtom';
 
 /**
@@ -10,7 +9,7 @@ import { tagAtom } from '../util/tagAtom';
  * @param {number} [options.esrType=cESRTypeAnd]
  */
 export function addDiastereotopicMissingChirality(molecule, options = {}) {
-  const { Molecule } = getOCL();
+  const { Molecule } = molecule.getOCL();
   const { esrType = Molecule.cESRTypeAnd } = options;
 
   for (let iAtom = 0; iAtom < molecule.getAllAtoms(); iAtom++) {

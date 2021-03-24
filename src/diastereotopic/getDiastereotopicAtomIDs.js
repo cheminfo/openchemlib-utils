@@ -1,4 +1,3 @@
-import { getOCL } from '../OCL';
 import { makeRacemic } from '../util/makeRacemic';
 import { tagAtom } from '../util/tagAtom';
 
@@ -9,7 +8,7 @@ import { addDiastereotopicMissingChirality } from './addDiastereotopicMissingChi
  * @param {OCL.Molecule} molecule
  */
 export function getDiastereotopicAtomIDs(molecule) {
-  const OCL = getOCL();
+  const OCL = molecule.getOCL();
   addDiastereotopicMissingChirality(molecule);
 
   let numberAtoms = molecule.getAllAtoms();

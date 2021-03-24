@@ -1,8 +1,6 @@
 import floydWarshall from 'ml-floyd-warshall';
 import { Matrix } from 'ml-matrix';
 
-import { getOCL } from '../OCL';
-
 /**
  * Returns a connectivity matrix
  * @param {OCL.Molecule} molecule
@@ -15,7 +13,7 @@ import { getOCL } from '../OCL';
  * @param {boolean} [options.sdta=false] set 1, 2, 3 or 4 depending if single, double, triple or aromatic  bond
  */
 export function getConnectivityMatrix(molecule, options = {}) {
-  const OCL = getOCL();
+  const OCL = molecule.getOCL();
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
   let nbAtoms = molecule.getAllAtoms();
 

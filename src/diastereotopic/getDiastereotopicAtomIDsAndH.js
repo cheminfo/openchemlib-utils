@@ -1,5 +1,3 @@
-import { getOCL } from '../OCL';
-
 import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
 // Previously getExtendedDiastereotopicAtomIDs
 
@@ -8,7 +6,7 @@ import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
  * @param {OCL.Molecule} molecule
  */
 export function getDiastereotopicAtomIDsAndH(originalMolecule) {
-  const OCL = getOCL();
+  const OCL = originalMolecule.getOCL();
   const molecule = originalMolecule.getCompactCopy();
   molecule.addImplicitHydrogens();
   // TODO Temporary code ???

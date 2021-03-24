@@ -1,4 +1,3 @@
-import { getOCL } from '../OCL';
 import { isCsp3 } from '../util/isCsp3';
 import { makeRacemic } from '../util/makeRacemic';
 import { tagAtom } from '../util/tagAtom';
@@ -14,7 +13,7 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * @param {boolean} [options.isTagged] Specify is the atom is already tagged
  */
 export function getHoseCodesForAtom(originalMolecule, rootAtom, options = {}) {
-  const OCL = getOCL();
+  const OCL = originalMolecule.getOCL();
   const {
     minSphereSize = 0,
     maxSphereSize = 4,
