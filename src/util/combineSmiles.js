@@ -1,5 +1,3 @@
-import { getOCL } from '../OCL';
-
 const MAX_R = 10;
 
 /**
@@ -11,14 +9,14 @@ const MAX_R = 10;
  * @param {boolean} [options.complexity] returns only the number of molecules to evaluate
  * @return {Promise} promise that resolves to molecules or complexity as a number
  */
-export async function combineSmiles(coreSmiles, fragments, options = {}) {
+export async function combineSmiles(coreSmiles, fragments, OCL, options = {}) {
   const { complexity = false } = options;
   const core = getCore(coreSmiles);
   const rGroups = getRGroups(core, fragments);
   if (complexity) {
     return getComplexity(rGroups);
   }
-  return generate(core, rGroups, options);
+  return generate(core, rGroups, OCL, options);
 }
 
 function getComplexity(rGroups) {
@@ -29,7 +27,7 @@ function getComplexity(rGroups) {
   return complexity;
 }
 
-async function generate(core, rGroups, options = {}) {
+async function generate(core, rGroups, OCL, options = {}) {
   const { onStep } = options;
   const molecules = {};
   const sizes = new Array(rGroups.length);
@@ -48,7 +46,7 @@ async function generate(core, rGroups, options = {}) {
         if (onStep) {
           await onStep(counter);
         }
-        appendMolecule(molecules, core, rGroups, currents);
+        appendMolecule(molecules, core, rGroups, currents, OCL);
         currents[position]++;
         for (let i = 0; i < position; i++) {
           currents[i] = 0;
@@ -62,7 +60,7 @@ async function generate(core, rGroups, options = {}) {
       if (onStep) {
         await onStep(counter);
       }
-      appendMolecule(molecules, core, rGroups, currents);
+      appendMolecule(molecules, core, rGroups, currents, OCL);
       break;
     }
   }
@@ -71,13 +69,11 @@ async function generate(core, rGroups, options = {}) {
     .sort((m1, m2) => m1.mw - m2.mw);
 }
 
-function appendMolecule(molecules, core, rGroups, currents) {
+function appendMolecule(molecules, core, rGroups, currents, OCL) {
   let newSmiles = core.smiles;
   for (let i = 0; i < currents.length; i++) {
     newSmiles += `.${rGroups[i].smiles[currents[i]]}`;
   }
-
-  const OCL = getOCL();
 
   const currentMol = OCL.Molecule.fromSmiles(newSmiles);
   const idCode = currentMol.getIDCode();
