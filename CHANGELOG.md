@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.7.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.7.0...v0.7.1) (2021-03-24)
+
+
+### Bug Fixes
+
+* use molecule.getOCL where possible ([936c791](https://www.github.com/cheminfo/openchemlib-utils/commit/936c791a5d393fc4c3aa1372418a29c270d0e5f9))
+
 ## [0.7.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.6.1...v0.7.0) (2021-03-01)
 
 
