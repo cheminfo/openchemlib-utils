@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.7.2](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.7.1...v0.7.2) (2021-03-24)
+
+
+### Bug Fixes
+
+* add openchemlib to peer dependencies ([c856127](https://www.github.com/cheminfo/openchemlib-utils/commit/c8561273dc0a224a03949853ace5067c03ecc0e9))
+
 ### [0.7.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.7.0...v0.7.1) (2021-03-24)
 
 
