@@ -39,21 +39,21 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
     "cheminfo-build": "^1.1.10",
-    "eslint": "^7.22.0",
-    "eslint-config-cheminfo": "^5.2.3",
+    "eslint": "^7.26.0",
+    "eslint-config-cheminfo": "^5.2.4",
     "esm": "^3.2.25",
     "jest": "^26.6.3",
     "openchemlib": "7.4.0",
-    "prettier": "^2.2.1",
-    "rollup": "^2.42.3"
+    "prettier": "^2.3.0",
+    "rollup": "^2.47.0"
   },
   "dependencies": {
     "atom-sorter": "^1.1.9",
     "ensure-string": "^0.1.1",
     "ml-floyd-warshall": "^1.0.3",
-    "ml-matrix": "^6.7.0",
+    "ml-matrix": "^6.8.0",
     "papaparse": "^5.3.0",
     "sdf-parser": "^4.0.2"
   },
