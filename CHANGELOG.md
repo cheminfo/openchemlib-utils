@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.0.0...v1.1.0) (2021-05-10)
+
+
+### Features
+
+* add MoleculesDB to store and search molecules ([da7cbc9](https://www.github.com/cheminfo/openchemlib-utils/commit/da7cbc9eb47f6232d566f98206c1df362faeb852))
+
 ## [1.0.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v0.7.1...v1.0.0) (2021-03-24)
 
 
