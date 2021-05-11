@@ -20,3 +20,5 @@ export * from './path/getPathsInfo';
 export * from './path/getShortestPaths';
 
 export * from './db/MoleculesDB';
+
+export * from './misc/toVisualizerMolfile';
