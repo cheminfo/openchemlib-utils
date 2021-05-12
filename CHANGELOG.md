@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.1.0...v1.2.0) (2021-05-11)
+
+
+### Features
+
+* add toVisualizerMolfile ([3d8ee95](https://www.github.com/cheminfo/openchemlib-utils/commit/3d8ee950fa281c64b01d14c4adbd21fed7726e39))
+
 ## [1.1.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.0.0...v1.1.0) (2021-05-10)
 
 
