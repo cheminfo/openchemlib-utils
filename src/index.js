@@ -22,3 +22,5 @@ export * from './path/getShortestPaths';
 export * from './db/MoleculesDB';
 
 export * from './misc/toVisualizerMolfile';
+
+export * from './fragment/fragmentAcyclicSimpleBonds';
