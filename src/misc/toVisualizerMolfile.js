@@ -1,4 +1,4 @@
-import { getExtendedDiastereotopicAtomIDs } from '../diastereotopic/getExtendedDiastereotopicAtomIDs';
+import { getDiastereotopicAtomIDsAndH } from '../diastereotopic/getDiastereotopicAtomIDsAndH';
 import { getGroupedDiastereotopicAtomIDs } from '../diastereotopic/getGroupedDiastereotopicAtomIDs';
 
 export function toVisualizerMolfile(molecule, options = {}) {
@@ -8,7 +8,7 @@ export function toVisualizerMolfile(molecule, options = {}) {
   let atoms = {};
   if (diastereotopic) {
     let hydrogenInfo = {};
-    let extendedIDs = getExtendedDiastereotopicAtomIDs(molecule);
+    let extendedIDs = getDiastereotopicAtomIDsAndH(molecule);
     for (let line of extendedIDs) {
       hydrogenInfo[line.oclID] = line;
     }

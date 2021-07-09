@@ -5,9 +5,9 @@ import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
  *
  * @param {OCL.Molecule} molecule
  */
-export function getDiastereotopicAtomIDsAndH(originalMolecule) {
-  const OCL = originalMolecule.getOCL();
-  const molecule = originalMolecule.getCompactCopy();
+export function getDiastereotopicAtomIDsAndH(molecule) {
+  const OCL = molecule.getOCL();
+  molecule = molecule.getCompactCopy();
   molecule.addImplicitHydrogens();
   // TODO Temporary code ???
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);

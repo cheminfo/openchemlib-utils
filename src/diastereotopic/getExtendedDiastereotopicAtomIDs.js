@@ -1,10 +1,15 @@
 /**
+ * DEPRECATED !!! Use getDiastereotopicAtomIDsAndH
  * Get diastereotopicAtomIDs of the molecule as well as information about connected hydrogens
  * @param {OCL.Molecule}} molecule
  * @returns
  */
 
 export function getExtendedDiastereotopicAtomIDs(molecule) {
+  // eslint-disable-next-line no-console
+  console.warn(
+    'getExtendedDiastereotopicAtomIDs is DEPRECATED !!! Use getDiastereotopicAtomIDsAndH',
+  );
   const OCL = molecule.getOCL();
   molecule = molecule.getCompactCopy();
   molecule.addImplicitHydrogens();
