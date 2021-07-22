@@ -30,7 +30,7 @@ export function toVisualizerMolfile(molecule, options = {}) {
       }
     }
   } else {
-    let size = this.getAllAtoms();
+    let size = molecule.getAllAtoms();
     highlight = new Array(size).fill(0).map((a, index) => index);
     atoms = highlight.map((a) => [a]);
   }
