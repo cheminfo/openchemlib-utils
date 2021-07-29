@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.2.0...v1.3.0) (2021-07-29)
+
+
+### Features
+
+* add fragmentAcyclicSimpleBonds ([093b7dc](https://www.github.com/cheminfo/openchemlib-utils/commit/093b7dc523453df038eaa04145aa9d60d795236a))
+
+
+### Bug Fixes
+
+* toVisualizerMolfile still contained a this ([b5c0eb7](https://www.github.com/cheminfo/openchemlib-utils/commit/b5c0eb7e0abc16d0072ad1e258b439950a645071))
+* update dependencies ([29a7253](https://www.github.com/cheminfo/openchemlib-utils/commit/29a7253427ce9cec79d7a529fe16b8190bab40f5))
+
 ## [1.2.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.1.0...v1.2.0) (2021-05-11)
 
 
