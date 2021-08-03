@@ -1,5 +1,6 @@
 import appendCSV from './utils/appendCSV';
 import appendSDF from './utils/appendSDF';
+import appendSmilesList from './utils/appendSmilesList';
 import pushEntry from './utils/pushEntry';
 import pushMoleculeInfo from './utils/pushMoleculeInfo';
 import search from './utils/search';
@@ -55,6 +56,21 @@ export class MoleculesDB {
 
   appendSDF(sdf, options) {
     return appendSDF(this, sdf, {
+      computeProperties: this.computeProperties,
+      ...options,
+    });
+  }
+
+  /**
+   * Append a SDF to the current database
+   * @param {text|ArrayBuffer} smiles - text file containing a list of smiles
+   * @param {object} [options={}]
+   * @param {function} [options.onStep] call back to execute after each molecule
+   * @returns {DB}
+   */
+
+  appendSmilesList(text, options) {
+    return appendSmilesList(this, text, {
       computeProperties: this.computeProperties,
       ...options,
     });

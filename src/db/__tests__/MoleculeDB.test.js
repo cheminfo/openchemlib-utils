@@ -8,7 +8,7 @@ import { MoleculesDB } from '../MoleculesDB';
 describe('MoleculesDB', () => {
   describe('appendSDF', () => {
     const sdf = readFileSync(join(__dirname, './data/data.sdf'));
-    it('should parse all molecules', async () => {
+    it('should parse all molecules from SDF', async () => {
       let moleculesDB = new MoleculesDB(OCL);
       await moleculesDB.appendSDF(sdf);
       expect(Object.keys(moleculesDB.db)).toHaveLength(10);
@@ -59,6 +59,28 @@ describe('MoleculesDB', () => {
       // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendCSV(csv, { onStep }).then(() => {
         expect(called).toBe(5);
+      });
+    });
+  });
+
+  describe('appendSmilesList', () => {
+    const text = 'CCC\nCCCC\nCCCCC';
+    it('should parse all molecules', async () => {
+      const moleculesDB = new MoleculesDB(OCL);
+      await moleculesDB.appendSmilesList(text);
+      expect(moleculesDB.getDB()).toHaveLength(3);
+    });
+
+    it('should call step for each molecule', () => {
+      const moleculesDB = new MoleculesDB(OCL);
+      let called = 0;
+      function onStep(current, total) {
+        expect(current).toBe(++called);
+        expect(total).toBe(3);
+      }
+      // eslint-disable-next-line jest/no-test-return-statement
+      return moleculesDB.appendSmilesList(text, { onStep }).then(() => {
+        expect(called).toBe(3);
       });
     });
   });
