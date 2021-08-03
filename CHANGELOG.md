@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.3.0...v1.4.0) (2021-08-03)
+
+
+### Features
+
+* appendSmiles text file for Molecules DB ([62365c6](https://www.github.com/cheminfo/openchemlib-utils/commit/62365c6845331e8e4356178e3443163956efaa48))
+
 ## [1.3.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.2.0...v1.3.0) (2021-07-29)
 
 
