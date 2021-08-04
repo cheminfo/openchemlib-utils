@@ -5,7 +5,6 @@ import appendSmilesList from './utils/appendSmilesList';
 import pushEntry from './utils/pushEntry';
 import pushMoleculeInfo from './utils/pushMoleculeInfo';
 import search from './utils/search';
-import { isCsp3 } from '../util/isCsp3';
 /*
     this.db is an object with properties 'oclID' that has as value
     an object that contains the following properties:

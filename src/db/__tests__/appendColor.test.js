@@ -10,7 +10,9 @@ describe('appendColor', () => {
   let moleculesDB = new MoleculesDB(OCL);
   moleculesDB.appendSDF(sdf);
   let db = moleculesDB.getDB();
-  expect(db).toHaveLength(10);
+  it('test DB', () => {
+    expect(db).toHaveLength(10);
+  });
 
   it('undefined colors', () => {
     moleculesDB.appendColor({});
