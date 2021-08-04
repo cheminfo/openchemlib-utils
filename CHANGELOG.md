@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.4.0...v1.5.0) (2021-08-04)
+
+
+### Features
+
+* add appendColor in MoleculesDB ([bde1b8f](https://www.github.com/cheminfo/openchemlib-utils/commit/bde1b8faccf6c047807c1e27da824475e1653983))
+
 ## [1.4.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.3.0...v1.4.0) (2021-08-03)
 
 
