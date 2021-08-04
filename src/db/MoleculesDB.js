@@ -1,9 +1,11 @@
 import appendCSV from './utils/appendCSV';
+import appendColor from './utils/appendColor';
 import appendSDF from './utils/appendSDF';
 import appendSmilesList from './utils/appendSmilesList';
 import pushEntry from './utils/pushEntry';
 import pushMoleculeInfo from './utils/pushMoleculeInfo';
 import search from './utils/search';
+import { isCsp3 } from '../util/isCsp3';
 /*
     this.db is an object with properties 'oclID' that has as value
     an object that contains the following properties:
@@ -119,5 +121,22 @@ export class MoleculesDB {
    */
   getDB() {
     return Object.keys(this.db).map((key) => this.db[key]);
+  }
+
+  /**
+   * Append the property `data.color` to each entry based on a data or property label
+   * {object} [options={}]
+   * {string} [options.dataLabel] name of the property from `data` to use
+   * {string} [options.propertyLabel] name of the property from `properties` to use
+   * {number} [options.colorLabel='color'] name of the property to add in data that will contain the color
+   * {number} [options.minValue]
+   * {number} [options.maxValue]
+   * {number} [options.minHue=0]
+   * {number} [options.maxHue=360]
+   * {number} [options.saturation=65] percent of color saturation
+   * {number} [options.lightness=65] percent of color lightness
+   */
+  appendColor(options) {
+    appendColor(this, options);
   }
 }
