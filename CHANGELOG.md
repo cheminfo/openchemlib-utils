@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.5.0...v1.5.1) (2021-08-29)
+
+
+### Bug Fixes
+
+* add package description ([b1d726b](https://www.github.com/cheminfo/openchemlib-utils/commit/b1d726b3835c2423c4d4a7105bcf74f6a822d8d1))
+
 ## [1.5.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.4.0...v1.5.0) (2021-08-04)
 
 
