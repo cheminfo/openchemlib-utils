@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.5.1...v1.6.0) (2021-10-14)
+
+
+### Features
+
+* update dependencies ([00bae71](https://www.github.com/cheminfo/openchemlib-utils/commit/00bae71d7648362256eaefb4eb20525afe94e31b))
+
 ### [1.5.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.5.0...v1.5.1) (2021-08-29)
 
 
