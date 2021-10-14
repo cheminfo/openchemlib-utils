@@ -1,4 +1,4 @@
-export default function (Molecule) {
+export default function getMoleculeCreators(Molecule) {
   const fields = new Map();
 
   fields.set('oclid', Molecule.fromIDCode);

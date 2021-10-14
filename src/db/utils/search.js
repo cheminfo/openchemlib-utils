@@ -68,7 +68,7 @@ function subStructureSearch(moleculesDB, query) {
     }
   }
 
-  searchResult.sort(function (a, b) {
+  searchResult.sort((a, b) => {
     return (
       Math.abs(queryMW - a.properties.mw) - Math.abs(queryMW - b.properties.mw)
     );
@@ -103,7 +103,7 @@ function similaritySearch(moleculesDB, query) {
     }
     searchResult.push({ similarity, entry });
   }
-  searchResult.sort(function (a, b) {
+  searchResult.sort((a, b) => {
     return b.similarity - a.similarity;
   });
   return searchResult.map((entry) => entry.entry);

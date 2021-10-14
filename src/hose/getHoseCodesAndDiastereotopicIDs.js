@@ -14,7 +14,7 @@ export function getHoseCodesAndDiastereotopicIDs(molecule, options) {
   }));
   const OCL = molecule.getOCL();
   // TODO: seems like a very slow approach
-  diaIDs.forEach(function (diaID) {
+  diaIDs.forEach((diaID) => {
     const hoses = getHoseCodesFromDiastereotopicID(
       OCL.Molecule.fromIDCode(diaID.oclID),
       options,

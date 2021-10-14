@@ -44,7 +44,7 @@ export function fragmentAcyclicSimpleBonds(molecule) {
   for (let i = 0; i < nbFragments; i++) {
     let result = {};
     result.atomMap = [];
-    let includeAtom = fragmentMap.map(function (id) {
+    let includeAtom = fragmentMap.map((id) => {
       return id === i;
     });
     let fragment = new OCL.Molecule(0, 0);

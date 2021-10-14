@@ -25,7 +25,7 @@ describe('MoleculesDB', () => {
         expect(total).toBe(20);
       }
       // eslint-disable-next-line jest/no-test-return-statement
-      return moleculesDB.appendSDF(sdf, { onStep: onStep }).then(function () {
+      return moleculesDB.appendSDF(sdf, { onStep: onStep }).then(() => {
         expect(called).toBe(20);
       });
     });
