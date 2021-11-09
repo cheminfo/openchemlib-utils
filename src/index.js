@@ -23,4 +23,4 @@ export * from './db/MoleculesDB';
 
 export * from './misc/toVisualizerMolfile';
 
-export * from './fragment/fragmentAcyclicSimpleBonds';
+export * from './fragment/fragmentAcyclicSingleBonds';

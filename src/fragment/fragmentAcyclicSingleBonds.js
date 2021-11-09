@@ -1,6 +1,6 @@
 import { getMF } from '../util/getMF';
 
-export function fragmentAcyclicSimpleBonds(molecule) {
+export function fragmentAcyclicSingleBonds(molecule) {
   const OCL = molecule.getOCL();
   let atoms = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
