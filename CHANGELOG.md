@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.6.1](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.6.0...v1.6.1) (2021-11-30)
+
+
+### Bug Fixes
+
+* getMF return type ([7ac70ea](https://www.github.com/cheminfo/openchemlib-utils/commit/7ac70ea2a0a4be3296a6f682e87fd082892b1d56))
+* rename SimpleBonds to SingleBonds ([d2ff8ed](https://www.github.com/cheminfo/openchemlib-utils/commit/d2ff8ed4001ded1678e04570219ca408c530962f))
+
 ## [1.6.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.5.1...v1.6.0) (2021-10-14)
 
 
