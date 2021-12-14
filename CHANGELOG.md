@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.6.0...v1.7.0) (2021-12-14)
+
+
+### Features
+
+* add getHoseCodesForPath ([3584377](https://www.github.com/cheminfo/openchemlib-utils/commit/358437790716b6dcf7bb2e197d8702956061e9a0))
+
+
+### Bug Fixes
+
+* getMF return type ([7ac70ea](https://www.github.com/cheminfo/openchemlib-utils/commit/7ac70ea2a0a4be3296a6f682e87fd082892b1d56))
+* rename SimpleBonds to SingleBonds ([d2ff8ed](https://www.github.com/cheminfo/openchemlib-utils/commit/d2ff8ed4001ded1678e04570219ca408c530962f))
+
 ## [1.6.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.5.1...v1.6.0) (2021-10-14)
 
 
