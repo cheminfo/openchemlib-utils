@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.7.0...v1.8.0) (2021-12-14)
+
+
+### Features
+
+* add getHoseCodesForAtoms ([b0f2b6b](https://www.github.com/cheminfo/openchemlib-utils/commit/b0f2b6bf2dab7e6a184225eb27612aa89f659ddb))
+
 ## [1.7.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.6.0...v1.7.0) (2021-12-14)
 
 
