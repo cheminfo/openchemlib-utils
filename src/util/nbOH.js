@@ -19,7 +19,6 @@ export function nbOH(molecule) {
         const neighbourAtom = molecule.getConnAtom(i, neighbour);
 
         const neighbourBond = molecule.getConnBond(i, neighbour);
-        console.log(molecule.getAtomicNo(neighbourAtom));
         if (molecule.getAtomicNo(neighbourAtom) === 8) {
           if (
             molecule.getBondOrder(neighbourBond) === 1 &&
