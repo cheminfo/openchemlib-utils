@@ -23,7 +23,6 @@ export function nbCOOH(molecule) {
             molecule.getBondOrder(neighbourBond) === 1 &&
             molecule.getAllHydrogens(neighbourAtom) > 0
           ) {
-            // check if H
             hydroxyl = true;
           } else if (molecule.getBondOrder(neighbourBond) === 2) {
             carbonyl = true;

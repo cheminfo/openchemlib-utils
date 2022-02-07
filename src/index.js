@@ -18,6 +18,10 @@ export * from './util/tagAtom';
 export * from './util/isCsp3';
 export * from './util/getMF';
 export * from './util/nbOH';
+export * from './util/nbCOOH';
+export * from './util/nbCHO';
+export * from './util/nbNH2';
+export * from './util/nbCN';
 
 export * from './path/getPathsInfo';
 export * from './path/getShortestPaths';
