@@ -5,6 +5,8 @@ import { nbCOOH } from '../nbCOOH';
 describe('nbCOOH', () => {
   it('check hexanoic acid', () => {
     let molecule = OCL.Molecule.fromSmiles('CCCC(C)C(=O)O');
+    molecule.addImplicitHydrogens();
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
     expect(nbCOOH(molecule)).toBe(1);
   });
   it('check ethyl acetate', () => {

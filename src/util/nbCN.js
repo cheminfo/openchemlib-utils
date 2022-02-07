@@ -23,6 +23,10 @@ export function nbCN(molecule) {
           molecule.getAtomicNo(neighbourAtom) === 7 &&
           molecule.getBondOrder(neighbourBond) === 3
         ) {
+          if (cn) {
+            cn = false;
+            break;
+          }
           cn = true;
         } else if (
           molecule.getAtomicNo(neighbourAtom) !== 6 &&

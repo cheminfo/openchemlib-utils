@@ -24,16 +24,18 @@ export function nbNH2(molecule) {
           molecule.getBondOrder(neighbourBond) === 1 &&
           molecule.getAllHydrogens(neighbourAtom) > 1
         ) {
+          if (amine) {
+            amine = false;
+            break;
+          }
           amine = true;
         } else if (
           molecule.getAtomicNo(neighbourAtom) !== 6 &&
           molecule.getAtomicNo(neighbourAtom) !== 1
         ) {
-          console.log(molecule.getAtomicNo(neighbourAtom));
           carbonOrHydrogen = false;
         }
       }
-
       if (amine && carbonOrHydrogen) counter++;
     }
   }

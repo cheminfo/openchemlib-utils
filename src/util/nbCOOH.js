@@ -10,7 +10,7 @@ export function nbCOOH(molecule) {
     if (molecule.getAtomicNo(i) === 6) {
       let carbonyl = false;
       let hydroxyl = false;
-      let carbonOrHydrogen = false;
+      let carbonOrHydrogen = true;
       for (
         let neighbour = 0;
         neighbour < molecule.getConnAtoms(i);
@@ -24,16 +24,23 @@ export function nbCOOH(molecule) {
             molecule.getBondOrder(neighbourBond) === 1 &&
             molecule.getAllHydrogens(neighbourAtom) > 0
           ) {
+            if (hydroxyl) {
+              hydroxyl = false;
+              break;
+            }
             hydroxyl = true;
           } else if (molecule.getBondOrder(neighbourBond) === 2) {
+            if (carbonyl) {
+              carbonyl = false;
+              break;
+            }
             carbonyl = true;
           }
-        }
-        if (
-          molecule.getAtomicNo(neighbourAtom) === 6 ||
-          molecule.getAllHydrogens(i) > 0
+        } else if (
+          molecule.getAtomicNo(neighbourAtom) !== 6 &&
+          molecule.getAtomicNo(neighbourAtom) !== 1
         ) {
-          carbonOrHydrogen = true;
+          carbonOrHydrogen = false;
         }
       }
       if (carbonyl && hydroxyl && carbonOrHydrogen) counter++;
