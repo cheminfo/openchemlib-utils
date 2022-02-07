@@ -5,6 +5,8 @@ import { nbCHO } from '../nbCHO';
 describe('nbCHO', () => {
   it('check hexanoic acid', () => {
     let molecule = OCL.Molecule.fromSmiles('CCCC(C)C(=O)O');
+    molecule.addImplicitHydrogens();
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
     expect(nbCHO(molecule)).toBe(0);
   });
   it('check pentan-2-oic acid', () => {
