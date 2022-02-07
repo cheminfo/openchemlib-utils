@@ -28,5 +28,5 @@ export function getGroupedDiastereotopicAtomIDs(molecule, options = {}) {
     }
   }
 
-  return Object.keys(diaIDsObject).map((key) => diaIDsObject[key]);
+  return Object.values(diaIDsObject);
 }
