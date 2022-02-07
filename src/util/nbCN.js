@@ -8,6 +8,8 @@ export function nbCN(molecule) {
   let counter = 0;
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     if (molecule.getAtomicNo(i) === 6) {
+      let cn = false;
+      let carbonOrHydrogen = false;
       for (
         let neighbour = 0;
         neighbour < molecule.getConnAtoms(i);
@@ -18,10 +20,18 @@ export function nbCN(molecule) {
         const neighbourBond = molecule.getConnBond(i, neighbour);
         if (molecule.getAtomicNo(neighbourAtom) === 7) {
           if (molecule.getBondOrder(neighbourBond) === 3) {
-            counter++;
+            cn = true;
           }
         }
+        if (
+          molecule.getAtomicNo(neighbourAtom) === 6 ||
+          molecule.getAllHydrogens(i) > 0
+        ) {
+          carbonOrHydrogen = true;
+        }
       }
+
+      if (cn && carbonOrHydrogen) counter++;
     }
   }
 

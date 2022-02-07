@@ -31,4 +31,12 @@ describe('nbCOOH', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC=O');
     expect(nbCOOH(molecule)).toBe(0);
   });
+  it('check BrCOOH', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=C(O)Br');
+    expect(nbCOOH(molecule)).toBe(0);
+  });
+  it('check COOH2', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=CO');
+    expect(nbCOOH(molecule)).toBe(1);
+  });
 });

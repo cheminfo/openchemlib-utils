@@ -9,6 +9,7 @@ export function nbCHO(molecule) {
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     if (molecule.getAtomicNo(i) === 6) {
       let carbonyl = false;
+      let carbonOrHydrogen = false;
       for (
         let neighbour = 0;
         neighbour < molecule.getConnAtoms(i);
@@ -22,8 +23,16 @@ export function nbCHO(molecule) {
             carbonyl = true;
           }
         }
+        if (
+          molecule.getAtomicNo(neighbourAtom) === 6 &&
+          molecule.getAllHydrogens(i) > 0
+        ) {
+          carbonOrHydrogen = true;
+        } else if (molecule.getAllHydrogens(i) > 1) {
+          carbonOrHydrogen = true;
+        }
       }
-      if (carbonyl && molecule.getAllHydrogens(i) > 0) counter++;
+      if (carbonyl && carbonOrHydrogen) counter++;
     }
   }
 

@@ -31,4 +31,20 @@ describe('nbCHO', () => {
     let molecule = OCL.Molecule.fromSmiles('O=CCCCCC=O');
     expect(nbCHO(molecule)).toBe(2);
   });
+  it('check Br2CO', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=C(Br)Br');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('check BrCHO', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=CBr');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('check CH3COBr', () => {
+    let molecule = OCL.Molecule.fromSmiles('CC(=O)Br');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('check formaldehyde', () => {
+    let molecule = OCL.Molecule.fromSmiles('C=O');
+    expect(nbCHO(molecule)).toBe(1);
+  });
 });

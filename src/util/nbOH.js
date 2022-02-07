@@ -10,6 +10,7 @@ export function nbOH(molecule) {
     if (molecule.getAtomicNo(i) === 6) {
       let carbonyl = false;
       let hydroxyl = false;
+      let carbonOrHydrogen = false;
       for (
         let neighbour = 0;
         neighbour < molecule.getConnAtoms(i);
@@ -28,8 +29,14 @@ export function nbOH(molecule) {
             carbonyl = true;
           }
         }
+        if (
+          molecule.getAtomicNo(neighbourAtom) === 6 ||
+          molecule.getAllHydrogens(i) > 0
+        ) {
+          carbonOrHydrogen = true;
+        }
       }
-      if (carbonyl === false && hydroxyl) counter++;
+      if (carbonyl === false && hydroxyl && carbonOrHydrogen) counter++;
     }
   }
 

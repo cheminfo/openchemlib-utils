@@ -23,4 +23,16 @@ describe('nbCHO', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC=O');
     expect(nbCN(molecule)).toBe(0);
   });
+  it('check BrCN', () => {
+    let molecule = OCL.Molecule.fromSmiles('N#CBr');
+    expect(nbCN(molecule)).toBe(0);
+  });
+  it('check HCN', () => {
+    let molecule = OCL.Molecule.fromSmiles('N#C');
+    expect(nbCN(molecule)).toBe(1);
+  });
+  it('check H3CCN', () => {
+    let molecule = OCL.Molecule.fromSmiles('N#CC');
+    expect(nbCN(molecule)).toBe(1);
+  });
 });
