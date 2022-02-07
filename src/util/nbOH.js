@@ -19,11 +19,16 @@ export function nbOH(molecule) {
         const neighbourAtom = molecule.getConnAtom(i, neighbour);
 
         const neighbourBond = molecule.getConnBond(i, neighbour);
+        console.log(molecule.getAtomicNo(neighbourAtom));
         if (molecule.getAtomicNo(neighbourAtom) === 8) {
           if (
             molecule.getBondOrder(neighbourBond) === 1 &&
             molecule.getAllHydrogens(neighbourAtom) > 0
           ) {
+            if (hydroxyl) {
+              hydroxyl = false;
+              break;
+            }
             hydroxyl = true;
           } else if (molecule.getBondOrder(neighbourBond) === 2) {
             carbonyl = true;

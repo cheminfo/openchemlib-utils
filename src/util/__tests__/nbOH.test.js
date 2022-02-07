@@ -43,4 +43,8 @@ describe('nbOH', () => {
     let molecule = OCL.Molecule.fromSmiles('NC(O)Br');
     expect(nbOH(molecule)).toBe(1);
   });
+  it('check if two OH groups in same carbon', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCCC(O)O');
+    expect(nbOH(molecule)).toBe(0);
+  });
 });

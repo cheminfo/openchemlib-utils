@@ -9,7 +9,7 @@ export function nbNH2(molecule) {
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     if (molecule.getAtomicNo(i) === 6) {
       let amine = false;
-      let carbonOrHydrogen = false;
+      let carbonOrHydrogen = true;
       for (
         let neighbour = 0;
         neighbour < molecule.getConnAtoms(i);
@@ -18,25 +18,22 @@ export function nbNH2(molecule) {
         const neighbourAtom = molecule.getConnAtom(i, neighbour);
 
         const neighbourBond = molecule.getConnBond(i, neighbour);
-        if (molecule.getAtomicNo(neighbourAtom) === 7) {
-          if (
-            molecule.getBondOrder(neighbourBond) === 1 &&
-            molecule.getAllHydrogens(neighbourAtom) > 1
-          ) {
-            if (amine) {
-              amine = false;
-              break;
-            }
-            amine = true;
-          }
-        }
+
         if (
-          molecule.getAtomicNo(neighbourAtom) === 6 ||
-          molecule.getAllHydrogens(i) > 0
+          molecule.getAtomicNo(neighbourAtom) === 7 &&
+          molecule.getBondOrder(neighbourBond) === 1 &&
+          molecule.getAllHydrogens(neighbourAtom) > 1
         ) {
-          carbonOrHydrogen = true;
+          amine = true;
+        } else if (
+          molecule.getAtomicNo(neighbourAtom) !== 6 &&
+          molecule.getAtomicNo(neighbourAtom) !== 1
+        ) {
+          console.log(molecule.getAtomicNo(neighbourAtom));
+          carbonOrHydrogen = false;
         }
       }
+
       if (amine && carbonOrHydrogen) counter++;
     }
   }

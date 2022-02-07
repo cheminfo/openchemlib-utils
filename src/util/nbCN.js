@@ -18,6 +18,7 @@ export function nbCN(molecule) {
         const neighbourAtom = molecule.getConnAtom(i, neighbour);
 
         const neighbourBond = molecule.getConnBond(i, neighbour);
+
         if (
           molecule.getAtomicNo(neighbourAtom) === 7 &&
           molecule.getBondOrder(neighbourBond) === 3
