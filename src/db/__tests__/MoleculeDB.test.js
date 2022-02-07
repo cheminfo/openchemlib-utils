@@ -20,10 +20,12 @@ describe('MoleculesDB', () => {
     it('should call step for each molecule', () => {
       let moleculesDB = new MoleculesDB(OCL);
       let called = 0;
+
       function onStep(current, total) {
         expect(current).toBe(++called);
         expect(total).toBe(20);
       }
+
       // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendSDF(sdf, { onStep: onStep }).then(() => {
         expect(called).toBe(20);
@@ -52,10 +54,12 @@ describe('MoleculesDB', () => {
     it('should call step for each molecule', () => {
       const moleculesDB = new MoleculesDB(OCL);
       let called = 0;
+
       function onStep(current, total) {
         expect(current).toBe(++called);
         expect(total).toBe(5);
       }
+
       // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendCSV(csv, { onStep }).then(() => {
         expect(called).toBe(5);
@@ -74,10 +78,12 @@ describe('MoleculesDB', () => {
     it('should call step for each molecule', () => {
       const moleculesDB = new MoleculesDB(OCL);
       let called = 0;
+
       function onStep(current, total) {
         expect(current).toBe(++called);
         expect(total).toBe(3);
       }
+
       // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendSmilesList(text, { onStep }).then(() => {
         expect(called).toBe(3);
