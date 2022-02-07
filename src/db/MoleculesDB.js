@@ -32,7 +32,7 @@ export class MoleculesDB {
 
   /**
    * append to the current database a CSV file
-   * @param {text|ArrayBuffer} csv - text file containing the comma separated value file
+   * @param {string|ArrayBuffer} csv - text file containing the comma separated value file
    * @param {object} [options={}]
    * @param {boolean} [options.header=true]
    * @param {boolean} [options.dynamicTyping=true]
@@ -49,7 +49,7 @@ export class MoleculesDB {
 
   /**
    * Append a SDF to the current database
-   * @param {text|ArrayBuffer} sdf - text file containing the sdf
+   * @param {string|ArrayBuffer} sdf - text file containing the sdf
    * @param {object} [options={}]
    * @param {function} [options.onStep] call back to execute after each molecule
    * @returns {DB}
@@ -64,7 +64,7 @@ export class MoleculesDB {
 
   /**
    * Append a SDF to the current database
-   * @param {text|ArrayBuffer} smiles - text file containing a list of smiles
+   * @param {string|ArrayBuffer} smiles - text file containing a list of smiles
    * @param {object} [options={}]
    * @param {function} [options.onStep] call back to execute after each molecule
    * @returns {DB}
@@ -89,7 +89,7 @@ export class MoleculesDB {
   }
 
   /**
-   * Add an netry in the database
+   * Add an entry in the database
    * @param {object} moleculeInfo - a molecule as a JSON that may contain the following properties: molfile, smiles, idCode, mf, index
    * @param {object} [data={}]
    */
