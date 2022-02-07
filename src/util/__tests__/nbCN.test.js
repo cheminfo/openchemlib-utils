@@ -31,6 +31,11 @@ describe('nbCHO', () => {
     let molecule = OCL.Molecule.fromSmiles('N#C');
     expect(nbCN(molecule)).toBe(1);
   });
+  it('check HCN with H', () => {
+    let molecule = OCL.Molecule.fromSmiles('N#C');
+    molecule.addImplicitHydrogens();
+    expect(nbCN(molecule)).toBe(1);
+  });
   it('check H3CCN', () => {
     let molecule = OCL.Molecule.fromSmiles('N#CC');
     expect(nbCN(molecule)).toBe(1);

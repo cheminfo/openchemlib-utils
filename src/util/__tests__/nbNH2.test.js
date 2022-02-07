@@ -31,6 +31,10 @@ describe('nbNH2', () => {
     let molecule = OCL.Molecule.fromSmiles('CN');
     expect(nbNH2(molecule)).toBe(1);
   });
+  it('check NCN', () => {
+    let molecule = OCL.Molecule.fromSmiles('NCN');
+    expect(nbNH2(molecule)).toBe(0);
+  });
   it('check NH3', () => {
     let molecule = OCL.Molecule.fromSmiles('N');
     expect(nbNH2(molecule)).toBe(0);
