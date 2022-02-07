@@ -13,7 +13,7 @@ describe('nbOH', () => {
   });
   it('check acetic acid', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(=O)O');
-    expect(nbOH(molecule)).toBe(1);
+    expect(nbOH(molecule)).toBe(0);
   });
   it('check benzene', () => {
     let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
@@ -26,5 +26,9 @@ describe('nbOH', () => {
   it('check ethylene glycol', () => {
     let molecule = OCL.Molecule.fromSmiles('OCCO');
     expect(nbOH(molecule)).toBe(2);
+  });
+  it('check butanoic acid', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCCC(=O)O');
+    expect(nbOH(molecule)).toBe(0);
   });
 });

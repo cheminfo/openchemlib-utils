@@ -1,10 +1,10 @@
 /**
- * Return number of OH groups in a molecule or fragment
+ * Return number of COOH groups in a molecule or fragment
  * @param {OCL.Molecule} molecule
- * @param {number} 'OH groups'
+ * @param {number} 'COOH groups'
  */
 
-export function nbOH(molecule) {
+export function nbCOOH(molecule) {
   let counter = 0;
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     if (molecule.getAtomicNo(i) === 6) {
@@ -23,15 +23,15 @@ export function nbOH(molecule) {
             molecule.getBondOrder(neighbourBond) === 1 &&
             molecule.getAllHydrogens(neighbourAtom) > 0
           ) {
+            // check if H
             hydroxyl = true;
           } else if (molecule.getBondOrder(neighbourBond) === 2) {
             carbonyl = true;
           }
         }
       }
-      if (carbonyl === false && hydroxyl) counter++;
+      if (carbonyl && hydroxyl) counter++;
     }
   }
-
   return counter;
 }
