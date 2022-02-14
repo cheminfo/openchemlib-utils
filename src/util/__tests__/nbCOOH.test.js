@@ -41,4 +41,12 @@ describe('nbCOOH', () => {
     let molecule = OCL.Molecule.fromSmiles('O=CO');
     expect(nbCOOH(molecule)).toBe(1);
   });
+  it('two carbonyls on same atom', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCC[C+](=O)=O');
+    expect(nbCOOH(molecule)).toBe(0);
+  });
+  it('two hydroxyl on same atom', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=[C+](=O)CCC(O)O');
+    expect(nbCOOH(molecule)).toBe(0);
+  });
 });

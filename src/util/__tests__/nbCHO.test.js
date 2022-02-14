@@ -49,4 +49,12 @@ describe('nbCHO', () => {
     let molecule = OCL.Molecule.fromSmiles('C=O');
     expect(nbCHO(molecule)).toBe(1);
   });
+  it('two carbonyls on same atom', () => {
+    let molecule = OCL.Molecule.fromSmiles('CC[CH+](=O)=O');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('butanol', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCCCO');
+    expect(nbCHO(molecule)).toBe(0);
+  });
 });
