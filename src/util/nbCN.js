@@ -1,7 +1,7 @@
 /**
- * Return number of CN groups in a molecule or fragment
+ * Return the number of Nitrile groups in a molecule or fragment
  * @param {OCL.Molecule} molecule
- * @param {number} 'CN groups'
+ * @returns {number} 'Number of Nitrile groups'
  */
 
 export function nbCN(molecule) {
@@ -23,12 +23,14 @@ export function nbCN(molecule) {
           molecule.getAtomicNo(neighbourAtom) === 7 &&
           molecule.getBondOrder(neighbourBond) === 3
         ) {
+          // If there is more than one Nitrile group in the same carbon atome they are not counted as Nitrile groups
           if (cn) {
             cn = false;
             break;
           }
           cn = true;
         } else if (
+          // If there is not at least one carbon or hydrogen as neighbour atom it is not counted as Nitrile group
           molecule.getAtomicNo(neighbourAtom) !== 6 &&
           molecule.getAtomicNo(neighbourAtom) !== 1
         ) {

@@ -1,7 +1,7 @@
 /**
- * Return number of NH2 groups in a molecule or fragment
+ * Return the number of Primary amine groups in a molecule or fragment
  * @param {OCL.Molecule} molecule
- * @param {number} 'NH2 groups'
+ * @returns {number} 'Number of Primary amine groups'
  */
 
 export function nbNH2(molecule) {
@@ -24,12 +24,14 @@ export function nbNH2(molecule) {
           molecule.getBondOrder(neighbourBond) === 1 &&
           molecule.getAllHydrogens(neighbourAtom) > 1
         ) {
+          // If there is more than a Primary amine in the same carbon atom they are not couted as Primary amines groups
           if (amine) {
             amine = false;
             break;
           }
           amine = true;
         } else if (
+          // If there is not at least one carbon or hydrogen as neighbour atom it is not counted as Primary amine group
           molecule.getAtomicNo(neighbourAtom) !== 6 &&
           molecule.getAtomicNo(neighbourAtom) !== 1
         ) {
