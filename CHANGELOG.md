@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.9.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.8.0...v1.9.0) (2022-02-15)
+
+
+### Features
+
+* add nbOH ([27cc29a](https://www.github.com/cheminfo/openchemlib-utils/commit/27cc29a5147511772357c7b9e51f60708ae2ba65))
+* groups numbers inside molecule ([b5fce46](https://www.github.com/cheminfo/openchemlib-utils/commit/b5fce46e5f699f423e0b600f5c2cc3416b4b5b38))
+
+
+### Bug Fixes
+
+* groups are counted only if they have at least one C or H as neig… ([#32](https://www.github.com/cheminfo/openchemlib-utils/issues/32)) ([4f2df84](https://www.github.com/cheminfo/openchemlib-utils/commit/4f2df84fadad9561d02b8f6b7690a5056cc14a8c))
+
 ## [1.8.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.7.0...v1.8.0) (2021-12-14)
 
 
