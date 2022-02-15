@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>openchemlib-utils 1.8.0 | Documentation</title>
+  <title>openchemlib-utils 1.9.0 | Documentation</title>
   <meta name='description' content='Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>openchemlib-utils</h3>
-          <div class='mb1'><code>1.8.0</code></div>
+          <div class='mb1'><code>1.9.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -289,6 +289,56 @@
               
                 
                 <li><a
+                  href='#nbcho'
+                  class="">
+                  nbCHO
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nbcn'
+                  class="">
+                  nbCN
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nbcooh'
+                  class="">
+                  nbCOOH
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nbnh2'
+                  class="">
+                  nbNH2
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nboh'
+                  class="">
+                  nbOH
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#tagatom'
                   class="">
                   tagAtom
@@ -327,7 +377,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/diastereotopic/addDiastereotopicMissingChirality.js#L11-L42'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/diastereotopic/addDiastereotopicMissingChirality.js#L11-L42'>
       <span>src/diastereotopic/addDiastereotopicMissingChirality.js</span>
       </a>
     
@@ -431,7 +481,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L138-L140'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L138-L140'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -508,7 +558,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L43-L48'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L43-L48'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -517,7 +567,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
 
   <p>append to the current database a CSV file</p>
 
-    <div class='pre p1 fill-light mt0'>appendCSV(csv: (<a href="https://developer.mozilla.org/docs/Web/HTML">text</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+    <div class='pre p1 fill-light mt0'>appendCSV(csv: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
   
 
@@ -534,7 +584,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>csv</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/HTML">text</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>))</code>
+            <span class='code bold'>csv</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>))</code>
 	    text file containing the comma separated value file
 
           </div>
@@ -640,7 +690,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L58-L63'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L58-L63'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -649,7 +699,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
 
   <p>Append a SDF to the current database</p>
 
-    <div class='pre p1 fill-light mt0'>appendSDF(sdf: (<a href="https://developer.mozilla.org/docs/Web/HTML">text</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): DB</div>
+    <div class='pre p1 fill-light mt0'>appendSDF(sdf: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>), options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): DB</div>
   
   
 
@@ -666,7 +716,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sdf</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/HTML">text</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>))</code>
+            <span class='code bold'>sdf</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>))</code>
 	    text file containing the sdf
 
           </div>
@@ -749,7 +799,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L73-L78'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L73-L78'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -758,7 +808,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
 
   <p>Append a SDF to the current database</p>
 
-    <div class='pre p1 fill-light mt0'>appendSmilesList(text: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, smiles: (<a href="https://developer.mozilla.org/docs/Web/HTML">text</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>)): DB</div>
+    <div class='pre p1 fill-light mt0'>appendSmilesList(text: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, smiles: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>)): DB</div>
   
   
 
@@ -817,7 +867,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>smiles</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/HTML">text</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>))</code>
+            <span class='code bold'>smiles</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>))</code>
 	    text file containing a list of smiles
 
           </div>
@@ -866,7 +916,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L24-L31'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L24-L31'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -968,7 +1018,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L121-L123'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L121-L123'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1022,7 +1072,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L87-L89'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L87-L89'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1108,14 +1158,14 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L97-L99'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L97-L99'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
   </div>
   
 
-  <p>Add an netry in the database</p>
+  <p>Add an entry in the database</p>
 
     <div class='pre p1 fill-light mt0'>pushMoleculeInfo(moleculeInfo: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, data: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
   
@@ -1185,7 +1235,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/db/MoleculesDB.js#L113-L115'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/db/MoleculesDB.js#L113-L115'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1342,7 +1392,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/combineSmiles.js#L13-L21'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/combineSmiles.js#L13-L21'>
       <span>src/util/combineSmiles.js</span>
       </a>
     
@@ -1478,7 +1528,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/getAtomsInfo.js#L7-L106'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/getAtomsInfo.js#L7-L106'>
       <span>src/util/getAtomsInfo.js</span>
       </a>
     
@@ -1545,7 +1595,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/getConnectivityMatrix.js#L15-L78'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/getConnectivityMatrix.js#L15-L78'>
       <span>src/util/getConnectivityMatrix.js</span>
       </a>
     
@@ -1703,7 +1753,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/diastereotopic/getDiastereotopicAtomIDs.js#L10-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/diastereotopic/getDiastereotopicAtomIDs.js#L10-L26'>
       <span>src/diastereotopic/getDiastereotopicAtomIDs.js</span>
       </a>
     
@@ -1770,7 +1820,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/diastereotopic/getDiastereotopicAtomIDsAndH.js#L8-L43'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/diastereotopic/getDiastereotopicAtomIDsAndH.js#L8-L43'>
       <span>src/diastereotopic/getDiastereotopicAtomIDsAndH.js</span>
       </a>
     
@@ -1836,7 +1886,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/diastereotopic/getGroupedDiastereotopicAtomIDs.js#L11-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/diastereotopic/getGroupedDiastereotopicAtomIDs.js#L11-L32'>
       <span>src/diastereotopic/getGroupedDiastereotopicAtomIDs.js</span>
       </a>
     
@@ -1945,7 +1995,7 @@ a set of chemically equivalent atoms(element.atoms) and the groups of magnetical
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/hose/getHoseCodesAndDiastereotopicIDs.js#L11-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/hose/getHoseCodesAndDiastereotopicIDs.js#L11-L32'>
       <span>src/hose/getHoseCodesAndDiastereotopicIDs.js</span>
       </a>
     
@@ -2021,7 +2071,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/hose/getHoseCodesForAtom.js#L13-L15'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/hose/getHoseCodesForAtom.js#L13-L15'>
       <span>src/hose/getHoseCodesForAtom.js</span>
       </a>
     
@@ -2163,7 +2213,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/hose/getHoseCodesForAtoms.js#L18-L103'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/hose/getHoseCodesForAtoms.js#L18-L103'>
       <span>src/hose/getHoseCodesForAtoms.js</span>
       </a>
     
@@ -2306,7 +2356,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/hose/getHoseCodesForPath.js#L10-L106'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/hose/getHoseCodesForPath.js#L10-L106'>
       <span>src/hose/getHoseCodesForPath.js</span>
       </a>
     
@@ -2397,7 +2447,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/hose/getHoseCodesFromDiastereotopicID.js#L8-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/hose/getHoseCodesFromDiastereotopicID.js#L8-L27'>
       <span>src/hose/getHoseCodesFromDiastereotopicID.js</span>
       </a>
     
@@ -2481,7 +2531,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/getMF.js#L9-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/getMF.js#L9-L37'>
       <span>src/util/getMF.js</span>
       </a>
     
@@ -2556,7 +2606,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/path/getPathsInfo.js#L17-L66'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/path/getPathsInfo.js#L17-L66'>
       <span>src/path/getPathsInfo.js</span>
       </a>
     
@@ -2631,7 +2681,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/path/getShortestPaths.js#L10-L48'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/path/getShortestPaths.js#L10-L48'>
       <span>src/path/getShortestPaths.js</span>
       </a>
     
@@ -2715,7 +2765,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/isCsp3.js#L7-L17'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/isCsp3.js#L7-L17'>
       <span>src/util/isCsp3.js</span>
       </a>
     
@@ -2790,7 +2840,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/makeRacemic.js#L7-L19'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/makeRacemic.js#L7-L19'>
       <span>src/util/makeRacemic.js</span>
       </a>
     
@@ -2886,12 +2936,387 @@ diaID and hose code</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='nbcho'>
+      nbCHO
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/nbCHO.js#L7-L44'>
+      <span>src/util/nbCHO.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the number of Carbonyl groups in a molecule or fragment</p>
+
+    <div class='pre p1 fill-light mt0'>nbCHO(molecule: OCL.Molecule): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        'Number of Carbonyl groups'
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nbcn'>
+      nbCN
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/nbCN.js#L7-L46'>
+      <span>src/util/nbCN.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the number of Nitrile groups in a molecule or fragment</p>
+
+    <div class='pre p1 fill-light mt0'>nbCN(molecule: OCL.Molecule): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        'Number of Nitrile groups'
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nbcooh'>
+      nbCOOH
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/nbCOOH.js#L7-L53'>
+      <span>src/util/nbCOOH.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the number of Carboxyl groups in a molecule or fragment</p>
+
+    <div class='pre p1 fill-light mt0'>nbCOOH(molecule: OCL.Molecule): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        'Number of Carboxyl groups'
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nbnh2'>
+      nbNH2
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/nbNH2.js#L7-L46'>
+      <span>src/util/nbNH2.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the number of Primary amine groups in a molecule or fragment</p>
+
+    <div class='pre p1 fill-light mt0'>nbNH2(molecule: OCL.Molecule): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        'Number of Primary amine groups'
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nboh'>
+      nbOH
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/nbOH.js#L7-L50'>
+      <span>src/util/nbOH.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the number of Hydroxyl groups in a molecule or fragment</p>
+
+    <div class='pre p1 fill-light mt0'>nbOH(molecule: OCL.Molecule): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>molecule</span> <code class='quiet'>(OCL.Molecule)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        'Number of Hydroxyl groups'
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='tagatom'>
       tagAtom
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/util/tagAtom.js#L8-L20'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/util/tagAtom.js#L8-L20'>
       <span>src/util/tagAtom.js</span>
       </a>
     
@@ -2966,7 +3391,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/480f69e7251f3a25b3f3434b7b6ca69d11d38a22/src/diastereotopic/toDiastereotopicSVG.js#L8-L52'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/28fac31358d9a27691b891dd81032b10658e8e99/src/diastereotopic/toDiastereotopicSVG.js#L8-L52'>
       <span>src/diastereotopic/toDiastereotopicSVG.js</span>
       </a>
     
