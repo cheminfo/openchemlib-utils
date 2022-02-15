@@ -1,7 +1,7 @@
 /**
- * Return number of COOH groups in a molecule or fragment
+ * Return the number of Carboxyl groups in a molecule or fragment
  * @param {OCL.Molecule} molecule
- * @param {number} 'COOH groups'
+ * @returns {number} 'Number of Carboxyl groups'
  */
 
 export function nbCOOH(molecule) {
@@ -10,6 +10,7 @@ export function nbCOOH(molecule) {
     if (molecule.getAtomicNo(i) === 6) {
       let carbonyl = false;
       let hydroxyl = false;
+      let carbonOrHydrogen = true;
       for (
         let neighbour = 0;
         neighbour < molecule.getConnAtoms(i);
@@ -23,13 +24,29 @@ export function nbCOOH(molecule) {
             molecule.getBondOrder(neighbourBond) === 1 &&
             molecule.getAllHydrogens(neighbourAtom) > 0
           ) {
+            // If there is more than a Hydroxyl in the same carbon atom it is not couted as Carboxyl group
+            if (hydroxyl) {
+              hydroxyl = false;
+              break;
+            }
             hydroxyl = true;
           } else if (molecule.getBondOrder(neighbourBond) === 2) {
+            // If there is more than one carbonyl in the same carbon atom it is not count as Carboxyl group
+            if (carbonyl) {
+              carbonyl = false;
+              break;
+            }
             carbonyl = true;
           }
+        } else if (
+          // If there is not at least one carbon or hydrogen as neighbour atom it is not counted as Carboxyl group
+          molecule.getAtomicNo(neighbourAtom) !== 6 &&
+          molecule.getAtomicNo(neighbourAtom) !== 1
+        ) {
+          carbonOrHydrogen = false;
         }
       }
-      if (carbonyl && hydroxyl) counter++;
+      if (carbonyl && hydroxyl && carbonOrHydrogen) counter++;
     }
   }
   return counter;

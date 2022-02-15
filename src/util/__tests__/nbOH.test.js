@@ -31,4 +31,22 @@ describe('nbOH', () => {
     let molecule = OCL.Molecule.fromSmiles('CCCC(=O)O');
     expect(nbOH(molecule)).toBe(0);
   });
+  it('check if not C or H', () => {
+    let molecule = OCL.Molecule.fromSmiles('N=C(O)Br');
+    expect(nbOH(molecule)).toBe(0);
+  });
+  it('check if not C or H (H case)', () => {
+    let molecule = OCL.Molecule.fromSmiles('NC(O)Br');
+    expect(nbOH(molecule)).toBe(0);
+  });
+  it('check if not C or H (C case)', () => {
+    let molecule = OCL.Molecule.fromSmiles('NC(O)Br');
+    molecule.addImplicitHydrogens();
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
+    expect(nbOH(molecule)).toBe(0);
+  });
+  it('check if two OH groups in same carbon', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCCC(O)O');
+    expect(nbOH(molecule)).toBe(0);
+  });
 });

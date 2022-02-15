@@ -5,6 +5,8 @@ import { nbCHO } from '../nbCHO';
 describe('nbCHO', () => {
   it('check hexanoic acid', () => {
     let molecule = OCL.Molecule.fromSmiles('CCCC(C)C(=O)O');
+    molecule.addImplicitHydrogens();
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
     expect(nbCHO(molecule)).toBe(0);
   });
   it('check pentan-2-oic acid', () => {
@@ -30,5 +32,29 @@ describe('nbCHO', () => {
   it('check hexanedial', () => {
     let molecule = OCL.Molecule.fromSmiles('O=CCCCCC=O');
     expect(nbCHO(molecule)).toBe(2);
+  });
+  it('check Br2CO', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=C(Br)Br');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('check BrCHO', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=CBr');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('check CH3COBr', () => {
+    let molecule = OCL.Molecule.fromSmiles('CC(=O)Br');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('check formaldehyde', () => {
+    let molecule = OCL.Molecule.fromSmiles('C=O');
+    expect(nbCHO(molecule)).toBe(1);
+  });
+  it('two carbonyls on same atom', () => {
+    let molecule = OCL.Molecule.fromSmiles('CC[CH+](=O)=O');
+    expect(nbCHO(molecule)).toBe(0);
+  });
+  it('butanol', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCCCO');
+    expect(nbCHO(molecule)).toBe(0);
   });
 });

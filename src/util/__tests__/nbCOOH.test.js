@@ -5,6 +5,8 @@ import { nbCOOH } from '../nbCOOH';
 describe('nbCOOH', () => {
   it('check hexanoic acid', () => {
     let molecule = OCL.Molecule.fromSmiles('CCCC(C)C(=O)O');
+    molecule.addImplicitHydrogens();
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
     expect(nbCOOH(molecule)).toBe(1);
   });
   it('check ethyl acetate', () => {
@@ -29,6 +31,22 @@ describe('nbCOOH', () => {
   });
   it('check propanal', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC=O');
+    expect(nbCOOH(molecule)).toBe(0);
+  });
+  it('check BrCOOH', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=C(O)Br');
+    expect(nbCOOH(molecule)).toBe(0);
+  });
+  it('check COOH2', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=CO');
+    expect(nbCOOH(molecule)).toBe(1);
+  });
+  it('two carbonyls on same atom', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCC[C+](=O)=O');
+    expect(nbCOOH(molecule)).toBe(0);
+  });
+  it('two hydroxyl on same atom', () => {
+    let molecule = OCL.Molecule.fromSmiles('O=[C+](=O)CCC(O)O');
     expect(nbCOOH(molecule)).toBe(0);
   });
 });
