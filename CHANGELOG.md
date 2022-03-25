@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.9.0...v1.10.0) (2022-03-25)
+
+
+### Features
+
+* add getPathAndTorsion ([8c587c8](https://www.github.com/cheminfo/openchemlib-utils/commit/8c587c8fd15f9a27e0e2e21c3659f0abab6e262e))
+* add options withHOSES (defualt false) to getPathsInfo ([1af6b9e](https://www.github.com/cheminfo/openchemlib-utils/commit/1af6b9ef1b15ce63da91ca247e81d8e134112643))
+
 ## [1.9.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.8.0...v1.9.0) (2022-02-15)
 
 
