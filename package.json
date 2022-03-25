@@ -47,6 +47,7 @@
     "eslint-plugin-import": "^2.25.4",
     "esm": "^3.2.25",
     "jest": "^27.5.0",
+    "jest-matcher-deep-close-to": "^3.0.2",
     "openchemlib": "7.4.0",
     "prettier": "^2.5.1",
     "rollup": "^2.67.1"
