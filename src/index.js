@@ -24,6 +24,7 @@ export * from './util/nbNH2';
 export * from './util/nbCN';
 
 export * from './path/getPathsInfo';
+export * from './path/getPathAndTorsion';
 export * from './path/getShortestPaths';
 
 export * from './db/MoleculesDB';
