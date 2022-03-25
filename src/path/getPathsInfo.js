@@ -2,16 +2,19 @@ import { getHoseCodesForPath } from '../hose/getHoseCodesForPath';
 import { getAtomsInfo } from '../util/getAtomsInfo';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix';
 
+import { getPathAndTorsion } from './getPathAndTorsion.js';
+
 let fragment;
 
 /**
  *
  * @param {OCL.Molecule} molecule
  * @param {object} [options={}]
- * @param {string} [opions.fromLabel='H']
- * @param {string} [opions.toLabel='H']
- * @param {string} [opions.minLength=1]
- * @param {string} [opions.maxLength=4]
+ * @param {string} [options.fromLabel='H']
+ * @param {string} [options.toLabel='H']
+ * @param {number} [options.minLength=1]
+ * @param {number} [options.maxLength=4]
+ * @param {boolean} [options.withHOSES=false]
 
  */
 export function getPathsInfo(molecule, options = {}) {
@@ -20,6 +23,7 @@ export function getPathsInfo(molecule, options = {}) {
     toLabel = 'H',
     minLength = 1,
     maxLength = 4,
+    withHOSES = false,
   } = options;
 
   const OCL = molecule.getOCL();
@@ -46,15 +50,15 @@ export function getPathsInfo(molecule, options = {}) {
           if (molecule.getAtomicNo(to) === toAtomicNumber) {
             let pathLength = pathLengthMatrix[from][to];
             if (pathLength >= minLength && pathLength <= maxLength) {
-              atomsInfo[from].paths.push(
-                getHoseCodesForPath(
-                  molecule,
-                  from,
-                  to,
-                  pathLength,
-                  atomsInfo[to].oclID,
-                ),
-              );
+              if (withHOSES) {
+                atomsInfo[from].paths.push(
+                  getHoseCodesForPath(molecule, from, to, pathLength),
+                );
+              } else {
+                atomsInfo[from].paths.push(
+                  getPathAndTorsion(molecule, from, to, pathLength),
+                );
+              }
             }
           }
         }

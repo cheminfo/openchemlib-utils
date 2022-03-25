@@ -3,7 +3,7 @@ import OCL from 'openchemlib';
 import { getPathsInfo } from '../getPathsInfo';
 
 describe('getPathsInfo', () => {
-  it('propane min:1, max:3', () => {
+  it('propane min:1, max:3, withHOSES', () => {
     let molecule = OCL.Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
     molecule.addMissingChirality();
@@ -12,6 +12,7 @@ describe('getPathsInfo', () => {
       toLabel: 'H',
       minLength: 1,
       maxLength: 3,
+      withHOSES: true,
     });
 
     let hoses = {};
@@ -40,7 +41,7 @@ describe('getPathsInfo', () => {
     expect(pathsInfo).toMatchSnapshot();
   });
 
-  it('ethane min:2, max:2', () => {
+  it('ethane min:2, max:2, withHOSES', () => {
     let molecule = OCL.Molecule.fromSmiles('CC');
     molecule.addImplicitHydrogens();
     molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
@@ -49,6 +50,7 @@ describe('getPathsInfo', () => {
       toLabel: 'H',
       minLength: 2,
       maxLength: 2,
+      withHOSES: true,
     });
 
     let hoses = {};
@@ -65,6 +67,29 @@ describe('getPathsInfo', () => {
       'gC%60DALjYRZhCzROtRADjdbUP',
       'gC%60DALjYRZhA%7EbPHeTdRj@',
     ]);
+    expect(pathsInfo).toMatchSnapshot();
+  });
+
+  it('propane min:1, max:3', () => {
+    let molecule = OCL.Molecule.fromSmiles('CCO');
+    molecule.addImplicitHydrogens();
+    molecule.addMissingChirality();
+    let pathsInfo = getPathsInfo(molecule, {
+      fromLabel: 'H',
+      toLabel: 'H',
+      minLength: 1,
+      maxLength: 3,
+      withHOSES: true,
+    });
+
+    let hoses = {};
+    for (let atom of pathsInfo) {
+      for (let path of atom.paths) {
+        for (let hose of path.hoses) {
+          hoses[escape(hose.oclID)] = true;
+        }
+      }
+    }
     expect(pathsInfo).toMatchSnapshot();
   });
 });
