@@ -29,6 +29,8 @@ export * from './path/getShortestPaths';
 
 export * from './db/MoleculesDB';
 
+export * from './features/getAtomFeatures';
+
 export * from './misc/toVisualizerMolfile';
 
 export * from './fragment/fragmentAcyclicSingleBonds';

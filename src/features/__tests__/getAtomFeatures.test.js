@@ -1,0 +1,33 @@
+import { Molecule } from 'openchemlib';
+
+import { getAtomFeatures } from '../getAtomFeatures.js';
+
+describe('getAtomFeatures', () => {
+  it('CCCC', () => {
+    const molecule = Molecule.fromSmiles('CCCC');
+    const features = getAtomFeatures(molecule);
+    expect(features).toStrictEqual({
+      'eF@HpP': 2,
+      'eM@HzB': 2,
+    });
+  });
+
+  it('c1ccccc1', () => {
+    const molecule = Molecule.fromSmiles('c1ccccc1');
+    const features = getAtomFeatures(molecule);
+    expect(features).toStrictEqual({
+      'eM@HpB': 6,
+    });
+  });
+
+  it('c1ccccc1CC', () => {
+    const molecule = Molecule.fromSmiles('c1ccccc1CC');
+    const features = getAtomFeatures(molecule);
+    expect(features).toStrictEqual({
+      'eM@HpB': 5,
+      'gC`@HxPD': 1,
+      'eM@HzB': 1,
+      'eF@HpP': 1,
+    });
+  });
+});
