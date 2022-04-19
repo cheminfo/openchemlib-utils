@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.10.0...v1.11.0) (2022-04-19)
+
+
+### Features
+
+* add getAtomFeatures ([9ecde24](https://www.github.com/cheminfo/openchemlib-utils/commit/9ecde24496aa48ef4eee3a28c4ba570ce9ed9ef3))
+
 ## [1.10.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.9.0...v1.10.0) (2022-03-25)
 
 
