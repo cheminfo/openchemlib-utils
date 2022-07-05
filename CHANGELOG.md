@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.11.0...v1.12.0) (2022-07-05)
+
+
+### Features
+
+* null query returns the full DB ([4279051](https://www.github.com/cheminfo/openchemlib-utils/commit/4279051c118579564597f4a0db6babb12acea32f))
+
 ## [1.11.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.10.0...v1.11.0) (2022-04-19)
 
 
