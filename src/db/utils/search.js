@@ -1,6 +1,6 @@
 import getMoleculeCreators from './getMoleculeCreators';
 
-export default function search(moleculesDB, query, options = {}) {
+export default function search(moleculesDB, query = '', options = {}) {
   const {
     format = 'idCode',
     mode = 'substructure',
@@ -19,13 +19,13 @@ export default function search(moleculesDB, query, options = {}) {
   let result;
   switch (mode.toLowerCase()) {
     case 'exact':
-      result = exactSearch(moleculesDB, query, limit);
+      result = exactSearch(moleculesDB, query);
       break;
     case 'substructure':
-      result = subStructureSearch(moleculesDB, query, limit);
+      result = subStructureSearch(moleculesDB, query);
       break;
     case 'similarity':
-      result = similaritySearch(moleculesDB, query, limit);
+      result = similaritySearch(moleculesDB, query);
       break;
     default:
       throw new Error(`unknown search mode: ${options.mode}`);
