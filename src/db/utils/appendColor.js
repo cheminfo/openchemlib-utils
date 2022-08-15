@@ -58,16 +58,9 @@ export default function appendColor(moleculesDB, options = {}) {
 
   for (let value of values) {
     if (value.value !== undefined) {
-      value.data[colorLabel] =
-        `hsl(${
-        Math.floor(
-          ((value.value - min) / (max - min)) * (maxHue - minHue) + minHue,
-        )
-        },${
-        saturation
-        }%,${
-        lightness
-        }%)`;
+      value.data[colorLabel] = `hsl(${Math.floor(
+        ((value.value - min) / (max - min)) * (maxHue - minHue) + minHue,
+      )},${saturation}%,${lightness}%)`;
     } else {
       value.data.color = 'black';
     }

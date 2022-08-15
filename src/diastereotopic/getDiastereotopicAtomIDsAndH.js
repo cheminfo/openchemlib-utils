@@ -1,5 +1,4 @@
 import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
-// Previously getExtendedDiastereotopicAtomIDs
 
 /**
  *
