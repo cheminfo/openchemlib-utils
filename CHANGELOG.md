@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v1.11.0...v2.0.0) (2022-08-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* update OpenChemLib to v8.0.0
+* remove deprecated function getExtendedDiastereotopicAtomIDs
+
+### Features
+
+* null query returns the full DB ([4279051](https://github.com/cheminfo/openchemlib-utils/commit/4279051c118579564597f4a0db6babb12acea32f))
+* update OpenChemLib to v8.0.0 ([09c88c4](https://github.com/cheminfo/openchemlib-utils/commit/09c88c45df6c5603ebcfc7cd67985863529d0ae6))
+
+
+### Miscellaneous Chores
+
+* remove deprecated function getExtendedDiastereotopicAtomIDs ([09c88c4](https://github.com/cheminfo/openchemlib-utils/commit/09c88c45df6c5603ebcfc7cd67985863529d0ae6))
+
 ## [1.11.0](https://www.github.com/cheminfo/openchemlib-utils/compare/v1.10.0...v1.11.0) (2022-04-19)
 
 
