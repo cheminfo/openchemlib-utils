@@ -40,7 +40,7 @@ We will add more examples in `/examples`.
 
 [npm-image]: https://img.shields.io/npm/v/openchemlib-utils.svg
 [npm-url]: https://www.npmjs.com/package/openchemlib-utils
-[ci-image]: https://github.com/cheminfo/openchemlib-utils/workflows/Node.js%20CI/badge.svg?branch=master
+[ci-image]: https://github.com/cheminfo/openchemlib-utils/workflows/Node.js%20CI/badge.svg?branch=main
 [ci-url]: https://github.com/cheminfo/openchemlib-utils/actions?query=workflow%3A%22Node.js+CI%22
 [download-image]: https://img.shields.io/npm/dm/openchemlib-utils.svg
 [download-url]: https://www.npmjs.com/package/openchemlib-utils
