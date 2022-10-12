@@ -1,11 +1,11 @@
 import OCL from 'openchemlib';
 
-import { getHoseCodesForAtoms } from '../getHoseCodesForAtoms';
+import { getHoseCodesForBond } from '../getHoseCodesForBond';
 
 describe('getHoseCodesForAtoms', () => {
   it('C*C(Cl)CC single marked atom', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
-    let hoses = getHoseCodesForAtoms(molecule, [0]);
+    let hoses = getHoseCodesForBond(molecule, [0]);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'fH@NJ%60%7FRapj%60',
@@ -17,7 +17,7 @@ describe('getHoseCodesForAtoms', () => {
   });
   it('C*C*(Cl)CC double marked atoms', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
-    let hoses = getHoseCodesForAtoms(molecule, [0, 1]);
+    let hoses = getHoseCodesForBond(molecule, [0, 1]);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
       'eF@Hp%5CIPUA%7Eb%60xUTxUP',
