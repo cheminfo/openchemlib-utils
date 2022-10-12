@@ -6,7 +6,7 @@ export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
 
 /**
- * Returns the hose code for a specific atom number
+ * Returns the hose code for a specific bond
  * @param {OCL.Molecule} originalMolecule
  * @param {array<number>} rootAtoms
  * @param {object} [options={}]
@@ -15,7 +15,7 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * @param {number} [options.maxSphereSize=4] Largest hose code sphere
  * @param {number} [options.kind=FULL_HOSE_CODE] Kind of hose code, default usual sphere
  */
-export function getHoseCodesForAtoms(
+export function getHoseCodesForBond(
   originalMolecule,
   rootAtoms = [],
   options = {},
