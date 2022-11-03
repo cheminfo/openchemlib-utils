@@ -1,3 +1,13 @@
+/**
+ *
+ * @param {MoleculesDB} moleculesDB
+ * @param {OCL.Molecule} molecule
+ * @param {object} data
+ * @param {object} [moleculeInfo]
+ * @param {string} [moleculeInfo.idCode]
+ * @param {number[]} [moleculeInfo.index]
+ */
+
 export default function pushEntry(
   moleculesDB,
   molecule,
