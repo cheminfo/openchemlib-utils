@@ -7,14 +7,14 @@ const { MoleculesDB } = OCLUtils;
 const response = await fetch(
   'https://wikipedia.cheminfo.org/src/json/data.json',
 );
-const data = (await response.json()).data.molecules.slice(0, 1000);
+const data = (await response.json()).data.molecules;
 
 // We create a database
 
 const moleculesDB = new MoleculesDB(OCL);
 
 for (const entry of data) {
-  const molecule = OCL.Molecule.fromIDCode(entry.actID.value);
+  const molecule = OCL.Molecule.fromIDCode(entry.actID.value, false);
   moleculesDB.pushEntry(
     molecule,
     {
