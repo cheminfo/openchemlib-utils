@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getPathsInfo ethane min:2, max:2, withHOSES 1`] = `
-Array [
-  Object {
+[
+  {
     "abnormalValence": -1,
     "allConnAtoms": 4,
     "allHydrogens": 3,
@@ -12,7 +12,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -30,7 +30,7 @@ Array [
     "label": "C",
     "mass": 0,
     "oclID": "eF@HpLQP_iHNET",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -38,7 +38,7 @@ Array [
     "y": 0,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 4,
     "allHydrogens": 3,
@@ -48,7 +48,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -66,7 +66,7 @@ Array [
     "label": "C",
     "mass": 0,
     "oclID": "eF@HpLQP_iHNET",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -74,7 +74,7 @@ Array [
     "y": 0.5,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -84,7 +84,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -103,24 +103,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "eMBBYRZA~d\`bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           2,
           0,
           3,
         ],
         "from": 2,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -129,23 +129,23 @@ Array [
         "to": 3,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           2,
           0,
           4,
         ],
         "from": 2,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -162,7 +162,7 @@ Array [
     "y": -0.35,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -172,7 +172,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -191,24 +191,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "eMBBYRZA~d\`bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           3,
           0,
           2,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -217,23 +217,23 @@ Array [
         "to": 2,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           4,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -250,7 +250,7 @@ Array [
     "y": 0.6062177826491071,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -260,7 +260,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -279,24 +279,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "eMBBYRZA~d\`bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           4,
           0,
           2,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -305,23 +305,23 @@ Array [
         "to": 2,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           3,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -338,7 +338,7 @@ Array [
     "y": -0.6062177826491071,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -348,7 +348,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -367,24 +367,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "eMBBYRZA~d\`bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           5,
           1,
           6,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -393,23 +393,23 @@ Array [
         "to": 6,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           1,
           7,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -426,7 +426,7 @@ Array [
     "y": 1.5,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -436,7 +436,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -455,24 +455,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "eMBBYRZA~d\`bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           6,
           1,
           5,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -481,23 +481,23 @@ Array [
         "to": 5,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           7,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -514,7 +514,7 @@ Array [
     "y": 1.3660254037844386,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -524,7 +524,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -543,24 +543,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "eMBBYRZA~d\`bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           7,
           1,
           5,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -569,23 +569,23 @@ Array [
         "to": 5,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           6,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhA~bPHeTdRj@",
             "sphere": 2,
           },
@@ -606,8 +606,8 @@ Array [
 `;
 
 exports[`getPathsInfo propane min:1, max:3 1`] = `
-Array [
-  Object {
+[
+  {
     "abnormalValence": -1,
     "allConnAtoms": 4,
     "allHydrogens": 3,
@@ -617,7 +617,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -635,7 +635,7 @@ Array [
     "label": "C",
     "mass": 0,
     "oclID": "eMHAIhFIhOtdWBj@",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -643,7 +643,7 @@ Array [
     "y": 0.5,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 4,
     "allHydrogens": 2,
@@ -653,7 +653,7 @@ Array [
     "color": 0,
     "connAtoms": 2,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -671,7 +671,7 @@ Array [
     "label": "C",
     "mass": 0,
     "oclID": "eMHAIhFJhOtdgBj@",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -679,7 +679,7 @@ Array [
     "y": 0,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 2,
     "allHydrogens": 1,
@@ -689,7 +689,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -707,7 +707,7 @@ Array [
     "label": "O",
     "mass": 0,
     "oclID": "eMHAIhFHhOtdGrj@",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -715,7 +715,7 @@ Array [
     "y": 0.5,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -725,7 +725,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -744,24 +744,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           3,
           0,
           4,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -770,23 +770,23 @@ Array [
         "to": 4,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           5,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -795,24 +795,24 @@ Array [
         "to": 5,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           1,
           6,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -821,24 +821,24 @@ Array [
         "to": 6,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           1,
           7,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -855,7 +855,7 @@ Array [
     "y": 0.85,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -865,7 +865,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -884,24 +884,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           4,
           0,
           3,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -910,23 +910,23 @@ Array [
         "to": 3,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           5,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -935,24 +935,24 @@ Array [
         "to": 5,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           1,
           6,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -961,24 +961,24 @@ Array [
         "to": 6,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           1,
           7,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -995,7 +995,7 @@ Array [
     "y": 1.106217782649107,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1005,7 +1005,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1024,24 +1024,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           5,
           0,
           3,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -1050,23 +1050,23 @@ Array [
         "to": 3,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           0,
           4,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -1075,24 +1075,24 @@ Array [
         "to": 4,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           0,
           1,
           6,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1101,24 +1101,24 @@ Array [
         "to": 6,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           0,
           1,
           7,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1135,7 +1135,7 @@ Array [
     "y": -0.10621778264910708,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1145,7 +1145,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1164,25 +1164,25 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHDIeIjiJ@RHDRj@",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           6,
           1,
           0,
           3,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1191,24 +1191,24 @@ Array [
         "to": 3,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           0,
           4,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1217,24 +1217,24 @@ Array [
         "to": 4,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           0,
           5,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1243,23 +1243,23 @@ Array [
         "to": 5,
         "torsion": 0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           7,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUTAQHDRjRIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUT@QHDRjRIU@",
             "sphere": 2,
           },
@@ -1268,24 +1268,24 @@ Array [
         "to": 7,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           2,
           8,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -1302,7 +1302,7 @@ Array [
     "y": -0.6062177826491071,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1312,7 +1312,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1331,25 +1331,25 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHDIeIjiJ@RHDRj@",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           7,
           1,
           0,
           3,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1358,24 +1358,24 @@ Array [
         "to": 3,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           0,
           4,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1384,24 +1384,24 @@ Array [
         "to": 4,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           0,
           5,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1410,23 +1410,23 @@ Array [
         "to": 5,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           6,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUTAQHDRjRIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUT@QHDRjRIU@",
             "sphere": 2,
           },
@@ -1435,24 +1435,24 @@ Array [
         "to": 6,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           2,
           8,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -1469,7 +1469,7 @@ Array [
     "y": -0.6062177826491071,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1479,7 +1479,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1499,25 +1499,25 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHHIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           8,
           2,
           1,
           6,
         ],
         "from": 8,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -1526,24 +1526,24 @@ Array [
         "to": 6,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           8,
           2,
           1,
           7,
         ],
         "from": 8,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -1564,8 +1564,8 @@ Array [
 `;
 
 exports[`getPathsInfo propane min:1, max:3, withHOSES 1`] = `
-Array [
-  Object {
+[
+  {
     "abnormalValence": -1,
     "allConnAtoms": 4,
     "allHydrogens": 3,
@@ -1575,7 +1575,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -1593,7 +1593,7 @@ Array [
     "label": "C",
     "mass": 0,
     "oclID": "eMHAIhFIhOtdWBj@",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -1601,7 +1601,7 @@ Array [
     "y": 0.5,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 4,
     "allHydrogens": 2,
@@ -1611,7 +1611,7 @@ Array [
     "color": 0,
     "connAtoms": 2,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -1629,7 +1629,7 @@ Array [
     "label": "C",
     "mass": 0,
     "oclID": "eMHAIhFJhOtdgBj@",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -1637,7 +1637,7 @@ Array [
     "y": 0,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 2,
     "allHydrogens": 1,
@@ -1647,7 +1647,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 3,
       "doubleBonds": 0,
@@ -1665,7 +1665,7 @@ Array [
     "label": "O",
     "mass": 0,
     "oclID": "eMHAIhFHhOtdGrj@",
-    "paths": Array [],
+    "paths": [],
     "radical": 0,
     "ringBondCount": 0,
     "ringSize": 0,
@@ -1673,7 +1673,7 @@ Array [
     "y": 0.5,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1683,7 +1683,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1702,24 +1702,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           3,
           0,
           4,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -1728,23 +1728,23 @@ Array [
         "to": 4,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           5,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -1753,24 +1753,24 @@ Array [
         "to": 5,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           1,
           6,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1779,24 +1779,24 @@ Array [
         "to": 6,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           3,
           0,
           1,
           7,
         ],
         "from": 3,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1813,7 +1813,7 @@ Array [
     "y": 0.85,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1823,7 +1823,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1842,24 +1842,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           4,
           0,
           3,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -1868,23 +1868,23 @@ Array [
         "to": 3,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           5,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -1893,24 +1893,24 @@ Array [
         "to": 5,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           1,
           6,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1919,24 +1919,24 @@ Array [
         "to": 6,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           4,
           0,
           1,
           7,
         ],
         "from": 4,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -1953,7 +1953,7 @@ Array [
     "y": 1.106217782649107,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -1963,7 +1963,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -1982,24 +1982,24 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           5,
           0,
           3,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -2008,23 +2008,23 @@ Array [
         "to": 3,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           0,
           4,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gC\`DALjYRZhCzROtRADjdbUP",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDBIeSJS]TA|iFs}D\`QJiHeT",
             "sphere": 2,
           },
@@ -2033,24 +2033,24 @@ Array [
         "to": 4,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           0,
           1,
           6,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2059,24 +2059,24 @@ Array [
         "to": 6,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           5,
           0,
           1,
           7,
         ],
         "from": 5,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2093,7 +2093,7 @@ Array [
     "y": -0.10621778264910708,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -2103,7 +2103,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -2122,25 +2122,25 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHDIeIjiJ@RHDRj@",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           6,
           1,
           0,
           3,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2149,24 +2149,24 @@ Array [
         "to": 3,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           0,
           4,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2175,24 +2175,24 @@ Array [
         "to": 4,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           0,
           5,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2201,23 +2201,23 @@ Array [
         "to": 5,
         "torsion": 0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           7,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUTAQHDRjRIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUT@QHDRjRIU@",
             "sphere": 2,
           },
@@ -2226,24 +2226,24 @@ Array [
         "to": 7,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           6,
           1,
           2,
           8,
         ],
         "from": 6,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -2260,7 +2260,7 @@ Array [
     "y": -0.6062177826491071,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -2270,7 +2270,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -2289,25 +2289,25 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHDIeIjiJ@RHDRj@",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           7,
           1,
           0,
           3,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2316,24 +2316,24 @@ Array [
         "to": 3,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           0,
           4,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2342,24 +2342,24 @@ Array [
         "to": 4,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           0,
           5,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gC\`DALzYRVhC~bPHeUdRj@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPOeHv_hdBIUEDj\`",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDDIdsJS]UIPGzI@bUQQJh",
             "sphere": 2,
           },
@@ -2368,23 +2368,23 @@ Array [
         "to": 5,
         "torsion": -0,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           6,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "eMABYYeIhOzJBIUJIU@",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUTAQHDRjRIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDLIeSJSUT@QHDRjRIU@",
             "sphere": 2,
           },
@@ -2393,24 +2393,24 @@ Array [
         "to": 6,
         "torsion": undefined,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           7,
           1,
           2,
           8,
         ],
         "from": 7,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -2427,7 +2427,7 @@ Array [
     "y": -0.6062177826491071,
     "z": 0,
   },
-  Object {
+  {
     "abnormalValence": -1,
     "allConnAtoms": 1,
     "allHydrogens": 0,
@@ -2437,7 +2437,7 @@ Array [
     "color": 0,
     "connAtoms": 1,
     "customLabel": null,
-    "extra": Object {
+    "extra": {
       "aromaticBonds": 0,
       "cnoHybridation": 0,
       "doubleBonds": 0,
@@ -2457,25 +2457,25 @@ Array [
     "label": "H",
     "mass": 0,
     "oclID": "gCaHHIeIZ\`GzQ@bUP",
-    "paths": Array [
-      Object {
-        "atoms": Array [
+    "paths": [
+      {
+        "atoms": [
           8,
           2,
           1,
           6,
         ],
         "from": 8,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
@@ -2484,24 +2484,24 @@ Array [
         "to": 6,
         "torsion": -3.141592653589793,
       },
-      Object {
-        "atoms": Array [
+      {
+        "atoms": [
           8,
           2,
           1,
           7,
         ],
         "from": 8,
-        "hoses": Array [
-          Object {
+        "hoses": [
+          {
             "oclID": "gCaDHIgSJRu@_tRADjlbUP",
             "sphere": 0,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPOhhQHDRjrIU@",
             "sphere": 1,
           },
-          Object {
+          {
             "oclID": "gJQDHIgSJRuUDPGzI@bUVQJh",
             "sphere": 2,
           },
