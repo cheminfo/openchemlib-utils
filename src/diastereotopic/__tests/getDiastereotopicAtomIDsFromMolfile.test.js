@@ -51,19 +51,19 @@ M  END`;
   const result = getDiastereotopicAtomIDsFromMolfile(OCL, molfile);
 
   expect(result.diaIDs[10]).toMatchInlineSnapshot(`
-    Object {
-      "hydrogenOCLIDs": Array [
-        "fle\`A@E@f\\\\NFQIRIIPiSIV]EMUUP@@@@@RB@QJh",
+    {
+      "hydrogenOCLIDs": [
+        "fle\`A@E@f\\NFQIRIIPiSIV]EMUUP@@@@@RB@QJh",
       ],
       "nbHydrogens": 3,
-      "oclID": "fdy\`B@I@\\\\LddRRtJTrQkAcUUP@@@@@qBeA~dDhxUP",
+      "oclID": "fdy\`B@I@\\LddRRtJTrQkAcUUP@@@@@qBeA~dDhxUP",
     }
   `);
   expect(result.map[10]).toMatchInlineSnapshot(`
-    Object {
+    {
       "destination": 18,
-      "heavyAtom": "fdy\`B@I@\\\\LddRRTjTrQkAcUUP@@@@@qBMA~dDbxUP",
-      "hydrogenOCLIDs": Array [],
+      "heavyAtom": "fdy\`B@I@\\LddRRTjTrQkAcUUP@@@@@qBMA~dDbxUP",
+      "hydrogenOCLIDs": [],
       "nbHydrogens": 0,
       "oclID": "fle\`A@A@fSNBSJvnmJtYIT@@AUUP@@RB@QJh",
       "source": 10,
