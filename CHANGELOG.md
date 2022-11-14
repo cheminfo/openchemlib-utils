@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.0.0...v2.1.0) (2022-11-14)
+
+
+### Features
+
+* add getDiastereotopicAtomIDsFromMolfile ([05950e9](https://github.com/cheminfo/openchemlib-utils/commit/05950e9b45d37eb54240865c67b23251b9ad278c))
+* getDiastereotopicAtomIDsFromMolfile ([1bc20c8](https://github.com/cheminfo/openchemlib-utils/commit/1bc20c812815055326502eaca4ba6b41c79d83d9))
+
+
+### Documentation
+
+* add example of substructure search in wikipedia ([c4d27e9](https://github.com/cheminfo/openchemlib-utils/commit/c4d27e937520e608cdc0d3453b5273b2657f2e99))
+* add one jsdoc ([5a1226b](https://github.com/cheminfo/openchemlib-utils/commit/5a1226b9100881745fb156993534f6d80b798c95))
+
 ## [2.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v1.11.0...v2.0.0) (2022-08-15)
 
 
