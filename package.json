@@ -14,11 +14,7 @@
     "eslint-fix": "npm run eslint -- --fix",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-<<<<<<< HEAD
     "prepack": "rollup -c --bundleConfigAsCjs",
-=======
-    "prepare": "rollup -c --bundleConfigAsCjs",
->>>>>>> ce6ad18 (chore: update dependencies)
     "test": "npm run test-only && npm run eslint && npm run prettier",
     "test-only": "jest --coverage"
   },
