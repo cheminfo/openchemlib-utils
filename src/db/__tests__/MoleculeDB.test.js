@@ -26,7 +26,6 @@ describe('MoleculesDB', () => {
         expect(total).toBe(20);
       }
 
-      // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendSDF(sdf, { onStep }).then(() => {
         expect(called).toBe(20);
       });
@@ -60,7 +59,6 @@ describe('MoleculesDB', () => {
         expect(total).toBe(5);
       }
 
-      // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendCSV(csv, { onStep }).then(() => {
         expect(called).toBe(5);
       });
@@ -84,7 +82,6 @@ describe('MoleculesDB', () => {
         expect(total).toBe(3);
       }
 
-      // eslint-disable-next-line jest/no-test-return-statement
       return moleculesDB.appendSmilesList(text, { onStep }).then(() => {
         expect(called).toBe(3);
       });
