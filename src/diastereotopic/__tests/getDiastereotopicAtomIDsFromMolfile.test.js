@@ -71,7 +71,7 @@ M  END`;
   `);
 });
 
-test.only('getDiastereotopicAtomIDsFromMolfile with H', () => {
+test('getDiastereotopicAtomIDsFromMolfile with H', () => {
   const molfile = `Empty String
   ACD/Labs09022211502D
   $$ Empty String
