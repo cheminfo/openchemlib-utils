@@ -10,6 +10,6 @@ import { groupDiastereotopicAtomIDs } from './groupDiastereotopicAtomIDs';
  */
 
 export function getGroupedDiastereotopicAtomIDs(molecule, options = {}) {
-  let diaIDs = getDiastereotopicAtomIDs(molecule, options);
+  let diaIDs = getDiastereotopicAtomIDs(molecule);
   return groupDiastereotopicAtomIDs(diaIDs, molecule, options);
 }
