@@ -1,4 +1,4 @@
-import floydWarshall from 'ml-floyd-warshall';
+import { floydWarshall } from 'ml-floyd-warshall';
 import { Matrix } from 'ml-matrix';
 
 /**
