@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.0...v2.1.1) (2022-11-23)
+
+
+### Bug Fixes
+
+* getConnectivityMatrix with pathLength ([#44](https://github.com/cheminfo/openchemlib-utils/issues/44)) ([0363399](https://github.com/cheminfo/openchemlib-utils/commit/0363399b060f1cb17ab10dede5894d6a9dff8398))
+
 ## [2.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.0.0...v2.1.0) (2022-11-14)
 
 
