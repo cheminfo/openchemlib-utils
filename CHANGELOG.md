@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.1...v2.1.2) (2022-11-28)
+
+
+### Bug Fixes
+
+* split groupedDiastereotopicAtomIDs ([#42](https://github.com/cheminfo/openchemlib-utils/issues/42)) ([8e1ee5a](https://github.com/cheminfo/openchemlib-utils/commit/8e1ee5a7684871a6086e98bc0ffd0c130a57dbc3))
+
 ## [2.1.1](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.0...v2.1.1) (2022-11-23)
 
 
