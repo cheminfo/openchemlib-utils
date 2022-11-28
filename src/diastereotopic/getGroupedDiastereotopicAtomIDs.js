@@ -1,4 +1,5 @@
 import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
+import { groupDiastereotopicAtomIDs } from './groupDiastereotopicAtomIDs';
 /**
  * This function groups the diasterotopic atomIds of the molecule based on equivalence of atoms. The output object contains
  * a set of chemically equivalent atoms(element.atoms) and the groups of magnetically equivalent atoms (element.magneticGroups)
@@ -9,24 +10,6 @@ import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
  */
 
 export function getGroupedDiastereotopicAtomIDs(molecule, options = {}) {
-  const { atomLabel } = options;
-  let diaIDs = getDiastereotopicAtomIDs(molecule, options);
-  let diaIDsObject = {};
-  for (let i = 0; i < diaIDs.length; i++) {
-    if (!atomLabel || molecule.getAtomLabel(i) === atomLabel) {
-      let diaID = diaIDs[i];
-      if (!diaIDsObject[diaID]) {
-        diaIDsObject[diaID] = {
-          counter: 0,
-          atoms: [],
-          oclID: diaID,
-          atomLabel: molecule.getAtomLabel(i),
-        };
-      }
-      diaIDsObject[diaID].counter++;
-      diaIDsObject[diaID].atoms.push(i);
-    }
-  }
-
-  return Object.values(diaIDsObject);
+  let diaIDs = getDiastereotopicAtomIDs(molecule);
+  return groupDiastereotopicAtomIDs(diaIDs, molecule, options);
 }
