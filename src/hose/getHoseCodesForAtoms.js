@@ -7,8 +7,8 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
 
 /**
  * Returns the hose code for a specific atom number
- * @param {OCL.Molecule} originalMolecule
- * @param {array<number>} rootAtoms
+ * @param {import('openchemlib').Molecule} originalMolecule - The OCL molecule to be fragmented
+ * @param {number[]} rootAtoms
  * @param {object} [options={}]
  * @param {boolean} [options.isTagged] Specify is the atoms are already tagged
  * @param {number} [options.minSphereSize=0] Smallest hose code sphere

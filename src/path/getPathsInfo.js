@@ -8,7 +8,7 @@ let fragment;
 
 /**
  *
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
  * @param {string} [options.fromLabel='H']
  * @param {string} [options.toLabel='H']

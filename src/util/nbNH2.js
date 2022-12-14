@@ -1,6 +1,6 @@
 /**
  * Return the number of Primary amine groups in a molecule or fragment
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @returns {number} 'Number of Primary amine groups'
  */
 

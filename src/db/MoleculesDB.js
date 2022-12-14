@@ -79,7 +79,7 @@ export class MoleculesDB {
 
   /**
    * Add a molecule to the current database
-   * @param {OCL.Molecule} molecule
+   * @param {import('openchemlib').Molecule} molecule
    * @param {object} [data={}]
    * @param {object} [moleculeInfo={}] may contain precalculated index and mw
    */

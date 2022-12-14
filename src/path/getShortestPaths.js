@@ -1,6 +1,6 @@
 /**
  * Get the shortest path between each pair of atoms in the molecule
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
  * @param {string} [opions.fromLabel='H']
  * @param {string} [opions.toLabel='H']

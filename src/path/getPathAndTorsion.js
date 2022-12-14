@@ -1,6 +1,6 @@
 /**
  * Calculates the path between 2 atoms
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {number} from - index of the first atom
  * @param {number} to - index of the end atom
  * @param {number} maxLength - maximal length of the path

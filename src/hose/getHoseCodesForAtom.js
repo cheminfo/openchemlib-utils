@@ -2,7 +2,7 @@ import { getHoseCodesForAtoms } from './getHoseCodesForAtoms.js';
 
 /**
  * Returns the hose code for a specific atom number
- * @param {OCL.Molecule} originalMolecule
+ * @param {import('openchemlib').Molecule} originalMolecule
  * @param {number} rootAtom
  * @param {object} [options={}]
  * @param {boolean} [options.isTagged] Specify is the atom is already tagged

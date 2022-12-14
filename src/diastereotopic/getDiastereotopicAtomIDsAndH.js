@@ -2,7 +2,7 @@ import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
 
 /**
  *
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  */
 export function getDiastereotopicAtomIDsAndH(molecule) {
   const OCL = molecule.getOCL();

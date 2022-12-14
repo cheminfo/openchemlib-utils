@@ -2,7 +2,7 @@ let xAtomicNumber = 0;
 
 /**
  * Tag an atom to be able to visualize it
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {number} iAtom
  */
 export function tagAtom(molecule, iAtom) {

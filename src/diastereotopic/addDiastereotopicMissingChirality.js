@@ -4,7 +4,7 @@ import { tagAtom } from '../util/tagAtom';
  * Add either missing chirality of diastereotopic missing chirality
  * The problem is that sometimes we need to add chiral bond that was not planned because it is the same group
  * This is the case for example for the valine where the 2 C of the methyl groups are diastereotopic
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
  * @param {number} [options.esrType=cESRTypeAnd]
  */

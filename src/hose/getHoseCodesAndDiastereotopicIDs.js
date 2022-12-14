@@ -4,7 +4,7 @@ import { getHoseCodesFromDiastereotopicID } from './getHoseCodesFromDiastereotop
 /**
  * Returns an array containing one entry per atom containing
  * diaID and hose code
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} options
  */
 

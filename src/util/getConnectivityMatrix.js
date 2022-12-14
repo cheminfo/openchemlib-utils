@@ -3,7 +3,7 @@ import { Matrix } from 'ml-matrix';
 
 /**
  * Returns a connectivity matrix
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
  * @param {boolean} [options.pathLength=false] get the path length between atoms
  * @param {boolean} [options.mass=false] set the nominal mass of the atoms on diagonal

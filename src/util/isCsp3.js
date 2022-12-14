@@ -1,6 +1,6 @@
 /**
  * Check if a specific atom is a sp3 carbon
- * @param {OCL.Molecule} molecule
+ * @param {import('openchemlib').Molecule} molecule
  * @param {number} atomID
  */
 
