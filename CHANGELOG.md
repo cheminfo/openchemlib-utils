@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.3](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.2...v2.1.3) (2022-12-15)
+
+
+### Bug Fixes
+
+* update dependencies ([1ca9c69](https://github.com/cheminfo/openchemlib-utils/commit/1ca9c690d4a17cdac022c61daaadc5952967d5dc))
+
+
+### Documentation
+
+* improve jsDoc ([7c80d68](https://github.com/cheminfo/openchemlib-utils/commit/7c80d686f2b665f7ff6f5fdf49cce6a5fc665848))
+
 ## [2.1.2](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.1...v2.1.2) (2022-11-28)
 
 
