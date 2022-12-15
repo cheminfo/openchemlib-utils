@@ -1,4 +1,4 @@
-import atomSorter from 'atom-sorter';
+import { atomSorter } from 'atom-sorter';
 
 /**
  * Calculate the molecular formula in 'chemcalc' notation taking into account fragments, isotopes and charges
