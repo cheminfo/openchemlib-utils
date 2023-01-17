@@ -4,7 +4,7 @@ import { getDiastereotopicAtomIDsAndH } from './getDiastereotopicAtomIDsAndH.js'
  * Parse a molfile and returns an object containing the molecule, the map and the diaIDs
  * The map allows to reload properties assigned to the atom molfile
  * Pelase take care than numbering of atoms starts at 0 !
- * @param {object} OCL - openchemlib library
+ * @param {import('openchemlib')} OCL - openchemlib library
  * @param {string} molfile
  * @returns
  */

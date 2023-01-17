@@ -4,7 +4,7 @@ const MAX_R = 10;
  * Generate molecules and calcule predicted properties form a list of smiles and fragments
  * @param {string} [coreSmiles]
  * @param {array} [fragments] Array of {smiles,R1,R2,...}
- * @param {OCL} [OCL] The openchemlib library
+ * @param {import('openchemlib')} OCL - openchemlib library
  * @param {object} [options={}]
  * @param {function} [options.onStep] method to execute each new molecules
  * @param {boolean} [options.complexity] returns only the number of molecules to evaluate
