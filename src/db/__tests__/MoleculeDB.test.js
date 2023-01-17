@@ -195,7 +195,7 @@ describe('MoleculesDB', () => {
 
       controller.abort();
 
-      await expect(promise).rejects.toMatchInlineSnapshot(`DOMException {}`);
+      await expect(promise).rejects.toHaveProperty('name', 'AbortError');
     });
   });
 });

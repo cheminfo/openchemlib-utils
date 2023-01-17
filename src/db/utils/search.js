@@ -2,6 +2,11 @@ import { noWait } from '../../util/noWait.js';
 
 import getMoleculeCreators from './getMoleculeCreators';
 
+class AbortError extends Error {
+  name = 'AbortError';
+  code = 20;
+}
+
 function getQuery(moleculesDB, query, options) {
   const { format = 'idCode' } = options;
 
@@ -145,7 +150,7 @@ async function subStructureSearchAsync(moleculesDB, query, options = {}) {
     let length = Object.keys(moleculesDB.db).length;
     for (let idCode in moleculesDB.db) {
       if (shouldAbort) {
-        throw new DOMException('Query aborted', 'AbortError');
+        throw new AbortError('Query aborted');
       }
       let entry = moleculesDB.db[idCode];
       searcher.setMolecule(entry.molecule, entry.index);
