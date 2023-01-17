@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.3...v2.2.0) (2023-01-17)
+
+
+### Features
+
+* crease searchAsync ([#49](https://github.com/cheminfo/openchemlib-utils/issues/49)) ([7800d90](https://github.com/cheminfo/openchemlib-utils/commit/7800d90e649de5f9d61306ad17d727317383b953))
+
+
+### Documentation
+
+* add OCL types ([7892125](https://github.com/cheminfo/openchemlib-utils/commit/7892125aa054941ba4e4aaaf1dc8fe8065c55f01))
+
 ## [2.1.3](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.2...v2.1.3) (2022-12-15)
 
 
