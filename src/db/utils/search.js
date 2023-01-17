@@ -1,13 +1,9 @@
+import { noWait } from '../../util/noWait.js';
+
 import getMoleculeCreators from './getMoleculeCreators';
 
-export default function search(moleculesDB, query = '', options = {}) {
-  const {
-    format = 'idCode',
-    mode = 'substructure',
-    flattenResult = true,
-    keepMolecule = false,
-    limit = Number.MAX_SAFE_INTEGER,
-  } = options;
+function getQuery(moleculesDB, query, options) {
+  const { format = 'idCode' } = options;
 
   if (typeof query === 'string') {
     const moleculeCreators = getMoleculeCreators(moleculesDB.OCL.Molecule);
@@ -15,6 +11,13 @@ export default function search(moleculesDB, query = '', options = {}) {
   } else if (!(query instanceof moleculesDB.OCL.Molecule)) {
     throw new TypeError('toSearch must be a Molecule or string');
   }
+  return query;
+}
+
+export function search(moleculesDB, query = '', options = {}) {
+  const { mode = 'substructure' } = options;
+
+  query = getQuery(moleculesDB, query, options);
 
   let result;
   switch (mode.toLowerCase()) {
@@ -30,7 +33,29 @@ export default function search(moleculesDB, query = '', options = {}) {
     default:
       throw new Error(`unknown search mode: ${options.mode}`);
   }
-  return processResult(result, { flattenResult, keepMolecule, limit });
+  return processResult(result, options);
+}
+
+export async function searchAsync(moleculesDB, query = '', options = {}) {
+  const { mode = 'substructure' } = options;
+
+  query = getQuery(moleculesDB, query, options);
+
+  let result;
+  switch (mode.toLowerCase()) {
+    case 'exact':
+      result = exactSearch(moleculesDB, query);
+      break;
+    case 'substructure':
+      result = await subStructureSearchAsync(moleculesDB, query, options);
+      break;
+    case 'similarity':
+      result = similaritySearch(moleculesDB, query);
+      break;
+    default:
+      throw new Error(`unknown search mode: ${options.mode}`);
+  }
+  return processResult(result, options);
 }
 
 function exactSearch(moleculesDB, query) {
@@ -41,7 +66,7 @@ function exactSearch(moleculesDB, query) {
   return searchResult;
 }
 
-function subStructureSearch(moleculesDB, query) {
+function substructureSearchBegin(moleculesDB, query) {
   let resetFragment = false;
   if (!query.isFragment()) {
     resetFragment = true;
@@ -54,20 +79,11 @@ function subStructureSearch(moleculesDB, query) {
     for (let idCode in moleculesDB.db) {
       searchResult.push(moleculesDB.db[idCode]);
     }
-  } else {
-    const queryIndex = query.getIndex();
-    const searcher = moleculesDB.searcher;
-
-    searcher.setFragment(query, queryIndex);
-    for (let idCode in moleculesDB.db) {
-      let entry = moleculesDB.db[idCode];
-      searcher.setMolecule(entry.molecule, entry.index);
-      if (searcher.isFragmentInMolecule()) {
-        searchResult.push(entry);
-      }
-    }
   }
+  return { resetFragment, queryMW, searchResult };
+}
 
+function substructureSearchEnd(searchResult, queryMW, resetFragment, query) {
   searchResult.sort((a, b) => {
     return (
       Math.abs(queryMW - a.properties.mw) - Math.abs(queryMW - b.properties.mw)
@@ -79,6 +95,76 @@ function subStructureSearch(moleculesDB, query) {
   }
 
   return searchResult;
+}
+
+function subStructureSearch(moleculesDB, query) {
+  const { resetFragment, queryMW, searchResult } = substructureSearchBegin(
+    moleculesDB,
+    query,
+  );
+
+  if (searchResult.length === 0) {
+    const queryIndex = query.getIndex();
+    const searcher = moleculesDB.searcher;
+    searcher.setFragment(query, queryIndex);
+    for (let idCode in moleculesDB.db) {
+      let entry = moleculesDB.db[idCode];
+      searcher.setMolecule(entry.molecule, entry.index);
+      if (searcher.isFragmentInMolecule()) {
+        searchResult.push(entry);
+      }
+    }
+  }
+
+  return substructureSearchEnd(searchResult, queryMW, resetFragment, query);
+}
+
+async function subStructureSearchAsync(moleculesDB, query, options = {}) {
+  const { interval = 100, onStep, controller } = options;
+  let shouldAbort = false;
+
+  if (controller) {
+    const abortEventListener = () => {
+      shouldAbort = true;
+    };
+    controller.signal.addEventListener('abort', abortEventListener);
+  }
+
+  const { resetFragment, queryMW, searchResult } = substructureSearchBegin(
+    moleculesDB,
+    query,
+  );
+
+  let begin = performance.now();
+
+  if (searchResult.length === 0) {
+    const queryIndex = query.getIndex();
+    const searcher = moleculesDB.searcher;
+    searcher.setFragment(query, queryIndex);
+    let index = 0;
+    let length = Object.keys(moleculesDB.db).length;
+    for (let idCode in moleculesDB.db) {
+      if (shouldAbort) {
+        throw new DOMException('Query aborted', 'AbortError');
+      }
+      let entry = moleculesDB.db[idCode];
+      searcher.setMolecule(entry.molecule, entry.index);
+      if (searcher.isFragmentInMolecule()) {
+        searchResult.push(entry);
+      }
+      if ((onStep || controller) && performance.now() - begin >= interval) {
+        begin = performance.now();
+        if (onStep) {
+          onStep(index, length);
+        }
+        if (controller && !onStep) {
+          await noWait();
+        }
+      }
+      index++;
+    }
+  }
+  return substructureSearchEnd(searchResult, queryMW, resetFragment, query);
 }
 
 function similaritySearch(moleculesDB, query) {

@@ -156,4 +156,46 @@ describe('MoleculesDB', () => {
       expect(result).toHaveLength(2);
     });
   });
+
+  describe('search async', () => {
+    const csv = readFileSync(join(__dirname, './data/data.csv'));
+    let moleculesDB;
+
+    beforeAll(async () => {
+      moleculesDB = new MoleculesDB(OCL);
+      await moleculesDB.appendCSV(csv);
+    });
+
+    it('subStructure with SMILES', async () => {
+      let result = await moleculesDB.searchAsync('CC', {
+        format: 'smiles',
+        mode: 'substructure',
+      });
+      expect(result).toHaveLength(4);
+      expect(result[0].data.name).toBe('Ethane');
+      result = moleculesDB.search('CCC', { format: 'smiles' });
+      expect(result).toHaveLength(3);
+      result = moleculesDB.search('CCC', { format: 'smiles', limit: 1 });
+      expect(result).toHaveLength(1);
+      result = moleculesDB.search('CCCO', { format: 'smiles' });
+      expect(result).toHaveLength(0);
+      result = moleculesDB.search('', { format: 'smiles' });
+      expect(result).toHaveLength(5);
+    });
+
+    it('subStructure with controller', async () => {
+      const controller = new AbortController();
+
+      const promise = moleculesDB.searchAsync('CC', {
+        format: 'smiles',
+        mode: 'substructure',
+        controller,
+        interval: 0,
+      });
+
+      controller.abort();
+
+      await expect(promise).rejects.toMatchInlineSnapshot(`DOMException {}`);
+    });
+  });
 });
