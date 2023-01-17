@@ -4,7 +4,7 @@ import appendSDF from './utils/appendSDF';
 import appendSmilesList from './utils/appendSmilesList';
 import pushEntry from './utils/pushEntry';
 import pushMoleculeInfo from './utils/pushMoleculeInfo';
-import search from './utils/search';
+import { search, searchAsync } from './utils/search';
 /*
     this.db is an object with properties 'oclID' that has as value
     an object that contains the following properties:
@@ -17,7 +17,7 @@ import search from './utils/search';
 export class MoleculesDB {
   /**
    *
-   * @param {OCL} [OCL] The openchemlib library
+   * @param {import('openchemlib')} OCL - openchemlib library
    * @param {object} [options={}]
    * @param {boolean} [options.computeProperties=false]
    */
@@ -112,6 +112,25 @@ export class MoleculesDB {
    */
   search(query, options) {
     return search(this, query, options);
+  }
+
+  /**
+   * Search in a MoleculesDB
+   * Inside the database all the same molecules are group together
+   * @param {string|OCL.Molecule} [query] smiles, molfile, oclCode or instance of Molecule to look for
+   * @param {object} [options={}]
+   * @param {string} [options.format='idCode'] - query is in the format 'smiles', 'oclid' or 'molfile'
+   * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
+   * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
+   * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result
+   * @param {number} [options.limit=Number.MAX_SAFE_INTEGER] - maximal number of result
+   * @param {number} [options.interval=100] - interval in ms to call the onStep callback
+   * @param {function} [options.onStep] - callback to execute after each interval
+   * @param {AbortController} [options.controler] - callback to execute to check if the search should be aborted
+   * @return {Promise<Array>} array of object of the type {(molecule), idCode, data, properties}
+   */
+  searchAsync(query, options) {
+    return searchAsync(this, query, options);
   }
 
   /**
