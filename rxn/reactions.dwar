@@ -1,0 +1,58 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1673947692712">
+<rowcount="9">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="atomMapping">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	atomMapping">
+<columnName="idcoordinates2D">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="reactionFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	RxnFP">
+<columnProperty="version	1.0.0">
+<columnName="reactantFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	reactants">
+<columnProperty="version	1.2.1">
+<columnName="productFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	products">
+<columnProperty="version	1.2.1">
+<columnName="rxnCode">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
+</column properties>
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	rxnCode
+qtJk qtSi	!Ruwu~@M_|upKWoQwr@` !RuwwW?Gx@bOrH_QuZ@`	4#1F0N!J!44H11F5F4WF10Vm1VJ05Z!B0HF0F4s04!4!1104VFF1Z180@c820PBP3F!JV!83//////&	yJs5!8!V4F4)82/%V//04.	RNF140V)V%8!1/#k/%2/*	Claisen rearrangement	gGQ@@eKtrA@!gGQ@@djmRA@
+qbAk q`Si	!Ru?sH@gx@upKWoQvJP` !Rr@KW?Gx@bOrH_QwZP`	424012&404010840404#F10J!V!4020VF08(1!4VFF1V0802VF20H8u1FF!1V083#8//////!	NNF1!V/8/&k/%2/*	NNF1!V/8/&k/%2/*	Cope rearrangement	gGP@DkUjPH!gGP@DkUjPH
+qMs Qd qi^T	!R@Fq?[@@SGRk| !R@AL]lkp !R?`Bw?[\BmpJw?Qtz@`	4#1#1%401V0J04%F104!V4040X!F082#8!1!4VF$802V0@0k8H0F%181//////&	FF/%8-F///*	NsJ1!k$2%8#84+F#8$F/%2/*	Diels-Alder	gC`@Die@` eF@HhP!gFp@DiTujhB
+QF qN qJt	!R@Fp@Dqur_@ !R_vp]rgp !R_vp@[G|SGSi|	2!C)4#12!V%4C04402!40VV04F24021!V$F4FW!2!XV82#J!9W!40811!2//!1//%8/(	k//02)8/,2/&	u4//*8///$	SN2 thioether	eMBBHRZB eFB`HNcA@!gC`H@DISTA@
+						
+						
+						
+						
+						
+<datawarrior properties>
+<columnFilter_Table="">
+<columnWidth_Table_Label="228">
+<columnWidth_Table_rxnCode="393">
+<detailView="height[Data]=0.5;height[rxnCode]=0.5">
+<filter0="#string#	Label">
+<filter1="#reaction#	rxnCode">
+<filter2="#retron#	rxnCode">
+<headerLines_Table="2">
+<mainSplitting="0.72815">
+<mainView="Table">
+<mainViewCount="1">
+<mainViewDockInfo0="root">
+<mainViewName0="Table">
+<mainViewType0="tableView">
+<rightSplitting="0.65939">
+<rowHeight_Table="80">
+</datawarrior properties>

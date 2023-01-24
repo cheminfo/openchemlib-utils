@@ -36,3 +36,5 @@ export * from './features/getAtomFeatures';
 export * from './misc/toVisualizerMolfile';
 
 export * from './fragment/fragmentAcyclicSingleBonds';
+
+export * from './reaction/applyReactions.js';

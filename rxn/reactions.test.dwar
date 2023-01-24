@@ -1,0 +1,59 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1674563264760">
+<rowcount="6">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="atomMapping">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	atomMapping">
+<columnName="idcoordinates2D">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="reactionFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	RxnFP">
+<columnProperty="version	1.0.0">
+<columnName="reactantFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	reactants">
+<columnProperty="version	1.2.1">
+<columnName="productFFP">
+<columnProperty="parent	rxnCode">
+<columnProperty="specialType	FragFp">
+<columnProperty="reactionPart	products">
+<columnProperty="version	1.2.1">
+<columnName="rxnCode">
+<columnProperty="isFragment	true">
+<columnProperty="specialType	rxncode">
+</column properties>
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	rxnCode
+aP aP	!R@AL]\mp !R@AL]Nmp	!F!4$840F!1F&2V#F4+F/F01#12V42010k#G$8102!V//////0	40V/////,10	//,8///$	OH by SH	eFHBLGtV!eFB@HcA}E`
+S\ S\@	!R@FL]bgp !R@FL?XqwZ_@	2!52&4$1020V&VJ&V$V!4!1%8#FV1#22V8(1%8//(1//%8/(	//,8///$	2//+8///$	SH to SMe	eFB@HcAa@!eMB@HchH
+aP aP	!R@FL]Rgp !R@FL]vgp	!18$4(1%4(4$3!480F$F#24$F!2#2V02020F08201#81#F//////!	//,8///$	40V/////,10	SH to OH	eFB@HcA}E`!eFHBLGtV
+						
+						
+						
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="D">
+</hitlist data>
+<datawarrior properties>
+<columnFilter_Table="">
+<columnWidth_Table_Label="228">
+<columnWidth_Table_rxnCode="393">
+<detailView="height[Data]=0.5;height[rxnCode]=0.5">
+<filter0="#string#	Label">
+<filter1="#reaction#	rxnCode">
+<filter2="#retron#	rxnCode">
+<headerLines_Table="2">
+<mainSplitting="0.72655">
+<mainView="Table">
+<mainViewCount="1">
+<mainViewDockInfo0="root">
+<mainViewName0="Table">
+<mainViewType0="tableView">
+<rightSplitting="0.65678">
+<rowHeight_Table="80">
+</datawarrior properties>
