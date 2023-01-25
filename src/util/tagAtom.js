@@ -22,7 +22,10 @@ export function tagAtom(molecule, iAtom) {
 function getXAtomicNumber(molecule) {
   if (!xAtomicNumber) {
     const OCL = molecule.getOCL();
-    xAtomicNumber = OCL.Molecule.getAtomicNoFromLabel('X');
+    xAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(
+      'X',
+      OCL.Molecule.cPseudoAtomX,
+    );
   }
   return xAtomicNumber;
 }
