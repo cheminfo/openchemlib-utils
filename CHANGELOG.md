@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.2.0...v2.3.0) (2023-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove compatibility with node 14
+
+### Features
+
+* add parseDwar, parser for DataWarrior files ([107b4f3](https://github.com/cheminfo/openchemlib-utils/commit/107b4f319016321952612287c0e7661b39a78b0f))
+* improve applyReactions to have maxDepth ([217db99](https://github.com/cheminfo/openchemlib-utils/commit/217db99a94837d40a0c6e07a3a0698ac241401c2))
+
+
+### Miscellaneous Chores
+
+* Remove compatibility with node 14 ([1635eeb](https://github.com/cheminfo/openchemlib-utils/commit/1635eeb8f7021cfc7212e3aaeb0b248b744d5deb))
+
+
+### release-as
+
+* 2.3.0 ([81004d4](https://github.com/cheminfo/openchemlib-utils/commit/81004d43f138ebee9ae6f39a0cbb7fd9bede79cc))
+
 ## [2.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.1.3...v2.2.0) (2023-01-17)
 
 
