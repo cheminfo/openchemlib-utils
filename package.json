@@ -31,7 +31,7 @@
   "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.20.11",
-    "@types/jest": "^29.2.6",
+    "@types/jest": "^29.4.0",
     "cheminfo-build": "^1.1.11",
     "eslint": "^8.32.0",
     "eslint-config-cheminfo": "^8.1.3",
