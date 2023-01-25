@@ -1,9 +1,11 @@
 import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
 
 /**
- *
+ * Create a tree of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
  * @param {Array} reactions
+ * @param {object} options
+ * @param {number} [options.maxDepth=10]
  * @returns
  */
 export function applyReactions(reactants, reactions, options = {}) {
@@ -17,13 +19,24 @@ export function applyReactions(reactants, reactions, options = {}) {
 
   reactions = appendOCLReaction(reactions, OCL);
 
-  const results = applyOneReactantReaction(reactants, reactions, {
+  const results = [];
+
+  let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
     OCL,
     currentDepth: 0,
     moleculesInfo,
     processedMolecules,
     maxDepth,
+    results,
   });
+
+  do {
+    const nexts = [];
+    for (const todo of todoCurrentLevel) {
+      nexts.push(todo());
+    }
+    todoCurrentLevel = nexts.flat();
+  } while (todoCurrentLevel.length > 0);
 
   return results;
 }

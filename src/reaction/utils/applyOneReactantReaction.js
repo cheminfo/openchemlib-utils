@@ -1,13 +1,14 @@
 import { getInfo } from './getReactantInfo.js';
 
 export function applyOneReactantReaction(reactants, reactions, options) {
-  const { currentDepth, maxDepth, moleculesInfo, processedMolecules } = options;
+  const { currentDepth, maxDepth, moleculesInfo, processedMolecules, results } =
+    options;
+  const todoNextDepth = [];
   if (currentDepth >= maxDepth) return [];
   if (!Array.isArray(reactants)) {
     reactants = [reactants];
   }
   const { OCL } = options;
-  const results = [];
   for (const reactant of reactants) {
     const idCode = reactant.getIDCode();
     if (processedMolecules.has(idCode)) {
@@ -28,14 +29,22 @@ export function applyOneReactantReaction(reactants, reactions, options) {
               moleculesInfo,
             );
             if (!processedMolecules.has(moleculeInfo.idCode)) {
-              console.log(currentDepth, moleculeInfo.mf);
-              products.push({
+              const product = {
                 ...moleculeInfo,
-                children: applyOneReactantReaction(
+                children: [],
+              };
+              products.push(product);
+
+              todoNextDepth.push(() => {
+                return applyOneReactantReaction(
                   oneReactionProducts[i][j],
                   reactions,
-                  { ...options, currentDepth: options.currentDepth + 1 },
-                ),
+                  {
+                    ...options,
+                    currentDepth: options.currentDepth + 1,
+                    results: product.children,
+                  },
+                );
               });
             }
           }
@@ -51,5 +60,5 @@ export function applyOneReactantReaction(reactants, reactions, options) {
       }
     }
   }
-  return results;
+  return todoNextDepth;
 }

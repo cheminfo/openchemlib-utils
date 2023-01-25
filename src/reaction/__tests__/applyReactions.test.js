@@ -19,7 +19,8 @@ describe('applyReactions', () => {
     expect(firstChild.products).toHaveLength(1);
     expect(firstChild.products[0].mf).toBe('C3H8S');
   });
-  it.only('ethylene glycol', () => {
+
+  it('ethylene glycol', () => {
     const diol = Molecule.fromSmiles('OCCO');
     const results = applyReactions([diol], reactionsDatabase, {});
     expect(results).toHaveLength(1);
@@ -29,7 +30,6 @@ describe('applyReactions', () => {
     expect(firstProduct.mf).toBe('C2H6OS');
     expect(firstProduct.children).toHaveLength(2);
 
-    return;
     const firstChild = firstProduct.children[0];
     expect(firstChild.reactant.mf).toBe('C2H6OS');
     expect(firstChild.products).toHaveLength(1);
@@ -39,6 +39,7 @@ describe('applyReactions', () => {
     expect(secondChild.products).toHaveLength(1);
     expect(secondChild.products[0].mf).toBe('C3H8OS');
   });
+
   it('propane-1,2-diol', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
     const results = applyReactions([propanediol], reactionsDatabase, {});
@@ -66,7 +67,7 @@ describe('applyReactions', () => {
     expect(secondChild.products[0].children[0].products[0].mf).toBe('C4H10S2');
   });
 
-  it('propane-1,2-diol', () => {
+  it('propane-1,2-diol maxDepth: 1', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
     const results = applyReactions([propanediol], reactionsDatabase, {
       maxDepth: 1,
@@ -77,5 +78,19 @@ describe('applyReactions', () => {
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C3H8OS');
     expect(firstProduct.children).toHaveLength(0);
+  });
+
+  it('propane-1,2-diol maxDepth: 2', () => {
+    const propanediol = Molecule.fromSmiles('CC(O)CO');
+    const results = applyReactions([propanediol], reactionsDatabase, {
+      maxDepth: 2,
+    });
+    expect(results).toHaveLength(2);
+    const firstResult = results[0];
+    expect(firstResult.products).toHaveLength(1);
+    const firstProduct = firstResult.products[0];
+    expect(firstProduct.mf).toBe('C3H8OS');
+    const mfs = firstProduct.children.map((child) => child.products[0].mf);
+    expect(mfs).toStrictEqual(['C3H8S2', 'C4H10OS']);
   });
 });
