@@ -1,0 +1,95 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1674639390887">
+<rowcount="7">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="idcoordinates2D">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+<columnName="idcoordinates2D 2">
+<columnProperty="parent	Structure 2">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp 2">
+<columnProperty="parent	Structure 2">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+<columnName="Structure">
+<columnProperty="specialType	idcode">
+<columnName="Structure 2">
+<columnProperty="specialType	idcode">
+<columnName="Structure 3">
+<columnProperty="specialType	idcode">
+<columnName="idcoordinates2D 3">
+<columnProperty="parent	Structure 3">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp 3">
+<columnProperty="parent	Structure 3">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+<columnName="Structure 4">
+<columnProperty="specialType	idcode">
+<columnName="idcoordinates2D 4">
+<columnProperty="parent	Structure 4">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp 4">
+<columnProperty="parent	Structure 4">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+<columnName="Test">
+<columnProperty="specialType	idcode">
+<columnName="idcoordinates2D 5">
+<columnProperty="parent	Test">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp 5">
+<columnProperty="parent	Test">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+</column properties>
+idcoordinates2D	FragFp	idcoordinates2D 2	FragFp 2	idcoordinates2D 3	FragFp 3	idcoordinates2D 4	FragFp 4	idcoordinates2D 5	FragFp 5	Structure	Structure 2	Structure 3	Structure 4	Test
+!B@FL?Xp	2020201/////%V0F0									eM``fN`_uB				
+!B?`BH?[]}mpH	2220201#1$1!2////,									gJXA@Iczh@				
+!B	!2/////.									fJRP@				
+!B@W?W?Hc|	2220201#1$1/////									gChA@Icu@Oz`P				
+														
+														
+														
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="H@">
+</hitlist data>
+<datawarrior properties>
+<columnFilter_Table="">
+<columnWidth_Table_Structure="100">
+<columnWidth_Table_Structure 2="100">
+<columnWidth_Table_Structure 3="100">
+<columnWidth_Table_Structure 4="100">
+<columnWidth_Table_Test="100">
+<currentRecord="0">
+<detailView="height[Data]=0.078;height[Structure]=0.25534;height[Structure 2]=0.16667;height[Structure 3]=0.16667;height[Structure 4]=0.16667;height[Test]=0.16667">
+<filter0="#structure#	Structure	#substructure#	gChA@Icu@_z`P !Buwu~@Ha}">
+<filter1="#structure#	Structure 2">
+<filter2="#structure#	Structure 3">
+<filter3="#structure#	Structure 4">
+<filter4="#structure#	Test">
+<formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,9,4.0,-1.0,4.0,-1.0,4.0,-1.0,4.0,-1.0,4.0">
+<formObjectCount_Form View="1">
+<formObjectInfo_Form View_0="Structure	structure	1, 1, 1, 7, full, full">
+<headerLines_Table="2">
+<mainSplitting="0.57182">
+<mainView="Table">
+<mainViewCount="2">
+<mainViewDockInfo0="root">
+<mainViewDockInfo1="Table	center">
+<mainViewInFront0="true">
+<mainViewName0="Table">
+<mainViewName1="Form View">
+<mainViewType0="tableView">
+<mainViewType1="formView">
+<rightSplitting="0.45125">
+<rowHeight_Table="80">
+</datawarrior properties>

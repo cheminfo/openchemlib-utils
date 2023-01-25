@@ -34,6 +34,7 @@ export * from './db/MoleculesDB';
 export * from './features/getAtomFeatures';
 
 export * from './misc/toVisualizerMolfile';
+export * from './misc/dwar/parseDwar';
 
 export * from './fragment/fragmentAcyclicSingleBonds';
 
