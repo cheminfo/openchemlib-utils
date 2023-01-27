@@ -49,8 +49,10 @@ export function applyOneReactantReaction(reactants, reactions, options) {
             }
           }
           if (products.length > 0) {
+            // eslint-disable-next-line no-unused-vars
+            const { oclReaction, ...reactionWithoutOCL } = reaction;
             const oneReaction = {
-              reaction: { ...reactant, oclReaction: undefined },
+              reaction: reactionWithoutOCL,
               reactant: getInfo(reactant, moleculesInfo),
               products,
             };
