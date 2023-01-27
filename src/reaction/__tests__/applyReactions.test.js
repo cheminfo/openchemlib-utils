@@ -63,7 +63,7 @@ describe('applyReactions', () => {
     expect(secondChild.reactant.mf).toBe('C3H8OS');
     expect(secondChild.products).toHaveLength(1);
     expect(secondChild.products[0].mf).toBe('C4H10OS');
-
+    expect(secondChild.reaction.oclReaction).toBeUndefined();
     expect(secondChild.products[0].children[0].products[0].mf).toBe('C4H10S2');
   });
 

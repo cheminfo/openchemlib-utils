@@ -50,7 +50,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
           }
           if (products.length > 0) {
             const oneReaction = {
-              reaction,
+              reaction: { ...reactant, oclReaction: undefined },
               reactant: getInfo(reactant, moleculesInfo),
               products,
             };
