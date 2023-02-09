@@ -1,4 +1,4 @@
-export function groupDiastereotopicAtomIDs(diaIDs, molecule, options) {
+export function groupDiastereotopicAtomIDs(diaIDs, molecule, options = {}) {
   const { atomLabel } = options;
   const diaIDsObject = {};
   for (let i = 0; i < diaIDs.length; i++) {
