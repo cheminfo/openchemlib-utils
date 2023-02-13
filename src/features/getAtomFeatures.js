@@ -1,11 +1,11 @@
 import { makeRacemic } from '../util/makeRacemic';
 
-export function getAtomFeatures(originalMolecule) {
+export function getAtomFeatures(originalMolecule, options = {}) {
   const OCL = originalMolecule.getOCL();
 
-  let sphere = 1;
-  let fragment = new OCL.Molecule(0, 0);
-  let results = [];
+  const { sphere = 1 } = options;
+  const fragment = new OCL.Molecule(0, 0);
+  const results = [];
 
   for (
     let rootAtom = 0;
