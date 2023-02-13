@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.3.0...v2.4.0) (2023-02-13)
+
+
+### Features
+
+* getAtomFeatures allows to specify sphere ([43068ae](https://github.com/cheminfo/openchemlib-utils/commit/43068ae7988707c5cc4b926a21d003c5da4e2761))
+
+
+### Bug Fixes
+
+* applyReaction should not return oclReaction internal object ([10dadc7](https://github.com/cheminfo/openchemlib-utils/commit/10dadc716c1d64de71a6a84a2c58a102667dd5a9))
+
 ## [2.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.2.0...v2.3.0) (2023-01-25)
 
 
