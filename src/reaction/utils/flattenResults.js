@@ -1,12 +1,10 @@
-import { MF } from 'mf-parser';
-
 /**
  * @description Flatten the results of a reaction tree
  * @param {Array} reactionTree Tree of reactions
  * @returns {Array} Array of flat results
  */
 export function flattenResults(reactionTree) {
-  const results = {};
+  let results = {};
 
   for (const reaction of reactionTree) {
     flattenReaction(reaction, results);
@@ -16,23 +14,27 @@ export function flattenResults(reactionTree) {
   return products;
 }
 
-function flattenReaction(reaction, results, reactions = []) {
-  for (let product of reaction.products) {
+function flattenReaction(tree, results, reactions = []) {
+  for (let product of tree.products) {
     let result = {
       idCode: product.idCode,
-      reactions: [...reactions, reaction.reaction.rxnCode],
+      reactions: [...reactions, tree.reaction.rxnCode],
       nbReactions: reactions.length + 1,
-      otherReactions: [],
     };
+
     if (results[result.idCode] === undefined) {
-      result.minSteps = reactions.length;
+      result.trees = [
+        {
+          reaction: tree.reaction,
+          reactant: tree.reactant,
+        },
+      ];
       results[result.idCode] = result;
-    } else if (results[result.idCode].nbReactions > result.nbReactions) {
-      result.minSteps = reactions.length;
-      results[result.idCode] = result;
-    } else if (results[result.idCode].nbReactions <= result.nbReactions) {
-      result.minSteps = results[result.idCode].nbReactions;
-      results[result.idCode].otherReactions.push(result);
+    } else {
+      results[result.idCode].trees.push({
+        reaction: tree.reaction,
+        reactant: tree.reactant,
+      });
     }
     if (product.children.length > 0) {
       for (let child of product.children) {
