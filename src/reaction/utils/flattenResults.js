@@ -1,25 +1,22 @@
 import { MF } from 'mf-parser';
 
-const results = {};
 /**
  * @description Flatten the results of a reaction tree
  * @param {Array} reactionTree Tree of reactions
- * @param {*} minDepth Minimum depth of the tree to be included in the flat results
  * @returns {Array} Array of flat results
  */
-export function flattenResults(reactionTree, minDepth) {
+export function flattenResults(reactionTree) {
+  const results = {};
+
   for (const reaction of reactionTree) {
-    flattenReaction(reaction);
+    flattenReaction(reaction, results);
   }
   let products = Object.values(results);
-  let minDepthProducts = products.filter(
-    (product) => product.minSteps >= minDepth,
-  );
 
-  return minDepthProducts;
+  return products;
 }
 
-function flattenReaction(reaction, reactions = []) {
+function flattenReaction(reaction, results, reactions = []) {
   for (let product of reaction.products) {
     let result = {};
     result.idCode = product.idCode;
@@ -44,7 +41,7 @@ function flattenReaction(reaction, reactions = []) {
     if (product.children.length > 0) {
       for (let child of product.children) {
         const reactionsNextRecursion = [...reactions];
-        flattenReaction(child, reactionsNextRecursion);
+        flattenReaction(child, results, reactionsNextRecursion);
       }
     }
   }

@@ -111,7 +111,6 @@ describe('applyReactions', () => {
       reactionsDatabase,
       {
         maxDepth: 5,
-        minDepth: 4,
       },
     );
     expect(Object.keys(flatResults[0])).toMatchInlineSnapshot(`
@@ -124,7 +123,7 @@ describe('applyReactions', () => {
         "minSteps",
       ]
     `);
-    expect(flatResults[0].minSteps).toBeGreaterThanOrEqual(4);
+    expect(flatResults[1].minSteps).toBeGreaterThanOrEqual(2);
     expect(results).toHaveLength(2);
     const firstResult = results[0];
     expect(firstResult.products).toHaveLength(1);
