@@ -7,7 +7,12 @@ import { reactionsDatabase } from './reactionsDatabase.js';
 describe('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
-    const results = applyReactions([ethanol], reactionsDatabase, {});
+    const { results, flatResults } = applyReactions(
+      [ethanol],
+      reactionsDatabase,
+      {},
+    );
+    expect(flatResults[0].mass).toBeGreaterThanOrEqual(62);
     expect(results).toHaveLength(1);
     const firstResult = results[0];
     expect(firstResult.products).toHaveLength(1);
@@ -22,7 +27,13 @@ describe('applyReactions', () => {
 
   it('ethylene glycol', () => {
     const diol = Molecule.fromSmiles('OCCO');
-    const results = applyReactions([diol], reactionsDatabase, {});
+    const { results, flatResults } = applyReactions(
+      [diol],
+      reactionsDatabase,
+      {},
+    );
+
+    expect(flatResults[0].mass).toBeGreaterThanOrEqual(62);
     expect(results).toHaveLength(1);
     const firstResult = results[0];
     expect(firstResult.products).toHaveLength(1);
@@ -39,12 +50,18 @@ describe('applyReactions', () => {
     expect(secondChild.products).toHaveLength(1);
     expect(secondChild.products[0].mf).toBe('C3H8OS');
 
-    expect(results).toMatchSnapshot()
+    expect(results).toMatchSnapshot();
   });
 
   it('propane-1,2-diol', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
-    const results = applyReactions([propanediol], reactionsDatabase, {});
+    const { results, flatResults } = applyReactions(
+      [propanediol],
+      reactionsDatabase,
+      {},
+    );
+
+    expect(flatResults[0].mass).toBeGreaterThanOrEqual(62);
     expect(results).toHaveLength(2);
     const firstResult = results[0];
     expect(firstResult.products).toHaveLength(1);
@@ -71,9 +88,14 @@ describe('applyReactions', () => {
 
   it('propane-1,2-diol maxDepth: 1', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
-    const results = applyReactions([propanediol], reactionsDatabase, {
-      maxDepth: 1,
-    });
+    const { results, flatResults } = applyReactions(
+      [propanediol],
+      reactionsDatabase,
+      {
+        maxDepth: 1,
+      },
+    );
+    expect(flatResults[0].mass).toBeGreaterThanOrEqual(62);
     expect(results).toHaveLength(2);
     const firstResult = results[0];
     expect(firstResult.products).toHaveLength(1);
@@ -84,9 +106,25 @@ describe('applyReactions', () => {
 
   it('propane-1,2-diol maxDepth: 2', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
-    const results = applyReactions([propanediol], reactionsDatabase, {
-      maxDepth: 2,
-    });
+    const { results, flatResults } = applyReactions(
+      [propanediol],
+      reactionsDatabase,
+      {
+        maxDepth: 5,
+        minDepth: 4,
+      },
+    );
+    expect(Object.keys(flatResults[0])).toMatchInlineSnapshot(`
+      [
+        "idCode",
+        "reactions",
+        "nbReactions",
+        "otherReactions",
+        "mass",
+        "minSteps",
+      ]
+    `);
+    expect(flatResults[0].minSteps).toBeGreaterThanOrEqual(4);
     expect(results).toHaveLength(2);
     const firstResult = results[0];
     expect(firstResult.products).toHaveLength(1);
