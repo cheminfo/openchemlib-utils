@@ -93,7 +93,6 @@ export class MoleculesDB {
    * @param {object} moleculeInfo - a molecule as a JSON that may contain the following properties: molfile, smiles, idCode, mf, index
    * @param {object} [data={}]
    */
-
   pushMoleculeInfo(moleculeInfo, data) {
     return pushMoleculeInfo(this, moleculeInfo, data);
   }

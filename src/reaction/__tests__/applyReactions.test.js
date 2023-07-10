@@ -38,6 +38,8 @@ describe('applyReactions', () => {
     expect(secondChild.reactant.mf).toBe('C2H6OS');
     expect(secondChild.products).toHaveLength(1);
     expect(secondChild.products[0].mf).toBe('C3H8OS');
+
+    expect(results).toMatchSnapshot()
   });
 
   it('propane-1,2-diol', () => {
