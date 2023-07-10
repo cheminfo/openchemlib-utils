@@ -4,9 +4,9 @@ import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
  * Create a tree of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
  * @param {Array} reactions array of reactions objects with rxnCode and label
- * @param {object} options
- * @param {number} [options.maxDepth=10]
- * @returns
+ * @param {object} options options to apply the reaction
+ * @param {number} [options.maxDepth=10] max depth of the recursion
+ * @returns {Array} array of results of the reactions
  */
 export function applyReactions(reactants, reactions, options = {}) {
   // Reaction are applied recursively until maximal tree depth is reached (default 10)
