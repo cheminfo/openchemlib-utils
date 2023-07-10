@@ -117,9 +117,7 @@ describe('applyReactions', () => {
       [
         "idCode",
         "reactions",
-        "nbReactions",
-        "otherReactions",
-        "mass",
+        "mf",
         "minSteps",
       ]
     `);
