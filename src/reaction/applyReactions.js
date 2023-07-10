@@ -21,7 +21,7 @@ export function applyReactions(reactants, reactions, options = {}) {
 
   reactions = appendOCLReaction(reactions, OCL);
 
-  const results = [];
+  const tree = [];
   // Start the recursion by applying the first level of reactions
   let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
     OCL,
@@ -29,7 +29,7 @@ export function applyReactions(reactants, reactions, options = {}) {
     moleculesInfo,
     processedMolecules,
     maxDepth,
-    results,
+    tree,
   });
 
   do {
@@ -39,8 +39,8 @@ export function applyReactions(reactants, reactions, options = {}) {
     }
     todoCurrentLevel = nexts.flat();
   } while (todoCurrentLevel.length > 0);
-  const flatResults = flattenResults(results);
-  return { results, flatResults };
+  const products = flattenResults(tree);
+  return { tree, products };
 }
 
 /**
