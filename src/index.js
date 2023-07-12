@@ -24,6 +24,7 @@ export * from './util/nbCOOH';
 export * from './util/nbCHO';
 export * from './util/nbNH2';
 export * from './util/nbCN';
+export * from './util/nbLabileH';
 
 export * from './path/getPathsInfo';
 export * from './path/getPathAndTorsion';
