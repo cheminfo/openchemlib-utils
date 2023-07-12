@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.4.0...v2.5.0) (2023-07-12)
+
+
+### Features
+
+* add nbLabileH ([b1a090c](https://github.com/cheminfo/openchemlib-utils/commit/b1a090c113027e7f127247f677c6d6b61e86034e))
+
 ## [2.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.3.0...v2.4.0) (2023-02-13)
 
 
