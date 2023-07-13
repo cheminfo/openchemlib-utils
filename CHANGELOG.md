@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.5.0...v2.6.0) (2023-07-13)
+
+
+### Features
+
+* add getAtoms method ([822d7b2](https://github.com/cheminfo/openchemlib-utils/commit/822d7b2a804a3df1b90e05e53d99982f3371d7d6))
+
 ## [2.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.4.0...v2.5.0) (2023-07-12)
 
 
