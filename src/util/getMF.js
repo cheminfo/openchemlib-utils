@@ -2,7 +2,7 @@ import { atomSorter } from 'atom-sorter';
 
 /**
  * Calculate the molecular formula in 'chemcalc' notation taking into account fragments, isotopes and charges
- * {OCL.Molecule} [molecule] an instance of OCL.Molecule
+ * @param {OCL.Molecule} [molecule] an instance of OCL.Molecule
  * @returns {object}
  */
 
