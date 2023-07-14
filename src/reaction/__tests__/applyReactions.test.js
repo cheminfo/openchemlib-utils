@@ -1,6 +1,3 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-
 import { Molecule } from 'openchemlib/full.js';
 
 import { applyReactions } from '../applyReactions.js';
