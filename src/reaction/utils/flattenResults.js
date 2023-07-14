@@ -21,6 +21,7 @@ function flattenReaction(currentBranch, results, originalBranch) {
     let reactions = [];
     addFlag(product.idCode, copyBranch);
     removeBranches(copyBranch, reactions);
+    copyBranch = removeBottomEntries(copyBranch);
     let nbReactions = reactions.length;
     if (results[product.idCode] === undefined) {
       results[product.idCode] = {
@@ -69,4 +70,26 @@ function addFlag(idCode, tree) {
       }
     }
   }
+}
+
+function removeBottomEntries(data) {
+  data.products = data.products.filter((product) => {
+    if (product.children.length > 0) {
+      for (let child of product.children) {
+        if (child.products.length > 0) {
+          removeBottomEntries(child);
+        }
+      }
+    }
+    if (product.flag) {
+      return true;
+    }
+
+    if (product.children.length === 0 && !product.flag) {
+      return false;
+    }
+    return true;
+  });
+
+  return data;
 }
