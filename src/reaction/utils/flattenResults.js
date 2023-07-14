@@ -3,42 +3,69 @@
  * @param {Array} reactionTree Tree of reactions
  * @returns {Array} Array of flat results
  */
+
 export function flattenResults(reactionTree) {
   let results = {};
-
-  for (const reaction of reactionTree) {
-    flattenReaction(reaction, results);
+  for (const branch of reactionTree) {
+    let copyBranch = { ...branch };
+    flattenReaction(copyBranch, results, branch);
   }
-  let products = Object.values(results);
-
-  return products;
+  return Object.values(results);
 }
 
-function flattenReaction(tree, results, reactions = []) {
-  for (let product of tree.products) {
-    let result = {
-      idCode: product.idCode,
-      reactions: [...reactions, tree.reaction.rxnCode],
-      nbReactions: reactions.length + 1,
-    };
-
-    if (results[result.idCode] === undefined) {
-      result.trees = [
-        {
-          reaction: tree.reaction,
-          reactant: tree.reactant,
-        },
-      ];
-      results[result.idCode] = result;
+function flattenReaction(currentBranch, results, originalBranch) {
+  for (let product of currentBranch.products) {
+    // ATTENTION: This method allows for a deep copy of the tree
+    // Other methods such as {...tree} won't work
+    let copyBranch = JSON.parse(JSON.stringify(originalBranch));
+    let reactions = [];
+    addFlag(product.idCode, copyBranch);
+    removeBranches(copyBranch, reactions);
+    let nbReactions = reactions.length;
+    if (results[product.idCode] === undefined) {
+      results[product.idCode] = {
+        idCode: product.idCode,
+        mf: product.mf,
+        tree: [copyBranch],
+        reactions,
+        minSteps: nbReactions,
+      };
     } else {
-      results[result.idCode].trees.push({
-        reaction: tree.reaction,
-        reactant: tree.reactant,
-      });
+      results[product.idCode].tree.push(copyBranch);
+      if (nbReactions < results[product.idCode].minSteps) {
+        results[product.idCode].minSteps = nbReactions;
+        results[product.idCode].reactions = reactions;
+      }
     }
+
     if (product.children.length > 0) {
       for (let child of product.children) {
-        flattenReaction(child, results, [...reactions]);
+        flattenReaction(child, results, originalBranch);
+      }
+    }
+  }
+}
+
+function removeBranches(tree, reactions, previousFlag = false) {
+  reactions.push(tree.reaction.rxnCode);
+  for (const product of tree.products) {
+    if (product.flag && !previousFlag) {
+      product.children = [];
+    }
+    if (product.children.length > 0) {
+      for (const child of product.children) {
+        removeBranches(child, reactions, product.flag);
+      }
+    }
+  }
+}
+
+function addFlag(idCode, tree) {
+  for (const product of tree.products) {
+    product.flag = product.idCode === idCode;
+    if (product.children.length > 0) {
+      for (const child of product.children) {
+        addFlag(idCode, child);
       }
     }
   }
