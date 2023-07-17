@@ -1,12 +1,14 @@
 import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
-
+import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 /**
- * Create a tree of products based on reactions and reactants
+ * Create reaction trees of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
  * @param {Array} reactions array of reactions objects with rxnCode and label
  * @param {object} options options to apply the reaction
  * @param {number} [options.maxDepth=10] max depth of the recursion
- * @returns {Array} array of results of the reactions
+ * @returns {Object} The returned object has two properties:
+ * - trees: the tree of reactions
+ * - products: reactions trees grouped by product idCode
  */
 export function applyReactions(reactants, reactions, options = {}) {
   // Reaction are applied recursively until maximal tree depth is reached (default 10)
@@ -21,7 +23,7 @@ export function applyReactions(reactants, reactions, options = {}) {
 
   reactions = appendOCLReaction(reactions, OCL);
 
-  const results = [];
+  const trees = [];
   // Start the recursion by applying the first level of reactions
   let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
     OCL,
@@ -29,7 +31,7 @@ export function applyReactions(reactants, reactions, options = {}) {
     moleculesInfo,
     processedMolecules,
     maxDepth,
-    results,
+    trees,
   });
 
   do {
@@ -39,8 +41,8 @@ export function applyReactions(reactants, reactions, options = {}) {
     }
     todoCurrentLevel = nexts.flat();
   } while (todoCurrentLevel.length > 0);
-
-  return results;
+  const products = groupTreesByProducts(trees);
+  return { trees, products };
 }
 
 /**
