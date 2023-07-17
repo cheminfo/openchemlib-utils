@@ -1,6 +1,3 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-
 import { Molecule } from 'openchemlib/full.js';
 
 import { applyReactions } from '../applyReactions.js';
@@ -10,7 +7,11 @@ import { reactionsDatabase } from './reactionsDatabase.js';
 describe('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
-    const { tree, products } = applyReactions([ethanol], reactionsDatabase, {});
+    const { trees, products } = applyReactions(
+      [ethanol],
+      reactionsDatabase,
+      {},
+    );
     expect(products[0]).toMatchInlineSnapshot(`
       {
         "idCode": "eMB@HRZ@",
@@ -19,7 +20,7 @@ describe('applyReactions', () => {
         "reactions": [
           "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
         ],
-        "tree": [
+        "trees": [
           {
             "products": [
               {
@@ -64,8 +65,8 @@ describe('applyReactions', () => {
       }
     `);
 
-    expect(tree).toHaveLength(1);
-    const firstResult = tree[0];
+    expect(trees).toHaveLength(1);
+    const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C2H6S');
@@ -78,7 +79,7 @@ describe('applyReactions', () => {
 
   it('ethylene glycol', () => {
     const diol = Molecule.fromSmiles('OCCO');
-    const { tree, products } = applyReactions([diol], reactionsDatabase, {});
+    const { trees, products } = applyReactions([diol], reactionsDatabase, {});
 
     expect(products[0]).toMatchInlineSnapshot(`
       {
@@ -88,7 +89,7 @@ describe('applyReactions', () => {
         "reactions": [
           "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
         ],
-        "tree": [
+        "trees": [
           {
             "products": [
               {
@@ -136,8 +137,8 @@ describe('applyReactions', () => {
         ],
       }
     `);
-    expect(tree).toHaveLength(1);
-    const firstResult = tree[0];
+    expect(trees).toHaveLength(1);
+    const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C2H6OS');
@@ -152,12 +153,12 @@ describe('applyReactions', () => {
     expect(secondChild.products).toHaveLength(1);
     expect(secondChild.products[0].mf).toBe('C3H8OS');
 
-    expect(tree).toMatchSnapshot();
+    expect(trees).toMatchSnapshot();
   });
 
   it('propane-1,2-diol', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
-    const { tree, products } = applyReactions(
+    const { trees, products } = applyReactions(
       [propanediol],
       reactionsDatabase,
       {},
@@ -170,7 +171,7 @@ describe('applyReactions', () => {
         "reactions": [
           "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
         ],
-        "tree": [
+        "trees": [
           {
             "products": [
               {
@@ -223,13 +224,13 @@ describe('applyReactions', () => {
       }
     `);
 
-    expect(tree).toHaveLength(2);
-    const firstResult = tree[0];
+    expect(trees).toHaveLength(2);
+    const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C3H8OS');
     expect(firstProduct.children).toHaveLength(2);
-    const secondResult = tree[1];
+    const secondResult = trees[1];
     expect(secondResult.products).toHaveLength(1);
     const secondProduct = secondResult.products[0];
     expect(secondProduct.mf).toBe('C3H8OS');
@@ -249,7 +250,7 @@ describe('applyReactions', () => {
 
   it('propane-1,2-diol maxDepth: 1', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
-    const { tree, products } = applyReactions(
+    const { trees, products } = applyReactions(
       [propanediol],
       reactionsDatabase,
       {
@@ -265,7 +266,7 @@ describe('applyReactions', () => {
         "reactions": [
           "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
         ],
-        "tree": [
+        "trees": [
           {
             "products": [
               {
@@ -317,8 +318,8 @@ describe('applyReactions', () => {
         ],
       }
     `);
-    expect(tree).toHaveLength(2);
-    const firstResult = tree[0];
+    expect(trees).toHaveLength(2);
+    const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C3H8OS');
@@ -327,7 +328,7 @@ describe('applyReactions', () => {
 
   it('propane-1,2-diol maxDepth: 2', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
-    const { tree, products } = applyReactions(
+    const { trees, products } = applyReactions(
       [propanediol],
       reactionsDatabase,
       {
@@ -339,15 +340,15 @@ describe('applyReactions', () => {
       [
         "idCode",
         "mf",
-        "tree",
+        "trees",
         "reactions",
         "minSteps",
       ]
     `);
 
     expect(products[1].minSteps).toBeGreaterThanOrEqual(3);
-    expect(tree).toHaveLength(2);
-    const firstResult = tree[0];
+    expect(trees).toHaveLength(2);
+    const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C3H8OS');

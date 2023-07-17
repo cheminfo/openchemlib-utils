@@ -290,7 +290,7 @@ exports[`applyReactions propane-1,2-diol maxDepth: 2 2`] = `
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -350,7 +350,7 @@ M  END
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -559,7 +559,7 @@ M  END
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -1077,7 +1077,7 @@ M  END
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -1706,7 +1706,7 @@ M  END
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -2018,7 +2018,7 @@ M  END
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -2127,7 +2127,7 @@ M  END
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {
@@ -2187,7 +2187,7 @@ M  END
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
       "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
     ],
-    "tree": [
+    "trees": [
       {
         "products": [
           {

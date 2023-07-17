@@ -33,12 +33,12 @@ function groupProductTrees(currentBranch, results, originalBranch) {
       results[product.idCode] = {
         idCode: product.idCode,
         mf: product.mf,
-        tree: [copyBranch],
+        trees: [copyBranch],
         reactions,
         minSteps: nbReactions,
       };
     } else {
-      results[product.idCode].tree.push(copyBranch);
+      results[product.idCode].trees.push(copyBranch);
       if (nbReactions < results[product.idCode].minSteps) {
         results[product.idCode].minSteps = nbReactions;
         results[product.idCode].reactions = reactions;

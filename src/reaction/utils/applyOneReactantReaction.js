@@ -8,12 +8,12 @@ import { getInfo } from './getReactantInfo.js';
  * @param {number} options.maxDepth max depth of the recursion
  * @param {Map} options.moleculesInfo map of molecules info
  * @param {Set} options.processedMolecules set of processed molecules
- * @param {Array} options.tree array of tree of previous recursions
+ * @param {Array} options.trees array of trees of previous recursions
  * @param {*} options.OCL OCL object
  * @returns {Array} array of results
  */
 export function applyOneReactantReaction(reactants, reactions, options) {
-  const { currentDepth, maxDepth, moleculesInfo, processedMolecules, tree } =
+  const { currentDepth, maxDepth, moleculesInfo, processedMolecules, trees } =
     options;
   const todoNextDepth = [];
   // if the current depth is greater than the max depth, we stop the recursion and return an empty array
@@ -61,7 +61,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
                   {
                     ...options,
                     currentDepth: options.currentDepth + 1,
-                    tree: product.children,
+                    trees: product.children,
                   },
                 );
               });
@@ -76,7 +76,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
               reactant: getInfo(reactant, moleculesInfo),
               products,
             };
-            tree.push(oneReaction);
+            trees.push(oneReaction);
           }
         }
       }
