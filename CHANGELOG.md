@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.6.0...v2.7.0) (2023-07-17)
+
+
+### Features
+
+* add prop in applyReactions to groupTreesByProducts ([#52](https://github.com/cheminfo/openchemlib-utils/issues/52)) ([dd8e62d](https://github.com/cheminfo/openchemlib-utils/commit/dd8e62de0834b6953c2a0a0caa9f28c55a0309cd))
+
 ## [2.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.5.0...v2.6.0) (2023-07-13)
 
 
