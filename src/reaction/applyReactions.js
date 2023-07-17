@@ -1,12 +1,14 @@
 import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
-import { flattenResults } from './utils/flattenResults.js';
+import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 /**
  * Create a tree of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
  * @param {Array} reactions array of reactions objects with rxnCode and label
  * @param {object} options options to apply the reaction
  * @param {number} [options.maxDepth=10] max depth of the recursion
- * @returns {Object} Object { results, flatResults }
+ * @returns {Object} The returned object has two properties:
+ * - tree: the tree of reactions
+ * - products: reactions trees grouped by product idCode
  */
 export function applyReactions(reactants, reactions, options = {}) {
   // Reaction are applied recursively until maximal tree depth is reached (default 10)
@@ -39,7 +41,7 @@ export function applyReactions(reactants, reactions, options = {}) {
     }
     todoCurrentLevel = nexts.flat();
   } while (todoCurrentLevel.length > 0);
-  const products = flattenResults(tree);
+  const products = groupTreesByProducts(tree);
   return { tree, products };
 }
 

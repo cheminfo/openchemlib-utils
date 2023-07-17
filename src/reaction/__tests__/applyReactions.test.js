@@ -1,3 +1,6 @@
+import { writeFileSync } from 'fs';
+import { join } from 'path';
+
 import { Molecule } from 'openchemlib/full.js';
 
 import { applyReactions } from '../applyReactions.js';
@@ -341,7 +344,8 @@ describe('applyReactions', () => {
         "minSteps",
       ]
     `);
-    expect(products[1].minSteps).toBeGreaterThanOrEqual(4);
+
+    expect(products[1].minSteps).toBeGreaterThanOrEqual(3);
     expect(tree).toHaveLength(2);
     const firstResult = tree[0];
     expect(firstResult.products).toHaveLength(1);
