@@ -25,6 +25,8 @@ export function applyOneReactantReaction(reactants, reactions, options) {
   const { OCL } = options;
   for (const reactant of reactants) {
     const idCode = reactant.getIDCode();
+    // check if reactant is charged
+    let isReactantCharged = reactant.canonizeCharge(true);
     // check if the reactant has already been processed
     if (processedMolecules.has(idCode)) {
       continue;
@@ -32,6 +34,12 @@ export function applyOneReactantReaction(reactants, reactions, options) {
       processedMolecules.add(idCode);
     }
     for (const reaction of reactions) {
+      // if the reaction need to be charged and the reactant is not charged, we continue to the next reaction
+      // this is useful for charge remote reactions
+      if (reaction.needToBeCharged && !isReactantCharged) {
+        continue;
+      }
+
       const reactor = new OCL.Reactor(reaction.oclReaction);
       // isMatching is true if the reactant is matching the reaction else we continue to the next reaction
       const isMatching = Boolean(reactor.setReactant(0, reactant));
@@ -70,7 +78,8 @@ export function applyOneReactantReaction(reactants, reactions, options) {
           // if there is at least one product, we add the reaction to the results
           if (products.length > 0) {
             // eslint-disable-next-line no-unused-vars
-            const { oclReaction, ...reactionWithoutOCL } = reaction;
+            const { oclReaction, needToBeCharged, ...reactionWithoutOCL } =
+              reaction;
             const oneReaction = {
               reaction: reactionWithoutOCL,
               reactant: getInfo(reactant, moleculesInfo),
