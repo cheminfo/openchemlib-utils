@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.1](https://github.com/cheminfo/openchemlib-utils/compare/v2.7.0...v2.7.1) (2023-07-18)
+
+
+### Bug Fixes
+
+* test case check if works when needToBeCharged is not defined ([9897cc8](https://github.com/cheminfo/openchemlib-utils/commit/9897cc854f6e945d1d410014272ba48b85ae2ae1))
+
 ## [2.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.6.0...v2.7.0) (2023-07-17)
 
 
