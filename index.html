@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>openchemlib-utils 2.6.0 | Documentation</title>
+  <title>openchemlib-utils 2.7.0 | Documentation</title>
   <meta name='description' content='Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>openchemlib-utils</h3>
-          <div class='mb1'><code>2.6.0</code></div>
+          <div class='mb1'><code>2.7.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -169,9 +169,29 @@
               
                 
                 <li><a
+                  href='#childhasflag'
+                  class="">
+                  childHasFlag
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#combinesmiles'
                   class="">
                   combineSmiles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cutbranches'
+                  class="">
+                  cutBranches
                   
                 </a>
                 
@@ -349,6 +369,26 @@
               
                 
                 <li><a
+                  href='#groupproducttrees'
+                  class="">
+                  groupProductTrees
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#grouptreesbyproducts'
+                  class="">
+                  groupTreesByProducts
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#iscsp3'
                   class="">
                   isCsp3
@@ -362,6 +402,16 @@
                   href='#makeracemic'
                   class="">
                   makeRacemic
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#markproduct'
+                  class="">
+                  markProduct
                   
                 </a>
                 
@@ -467,6 +517,16 @@
                 
                 </li>
               
+                
+                <li><a
+                  href='#trimtree'
+                  class="">
+                  trimTree
+                  
+                </a>
+                
+                </li>
+              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -487,7 +547,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/diastereotopic/addDiastereotopicMissingChirality.js#L11-L42'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/diastereotopic/addDiastereotopicMissingChirality.js#L11-L42'>
       <span>src/diastereotopic/addDiastereotopicMissingChirality.js</span>
       </a>
     
@@ -591,7 +651,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L156-L158'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L156-L158'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -668,7 +728,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L43-L48'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L43-L48'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -800,7 +860,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L58-L63'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L58-L63'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -909,7 +969,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L73-L78'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L73-L78'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1026,7 +1086,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L24-L31'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L24-L31'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1127,7 +1187,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L139-L141'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L139-L141'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1181,7 +1241,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L87-L89'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L87-L89'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1267,7 +1327,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L96-L98'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L96-L98'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1344,7 +1404,7 @@ This is the case for example for the valine where the 2 C of the methyl groups a
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L112-L114'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L112-L114'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1501,7 +1561,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/MoleculesDB.js#L131-L133'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/MoleculesDB.js#L131-L133'>
       <span>src/db/MoleculesDB.js</span>
       </a>
     
@@ -1687,7 +1747,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/reaction/applyReactions.js#L52-L60'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/applyReactions.js#L54-L62'>
       <span>src/reaction/applyReactions.js</span>
       </a>
     
@@ -1772,7 +1832,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/reaction/utils/applyOneReactantReaction.js#L15-L87'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/applyOneReactantReaction.js#L15-L87'>
       <span>src/reaction/utils/applyOneReactantReaction.js</span>
       </a>
     
@@ -1871,9 +1931,9 @@ Inside the database all the same molecules are group together</p>
 
               
                 <tr>
-  <td class='break-word'><span class='code bold'>options.results</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>
+  <td class='break-word'><span class='code bold'>options.trees</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>
   </td>
-  <td class='break-word'><span>array of results of previous recursions
+  <td class='break-word'><span>array of trees of previous recursions
 </span></td>
 </tr>
 
@@ -1936,16 +1996,16 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/reaction/applyReactions.js#L11-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/applyReactions.js#L13-L46'>
       <span>src/reaction/applyReactions.js</span>
       </a>
     
   </div>
   
 
-  <p>Create a tree of products based on reactions and reactants</p>
+  <p>Create reaction trees of products based on reactions and reactants</p>
 
-    <div class='pre p1 fill-light mt0'>applyReactions(reactants: any, reactions: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+    <div class='pre p1 fill-light mt0'>applyReactions(reactants: any, reactions: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
   
   
 
@@ -2022,8 +2082,88 @@ Inside the database all the same molecules are group together</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
-        array of results of the reactions
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        The returned object has two properties:
+<ul>
+<li>trees: the tree of reactions</li>
+<li>products: reactions trees grouped by product idCode</li>
+</ul>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='childhasflag'>
+      childHasFlag
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/trimTree.js#L34-L48'>
+      <span>src/reaction/utils/trimTree.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if the child branch has a flag true in its products</p>
+
+    <div class='pre p1 fill-light mt0'>childHasFlag(tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Current branch of the tree of reactions
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        true if the tree has a flag true in its products
 
       
     
@@ -2057,7 +2197,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/combineSmiles.js#L13-L21'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/combineSmiles.js#L13-L21'>
       <span>src/util/combineSmiles.js</span>
       </a>
     
@@ -2187,12 +2327,89 @@ Inside the database all the same molecules are group together</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='cutbranches'>
+      cutBranches
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/trimTree.js#L55-L74'>
+      <span>src/reaction/utils/trimTree.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Cut the branches of the tree that don't have a flag true in their products</p>
+
+    <div class='pre p1 fill-light mt0'>cutBranches(tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, reactions: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Current branch of the tree of reactions
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>reactions</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array of rxnCode of reactions
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='getatoms'>
       getAtoms
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/getAtoms.js#L8-L19'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/getAtoms.js#L8-L19'>
       <span>src/util/getAtoms.js</span>
       </a>
     
@@ -2267,7 +2484,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/getAtomsInfo.js#L7-L106'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/getAtomsInfo.js#L7-L106'>
       <span>src/util/getAtomsInfo.js</span>
       </a>
     
@@ -2334,7 +2551,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/getConnectivityMatrix.js#L15-L78'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/getConnectivityMatrix.js#L15-L78'>
       <span>src/util/getConnectivityMatrix.js</span>
       </a>
     
@@ -2492,7 +2709,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/diastereotopic/getDiastereotopicAtomIDs.js#L10-L26'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/diastereotopic/getDiastereotopicAtomIDs.js#L10-L26'>
       <span>src/diastereotopic/getDiastereotopicAtomIDs.js</span>
       </a>
     
@@ -2559,7 +2776,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/diastereotopic/getDiastereotopicAtomIDsAndH.js#L7-L42'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/diastereotopic/getDiastereotopicAtomIDsAndH.js#L7-L42'>
       <span>src/diastereotopic/getDiastereotopicAtomIDsAndH.js</span>
       </a>
     
@@ -2625,7 +2842,7 @@ Inside the database all the same molecules are group together</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/diastereotopic/getDiastereotopicAtomIDsFromMolfile.js#L11-L22'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/diastereotopic/getDiastereotopicAtomIDsFromMolfile.js#L11-L22'>
       <span>src/diastereotopic/getDiastereotopicAtomIDsFromMolfile.js</span>
       </a>
     
@@ -2702,7 +2919,7 @@ Pelase take care than numbering of atoms starts at 0 !</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/diastereotopic/getGroupedDiastereotopicAtomIDs.js#L12-L15'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/diastereotopic/getGroupedDiastereotopicAtomIDs.js#L12-L15'>
       <span>src/diastereotopic/getGroupedDiastereotopicAtomIDs.js</span>
       </a>
     
@@ -2811,7 +3028,7 @@ a set of chemically equivalent atoms(element.atoms) and the groups of magnetical
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/hose/getHoseCodesAndDiastereotopicIDs.js#L11-L32'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/hose/getHoseCodesAndDiastereotopicIDs.js#L11-L32'>
       <span>src/hose/getHoseCodesAndDiastereotopicIDs.js</span>
       </a>
     
@@ -2887,7 +3104,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/hose/getHoseCodesForAtom.js#L13-L15'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/hose/getHoseCodesForAtom.js#L13-L15'>
       <span>src/hose/getHoseCodesForAtom.js</span>
       </a>
     
@@ -3029,7 +3246,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/hose/getHoseCodesForAtoms.js#L18-L103'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/hose/getHoseCodesForAtoms.js#L18-L103'>
       <span>src/hose/getHoseCodesForAtoms.js</span>
       </a>
     
@@ -3172,7 +3389,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/hose/getHoseCodesForPath.js#L10-L106'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/hose/getHoseCodesForPath.js#L10-L106'>
       <span>src/hose/getHoseCodesForPath.js</span>
       </a>
     
@@ -3263,7 +3480,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/hose/getHoseCodesFromDiastereotopicID.js#L8-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/hose/getHoseCodesFromDiastereotopicID.js#L8-L27'>
       <span>src/hose/getHoseCodesFromDiastereotopicID.js</span>
       </a>
     
@@ -3339,7 +3556,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/reaction/utils/getReactantInfo.js#L9-L20'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/getReactantInfo.js#L9-L20'>
       <span>src/reaction/utils/getReactantInfo.js</span>
       </a>
     
@@ -3413,7 +3630,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/getMF.js#L9-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/getMF.js#L9-L37'>
       <span>src/util/getMF.js</span>
       </a>
     
@@ -3488,7 +3705,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/path/getPathAndTorsion.js#L8-L23'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/path/getPathAndTorsion.js#L8-L23'>
       <span>src/path/getPathAndTorsion.js</span>
       </a>
     
@@ -3582,7 +3799,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/path/getPathsInfo.js#L20-L70'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/path/getPathsInfo.js#L20-L70'>
       <span>src/path/getPathsInfo.js</span>
       </a>
     
@@ -3723,7 +3940,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/path/getShortestPaths.js#L10-L48'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/path/getShortestPaths.js#L10-L48'>
       <span>src/path/getShortestPaths.js</span>
       </a>
     
@@ -3802,12 +4019,174 @@ diaID and hose code</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='groupproducttrees'>
+      groupProductTrees
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/groupTreesByProducts.js#L23-L54'>
+      <span>src/reaction/utils/groupTreesByProducts.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>For a given tree, recursively group the branches leading to a each idCode</p>
+
+    <div class='pre p1 fill-light mt0'>groupProductTrees(currentBranch: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, results: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, originalBranch: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>currentBranch</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Current recursive branch of the tree of reactions
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>results</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Object with the branches grouped by idCode
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>originalBranch</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Original tree of reactions (not modified)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='grouptreesbyproducts'>
+      groupTreesByProducts
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/groupTreesByProducts.js#L8-L15'>
+      <span>src/reaction/utils/groupTreesByProducts.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Group the trees by product idCode</p>
+
+    <div class='pre p1 fill-light mt0'>groupTreesByProducts(trees: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>trees</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Trees of reactions
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Array of products with their corresponding trees and reactions
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='iscsp3'>
       isCsp3
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/isCsp3.js#L7-L17'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/isCsp3.js#L7-L17'>
       <span>src/util/isCsp3.js</span>
       </a>
     
@@ -3882,7 +4261,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/makeRacemic.js#L7-L19'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/makeRacemic.js#L7-L19'>
       <span>src/util/makeRacemic.js</span>
       </a>
     
@@ -3977,12 +4356,89 @@ diaID and hose code</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='markproduct'>
+      markProduct
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/trimTree.js#L18-L27'>
+      <span>src/reaction/utils/trimTree.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>For a given idCode, mark the products that contain it with a flag true and the others with a flag false</p>
+
+    <div class='pre p1 fill-light mt0'>markProduct(idCode: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>idCode</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    idCode of the product
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Current branch of the tree of reactions
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='nbcho'>
       nbCHO
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/nbCHO.js#L7-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/nbCHO.js#L7-L44'>
       <span>src/util/nbCHO.js</span>
       </a>
     
@@ -4057,7 +4513,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/nbCN.js#L7-L46'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/nbCN.js#L7-L46'>
       <span>src/util/nbCN.js</span>
       </a>
     
@@ -4132,7 +4588,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/nbCOOH.js#L7-L53'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/nbCOOH.js#L7-L53'>
       <span>src/util/nbCOOH.js</span>
       </a>
     
@@ -4207,7 +4663,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/nbLabileH.js#L9-L19'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/nbLabileH.js#L9-L19'>
       <span>src/util/nbLabileH.js</span>
       </a>
     
@@ -4318,7 +4774,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/nbNH2.js#L7-L46'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/nbNH2.js#L7-L46'>
       <span>src/util/nbNH2.js</span>
       </a>
     
@@ -4393,7 +4849,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/nbOH.js#L7-L50'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/nbOH.js#L7-L50'>
       <span>src/util/nbOH.js</span>
       </a>
     
@@ -4468,7 +4924,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/misc/dwar/parseDwar.js#L12-L17'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/misc/dwar/parseDwar.js#L12-L17'>
       <span>src/misc/dwar/parseDwar.js</span>
       </a>
     
@@ -4535,7 +4991,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/db/utils/pushEntry.js#L11-L62'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/db/utils/pushEntry.js#L11-L62'>
       <span>src/db/utils/pushEntry.js</span>
       </a>
     
@@ -4659,7 +5115,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/util/tagAtom.js#L8-L20'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/util/tagAtom.js#L8-L20'>
       <span>src/util/tagAtom.js</span>
       </a>
     
@@ -4734,7 +5190,7 @@ diaID and hose code</p>
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/24813acf6f2ea6b79db965a868b32c3ee6fb7b0b/src/diastereotopic/toDiastereotopicSVG.js#L8-L52'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/diastereotopic/toDiastereotopicSVG.js#L8-L52'>
       <span>src/diastereotopic/toDiastereotopicSVG.js</span>
       </a>
     
@@ -4771,6 +5227,92 @@ diaID and hose code</p>
             <span class='code bold'>options</span> <code class='quiet'>(any
             = <code>{}</code>)</code>
 	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='trimtree'>
+      trimTree
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/openchemlib-utils/blob/8301438d613234127cdda066ac17d51d752f29b9/src/reaction/utils/trimTree.js#L8-L11'>
+      <span>src/reaction/utils/trimTree.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Trim the tree of reactions to keep only the paths to the product</p>
+
+    <div class='pre p1 fill-light mt0'>trimTree(idCode: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, tree: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, reactions: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>idCode</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    idCode of the product
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tree</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Tree of reactions
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>reactions</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array of rxnCode of reactions
+
           </div>
           
         </div>
