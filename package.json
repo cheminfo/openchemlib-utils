@@ -1,6 +1,6 @@
 {
   "name": "openchemlib-utils",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs",
   "main": "lib/index.js",
   "module": "src/index.js",
