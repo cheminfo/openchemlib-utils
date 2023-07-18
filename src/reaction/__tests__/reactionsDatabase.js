@@ -2,7 +2,6 @@ export const reactionsDatabase = [
   {
     Label: 'OH by SH',
     rxnCode: 'eFHBLGtV!eFB@HcA}E`#aP aP#!R@AL]\\mp !R@AL]Nmp',
-    needToBeCharged: false,
   },
   {
     Label: 'SH to SMe',
