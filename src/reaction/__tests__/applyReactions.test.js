@@ -326,7 +326,7 @@ describe('applyReactions', () => {
     expect(firstProduct.children).toHaveLength(0);
   });
 
-  it('propane-1,2-diol maxDepth: 2', () => {
+  it('propane-1,2-diol maxDepth: 5', () => {
     const propanediol = Molecule.fromSmiles('CC(O)CO');
     const { trees, products } = applyReactions(
       [propanediol],
@@ -355,5 +355,13 @@ describe('applyReactions', () => {
     const mfs = firstProduct.children.map((child) => child.products[0].mf);
     expect(mfs).toStrictEqual(['C3H8S2', 'C4H10OS']);
     expect(products).toMatchSnapshot();
+  });
+  it('propane-1,2-diol protonated maxDepth: 5', () => {
+    const propanediol = Molecule.fromSmiles('CC([OH2+])CO');
+    const { products } = applyReactions([propanediol], reactionsDatabase, {
+      maxDepth: 5,
+    });
+    expect(products[0].trees[0].reactant.mf).toBe('C3H9O2(+)');
+    expect(products[0].trees[0].products[0].mf).toBe('C3H9OS(+)');
   });
 });
