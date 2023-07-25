@@ -14,6 +14,8 @@ describe('applyReactions', () => {
     );
     expect(products[0]).toMatchInlineSnapshot(`
       {
+        "charge": 0,
+        "em": 62.01902,
         "idCode": "eMB@HRZ@",
         "mf": "C2H6S",
         "minSteps": 1,
@@ -24,7 +26,9 @@ describe('applyReactions', () => {
           {
             "products": [
               {
+                "charge": 0,
                 "children": [],
+                "em": 62.01902,
                 "flag": true,
                 "idCode": "eMB@HRZ@",
                 "mf": "C2H6S",
@@ -42,6 +46,8 @@ describe('applyReactions', () => {
               },
             ],
             "reactant": {
+              "charge": 0,
+              "em": 46.041865,
               "idCode": "eMHAIh@",
               "mf": "C2H6O",
               "molfile": "
@@ -65,7 +71,7 @@ describe('applyReactions', () => {
       }
     `);
 
-    expect(trees).toHaveLength(1);
+    expect(trees).toHaveLength(2);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
@@ -83,6 +89,8 @@ describe('applyReactions', () => {
 
     expect(products[0]).toMatchInlineSnapshot(`
       {
+        "charge": 0,
+        "em": 78.013935,
         "idCode": "gCaHL@aIZ\`@",
         "mf": "C2H6OS",
         "minSteps": 1,
@@ -93,7 +101,9 @@ describe('applyReactions', () => {
           {
             "products": [
               {
+                "charge": 0,
                 "children": [],
+                "em": 78.013935,
                 "flag": true,
                 "idCode": "gCaHL@aIZ\`@",
                 "mf": "C2H6OS",
@@ -113,6 +123,8 @@ describe('applyReactions', () => {
               },
             ],
             "reactant": {
+              "charge": 0,
+              "em": 62.03678,
               "idCode": "gC\`\`Adej@@",
               "mf": "C2H6O2",
               "molfile": "
@@ -137,12 +149,12 @@ describe('applyReactions', () => {
         ],
       }
     `);
-    expect(trees).toHaveLength(1);
+    expect(trees).toHaveLength(2);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C2H6OS');
-    expect(firstProduct.children).toHaveLength(2);
+    expect(firstProduct.children).toHaveLength(3);
 
     const firstChild = firstProduct.children[0];
     expect(firstChild.reactant.mf).toBe('C2H6OS');
@@ -165,6 +177,8 @@ describe('applyReactions', () => {
     );
     expect(products[0]).toMatchInlineSnapshot(`
       {
+        "charge": 0,
+        "em": 92.029585,
         "idCode": "gJQHB@aIfj@@",
         "mf": "C3H8OS",
         "minSteps": 1,
@@ -175,7 +189,9 @@ describe('applyReactions', () => {
           {
             "products": [
               {
+                "charge": 0,
                 "children": [],
+                "em": 92.029585,
                 "flag": true,
                 "idCode": "gJQHB@aIfj@@",
                 "mf": "C3H8OS",
@@ -197,6 +213,8 @@ describe('applyReactions', () => {
               },
             ],
             "reactant": {
+              "charge": 0,
+              "em": 76.05243,
               "idCode": "gJP\`@TfZh@",
               "mf": "C3H8O2",
               "molfile": "
@@ -224,17 +242,17 @@ describe('applyReactions', () => {
       }
     `);
 
-    expect(trees).toHaveLength(2);
+    expect(trees).toHaveLength(4);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C3H8OS');
-    expect(firstProduct.children).toHaveLength(2);
+    expect(firstProduct.children).toHaveLength(3);
     const secondResult = trees[1];
     expect(secondResult.products).toHaveLength(1);
     const secondProduct = secondResult.products[0];
     expect(secondProduct.mf).toBe('C3H8OS');
-    expect(secondProduct.children).toHaveLength(2);
+    expect(secondProduct.children).toHaveLength(3);
 
     const firstChild = firstProduct.children[0];
     expect(firstChild.reactant.mf).toBe('C3H8OS');
@@ -260,6 +278,8 @@ describe('applyReactions', () => {
 
     expect(products[0]).toMatchInlineSnapshot(`
       {
+        "charge": 0,
+        "em": 92.029585,
         "idCode": "gJQHB@aIfj@@",
         "mf": "C3H8OS",
         "minSteps": 1,
@@ -270,7 +290,9 @@ describe('applyReactions', () => {
           {
             "products": [
               {
+                "charge": 0,
                 "children": [],
+                "em": 92.029585,
                 "flag": true,
                 "idCode": "gJQHB@aIfj@@",
                 "mf": "C3H8OS",
@@ -292,6 +314,8 @@ describe('applyReactions', () => {
               },
             ],
             "reactant": {
+              "charge": 0,
+              "em": 76.05243,
               "idCode": "gJP\`@TfZh@",
               "mf": "C3H8O2",
               "molfile": "
@@ -318,7 +342,7 @@ describe('applyReactions', () => {
         ],
       }
     `);
-    expect(trees).toHaveLength(2);
+    expect(trees).toHaveLength(4);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
@@ -340,6 +364,8 @@ describe('applyReactions', () => {
       [
         "idCode",
         "mf",
+        "em",
+        "charge",
         "trees",
         "reactions",
         "minSteps",
@@ -347,21 +373,20 @@ describe('applyReactions', () => {
     `);
 
     expect(products[1].minSteps).toBeGreaterThanOrEqual(3);
-    expect(trees).toHaveLength(2);
+    expect(trees).toHaveLength(4);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
     const firstProduct = firstResult.products[0];
     expect(firstProduct.mf).toBe('C3H8OS');
     const mfs = firstProduct.children.map((child) => child.products[0].mf);
-    expect(mfs).toStrictEqual(['C3H8S2', 'C4H10OS']);
+    expect(mfs).toStrictEqual(['C3H8S2', 'C4H10OS', 'C3H9OS(+)']);
     expect(products).toMatchSnapshot();
   });
-  it('propane-1,2-diol protonated maxDepth: 5', () => {
-    const propanediol = Molecule.fromSmiles('CC([OH2+])CO');
-    const { products } = applyReactions([propanediol], reactionsDatabase, {
+  it('COCCO multiple ionization', () => {
+    const molecule = Molecule.fromSmiles('OCOCO');
+    const { products } = applyReactions([molecule], reactionsDatabase, {
       maxDepth: 5,
     });
-    expect(products[0].trees[0].reactant.mf).toBe('C3H9O2(+)');
-    expect(products[0].trees[0].products[0].mf).toBe('C3H9OS(+)');
+    expect(products).toMatchSnapshot();
   });
 });

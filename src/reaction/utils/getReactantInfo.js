@@ -1,3 +1,4 @@
+import { getCharge } from '../../util/getCharge.js';
 import { getMF } from '../../util/getMF.js';
 
 /**
@@ -14,6 +15,8 @@ export function getInfo(molecule, moleculesInfo) {
     molfile: molecule.toMolfile(),
     idCode: molecule.getIDCode(),
     mf: getMF(molecule).mf,
+    em: molecule.getMolecularFormula().absoluteWeight,
+    charge: getCharge(molecule),
   };
   moleculesInfo.set(molecule, reactantInfo);
   return reactantInfo;
