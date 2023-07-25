@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.8.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.7.1...v2.8.0) (2023-07-25)
+
+
+### Features
+
+* add appendEntries ([801f284](https://github.com/cheminfo/openchemlib-utils/commit/801f2840d3a6ac38fe19e24d28f5628f3c156bfe))
+* add getCharge ([0ea8f66](https://github.com/cheminfo/openchemlib-utils/commit/0ea8f6690478e8b9f6934253c7113ce31a604ef7))
+* allow to search by smarts ([9800ad9](https://github.com/cheminfo/openchemlib-utils/commit/9800ad935d3ab4fde49dd1969ac9a58bb9f63500))
+
 ## [2.7.1](https://github.com/cheminfo/openchemlib-utils/compare/v2.7.0...v2.7.1) (2023-07-18)
 
 
