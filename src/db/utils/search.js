@@ -11,7 +11,7 @@ function getQuery(moleculesDB, query, options) {
   const { format = 'idCode' } = options;
 
   if (typeof query === 'string') {
-    const moleculeCreators = getMoleculeCreators(moleculesDB.OCL.Molecule);
+    const moleculeCreators = getMoleculeCreators(moleculesDB.OCL);
     query = moleculeCreators.get(format.toLowerCase())(query);
   } else if (!(query instanceof moleculesDB.OCL.Molecule)) {
     throw new TypeError('toSearch must be a Molecule or string');

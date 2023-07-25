@@ -120,7 +120,7 @@ export class MoleculesDB {
    * Inside the database all the same molecules are group together
    * @param {string|OCL.Molecule} [query] smiles, molfile, oclCode or instance of Molecule to look for
    * @param {object} [options={}]
-   * @param {string} [options.format='idCode'] - query is in the format 'smiles', 'oclid' or 'molfile'
+   * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
    * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result
@@ -136,7 +136,7 @@ export class MoleculesDB {
    * Inside the database all the same molecules are group together
    * @param {string|OCL.Molecule} [query] smiles, molfile, oclCode or instance of Molecule to look for
    * @param {object} [options={}]
-   * @param {string} [options.format='idCode'] - query is in the format 'smiles', 'oclid' or 'molfile'
+   * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
    * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result

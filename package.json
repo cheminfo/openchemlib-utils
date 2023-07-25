@@ -52,6 +52,6 @@
     "sdf-parser": "^6.0.1"
   },
   "peerDependencies": {
-    "openchemlib": ">=8.0.0"
+    "openchemlib": ">=8.3.0"
   }
 }

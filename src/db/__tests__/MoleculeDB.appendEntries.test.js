@@ -26,10 +26,9 @@ describe('appendEntries', () => {
       indexPath: 'data.ocl.index',
       coordinatesPath: 'data.ocl.coordinaes',
       mwPath: 'data.mw',
-      onStep
+      onStep,
     });
     expect(moleculesDB.getDB()).toHaveLength(10);
-    expect(called).toBe(10)
+    expect(called).toBe(10);
   });
-
 });

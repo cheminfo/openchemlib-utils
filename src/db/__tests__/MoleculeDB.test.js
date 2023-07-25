@@ -70,7 +70,7 @@ describe('MoleculesDB', () => {
         format: 'smiles',
         mode: 'substructure',
       });
-      expect(result).toHaveLength(4);
+      expect(result).toHaveLength(5);
       expect(result[0].data.name).toBe('Ethane');
       result = moleculesDB.search('CCC', { format: 'smiles' });
       expect(result).toHaveLength(3);
@@ -79,7 +79,15 @@ describe('MoleculesDB', () => {
       result = moleculesDB.search('CCCO', { format: 'smiles' });
       expect(result).toHaveLength(0);
       result = moleculesDB.search('', { format: 'smiles' });
-      expect(result).toHaveLength(5);
+      expect(result).toHaveLength(6);
+    });
+
+    it('subStructure with SMARTS', () => {
+      let result = moleculesDB.search('CC[O,Cl,N]', {
+        format: 'smarts',
+        mode: 'substructure',
+      });
+      expect(result).toHaveLength(1);
     });
 
     it('similarity with SMILES', () => {
@@ -87,7 +95,7 @@ describe('MoleculesDB', () => {
         format: 'smiles',
         mode: 'similarity',
       });
-      expect(result).toHaveLength(5);
+      expect(result).toHaveLength(6);
       expect(result[0].data.name).toBe('Ethane');
       result = moleculesDB.search('CC', {
         format: 'smiles',
@@ -107,12 +115,12 @@ describe('MoleculesDB', () => {
       await moleculesDB.appendCSV(csv);
     });
 
-    it('subStructure with SMILES', async () => {
+    it('subStructure with SMILES async', async () => {
       let result = await moleculesDB.searchAsync('CC', {
         format: 'smiles',
         mode: 'substructure',
       });
-      expect(result).toHaveLength(4);
+      expect(result).toHaveLength(5);
       expect(result[0].data.name).toBe('Ethane');
       result = moleculesDB.search('CCC', { format: 'smiles' });
       expect(result).toHaveLength(3);
@@ -121,7 +129,7 @@ describe('MoleculesDB', () => {
       result = moleculesDB.search('CCCO', { format: 'smiles' });
       expect(result).toHaveLength(0);
       result = moleculesDB.search('', { format: 'smiles' });
-      expect(result).toHaveLength(5);
+      expect(result).toHaveLength(6);
     });
 
     it('subStructure with controller', async () => {

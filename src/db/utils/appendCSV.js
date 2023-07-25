@@ -12,7 +12,7 @@ const defaultCSVOptions = {
 export default async function appendCSV(moleculesDB, csv, options = {}) {
   const { onStep } = options;
   csv = ensureString(csv);
-  const moleculeCreators = getMoleculeCreators(moleculesDB.OCL.Molecule);
+  const moleculeCreators = getMoleculeCreators(moleculesDB.OCL);
 
   if (typeof csv !== 'string') {
     throw new TypeError('csv must be a string');

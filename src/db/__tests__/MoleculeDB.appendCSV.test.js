@@ -10,7 +10,7 @@ describe('appendCSV', () => {
   it('should parse all molecules', async () => {
     const moleculesDB = new MoleculesDB(OCL);
     await moleculesDB.appendCSV(csv);
-    expect(moleculesDB.getDB()).toHaveLength(4);
+    expect(moleculesDB.getDB()).toHaveLength(5);
   });
 
   it('should call step for each molecule', () => {
@@ -19,11 +19,11 @@ describe('appendCSV', () => {
 
     function onStep(current, total) {
       expect(current).toBe(++called);
-      expect(total).toBe(5);
+      expect(total).toBe(6);
     }
 
     return moleculesDB.appendCSV(csv, { onStep }).then(() => {
-      expect(called).toBe(5);
+      expect(called).toBe(6);
     });
   });
 });
