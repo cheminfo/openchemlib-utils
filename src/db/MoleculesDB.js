@@ -1,5 +1,6 @@
 import appendCSV from './utils/appendCSV';
 import appendColor from './utils/appendColor';
+import appendEntries from './utils/appendEntries.js';
 import appendSDF from './utils/appendSDF';
 import appendSmilesList from './utils/appendSmilesList';
 import pushEntry from './utils/pushEntry';
@@ -31,6 +32,26 @@ export class MoleculesDB {
   }
 
   /**
+   * Append an array of entries to the current database. An entry is an object that by default should contain a 'ocl' property containing idCode and optionally index and coordinates
+   * @param {*} moleculesDB
+   * @param {object[]} entries
+   * @param {object} [options={}]
+   * @param {string} [options.idCodePath='ocl.idCode']
+   * @param {string} [options.indexPath='ocl.index']
+   * @param {string} [options.coordinatesPath='ocl.coordinates']
+   * @param {string} [options.mwPath='mw']
+   * @param {string} [options.smilesPath]
+   * @param {string} [options.molfilePath]
+   * @param {function} [options.onStep] call back to execute after each molecule
+   */
+  appendEntries(entries, options) {
+    return appendEntries(this, entries, {
+      computeProperties: this.computeProperties,
+      ...options,
+    });
+  }
+
+  /**
    * append to the current database a CSV file
    * @param {string|ArrayBuffer} csv - text file containing the comma separated value file
    * @param {object} [options={}]
@@ -39,7 +60,6 @@ export class MoleculesDB {
    * @param {boolean} [options.skipEmptyLines=true]
    * @param {function} [options.onStep] call back to execute after each molecule
    */
-
   appendCSV(csv, options) {
     return appendCSV(this, csv, {
       computeProperties: this.computeProperties,
@@ -54,7 +74,6 @@ export class MoleculesDB {
    * @param {function} [options.onStep] call back to execute after each molecule
    * @returns {DB}
    */
-
   appendSDF(sdf, options) {
     return appendSDF(this, sdf, {
       computeProperties: this.computeProperties,
@@ -69,7 +88,6 @@ export class MoleculesDB {
    * @param {function} [options.onStep] call back to execute after each molecule
    * @returns {DB}
    */
-
   appendSmilesList(text, options) {
     return appendSmilesList(this, text, {
       computeProperties: this.computeProperties,

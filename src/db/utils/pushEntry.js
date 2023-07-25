@@ -17,9 +17,7 @@ export default function pushEntry(
   // the following line could be the source of problems if the idCode version
   // changes
 
-  let moleculeIDCode = moleculeInfo.idCode
-    ? moleculeInfo.idCode
-    : molecule.getIDCode();
+  let moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo);
   let entry = moleculesDB.db[moleculeIDCode];
   if (!entry) {
     // a new molecule
@@ -59,4 +57,9 @@ export default function pushEntry(
     }
   }
   entry.data.push(data);
+}
+
+function getMoleculeIDCode(molecule, moleculeInfo) {
+  if (moleculeInfo.idCode) return moleculeInfo.idCode;
+  return molecule.getIDCode();
 }

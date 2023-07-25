@@ -11,7 +11,7 @@ export function nbLabileH(molecule, options = {}) {
   let counter = 0;
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     if (atomicNumbers.includes(molecule.getAtomicNo(i))) {
-      counter += molecule.getAllHydrogens(i)
+      counter += molecule.getAllHydrogens(i);
     }
   }
 

@@ -1,0 +1,371 @@
+{
+  "data": [
+    {
+      "_id": 11040637,
+      "data": {
+        "ocl": {
+          "idCode": "gFPdlQDW@gVTebf@@",
+          "coordinates": "!B@hbH?_y?b@Jae`",
+          "index": [
+            -183622640, 1074003968, 268439552, 0, 0, 128, 0, 0, 0, 0, 0, 0,
+            2097152, 0, 0, 98828
+          ],
+          "noStereoTautomerID": "gFPdlQDW@gVTebj@utpl[GzSMTq|L_C@",
+          "acceptorCount": 2,
+          "donorCount": 1,
+          "logP": -0.21770000457763672,
+          "logS": -0.8599999807775021,
+          "polarSurfaceArea": 37.29999923706055,
+          "rotatableBondCount": 1,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2H2ClO2(-1).Li(+1)",
+        "em": 99.9903354222,
+        "charge": 0,
+        "mw": 100.42913733574234,
+        "nbFragments": 2,
+        "unsaturation": 2,
+        "inchi": "InChI=1S/C2H2ClO2.Li/c3-1-2(4)5;/h1H,(H,4,5);/q-1;+1",
+        "inchiKey": "VEUFRBMFZCEMLW-UHFFFAOYSA-N",
+        "iupac": "lithium;2-chloroacetic acid",
+        "molfile": "11040637\n  -OEChem-01152307492D\n\n  8  6  0     1  0  0  0  0  0999 V2000\n    4.7690   -0.3845    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    2.5369    0.4815    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4030   -1.0185    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2690    0.4815    0.0000 C   0  5  3  0  0  0  0  0  0  0  0  0\n    3.4030   -0.0185    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1350    0.9815    0.0000 Li  0  3  0  0  0  0  0  0  0  0  0  0\n    3.9590    1.0185    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    0.1715    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  2  8  1  0  0  0  0\n  3  5  2  0  0  0  0\n  4  5  1  0  0  0  0\n  4  7  1  0  0  0  0\nM  CHG  2   4  -1   6   1\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "H": 2,
+          "Cl": 1,
+          "O": 2,
+          "Li": 1
+        }
+      }
+    },
+    {
+      "_id": 23691599,
+      "data": {
+        "ocl": {
+          "idCode": "gFPdlQDW@OVTebZDd@",
+          "coordinates": "!B?g~w?_y?mpHUzP",
+          "index": [
+            -1861615616, 0, 0, 8388608, -2147483644, 128, 4, 0, 0, 32, 0, 0,
+            2097152, 0, 0, 33284
+          ],
+          "noStereoTautomerID": "gFPdlQDW@OVTebj@uTpl_iLuSGpq|L",
+          "acceptorCount": 2,
+          "donorCount": 1,
+          "logP": -2.078599886968732,
+          "logS": -2.2670000195503235,
+          "polarSurfaceArea": 43.28999900817871,
+          "rotatableBondCount": 0,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2H2ClO2(-1).Li(+1)",
+        "em": 99.9903354222,
+        "charge": 0,
+        "mw": 100.42913733574234,
+        "nbFragments": 2,
+        "unsaturation": 2,
+        "inchi": "InChI=1S/C2H3ClO2.Li/c3-1-2(4)5;/h1,4-5H;/q;+1/p-1",
+        "inchiKey": "LYCIYRBBBORSIY-UHFFFAOYSA-M",
+        "iupac": "lithium;(E)-2-chloro-1-hydroxyethenolate",
+        "molfile": "23691599\n  -OEChem-03172303302D\n\n  8  6  0     0  0  0  0  0  0999 V2000\n    2.5369    1.4050    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.2690    0.4050    0.0000 O   0  5  0  0  0  0  0  0  0  0  0  0\n    3.4030   -1.0950    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.4030   -0.0950    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5369    0.4050    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1350   -0.0950    0.0000 Li  0  3  0  0  0  0  0  0  0  0  0  0\n    2.0000    0.0950    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660   -1.4050    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  5  1  0  0  0  0\n  2  4  1  0  0  0  0\n  3  4  1  0  0  0  0\n  3  8  1  0  0  0  0\n  4  5  2  0  0  0  0\n  5  7  1  0  0  0  0\nM  CHG  2   2  -1   6   1\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "H": 2,
+          "Cl": 1,
+          "O": 2,
+          "Li": 1
+        }
+      }
+    },
+    {
+      "_id": 23695591,
+      "data": {
+        "ocl": {
+          "idCode": "gFPdlQDW@OVTebf@@",
+          "coordinates": "!BmpJw?_y?mpIm?`",
+          "index": [
+            -183622640, 1074003968, 268439552, 0, 0, 128, 0, 0, 0, 0, 0, 0,
+            2097152, 0, 0, 98816
+          ],
+          "noStereoTautomerID": "gFPdlQDW@OVTebj@uTpl_iLuSGpq|L",
+          "acceptorCount": 2,
+          "donorCount": 0,
+          "logP": -2.1457998901605606,
+          "logS": -0.8599999807775021,
+          "polarSurfaceArea": 40.1299991607666,
+          "rotatableBondCount": 1,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2H2ClO2(-1).Li(+1)",
+        "em": 99.9903354222,
+        "charge": 0,
+        "mw": 100.42913733574234,
+        "nbFragments": 2,
+        "unsaturation": 2,
+        "inchi": "InChI=1S/C2H3ClO2.Li/c3-1-2(4)5;/h1H2,(H,4,5);/q;+1/p-1",
+        "inchiKey": "OHXYLFVFSUFWPO-UHFFFAOYSA-M",
+        "iupac": "lithium;2-chloroacetate",
+        "molfile": "23695591\n  -OEChem-03172303302D\n\n  8  6  0     0  0  0  0  0  0999 V2000\n    2.0000    0.2500    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n    4.5981    0.7500    0.0000 O   0  5  0  0  0  0  0  0  0  0  0  0\n    3.7320   -0.7500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    0.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4641    0.2500    0.0000 Li  0  3  0  0  0  0  0  0  0  0  0  0\n    3.2646    1.2250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.4675    1.2250    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  4  1  0  0  0  0\n  2  5  1  0  0  0  0\n  3  5  2  0  0  0  0\n  4  5  1  0  0  0  0\n  4  7  1  0  0  0  0\n  4  8  1  0  0  0  0\nM  CHG  2   2  -1   6   1\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "H": 2,
+          "Cl": 1,
+          "O": 2,
+          "Li": 1
+        }
+      }
+    },
+    {
+      "_id": 162023002,
+      "data": {
+        "ocl": {
+          "idCode": "gFQdHl@bhD^V`@",
+          "coordinates": "!B[@@S_w}l@AM^T`",
+          "index": [
+            -1727922176, 0, 0, 0, 2097152, 0, 0, 524288, 32768, 0, 0, 0, 0,
+            32768, 0, 49412
+          ],
+          "noStereoTautomerID": "gFQdHl@bhD^V`@",
+          "acceptorCount": 3,
+          "donorCount": 1,
+          "logP": -1.8200999349355698,
+          "logS": 0.02399998903274536,
+          "polarSurfaceArea": 62.749999046325684,
+          "rotatableBondCount": 0,
+          "stereoCenterCount": 0
+        },
+        "mf": "CH4O3S.He",
+        "em": 99.99071841616001,
+        "charge": 0,
+        "mw": 100.10810302416117,
+        "nbFragments": 2,
+        "unsaturation": null,
+        "inchi": "InChI=1S/CH4O3S.He/c1-5(2,3)4;/h1H3,(H,2,3,4);",
+        "inchiKey": "YUZLFHHOPBHFEM-UHFFFAOYSA-N",
+        "iupac": "helium;methanesulfonic acid",
+        "molfile": "162023002\n  -OEChem-03232301462D\n\n 10  8  0     0  0  0  0  0  0999 V2000\n    1.4030    1.0369    0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0\n    2.2690    1.5369    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.9030    1.9030    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9030    0.1709    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5369    0.5369    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.1530    3.9030    0.0000 He  0  0  0  0  0  0  0  0  0  0  0  0\n    0.2269    1.0739    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.2269    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8469    0.0000    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8059    1.2269    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  3  2  0  0  0  0\n  1  4  2  0  0  0  0\n  1  5  1  0  0  0  0\n  2 10  1  0  0  0  0\n  5  7  1  0  0  0  0\n  5  8  1  0  0  0  0\n  5  9  1  0  0  0  0\nM  END\n",
+        "atoms": {
+          "C": 1,
+          "H": 4,
+          "O": 3,
+          "S": 1,
+          "He": 1
+        }
+      }
+    },
+    {
+      "_id": 17919884,
+      "data": {
+        "ocl": {
+          "idCode": "gNu`DQfdjjth@",
+          "coordinates": "!B@Fp@[@@S@Fp@Dp@S",
+          "index": [
+            -1727627248, 33554432, 268435456, 0, 2097152, 0, 2097152, 0, 4096,
+            0, 262400, 0, 0, 32768, 0, 16384
+          ],
+          "noStereoTautomerID": "gNu`DQfdjjth@",
+          "acceptorCount": 5,
+          "donorCount": 0,
+          "logP": 0.8662000298500061,
+          "logS": -1.5120000019669533,
+          "polarSurfaceArea": 68.08999824523926,
+          "rotatableBondCount": 2,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2N2O3",
+        "em": 99.99089186757,
+        "charge": 0,
+        "mw": 100.03309298931691,
+        "nbFragments": 1,
+        "unsaturation": 4,
+        "inchi": "InChI=1S/C2N2O3/c5-1-3-7-4-2-6",
+        "inchiKey": "DLMVDBDHOIWEJZ-UHFFFAOYSA-N",
+        "iupac": "isocyanatooxyimino(oxo)methane",
+        "molfile": "17919884\n  -OEChem-02182308112D\n\n  7  6  0     0  0  0  0  0  0999 V2000\n    4.5981    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1962   -0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4641    0.5000    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    0.5000    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3301    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  4  1  0  0  0  0\n  1  5  1  0  0  0  0\n  2  6  2  0  0  0  0\n  3  7  2  0  0  0  0\n  4  6  2  0  0  0  0\n  5  7  2  0  0  0  0\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "N": 2,
+          "O": 3
+        }
+      }
+    },
+    {
+      "_id": 19905017,
+      "data": {
+        "ocl": {
+          "idCode": "gNu`JqDeJmUx@",
+          "coordinates": "!B_vp@[G|S@AM?Dp@S",
+          "index": [
+            -1102528448, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24576
+          ],
+          "noStereoTautomerID": "gNu`JqDeJmUx@",
+          "acceptorCount": 5,
+          "donorCount": 0,
+          "logP": -0.6236000061035156,
+          "logS": -1.173999935388565,
+          "polarSurfaceArea": 75.27000045776367,
+          "rotatableBondCount": 2,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2N2O3",
+        "em": 99.99089186757,
+        "charge": 0,
+        "mw": 100.03309298931691,
+        "nbFragments": 1,
+        "unsaturation": 4,
+        "inchi": "InChI=1S/C2N2O3/c3-1-5-7-6-2-4",
+        "inchiKey": "SXZHPAWDTKNSMJ-UHFFFAOYSA-N",
+        "iupac": "cyanato peroxycyanate",
+        "molfile": "19905017\n  -OEChem-03172303292D\n\n  7  6  0     0  0  0  0  0  0999 V2000\n    4.5981    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4641    0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1962   -0.5000    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -0.5000    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3301    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  3  1  0  0  0  0\n  2  6  1  0  0  0  0\n  3  7  1  0  0  0  0\n  4  6  3  0  0  0  0\n  5  7  3  0  0  0  0\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "N": 2,
+          "O": 3
+        }
+      }
+    },
+    {
+      "_id": 19995445,
+      "data": {
+        "ocl": {
+          "idCode": "gOu`BpldsnKU\\@@",
+          "coordinates": "!Bfyo~_w?~_?z[fyn[",
+          "index": [
+            -1082203813, 35914241, 1417678912, 8192, 75497472, 0, 0, 35651584,
+            1024, 0, 0, 0, 67108864, 0, 0, 24576
+          ],
+          "noStereoTautomerID": "gOu`BpldsnKU\\@@",
+          "acceptorCount": 5,
+          "donorCount": 0,
+          "logP": -0.24140000343322754,
+          "logS": -0.8609999306499958,
+          "polarSurfaceArea": 62.55999970436096,
+          "rotatableBondCount": 0,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2N2O3",
+        "em": 99.99089186757,
+        "charge": 0,
+        "mw": 100.03309298931691,
+        "nbFragments": 1,
+        "unsaturation": 4,
+        "inchi": "InChI=1S/C2N2O3/c3-1-4-6-2(5)7-4",
+        "inchiKey": "VSNNSWYOULWSMQ-UHFFFAOYSA-N",
+        "iupac": "4-oxo-1,3,2-dioxazetidine-2-carbonitrile",
+        "molfile": "19995445\n  -OEChem-03172303342D\n\n  7  7  0     0  0  0  0  0  0999 V2000\n    2.7071   -0.1464    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7071    0.8536    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000    1.5607    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7071   -0.1464    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    5.1213   -1.5607    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.7071    0.8536    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.4142   -0.8536    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  4  1  0  0  0  0\n  1  6  1  0  0  0  0\n  2  4  1  0  0  0  0\n  2  6  1  0  0  0  0\n  3  6  2  0  0  0  0\n  4  7  1  0  0  0  0\n  5  7  3  0  0  0  0\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "N": 2,
+          "O": 3
+        }
+      }
+    },
+    {
+      "_id": 21878329,
+      "data": {
+        "ocl": {
+          "idCode": "gOu`Bpjdrq[Tr@@",
+          "coordinates": "!BGqigTvU`YrplFG?~",
+          "index": [
+            -10558182, 1375994369, 470880256, 813704192, 10485760, 2304,
+            2883588, 33554440, 1060896, 2097152, 135528448, 262144, -2146426880,
+            8, 16384, 16384
+          ],
+          "noStereoTautomerID": "gOu`Bpjdrq[Tr@@",
+          "acceptorCount": 5,
+          "donorCount": 0,
+          "logP": -0.8322000056505203,
+          "logS": -0.6369999684393406,
+          "polarSurfaceArea": 68.08999824523926,
+          "rotatableBondCount": 0,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2N2O3",
+        "em": 99.99089186757,
+        "charge": 0,
+        "mw": 100.03309298931691,
+        "nbFragments": 1,
+        "unsaturation": 4,
+        "inchi": "InChI=1S/C2N2O3/c5-1-2(6)7-4-3-1",
+        "inchiKey": "CYZJKENQGYLGQC-UHFFFAOYSA-N",
+        "iupac": "oxadiazole-4,5-dione",
+        "molfile": "21878329\n  -OEChem-03182305412D\n\n  7  7  0     0  0  0  0  0  0999 V2000\n    3.7601   -1.1739    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.0000   -0.8952    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    2.6723    1.1739    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.2601    0.3649    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5691   -0.5861    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9511   -0.5861    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.2601    0.3649    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  5  1  0  0  0  0\n  1  6  1  0  0  0  0\n  2  6  2  0  0  0  0\n  3  7  2  0  0  0  0\n  4  5  2  0  0  0  0\n  4  7  1  0  0  0  0\n  6  7  1  0  0  0  0\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "N": 2,
+          "O": 3
+        }
+      }
+    },
+    {
+      "_id": 57422514,
+      "data": {
+        "ocl": {
+          "idCode": "gNu`hpcIWIMvtv@@",
+          "coordinates": "!B?g~w?Xc}?g~H@h`B",
+          "index": [
+            -45703144, 302252032, 268500992, 0, 2097152, 0, 786432, 0, 36864, 0,
+            0, 0, -2147483648, 0, 33554432, 57344
+          ],
+          "noStereoTautomerID": "gNu`hpcIWIMvtv@@",
+          "acceptorCount": 5,
+          "donorCount": 0,
+          "logP": -1.6585999969393015,
+          "logS": -1.0339999254792929,
+          "polarSurfaceArea": 86.68000030517578,
+          "rotatableBondCount": 0,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2N2O3",
+        "em": 99.99089186757,
+        "charge": 0,
+        "mw": 100.03309298931691,
+        "nbFragments": 1,
+        "unsaturation": 4,
+        "inchi": "InChI=1S/C2N2O3/c3-1-2(5)4(6)7",
+        "inchiKey": "YTAQPYGKYMDEEZ-UHFFFAOYSA-N",
+        "iupac": "nitroformyl cyanide",
+        "molfile": "57422514\n  -OEChem-02042308192D\n\n  7  6  0     0  0  0  0  0  0999 V2000\n    5.4641   -0.2500    0.0000 O   0  5  0  0  0  0  0  0  0  0  0  0\n    4.5981    1.2500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -1.2500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    4.5981    0.2500    0.0000 N   0  3  0  0  0  0  0  0  0  0  0  0\n    2.0000    0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320   -0.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.8660    0.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  4  1  0  0  0  0\n  2  4  2  0  0  0  0\n  3  6  2  0  0  0  0\n  4  6  1  0  0  0  0\n  5  7  3  0  0  0  0\n  6  7  1  0  0  0  0\nM  CHG  2   1  -1   4   1\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "N": 2,
+          "O": 3
+        }
+      }
+    },
+    {
+      "_id": 141106566,
+      "data": {
+        "ocl": {
+          "idCode": "gNu`\\QEiLwgrTjuW`@",
+          "coordinates": "!B_vp@[G|S@AM?Dp@S",
+          "index": [
+            -1102004160, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24576
+          ],
+          "noStereoTautomerID": "gNu`\\QEiLwgrTjuW`@",
+          "acceptorCount": 5,
+          "donorCount": 0,
+          "logP": 0,
+          "logS": -0.5299999713897705,
+          "polarSurfaceArea": 36.40999889373779,
+          "rotatableBondCount": 2,
+          "stereoCenterCount": 0
+        },
+        "mf": "C2N2O3",
+        "em": 99.99089186757,
+        "charge": 0,
+        "mw": 100.03309298931691,
+        "nbFragments": 1,
+        "unsaturation": 4,
+        "inchi": "InChI=1S/C2N2O3/c1-3-5-7-6-4-2",
+        "inchiKey": "CYQWJTDIDQOKOJ-UHFFFAOYSA-N",
+        "iupac": "isocyanooxyperoxyazaniumylidynemethane",
+        "molfile": "141106566\n  -OEChem-03222303512D\n\n  7  6  0     0  0  0  0  0  0999 V2000\n    4.5981    0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4641    0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    3.7320    0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3301    0.0000    0.0000 N   0  3  0  0  0  0  0  0  0  0  0  0\n    2.8660   -0.0000    0.0000 N   0  3  0  0  0  0  0  0  0  0  0  0\n    7.1962   -0.5000    0.0000 C   0  5  0  0  0  0  0  0  0  0  0  0\n    2.0000   -0.5000    0.0000 C   0  5  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0\n  1  3  1  0  0  0  0\n  2  4  1  0  0  0  0\n  3  5  1  0  0  0  0\n  4  6  3  0  0  0  0\n  5  7  3  0  0  0  0\nM  CHG  4   4   1   5   1   6  -1   7  -1\nM  END\n",
+        "atoms": {
+          "C": 2,
+          "N": 2,
+          "O": 3
+        }
+      }
+    }
+  ]
+}
