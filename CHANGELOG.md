@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.9.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.8.0...v2.9.0) (2023-07-26)
+
+
+### Features
+
+* add getProperties ([073c67e](https://github.com/cheminfo/openchemlib-utils/commit/073c67eafa978cd91a1c71ba7cd40c322c8f6423))
+* get em and charge for products ([#59](https://github.com/cheminfo/openchemlib-utils/issues/59)) ([9eb9788](https://github.com/cheminfo/openchemlib-utils/commit/9eb9788a5774cdfd6940ab2bdc093d21d2c55459))
+
+
+### Bug Fixes
+
+* do not add undefined property in search result ([a7aa4af](https://github.com/cheminfo/openchemlib-utils/commit/a7aa4afb8a865f2b47c848e5bebd9eea63a30dbd))
+
 ## [2.8.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.7.1...v2.8.0) (2023-07-25)
 
 
