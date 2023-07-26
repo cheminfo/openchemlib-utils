@@ -189,7 +189,7 @@ function similaritySearch(moleculesDB, query) {
           queryIndex,
           entry.index,
         ) *
-          1000000 -
+        1000000 -
         Math.abs(queryMW - entry.properties.mw) / 10000;
     }
     searchResult.push({ similarity, entry });
@@ -217,12 +217,15 @@ function processResult(entries, options = {}) {
   if (flattenResult) {
     for (let entry of entries) {
       for (let data of entry.data) {
-        results.push({
+        const result = {
           data,
           idCode: entry.idCode,
           properties: entry.properties,
-          molecule: keepMolecule ? entry.molecule : undefined,
-        });
+        }
+        if (keepMolecule) {
+          result.molecule = entry.molecule;
+        }
+        results.push(result);
       }
     }
   } else {
