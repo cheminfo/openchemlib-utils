@@ -20,6 +20,7 @@ export * from './util/tagAtom';
 export * from './util/isCsp3';
 export * from './util/getMF';
 export * from './util/getCharge';
+export * from './util/getProperties';
 export * from './util/getAtoms';
 export * from './util/nbOH';
 export * from './util/nbCOOH';
