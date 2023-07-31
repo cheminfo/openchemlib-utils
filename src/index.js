@@ -1,10 +1,10 @@
-export * from './diastereotopic/addDiastereotopicMissingChirality';
+export * from './diastereotopic/ensureHeterotopicChiralBonds';
 export * from './diastereotopic/getDiastereotopicAtomIDs';
 export * from './diastereotopic/getDiastereotopicAtomIDsAndH';
-export * from './diastereotopic/toDiastereotopicSVG';
 export * from './diastereotopic/getGroupedDiastereotopicAtomIDs';
 export * from './diastereotopic/getDiastereotopicAtomIDsFromMolfile';
 export * from './diastereotopic/groupDiastereotopicAtomIDs';
+export * from './diastereotopic/toDiastereotopicSVG';
 
 export * from './hose/getHoseCodesAndDiastereotopicIDs';
 export * from './hose/getHoseCodesForAtom';
