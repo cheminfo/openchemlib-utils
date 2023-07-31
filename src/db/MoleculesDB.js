@@ -118,7 +118,7 @@ export class MoleculesDB {
   /**
    * Search in a MoleculesDB
    * Inside the database all the same molecules are group together
-   * @param {string|OCL.Molecule} [query] smiles, molfile, oclCode or instance of Molecule to look for
+   * @param {string|OCL.Molecule} [query] smiles, molfile, idlCode or instance of Molecule to look for
    * @param {object} [options={}]
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
@@ -134,7 +134,7 @@ export class MoleculesDB {
   /**
    * Search in a MoleculesDB
    * Inside the database all the same molecules are group together
-   * @param {string|OCL.Molecule} [query] smiles, molfile, oclCode or instance of Molecule to look for
+   * @param {string|OCL.Molecule} [query] smiles, molfile, idCode or instance of Molecule to look for
    * @param {object} [options={}]
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
