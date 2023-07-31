@@ -1,3 +1,5 @@
+import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
+
 import { getHoseCodesForAtom } from './getHoseCodesForAtom';
 /**
  * Returns the hose code for a specific marked atom
@@ -7,7 +9,7 @@ import { getHoseCodesForAtom } from './getHoseCodesForAtom';
 
 export function getHoseCodesFromDiastereotopicID(molecule, options = {}) {
   molecule.addImplicitHydrogens();
-  molecule.addMissingChirality();
+  ensureHeterotopicChiralBonds(molecule);
 
   // One of the atom has to be marked !
   let atomID = -1;

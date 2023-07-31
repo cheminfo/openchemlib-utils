@@ -1,3 +1,4 @@
+import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
 import { isCsp3 } from '../util/isCsp3';
 import { makeRacemic } from '../util/makeRacemic';
 import { tagAtom } from '../util/tagAtom';
@@ -6,7 +7,7 @@ export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
 
 /**
- * Returns the hose code for a specific atom number
+ * Returns the hose code for specific atom numbers
  * @param {import('openchemlib').Molecule} originalMolecule - The OCL molecule to be fragmented
  * @param {number[]} rootAtoms
  * @param {object} [options={}]
@@ -36,7 +37,7 @@ export function getHoseCodesForAtoms(
       let rootAtom = rootAtoms[i];
       tags.push(tagAtom(molecule, rootAtom));
       molecule.addImplicitHydrogens();
-      molecule.addMissingChirality();
+      ensureHeterotopicChiralBonds(molecule);
       molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
       // because ensuring helper reorder atoms we need to look again for it
     }

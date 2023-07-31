@@ -1,3 +1,4 @@
+import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
 import { makeRacemic } from '../util/makeRacemic';
 import { tagAtom } from '../util/tagAtom';
 
@@ -24,7 +25,7 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const tag2 = tagAtom(molecule, to);
 
   molecule.addImplicitHydrogens();
-  molecule.addMissingChirality();
+  ensureHeterotopicChiralBonds(molecule);
 
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
 
