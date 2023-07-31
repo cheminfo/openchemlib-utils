@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.9.0...v3.0.0) (2023-07-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* add ensureHeterotopicChiralBonds and remove addDiastereotopicMissingChirality
+
+### Features
+
+* add ensureHeterotopicChiralBonds and remove addDiastereotopicMissingChirality ([c846f5d](https://github.com/cheminfo/openchemlib-utils/commit/c846f5d0e499a7eff2a7a96ef80a331369cb5d3f))
+* add getHoseCodes, fast code to retrieve all the hose codes ([dfef04e](https://github.com/cheminfo/openchemlib-utils/commit/dfef04ef65ec2e88dc2c43278b1a0a7585bc5a56))
+* fast method to get the list of all the chiral or heterotopic carbons ([45c3019](https://github.com/cheminfo/openchemlib-utils/commit/45c3019d5b42e9b19b7dfd1fa021efc405634d73))
+
+
+### Bug Fixes
+
+* add chirality bonds if H are present ([0aae9fc](https://github.com/cheminfo/openchemlib-utils/commit/0aae9fca10ad5d9104afa4ecf5916a3e3f8db3b4))
+
+
+### Documentation
+
+* replace oclCode by idCode ([b3e4b6e](https://github.com/cheminfo/openchemlib-utils/commit/b3e4b6e070e8b6f1f4583fb8d5e75ad6c1e32505))
+
 ## [2.9.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.8.0...v2.9.0) (2023-07-26)
 
 
