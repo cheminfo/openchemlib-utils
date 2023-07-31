@@ -1,12 +1,13 @@
 import OCL from 'openchemlib';
 
+import { ensureHeterotopicChiralBonds } from '../../diastereotopic/ensureHeterotopicChiralBonds.js';
 import { getPathsInfo } from '../getPathsInfo';
 
 describe('getPathsInfo', () => {
   it('propane min:1, max:3, withHOSES', () => {
     let molecule = OCL.Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
-    molecule.addMissingChirality();
+    ensureHeterotopicChiralBonds(molecule);
     let pathsInfo = getPathsInfo(molecule, {
       fromLabel: 'H',
       toLabel: 'H',
@@ -73,7 +74,7 @@ describe('getPathsInfo', () => {
   it('propane min:1, max:3', () => {
     let molecule = OCL.Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
-    molecule.addMissingChirality();
+    ensureHeterotopicChiralBonds(molecule);
     let pathsInfo = getPathsInfo(molecule, {
       fromLabel: 'H',
       toLabel: 'H',

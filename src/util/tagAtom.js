@@ -1,4 +1,4 @@
-let xAtomicNumber = 0;
+import { getXAtomicNumber } from './getXAtomicNumber';
 
 /**
  * Tag an atom to be able to visualize it
@@ -17,15 +17,4 @@ export function tagAtom(molecule, iAtom) {
     molecule.setAtomMass(iAtom, molecule.getAtomMass(iAtom) + 5);
   }
   return customLabel;
-}
-
-function getXAtomicNumber(molecule) {
-  if (!xAtomicNumber) {
-    const OCL = molecule.getOCL();
-    xAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(
-      'X',
-      OCL.Molecule.cPseudoAtomX,
-    );
-  }
-  return xAtomicNumber;
 }

@@ -8,7 +8,6 @@ export function getDiastereotopicAtomIDsAndH(molecule) {
   const OCL = molecule.getOCL();
   molecule = molecule.getCompactCopy();
   molecule.addImplicitHydrogens();
-  // TODO Temporary code ???
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
 
   const diaIDs = getDiastereotopicAtomIDs(molecule);

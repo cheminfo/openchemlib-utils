@@ -35,11 +35,20 @@ describe('ensureHeterotopicChiralBonds', () => {
     let molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC(C)C');
     molecule.addImplicitHydrogens();
     ensureHeterotopicChiralBonds(molecule);
-    const stereoBonds = molecule
-      .toMolfile()
-      .split(/\r?\n/)
-      .filter((line) => line.match(/ {2}1 {2}0 {2}0 {2}0$/));
+    const stereoBonds = getStereoBonds(molecule)
     expect(stereoBonds).toHaveLength(3);
+  });
+
+  it('ethanol 2H', () => {
+    const molfile = readFileSync(
+      join(__dirname, 'data/ethanol_2H.mol'),
+      'utf8',
+    );
+    const molecule = OCL.Molecule.fromMolfile(molfile);
+    ensureHeterotopicChiralBonds(molecule);
+    const stereoBonds = getStereoBonds(molecule)
+    expect(stereoBonds).toHaveLength(1);
+    expect(stereoBonds).toStrictEqual(['  2  4  1  1  0  0  0']);
   });
 
   it('cyclosporin', () => {
