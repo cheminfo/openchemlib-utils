@@ -35,7 +35,7 @@ describe('ensureHeterotopicChiralBonds', () => {
     let molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC(C)C');
     molecule.addImplicitHydrogens();
     ensureHeterotopicChiralBonds(molecule);
-    const stereoBonds = getStereoBonds(molecule)
+    const stereoBonds = getStereoBonds(molecule);
     expect(stereoBonds).toHaveLength(3);
   });
 
@@ -46,7 +46,7 @@ describe('ensureHeterotopicChiralBonds', () => {
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);
     ensureHeterotopicChiralBonds(molecule);
-    const stereoBonds = getStereoBonds(molecule)
+    const stereoBonds = getStereoBonds(molecule);
     expect(stereoBonds).toHaveLength(1);
     expect(stereoBonds).toStrictEqual(['  2  4  1  1  0  0  0']);
   });

@@ -19,7 +19,7 @@ export function getDiastereotopicAtomIDs(molecule) {
   for (let i = 0; i < internalMolecule.getAllAtoms(); i++) {
     // hydrogens are not taken into account during canonization, we need to change them with an atom with a valence of 1
     if (internalMolecule.getAtomicNo(i) === 1) {
-      internalMolecule.setAtomicNo(i, xAtomNumber)
+      internalMolecule.setAtomicNo(i, xAtomNumber);
     }
   }
   internalMolecule.ensureHelperArrays(
@@ -28,7 +28,7 @@ export function getDiastereotopicAtomIDs(molecule) {
 
   let numberAtoms = molecule.getAllAtoms();
   let ids = [];
-  let cache = {}
+  let cache = {};
   for (let iAtom = 0; iAtom < numberAtoms; iAtom++) {
     const rank = internalMolecule.getSymmetryRank(iAtom);
     if (rank && cache[rank]) {

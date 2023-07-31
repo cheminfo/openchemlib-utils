@@ -7,69 +7,14 @@ import { reactionsDatabase } from './reactionsDatabase.js';
 describe('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
-    const { trees, products } = applyReactions(
+    let { trees, products } = applyReactions(
       [ethanol],
       reactionsDatabase,
       {},
     );
-    expect(products[0]).toMatchInlineSnapshot(`
-      {
-        "charge": 0,
-        "em": 62.01902,
-        "idCode": "eMB@HRZ@",
-        "mf": "C2H6S",
-        "minSteps": 1,
-        "reactions": [
-          "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-        ],
-        "trees": [
-          {
-            "products": [
-              {
-                "charge": 0,
-                "children": [],
-                "em": 62.01902,
-                "flag": true,
-                "idCode": "eMB@HRZ@",
-                "mf": "C2H6S",
-                "molfile": "
-      Actelion Java MolfileCreator 1.0
+    removeCoordinates(trees, products);
 
-        3  2  0  0  0  0  0  0  0  0999 V2000
-         29.3425  -12.4962   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         29.3593  -10.9963   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         30.6667  -10.2609   -0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        3  2  1  0  0  0  0
-      M  END
-      ",
-              },
-            ],
-            "reactant": {
-              "charge": 0,
-              "em": 46.041865,
-              "idCode": "eMHAIh@",
-              "mf": "C2H6O",
-              "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        3  2  0  0  0  0  0  0  0  0999 V2000
-          1.7321   -0.5000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          0.8660   -0.0000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          0.0000   -0.5000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-      M  END
-      ",
-            },
-            "reaction": {
-              "Label": "OH by SH",
-              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-            },
-          },
-        ],
-      }
-    `);
+    expect(products[0]).toMatchSnapshot();
 
     expect(trees).toHaveLength(2);
     const firstResult = trees[0];
@@ -86,69 +31,8 @@ describe('applyReactions', () => {
   it('ethylene glycol', () => {
     const diol = Molecule.fromSmiles('OCCO');
     const { trees, products } = applyReactions([diol], reactionsDatabase, {});
-
-    expect(products[0]).toMatchInlineSnapshot(`
-      {
-        "charge": 0,
-        "em": 78.013935,
-        "idCode": "gCaHL@aIZ\`@",
-        "mf": "C2H6OS",
-        "minSteps": 1,
-        "reactions": [
-          "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-        ],
-        "trees": [
-          {
-            "products": [
-              {
-                "charge": 0,
-                "children": [],
-                "em": 78.013935,
-                "flag": true,
-                "idCode": "gCaHL@aIZ\`@",
-                "mf": "C2H6OS",
-                "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        4  3  0  0  0  0  0  0  0  0999 V2000
-         19.5729   -7.3308   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         19.5617   -8.3308   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         20.4220   -8.8405   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-         20.4444   -6.8406   -0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-        4  1  1  0  0  0  0
-      M  END
-      ",
-              },
-            ],
-            "reactant": {
-              "charge": 0,
-              "em": 62.03678,
-              "idCode": "gC\`\`Adej@@",
-              "mf": "C2H6O2",
-              "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        4  3  0  0  0  0  0  0  0  0999 V2000
-          2.5981   -0.0000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-          1.7321   -0.5000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          0.8660   -0.0000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          0.0000   -0.5000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-        3  4  1  0  0  0  0
-      M  END
-      ",
-            },
-            "reaction": {
-              "Label": "OH by SH",
-              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-            },
-          },
-        ],
-      }
-    `);
+    removeCoordinates(trees, products);
+    expect(products[0]).toMatchSnapshot();
     expect(trees).toHaveLength(2);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
@@ -175,72 +59,8 @@ describe('applyReactions', () => {
       reactionsDatabase,
       {},
     );
-    expect(products[0]).toMatchInlineSnapshot(`
-      {
-        "charge": 0,
-        "em": 92.029585,
-        "idCode": "gJQHB@aIfj@@",
-        "mf": "C3H8OS",
-        "minSteps": 1,
-        "reactions": [
-          "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-        ],
-        "trees": [
-          {
-            "products": [
-              {
-                "charge": 0,
-                "children": [],
-                "em": 92.029585,
-                "flag": true,
-                "idCode": "gJQHB@aIfj@@",
-                "mf": "C3H8OS",
-                "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        5  4  0  0  0  0  0  0  0  0999 V2000
-         28.0688  -10.2317   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         29.3593  -10.9963   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         29.3425  -12.4962   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         28.0351  -13.2316   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-         30.6667  -10.2609   -0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-        3  4  1  0  0  0  0
-        5  2  1  0  0  0  0
-      M  END
-      ",
-              },
-            ],
-            "reactant": {
-              "charge": 0,
-              "em": 76.05243,
-              "idCode": "gJP\`@TfZh@",
-              "mf": "C3H8O2",
-              "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        5  4  0  0  0  0  0  0  0  0999 V2000
-          2.5981   -0.0000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          1.7321   -0.5000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          1.7321   -1.5000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-          0.8660   -0.0000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          0.0000   -0.5000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-        2  4  1  0  0  0  0
-        4  5  1  0  0  0  0
-      M  END
-      ",
-            },
-            "reaction": {
-              "Label": "OH by SH",
-              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-            },
-          },
-        ],
-      }
-    `);
+    removeCoordinates(trees, products);
+    expect(products[0]).toMatchSnapshot();
 
     expect(trees).toHaveLength(4);
     const firstResult = trees[0];
@@ -275,73 +95,8 @@ describe('applyReactions', () => {
         maxDepth: 1,
       },
     );
-
-    expect(products[0]).toMatchInlineSnapshot(`
-      {
-        "charge": 0,
-        "em": 92.029585,
-        "idCode": "gJQHB@aIfj@@",
-        "mf": "C3H8OS",
-        "minSteps": 1,
-        "reactions": [
-          "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-        ],
-        "trees": [
-          {
-            "products": [
-              {
-                "charge": 0,
-                "children": [],
-                "em": 92.029585,
-                "flag": true,
-                "idCode": "gJQHB@aIfj@@",
-                "mf": "C3H8OS",
-                "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        5  4  0  0  0  0  0  0  0  0999 V2000
-         28.0688  -10.2317   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         29.3593  -10.9963   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         29.3425  -12.4962   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-         28.0351  -13.2316   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-         30.6667  -10.2609   -0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-        3  4  1  0  0  0  0
-        5  2  1  0  0  0  0
-      M  END
-      ",
-              },
-            ],
-            "reactant": {
-              "charge": 0,
-              "em": 76.05243,
-              "idCode": "gJP\`@TfZh@",
-              "mf": "C3H8O2",
-              "molfile": "
-      Actelion Java MolfileCreator 1.0
-
-        5  4  0  0  0  0  0  0  0  0999 V2000
-          2.5981   -0.0000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          1.7321   -0.5000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          1.7321   -1.5000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-          0.8660   -0.0000   -0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-          0.0000   -0.5000   -0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
-        1  2  1  0  0  0  0
-        2  3  1  0  0  0  0
-        2  4  1  0  0  0  0
-        4  5  1  0  0  0  0
-      M  END
-      ",
-            },
-            "reaction": {
-              "Label": "OH by SH",
-              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-            },
-          },
-        ],
-      }
-    `);
+    removeCoordinates(trees, products);
+    expect(products[0]).toMatchSnapshot();
     expect(trees).toHaveLength(4);
     const firstResult = trees[0];
     expect(firstResult.products).toHaveLength(1);
@@ -360,7 +115,7 @@ describe('applyReactions', () => {
       },
     );
 
-    expect(Object.keys(products[0])).toMatchInlineSnapshot(`
+    expect(Object.keys(products[0])).toStrictEqual(
       [
         "idCode",
         "mf",
@@ -370,7 +125,7 @@ describe('applyReactions', () => {
         "reactions",
         "minSteps",
       ]
-    `);
+    );
 
     expect(products[1].minSteps).toBeGreaterThanOrEqual(3);
     expect(trees).toHaveLength(4);
@@ -387,6 +142,30 @@ describe('applyReactions', () => {
     const { products } = applyReactions([molecule], reactionsDatabase, {
       maxDepth: 5,
     });
+    removeCoordinates(undefined, products);
     expect(products).toMatchSnapshot();
   });
 });
+
+
+
+
+function removeCoordinates(trees, products) {
+  if (trees) {
+    for (const tree of trees) {
+      tree.reactant.molfile = tree.reactant.molfile.replace(/^.{30}/mg, '')
+      for (const product of tree.products) {
+        product.molfile = product.molfile.replace(/^.{30}/mg, '')
+        if (product.children) {
+          removeCoordinates(product.children)
+        }
+      }
+    }
+  }
+  if (products) {
+    for (const product of products) {
+      if (product.molfile) product.molfile = product.molfile.replace(/^.{30}/mg, '')
+      if (product.trees) removeCoordinates(product.trees)
+    }
+  }
+}

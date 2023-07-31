@@ -12,7 +12,7 @@ export function ensureHeterotopicChiralBonds(molecule, options = {}) {
   const { Molecule } = molecule.getOCL();
   const { esrType = Molecule.cESRTypeAnd, atLeastThreeAtoms = true } = options;
 
-  molecule.ensureHelperArrays(Molecule.cHelperBitNeighbours)
+  molecule.ensureHelperArrays(Molecule.cHelperBitNeighbours);
   const heterotopicCarbons = getChiralOrHeterotopicCarbons(molecule);
 
   for (let i of heterotopicCarbons) {

@@ -9,32 +9,31 @@ describe('getDiastereotopicAtomIDs', () => {
   it('CCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC');
     let ids = getDiastereotopicAtomIDs(molecule);
-    expect(ids).toStrictEqual(
-      ['eM@Df`Xb`\x7FRP\\Jh', 'eM@HzAbJC}IApj`', 'eM@Df`Xb`\x7FRP\\Jh']
-    );
+    expect(ids).toStrictEqual([
+      'eM@Df`Xb`\x7FRP\\Jh',
+      'eM@HzAbJC}IApj`',
+      'eM@Df`Xb`\x7FRP\\Jh',
+    ]);
   });
 
   it('CCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC');
-    molecule.addImplicitHydrogens()
+    molecule.addImplicitHydrogens();
     let ids = getDiastereotopicAtomIDs(molecule);
-    expect(ids).toStrictEqual(
-      [
-        'eM@Df`Xb`\x7FRP\\Jh',
-        'eM@HzAbJC}IApj`',
-        'eM@Df`Xb`\x7FRP\\Jh',
-        'gC`HALiKT@\x7FRHDRj@',
-        'gC`HALiKT@\x7FRHDRj@',
-        'gC`HALiKT@\x7FRHDRj@',
-        'gC`HALiMT@\x7FRHDRj@',
-        'gC`HALiMT@\x7FRHDRj@',
-        'gC`HALiKT@\x7FRHDRj@',
-        'gC`HALiKT@\x7FRHDRj@',
-        'gC`HALiKT@\x7FRHDRj@'
-      ]
-    );
+    expect(ids).toStrictEqual([
+      'eM@Df`Xb`\x7FRP\\Jh',
+      'eM@HzAbJC}IApj`',
+      'eM@Df`Xb`\x7FRP\\Jh',
+      'gC`HALiKT@\x7FRHDRj@',
+      'gC`HALiKT@\x7FRHDRj@',
+      'gC`HALiKT@\x7FRHDRj@',
+      'gC`HALiMT@\x7FRHDRj@',
+      'gC`HALiMT@\x7FRHDRj@',
+      'gC`HALiKT@\x7FRHDRj@',
+      'gC`HALiKT@\x7FRHDRj@',
+      'gC`HALiKT@\x7FRHDRj@',
+    ]);
   });
-
 
   it('CC(Cl)CC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
@@ -50,26 +49,24 @@ describe('getDiastereotopicAtomIDs', () => {
 
   it('CC(Cl)CC', () => {
     let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
-    molecule.addImplicitHydrogens()
+    molecule.addImplicitHydrogens();
     let ids = getDiastereotopicAtomIDs(molecule);
-    expect(ids).toStrictEqual(
-      [
-        'gJPHADIMuTe@XbhOtbIpj`',
-        'gJPHADILuTe@XdhOtbQpj`',
-        'gJPHADILuTe@X`hOtbCpfuP',
-        'gJPHADILuTe@XbhOtbIpj`',
-        'gJPHADILuTe@XahOtbEpj`',
-        'gGPDALzHRVzjbHC}H`QJh',
-        'gGPDALzHRVzjbHC}H`QJh',
-        'gGPDALzHRVzjbHC}H`QJh',
-        'gGPDALjHRZzjdhC}H`QJh',
-        'gGPDALfHRYjjThU@_iDBIU@',
-        'gGPDALfHRYjjThQ@_iDBIU@',
-        'gGPDALfHRUjjfHC}H`QJh',
-        'gGPDALfHRUjjfHC}H`QJh',
-        'gGPDALfHRUjjfHC}H`QJh'
-      ]
-    );
+    expect(ids).toStrictEqual([
+      'gJPHADIMuTe@XbhOtbIpj`',
+      'gJPHADILuTe@XdhOtbQpj`',
+      'gJPHADILuTe@X`hOtbCpfuP',
+      'gJPHADILuTe@XbhOtbIpj`',
+      'gJPHADILuTe@XahOtbEpj`',
+      'gGPDALzHRVzjbHC}H`QJh',
+      'gGPDALzHRVzjbHC}H`QJh',
+      'gGPDALzHRVzjbHC}H`QJh',
+      'gGPDALjHRZzjdhC}H`QJh',
+      'gGPDALfHRYjjThU@_iDBIU@',
+      'gGPDALfHRYjjThQ@_iDBIU@',
+      'gGPDALfHRUjjfHC}H`QJh',
+      'gGPDALfHRUjjfHC}H`QJh',
+      'gGPDALfHRUjjfHC}H`QJh',
+    ]);
   });
 
   it('cyclosporin noH', () => {
@@ -80,7 +77,7 @@ describe('getDiastereotopicAtomIDs', () => {
     const molecule = OCL.Molecule.fromMolfile(molfile);
     const diaIDs = getDiastereotopicAtomIDs(molecule);
     expect(diaIDs).toHaveLength(85);
-    expect(diaIDs).toMatchSnapshot()
+    expect(diaIDs).toMatchSnapshot();
   });
 
   it('cyclosporin noH addImplicitHydrogens', () => {
@@ -92,7 +89,7 @@ describe('getDiastereotopicAtomIDs', () => {
     molecule.addImplicitHydrogens();
     const diaIDs = getDiastereotopicAtomIDs(molecule);
     expect(diaIDs).toHaveLength(196);
-    expect(diaIDs).toMatchSnapshot()
+    expect(diaIDs).toMatchSnapshot();
   });
 
   it('cyclosporin addImplicitHydrogens', () => {
@@ -104,6 +101,6 @@ describe('getDiastereotopicAtomIDs', () => {
     molecule.addImplicitHydrogens();
     const diaIDs = getDiastereotopicAtomIDs(molecule);
     expect(diaIDs).toHaveLength(196);
-    expect(diaIDs).toMatchSnapshot()
+    expect(diaIDs).toMatchSnapshot();
   });
 });
