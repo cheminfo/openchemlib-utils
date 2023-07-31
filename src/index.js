@@ -7,6 +7,7 @@ export * from './diastereotopic/groupDiastereotopicAtomIDs';
 export * from './diastereotopic/toDiastereotopicSVG';
 
 export * from './hose/getHoseCodesAndDiastereotopicIDs';
+export * from './hose/getHoseCodes';
 export * from './hose/getHoseCodesForAtom';
 export * from './hose/getHoseCodesForAtoms';
 export * from './hose/getHoseCodesFromDiastereotopicID';
