@@ -2,7 +2,7 @@ import OCL from 'openchemlib';
 
 import { getHoseCodesFromDiastereotopicID } from '../getHoseCodesFromDiastereotopicID';
 
-describe('getHoseCodeFromDiastereotopicID', () => {
+describe('getHoseCodesFromDiastereotopicID', () => {
   it('CC(Cl)CC', () => {
     const molecule = OCL.Molecule.fromIDCode('gJPHADILuTe@X`hOtbCpfuP');
     let hoses = getHoseCodesFromDiastereotopicID(molecule);

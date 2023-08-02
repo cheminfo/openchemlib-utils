@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getHoseCodesForAtoms cyclosporin 1`] = `
+[
+  "fH@NJ\`Rapj\`",
+  "gCh@@duPGDeAzROtbQpj\`",
+  "fJ@GEP_iPnUP",
+  "gCh@AGj@x\`hOtbA\\j\`",
+  "gCi@DDfZ@xdhOtbQpj\`",
+  "gCa@@duPGDeAzROtbQpj\`",
+  "eF\`BLGETGj{}IIpj\`",
+  "eM\`BN\`xb\`}D_iHKeT",
+  "fI@GEP_iP~UP",
+  "eFHBJGDTGzRCyU@",
+  "gC\`@H}PGDEAzBOtbApj\`",
+  "eFHBLGDTGhc}IA|j\`",
+  "eM@HzCbJCtY~d\`xUP",
+  "eF@Hp\\QP^cotdGBj@",
+  "eM@HvCbJCtQ~d\`xUP",
+  "eM\`AIhNJhOUgzRSaU@",
+  "fHdrARaDj\`",
+  "eFBBYcARPQJh",
+  "eFbHfXp_tdDRj@",
+  "eFJHfXp_tdDRj@",
+]
+`;

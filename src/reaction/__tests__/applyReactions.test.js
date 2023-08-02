@@ -7,11 +7,7 @@ import { reactionsDatabase } from './reactionsDatabase.js';
 describe('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
-    let { trees, products } = applyReactions(
-      [ethanol],
-      reactionsDatabase,
-      {},
-    );
+    let { trees, products } = applyReactions([ethanol], reactionsDatabase, {});
     removeCoordinates(trees, products);
 
     expect(products[0]).toMatchSnapshot();
@@ -115,17 +111,15 @@ describe('applyReactions', () => {
       },
     );
 
-    expect(Object.keys(products[0])).toStrictEqual(
-      [
-        "idCode",
-        "mf",
-        "em",
-        "charge",
-        "trees",
-        "reactions",
-        "minSteps",
-      ]
-    );
+    expect(Object.keys(products[0])).toStrictEqual([
+      'idCode',
+      'mf',
+      'em',
+      'charge',
+      'trees',
+      'reactions',
+      'minSteps',
+    ]);
 
     expect(products[1].minSteps).toBeGreaterThanOrEqual(3);
     expect(trees).toHaveLength(4);
@@ -147,25 +141,24 @@ describe('applyReactions', () => {
   });
 });
 
-
-
-
 function removeCoordinates(trees, products) {
   if (trees) {
     for (const tree of trees) {
-      tree.reactant.molfile = tree.reactant.molfile.replace(/^.{30}/mg, '')
+      tree.reactant.molfile = tree.reactant.molfile.replace(/^.{30}/gm, '');
       for (const product of tree.products) {
-        product.molfile = product.molfile.replace(/^.{30}/mg, '')
+        product.molfile = product.molfile.replace(/^.{30}/gm, '');
         if (product.children) {
-          removeCoordinates(product.children)
+          removeCoordinates(product.children);
         }
       }
     }
   }
   if (products) {
     for (const product of products) {
-      if (product.molfile) product.molfile = product.molfile.replace(/^.{30}/mg, '')
-      if (product.trees) removeCoordinates(product.trees)
+      if (product.molfile) {
+        product.molfile = product.molfile.replace(/^.{30}/gm, '');
+      }
+      if (product.trees) removeCoordinates(product.trees);
     }
   }
 }

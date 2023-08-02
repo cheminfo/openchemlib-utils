@@ -18,7 +18,16 @@ describe('getHoseCodes', () => {
     ]);
   });
 
-  it('ethanol', () => {
+  it('Hc1ccccc1', () => {
+    const molecule = Molecule.fromSmiles('Cc1ccccc1');
+    molecule.setAtomicNo(0, 1);
+    const hoses = getHoseCodes(molecule, { maxSphereSize: 2 });
+    const distincts = getDistinctHoses(hoses);
+    expect(distincts.length).toBe(6);
+    expect(distincts).toMatchSnapshot();
+  });
+
+  it('ethanol only C and O', () => {
     const molecule = Molecule.fromSmiles('CCO');
     const hoseCodes = getHoseCodes(molecule, {
       atomLabels: ['C', 'O'],

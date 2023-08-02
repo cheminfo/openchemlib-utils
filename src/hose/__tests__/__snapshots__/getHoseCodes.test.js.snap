@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`getHoseCodes Hc1ccccc1 1`] = `
+[
+  "fH@NJ\`Rapj\`",
+  "eM@HpCbJCtQ~d\`xUP",
+  "gJP@DiP@CbB\`}aDaQ~dPNET",
+  "fHdrARaDj\`",
+  "eFBBYcARPQJh",
+  "gC\`HALiM@ARHDRj@",
+]
+`;
+
 exports[`getHoseCodes cyclosporin 1`] = `
 [
   "fH@NJ\`Rapj\`",

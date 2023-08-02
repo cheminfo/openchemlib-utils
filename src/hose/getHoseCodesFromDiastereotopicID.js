@@ -1,29 +1,14 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
 
-import { getHoseCodesForAtom } from './getHoseCodesForAtom';
+import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js';
 /**
  * Returns the hose code for a specific marked atom
- * @param {import('openchemlib').Molecule} diastereotopicID
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} options
  */
 
 export function getHoseCodesFromDiastereotopicID(molecule, options = {}) {
   molecule.addImplicitHydrogens();
   ensureHeterotopicChiralBonds(molecule);
-
-  // One of the atom has to be marked !
-  let atomID = -1;
-  for (let i = 0; i < molecule.getAllAtoms(); i++) {
-    // we need to find the marked atom
-    const atomCustomLabel = molecule.getAtomCustomLabel(i);
-    if (atomCustomLabel != null && atomCustomLabel.endsWith('*')) {
-      atomID = i;
-      break;
-    }
-  }
-  if (atomID >= 0) {
-    options.isTagged = true;
-    return getHoseCodesForAtom(molecule, atomID, options);
-  }
-  return undefined;
+  return getHoseCodesForAtomsInternal(molecule, options);
 }
