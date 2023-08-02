@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v3.0.0...v3.1.0) (2023-08-02)
+
+
+### Features
+
+* add method getHosesAndInfoFromMolfile ([3d5a25a](https://github.com/cheminfo/openchemlib-utils/commit/3d5a25acf319f00d8d77b85246ee838336f17d24))
+
+
+### Bug Fixes
+
+* getHoseCodes shares code with getHoseCodesForAtoms ([e037133](https://github.com/cheminfo/openchemlib-utils/commit/e037133c9c83ef929f3c5422d5bf8ba4c411b9d1))
+* nodejs workflow ([18532b0](https://github.com/cheminfo/openchemlib-utils/commit/18532b0a2b6fe794c97b434783c8b738bb1637f8))
+* recalculate helper after makeRacemic ([3cf35a8](https://github.com/cheminfo/openchemlib-utils/commit/3cf35a8f2335ff9c55a678139103113a5969d310))
+
 ## [3.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v2.9.0...v3.0.0) (2023-07-31)
 
 
