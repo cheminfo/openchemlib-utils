@@ -16,4 +16,7 @@ export function makeRacemic(molecule) {
       molecule.setAtomESR(i, Molecule.cESRTypeAnd, 0); // changed to group 0; TLS 9.Nov.2015
     }
   }
+
+  // after the change we need to recalculate the CIP
+  molecule.ensureHelperArrays(Molecule.cHelperCIP);
 }
