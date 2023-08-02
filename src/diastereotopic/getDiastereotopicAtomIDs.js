@@ -1,4 +1,4 @@
-import { getXAtomicNumber } from '../util/getXAtomicNumber.js';
+import { getSymmetryRanks } from '../util/getSymmetryRanks';
 import { makeRacemic } from '../util/makeRacemic';
 import { tagAtom } from '../util/tagAtom';
 
@@ -12,25 +12,13 @@ export function getDiastereotopicAtomIDs(molecule) {
   const { Molecule } = molecule.getOCL();
   ensureHeterotopicChiralBonds(molecule);
 
-  const xAtomNumber = getXAtomicNumber(molecule);
-
-  // most of the molecules have some symetry
-  const internalMolecule = molecule.getCompactCopy();
-  for (let i = 0; i < internalMolecule.getAllAtoms(); i++) {
-    // hydrogens are not taken into account during canonization, we need to change them with an atom with a valence of 1
-    if (internalMolecule.getAtomicNo(i) === 1) {
-      internalMolecule.setAtomicNo(i, xAtomNumber);
-    }
-  }
-  internalMolecule.ensureHelperArrays(
-    Molecule.cHelperSymmetryStereoHeterotopicity,
-  );
+  const symmetryRanks = getSymmetryRanks(molecule);
 
   let numberAtoms = molecule.getAllAtoms();
   let ids = [];
   let cache = {};
   for (let iAtom = 0; iAtom < numberAtoms; iAtom++) {
-    const rank = internalMolecule.getSymmetryRank(iAtom);
+    const rank = symmetryRanks[iAtom];
     if (rank && cache[rank]) {
       ids[iAtom] = cache[rank];
       continue;

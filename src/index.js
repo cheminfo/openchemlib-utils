@@ -12,6 +12,7 @@ export * from './hose/getHoseCodesForAtom';
 export * from './hose/getHoseCodesForAtoms';
 export * from './hose/getHoseCodesFromDiastereotopicID';
 export * from './hose/getHoseCodesForPath';
+export * from './hose/getHosesAndInfoFromMolfile';
 
 export * from './util/combineSmiles';
 export * from './util/getAtomsInfo';
