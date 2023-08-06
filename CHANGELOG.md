@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.0.0...v4.1.0) (2023-08-06)
+
+
+### Features
+
+* getHoseCodesAndInfo returns moleculeWithHydrogens ([f9ff5bd](https://github.com/cheminfo/openchemlib-utils/commit/f9ff5bd424b7ffc006a9657b1db676f2e2f76fe9))
+
 ## [4.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v3.1.0...v4.0.0) (2023-08-06)
 
 
