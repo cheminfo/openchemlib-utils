@@ -21,9 +21,9 @@ import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js'
 export function getHoseCodesAndInfo(molecule, options = {}) {
   const { minSphereSize, maxSphereSize, calculateDiastereotopicIDs } = options;
   const { Molecule } = molecule.getOCL();
+  molecule = molecule.getCompactCopy();
   // this will force reordering of the hydrogens to the end, just to have the same order as in the molfile
   molecule.ensureHelperArrays(Molecule.cHelperNeighbours);
-  molecule = molecule.getCompactCopy();
   const newMolfile = molecule.toMolfile();
   molecule.addImplicitHydrogens();
   ensureHeterotopicChiralBonds(molecule);
@@ -69,5 +69,6 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
     molfileWithH: newMolfileWithH,
     hoses,
     diaIDs,
+    moleculeWithHydrogens: molecule,
   };
 }
