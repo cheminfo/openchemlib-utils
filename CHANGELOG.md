@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v3.1.0...v4.0.0) (2023-08-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace getHosesAndInfoFromMolfile and getHoseCodesAndDiastereotopicIDs by  getHoseCodesAndInfo
+
+### Features
+
+* replace getHosesAndInfoFromMolfile and getHoseCodesAndDiastereotopicIDs by  getHoseCodesAndInfo ([a3bc686](https://github.com/cheminfo/openchemlib-utils/commit/a3bc686dd2d7f121f1e7537012be702b49818ba3))
+
 ## [3.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v3.0.0...v3.1.0) (2023-08-02)
 
 
