@@ -2,37 +2,38 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import OCL from 'openchemlib';
+import { describe, expect, it } from 'vitest';
 
 import { ensureHeterotopicChiralBonds } from '../ensureHeterotopicChiralBonds';
 
 describe('ensureHeterotopicChiralBonds', () => {
   it('CCO', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCO');
+    const molecule = OCL.Molecule.fromSmiles('CCO');
     ensureHeterotopicChiralBonds(molecule);
     expect(getStereoBonds(molecule)).toStrictEqual([]);
   });
 
   it('CCO addImplicitHydrogens', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCO');
+    const molecule = OCL.Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
     ensureHeterotopicChiralBonds(molecule);
     expect(getStereoBonds(molecule)).toStrictEqual(['  2  7  1  1  0  0  0']);
   });
 
   it('CC(Cl)CC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
+    const molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
     ensureHeterotopicChiralBonds(molecule);
     expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
   });
 
   it('CCC(C)C', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC(C)C');
+    const molecule = OCL.Molecule.fromSmiles('CCC(C)C');
     ensureHeterotopicChiralBonds(molecule);
     expect(molecule.toMolfile()).toContain('3  4  1  1');
   });
 
   it('C[C@H](Cl)CC(C)C', () => {
-    let molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC(C)C');
+    const molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC(C)C');
     molecule.addImplicitHydrogens();
     ensureHeterotopicChiralBonds(molecule);
     const stereoBonds = getStereoBonds(molecule);

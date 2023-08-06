@@ -42,7 +42,7 @@ export function nbOH(molecule) {
           carbonOrHydrogen = false;
         }
       }
-      if (carbonyl === false && hydroxyl && carbonOrHydrogen) counter++;
+      if (!carbonyl && hydroxyl && carbonOrHydrogen) counter++;
     }
   }
 

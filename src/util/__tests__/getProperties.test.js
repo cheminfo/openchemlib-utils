@@ -1,10 +1,11 @@
 import { Molecule } from 'openchemlib';
+import { expect, it } from 'vitest';
 
 import { getProperties } from '../getProperties';
 
-test('getProperties, default options', () => {
-  let molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
-  let properties = getProperties(molecule);
+it('getProperties, default options', () => {
+  const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
+  const properties = getProperties(molecule);
   expect(properties).toStrictEqual({
     acceptorCount: 3,
     donorCount: 1,
@@ -18,9 +19,9 @@ test('getProperties, default options', () => {
   });
 });
 
-test('getProperties, includeToxicities', () => {
-  let molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
-  let properties = getProperties(molecule, { includeToxicities: true });
+it('getProperties, includeToxicities', () => {
+  const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
+  const properties = getProperties(molecule, { includeToxicities: true });
   expect(properties).toStrictEqual({
     acceptorCount: 3,
     donorCount: 1,
@@ -38,9 +39,9 @@ test('getProperties, includeToxicities', () => {
   });
 });
 
-test('getProperties, include all', () => {
-  let molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
-  let properties = getProperties(molecule, {
+it('getProperties, include all', () => {
+  const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
+  const properties = getProperties(molecule, {
     includeToxicities: true,
     includeDruglikeness: true,
   });

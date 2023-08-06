@@ -1,4 +1,5 @@
 import { Molecule } from 'openchemlib/full.js';
+import { expect, it, describe } from 'vitest';
 
 import { applyReactions } from '../applyReactions.js';
 
@@ -7,7 +8,11 @@ import { reactionsDatabase } from './reactionsDatabase.js';
 describe('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
-    let { trees, products } = applyReactions([ethanol], reactionsDatabase, {});
+    const { trees, products } = applyReactions(
+      [ethanol],
+      reactionsDatabase,
+      {},
+    );
     removeCoordinates(trees, products);
 
     expect(products[0]).toMatchSnapshot();

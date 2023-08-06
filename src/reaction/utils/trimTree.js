@@ -59,7 +59,7 @@ function cutBranches(tree, reactions) {
       product.children = [];
     }
     if (product.children.length > 0) {
-      for (let child of product.children) {
+      for (const child of product.children) {
         const hasFlag = childHasFlag(child);
         if (!hasFlag) {
           child.products = [];

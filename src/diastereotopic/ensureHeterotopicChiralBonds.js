@@ -15,14 +15,14 @@ export function ensureHeterotopicChiralBonds(molecule, options = {}) {
   molecule.ensureHelperArrays(Molecule.cHelperBitNeighbours);
   const heterotopicCarbons = getChiralOrHeterotopicCarbons(molecule);
 
-  for (let i of heterotopicCarbons) {
+  for (const i of heterotopicCarbons) {
     if (atLeastThreeAtoms && molecule.getAllConnAtoms(i) < 3) continue;
     if (molecule.getStereoBond(i) === -1) {
-      let stereoBond = molecule.getAtomPreferredStereoBond(i);
+      const stereoBond = molecule.getAtomPreferredStereoBond(i);
       if (stereoBond !== -1) {
         molecule.setBondType(stereoBond, Molecule.cBondTypeUp);
         if (molecule.getBondAtom(1, stereoBond) === i) {
-          let connAtom = molecule.getBondAtom(0, stereoBond);
+          const connAtom = molecule.getBondAtom(0, stereoBond);
           molecule.setBondAtom(0, stereoBond, i);
           molecule.setBondAtom(1, stereoBond, connAtom);
         }

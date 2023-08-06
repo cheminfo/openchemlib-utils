@@ -7,13 +7,13 @@ export function toVisualizerMolfile(molecule, options = {}) {
   let highlight = [];
   let atoms = {};
   if (diastereotopic) {
-    let hydrogenInfo = {};
-    let extendedIDs = getDiastereotopicAtomIDsAndH(molecule);
-    for (let line of extendedIDs) {
+    const hydrogenInfo = {};
+    const extendedIDs = getDiastereotopicAtomIDsAndH(molecule);
+    for (const line of extendedIDs) {
       hydrogenInfo[line.oclID] = line;
     }
 
-    let diaIDs = getGroupedDiastereotopicAtomIDs(molecule);
+    const diaIDs = getGroupedDiastereotopicAtomIDs(molecule);
     for (const diaID of diaIDs) {
       atoms[diaID.oclID] = diaID.atoms;
       highlight.push(diaID.oclID);
@@ -22,7 +22,7 @@ export function toVisualizerMolfile(molecule, options = {}) {
           hydrogenInfo[diaID.oclID] &&
           hydrogenInfo[diaID.oclID].nbHydrogens > 0
         ) {
-          for (let id of hydrogenInfo[diaID.oclID].hydrogenOCLIDs) {
+          for (const id of hydrogenInfo[diaID.oclID].hydrogenOCLIDs) {
             highlight.push(id);
             atoms[id] = diaID.atoms;
           }
@@ -30,12 +30,12 @@ export function toVisualizerMolfile(molecule, options = {}) {
       }
     }
   } else {
-    let size = molecule.getAllAtoms();
+    const size = molecule.getAllAtoms();
     highlight = new Array(size).fill(0).map((a, index) => index);
     atoms = highlight.map((a) => [a]);
   }
 
-  let molfile = {
+  const molfile = {
     type: 'mol2d',
     value: molecule.toMolfile(),
     _highlight: highlight,

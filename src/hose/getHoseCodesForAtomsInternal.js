@@ -28,24 +28,23 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
   const rootAtoms = [];
   for (let j = 0; j < molecule.getAllAtoms(); j++) {
     if (
-      (allowedCustomLabels &&
-        allowedCustomLabels.includes(molecule.getAtomCustomLabel(j))) ||
+      allowedCustomLabels?.includes(molecule.getAtomCustomLabel(j)) ||
       molecule.getAtomCustomLabel(j)
     ) {
       rootAtoms.push(j);
     }
   }
 
-  let fragment = new OCL.Molecule(0, 0);
-  let results = [];
+  const fragment = new OCL.Molecule(0, 0);
+  const results = [];
   let min = 0;
   let max = 0;
-  let atomMask = new Array(molecule.getAllAtoms());
-  let atomList = new Array(molecule.getAllAtoms());
+  const atomMask = new Array(molecule.getAllAtoms());
+  const atomList = new Array(molecule.getAllAtoms());
 
   for (let sphere = 0; sphere <= maxSphereSize; sphere++) {
     if (max === 0) {
-      for (let rootAtom of rootAtoms) {
+      for (const rootAtom of rootAtoms) {
         atomList[max] = rootAtom;
         atomMask[rootAtom] = true;
         max++;
@@ -53,9 +52,9 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
     } else {
       let newMax = max;
       for (let i = min; i < max; i++) {
-        let atom = atomList[i];
+        const atom = atomList[i];
         for (let j = 0; j < molecule.getAllConnAtoms(atom); j++) {
-          let connAtom = molecule.getConnAtom(atom, j);
+          const connAtom = molecule.getConnAtom(atom, j);
           if (!atomMask[connAtom]) {
             switch (kind) {
               case FULL_HOSE_CODE:

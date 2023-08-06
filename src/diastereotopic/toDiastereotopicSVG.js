@@ -6,7 +6,7 @@ import { getDiastereotopicAtomIDsAndH } from './getDiastereotopicAtomIDsAndH';
  * @param {*} [options={}]
  */
 export function toDiastereotopicSVG(molecule, options = {}) {
-  let {
+  const {
     width = 300,
     height = 200,
     prefix = 'ocl',
@@ -15,7 +15,7 @@ export function toDiastereotopicSVG(molecule, options = {}) {
   let svg = options.svg;
   let diaIDs = [];
 
-  let hydrogenInfo = {};
+  const hydrogenInfo = {};
   getDiastereotopicAtomIDsAndH(molecule).forEach((line) => {
     hydrogenInfo[line.oclID] = line;
   });
@@ -24,7 +24,7 @@ export function toDiastereotopicSVG(molecule, options = {}) {
     for (let i = 0; i < molecule.getAtoms(); i++) {
       diaIDs.push([]);
     }
-    let groupedDiaIDs = molecule.getGroupedDiastereotopicAtomIDs();
+    const groupedDiaIDs = molecule.getGroupedDiastereotopicAtomIDs();
     groupedDiaIDs.forEach((diaID) => {
       if (
         hydrogenInfo[diaID.oclID] &&
@@ -44,7 +44,7 @@ export function toDiastereotopicSVG(molecule, options = {}) {
   if (!svg) svg = molecule.toSVG(width, height, prefix);
 
   svg = svg.replace(/Atom:[0-9]+"/g, (value) => {
-    let atom = value.replace(/[^0-9]/g, '');
+    const atom = value.replace(/[^0-9]/g, '');
     return `${value} data-diaid="${diaIDs[atom].join(',')}"`;
   });
 

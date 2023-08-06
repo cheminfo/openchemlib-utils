@@ -17,7 +17,7 @@ export default function pushEntry(
   // the following line could be the source of problems if the idCode version
   // changes
 
-  let moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo);
+  const moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo);
   let entry = moleculesDB.db[moleculeIDCode];
   if (!entry) {
     // a new molecule

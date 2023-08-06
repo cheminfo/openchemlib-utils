@@ -1,12 +1,13 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getShortestPaths } from '../getShortestPaths';
 
 describe('getShortestPaths', () => {
   it('CC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC');
+    const molecule = OCL.Molecule.fromSmiles('CC');
     molecule.addImplicitHydrogens();
-    let paths = getShortestPaths(molecule);
+    const paths = getShortestPaths(molecule);
     //Atoms 0 and 1 are Carbons. So we must get path[0][1] = [0, 1]
     expect(paths[0][1]).toStrictEqual([0, 1]);
     //hydrogens 2, 3, and 4 must be attached to atom 0 and hydrogens 5, 6, and 7 must be attached to atom 1
@@ -28,10 +29,10 @@ describe('getShortestPaths', () => {
   });
 
   it('C.C', () => {
-    let molecule = OCL.Molecule.fromSmiles('C.C');
+    const molecule = OCL.Molecule.fromSmiles('C.C');
 
     molecule.addImplicitHydrogens();
-    let paths = getShortestPaths(molecule);
+    const paths = getShortestPaths(molecule);
     expect(paths[0]).toStrictEqual([
       [0],
       null,

@@ -7,23 +7,23 @@ import { atomSorter } from 'atom-sorter';
  */
 
 export function getMF(molecule) {
-  let entries = molecule.getFragments();
-  let result = {};
+  const entries = molecule.getFragments();
+  const result = {};
   let parts = [];
-  let allAtoms = [];
+  const allAtoms = [];
 
   entries.forEach((entry) => {
-    let mf = getFragmentMF(entry, allAtoms);
+    const mf = getFragmentMF(entry, allAtoms);
     parts.push(mf);
   });
 
-  let counts = {};
-  for (let part of parts) {
+  const counts = {};
+  for (const part of parts) {
     if (!counts[part]) counts[part] = 0;
     counts[part]++;
   }
   parts = [];
-  for (let key of Object.keys(counts).sort()) {
+  for (const key of Object.keys(counts).sort()) {
     if (counts[key] > 1) {
       parts.push(counts[key] + key);
     } else {
@@ -37,9 +37,9 @@ export function getMF(molecule) {
 }
 
 function getFragmentMF(molecule, allAtoms) {
-  let atoms = [];
+  const atoms = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
-    let atom = {};
+    const atom = {};
     atom.charge = molecule.getAtomCharge(i);
     atom.label = molecule.getAtomLabel(i);
     atom.mass = molecule.getAtomMass(i);
@@ -52,14 +52,14 @@ function getFragmentMF(molecule, allAtoms) {
 
 function toMFString(atoms) {
   let charge = 0;
-  let mfs = {};
-  for (let atom of atoms) {
+  const mfs = {};
+  for (const atom of atoms) {
     let label = atom.label;
     charge += atom.charge;
     if (atom.mass) {
       label = `[${atom.mass}${label}]`;
     }
-    let mfAtom = mfs[label];
+    const mfAtom = mfs[label];
     if (!mfAtom) {
       mfs[label] = 0;
     }
@@ -71,8 +71,8 @@ function toMFString(atoms) {
   }
 
   let mf = '';
-  let keys = Object.keys(mfs).sort(atomSorter);
-  for (let key of keys) {
+  const keys = Object.keys(mfs).sort(atomSorter);
+  for (const key of keys) {
     mf += key;
     if (mfs[key] > 1) mf += mfs[key];
   }

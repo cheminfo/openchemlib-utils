@@ -28,7 +28,7 @@ export function getDiastereotopicAtomIDsAndH(molecule) {
       const atom = molecule.getConnAtom(i, j);
       if (molecule.getAtomicNo(atom) === 1) {
         newDiaID.nbHydrogens++;
-        if (newDiaID.hydrogenOCLIDs.indexOf(diaIDs[atom]) === -1) {
+        if (!newDiaID.hydrogenOCLIDs.includes(diaIDs[atom])) {
           newDiaID.hydrogenOCLIDs.push(diaIDs[atom]);
         }
       }

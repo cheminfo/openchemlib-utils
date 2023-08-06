@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import { Molecule } from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getChiralOrHeterotopicCarbons } from '../getChiralOrHeterotopicCarbons';
 

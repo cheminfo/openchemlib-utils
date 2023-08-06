@@ -1,10 +1,11 @@
 import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
 import { Molecule } from 'openchemlib';
+import { expect, it } from 'vitest';
 
 import { getPathAndTorsion } from '../getPathAndTorsion.js';
 
 expect.extend({ toBeDeepCloseTo, toMatchCloseTo });
-test('getPathAndTorsion', () => {
+it('getPathAndTorsion', () => {
   const molecule = Molecule.fromSmiles('CCOC');
   expect(getPathAndTorsion(molecule, 0, 3)).toStrictEqual({
     atoms: [],

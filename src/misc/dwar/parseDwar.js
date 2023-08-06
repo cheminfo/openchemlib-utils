@@ -21,7 +21,7 @@ export function getCamelCase(name) {
 }
 
 function improveParts(parts) {
-  for (let key in parts) {
+  for (const key in parts) {
     switch (key) {
       case 'columnProperties':
         parts[key] = parseColumnbProperties(parts[key]);
@@ -41,7 +41,7 @@ function improveParts(parts) {
 
 function parseDefault(lines) {
   const result = {};
-  for (let line of lines) {
+  for (const line of lines) {
     const [key, value] = line.slice(1, -1).split('=');
     result[key] = value.slice(1, -1);
   }

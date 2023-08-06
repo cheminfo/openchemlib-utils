@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 

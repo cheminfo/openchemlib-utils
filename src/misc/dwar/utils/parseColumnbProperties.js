@@ -5,7 +5,7 @@ export function parseColumnbProperties(lines) {
   });
   const columnProperties = {};
   let currentColumnName = '';
-  for (let line of lines) {
+  for (const line of lines) {
     switch (line.key) {
       case 'columnName':
         currentColumnName = line.value;
@@ -24,7 +24,7 @@ export function parseColumnbProperties(lines) {
         throw new Error('This should not happen');
     }
   }
-  for (let key in columnProperties) {
+  for (const key in columnProperties) {
     const columnPropery = columnProperties[key];
     if (columnProperties[key].parent) {
       const target = columnProperties[columnPropery.parent];

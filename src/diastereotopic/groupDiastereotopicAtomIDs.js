@@ -3,7 +3,7 @@ export function groupDiastereotopicAtomIDs(diaIDs, molecule, options = {}) {
   const diaIDsObject = {};
   for (let i = 0; i < diaIDs.length; i++) {
     if (!atomLabel || molecule.getAtomLabel(i) === atomLabel) {
-      let diaID = diaIDs[i];
+      const diaID = diaIDs[i];
       if (!diaIDsObject[diaID]) {
         diaIDsObject[diaID] = {
           counter: 0,

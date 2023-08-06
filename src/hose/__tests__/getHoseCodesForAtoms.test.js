@@ -1,4 +1,5 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getHoseCodesForAtoms } from '../getHoseCodesForAtoms';
 
@@ -6,7 +7,7 @@ const { Molecule } = OCL;
 
 describe('getHoseCodesForAtoms', () => {
   it('C*C(Cl)CC single marked atom', () => {
-    let molecule = Molecule.fromSmiles('CC(Cl)CC');
+    const molecule = Molecule.fromSmiles('CC(Cl)CC');
     let hoses = getHoseCodesForAtoms(molecule, [0]);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
@@ -18,7 +19,7 @@ describe('getHoseCodesForAtoms', () => {
     ]);
   });
   it('C*C*(Cl)CC double marked atoms', () => {
-    let molecule = Molecule.fromSmiles('CC(Cl)CC');
+    const molecule = Molecule.fromSmiles('CC(Cl)CC');
     let hoses = getHoseCodesForAtoms(molecule, [0, 1]);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
@@ -30,7 +31,7 @@ describe('getHoseCodesForAtoms', () => {
     ]);
   });
   it('Hc1ccccc1 double marked atoms in aromatic', () => {
-    let molecule = Molecule.fromSmiles('Cc1ccccc1');
+    const molecule = Molecule.fromSmiles('Cc1ccccc1');
     molecule.setAtomicNo(0, 1);
     molecule.addImplicitHydrogens();
     const results = [];

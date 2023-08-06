@@ -5,7 +5,7 @@
  */
 
 export function getAtoms(molecule) {
-  let entries = molecule.getFragments();
+  const entries = molecule.getFragments();
   const atoms = {};
   const result = { atoms, parts: [] };
 
@@ -19,7 +19,7 @@ export function getAtoms(molecule) {
 
 function appendAtomPart(molecule, atoms, part) {
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
-    let label = molecule.getAtomLabel(i);
+    const label = molecule.getAtomLabel(i);
     if (!atoms[label]) {
       atoms[label] = 0;
     }
@@ -28,7 +28,7 @@ function appendAtomPart(molecule, atoms, part) {
       part[label] = 0;
     }
     part[label] += 1;
-    let implicitHydrogens = molecule.getImplicitHydrogens(i);
+    const implicitHydrogens = molecule.getImplicitHydrogens(i);
     if (implicitHydrogens) {
       if (!atoms.H) {
         atoms.H = 0;

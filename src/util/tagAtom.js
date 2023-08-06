@@ -6,7 +6,7 @@ import { getXAtomicNumber } from './getXAtomicNumber';
  * @param {number} iAtom
  */
 export function tagAtom(molecule, iAtom) {
-  let customLabel = `${molecule.getAtomLabel(iAtom)}*`;
+  const customLabel = `${molecule.getAtomLabel(iAtom)}*`;
   molecule.setAtomCustomLabel(iAtom, customLabel);
   if (molecule.getAtomicNo(iAtom) === 1) {
     molecule.setAtomicNo(iAtom, getXAtomicNumber(molecule));

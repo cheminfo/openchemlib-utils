@@ -15,7 +15,7 @@ import { Matrix } from 'ml-matrix';
 export function getConnectivityMatrix(molecule, options = {}) {
   const OCL = molecule.getOCL();
   molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
-  let nbAtoms = molecule.getAllAtoms();
+  const nbAtoms = molecule.getAllAtoms();
 
   let result = new Array(nbAtoms).fill();
   result = result.map(() => new Array(nbAtoms).fill(0));
@@ -42,16 +42,16 @@ export function getConnectivityMatrix(molecule, options = {}) {
 
   if (options.sdt) {
     for (let i = 0; i < nbAtoms; i++) {
-      let l = molecule.getAllConnAtoms(i);
+      const l = molecule.getAllConnAtoms(i);
       for (let j = 0; j < l; j++) {
         result[i][molecule.getConnAtom(i, j)] = molecule.getConnBondOrder(i, j);
       }
     }
   } else if (options.sdta) {
     for (let i = 0; i < nbAtoms; i++) {
-      let l = molecule.getAllConnAtoms(i);
+      const l = molecule.getAllConnAtoms(i);
       for (let j = 0; j < l; j++) {
-        let bondNumber = molecule.getConnBond(i, j);
+        const bondNumber = molecule.getConnBond(i, j);
         if (molecule.isAromaticBond(bondNumber)) {
           result[i][molecule.getConnAtom(i, j)] = 4;
         } else {
@@ -64,7 +64,7 @@ export function getConnectivityMatrix(molecule, options = {}) {
     }
   } else {
     for (let i = 0; i < nbAtoms; i++) {
-      let l = molecule.getAllConnAtoms(i);
+      const l = molecule.getAllConnAtoms(i);
       for (let j = 0; j < l; j++) {
         result[i][molecule.getConnAtom(i, j)] = 1;
       }

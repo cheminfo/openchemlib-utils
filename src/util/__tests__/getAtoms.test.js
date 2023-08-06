@@ -1,11 +1,12 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getAtoms } from '../getAtoms';
 
 describe('getAtoms', () => {
   it('CC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC');
-    let result = getAtoms(molecule);
+    const molecule = OCL.Molecule.fromSmiles('CC');
+    const result = getAtoms(molecule);
     expect(result).toStrictEqual({
       atoms: { C: 2, H: 6 },
       parts: [{ C: 2, H: 6 }],
@@ -13,9 +14,9 @@ describe('getAtoms', () => {
   });
 
   it('CC with implicit hydrogens', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC');
+    const molecule = OCL.Molecule.fromSmiles('CC');
     molecule.addImplicitHydrogens();
-    let result = getAtoms(molecule);
+    const result = getAtoms(molecule);
     expect(result).toStrictEqual({
       atoms: { C: 2, H: 6 },
       parts: [{ C: 2, H: 6 }],
@@ -23,8 +24,8 @@ describe('getAtoms', () => {
   });
 
   it('parts', () => {
-    let molecule = OCL.Molecule.fromSmiles('OCC(N)CCl.[CH2+][2H]');
-    let result = getAtoms(molecule);
+    const molecule = OCL.Molecule.fromSmiles('OCC(N)CCl.[CH2+][2H]');
+    const result = getAtoms(molecule);
     expect(result).toStrictEqual({
       atoms: {
         O: 1,

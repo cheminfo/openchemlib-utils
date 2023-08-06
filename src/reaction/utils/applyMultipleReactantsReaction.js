@@ -10,11 +10,11 @@ export function applyMultipleReactantsReaction(reactants, reactions, options) {
     }
     if (isMatching) {
       const oneReactionProducts = reactor.getProducts();
-      for (let i = 0; i < oneReactionProducts.length; i++) {
+      for (const oneReactionProduct of oneReactionProducts) {
         const products = [];
-        for (let j = 0; j < oneReactionProducts[i].length; j++) {
-          const mf = getMF(oneReactionProducts[i][j]).mf;
-          const molfile = oneReactionProducts[i][j].toMolfile();
+        for (const oneProduct of oneReactionProduct) {
+          const mf = getMF(oneProduct).mf;
+          const molfile = oneProduct.toMolfile();
           products.push({ molfile, mf });
         }
         const oneReaction = {

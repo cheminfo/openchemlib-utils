@@ -2,10 +2,10 @@ import { getCamelCase } from '../parseDwar';
 
 export function getParts(text) {
   const lines = text.split(/\r?\n/);
-  let parts = { data: [] };
+  const parts = { data: [] };
   let currentPart = parts.data;
   let currentLabel = '';
-  for (let line of lines) {
+  for (const line of lines) {
     if (line.startsWith('</')) {
       // close existing part
       if (!currentLabel === line.slice(2, -1)) {

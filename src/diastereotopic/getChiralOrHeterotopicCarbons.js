@@ -63,11 +63,11 @@ function addPossibleChiralBonds(molecule) {
     const neighbourSymmetries = getNeighbourSymmetries(molecule, i);
     if (neighbourSymmetries.length <= 2) continue;
 
-    let stereoBond = molecule.getAtomPreferredStereoBond(i);
+    const stereoBond = molecule.getAtomPreferredStereoBond(i);
     if (stereoBond !== -1) {
       molecule.setBondType(stereoBond, Molecule.cBondTypeUp);
       if (molecule.getBondAtom(1, stereoBond) === i) {
-        let connAtom = molecule.getBondAtom(0, stereoBond);
+        const connAtom = molecule.getBondAtom(0, stereoBond);
         molecule.setBondAtom(0, stereoBond, i);
         molecule.setBondAtom(1, stereoBond, connAtom);
       }
