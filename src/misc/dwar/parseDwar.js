@@ -16,9 +16,6 @@ export function parseDwar(text) {
   return parts;
 }
 
-export function getCamelCase(name) {
-  return name.replace(/[ -][a-z]/g, (string) => string[1].toUpperCase());
-}
 
 function improveParts(parts) {
   for (const key in parts) {

@@ -1,4 +1,4 @@
-import { getCamelCase } from '../parseDwar';
+import { getCamelCase } from './getCamelCase';
 
 export function getParts(text) {
   const lines = text.split(/\r?\n/);

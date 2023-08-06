@@ -63,8 +63,9 @@ export function applyOneReactantReaction(reactants, reactions, options) {
           }
           // if there is at least one product, we add the reaction to the results
           if (products.length > 0) {
+            const { ...reactionWithoutOCL } = reaction;
             const oneReaction = {
-              reaction,
+              reaction: reactionWithoutOCL,
               reactant: getInfo(reactant, moleculesInfo),
               products,
             };
