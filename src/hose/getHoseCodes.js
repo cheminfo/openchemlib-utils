@@ -24,18 +24,18 @@ export function getHoseCodes(molecule, options = {}) {
   internalMolecule.addImplicitHydrogens();
   ensureHeterotopicChiralBonds(internalMolecule);
 
-  const results = [];
+  const hoses = [];
 
   for (let i = 0; i < internalMolecule.getAllAtoms(); i++) {
     if (
       atomicNumbers &&
       !atomicNumbers.includes(internalMolecule.getAtomicNo(i))
     ) {
-      results.push(undefined);
+      hoses.push(undefined);
     } else {
       const tempMolecule = internalMolecule.getCompactCopy();
       tagAtom(tempMolecule, i);
-      results.push(
+      hoses.push(
         getHoseCodesForAtomsInternal(tempMolecule, {
           minSphereSize,
           maxSphereSize,
@@ -44,5 +44,5 @@ export function getHoseCodes(molecule, options = {}) {
     }
   }
 
-  return results;
+  return hoses;
 }

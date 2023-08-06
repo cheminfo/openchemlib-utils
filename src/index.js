@@ -6,13 +6,12 @@ export * from './diastereotopic/getDiastereotopicAtomIDsFromMolfile';
 export * from './diastereotopic/groupDiastereotopicAtomIDs';
 export * from './diastereotopic/toDiastereotopicSVG';
 
-export * from './hose/getHoseCodesAndDiastereotopicIDs';
 export * from './hose/getHoseCodes';
+export * from './hose/getHoseCodesAndInfo';
 export * from './hose/getHoseCodesForAtom';
 export * from './hose/getHoseCodesForAtoms';
 export * from './hose/getHoseCodesFromDiastereotopicID';
 export * from './hose/getHoseCodesForPath';
-export * from './hose/getHosesAndInfoFromMolfile';
 
 export * from './util/combineSmiles';
 export * from './util/getAtomsInfo';

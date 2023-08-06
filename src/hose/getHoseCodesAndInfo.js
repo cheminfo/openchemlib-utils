@@ -6,12 +6,11 @@ import { tagAtom } from '../util/tagAtom.js';
 import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js';
 
 /**
- * Parse a molfile and returns an object containing the molecule, the map, the diaIDs, the new molfile with expandedH,
- *  and the diaIDs
+ * Returns an object containing a molfile, molfile with hydrogens, hoses codes and optionally the diaIDs
+ * and the diaIDs
  * The map allows to reload properties assigned to the atom molfile
  * Please take care than numbering of atoms starts at 0 !
- * @param {import('openchemlib')} OCL - openchemlib library
- * @param {string} molfile
+ * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
  * @param {string[]} [options.atomLabels]
  * @param {boolean} [options.calculateDiastereotopicIDs=true]
@@ -19,11 +18,12 @@ import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js'
  * @param {number} [options.maxSphereSize=4]
  * @returns
  */
-export function getHosesAndInfoFromMolfile(OCL, molfile, options = {}) {
+export function getHoseCodesAndInfo(molecule, options = {}) {
   const { minSphereSize, maxSphereSize, calculateDiastereotopicIDs } = options;
-  const { map, molecule } = OCL.Molecule.fromMolfileWithAtomMap(molfile);
   const { Molecule } = molecule.getOCL();
-
+  // this will force reordering of the hydrogens to the end, just to have the same order as in the molfile
+  molecule.ensureHelperArrays(Molecule.cHelperNeighbours);
+  molecule = molecule.getCompactCopy();
   const newMolfile = molecule.toMolfile();
   molecule.addImplicitHydrogens();
   ensureHeterotopicChiralBonds(molecule);
@@ -67,8 +67,6 @@ export function getHosesAndInfoFromMolfile(OCL, molfile, options = {}) {
   return {
     molfile: newMolfile,
     molfileWithH: newMolfileWithH,
-    molecule,
-    map: [...map],
     hoses,
     diaIDs,
   };
