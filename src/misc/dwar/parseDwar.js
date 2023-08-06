@@ -16,7 +16,6 @@ export function parseDwar(text) {
   return parts;
 }
 
-
 function improveParts(parts) {
   for (const key in parts) {
     switch (key) {
