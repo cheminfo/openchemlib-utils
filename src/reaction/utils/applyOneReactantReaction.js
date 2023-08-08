@@ -64,7 +64,8 @@ export function applyOneReactantReaction(reactants, reactions, options) {
           // if there is at least one product, we add the reaction to the results
           if (products.length > 0) {
             // eslint-disable-next-line no-unused-vars
-            const { oclReaction, needToBeCharged, ...reactionWithoutOCL } = reaction;
+            const { oclReaction, needToBeCharged, ...reactionWithoutOCL } =
+              reaction;
             const oneReaction = {
               reaction: reactionWithoutOCL,
               reactant: getInfo(reactant, moleculesInfo),
