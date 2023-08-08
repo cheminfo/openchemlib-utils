@@ -1,4 +1,5 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
+import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
 import { makeRacemic } from '../util/makeRacemic.js';
 import { tagAtom } from '../util/tagAtom.js';
@@ -64,11 +65,14 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
     cache[rank] = { diaID, hose };
   }
 
+  const distanceMatrix = getConnectivityMatrix(molecule, { pathLength: true });
+
   return {
     molfile: newMolfile,
     molfileWithH: newMolfileWithH,
     hoses,
     diaIDs,
     moleculeWithHydrogens: molecule,
+    distanceMatrix,
   };
 }
