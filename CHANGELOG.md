@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.1.0...v4.2.0) (2023-08-08)
+
+
+### Features
+
+* add distanceMatrix in getHoseCodesAndInfo ([9351a59](https://github.com/cheminfo/openchemlib-utils/commit/9351a596667b6749a3f0423baf6d519fbaa7ff9d))
+
 ## [4.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.0.0...v4.1.0) (2023-08-06)
 
 
