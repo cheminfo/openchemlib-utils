@@ -14,8 +14,8 @@ export function getAtomFeatures(originalMolecule, options = {}) {
   ) {
     let min = 0;
     let max = 0;
-    let atomMask = new Array(originalMolecule.getAtoms());
-    let atomList = new Array(originalMolecule.getAtoms());
+    const atomMask = new Array(originalMolecule.getAtoms());
+    const atomList = new Array(originalMolecule.getAtoms());
 
     const molecule = originalMolecule.getCompactCopy();
     for (let currentSphere = 0; currentSphere <= sphere; currentSphere++) {
@@ -26,9 +26,9 @@ export function getAtomFeatures(originalMolecule, options = {}) {
       } else {
         let newMax = max;
         for (let i = min; i < max; i++) {
-          let atom = atomList[i];
+          const atom = atomList[i];
           for (let j = 0; j < molecule.getAllConnAtoms(atom); j++) {
-            let connAtom = molecule.getConnAtom(atom, j);
+            const connAtom = molecule.getConnAtom(atom, j);
             if (!atomMask[connAtom]) {
               atomMask[connAtom] = true;
               atomList[newMax++] = connAtom;
@@ -47,7 +47,7 @@ export function getAtomFeatures(originalMolecule, options = {}) {
   }
 
   const atoms = {};
-  for (let result of results) {
+  for (const result of results) {
     if (!atoms[result]) {
       atoms[result] = 1;
     } else {

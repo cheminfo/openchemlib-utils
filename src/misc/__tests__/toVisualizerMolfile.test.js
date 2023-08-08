@@ -1,11 +1,12 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { toVisualizerMolfile } from '../toVisualizerMolfile';
 
 describe('toVisualizerMolfilen propane', () => {
   it('should yield the right molfile', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC');
-    let molfile = toVisualizerMolfile(molecule, { diastereotopic: true });
+    const molecule = OCL.Molecule.fromSmiles('CCC');
+    const molfile = toVisualizerMolfile(molecule, { diastereotopic: true });
 
     expect(molfile._atoms).toStrictEqual({
       'eM@Df`Xb`RP\\Jh': [0, 2],
@@ -18,8 +19,8 @@ describe('toVisualizerMolfilen propane', () => {
   });
 
   it('should yield the right molfile with ID on the heavy atom', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC');
-    let molfile = toVisualizerMolfile(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('CCC');
+    const molfile = toVisualizerMolfile(molecule, {
       heavyAtomHydrogen: true,
       diastereotopic: true,
     });

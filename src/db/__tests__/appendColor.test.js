@@ -2,14 +2,15 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
-describe('appendColor', () => {
+describe('appendColor', async () => {
   const sdf = readFileSync(join(__dirname, './data/data.sdf'));
-  let moleculesDB = new MoleculesDB(OCL);
-  moleculesDB.appendSDF(sdf);
-  let db = moleculesDB.getDB();
+  const moleculesDB = new MoleculesDB(OCL);
+  await moleculesDB.appendSDF(sdf);
+  const db = moleculesDB.getDB();
   it('test DB', () => {
     expect(db).toHaveLength(10);
   });
@@ -56,7 +57,7 @@ describe('appendColor', () => {
 });
 
 function getDistinctColors(db) {
-  let colors = db
+  const colors = db
     .map((entry) => entry.data)
     .flat()
     .map((entry) => entry.color);

@@ -22,7 +22,7 @@ export async function combineSmiles(coreSmiles, fragments, OCL, options = {}) {
 
 function getComplexity(rGroups) {
   let complexity = 1;
-  for (let rGroup of rGroups) {
+  for (const rGroup of rGroups) {
     complexity *= rGroup.smiles.length;
   }
   return complexity;
@@ -80,7 +80,7 @@ function appendMolecule(molecules, core, rGroups, currents, OCL) {
   const idCode = currentMol.getIDCode();
 
   if (!molecules[idCode]) {
-    let molecule = {};
+    const molecule = {};
     molecules[idCode] = molecule;
     molecule.smiles = currentMol.toSmiles();
     molecule.combinedSmiles = newSmiles;
@@ -95,14 +95,14 @@ function appendMolecule(molecules, core, rGroups, currents, OCL) {
     molecule.PSA = props.polarSurfaceArea;
     molecule.nbRottable = props.rotatableBondCount;
     molecule.nbStereoCenter = props.stereoCenterCount;
-    let mf = currentMol.getMolecularFormula();
+    const mf = currentMol.getMolecularFormula();
     molecule.mf = mf.formula;
     molecule.mw = mf.relativeWeight;
   }
 }
 
 function getCore(coreSmiles) {
-  let core = {
+  const core = {
     originalSmiles: coreSmiles,
     smiles: coreSmiles.replace(/\[R(?<group>[1-4])\]/g, '%5$<group>'),
   };
@@ -114,7 +114,7 @@ function getCore(coreSmiles) {
 }
 
 function getRGroups(core, fragments) {
-  let rGroups = {};
+  const rGroups = {};
   for (const fragment of fragments) {
     if (fragment.smiles) {
       const smiles = updateRPosition(fragment.smiles);
@@ -142,12 +142,12 @@ function updateRPosition(smiles) {
   if (smiles.indexOf('[R]') !== 0) return smiles;
   if (smiles.length === 3) return '[H][R]';
   // we are in trouble ... we need to move the R
-  let newSmiles = smiles.replace('[R]', '');
+  const newSmiles = smiles.replace('[R]', '');
   // we need to check where we should put the R group
   let level = 0;
   for (let j = 0; j < newSmiles.length; j++) {
-    let currentChar = newSmiles.charAt(j);
-    let currentSubstring = newSmiles.substr(j);
+    const currentChar = newSmiles.charAt(j);
+    const currentSubstring = newSmiles.substr(j);
     if (currentChar === '(') {
       level++;
     } else if (currentChar === ')') {

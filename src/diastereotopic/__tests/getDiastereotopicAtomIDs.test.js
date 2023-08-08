@@ -2,13 +2,14 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getDiastereotopicAtomIDs } from '../getDiastereotopicAtomIDs';
 
 describe('getDiastereotopicAtomIDs', () => {
   it('CCC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC');
-    let ids = getDiastereotopicAtomIDs(molecule);
+    const molecule = OCL.Molecule.fromSmiles('CCC');
+    const ids = getDiastereotopicAtomIDs(molecule);
     expect(ids).toStrictEqual([
       'eM@Df`Xb`\x7FRP\\Jh',
       'eM@HzAbJC}IApj`',
@@ -17,9 +18,9 @@ describe('getDiastereotopicAtomIDs', () => {
   });
 
   it('CCC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC');
+    const molecule = OCL.Molecule.fromSmiles('CCC');
     molecule.addImplicitHydrogens();
-    let ids = getDiastereotopicAtomIDs(molecule);
+    const ids = getDiastereotopicAtomIDs(molecule);
     expect(ids).toStrictEqual([
       'eM@Df`Xb`\x7FRP\\Jh',
       'eM@HzAbJC}IApj`',
@@ -36,8 +37,8 @@ describe('getDiastereotopicAtomIDs', () => {
   });
 
   it('CC(Cl)CC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
-    let ids = getDiastereotopicAtomIDs(molecule);
+    const molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
+    const ids = getDiastereotopicAtomIDs(molecule);
     expect(ids).toStrictEqual([
       'gJPHADIMuTe@XbhOtbIpj`',
       'gJPHADILuTe@XdhOtbQpj`',
@@ -48,9 +49,9 @@ describe('getDiastereotopicAtomIDs', () => {
   });
 
   it('CC(Cl)CC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
+    const molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
     molecule.addImplicitHydrogens();
-    let ids = getDiastereotopicAtomIDs(molecule);
+    const ids = getDiastereotopicAtomIDs(molecule);
     expect(ids).toStrictEqual([
       'gJPHADIMuTe@XbhOtbIpj`',
       'gJPHADILuTe@XdhOtbQpj`',

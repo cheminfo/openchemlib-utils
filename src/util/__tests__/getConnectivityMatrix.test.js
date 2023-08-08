@@ -1,13 +1,14 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getConnectivityMatrix } from '../getConnectivityMatrix';
 
 describe('getConnectivityMatrix', () => {
   it('propane with expanded hydrogens', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC');
+    const molecule = OCL.Molecule.fromSmiles('CCC');
     molecule.addImplicitHydrogens();
 
-    let connectivityMatrix = getConnectivityMatrix(molecule);
+    const connectivityMatrix = getConnectivityMatrix(molecule);
     expect(connectivityMatrix).toStrictEqual([
       [1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0],
       [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0],
@@ -24,8 +25,8 @@ describe('getConnectivityMatrix', () => {
   });
 
   it('benzene', () => {
-    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule);
+    const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule);
     expect(connectivityMatrix).toStrictEqual([
       [1, 1, 0, 0, 0, 1],
       [1, 1, 1, 0, 0, 0],
@@ -37,8 +38,8 @@ describe('getConnectivityMatrix', () => {
   });
 
   it('benzene with single, double, triple', () => {
-    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule, {
       sdt: true,
     });
 
@@ -53,8 +54,8 @@ describe('getConnectivityMatrix', () => {
   });
 
   it('benzene with mass diagonal', () => {
-    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule, {
       mass: true,
     });
     expect(connectivityMatrix).toStrictEqual([
@@ -68,8 +69,8 @@ describe('getConnectivityMatrix', () => {
   });
 
   it('benzene with single, double, triple, aromatic', () => {
-    let molecule = OCL.Molecule.fromSmiles('Cc1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('Cc1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule, {
       sdta: true,
     });
     expect(connectivityMatrix).toStrictEqual([
@@ -83,8 +84,8 @@ describe('getConnectivityMatrix', () => {
     ]);
   });
   it('benzene with atomic number on diagonal', () => {
-    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule, {
       atomicNo: true,
     });
     expect(connectivityMatrix).toStrictEqual([
@@ -98,8 +99,8 @@ describe('getConnectivityMatrix', () => {
   });
 
   it('benzene with negative atomic number on diagonal', () => {
-    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule, {
       negativeAtomicNo: true,
     });
     expect(connectivityMatrix).toStrictEqual([
@@ -113,8 +114,8 @@ describe('getConnectivityMatrix', () => {
   });
 
   it('benzene pathLength matrix', () => {
-    let molecule = OCL.Molecule.fromSmiles('c1ccccc1');
-    let connectivityMatrix = getConnectivityMatrix(molecule, {
+    const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
+    const connectivityMatrix = getConnectivityMatrix(molecule, {
       pathLength: true,
     });
     expect(connectivityMatrix).toStrictEqual([

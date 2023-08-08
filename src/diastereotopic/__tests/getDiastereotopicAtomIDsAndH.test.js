@@ -1,11 +1,12 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getDiastereotopicAtomIDsAndH } from '../getDiastereotopicAtomIDsAndH';
 
 describe('getDiastereotopicAtomIDsAndH', () => {
   it('propane', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCC');
-    let diaIDs = getDiastereotopicAtomIDsAndH(molecule);
+    const molecule = OCL.Molecule.fromSmiles('CCC');
+    const diaIDs = getDiastereotopicAtomIDsAndH(molecule);
 
     expect(diaIDs).toHaveLength(11);
     expect(diaIDs[0].nbHydrogens).toBe(3);

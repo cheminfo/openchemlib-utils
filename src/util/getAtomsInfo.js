@@ -8,11 +8,11 @@ export function getAtomsInfo(molecule) {
   const OCL = molecule.getOCL();
   molecule.ensureHelperArrays(OCL.Molecule.cHelperRings);
 
-  let diaIDs = getDiastereotopicAtomIDs(molecule);
+  const diaIDs = getDiastereotopicAtomIDs(molecule);
 
-  let results = [];
+  const results = [];
   for (let i = 0; i < diaIDs.length; i++) {
-    let result = {
+    const result = {
       oclID: diaIDs[i],
       extra: {
         singleBonds: 0,
@@ -22,7 +22,7 @@ export function getAtomsInfo(molecule) {
         cnoHybridation: 0, // should be 1 (sp), 2 (sp2) or 3 (sp3)
       },
     };
-    let extra = result.extra;
+    const extra = result.extra;
     results.push(result);
     result.abnormalValence = molecule.getAtomAbnormalValence(i); // -1 is normal otherwise specified
     result.charge = molecule.getAtomCharge(i);
@@ -66,8 +66,8 @@ export function getAtomsInfo(molecule) {
     result.extra.singleBonds =
       result.atomicNo === 1 ? 0 : result.implicitHydrogens;
     for (let j = 0; j < molecule.getAllConnAtoms(i); j++) {
-      let bond = molecule.getConnBond(i, j);
-      let bondOrder = molecule.getBondOrder(bond);
+      const bond = molecule.getConnBond(i, j);
+      const bondOrder = molecule.getBondOrder(bond);
       if (molecule.isAromaticBond(bond)) {
         extra.aromaticBonds++;
       } else if (bondOrder === 1) {
@@ -92,7 +92,7 @@ export function getAtomsInfo(molecule) {
     } else if (result.atomicNo === 8) {
       result.extra.cnoHybridation = result.extra.totalBonds + 1;
     } else if (result.atomicNo === 1) {
-      let connectedAtom =
+      const connectedAtom =
         molecule.getAllConnAtoms(i) === 0
           ? 0
           : molecule.getAtomicNo(molecule.getConnAtom(i, 0));

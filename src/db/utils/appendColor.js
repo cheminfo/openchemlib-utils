@@ -56,7 +56,7 @@ export default function appendColor(moleculesDB, options = {}) {
   const min = Math.min(...definedValues.map((value) => value.value));
   const max = Math.max(...definedValues.map((value) => value.value));
 
-  for (let value of values) {
+  for (const value of values) {
     if (value.value !== undefined) {
       value.data[colorLabel] = `hsl(${Math.floor(
         ((value.value - min) / (max - min)) * (maxHue - minHue) + minHue,

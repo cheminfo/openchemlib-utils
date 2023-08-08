@@ -6,9 +6,9 @@ import { trimTree } from './trimTree.js';
  * @returns {Array} Array of products with their corresponding trees and reactions
  */
 export function groupTreesByProducts(trees) {
-  let results = {};
+  const results = {};
   for (const tree of trees) {
-    let copyTree = JSON.parse(JSON.stringify(tree));
+    const copyTree = JSON.parse(JSON.stringify(tree));
     groupProductTrees(copyTree, results, tree);
   }
   return Object.values(results);
@@ -21,14 +21,14 @@ export function groupTreesByProducts(trees) {
  * @param {Object} originalBranch Original tree of reactions (not modified)
  */
 function groupProductTrees(currentBranch, results, originalBranch) {
-  for (let product of currentBranch.products) {
+  for (const product of currentBranch.products) {
     // This way is faster than structuredClone
-    let copyBranch = JSON.parse(JSON.stringify(originalBranch));
-    let reactions = [];
+    const copyBranch = JSON.parse(JSON.stringify(originalBranch));
+    const reactions = [];
     // Trim the tree to get all branches leading to the idCode of the product
     trimTree(product.idCode, copyBranch, reactions);
 
-    let nbReactions = reactions.length;
+    const nbReactions = reactions.length;
     if (results[product.idCode] === undefined) {
       results[product.idCode] = {
         idCode: product.idCode,
@@ -48,7 +48,7 @@ function groupProductTrees(currentBranch, results, originalBranch) {
     }
 
     if (product.children.length > 0) {
-      for (let child of product.children) {
+      for (const child of product.children) {
         groupProductTrees(child, results, originalBranch);
       }
     }

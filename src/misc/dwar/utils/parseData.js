@@ -13,7 +13,7 @@ export function parseData(lines, options = {}) {
   const entries = [];
   const rawEntries = [];
 
-  for (let line of lines) {
+  for (const line of lines) {
     const fields = line.split('\t');
     const rawEntry = {};
     headers.forEach((header, index) => {

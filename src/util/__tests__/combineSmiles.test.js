@@ -1,4 +1,5 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { combineSmiles } from '../combineSmiles';
 

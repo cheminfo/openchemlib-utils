@@ -11,11 +11,11 @@ export function getShortestPaths(molecule, options = {}) {
   const OCL = molecule.getOCL();
   const { fromLabel = '', toLabel = '', maxLength = 3 } = options;
 
-  let fromAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(fromLabel);
-  let toAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(toLabel);
+  const fromAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(fromLabel);
+  const toAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(toLabel);
 
   const nbAtoms = molecule.getAllAtoms();
-  let allShortestPaths = new Array(nbAtoms);
+  const allShortestPaths = new Array(nbAtoms);
   for (let i = 0; i < nbAtoms; i++) {
     allShortestPaths[i] = new Array(nbAtoms);
   }
@@ -28,7 +28,7 @@ export function getShortestPaths(molecule, options = {}) {
           molecule.getAtomicNo(from) === fromAtomicNumber) &&
         (toAtomicNumber === 0 || molecule.getAtomicNo(to) === toAtomicNumber)
       ) {
-        let path = [];
+        const path = [];
         molecule.getPath(path, from, to, maxLength);
         if (path.length) {
           allShortestPaths[from][to] = path.slice();

@@ -6,7 +6,7 @@
  * @param {number} maxLength - maximal length of the path
  */
 export function getPathAndTorsion(molecule, from, to, maxLength) {
-  let originalAtoms = []; // path before renumbering
+  const originalAtoms = []; // path before renumbering
   molecule.getPath(originalAtoms, from, to, maxLength + 1);
   let torsion;
   if (originalAtoms.length === 4) {

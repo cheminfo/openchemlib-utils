@@ -1,4 +1,5 @@
 import { Molecule } from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getAtomFeatures } from '../getAtomFeatures.js';
 

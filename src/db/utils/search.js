@@ -65,7 +65,7 @@ export async function searchAsync(moleculesDB, query = '', options = {}) {
 
 function exactSearch(moleculesDB, query) {
   const queryIDCode = query.getIDCode();
-  let searchResult = moleculesDB.db[queryIDCode]
+  const searchResult = moleculesDB.db[queryIDCode]
     ? [moleculesDB.db[queryIDCode]]
     : [];
   return searchResult;
@@ -81,7 +81,7 @@ function substructureSearchBegin(moleculesDB, query) {
   const queryMW = getMW(query);
   const searchResult = [];
   if (query.getAllAtoms() === 0) {
-    for (let idCode in moleculesDB.db) {
+    for (const idCode in moleculesDB.db) {
       searchResult.push(moleculesDB.db[idCode]);
     }
   }
@@ -112,8 +112,8 @@ function subStructureSearch(moleculesDB, query) {
     const queryIndex = query.getIndex();
     const searcher = moleculesDB.searcher;
     searcher.setFragment(query, queryIndex);
-    for (let idCode in moleculesDB.db) {
-      let entry = moleculesDB.db[idCode];
+    for (const idCode in moleculesDB.db) {
+      const entry = moleculesDB.db[idCode];
       searcher.setMolecule(entry.molecule, entry.index);
       if (searcher.isFragmentInMolecule()) {
         searchResult.push(entry);
@@ -147,12 +147,12 @@ async function subStructureSearchAsync(moleculesDB, query, options = {}) {
     const searcher = moleculesDB.searcher;
     searcher.setFragment(query, queryIndex);
     let index = 0;
-    let length = Object.keys(moleculesDB.db).length;
-    for (let idCode in moleculesDB.db) {
+    const length = Object.keys(moleculesDB.db).length;
+    for (const idCode in moleculesDB.db) {
       if (shouldAbort) {
         throw new AbortError('Query aborted');
       }
-      let entry = moleculesDB.db[idCode];
+      const entry = moleculesDB.db[idCode];
       searcher.setMolecule(entry.molecule, entry.index);
       if (searcher.isFragmentInMolecule()) {
         searchResult.push(entry);
@@ -179,8 +179,8 @@ function similaritySearch(moleculesDB, query) {
 
   const searchResult = [];
   let similarity;
-  for (let idCode in moleculesDB.db) {
-    let entry = moleculesDB.db[idCode];
+  for (const idCode in moleculesDB.db) {
+    const entry = moleculesDB.db[idCode];
     if (entry.idCode === queryIdCode) {
       similarity = Number.MAX_SAFE_INTEGER;
     } else {
@@ -201,7 +201,7 @@ function similaritySearch(moleculesDB, query) {
 }
 
 function getMW(query) {
-  let copy = query.getCompactCopy();
+  const copy = query.getCompactCopy();
   copy.setFragment(false);
   return copy.getMolecularFormula().relativeWeight;
 }
@@ -212,11 +212,11 @@ function processResult(entries, options = {}) {
     keepMolecule = false,
     limit = Number.MAX_SAFE_INTEGER,
   } = options;
-  let results = [];
+  const results = [];
 
   if (flattenResult) {
-    for (let entry of entries) {
-      for (let data of entry.data) {
+    for (const entry of entries) {
+      for (const data of entry.data) {
         const result = {
           data,
           idCode: entry.idCode,
@@ -229,7 +229,7 @@ function processResult(entries, options = {}) {
       }
     }
   } else {
-    for (let entry of entries) {
+    for (const entry of entries) {
       results.push({
         data: entry.data,
         idCode: entry.idCode,

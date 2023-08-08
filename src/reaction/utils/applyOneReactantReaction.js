@@ -39,14 +39,11 @@ export function applyOneReactantReaction(reactants, reactions, options) {
       if (isMatching) {
         // get the products of the reaction
         const oneReactionProducts = reactor.getProducts();
-        for (let i = 0; i < oneReactionProducts.length; i++) {
+        for (const oneReactionProduct of oneReactionProducts) {
           const products = [];
-          for (let j = 0; j < oneReactionProducts[i].length; j++) {
+          for (const reactionProduct of oneReactionProduct) {
             // get the info of the product (molfile, idCode, mf)
-            const moleculeInfo = getInfo(
-              oneReactionProducts[i][j],
-              moleculesInfo,
-            );
+            const moleculeInfo = getInfo(reactionProduct, moleculesInfo);
             // if the product has not been processed yet, we add it to the list of products and we add it to the list of todoNextDepth
             if (!processedMolecules.has(moleculeInfo.idCode)) {
               const product = {
@@ -56,15 +53,11 @@ export function applyOneReactantReaction(reactants, reactions, options) {
               products.push(product);
 
               todoNextDepth.push(() => {
-                return applyOneReactantReaction(
-                  oneReactionProducts[i][j],
-                  reactions,
-                  {
-                    ...options,
-                    currentDepth: options.currentDepth + 1,
-                    trees: product.children,
-                  },
-                );
+                return applyOneReactantReaction(reactionProduct, reactions, {
+                  ...options,
+                  currentDepth: options.currentDepth + 1,
+                  trees: product.children,
+                });
               });
             }
           }

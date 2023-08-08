@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import OCL from 'openchemlib';
+import { beforeAll, expect, it, describe } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
@@ -83,7 +84,7 @@ describe('MoleculesDB', () => {
     });
 
     it('subStructure with SMARTS', () => {
-      let result = moleculesDB.search('CC[O,Cl,N]', {
+      const result = moleculesDB.search('CC[O,Cl,N]', {
         format: 'smarts',
         mode: 'substructure',
       });

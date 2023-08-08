@@ -1,12 +1,13 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getAtomsInfo } from '../getAtomsInfo';
 
 describe('getAtomsInfo', () => {
   it('methanol', () => {
-    let molecule = OCL.Molecule.fromSmiles('CO');
+    const molecule = OCL.Molecule.fromSmiles('CO');
     molecule.addImplicitHydrogens();
-    let atoms = getAtomsInfo(molecule);
+    const atoms = getAtomsInfo(molecule);
 
     expect(atoms[0]).toStrictEqual({
       oclID: 'eFHBLCETGzRSaU@',
@@ -84,9 +85,9 @@ describe('getAtomsInfo', () => {
   });
 
   it('propene', () => {
-    let molecule = OCL.Molecule.fromSmiles('C=CC');
+    const molecule = OCL.Molecule.fromSmiles('C=CC');
     // molecule.addImplicitHydrogens();
-    let atoms = getAtomsInfo(molecule);
+    const atoms = getAtomsInfo(molecule);
     expect(atoms[2]).toStrictEqual({
       oclID: 'eM@DfPXb`RP\\Jh',
       extra: {

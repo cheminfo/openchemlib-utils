@@ -32,8 +32,7 @@ export function getHoseCodesForAtoms(
   ensureHeterotopicChiralBonds(molecule);
 
   const allowedCustomLabels = [];
-  for (let i = 0; i < rootAtoms.length; i++) {
-    let rootAtom = rootAtoms[i];
+  for (const rootAtom of rootAtoms) {
     allowedCustomLabels.push(tagAtom(molecule, rootAtom));
   }
 

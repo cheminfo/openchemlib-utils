@@ -1,14 +1,15 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { ensureHeterotopicChiralBonds } from '../../diastereotopic/ensureHeterotopicChiralBonds.js';
 import { getPathsInfo } from '../getPathsInfo';
 
 describe('getPathsInfo', () => {
   it('propane min:1, max:3, withHOSES', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCO');
+    const molecule = OCL.Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
     ensureHeterotopicChiralBonds(molecule);
-    let pathsInfo = getPathsInfo(molecule, {
+    const pathsInfo = getPathsInfo(molecule, {
       fromLabel: 'H',
       toLabel: 'H',
       minLength: 1,
@@ -16,10 +17,10 @@ describe('getPathsInfo', () => {
       withHOSES: true,
     });
 
-    let hoses = {};
-    for (let atom of pathsInfo) {
-      for (let path of atom.paths) {
-        for (let hose of path.hoses) {
+    const hoses = {};
+    for (const atom of pathsInfo) {
+      for (const path of atom.paths) {
+        for (const hose of path.hoses) {
           hoses[escape(hose.oclID)] = true;
         }
       }
@@ -43,10 +44,10 @@ describe('getPathsInfo', () => {
   });
 
   it('ethane min:2, max:2, withHOSES', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC');
+    const molecule = OCL.Molecule.fromSmiles('CC');
     molecule.addImplicitHydrogens();
     molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
-    let pathsInfo = getPathsInfo(molecule, {
+    const pathsInfo = getPathsInfo(molecule, {
       fromLabel: 'H',
       toLabel: 'H',
       minLength: 2,
@@ -54,10 +55,10 @@ describe('getPathsInfo', () => {
       withHOSES: true,
     });
 
-    let hoses = {};
-    for (let atom of pathsInfo) {
-      for (let path of atom.paths) {
-        for (let hose of path.hoses) {
+    const hoses = {};
+    for (const atom of pathsInfo) {
+      for (const path of atom.paths) {
+        for (const hose of path.hoses) {
           hoses[escape(hose.oclID)] = true;
         }
       }
@@ -72,10 +73,10 @@ describe('getPathsInfo', () => {
   });
 
   it('propane min:1, max:3', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCO');
+    const molecule = OCL.Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
     ensureHeterotopicChiralBonds(molecule);
-    let pathsInfo = getPathsInfo(molecule, {
+    const pathsInfo = getPathsInfo(molecule, {
       fromLabel: 'H',
       toLabel: 'H',
       minLength: 1,
@@ -83,10 +84,10 @@ describe('getPathsInfo', () => {
       withHOSES: true,
     });
 
-    let hoses = {};
-    for (let atom of pathsInfo) {
-      for (let path of atom.paths) {
-        for (let hose of path.hoses) {
+    const hoses = {};
+    for (const atom of pathsInfo) {
+      for (const path of atom.paths) {
+        for (const hose of path.hoses) {
           hoses[escape(hose.oclID)] = true;
         }
       }

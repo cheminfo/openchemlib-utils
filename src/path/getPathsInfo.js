@@ -32,13 +32,13 @@ export function getPathsInfo(molecule, options = {}) {
     fragment = new OCL.Molecule(0, 0);
   }
 
-  let fromAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(fromLabel);
-  let toAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(toLabel);
+  const fromAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(fromLabel);
+  const toAtomicNumber = OCL.Molecule.getAtomicNoFromLabel(toLabel);
 
   // we need to find all the atoms 'fromLabel' and 'toLabel'
-  let atomsInfo = getAtomsInfo(molecule);
+  const atomsInfo = getAtomsInfo(molecule);
 
-  let pathLengthMatrix = getConnectivityMatrix(molecule, {
+  const pathLengthMatrix = getConnectivityMatrix(molecule, {
     pathLength: true,
   });
 
@@ -48,7 +48,7 @@ export function getPathsInfo(molecule, options = {}) {
       if (from !== to) {
         if (molecule.getAtomicNo(from) === fromAtomicNumber) {
           if (molecule.getAtomicNo(to) === toAtomicNumber) {
-            let pathLength = pathLengthMatrix[from][to];
+            const pathLength = pathLengthMatrix[from][to];
             if (pathLength >= minLength && pathLength <= maxLength) {
               if (withHOSES) {
                 atomsInfo[from].paths.push(

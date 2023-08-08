@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import { Molecule } from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getHoseCodes } from '../getHoseCodes.js';
 
@@ -75,7 +76,7 @@ function getDistinctHoses(hoses) {
   const distinct = {};
   for (const hose of hoses) {
     if (!hose) continue;
-    for (let sphere of hose) {
+    for (const sphere of hose) {
       distinct[sphere] = true;
     }
   }

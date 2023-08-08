@@ -1,6 +1,8 @@
+import { expect, it } from 'vitest';
+
 import { noWait } from '../noWait.js';
 
-test('noWait', async () => {
+it('noWait', async () => {
   const start = performance.now();
   for (let i = 0; i < 10000; i++) {
     await noWait();

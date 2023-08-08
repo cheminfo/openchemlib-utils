@@ -1,8 +1,9 @@
 import OCL from 'openchemlib';
+import { it, expect } from 'vitest';
 
 import { getDiastereotopicAtomIDsFromMolfile } from '../getDiastereotopicAtomIDsFromMolfile';
 
-test('getDiastereotopicAtomIDsFromMolfile', () => {
+it('getDiastereotopicAtomIDsFromMolfile', () => {
   const molfile = `$$ Empty String
   ACD/Labs09022211552D
   $$ Empty String
@@ -53,16 +54,16 @@ M  END`;
   expect(result.diaIDs[10]).toMatchInlineSnapshot(`
     {
       "hydrogenOCLIDs": [
-        "fle\`A@E@f\\NFQIRIIPiSIV]EMUUP@@@@@RB@QJh",
+        "fle\`A@E@f\\\\NFQIRIIPiSIV]EMUUP@@@@@RB@QJh",
       ],
       "nbHydrogens": 3,
-      "oclID": "fdy\`B@I@\\LddRRtJTrQkAcUUP@@@@@qBeA~dDhxUP",
+      "oclID": "fdy\`B@I@\\\\LddRRtJTrQkAcUUP@@@@@qBeA~dDhxUP",
     }
   `);
   expect(result.map[10]).toMatchInlineSnapshot(`
     {
       "destination": 18,
-      "heavyAtom": "fdy\`B@I@\\LddRRTjTrQkAcUUP@@@@@qBMA~dDbxUP",
+      "heavyAtom": "fdy\`B@I@\\\\LddRRTjTrQkAcUUP@@@@@qBMA~dDbxUP",
       "hydrogenOCLIDs": [],
       "nbHydrogens": 0,
       "oclID": "fle\`A@A@fSNBSJvnmJtYIT@@AUUP@@RB@QJh",
@@ -71,7 +72,7 @@ M  END`;
   `);
 });
 
-test('getDiastereotopicAtomIDsFromMolfile with H', () => {
+it('getDiastereotopicAtomIDsFromMolfile with H', () => {
   const molfile = `Empty String
   ACD/Labs09022211502D
   $$ Empty String
@@ -126,10 +127,10 @@ M  END`;
 
   expect(result.diaIDs[20]).toMatchInlineSnapshot(`
     {
-      "heavyAtom": "flu@\`@@HRYYvYU\\eGQBejf\`@@BBAJHTfHThOt\`eGBj@",
+      "heavyAtom": "flu@\`@@HRYYvYU\\\\eGQBejf\`@@BBAJHTfHThOt\`eGBj@",
       "hydrogenOCLIDs": [],
       "nbHydrogens": 0,
-      "oclID": "fbm@b@FBALiLsKwJkdYyL\\uSS@@@DBHDXh\`Q_iA@HeT",
+      "oclID": "fbm@b@FBALiLsKwJkdYyL\\\\uSS@@@DBHDXh\`Q_iA@HeT",
     }
   `);
 });

@@ -14,16 +14,16 @@ export function getDiastereotopicAtomIDs(molecule) {
 
   const symmetryRanks = getSymmetryRanks(molecule);
 
-  let numberAtoms = molecule.getAllAtoms();
-  let ids = [];
-  let cache = {};
+  const numberAtoms = molecule.getAllAtoms();
+  const ids = [];
+  const cache = {};
   for (let iAtom = 0; iAtom < numberAtoms; iAtom++) {
     const rank = symmetryRanks[iAtom];
     if (rank && cache[rank]) {
       ids[iAtom] = cache[rank];
       continue;
     }
-    let tempMolecule = molecule.getCompactCopy();
+    const tempMolecule = molecule.getCompactCopy();
     tagAtom(tempMolecule, iAtom);
     makeRacemic(tempMolecule);
     // We need to ensure the helper array in order to get correctly the result of racemisation

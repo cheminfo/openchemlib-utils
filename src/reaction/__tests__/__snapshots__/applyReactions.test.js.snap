@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`applyReactions COCCO multiple ionization 1`] = `
+exports[`applyReactions > COCCO multiple ionization 1`] = `
 [
   {
     "charge": 0,
@@ -9,7 +9,7 @@ exports[`applyReactions COCCO multiple ionization 1`] = `
     "mf": "C2H6O2S",
     "minSteps": 1,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     ],
     "trees": [
       {
@@ -61,7 +61,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -73,9 +73,9 @@ M  END
     "mf": "C2H6OS2",
     "minSteps": 8,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -137,7 +137,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -185,7 +185,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -197,15 +197,15 @@ M  END
     "mf": "C3H8OS2",
     "minSteps": 19,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -279,7 +279,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -327,7 +327,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -388,7 +388,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -438,7 +438,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -486,7 +486,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -550,7 +550,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -598,7 +598,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -659,7 +659,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -709,7 +709,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -757,7 +757,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -769,10 +769,10 @@ M  END
     "mf": "C4H10OS2",
     "minSteps": 18,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -781,7 +781,7 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -859,7 +859,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -909,7 +909,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -957,7 +957,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -1005,7 +1005,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -1017,16 +1017,16 @@ M  END
     "mf": "C4H11OS2(+)",
     "minSteps": 23,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -1034,7 +1034,7 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -1174,7 +1174,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -1239,7 +1239,7 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
@@ -1342,7 +1342,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -1390,7 +1390,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -1438,7 +1438,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -1573,7 +1573,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -1638,7 +1638,7 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
@@ -1741,7 +1741,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -1789,7 +1789,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -1837,7 +1837,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -1849,24 +1849,24 @@ M  END
     "mf": "C4H10NaOS2(+)",
     "minSteps": 23,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -2008,7 +2008,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -2077,7 +2077,7 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
@@ -2182,7 +2182,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -2230,7 +2230,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -2278,7 +2278,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -2415,7 +2415,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -2484,7 +2484,7 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
@@ -2589,7 +2589,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -2637,7 +2637,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -2685,7 +2685,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -2697,10 +2697,10 @@ M  END
     "mf": "C4H10KOS2(+)",
     "minSteps": 23,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -2708,13 +2708,13 @@ M  END
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -2856,7 +2856,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -2925,7 +2925,7 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
@@ -3030,7 +3030,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -3078,7 +3078,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -3126,7 +3126,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -3263,7 +3263,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -3332,7 +3332,7 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
@@ -3437,7 +3437,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -3485,7 +3485,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -3533,7 +3533,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -3545,10 +3545,10 @@ M  END
     "mf": "C7H20NOS2(+)",
     "minSteps": 23,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -3557,12 +3557,12 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -3712,7 +3712,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -3764,7 +3764,7 @@ M  END
                                         "reactant": {
                                           "charge": 1,
                                           "em": 184.082979,
-                                          "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                          "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                           "mf": "C6H18NOS2(+)",
                                           "molfile": "
 .0
@@ -3797,13 +3797,13 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
                                     "em": 184.082979,
                                     "flag": false,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -3910,7 +3910,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -3958,7 +3958,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -4006,7 +4006,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -4151,7 +4151,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                               {
@@ -4203,7 +4203,7 @@ M  END
                                         "reactant": {
                                           "charge": 1,
                                           "em": 184.082979,
-                                          "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                          "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                           "mf": "C6H18NOS2(+)",
                                           "molfile": "
 .0
@@ -4236,13 +4236,13 @@ M  END
                                         },
                                         "reaction": {
                                           "Label": "SH to SMe",
-                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                         },
                                       },
                                     ],
                                     "em": 184.082979,
                                     "flag": false,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -4349,7 +4349,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -4397,7 +4397,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -4445,7 +4445,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -4457,24 +4457,24 @@ M  END
     "mf": "C3H9OS2(+)",
     "minSteps": 27,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -4605,7 +4605,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -4666,7 +4666,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -4763,7 +4763,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -4831,7 +4831,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -4934,7 +4934,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -4982,7 +4982,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -5104,7 +5104,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -5165,7 +5165,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -5262,7 +5262,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -5330,7 +5330,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -5433,7 +5433,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -5481,7 +5481,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -5603,7 +5603,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -5664,7 +5664,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -5761,7 +5761,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -5829,7 +5829,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -5932,7 +5932,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -5980,7 +5980,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -5992,25 +5992,25 @@ M  END
     "mf": "C3H8NaOS2(+)",
     "minSteps": 27,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -6142,7 +6142,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -6207,7 +6207,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -6306,7 +6306,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -6378,7 +6378,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -6483,7 +6483,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -6531,7 +6531,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -6655,7 +6655,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -6720,7 +6720,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -6819,7 +6819,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -6891,7 +6891,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -6996,7 +6996,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -7044,7 +7044,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -7168,7 +7168,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -7233,7 +7233,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -7332,7 +7332,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -7404,7 +7404,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -7509,7 +7509,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -7557,7 +7557,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -7569,10 +7569,10 @@ M  END
     "mf": "C3H8KOS2(+)",
     "minSteps": 27,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -7580,15 +7580,15 @@ M  END
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
@@ -7719,7 +7719,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -7784,7 +7784,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -7883,7 +7883,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -7955,7 +7955,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -8060,7 +8060,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -8108,7 +8108,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -8232,7 +8232,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -8297,7 +8297,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -8396,7 +8396,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -8468,7 +8468,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -8573,7 +8573,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -8621,7 +8621,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -8745,7 +8745,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -8810,7 +8810,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -8909,7 +8909,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -8981,7 +8981,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -9086,7 +9086,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -9134,7 +9134,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -9142,14 +9142,14 @@ M  END
   {
     "charge": 1,
     "em": 184.082979,
-    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
     "mf": "C6H18NOS2(+)",
     "minSteps": 27,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -9158,15 +9158,15 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
@@ -9197,7 +9197,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -9304,7 +9304,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -9319,7 +9319,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -9385,7 +9385,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -9492,7 +9492,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -9512,7 +9512,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -9580,7 +9580,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -9693,7 +9693,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -9741,7 +9741,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -9766,7 +9766,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -9873,7 +9873,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -9888,7 +9888,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -9954,7 +9954,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -10061,7 +10061,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -10081,7 +10081,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -10149,7 +10149,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -10262,7 +10262,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -10310,7 +10310,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -10335,7 +10335,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -10442,7 +10442,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -10457,7 +10457,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -10523,7 +10523,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -10630,7 +10630,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -10650,7 +10650,7 @@ M  END
                                     "children": [],
                                     "em": 184.082979,
                                     "flag": true,
-                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\L",
+                                    "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
                                     "mf": "C6H18NOS2(+)",
                                     "molfile": "
 .0
@@ -10718,7 +10718,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "OH by SH",
-                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                                 },
                               },
                             ],
@@ -10831,7 +10831,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -10879,7 +10879,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -10891,18 +10891,18 @@ M  END
     "mf": "C2H7OS2(+)",
     "minSteps": 16,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -11017,7 +11017,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -11076,7 +11076,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -11173,7 +11173,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -11284,7 +11284,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -11343,7 +11343,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -11440,7 +11440,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -11452,19 +11452,19 @@ M  END
     "mf": "C2H6NaOS2(+)",
     "minSteps": 16,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -11580,7 +11580,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -11643,7 +11643,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -11742,7 +11742,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -11855,7 +11855,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -11918,7 +11918,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -12017,7 +12017,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -12029,20 +12029,20 @@ M  END
     "mf": "C2H6KOS2(+)",
     "minSteps": 16,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
     ],
@@ -12157,7 +12157,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -12220,7 +12220,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -12319,7 +12319,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -12432,7 +12432,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -12495,7 +12495,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -12594,7 +12594,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -12606,21 +12606,21 @@ M  END
     "mf": "C5H16NOS2(+)",
     "minSteps": 16,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -12742,7 +12742,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -12790,7 +12790,7 @@ M  END
                         "reactant": {
                           "charge": 1,
                           "em": 154.090174,
-                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                           "mf": "C5H16NO2S(+)",
                           "molfile": "
 .0
@@ -12821,13 +12821,13 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
                     "em": 154.090174,
                     "flag": false,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -12928,7 +12928,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -13049,7 +13049,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -13097,7 +13097,7 @@ M  END
                         "reactant": {
                           "charge": 1,
                           "em": 154.090174,
-                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                           "mf": "C5H16NO2S(+)",
                           "molfile": "
 .0
@@ -13128,13 +13128,13 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
                     "em": 154.090174,
                     "flag": false,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -13235,7 +13235,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -13247,9 +13247,9 @@ M  END
     "mf": "C3H8O2S",
     "minSteps": 8,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -13313,7 +13313,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -13361,7 +13361,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -13373,17 +13373,17 @@ M  END
     "mf": "C3H9O2S(+)",
     "minSteps": 19,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -13508,7 +13508,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -13569,7 +13569,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -13666,7 +13666,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -13783,7 +13783,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -13844,7 +13844,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -13941,7 +13941,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -13953,25 +13953,25 @@ M  END
     "mf": "C3H10O2S(+2)",
     "minSteps": 26,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -14270,7 +14270,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -14336,7 +14336,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -14483,7 +14483,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -14775,7 +14775,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -14841,7 +14841,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -14988,7 +14988,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -15280,7 +15280,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -15346,7 +15346,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -15493,7 +15493,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -15505,10 +15505,10 @@ M  END
     "mf": "C3H9NaO2S(+2)",
     "minSteps": 26,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -15516,15 +15516,15 @@ M  END
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
@@ -15830,7 +15830,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -15900,7 +15900,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -16049,7 +16049,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -16349,7 +16349,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -16419,7 +16419,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -16568,7 +16568,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -16868,7 +16868,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -16938,7 +16938,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -17087,7 +17087,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -17099,10 +17099,10 @@ M  END
     "mf": "C3H9KO2S(+2)",
     "minSteps": 26,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -17111,15 +17111,15 @@ M  END
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -17424,7 +17424,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -17494,7 +17494,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -17643,7 +17643,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -17943,7 +17943,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -18013,7 +18013,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -18162,7 +18162,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -18462,7 +18462,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -18532,7 +18532,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -18681,7 +18681,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -18689,14 +18689,14 @@ M  END
   {
     "charge": 2,
     "em": 169.113649,
-    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
     "mf": "C6H19NO2S(+2)",
     "minSteps": 26,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -18706,15 +18706,15 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -18743,7 +18743,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -18869,7 +18869,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -19050,7 +19050,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -19070,7 +19070,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -19136,7 +19136,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -19293,7 +19293,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -19318,7 +19318,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -19444,7 +19444,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -19625,7 +19625,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -19645,7 +19645,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -19711,7 +19711,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -19868,7 +19868,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -19893,7 +19893,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -20019,7 +20019,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -20200,7 +20200,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -20220,7 +20220,7 @@ M  END
                                     "children": [],
                                     "em": 169.113649,
                                     "flag": true,
-                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\L",
+                                    "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
                                     "mf": "C6H19NO2S(+2)",
                                     "molfile": "
 .0
@@ -20286,7 +20286,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -20443,7 +20443,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -20455,10 +20455,10 @@ M  END
     "mf": "C3H9O2S(+)",
     "minSteps": 17,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -20466,8 +20466,8 @@ M  END
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -20588,7 +20588,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -20649,7 +20649,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -20746,7 +20746,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -20863,7 +20863,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -20924,7 +20924,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -21021,7 +21021,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -21033,10 +21033,10 @@ M  END
     "mf": "C3H8NaO2S(+)",
     "minSteps": 17,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -21045,8 +21045,8 @@ M  END
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -21168,7 +21168,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -21233,7 +21233,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -21332,7 +21332,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -21451,7 +21451,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -21516,7 +21516,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -21615,7 +21615,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -21627,10 +21627,10 @@ M  END
     "mf": "C3H8KO2S(+)",
     "minSteps": 17,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -21640,8 +21640,8 @@ M  END
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
     ],
@@ -21762,7 +21762,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -21827,7 +21827,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -21926,7 +21926,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -22045,7 +22045,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -22110,7 +22110,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -22209,7 +22209,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -22221,10 +22221,10 @@ M  END
     "mf": "C6H18NO2S(+)",
     "minSteps": 17,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -22235,8 +22235,8 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -22364,7 +22364,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -22414,7 +22414,7 @@ M  END
                         "reactant": {
                           "charge": 1,
                           "em": 154.090174,
-                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                           "mf": "C5H16NO2S(+)",
                           "molfile": "
 .0
@@ -22445,13 +22445,13 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
                     "em": 154.090174,
                     "flag": false,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -22552,7 +22552,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -22679,7 +22679,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -22729,7 +22729,7 @@ M  END
                         "reactant": {
                           "charge": 1,
                           "em": 154.090174,
-                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                           "mf": "C5H16NO2S(+)",
                           "molfile": "
 .0
@@ -22760,13 +22760,13 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
                     "em": 154.090174,
                     "flag": false,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -22867,7 +22867,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -22880,7 +22880,7 @@ M  END
     "minSteps": 7,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -22991,7 +22991,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -23050,7 +23050,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -23112,10 +23112,10 @@ M  END
     "minSteps": 9,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -23388,7 +23388,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -23657,7 +23657,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -23721,7 +23721,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -23833,11 +23833,11 @@ M  END
     "minSteps": 9,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -24117,7 +24117,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -24394,7 +24394,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -24462,7 +24462,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -24576,12 +24576,12 @@ M  END
     "minSteps": 9,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
     ],
@@ -24860,7 +24860,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -25137,7 +25137,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -25205,7 +25205,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -25319,13 +25319,13 @@ M  END
     "minSteps": 9,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -25497,7 +25497,7 @@ M  END
                         "reactant": {
                           "charge": 1,
                           "em": 154.090174,
-                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                           "mf": "C5H16NO2S(+)",
                           "molfile": "
 .0
@@ -25534,7 +25534,7 @@ M  END
                     ],
                     "em": 154.090174,
                     "flag": false,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -25635,7 +25635,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -25806,7 +25806,7 @@ M  END
                         "reactant": {
                           "charge": 1,
                           "em": 154.090174,
-                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                          "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                           "mf": "C5H16NO2S(+)",
                           "molfile": "
 .0
@@ -25843,7 +25843,7 @@ M  END
                     ],
                     "em": 154.090174,
                     "flag": false,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -25944,7 +25944,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -26028,7 +26028,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -26150,7 +26150,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -26257,7 +26257,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -26316,7 +26316,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -26378,7 +26378,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -26487,7 +26487,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -26550,7 +26550,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -26614,7 +26614,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -26723,7 +26723,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -26786,7 +26786,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -26845,12 +26845,12 @@ M  END
   {
     "charge": 1,
     "em": 154.090174,
-    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
     "mf": "C5H16NO2S(+)",
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -26866,7 +26866,7 @@ M  END
                     "children": [],
                     "em": 154.090174,
                     "flag": true,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -26967,7 +26967,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -26982,7 +26982,7 @@ M  END
                     "children": [],
                     "em": 154.090174,
                     "flag": true,
-                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\T",
+                    "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
                     "mf": "C5H16NO2S(+)",
                     "molfile": "
 .0
@@ -27015,7 +27015,7 @@ M  END
                 "reactant": {
                   "charge": 1,
                   "em": 138.113019,
-                  "idCode": "defLbF@jr@B\\dbRLeUUP@NJ@",
+                  "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
                   "mf": "C5H16NO3(+)",
                   "molfile": "
 .0
@@ -27046,13 +27046,13 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
             "em": 138.113019,
             "flag": false,
-            "idCode": "defLbF@jr@B\\dbRLeUUP@NJ@",
+            "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
             "mf": "C5H16NO3(+)",
             "molfile": "
 .0
@@ -27183,7 +27183,7 @@ M  END
     "minSteps": 7,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -27309,14 +27309,14 @@ M  END
     "minSteps": 13,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -27877,7 +27877,7 @@ M  END
     "minSteps": 13,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -27885,7 +27885,7 @@ M  END
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
@@ -28461,7 +28461,7 @@ M  END
     "minSteps": 13,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -28470,7 +28470,7 @@ M  END
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
     ],
@@ -29045,7 +29045,7 @@ M  END
     "minSteps": 13,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
@@ -29055,7 +29055,7 @@ M  END
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -29693,7 +29693,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -29923,7 +29923,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -30161,7 +30161,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -30399,7 +30399,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -30566,7 +30566,7 @@ M  END
                 "reactant": {
                   "charge": 1,
                   "em": 138.113019,
-                  "idCode": "defLbF@jr@B\\dbRLeUUP@NJ@",
+                  "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
                   "mf": "C5H16NO3(+)",
                   "molfile": "
 .0
@@ -30603,7 +30603,7 @@ M  END
             ],
             "em": 138.113019,
             "flag": false,
-            "idCode": "defLbF@jr@B\\dbRLeUUP@NJ@",
+            "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
             "mf": "C5H16NO3(+)",
             "molfile": "
 .0
@@ -30863,7 +30863,7 @@ M  END
   {
     "charge": 1,
     "em": 138.113019,
-    "idCode": "defLbF@jr@B\\dbRLeUUP@NJ@",
+    "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
     "mf": "C5H16NO3(+)",
     "minSteps": 1,
     "reactions": [
@@ -30877,7 +30877,7 @@ M  END
             "children": [],
             "em": 138.113019,
             "flag": true,
-            "idCode": "defLbF@jr@B\\dbRLeUUP@NJ@",
+            "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
             "mf": "C5H16NO3(+)",
             "molfile": "
 .0
@@ -30938,7 +30938,7 @@ M  END
 ]
 `;
 
-exports[`applyReactions ethanol 1`] = `
+exports[`applyReactions > ethanol 1`] = `
 {
   "charge": 0,
   "em": 62.01902,
@@ -30946,7 +30946,7 @@ exports[`applyReactions ethanol 1`] = `
   "mf": "C2H6S",
   "minSteps": 1,
   "reactions": [
-    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
   "trees": [
     {
@@ -30990,14 +30990,14 @@ M  END
       },
       "reaction": {
         "Label": "OH by SH",
-        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       },
     },
   ],
 }
 `;
 
-exports[`applyReactions ethylene glycol 1`] = `
+exports[`applyReactions > ethylene glycol 1`] = `
 {
   "charge": 0,
   "em": 78.013935,
@@ -31005,7 +31005,7 @@ exports[`applyReactions ethylene glycol 1`] = `
   "mf": "C2H6OS",
   "minSteps": 1,
   "reactions": [
-    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
   "trees": [
     {
@@ -31053,14 +31053,14 @@ M  END
       },
       "reaction": {
         "Label": "OH by SH",
-        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       },
     },
   ],
 }
 `;
 
-exports[`applyReactions ethylene glycol 2`] = `
+exports[`applyReactions > ethylene glycol 2`] = `
 [
   {
     "products": [
@@ -31127,7 +31127,7 @@ M  END
                             },
                             "reaction": {
                               "Label": "SH to SMe",
-                              "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                              "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                             },
                           },
                         ],
@@ -31172,7 +31172,7 @@ M  END
                     },
                     "reaction": {
                       "Label": "SH to SMe",
-                      "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                      "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                     },
                   },
                 ],
@@ -31215,7 +31215,7 @@ M  END
             },
             "reaction": {
               "Label": "OH by SH",
-              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
             },
           },
           {
@@ -31271,7 +31271,7 @@ M  END
                     },
                     "reaction": {
                       "Label": "OH by SH",
-                      "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                      "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                     },
                   },
                   {
@@ -31368,7 +31368,7 @@ M  END
             },
             "reaction": {
               "Label": "SH to SMe",
-              "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+              "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
             },
           },
           {
@@ -31424,7 +31424,7 @@ M  END
                     },
                     "reaction": {
                       "Label": "SH to SMe",
-                      "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                      "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                     },
                   },
                 ],
@@ -31511,7 +31511,7 @@ M  END
     },
     "reaction": {
       "Label": "OH by SH",
-      "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     },
   },
   {
@@ -31565,7 +31565,7 @@ M  END
             },
             "reaction": {
               "Label": "OH by SH",
-              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+              "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
             },
           },
           {
@@ -31664,7 +31664,7 @@ M  END
 ]
 `;
 
-exports[`applyReactions propane-1,2-diol 1`] = `
+exports[`applyReactions > propane-1,2-diol 1`] = `
 {
   "charge": 0,
   "em": 92.029585,
@@ -31672,7 +31672,7 @@ exports[`applyReactions propane-1,2-diol 1`] = `
   "mf": "C3H8OS",
   "minSteps": 1,
   "reactions": [
-    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
   "trees": [
     {
@@ -31724,14 +31724,14 @@ M  END
       },
       "reaction": {
         "Label": "OH by SH",
-        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       },
     },
   ],
 }
 `;
 
-exports[`applyReactions propane-1,2-diol maxDepth: 1 1`] = `
+exports[`applyReactions > propane-1,2-diol maxDepth: 1 1`] = `
 {
   "charge": 0,
   "em": 92.029585,
@@ -31739,7 +31739,7 @@ exports[`applyReactions propane-1,2-diol maxDepth: 1 1`] = `
   "mf": "C3H8OS",
   "minSteps": 1,
   "reactions": [
-    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
   "trees": [
     {
@@ -31791,14 +31791,14 @@ M  END
       },
       "reaction": {
         "Label": "OH by SH",
-        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       },
     },
   ],
 }
 `;
 
-exports[`applyReactions propane-1,2-diol maxDepth: 5 1`] = `
+exports[`applyReactions > propane-1,2-diol maxDepth: 5 1`] = `
 [
   {
     "charge": 0,
@@ -31807,7 +31807,7 @@ exports[`applyReactions propane-1,2-diol maxDepth: 5 1`] = `
     "mf": "C3H8OS",
     "minSteps": 1,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     ],
     "trees": [
       {
@@ -31859,7 +31859,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -31871,9 +31871,9 @@ M  END
     "mf": "C3H8S2",
     "minSteps": 4,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -31931,7 +31931,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -31979,7 +31979,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -32036,7 +32036,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -32084,7 +32084,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -32096,12 +32096,12 @@ M  END
     "mf": "C4H10S2",
     "minSteps": 8,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
@@ -32167,7 +32167,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -32215,7 +32215,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -32276,7 +32276,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -32326,7 +32326,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -32374,7 +32374,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -32438,7 +32438,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -32486,7 +32486,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
               {
@@ -32547,7 +32547,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -32597,7 +32597,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -32645,7 +32645,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -32657,13 +32657,13 @@ M  END
     "mf": "C5H12S2",
     "minSteps": 8,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -32737,7 +32737,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -32787,7 +32787,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -32850,7 +32850,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -32900,7 +32900,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -32948,7 +32948,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -32996,7 +32996,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -33069,7 +33069,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -33119,7 +33119,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                       {
@@ -33182,7 +33182,7 @@ M  END
                                 },
                                 "reaction": {
                                   "Label": "SH to SMe",
-                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                                 },
                               },
                             ],
@@ -33232,7 +33232,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -33280,7 +33280,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -33328,7 +33328,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -33340,11 +33340,11 @@ M  END
     "mf": "C4H10S2",
     "minSteps": 6,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -33409,7 +33409,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -33457,7 +33457,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -33505,7 +33505,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -33571,7 +33571,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "OH by SH",
-                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                         },
                       },
                     ],
@@ -33621,7 +33621,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -33669,7 +33669,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -33681,9 +33681,9 @@ M  END
     "mf": "C4H10OS",
     "minSteps": 4,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -33743,7 +33743,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -33791,7 +33791,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -33803,13 +33803,13 @@ M  END
     "mf": "C4H11OS(+)",
     "minSteps": 7,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
     ],
     "trees": [
       {
@@ -33926,7 +33926,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -33987,7 +33987,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -34084,7 +34084,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -34201,7 +34201,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -34262,7 +34262,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -34359,7 +34359,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -34372,7 +34372,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -34479,7 +34479,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -34538,7 +34538,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -34599,7 +34599,7 @@ M  END
     "mf": "C3H8OS",
     "minSteps": 1,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     ],
     "trees": [
       {
@@ -34651,7 +34651,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -34663,9 +34663,9 @@ M  END
     "mf": "C4H10OS",
     "minSteps": 4,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -34725,7 +34725,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
             ],
@@ -34773,7 +34773,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -34785,13 +34785,13 @@ M  END
     "mf": "C4H11OS(+)",
     "minSteps": 7,
     "reactions": [
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
     ],
     "trees": [
       {
@@ -34908,7 +34908,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -34969,7 +34969,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -35066,7 +35066,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -35183,7 +35183,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "SH to SMe",
-                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                  "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                 },
               },
               {
@@ -35244,7 +35244,7 @@ M  END
                         },
                         "reaction": {
                           "Label": "SH to SMe",
-                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
+                          "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
                         },
                       },
                     ],
@@ -35341,7 +35341,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
     ],
@@ -35354,7 +35354,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [
@@ -35461,7 +35461,7 @@ M  END
         },
         "reaction": {
           "Label": "OH by SH",
-          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+          "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
         },
       },
       {
@@ -35520,7 +35520,7 @@ M  END
                 },
                 "reaction": {
                   "Label": "OH by SH",
-                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+                  "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
                 },
               },
             ],
@@ -35647,7 +35647,7 @@ M  END
     "minSteps": 3,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
-      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
+      "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
     "trees": [

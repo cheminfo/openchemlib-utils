@@ -2,27 +2,37 @@
   "name": "openchemlib-utils",
   "version": "4.1.0",
   "description": "Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs",
-  "main": "lib/index.js",
-  "module": "src/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib-esm/index.js",
   "files": [
+    "src",
     "lib",
-    "src"
+    "lib-esm"
   ],
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs && cheminfo-build --entry src/index.js --root OCLUtils",
+    "build": "npm run tsc-cjs && cheminfo-build --entry lib/index.js --root OCLUtils",
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf lib lib-esm",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
+    "prepack": "npm run tsc",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-    "prepack": "rollup -c --bundleConfigAsCjs",
-    "test": "npm run test-only && npm run eslint && npm run prettier",
-    "test-only": "jest --coverage"
+    "test": "npm run test-only && npm run eslint && npm run prettier && npm run check-types",
+    "test-only": "vitest run --coverage",
+    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm",
+    "tsc-cjs": "tsc --project tsconfig.cjs.json",
+    "tsc-esm": "tsc --project tsconfig.esm.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cheminfo/openchemlib-utils.git"
   },
-  "keywords": [],
+  "keywords": [
+    "openchemlib extended",
+    "chemistry tools",
+    "open chemistry"
+  ],
   "author": "Luc Patiny",
   "license": "MIT",
   "bugs": {
@@ -30,18 +40,16 @@
   },
   "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
-    "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.5",
+    "@types/node": "^20.4.8",
+    "@vitest/coverage-v8": "^0.34.1",
     "cheminfo-build": "^1.2.0",
     "eslint": "^8.46.0",
-    "eslint-config-cheminfo": "^9.0.2",
-    "eslint-plugin-import": "^2.28.0",
-    "jest": "^29.6.2",
-    "jest-matcher-deep-close-to": "^3.0.2",
+    "eslint-config-cheminfo-typescript": "^12.0.4",
     "openchemlib": "^8.3.0",
-    "prettier": "^3.0.0",
-    "rollup": "^3.27.0"
+    "prettier": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.1"
   },
   "dependencies": {
     "atom-sorter": "^2.0.0",

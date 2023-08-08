@@ -1,11 +1,12 @@
 import OCL from 'openchemlib';
+import { expect, it, describe } from 'vitest';
 
 import { getHoseCodesForPath } from '../getHoseCodesForPath';
 
 describe('getHoseCodesForPath', () => {
   it('CC(C)CCCC', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC(C)CCCC');
-    let path = getHoseCodesForPath(molecule, 0, 4, 3);
+    const molecule = OCL.Molecule.fromSmiles('CC(C)CCCC');
+    const path = getHoseCodesForPath(molecule, 0, 4, 3);
 
     path.hoses.forEach((hose) => {
       hose.oclID = escape(hose.oclID);
@@ -25,9 +26,9 @@ describe('getHoseCodesForPath', () => {
   });
 
   it('CC with hydrogens', () => {
-    let molecule = OCL.Molecule.fromSmiles('CC');
+    const molecule = OCL.Molecule.fromSmiles('CC');
     molecule.addImplicitHydrogens();
-    let path = getHoseCodesForPath(molecule, 6, 7, 3);
+    const path = getHoseCodesForPath(molecule, 6, 7, 3);
 
     path.hoses.forEach((hose) => {
       hose.oclID = escape(hose.oclID);
@@ -48,9 +49,9 @@ describe('getHoseCodesForPath', () => {
   });
 
   it('CCO', () => {
-    let molecule = OCL.Molecule.fromSmiles('CCO');
+    const molecule = OCL.Molecule.fromSmiles('CCO');
 
-    let path = getHoseCodesForPath(molecule, 1, 2, 3);
+    const path = getHoseCodesForPath(molecule, 1, 2, 3);
 
     path.hoses.forEach((hose) => {
       hose.oclID = escape(hose.oclID);
