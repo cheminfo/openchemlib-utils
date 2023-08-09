@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.1](https://github.com/cheminfo/openchemlib-utils/compare/v4.2.0...v4.2.1) (2023-08-09)
+
+
+### Bug Fixes
+
+* return correctly diaIDs=undefined in getHoseCodesAndInfo=false ([4328552](https://github.com/cheminfo/openchemlib-utils/commit/43285528c51a7298e2270bee64ca73d1e733df92))
+
 ## [4.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.1.0...v4.2.0) (2023-08-08)
 
 
