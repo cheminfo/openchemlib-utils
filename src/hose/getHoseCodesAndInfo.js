@@ -20,7 +20,11 @@ import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js'
  * @returns
  */
 export function getHoseCodesAndInfo(molecule, options = {}) {
-  const { minSphereSize, maxSphereSize, calculateDiastereotopicIDs } = options;
+  const {
+    minSphereSize,
+    maxSphereSize,
+    calculateDiastereotopicIDs = true,
+  } = options;
   const { Molecule } = molecule.getOCL();
   molecule = molecule.getCompactCopy();
   // this will force reordering of the hydrogens to the end, just to have the same order as in the molfile
@@ -32,7 +36,6 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
   const newMolfileWithH = molecule.toMolfile();
 
   const symmetryRanks = getSymmetryRanks(molecule);
-
   const cache = {};
   const hoses = [];
   const diaIDs = [];
@@ -44,7 +47,6 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
       hoses.push(cache[rank].hose);
       continue;
     }
-
     const tempMolecule = molecule.getCompactCopy();
     tagAtom(tempMolecule, i);
 
@@ -71,7 +73,7 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
     molfile: newMolfile,
     molfileWithH: newMolfileWithH,
     hoses,
-    diaIDs,
+    diaIDs: calculateDiastereotopicIDs ? diaIDs : undefined,
     moleculeWithHydrogens: molecule,
     distanceMatrix,
   };
