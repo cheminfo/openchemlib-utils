@@ -1,0 +1,92 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DiastereotopicMolecule > ethanol 1`] = `
+[
+  {
+    "heavyAtom": undefined,
+    "hydrogens": [
+      "gCaHHIeIZ\`GzQ@bUP",
+    ],
+    "oclID": "eMHAIhFHhOtdGrj@",
+  },
+  {
+    "heavyAtom": undefined,
+    "hydrogens": [
+      "gCaHLIeIZ\`GzQ@bUP",
+    ],
+    "oclID": "eMHAIhFIhOtdWBj@",
+  },
+  {
+    "heavyAtom": undefined,
+    "hydrogens": [
+      "gCaHDIeIjiJ@RHDRj@",
+    ],
+    "oclID": "eMHAIhFJhOtdgBj@",
+  },
+  {
+    "heavyAtom": "eMHAIhFIhOtdWBj@",
+    "hydrogens": [],
+    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+  },
+  {
+    "heavyAtom": "eMHAIhFHhOtdGrj@",
+    "hydrogens": [],
+    "oclID": "gCaHHIeIZ\`GzQ@bUP",
+  },
+  {
+    "heavyAtom": "eMHAIhFIhOtdWBj@",
+    "hydrogens": [],
+    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+  },
+  {
+    "heavyAtom": "eMHAIhFIhOtdWBj@",
+    "hydrogens": [],
+    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+  },
+  {
+    "heavyAtom": "eMHAIhFJhOtdgBj@",
+    "hydrogens": [],
+    "oclID": "gCaHDIeIjiJ@RHDRj@",
+  },
+  {
+    "heavyAtom": "eMHAIhFJhOtdgBj@",
+    "hydrogens": [],
+    "oclID": "gCaHDIeIjiJ@RHDRj@",
+  },
+]
+`;
+
+exports[`DiastereotopicMolecule > ethanol 2`] = `
+[
+  {
+    "atomicNo": 6,
+    "heavyAtom": undefined,
+    "hydrogens": [
+      "gCaHLIeIZ\`GzQ@bUP",
+    ],
+    "oclID": "eMHAIhFIhOtdWBj@",
+  },
+  {
+    "atomicNo": 6,
+    "heavyAtom": undefined,
+    "hydrogens": [
+      "gCaHDIeIjiJ@RHDRj@",
+    ],
+    "oclID": "eMHAIhFJhOtdgBj@",
+  },
+  {
+    "atomicNo": 8,
+    "heavyAtom": undefined,
+    "hydrogens": [
+      "gCaHHIeIZ\`GzQ@bUP",
+    ],
+    "oclID": "eMHAIhFHhOtdGrj@",
+  },
+  {
+    "atomicNo": 1,
+    "heavyAtom": "eMHAIhFHhOtdGrj@",
+    "hydrogens": [],
+    "oclID": "gCaHHIeIZ\`GzQ@bUP",
+  },
+]
+`;
