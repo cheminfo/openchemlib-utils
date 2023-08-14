@@ -16,19 +16,21 @@ export * from './hose/getHoseCodesForPath';
 export * from './util/combineSmiles';
 export * from './util/getAtomsInfo';
 export * from './util/getConnectivityMatrix';
-export * from './util/makeRacemic';
-export * from './util/tagAtom';
-export * from './util/isCsp3';
+export * from './util/getImplicitHydrogens';
 export * from './util/getMF';
 export * from './util/getCharge';
 export * from './util/getProperties';
 export * from './util/getAtoms';
+export * from './util/isCsp3';
+export * from './util/makeRacemic';
 export * from './util/nbOH';
 export * from './util/nbCOOH';
 export * from './util/nbCHO';
 export * from './util/nbNH2';
 export * from './util/nbCN';
 export * from './util/nbLabileH';
+export * from './util/tagAtom';
+export * from './util/toggleHydrogens'
 
 export * from './path/getPathsInfo';
 export * from './path/getPathAndTorsion';
