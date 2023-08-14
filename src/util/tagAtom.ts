@@ -1,11 +1,11 @@
+import type { Molecule } from 'openchemlib';
+
 import { getXAtomicNumber } from './getXAtomicNumber';
 
 /**
  * Tag an atom to be able to visualize it
- * @param {import('openchemlib').Molecule} molecule
- * @param {number} iAtom
  */
-export function tagAtom(molecule, iAtom) {
+export function tagAtom(molecule: Molecule, iAtom: number) {
   const customLabel = `${molecule.getAtomLabel(iAtom)}*`;
   molecule.setAtomCustomLabel(iAtom, customLabel);
   if (molecule.getAtomicNo(iAtom) === 1) {

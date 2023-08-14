@@ -1,9 +1,9 @@
 import type { Molecule } from 'openchemlib';
 
-import { getGroupedDiastereotopicAtomIDs } from '../diastereotopic/getGroupedDiastereotopicAtomIDs.js';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.js';
+import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.js';
 import { getDiaIDsAndH } from './getDiaIDsAndH.js';
 import {
   getHeterotopicSymmetryRanks,
@@ -54,6 +54,7 @@ export class AdvancedMolecule {
     const advancedMolecule = new AdvancedMolecule(molecule);
     advancedMolecule.cache = {
       canonizedDiaIDs: this.cache.canonizedDiaIDs,
+      canonizedHoseCodes: this.cache.canonizedHoseCodes,
     };
     return advancedMolecule;
   }
@@ -83,10 +84,31 @@ export class AdvancedMolecule {
     return diaIDs;
   }
 
-  get canonizedDiaIDs() {
+  /**
+   * This is related to the current moleculeWithH. The order is NOT canonized
+   */
+  get hoseCodes() {
+    if (this.cache.hoseCodes) return this.cache.hoseCodes;
+    const hoseCodes = [];
+    for (let i = 0; i < this.moleculeWithH.getAllAtoms(); i++) {
+      hoseCodes.push(this.canonizedHoseCodes[this.finalRanks[i]]);
+    }
+    this.cache.hoseCodes = hoseCodes;
+    return hoseCodes;
+  }
+
+  private get canonizedDiaIDs() {
     if (this.cache.canonizedDiaIDs) return this.cache.canonizedDiaIDs;
     this.cache.canonizedDiaIDs = getCanonizedDiaIDs(this);
     return this.cache.canonizedDiaIDs;
+  }
+
+  private get canonizedHoseCodes() {
+    if (this.cache.canonizedHoseCodes) {
+      return this.cache.canonizedHoseCodes;
+    }
+    this.cache.canonizedHoseCodes = getCanonizedHoseCodes(this);
+    return this.cache.canonizedHoseCodes;
   }
 
   /**
