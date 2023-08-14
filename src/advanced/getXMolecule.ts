@@ -1,4 +1,5 @@
 import type { Molecule } from 'openchemlib';
+
 import { getXAtomicNumber } from '../util/getXAtomicNumber.js';
 
 /**

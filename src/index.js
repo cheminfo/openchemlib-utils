@@ -1,6 +1,4 @@
-
-
-export * from './advanced/AdvancedMolecule'
+export * from './advanced/AdvancedMolecule';
 /*
 export * from './diastereotopic/ensureHeterotopicChiralBonds';
 export * from './diastereotopic/getDiastereotopicAtomIDs';
@@ -35,7 +33,7 @@ export * from './util/nbNH2';
 export * from './util/nbCN';
 export * from './util/nbLabileH';
 export * from './util/tagAtom';
-export * from './util/toggleHydrogens'
+export * from './util/toggleHydrogens';
 
 export * from './path/getPathsInfo';
 export * from './path/getPathAndTorsion';

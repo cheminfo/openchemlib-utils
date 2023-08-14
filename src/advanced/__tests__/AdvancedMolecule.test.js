@@ -27,7 +27,7 @@ describe('AdvancedMolecule', () => {
     ]);
     const diaIDsAndH = advancedMolecule.diaIDsAndH;
     expect(diaIDsAndH).toHaveLength(9);
-    expect(diaIDsAndH).toMatchSnapshot()
+    expect(diaIDsAndH).toMatchSnapshot();
     const molfile = advancedMolecule.toMolfile();
     expect(getMolfileAtoms(molfile)).toStrictEqual(['O', 'C', 'C', 'H']);
     const molfileWithH = advancedMolecule.toMolfileWithH();
@@ -43,9 +43,8 @@ describe('AdvancedMolecule', () => {
       'H',
     ]);
 
-
     function getNewMolecule() {
-      const molecule = Molecule.fromSmiles('CCCC')
+      const molecule = Molecule.fromSmiles('CCCC');
       molecule.setAtomicNo(2, 8);
       molecule.setAtomicNo(3, 1);
       return Molecule.fromMolfile(molecule.toMolfile());
@@ -55,49 +54,48 @@ describe('AdvancedMolecule', () => {
     expect(newAdvancedMolecule.diaIDs).toHaveLength(9);
     const groupedDiaIDs = newAdvancedMolecule.getGroupedDiastereotopicAtomIDs();
     expect(groupedDiaIDs).toHaveLength(6);
-    expect(groupedDiaIDs).toMatchSnapshot()
+    expect(groupedDiaIDs).toMatchSnapshot();
   });
 
   it('ethanol toggle implicit H', () => {
     const molecule = Molecule.fromSmiles('CCO');
-    const advancedMolecule = new AdvancedMolecule(molecule)
-    let atoms = getAtomsAndDiaInfo(advancedMolecule)
-    expect(atoms).toHaveLength(3)
-    expect(atoms).toMatchSnapshot()
+    const advancedMolecule = new AdvancedMolecule(molecule);
+    let atoms = getAtomsAndDiaInfo(advancedMolecule);
+    expect(atoms).toHaveLength(3);
+    expect(atoms).toMatchSnapshot();
 
-    toggleHydrogens(molecule, 0)
+    toggleHydrogens(molecule, 0);
 
-    let advancedMolecule2 = advancedMolecule.fromMolecule(molecule)
-    atoms = getAtomsAndDiaInfo(advancedMolecule2)
-    expect(atoms).toHaveLength(6)
-    expect(atoms).toMatchSnapshot()
+    let advancedMolecule2 = advancedMolecule.fromMolecule(molecule);
+    atoms = getAtomsAndDiaInfo(advancedMolecule2);
+    expect(atoms).toHaveLength(6);
+    expect(atoms).toMatchSnapshot();
 
-    toggleHydrogens(molecule, 1)
-    toggleHydrogens(molecule, 0)
+    toggleHydrogens(molecule, 1);
+    toggleHydrogens(molecule, 0);
 
-    advancedMolecule2 = advancedMolecule.fromMolecule(molecule)
-    atoms = getAtomsAndDiaInfo(advancedMolecule2)
-    expect(atoms).toHaveLength(5)
-    expect(atoms).toMatchSnapshot()
+    advancedMolecule2 = advancedMolecule.fromMolecule(molecule);
+    atoms = getAtomsAndDiaInfo(advancedMolecule2);
+    expect(atoms).toHaveLength(5);
+    expect(atoms).toMatchSnapshot();
 
     const hoses = advancedMolecule2.hoseCodes;
     expect(hoses).toHaveLength(9);
-    expect(hoses).toMatchSnapshot()
+    expect(hoses).toMatchSnapshot();
     expect(hoses[3]).toStrictEqual(hoses[4]);
-    expect(hoses).toMatchSnapshot()
-  })
-
+    expect(hoses).toMatchSnapshot();
+  });
 
   it('2-chlorobutane', () => {
     const molecule = Molecule.fromSmiles('C[C@H](Cl)CC');
     const advancedMolecule = new AdvancedMolecule(molecule);
-    toggleHydrogens(molecule, 0)
-    toggleHydrogens(molecule, 1)
-    toggleHydrogens(molecule, 0)
-    let advancedMolecule2 = advancedMolecule.fromMolecule(molecule)
-    let atoms = getAtomsAndDiaInfo(advancedMolecule2)
-    expect(atoms).toHaveLength(6)
-    expect(atoms).toMatchSnapshot()
+    toggleHydrogens(molecule, 0);
+    toggleHydrogens(molecule, 1);
+    toggleHydrogens(molecule, 0);
+    let advancedMolecule2 = advancedMolecule.fromMolecule(molecule);
+    let atoms = getAtomsAndDiaInfo(advancedMolecule2);
+    expect(atoms).toHaveLength(6);
+    expect(atoms).toMatchSnapshot();
   });
 
   it('cyclosporin', () => {
@@ -106,7 +104,7 @@ describe('AdvancedMolecule', () => {
       'utf8',
     );
     const molecule = Molecule.fromMolfile(molfile);
-    const advancedMolecule = new AdvancedMolecule(molecule)
+    const advancedMolecule = new AdvancedMolecule(molecule);
     let first = Date.now();
     expect(advancedMolecule.diaIDs).toHaveLength(196);
     expect(advancedMolecule.diaIDsAndH).toHaveLength(196);
@@ -147,13 +145,13 @@ function getMolfileAtomMapNo(molfile) {
 
 function getAtomsAndDiaInfo(advancedMolecule) {
   const molecule = advancedMolecule.molecule;
-  const atomsAndDia = []
+  const atomsAndDia = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     const atom = {
       atomicNo: molecule.getAtomicNo(i),
-      ...advancedMolecule.diaIDsAndH[i]
-    }
+      ...advancedMolecule.diaIDsAndH[i],
+    };
     atomsAndDia.push(atom);
   }
-  return atomsAndDia
+  return atomsAndDia;
 }
