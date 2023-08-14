@@ -133,6 +133,7 @@ function getMolfileAtoms(molfile) {
   return atoms;
 }
 
+// eslint-disable-next-line no-unused-vars
 function getMolfileAtomMapNo(molfile) {
   const lines = molfile.split(/\r?\n/);
   const atomMapNos = [];
