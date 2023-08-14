@@ -278,3 +278,139 @@ exports[`AdvancedMolecule > ethanol toggle implicit H 3`] = `
   },
 ]
 `;
+
+exports[`AdvancedMolecule > ethanol toggle implicit H 4`] = `
+[
+  [
+    "fH@NJ\`Rapj\`",
+    "eF@Hp\\\\QP^cotdGBj@",
+    "eMHAIhNIhOMcwzRKaU@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+  ],
+  [
+    "fH@NJ\`Rapj\`",
+    "eMHAIhNJhOUgzRSaU@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+  ],
+  [
+    "fI@GEP_iP~UP",
+    "eFHBLGDTGhc}IA|j\`",
+    "eMHAIhNHhOIEgzRCyU@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFJHfXp_tdDRj@",
+    "eMJHfTf\`iHHeT",
+    "gCaHHIeIZ\`OhlRHDRj@",
+    "gCaHHIeIZ\`GzQ@bUP",
+  ],
+]
+`;
+
+exports[`AdvancedMolecule > ethanol toggle implicit H 5`] = `
+[
+  [
+    "fH@NJ\`Rapj\`",
+    "eF@Hp\\\\QP^cotdGBj@",
+    "eMHAIhNIhOMcwzRKaU@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+  ],
+  [
+    "fH@NJ\`Rapj\`",
+    "eMHAIhNJhOUgzRSaU@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+  ],
+  [
+    "fI@GEP_iP~UP",
+    "eFHBLGDTGhc}IA|j\`",
+    "eMHAIhNHhOIEgzRCyU@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFJHfXp_tdDRj@",
+    "eMJHfTf\`iHHeT",
+    "gCaHHIeIZ\`OhlRHDRj@",
+    "gCaHHIeIZ\`GzQ@bUP",
+  ],
+]
+`;

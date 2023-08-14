@@ -4,7 +4,7 @@ import { join } from 'path';
 import { Molecule } from 'openchemlib';
 import { expect, it, describe } from 'vitest';
 
-import { getHoseCodes } from '../getHoseCodes.js';
+import { getHoseCodes } from '../getHoseCodes';
 
 describe('getHoseCodes', () => {
   it('methane', () => {

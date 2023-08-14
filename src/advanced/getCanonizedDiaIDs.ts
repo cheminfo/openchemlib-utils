@@ -1,5 +1,5 @@
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom.js';
+import { tagAtom } from '../util/tagAtom';
 
 import { AdvancedMolecule } from './AdvancedMolecule.js';
 

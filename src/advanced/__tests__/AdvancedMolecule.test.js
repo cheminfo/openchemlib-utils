@@ -79,6 +79,12 @@ describe('AdvancedMolecule', () => {
     atoms = getAtomsAndDiaInfo(advancedMolecule2)
     expect(atoms).toHaveLength(5)
     expect(atoms).toMatchSnapshot()
+
+    const hoses = advancedMolecule2.hoseCodes;
+    expect(hoses).toHaveLength(9);
+    expect(hoses).toMatchSnapshot()
+    expect(hoses[3]).toStrictEqual(hoses[4]);
+    expect(hoses).toMatchSnapshot()
   })
 
 
@@ -102,20 +108,17 @@ describe('AdvancedMolecule', () => {
     const molecule = Molecule.fromMolfile(molfile);
     const advancedMolecule = new AdvancedMolecule(molecule)
     let first = Date.now();
-    const diaIDs = advancedMolecule.diaIDs;
-    const diaIDsAndH = advancedMolecule.diaIDsAndH;
+    expect(advancedMolecule.diaIDs).toHaveLength(196);
+    expect(advancedMolecule.diaIDsAndH).toHaveLength(196);
+    expect(advancedMolecule.hoseCodes).toHaveLength(196);
     first = Date.now() - first;
-    expect(diaIDs).toHaveLength(196);
-    expect(diaIDsAndH).toHaveLength(196);
     const copy = advancedMolecule.fromMolecule(molecule);
     let second = Date.now();
-    const diaIDs2 = copy.diaIDs;
-    const diaIDsAndH2 = copy.diaIDsAndH;
+    expect(copy.diaIDs).toHaveLength(196);
+    expect(copy.diaIDsAndH).toHaveLength(196);
+    expect(copy.hoseCodes).toHaveLength(196);
     second = Date.now() - second;
-    expect(diaIDs2).toHaveLength(196);
-    expect(diaIDsAndH2).toHaveLength(196);
     expect(first).toBeGreaterThan(second * 5);
-
   });
 });
 
