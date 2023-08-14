@@ -109,34 +109,55 @@ exports[`AdvancedMolecule > ethanol 1`] = `
 exports[`AdvancedMolecule > ethanol 2`] = `
 [
   {
-    "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
-      "gCaHLIeIZ\`GzQ@bUP",
+    "atomLabel": "C",
+    "atoms": [
+      0,
     ],
+    "counter": 1,
     "oclID": "eMHAIhFIhOtdWBj@",
   },
   {
-    "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
-      "gCaHDIeIjiJ@RHDRj@",
+    "atomLabel": "C",
+    "atoms": [
+      1,
     ],
+    "counter": 1,
     "oclID": "eMHAIhFJhOtdgBj@",
   },
   {
-    "atomicNo": 8,
-    "heavyAtom": undefined,
-    "hydrogens": [
-      "gCaHHIeIZ\`GzQ@bUP",
+    "atomLabel": "O",
+    "atoms": [
+      2,
     ],
+    "counter": 1,
     "oclID": "eMHAIhFHhOtdGrj@",
   },
   {
-    "atomicNo": 1,
-    "heavyAtom": "eMHAIhFHhOtdGrj@",
-    "hydrogens": [],
+    "atomLabel": "H",
+    "atoms": [
+      3,
+    ],
+    "counter": 1,
     "oclID": "gCaHHIeIZ\`GzQ@bUP",
+  },
+  {
+    "atomLabel": "H",
+    "atoms": [
+      4,
+      5,
+      6,
+    ],
+    "counter": 3,
+    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+  },
+  {
+    "atomLabel": "H",
+    "atoms": [
+      7,
+      8,
+    ],
+    "counter": 2,
+    "oclID": "gCaHDIeIjiJ@RHDRj@",
   },
 ]
 `;
