@@ -120,7 +120,7 @@ export class AdvancedMolecule {
 
   get diaIDsAndH() {
     if (this.cache.diaIDsAndH) return this.cache.diaIDsAndH;
-    this.cache.diaIDsAndH = getDiaIDsAndH(this);
+    this.cache.diaIDsAndH = getDiaIDsAndH(this, this.canonizedDiaIDs);
     return this.cache.diaIDsAndH;
   }
 

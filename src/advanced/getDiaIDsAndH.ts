@@ -1,7 +1,9 @@
 import { AdvancedMolecule, DiaIDAndH } from './AdvancedMolecule.js';
 
-export function getDiaIDsAndH(diaMol: AdvancedMolecule) {
-  const canonizedDiaIDs = diaMol.canonizedDiaIDs;
+export function getDiaIDsAndH(
+  diaMol: AdvancedMolecule,
+  canonizedDiaIDs: string[],
+) {
   const newDiaIDs: DiaIDAndH[] = [];
   const molecule = diaMol.moleculeWithH;
   for (let i = 0; i < canonizedDiaIDs.length; i++) {
