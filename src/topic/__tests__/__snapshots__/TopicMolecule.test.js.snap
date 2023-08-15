@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AdvancedMolecule > 2-chlorobutane 1`] = `
+exports[`TopicMolecule > 2-chlorobutane 1`] = `
 [
   {
     "atomicNo": 6,
@@ -50,7 +50,7 @@ exports[`AdvancedMolecule > 2-chlorobutane 1`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol 1`] = `
+exports[`TopicMolecule > ethanol 1`] = `
 [
   {
     "heavyAtom": undefined,
@@ -106,7 +106,7 @@ exports[`AdvancedMolecule > ethanol 1`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol 2`] = `
+exports[`TopicMolecule > ethanol 2`] = `
 [
   {
     "atomLabel": "C",
@@ -162,7 +162,7 @@ exports[`AdvancedMolecule > ethanol 2`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol toggle implicit H 1`] = `
+exports[`TopicMolecule > ethanol toggle implicit H 1`] = `
 [
   {
     "atomicNo": 6,
@@ -191,7 +191,7 @@ exports[`AdvancedMolecule > ethanol toggle implicit H 1`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol toggle implicit H 2`] = `
+exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
 [
   {
     "atomicNo": 6,
@@ -238,7 +238,7 @@ exports[`AdvancedMolecule > ethanol toggle implicit H 2`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol toggle implicit H 3`] = `
+exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
 [
   {
     "atomicNo": 6,
@@ -279,7 +279,7 @@ exports[`AdvancedMolecule > ethanol toggle implicit H 3`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol toggle implicit H 4`] = `
+exports[`TopicMolecule > ethanol toggle implicit H 4`] = `
 [
   [
     "fH@NJ\`Rapj\`",
@@ -347,7 +347,7 @@ exports[`AdvancedMolecule > ethanol toggle implicit H 4`] = `
 ]
 `;
 
-exports[`AdvancedMolecule > ethanol toggle implicit H 5`] = `
+exports[`TopicMolecule > ethanol toggle implicit H 5`] = `
 [
   [
     "fH@NJ\`Rapj\`",

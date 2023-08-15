@@ -13,10 +13,10 @@ import { getMoleculeWithH } from './getMoleculeWithH.js';
 import { getXMolecule } from './getXMolecule.js';
 
 /**
- * This class deals with diastereotopicity information and hose codes
+ * This class deals with topicity information and hose codes
  * It is optimized to avoid recalculation of the same information
  */
-export class AdvancedMolecule {
+export class TopicMolecule {
   private readonly originalMolecule: Molecule;
   molecule: Molecule;
   idCode: string;
@@ -45,27 +45,37 @@ export class AdvancedMolecule {
     return this.molecule;
   }
 
+  /**
+   * Returns a new TopicMolecule but will copy precalculated information
+   * if possible (same idCode). This is very practical when expanding hydrogens
+   * for example.
+   * @param molecule
+   * @returns
+   */
   fromMolecule(molecule: Molecule) {
     const idCode = molecule.getIDCode();
     if (idCode !== this.idCode) {
       // no way for optimisation
-      return new AdvancedMolecule(molecule);
+      return new TopicMolecule(molecule);
     }
-    const advancedMolecule = new AdvancedMolecule(molecule);
-    advancedMolecule.cache = {
+    const topicMolecule = new TopicMolecule(molecule);
+    topicMolecule.cache = {
       canonizedDiaIDs: this.cache.canonizedDiaIDs,
       canonizedHoseCodes: this.cache.canonizedHoseCodes,
     };
-    return advancedMolecule;
+    return topicMolecule;
   }
 
+  /**
+   * Returns a molecule with all the hydrogens added. The order is NOT canonized
+   */
   get moleculeWithH() {
     if (this.cache.moleculeWithH) return this.cache.moleculeWithH;
     this.cache.moleculeWithH = getMoleculeWithH(this.molecule);
     return this.cache.moleculeWithH;
   }
 
-  get xMolecule() {
+  private get xMolecule() {
     if (this.cache.xMolecule) return this.cache.xMolecule;
     this.cache.xMolecule = getXMolecule(this.moleculeWithH);
     return this.cache.xMolecule;

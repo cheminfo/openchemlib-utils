@@ -4,15 +4,15 @@ import { join } from 'path';
 import { Molecule } from 'openchemlib';
 import { describe, it, expect } from 'vitest';
 
-import { toggleHydrogens } from '../../util/toggleHydrogens.ts';
-import { AdvancedMolecule } from '../AdvancedMolecule.ts';
+import { toggleHydrogens } from '../../util/toggleHydrogens';
+import { TopicMolecule } from '../TopicMolecule';
 
-describe('AdvancedMolecule', () => {
+describe('TopicMolecule', () => {
   it('ethanol', () => {
     const molecule = Molecule.fromSmiles('CCCO');
     molecule.setAtomicNo(0, 1);
-    const advancedMolecule = new AdvancedMolecule(molecule);
-    const diaIDs = advancedMolecule.diaIDs;
+    const topicMolecule = new TopicMolecule(molecule);
+    const diaIDs = topicMolecule.diaIDs;
     expect(diaIDs).toHaveLength(9);
     expect(diaIDs).toStrictEqual([
       'eMHAIhFHhOtdGrj@',
@@ -25,12 +25,12 @@ describe('AdvancedMolecule', () => {
       'gCaHDIeIjiJ@\x7FRHDRj@',
       'gCaHDIeIjiJ@\x7FRHDRj@',
     ]);
-    const diaIDsAndH = advancedMolecule.diaIDsAndH;
+    const diaIDsAndH = topicMolecule.diaIDsAndH;
     expect(diaIDsAndH).toHaveLength(9);
     expect(diaIDsAndH).toMatchSnapshot();
-    const molfile = advancedMolecule.toMolfile();
+    const molfile = topicMolecule.toMolfile();
     expect(getMolfileAtoms(molfile)).toStrictEqual(['O', 'C', 'C', 'H']);
-    const molfileWithH = advancedMolecule.toMolfileWithH();
+    const molfileWithH = topicMolecule.toMolfileWithH();
     expect(getMolfileAtoms(molfileWithH)).toStrictEqual([
       'O',
       'C',
@@ -50,7 +50,7 @@ describe('AdvancedMolecule', () => {
       return Molecule.fromMolfile(molecule.toMolfile());
     }
 
-    const newAdvancedMolecule = advancedMolecule.fromMolecule(getNewMolecule());
+    const newAdvancedMolecule = topicMolecule.fromMolecule(getNewMolecule());
     expect(newAdvancedMolecule.diaIDs).toHaveLength(9);
     const groupedDiaIDs = newAdvancedMolecule.getGroupedDiastereotopicAtomIDs();
     expect(groupedDiaIDs).toHaveLength(6);
@@ -59,14 +59,14 @@ describe('AdvancedMolecule', () => {
 
   it('ethanol toggle implicit H', () => {
     const molecule = Molecule.fromSmiles('CCO');
-    const advancedMolecule = new AdvancedMolecule(molecule);
-    let atoms = getAtomsAndDiaInfo(advancedMolecule);
+    const topicMolecule = new TopicMolecule(molecule);
+    let atoms = getAtomsAndDiaInfo(topicMolecule);
     expect(atoms).toHaveLength(3);
     expect(atoms).toMatchSnapshot();
 
     toggleHydrogens(molecule, 0);
 
-    let advancedMolecule2 = advancedMolecule.fromMolecule(molecule);
+    let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     atoms = getAtomsAndDiaInfo(advancedMolecule2);
     expect(atoms).toHaveLength(6);
     expect(atoms).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('AdvancedMolecule', () => {
     toggleHydrogens(molecule, 1);
     toggleHydrogens(molecule, 0);
 
-    advancedMolecule2 = advancedMolecule.fromMolecule(molecule);
+    advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     atoms = getAtomsAndDiaInfo(advancedMolecule2);
     expect(atoms).toHaveLength(5);
     expect(atoms).toMatchSnapshot();
@@ -88,11 +88,11 @@ describe('AdvancedMolecule', () => {
 
   it('2-chlorobutane', () => {
     const molecule = Molecule.fromSmiles('C[C@H](Cl)CC');
-    const advancedMolecule = new AdvancedMolecule(molecule);
+    const topicMolecule = new TopicMolecule(molecule);
     toggleHydrogens(molecule, 0);
     toggleHydrogens(molecule, 1);
     toggleHydrogens(molecule, 0);
-    let advancedMolecule2 = advancedMolecule.fromMolecule(molecule);
+    let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     let atoms = getAtomsAndDiaInfo(advancedMolecule2);
     expect(atoms).toHaveLength(6);
     expect(atoms).toMatchSnapshot();
@@ -104,13 +104,13 @@ describe('AdvancedMolecule', () => {
       'utf8',
     );
     const molecule = Molecule.fromMolfile(molfile);
-    const advancedMolecule = new AdvancedMolecule(molecule);
+    const topicMolecule = new TopicMolecule(molecule);
     let first = Date.now();
-    expect(advancedMolecule.diaIDs).toHaveLength(196);
-    expect(advancedMolecule.diaIDsAndH).toHaveLength(196);
-    expect(advancedMolecule.hoseCodes).toHaveLength(196);
+    expect(topicMolecule.diaIDs).toHaveLength(196);
+    expect(topicMolecule.diaIDsAndH).toHaveLength(196);
+    expect(topicMolecule.hoseCodes).toHaveLength(196);
     first = Date.now() - first;
-    const copy = advancedMolecule.fromMolecule(molecule);
+    const copy = topicMolecule.fromMolecule(molecule);
     let second = Date.now();
     expect(copy.diaIDs).toHaveLength(196);
     expect(copy.diaIDsAndH).toHaveLength(196);
@@ -143,13 +143,13 @@ function getMolfileAtomMapNo(molfile) {
   return atomMapNos;
 }
 
-function getAtomsAndDiaInfo(advancedMolecule) {
-  const molecule = advancedMolecule.molecule;
+function getAtomsAndDiaInfo(topicMolecule) {
+  const molecule = topicMolecule.molecule;
   const atomsAndDia = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     const atom = {
       atomicNo: molecule.getAtomicNo(i),
-      ...advancedMolecule.diaIDsAndH[i],
+      ...topicMolecule.diaIDsAndH[i],
     };
     atomsAndDia.push(atom);
   }

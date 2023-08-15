@@ -1,9 +1,9 @@
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom';
+import { tagAtom } from '../util/tagAtom.js';
 
-import { AdvancedMolecule } from './AdvancedMolecule.js';
+import { TopicMolecule } from './TopicMolecule.js';
 
-export function getCanonizedDiaIDs(diaMol: AdvancedMolecule) {
+export function getCanonizedDiaIDs(diaMol: TopicMolecule) {
   const heterotopicSymmetryRanks = diaMol.heterotopicSymmetryRanks;
   const moleculeWithH = diaMol.moleculeWithH;
   const finalRanks = diaMol.finalRanks;

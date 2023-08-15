@@ -1,11 +1,11 @@
 import { getHoseCodesForAtomsInternal } from '../hose/getHoseCodesForAtomsInternal.js';
-import { tagAtom } from '../util/tagAtom';
+import { tagAtom } from '../util/tagAtom.js';
 
-import { AdvancedMolecule } from './AdvancedMolecule.js';
 import { HoseCodesOptions } from './HoseCodesOptions.js';
+import { TopicMolecule } from './TopicMolecule.js';
 
 export function getCanonizedHoseCodes(
-  diaMol: AdvancedMolecule,
+  diaMol: TopicMolecule,
   options: HoseCodesOptions = {},
 ) {
   const heterotopicSymmetryRanks = diaMol.heterotopicSymmetryRanks;

@@ -1,4 +1,4 @@
-export * from './advanced/AdvancedMolecule';
+export * from './topic/TopicMolecule';
 /*
 export * from './diastereotopic/ensureHeterotopicChiralBonds';
 export * from './diastereotopic/getDiastereotopicAtomIDs';
