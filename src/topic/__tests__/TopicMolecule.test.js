@@ -25,9 +25,9 @@ describe('TopicMolecule', () => {
       'gCaHDIeIjiJ@\x7FRHDRj@',
       'gCaHDIeIjiJ@\x7FRHDRj@',
     ]);
-    const diaIDsAndH = topicMolecule.diaIDsAndH;
-    expect(diaIDsAndH).toHaveLength(9);
-    expect(diaIDsAndH).toMatchSnapshot();
+    const diaIDsAndInfo = topicMolecule.diaIDsAndInfo;
+    expect(diaIDsAndInfo).toHaveLength(9);
+    expect(diaIDsAndInfo).toMatchSnapshot();
     const molfile = topicMolecule.toMolfile();
     expect(getMolfileAtoms(molfile)).toStrictEqual(['O', 'C', 'C', 'H']);
     const molfileWithH = topicMolecule.toMolfileWithH();
@@ -56,6 +56,48 @@ describe('TopicMolecule', () => {
     expect(groupedDiaIDs).toHaveLength(6);
     expect(groupedDiaIDs).toMatchSnapshot();
   });
+
+
+  it('mapping to original molecule', () => {
+    const molecule = Molecule.fromSmiles('CCCOC');
+    for (let i = 0; i < molecule.getAllAtoms(); i++) {
+      molecule.setAtomMapNo(i, i + 1, false);
+    }
+    molecule.setAtomicNo(0, 1);
+    molecule.setAtomicNo(4, 1);
+
+    const topicMolecule1 = new TopicMolecule(molecule);
+    const molfile = topicMolecule1.toMolfile()
+
+    // imagine we are in the editor
+    const molecule2 = Molecule.fromMolfile(molfile)
+    toggleHydrogens(molecule2, 2)
+    toggleHydrogens(molecule2, 0)
+    molecule2.setAtomicNo(0, 1)
+    const topicMolecule2 = new TopicMolecule(molecule2)
+
+    const diaIDs1 = topicMolecule1.diaIDsAndInfo;
+    const diaIDs2 = topicMolecule2.diaIDsAndInfo.filter(diaID => diaID.atomMapNo);
+
+    const mapping = {}
+    for (const diaID2 of diaIDs2) {
+      const newIDCode = diaID2.idCode
+      const oldIDCode = diaIDs1.find(diaID => diaID.atomMapNo === diaID2.atomMapNo).idCode
+      if (oldIDCode in mapping) {
+        if (mapping[oldIDCode] !== newIDCode) {
+          mapping[oldIDCode] = undefined
+        }
+      } else {
+        mapping[oldIDCode] = newIDCode
+      }
+    }
+    expect(mapping).toStrictEqual({
+      'eMHAIhFJhOtdgBj@': 'eF@HpLQP_iHNET',
+      'eMHAIhFIhOtdWBj@': 'eF@HpLQP_iHNET',
+      'eMHAIhFHhOtdGrj@': 'eMBBYRZA~d`bUP',
+      'gCaHLIeIZ`GzQ@bUP': 'eMBBYRZA~d`bUP'
+    })
+  })
 
   it('ethanol toggle implicit H', () => {
     const molecule = Molecule.fromSmiles('CCO');
@@ -107,13 +149,13 @@ describe('TopicMolecule', () => {
     const topicMolecule = new TopicMolecule(molecule);
     let first = Date.now();
     expect(topicMolecule.diaIDs).toHaveLength(196);
-    expect(topicMolecule.diaIDsAndH).toHaveLength(196);
+    expect(topicMolecule.diaIDsAndInfo).toHaveLength(196);
     expect(topicMolecule.hoseCodes).toHaveLength(196);
     first = Date.now() - first;
     const copy = topicMolecule.fromMolecule(molecule);
     let second = Date.now();
     expect(copy.diaIDs).toHaveLength(196);
-    expect(copy.diaIDsAndH).toHaveLength(196);
+    expect(copy.diaIDsAndInfo).toHaveLength(196);
     expect(copy.hoseCodes).toHaveLength(196);
     second = Date.now() - second;
     expect(first).toBeGreaterThan(second * 5);
@@ -149,7 +191,7 @@ function getAtomsAndDiaInfo(topicMolecule) {
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     const atom = {
       atomicNo: molecule.getAtomicNo(i),
-      ...topicMolecule.diaIDsAndH[i],
+      ...topicMolecule.diaIDsAndInfo[i],
     };
     atomsAndDia.push(atom);
   }

@@ -3,49 +3,73 @@
 exports[`TopicMolecule > 2-chlorobutane 1`] = `
 [
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gGPDALzHRVzjbHC}H\`QJh",
     ],
-    "oclID": "gJPHADIMuTe@XbhOtbIpj\`",
+    "heavyAtom": undefined,
+    "idCode": "gJPHADIMuTe@XbhOtbIpj\`",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gGPDALjHRZzjdhC}H\`QJh",
     ],
-    "oclID": "gJPHADILuTe@XdhOtbQpj\`",
+    "heavyAtom": undefined,
+    "idCode": "gJPHADILuTe@XdhOtbQpj\`",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "Cl",
+    "atomMapNo": 0,
     "atomicNo": 17,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": undefined,
-    "hydrogens": [],
-    "oclID": "gJPHADILuTe@X\`hOtbCpfuP",
+    "idCode": "gJPHADILuTe@X\`hOtbCpfuP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gGPDALfHRYjjThU@_iDBIU@",
       "gGPDALfHRYjjThQ@_iDBIU@",
     ],
-    "oclID": "gJPHADILuTe@XbhOtbIpj\`",
+    "heavyAtom": undefined,
+    "idCode": "gJPHADILuTe@XbhOtbIpj\`",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gGPDALfHRUjjfHC}H\`QJh",
     ],
-    "oclID": "gJPHADILuTe@XahOtbEpj\`",
+    "heavyAtom": undefined,
+    "idCode": "gJPHADILuTe@XahOtbEpj\`",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "gJPHADILuTe@XdhOtbQpj\`",
-    "hydrogens": [],
-    "oclID": "gGPDALjHRZzjdhC}H\`QJh",
+    "idCode": "gGPDALjHRZzjdhC}H\`QJh",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 1,
   },
 ]
 `;
@@ -53,55 +77,91 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
 exports[`TopicMolecule > ethanol 1`] = `
 [
   {
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "atomLabel": "O",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFHhOtdGrj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
   },
   {
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFIhOtdWBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
   },
   {
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
-    "oclID": "eMHAIhFJhOtdgBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
-    "hydrogens": [],
-    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFHhOtdGrj@",
-    "hydrogens": [],
-    "oclID": "gCaHHIeIZ\`GzQ@bUP",
+    "idCode": "gCaHHIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
-    "hydrogens": [],
-    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
-    "hydrogens": [],
-    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
-    "hydrogens": [],
-    "oclID": "gCaHDIeIjiJ@RHDRj@",
+    "idCode": "gCaHDIeIjiJ@RHDRj@",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 2,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
-    "hydrogens": [],
-    "oclID": "gCaHDIeIjiJ@RHDRj@",
+    "idCode": "gCaHDIeIjiJ@RHDRj@",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 2,
   },
 ]
 `;
@@ -165,28 +225,40 @@ exports[`TopicMolecule > ethanol 2`] = `
 exports[`TopicMolecule > ethanol toggle implicit H 1`] = `
 [
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFIhOtdWBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
-    "oclID": "eMHAIhFJhOtdgBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "O",
+    "atomMapNo": 0,
     "atomicNo": 8,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFHhOtdGrj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
   },
 ]
 `;
@@ -194,46 +266,70 @@ exports[`TopicMolecule > ethanol toggle implicit H 1`] = `
 exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
 [
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFIhOtdWBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
-    "oclID": "eMHAIhFJhOtdgBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "O",
+    "atomMapNo": 0,
     "atomicNo": 8,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFHhOtdGrj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
-    "hydrogens": [],
-    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
-    "hydrogens": [],
-    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
-    "hydrogens": [],
-    "oclID": "gCaHLIeIZ\`GzQ@bUP",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
   },
 ]
 `;
@@ -241,40 +337,60 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
 exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
 [
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFIhOtdWBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "C",
+    "atomMapNo": 0,
     "atomicNo": 6,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
-    "oclID": "eMHAIhFJhOtdgBj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "O",
+    "atomMapNo": 0,
     "atomicNo": 8,
-    "heavyAtom": undefined,
-    "hydrogens": [
+    "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
-    "oclID": "eMHAIhFHhOtdGrj@",
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
-    "hydrogens": [],
-    "oclID": "gCaHDIeIjiJ@RHDRj@",
+    "idCode": "gCaHDIeIjiJ@RHDRj@",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 2,
   },
   {
+    "atomLabel": "H",
+    "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
-    "hydrogens": [],
-    "oclID": "gCaHDIeIjiJ@RHDRj@",
+    "idCode": "gCaHDIeIjiJ@RHDRj@",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 2,
   },
 ]
 `;

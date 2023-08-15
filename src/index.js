@@ -19,7 +19,7 @@ export * from './hose/getHoseCodesForPath';
 export * from './util/combineSmiles';
 export * from './util/getAtomsInfo';
 export * from './util/getConnectivityMatrix';
-export * from './util/getImplicitHydrogens';
+export * from './util/getImplicitHydrogensCount';
 export * from './util/getMF';
 export * from './util/getCharge';
 export * from './util/getProperties';

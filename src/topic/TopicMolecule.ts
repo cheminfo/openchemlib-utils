@@ -4,13 +4,17 @@ import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.js';
 import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.js';
-import { getDiaIDsAndH } from './getDiaIDsAndH.js';
+import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.js';
 import {
   getHeterotopicSymmetryRanks,
   getFinalRanks,
 } from './getHeterotopicSymmetryRanks.js';
 import { getMoleculeWithH } from './getMoleculeWithH.js';
 import { getXMolecule } from './getXMolecule.js';
+
+interface ToMolfileOptions {
+  version?: 2 | 3;
+}
 
 /**
  * This class deals with topicity information and hose codes
@@ -37,8 +41,12 @@ export class TopicMolecule {
     this.cache = {};
   }
 
-  toMolfile() {
-    return this.molecule.toMolfile();
+  toMolfile(options: ToMolfileOptions = {}) {
+    const { version = 2 } = options;
+    if (version === 2) {
+      return this.molecule.toMolfile();
+    }
+    return this.molecule.toMolfileV3();
   }
 
   getMolecule() {
@@ -128,10 +136,10 @@ export class TopicMolecule {
     return getConnectivityMatrix(this.moleculeWithH, { pathLength: true });
   }
 
-  get diaIDsAndH() {
-    if (this.cache.diaIDsAndH) return this.cache.diaIDsAndH;
-    this.cache.diaIDsAndH = getDiaIDsAndH(this, this.canonizedDiaIDs);
-    return this.cache.diaIDsAndH;
+  get diaIDsAndInfo() {
+    if (this.cache.diaIDsAndInfo) return this.cache.diaIDsAndInfo;
+    this.cache.diaIDsAndInfo = getDiaIDsAndInfo(this, this.canonizedDiaIDs);
+    return this.cache.diaIDsAndInfo;
   }
 
   /**
@@ -163,8 +171,12 @@ export class TopicMolecule {
     return this.cache.finalRanks;
   }
 
-  toMolfileWithH() {
-    return this.moleculeWithH.toMolfile();
+  toMolfileWithH(options: ToMolfileOptions = {}) {
+    const { version = 2 } = options;
+    if (version === 2) {
+      return this.moleculeWithH.toMolfile();
+    }
+    return this.moleculeWithH.toMolfileV3();
   }
 
   /**
@@ -180,9 +192,13 @@ export class TopicMolecule {
 }
 
 export interface DiaIDAndH {
-  oclID: string;
-  hydrogens: string[];
+  idCode: string;
+  attachedHydrogensIDCodes: string[];
+  nbAttachedHydrogens: number;
+  atomLabel: string;
+  nbEquivalentAtoms: number;
   heavyAtom: string | undefined;
+  atomMapNo: number | undefined;
 }
 
 export interface GroupedDiaIDsOptions {

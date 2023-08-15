@@ -1,17 +1,30 @@
 import { TopicMolecule, DiaIDAndH } from './TopicMolecule.js';
 
-export function getDiaIDsAndH(
+export function getDiaIDsAndInfo(
   diaMol: TopicMolecule,
   canonizedDiaIDs: string[],
 ) {
   const newDiaIDs: DiaIDAndH[] = [];
   const molecule = diaMol.moleculeWithH;
+
+  const counts: Record<string, number> = {};
+  for (const diaID of canonizedDiaIDs) {
+    if (!counts[diaID]) {
+      counts[diaID] = 0;
+    }
+    counts[diaID]++;
+  }
+
   for (let i = 0; i < canonizedDiaIDs.length; i++) {
     const diaID = canonizedDiaIDs[diaMol.finalRanks[i]];
     const newDiaID: DiaIDAndH = {
-      oclID: diaID,
-      hydrogens: [],
+      idCode: diaID,
+      attachedHydrogensIDCodes: [],
+      nbAttachedHydrogens: 0,
+      atomLabel: molecule.getAtomLabel(i),
+      nbEquivalentAtoms: counts[diaID],
       heavyAtom: undefined,
+      atomMapNo: molecule.getAtomMapNo(i),
     };
     if (molecule.getAtomicNo(i) === 1) {
       const atom = molecule.getConnAtom(i, 0);
@@ -20,9 +33,10 @@ export function getDiaIDsAndH(
     for (let j = 0; j < molecule.getAllConnAtoms(i); j++) {
       const atom = molecule.getConnAtom(i, j);
       if (molecule.getAtomicNo(atom) === 1) {
+        newDiaID.nbAttachedHydrogens++;
         const hydrogenDiaID = canonizedDiaIDs[diaMol.finalRanks[atom]];
-        if (!newDiaID.hydrogens.includes(hydrogenDiaID)) {
-          newDiaID.hydrogens.push(hydrogenDiaID);
+        if (!newDiaID.attachedHydrogensIDCodes.includes(hydrogenDiaID)) {
+          newDiaID.attachedHydrogensIDCodes.push(hydrogenDiaID);
         }
       }
     }
