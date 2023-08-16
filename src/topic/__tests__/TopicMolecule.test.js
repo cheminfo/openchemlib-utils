@@ -57,7 +57,6 @@ describe('TopicMolecule', () => {
     expect(groupedDiaIDs).toMatchSnapshot();
   });
 
-
   it('mapping to original molecule', () => {
     const molecule = Molecule.fromSmiles('CCCOC');
     for (let i = 0; i < molecule.getAllAtoms(); i++) {
@@ -67,37 +66,41 @@ describe('TopicMolecule', () => {
     molecule.setAtomicNo(4, 1);
 
     const topicMolecule1 = new TopicMolecule(molecule);
-    const molfile = topicMolecule1.toMolfile()
+    const molfile = topicMolecule1.toMolfile();
 
     // imagine we are in the editor
-    const molecule2 = Molecule.fromMolfile(molfile)
-    toggleHydrogens(molecule2, 2)
-    toggleHydrogens(molecule2, 0)
-    molecule2.setAtomicNo(0, 1)
-    const topicMolecule2 = new TopicMolecule(molecule2)
+    const molecule2 = Molecule.fromMolfile(molfile);
+    toggleHydrogens(molecule2, 2);
+    toggleHydrogens(molecule2, 0);
+    molecule2.setAtomicNo(0, 1);
+    const topicMolecule2 = new TopicMolecule(molecule2);
 
     const diaIDs1 = topicMolecule1.diaIDsAndInfo;
-    const diaIDs2 = topicMolecule2.diaIDsAndInfo.filter(diaID => diaID.atomMapNo);
+    const diaIDs2 = topicMolecule2.diaIDsAndInfo.filter(
+      (diaID) => diaID.atomMapNo,
+    );
 
-    const mapping = {}
+    const mapping = {};
     for (const diaID2 of diaIDs2) {
-      const newIDCode = diaID2.idCode
-      const oldIDCode = diaIDs1.find(diaID => diaID.atomMapNo === diaID2.atomMapNo).idCode
+      const newIDCode = diaID2.idCode;
+      const oldIDCode = diaIDs1.find(
+        (diaID) => diaID.atomMapNo === diaID2.atomMapNo,
+      ).idCode;
       if (oldIDCode in mapping) {
         if (mapping[oldIDCode] !== newIDCode) {
-          mapping[oldIDCode] = undefined
+          mapping[oldIDCode] = undefined;
         }
       } else {
-        mapping[oldIDCode] = newIDCode
+        mapping[oldIDCode] = newIDCode;
       }
     }
     expect(mapping).toStrictEqual({
       'eMHAIhFJhOtdgBj@': 'eF@HpLQP_iHNET',
       'eMHAIhFIhOtdWBj@': 'eF@HpLQP_iHNET',
       'eMHAIhFHhOtdGrj@': 'eMBBYRZA~d`bUP',
-      'gCaHLIeIZ`GzQ@bUP': 'eMBBYRZA~d`bUP'
-    })
-  })
+      'gCaHLIeIZ`GzQ@bUP': 'eMBBYRZA~d`bUP',
+    });
+  });
 
   it('ethanol toggle implicit H', () => {
     const molecule = Molecule.fromSmiles('CCO');
