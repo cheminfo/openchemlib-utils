@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.2.1...v4.3.0) (2023-08-16)
+
+
+### Features
+
+* add getImplicityHydrogensCount and toggleHydrogens ([33ded8d](https://github.com/cheminfo/openchemlib-utils/commit/33ded8d3943a5e1c6ce745cb4d61da9a6db99a74))
+* Create TopicMolecule a class optimised for hoses codes and diastereotopic IDs ([633d618](https://github.com/cheminfo/openchemlib-utils/commit/633d618a793da62b2473c13df60d3c49f179617b))
+* Create TopicMolecule a class optimised for hoses codes and diastereotopic IDs ([633d618](https://github.com/cheminfo/openchemlib-utils/commit/633d618a793da62b2473c13df60d3c49f179617b))
+
 ## [4.2.1](https://github.com/cheminfo/openchemlib-utils/compare/v4.2.0...v4.2.1) (2023-08-09)
 
 
