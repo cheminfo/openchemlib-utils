@@ -5,7 +5,6 @@ export * from './diastereotopic/getDiastereotopicAtomIDs';
 export * from './diastereotopic/getDiastereotopicAtomIDsAndH';
 export * from './diastereotopic/getGroupedDiastereotopicAtomIDs';
 export * from './diastereotopic/getDiastereotopicAtomIDsFromMolfile';
-export * from './diastereotopic/groupDiastereotopicAtomIDs';
 export * from './diastereotopic/toDiastereotopicSVG';
 
 export * from './hose/getHoseCodes';
