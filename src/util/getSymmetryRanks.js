@@ -9,7 +9,7 @@ export function getSymmetryRanks(molecule) {
   const { Molecule } = molecule.getOCL();
   const xAtomNumber = getXAtomicNumber(molecule);
 
-  // most of the molecules have some symetry
+  // most of the molecules have some symmetry
   const internalMolecule = molecule.getCompactCopy();
   for (let i = 0; i < internalMolecule.getAllAtoms(); i++) {
     // hydrogens are not taken into account during canonization, we need to change them with an atom with a valence of 1

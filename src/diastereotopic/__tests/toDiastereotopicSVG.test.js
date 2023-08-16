@@ -8,6 +8,6 @@ describe('toDiastereotopicSVG', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     const svg = toDiastereotopicSVG(molecule);
     expect(svg).toMatchSnapshot();
-    expect(svg).toHaveLength(1028);
+    expect(svg).toHaveLength(1091);
   });
 });
