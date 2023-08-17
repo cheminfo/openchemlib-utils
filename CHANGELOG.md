@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.4.0...v5.0.0) (2023-08-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove non significant digits
+
+### Bug Fixes
+
+* prettier format ([eefbc64](https://github.com/cheminfo/openchemlib-utils/commit/eefbc641e0d2c35f64a9938c0c91aaf434541f3c))
+* remove non significant digits ([3136a95](https://github.com/cheminfo/openchemlib-utils/commit/3136a955700f1aedae4eb8991551a297b0cb9782))
+
 ## [4.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.3.2...v4.4.0) (2023-08-17)
 
 
