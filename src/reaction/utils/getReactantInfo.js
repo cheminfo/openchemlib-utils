@@ -15,7 +15,7 @@ export function getInfo(molecule, moleculesInfo) {
     molfile: molecule.toMolfile(),
     idCode: molecule.getIDCode(),
     mf: getMF(molecule).mf,
-    em: Math.round(molecule.getMolecularFormula().absoluteWeight*1e6)/1e6,
+    em: Math.round(molecule.getMolecularFormula().absoluteWeight * 1e6) / 1e6,
     charge: getCharge(molecule),
   };
   moleculesInfo.set(molecule, reactantInfo);
