@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v4.3.2...v4.4.0) (2023-08-17)
+
+
+### Features
+
+* groupTreesByProducts ([828c02d](https://github.com/cheminfo/openchemlib-utils/commit/828c02d12c9abc3df2a242838d8e8f476edacce8))
+
 ## [4.3.2](https://github.com/cheminfo/openchemlib-utils/compare/v4.3.1...v4.3.2) (2023-08-17)
 
 
