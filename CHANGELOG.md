@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.2](https://github.com/cheminfo/openchemlib-utils/compare/v4.3.1...v4.3.2) (2023-08-17)
+
+
+### Documentation
+
+* correctly build documentation from index.js ([bdc0721](https://github.com/cheminfo/openchemlib-utils/commit/bdc07215bf2d8d94b1075c48163661468b1557e1))
+
 ## [4.3.1](https://github.com/cheminfo/openchemlib-utils/compare/v4.3.0...v4.3.1) (2023-08-17)
 
 
