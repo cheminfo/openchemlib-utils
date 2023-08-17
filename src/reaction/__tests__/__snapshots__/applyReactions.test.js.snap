@@ -17094,7 +17094,7 @@ M  END
   },
   {
     "charge": 2,
-    "em": 147.99603199999999,
+    "em": 147.996032,
     "idCode": "gNpdiQdDHdvTfUjj@@",
     "mf": "C3H9KO2S(+2)",
     "minSteps": 26,
@@ -17147,7 +17147,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17265,7 +17265,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17442,7 +17442,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17666,7 +17666,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17784,7 +17784,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17961,7 +17961,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18185,7 +18185,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18303,7 +18303,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18480,7 +18480,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.99603199999999,
+                                    "em": 147.996032,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -23028,7 +23028,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -23054,7 +23054,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -23749,7 +23749,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -23775,7 +23775,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -24438,7 +24438,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 102.02928700000001,
+                          "em": 102.029287,
                           "idCode": "gGQhhZMBRYRYZj@@",
                           "mf": "C2H7NaO3(+2)",
                           "molfile": "
@@ -24466,7 +24466,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 102.02928700000001,
+                    "em": 102.029287,
                     "flag": false,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -24492,7 +24492,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -24518,7 +24518,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -25181,7 +25181,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 118.00322700000001,
+                          "em": 118.003227,
                           "idCode": "gGQhhZLbRYRYZj@@",
                           "mf": "C2H7KO3(+2)",
                           "molfile": "
@@ -25209,7 +25209,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 118.00322700000001,
+                    "em": 118.003227,
                     "flag": false,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -25235,7 +25235,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -25261,7 +25261,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -26066,7 +26066,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -26092,7 +26092,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -26294,7 +26294,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAbIRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -26320,7 +26320,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAbIRej\`@",
             "mf": "C2H7O3(+)",
@@ -27112,7 +27112,7 @@ M  END
   },
   {
     "charge": 1,
-    "em": 79.03952000000001,
+    "em": 79.03952,
     "idCode": "gJQaAciRej\`@",
     "mf": "C2H7O3(+)",
     "minSteps": 1,
@@ -27125,7 +27125,7 @@ M  END
           {
             "charge": 1,
             "children": [],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": true,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -27225,7 +27225,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -27251,7 +27251,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -27412,7 +27412,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -27521,7 +27521,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -27547,7 +27547,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -27684,7 +27684,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -27793,7 +27793,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -27819,7 +27819,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -27871,7 +27871,7 @@ M  END
   },
   {
     "charge": 3,
-    "em": 103.03711200000001,
+    "em": 103.037112,
     "idCode": "gGQihZMBRYliLmU@@",
     "mf": "C2H8NaO3(+3)",
     "minSteps": 13,
@@ -27906,7 +27906,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.03711200000001,
+                            "em": 103.037112,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -27982,7 +27982,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28017,7 +28017,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.03711200000001,
+                            "em": 103.037112,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -28043,7 +28043,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 102.02928700000001,
+                          "em": 102.029287,
                           "idCode": "gGQhhZMBRYRYZj@@",
                           "mf": "C2H7NaO3(+2)",
                           "molfile": "
@@ -28071,7 +28071,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 102.02928700000001,
+                    "em": 102.029287,
                     "flag": false,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -28097,7 +28097,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28123,7 +28123,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28186,7 +28186,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.03711200000001,
+                            "em": 103.037112,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -28262,7 +28262,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28297,7 +28297,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.03711200000001,
+                            "em": 103.037112,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -28323,7 +28323,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 102.02928700000001,
+                          "em": 102.029287,
                           "idCode": "gGQhhZMBRYRYZj@@",
                           "mf": "C2H7NaO3(+2)",
                           "molfile": "
@@ -28351,7 +28351,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 102.02928700000001,
+                    "em": 102.029287,
                     "flag": false,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -28377,7 +28377,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28403,7 +28403,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28566,7 +28566,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28627,7 +28627,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 118.00322700000001,
+                          "em": 118.003227,
                           "idCode": "gGQhhZLbRYRYZj@@",
                           "mf": "C2H7KO3(+2)",
                           "molfile": "
@@ -28655,7 +28655,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 118.00322700000001,
+                    "em": 118.003227,
                     "flag": false,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -28681,7 +28681,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28707,7 +28707,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28846,7 +28846,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28907,7 +28907,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 118.00322700000001,
+                          "em": 118.003227,
                           "idCode": "gGQhhZLbRYRYZj@@",
                           "mf": "C2H7KO3(+2)",
                           "molfile": "
@@ -28935,7 +28935,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 118.00322700000001,
+                    "em": 118.003227,
                     "flag": false,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -28961,7 +28961,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28987,7 +28987,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29158,7 +29158,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29297,7 +29297,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29323,7 +29323,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29470,7 +29470,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29609,7 +29609,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29635,7 +29635,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29731,7 +29731,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29757,7 +29757,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29839,7 +29839,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAbIRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29865,7 +29865,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAbIRej\`@",
             "mf": "C2H7O3(+)",
@@ -29917,7 +29917,7 @@ M  END
   },
   {
     "charge": 2,
-    "em": 102.02928700000001,
+    "em": 102.029287,
     "idCode": "gGQhhZMBRYRYZj@@",
     "mf": "C2H7NaO3(+2)",
     "minSteps": 3,
@@ -29937,7 +29937,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 102.02928700000001,
+                    "em": 102.029287,
                     "flag": true,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -29963,7 +29963,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29989,7 +29989,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30047,7 +30047,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 102.02928700000001,
+                    "em": 102.029287,
                     "flag": true,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -30155,7 +30155,7 @@ M  END
   },
   {
     "charge": 2,
-    "em": 118.00322700000001,
+    "em": 118.003227,
     "idCode": "gGQhhZLbRYRYZj@@",
     "mf": "C2H7KO3(+2)",
     "minSteps": 3,
@@ -30175,7 +30175,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 118.00322700000001,
+                    "em": 118.003227,
                     "flag": true,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -30201,7 +30201,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30227,7 +30227,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30285,7 +30285,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 118.00322700000001,
+                    "em": 118.003227,
                     "flag": true,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -30447,7 +30447,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952000000001,
+                  "em": 79.03952,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30473,7 +30473,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30663,7 +30663,7 @@ M  END
   },
   {
     "charge": 1,
-    "em": 79.03952000000001,
+    "em": 79.03952,
     "idCode": "gJQaAbIRej\`@",
     "mf": "C2H7O3(+)",
     "minSteps": 1,
@@ -30676,7 +30676,7 @@ M  END
           {
             "charge": 1,
             "children": [],
-            "em": 79.03952000000001,
+            "em": 79.03952,
             "flag": true,
             "idCode": "gJQaAbIRej\`@",
             "mf": "C2H7O3(+)",
@@ -31106,7 +31106,7 @@ M  END
                             ],
                             "reactant": {
                               "charge": 0,
-                              "em": 108.00674000000001,
+                              "em": 108.00674,
                               "idCode": "gJPD@DDHRgj\`@",
                               "mf": "C3H8S2",
                               "molfile": "
@@ -31131,7 +31131,7 @@ M  END
                             },
                           },
                         ],
-                        "em": 108.00674000000001,
+                        "em": 108.00674,
                         "idCode": "gJPD@DDHRgj\`@",
                         "mf": "C3H8S2",
                         "molfile": "
@@ -31228,7 +31228,7 @@ M  END
                       {
                         "charge": 0,
                         "children": [],
-                        "em": 108.00674000000001,
+                        "em": 108.00674,
                         "idCode": "gJPD@DDHRgj\`@",
                         "mf": "C3H8S2",
                         "molfile": "
@@ -31545,7 +31545,7 @@ M  END
             ],
             "reactant": {
               "charge": 1,
-              "em": 63.044605000000004,
+              "em": 63.044605,
               "idCode": "gC\`aAaJRu@@",
               "mf": "C2H7O2(+)",
               "molfile": "
@@ -31594,7 +31594,7 @@ M  END
             ],
             "reactant": {
               "charge": 1,
-              "em": 63.044605000000004,
+              "em": 63.044605,
               "idCode": "gC\`aAaJRu@@",
               "mf": "C2H7O2(+)",
               "molfile": "
@@ -31618,7 +31618,7 @@ M  END
             },
           },
         ],
-        "em": 63.044605000000004,
+        "em": 63.044605,
         "idCode": "gC\`aAaJRu@@",
         "mf": "C2H7O2(+)",
         "molfile": "
@@ -31866,7 +31866,7 @@ M  END
   },
   {
     "charge": 0,
-    "em": 108.00674000000001,
+    "em": 108.00674,
     "idCode": "gJPD@DDHRYj\`@",
     "mf": "C3H8S2",
     "minSteps": 4,
@@ -31887,7 +31887,7 @@ M  END
                   {
                     "charge": 0,
                     "children": [],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": true,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -31992,7 +31992,7 @@ M  END
                   {
                     "charge": 0,
                     "children": [],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": true,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -32146,7 +32146,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -32171,7 +32171,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -32417,7 +32417,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -32442,7 +32442,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -32766,7 +32766,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -32879,7 +32879,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -32904,7 +32904,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -33098,7 +33098,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -33211,7 +33211,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -33236,7 +33236,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -33388,7 +33388,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674000000001,
+                          "em": 108.00674,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -33413,7 +33413,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674000000001,
+                    "em": 108.00674,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
