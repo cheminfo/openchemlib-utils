@@ -92,7 +92,7 @@ export class TopicMolecule {
   /**
    * This is related to the current moleculeWithH. The order is NOT canonized
    */
-  get diaIDs() {
+  get diaIDs(): string[] {
     if (this.cache.diaIDs) return this.cache.diaIDs;
     const diaIDs = [];
     for (let i = 0; i < this.moleculeWithH.getAllAtoms(); i++) {
@@ -136,7 +136,7 @@ export class TopicMolecule {
     return getConnectivityMatrix(this.moleculeWithH, { pathLength: true });
   }
 
-  get diaIDsAndInfo() {
+  get diaIDsAndInfo(): DiaIDAndInfo[] {
     if (this.cache.diaIDsAndInfo) return this.cache.diaIDsAndInfo;
     this.cache.diaIDsAndInfo = getDiaIDsAndInfo(this, this.canonizedDiaIDs);
     return this.cache.diaIDsAndInfo;
@@ -191,7 +191,7 @@ export class TopicMolecule {
   }
 }
 
-export interface DiaIDAndH {
+export interface DiaIDAndInfo {
   idCode: string;
   attachedHydrogensIDCodes: string[];
   nbAttachedHydrogens: number;

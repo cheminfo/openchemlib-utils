@@ -1,10 +1,10 @@
-import { TopicMolecule, DiaIDAndH } from './TopicMolecule.js';
+import { TopicMolecule, DiaIDAndInfo } from './TopicMolecule.js';
 
 export function getDiaIDsAndInfo(
   diaMol: TopicMolecule,
   canonizedDiaIDs: string[],
 ) {
-  const newDiaIDs: DiaIDAndH[] = [];
+  const newDiaIDs: DiaIDAndInfo[] = [];
   const molecule = diaMol.moleculeWithH;
 
   const counts: Record<string, number> = {};
@@ -17,7 +17,7 @@ export function getDiaIDsAndInfo(
 
   for (let i = 0; i < canonizedDiaIDs.length; i++) {
     const diaID = canonizedDiaIDs[diaMol.finalRanks[i]];
-    const newDiaID: DiaIDAndH = {
+    const newDiaID: DiaIDAndInfo = {
       idCode: diaID,
       attachedHydrogensIDCodes: [],
       nbAttachedHydrogens: 0,
