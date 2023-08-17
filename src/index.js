@@ -47,3 +47,5 @@ export * from './misc/dwar/parseDwar';
 export * from './fragment/fragmentAcyclicSingleBonds';
 
 export * from './reaction/applyReactions.js';
+
+export * from './reaction/utils/groupTreesByProducts.js';

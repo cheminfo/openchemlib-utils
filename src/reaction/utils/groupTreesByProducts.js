@@ -1,7 +1,7 @@
 import { trimTree } from './trimTree.js';
 
 /**
- * @description Group the trees by product idCode
+ * @description Group reaction trees by product idCode
  * @param {Array} trees Trees of reactions
  * @returns {Array} Array of products with their corresponding trees and reactions
  */
@@ -15,7 +15,7 @@ export function groupTreesByProducts(trees) {
 }
 
 /**
- * @description For a given tree, recursively group the branches leading to a each idCode
+ * @description For a given reaction tree, recursively group the branches by idCode of the product
  * @param {Object} currentBranch Current recursive branch of the tree of reactions
  * @param {Object} results Object with the branches grouped by idCode
  * @param {Object} originalBranch Original tree of reactions (not modified)
