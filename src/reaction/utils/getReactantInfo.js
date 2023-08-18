@@ -11,14 +11,15 @@ export function getInfo(molecule, moleculesInfo) {
   if (moleculesInfo.has(molecule)) {
     return moleculesInfo.get(molecule);
   }
-  let exactMass=Math.round(molecule.getMolecularFormula().absoluteWeight * 1e6) / 1e6;
-  let charge=getCharge(molecule);
+  let exactMass =
+    Math.round(molecule.getMolecularFormula().absoluteWeight * 1e6) / 1e6;
+  let charge = getCharge(molecule);
   const reactantInfo = {
     molfile: molecule.toMolfile(),
     idCode: molecule.getIDCode(),
     mf: getMF(molecule).mf,
     em: exactMass,
-    mz: exactMass/ (charge === 0 ? 1 : Math.abs(charge)),
+    mz: exactMass / (charge === 0 ? 1 : Math.abs(charge)),
     charge,
   };
   moleculesInfo.set(molecule, reactantInfo);
