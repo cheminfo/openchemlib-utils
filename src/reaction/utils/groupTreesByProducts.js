@@ -34,6 +34,7 @@ function groupProductTrees(currentBranch, results, originalBranch) {
         idCode: product.idCode,
         mf: product.mf,
         em: product.em,
+        mz: product.mz,
         charge: product.charge,
         trees: [copyBranch],
         reactions,

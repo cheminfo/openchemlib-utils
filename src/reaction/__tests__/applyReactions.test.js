@@ -120,6 +120,7 @@ describe('applyReactions', () => {
       'idCode',
       'mf',
       'em',
+      'mz',
       'charge',
       'trees',
       'reactions',

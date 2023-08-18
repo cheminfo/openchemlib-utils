@@ -8,6 +8,7 @@ exports[`applyReactions > COCCO multiple ionization 1`] = `
     "idCode": "gJPhDPDIJuP@",
     "mf": "C2H6O2S",
     "minSteps": 1,
+    "mz": 94.00885,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     ],
@@ -74,6 +75,7 @@ M  END
     "idCode": "gJQDD@\`aBRmT@@",
     "mf": "C2H6OS2",
     "minSteps": 8,
+    "mz": 109.986005,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -202,6 +204,7 @@ M  END
     "idCode": "gGQDL@baBT{UP@",
     "mf": "C3H8OS2",
     "minSteps": 19,
+    "mz": 124.001655,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -794,6 +797,7 @@ M  END
     "idCode": "gNqDL@baBTzuU@@",
     "mf": "C4H10OS2",
     "minSteps": 18,
+    "mz": 138.017305,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -1050,6 +1054,7 @@ M  END
     "idCode": "gNqEL@baFeJ]Zj\`@",
     "mf": "C4H11OS2(+)",
     "minSteps": 23,
+    "mz": 139.02513,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -1910,6 +1915,7 @@ M  END
     "idCode": "daxHrL@HKPXHrTi{Zjh@@",
     "mf": "C4H10NaOS2(+)",
     "minSteps": 23,
+    "mz": 161.007072,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -2786,6 +2792,7 @@ M  END
     "idCode": "daxHrHCHHHhHbTfUZjh@@",
     "mf": "C4H10KOS2(+)",
     "minSteps": 23,
+    "mz": 176.981012,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -3662,6 +3669,7 @@ M  END
     "idCode": "dcvHrNp@bhA\`cIRgeVjjjj@Gypp",
     "mf": "C7H20NOS2(+)",
     "minSteps": 23,
+    "mz": 198.098629,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -4602,6 +4610,7 @@ M  END
     "idCode": "gGQEL@baFeJ]jh@",
     "mf": "C3H9OS2(+)",
     "minSteps": 27,
+    "mz": 125.00948,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -6191,6 +6200,7 @@ M  END
     "idCode": "gNqML@\`zCBMJT}uU@@",
     "mf": "C3H8NaOS2(+)",
     "minSteps": 27,
+    "mz": 146.991422,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -7822,6 +7832,7 @@ M  END
     "idCode": "gNqMHL\`aEBIJSJuU@@",
     "mf": "C3H8KOS2(+)",
     "minSteps": 27,
+    "mz": 162.965362,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -9453,6 +9464,7 @@ M  END
     "idCode": "dmVHrNp@bhA\`cIRgezjjj\`A~\\\\L",
     "mf": "C6H18NOS2(+)",
     "minSteps": 27,
+    "mz": 184.082979,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -11252,6 +11264,7 @@ M  END
     "idCode": "gJQED@\`aBeIVj@@",
     "mf": "C2H7OS2(+)",
     "minSteps": 16,
+    "mz": 110.99383,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -11833,6 +11846,7 @@ M  END
     "idCode": "gGQMD@cZEBEJRwUP@",
     "mf": "C2H6NaOS2(+)",
     "minSteps": 16,
+    "mz": 132.975772,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -12430,6 +12444,7 @@ M  END
     "idCode": "gGQMHL\`aEBIJSKUP@",
     "mf": "C2H6KOS2(+)",
     "minSteps": 16,
+    "mz": 148.949712,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -13027,6 +13042,7 @@ M  END
     "idCode": "defHrFP@\`hB\`aIRVWjjjh@_gE@",
     "mf": "C5H16NOS2(+)",
     "minSteps": 16,
+    "mz": 170.067329,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -13688,6 +13704,7 @@ M  END
     "idCode": "gGPhMPDISmU@@",
     "mf": "C3H8O2S",
     "minSteps": 8,
+    "mz": 108.0245,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -13818,6 +13835,7 @@ M  END
     "idCode": "gGPiMPDVTivj\`@",
     "mf": "C3H9O2S(+)",
     "minSteps": 19,
+    "mz": 109.032325,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -14418,6 +14436,7 @@ M  END
     "idCode": "gGPhmPDZ[JT{UP@",
     "mf": "C3H10O2S(+2)",
     "minSteps": 26,
+    "mz": 55.020075,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -16024,6 +16043,7 @@ M  END
     "idCode": "gNpdlpDGPtnTi{jj@@",
     "mf": "C3H9NaO2S(+2)",
     "minSteps": 26,
+    "mz": 66.011046,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -17672,6 +17692,7 @@ M  END
     "idCode": "gNpdiQdDHdvTfUjj@@",
     "mf": "C3H9KO2S(+2)",
     "minSteps": 26,
+    "mz": 73.998016,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -19320,6 +19341,7 @@ M  END
     "idCode": "dmVDQNq\`BJ\`LeiRgezjjj\`A~\\\\L",
     "mf": "C6H19NO2S(+2)",
     "minSteps": 26,
+    "mz": 84.5568245,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -21136,6 +21158,7 @@ M  END
     "idCode": "gGPiMPDZTivj\`@",
     "mf": "C3H9O2S(+)",
     "minSteps": 17,
+    "mz": 109.032325,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -21734,6 +21757,7 @@ M  END
     "idCode": "gNpeLpDGPtiSwUT@@",
     "mf": "C3H8NaO2S(+)",
     "minSteps": 17,
+    "mz": 131.014267,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -22348,6 +22372,7 @@ M  END
     "idCode": "gNpeIQdDHdiLkUT@@",
     "mf": "C3H8KO2S(+)",
     "minSteps": 17,
+    "mz": 146.988207,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -22962,6 +22987,7 @@ M  END
     "idCode": "dmVDRNq\`BJ\`LeJ^Wjjjj@Gypp",
     "mf": "C6H18NO2S(+)",
     "minSteps": 17,
+    "mz": 168.105824,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -23640,6 +23666,7 @@ M  END
     "idCode": "gJPiDPDFTeZh@",
     "mf": "C2H7O2S(+)",
     "minSteps": 7,
+    "mz": 95.016675,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -23880,6 +23907,7 @@ M  END
     "idCode": "gJPhdPDJSJRmT@@",
     "mf": "C2H8O2S(+2)",
     "minSteps": 9,
+    "mz": 48.01225,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -24627,6 +24655,7 @@ M  END
     "idCode": "gGPdePD[PTvTenj\`@",
     "mf": "C2H7NaO2S(+2)",
     "minSteps": 9,
+    "mz": 59.003221,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -25396,6 +25425,7 @@ M  END
     "idCode": "gGPdiQdDHdvTfVj\`@",
     "mf": "C2H7KO2S(+2)",
     "minSteps": 9,
+    "mz": 66.990191,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -26165,6 +26195,7 @@ M  END
     "idCode": "defDQFR\`BB\`DfiRVWjjjh@_gE@",
     "mf": "C5H17NO2S(+2)",
     "minSteps": 9,
+    "mz": 77.5489995,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -27022,6 +27053,7 @@ M  END
     "idCode": "gJPiDPDJTeZh@",
     "mf": "C2H7O2S(+)",
     "minSteps": 3,
+    "mz": 95.016675,
     "reactions": [
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -27258,6 +27290,7 @@ M  END
     "idCode": "gGPeEPD[PTiK]U@@",
     "mf": "C2H6NaO2S(+)",
     "minSteps": 3,
+    "mz": 116.998617,
     "reactions": [
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -27502,6 +27535,7 @@ M  END
     "idCode": "gGPeIQdDHdiLmU@@",
     "mf": "C2H6KO2S(+)",
     "minSteps": 3,
+    "mz": 132.972557,
     "reactions": [
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -27746,6 +27780,7 @@ M  END
     "idCode": "defDRFR\`BB\`DeIY^jjj\`A~\\\\T",
     "mf": "C5H16NO2S(+)",
     "minSteps": 3,
+    "mz": 154.090174,
     "reactions": [
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -28022,6 +28057,7 @@ M  END
     "idCode": "gJQaAciRej\`@",
     "mf": "C2H7O3(+)",
     "minSteps": 1,
+    "mz": 79.03952,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
@@ -28089,6 +28125,7 @@ M  END
     "idCode": "gJQ\`aciLiRuP@",
     "mf": "C2H8O3(+2)",
     "minSteps": 7,
+    "mz": 40.0236725,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -28219,6 +28256,7 @@ M  END
     "idCode": "gJQaabItfTiZh@",
     "mf": "C2H9O3(+3)",
     "minSteps": 13,
+    "mz": 27.01839,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -28807,6 +28845,7 @@ M  END
     "idCode": "gGQihZMBRYliLmU@@",
     "mf": "C2H8NaO3(+3)",
     "minSteps": 13,
+    "mz": 34.345704,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -29411,6 +29450,7 @@ M  END
     "idCode": "gGQihZLbRYliLmU@@",
     "mf": "C2H8KO3(+3)",
     "minSteps": 13,
+    "mz": 39.67035066666667,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -30015,6 +30055,7 @@ M  END
     "idCode": "defLcF@jr@BRfirRIHrUUU@C|xh",
     "mf": "C5H18NO3(+3)",
     "minSteps": 13,
+    "mz": 46.70955633333333,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -30683,6 +30724,7 @@ M  END
     "idCode": "gJQ\`abItiRuP@",
     "mf": "C2H8O3(+2)",
     "minSteps": 3,
+    "mz": 40.0236725,
     "reactions": [
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -30921,6 +30963,7 @@ M  END
     "idCode": "gGQhhZMBRYRYZj@@",
     "mf": "C2H7NaO3(+2)",
     "minSteps": 3,
+    "mz": 51.0146435,
     "reactions": [
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -31167,6 +31210,7 @@ M  END
     "idCode": "gGQhhZLbRYRYZj@@",
     "mf": "C2H7KO3(+2)",
     "minSteps": 3,
+    "mz": 59.0016135,
     "reactions": [
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -31413,6 +31457,7 @@ M  END
     "idCode": "defLaF@jr@BRgIHdcIUUT@Osb\`",
     "mf": "C5H17NO3(+2)",
     "minSteps": 3,
+    "mz": 69.560422,
     "reactions": [
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -31691,6 +31736,7 @@ M  END
     "idCode": "gJQaAbIRej\`@",
     "mf": "C2H7O3(+)",
     "minSteps": 1,
+    "mz": 79.03952,
     "reactions": [
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
     ],
@@ -31758,6 +31804,7 @@ M  END
     "idCode": "gGQiHZMBRdruT@@",
     "mf": "C2H6NaO3(+)",
     "minSteps": 1,
+    "mz": 101.021462,
     "reactions": [
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
     ],
@@ -31827,6 +31874,7 @@ M  END
     "idCode": "gGQiHZLbRdruT@@",
     "mf": "C2H6KO3(+)",
     "minSteps": 1,
+    "mz": 116.995402,
     "reactions": [
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
     ],
@@ -31896,6 +31944,7 @@ M  END
     "idCode": "defLbF@jr@B\\\\dbRLeUUP@NJ@",
     "mf": "C5H16NO3(+)",
     "minSteps": 1,
+    "mz": 138.113019,
     "reactions": [
       "eMHBN\`\`!dazHbBCH@IrRERUUPANL@#Q^ Q^@@#!R@AM?Dqv|_@ !RbOvw?_x@b@JH__x@mpH]^gp",
     ],
@@ -31977,6 +32026,7 @@ exports[`applyReactions > ethanol 1`] = `
   "idCode": "eMB@HRZ@",
   "mf": "C2H6S",
   "minSteps": 1,
+  "mz": 62.01902,
   "reactions": [
     "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
@@ -32038,6 +32088,7 @@ exports[`applyReactions > ethylene glycol 1`] = `
   "idCode": "gCaHL@aIZ\`@",
   "mf": "C2H6OS",
   "minSteps": 1,
+  "mz": 78.013935,
   "reactions": [
     "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
@@ -32731,6 +32782,7 @@ exports[`applyReactions > propane-1,2-diol 1`] = `
   "idCode": "gJQHB@aIfj@@",
   "mf": "C3H8OS",
   "minSteps": 1,
+  "mz": 92.029585,
   "reactions": [
     "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
@@ -32800,6 +32852,7 @@ exports[`applyReactions > propane-1,2-diol maxDepth: 1 1`] = `
   "idCode": "gJQHB@aIfj@@",
   "mf": "C3H8OS",
   "minSteps": 1,
+  "mz": 92.029585,
   "reactions": [
     "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
   ],
@@ -32870,6 +32923,7 @@ exports[`applyReactions > propane-1,2-diol maxDepth: 5 1`] = `
     "idCode": "gJQHB@aIfj@@",
     "mf": "C3H8OS",
     "minSteps": 1,
+    "mz": 92.029585,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     ],
@@ -32936,6 +32990,7 @@ M  END
     "idCode": "gJPD@DDHRYj\`@",
     "mf": "C3H8S2",
     "minSteps": 4,
+    "mz": 108.00674,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -33169,6 +33224,7 @@ M  END
     "idCode": "gGPD@DTHRfzj@@",
     "mf": "C4H10S2",
     "minSteps": 8,
+    "mz": 122.02239,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -33750,6 +33806,7 @@ M  END
     "idCode": "gNpD@DTHRf~jh@",
     "mf": "C5H12S2",
     "minSteps": 8,
+    "mz": 136.03804,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -34457,6 +34514,7 @@ M  END
     "idCode": "gGPD@DDHRgjj@@",
     "mf": "C4H10S2",
     "minSteps": 6,
+    "mz": 122.02239,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -34810,6 +34868,7 @@ M  END
     "idCode": "gGQHJ@aJ[jh@",
     "mf": "C4H10OS",
     "minSteps": 4,
+    "mz": 106.045235,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -34936,6 +34995,7 @@ M  END
     "idCode": "gGQIJ@breMuT@@",
     "mf": "C4H11OS(+)",
     "minSteps": 7,
+    "mz": 107.05306,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -35524,6 +35584,7 @@ M  END
     "idCode": "gJQIB@\`rdsU@@",
     "mf": "C3H9OS(+)",
     "minSteps": 3,
+    "mz": 93.03741,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -35760,6 +35821,7 @@ M  END
     "idCode": "gJQHL@aIZj@@",
     "mf": "C3H8OS",
     "minSteps": 1,
+    "mz": 92.029585,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
     ],
@@ -35826,6 +35888,7 @@ M  END
     "idCode": "gGQHB@aJ^jh@",
     "mf": "C4H10OS",
     "minSteps": 4,
+    "mz": 106.045235,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -35952,6 +36015,7 @@ M  END
     "idCode": "gGQIB@\`reOUT@@",
     "mf": "C4H11OS(+)",
     "minSteps": 7,
+    "mz": 107.05306,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -36540,6 +36604,7 @@ M  END
     "idCode": "gJQIL@cRdmU@@",
     "mf": "C3H9OS(+)",
     "minSteps": 3,
+    "mz": 93.03741,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -36776,6 +36841,7 @@ M  END
     "idCode": "gJPa@QJSMT@@",
     "mf": "C3H9O2(+)",
     "minSteps": 1,
+    "mz": 77.060255,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
@@ -36843,6 +36909,7 @@ M  END
     "idCode": "gJP\`\`QIeIfj@@",
     "mf": "C3H10O2(+2)",
     "minSteps": 3,
+    "mz": 39.03404,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -37081,6 +37148,7 @@ M  END
     "idCode": "gJPaAaJRuT@@",
     "mf": "C3H9O2(+)",
     "minSteps": 1,
+    "mz": 77.060255,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
