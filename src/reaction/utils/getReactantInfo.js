@@ -11,8 +11,7 @@ export function getInfo(molecule, moleculesInfo) {
   if (moleculesInfo.has(molecule)) {
     return moleculesInfo.get(molecule);
   }
-  let exactMass =
-    Math.round(molecule.getMolecularFormula().absoluteWeight * 1e6) / 1e6;
+  let exactMass = molecule.getMolecularFormula().absoluteWeight;
   let charge = getCharge(molecule);
   const reactantInfo = {
     molfile: molecule.toMolfile(),

@@ -17688,11 +17688,11 @@ M  END
   },
   {
     "charge": 2,
-    "em": 147.996032,
+    "em": 147.99603199999999,
     "idCode": "gNpdiQdDHdvTfUjj@@",
     "mf": "C3H9KO2S(+2)",
     "minSteps": 26,
-    "mz": 73.998016,
+    "mz": 73.99801599999999,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -17742,7 +17742,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17766,7 +17766,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -17864,7 +17864,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -17888,7 +17888,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -18047,7 +18047,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18071,7 +18071,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -18279,7 +18279,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18303,7 +18303,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -18401,7 +18401,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18425,7 +18425,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -18584,7 +18584,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18608,7 +18608,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -18816,7 +18816,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18840,7 +18840,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -18938,7 +18938,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -18962,7 +18962,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -19121,7 +19121,7 @@ M  END
                                   {
                                     "charge": 2,
                                     "children": [],
-                                    "em": 147.996032,
+                                    "em": 147.99603199999999,
                                     "flag": true,
                                     "idCode": "gNpdiQdDHdvTfUjj@@",
                                     "mf": "C3H9KO2S(+2)",
@@ -19145,7 +19145,7 @@ M  END
 M  CHG  2   2   1   4   1
 M  END
 ",
-                                    "mz": 73.998016,
+                                    "mz": 73.99801599999999,
                                   },
                                 ],
                                 "reactant": {
@@ -23822,7 +23822,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -23841,7 +23841,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "OH by SH",
@@ -23849,7 +23849,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -23869,7 +23869,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -24570,7 +24570,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -24589,7 +24589,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -24597,7 +24597,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -24617,7 +24617,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -25284,7 +25284,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 102.029287,
+                          "em": 102.02928700000001,
                           "idCode": "gGQhhZMBRYRYZj@@",
                           "mf": "C2H7NaO3(+2)",
                           "molfile": "
@@ -25305,7 +25305,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                          "mz": 51.0146435,
+                          "mz": 51.014643500000005,
                         },
                         "reaction": {
                           "Label": "OH by SH",
@@ -25313,7 +25313,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 102.029287,
+                    "em": 102.02928700000001,
                     "flag": false,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -25335,12 +25335,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 51.0146435,
+                    "mz": 51.014643500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -25359,7 +25359,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -25367,7 +25367,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -25387,7 +25387,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -26054,7 +26054,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 118.003227,
+                          "em": 118.00322700000001,
                           "idCode": "gGQhhZLbRYRYZj@@",
                           "mf": "C2H7KO3(+2)",
                           "molfile": "
@@ -26075,7 +26075,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                          "mz": 59.0016135,
+                          "mz": 59.001613500000005,
                         },
                         "reaction": {
                           "Label": "OH by SH",
@@ -26083,7 +26083,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 118.003227,
+                    "em": 118.00322700000001,
                     "flag": false,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -26105,12 +26105,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 59.0016135,
+                    "mz": 59.001613500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -26129,7 +26129,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -26137,7 +26137,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -26157,7 +26157,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -26968,7 +26968,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -26987,7 +26987,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -26995,7 +26995,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -27015,7 +27015,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -27205,7 +27205,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAbIRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -27224,7 +27224,7 @@ M  END
 M  CHG  1   3   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "OH by SH",
@@ -27232,7 +27232,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAbIRej\`@",
             "mf": "C2H7O3(+)",
@@ -27252,7 +27252,7 @@ M  END
 M  CHG  1   3   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -28053,11 +28053,11 @@ M  END
   },
   {
     "charge": 1,
-    "em": 79.03952,
+    "em": 79.03952000000001,
     "idCode": "gJQaAciRej\`@",
     "mf": "C2H7O3(+)",
     "minSteps": 1,
-    "mz": 79.03952,
+    "mz": 79.03952000000001,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
     ],
@@ -28067,7 +28067,7 @@ M  END
           {
             "charge": 1,
             "children": [],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": true,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28087,7 +28087,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -28171,7 +28171,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28190,7 +28190,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -28198,7 +28198,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28218,7 +28218,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -28365,7 +28365,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28384,7 +28384,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -28478,7 +28478,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28497,7 +28497,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -28505,7 +28505,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28525,7 +28525,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -28647,7 +28647,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28666,7 +28666,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -28760,7 +28760,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28779,7 +28779,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -28787,7 +28787,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -28807,7 +28807,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -28841,11 +28841,11 @@ M  END
   },
   {
     "charge": 3,
-    "em": 103.037112,
+    "em": 103.03711200000001,
     "idCode": "gGQihZMBRYliLmU@@",
     "mf": "C2H8NaO3(+3)",
     "minSteps": 13,
-    "mz": 34.345704,
+    "mz": 34.345704000000005,
     "reactions": [
       "eFHBLGtP!eFH\`fLGtX#Qd Qd#!R@FL]Rgp !R@FL]vgp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -28877,7 +28877,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.037112,
+                            "em": 103.03711200000001,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -28899,7 +28899,7 @@ M  END
   1
 M  END
 ",
-                            "mz": 34.345704,
+                            "mz": 34.345704000000005,
                           },
                         ],
                         "reactant": {
@@ -28956,7 +28956,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -28975,7 +28975,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -28992,7 +28992,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.037112,
+                            "em": 103.03711200000001,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -29014,12 +29014,12 @@ M  END
   1
 M  END
 ",
-                            "mz": 34.345704,
+                            "mz": 34.345704000000005,
                           },
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 102.029287,
+                          "em": 102.02928700000001,
                           "idCode": "gGQhhZMBRYRYZj@@",
                           "mf": "C2H7NaO3(+2)",
                           "molfile": "
@@ -29040,7 +29040,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                          "mz": 51.0146435,
+                          "mz": 51.014643500000005,
                         },
                         "reaction": {
                           "Label": "Ionization",
@@ -29048,7 +29048,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 102.029287,
+                    "em": 102.02928700000001,
                     "flag": false,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -29070,12 +29070,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 51.0146435,
+                    "mz": 51.014643500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29094,7 +29094,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29102,7 +29102,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29122,7 +29122,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -29167,7 +29167,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.037112,
+                            "em": 103.03711200000001,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -29189,7 +29189,7 @@ M  END
   1
 M  END
 ",
-                            "mz": 34.345704,
+                            "mz": 34.345704000000005,
                           },
                         ],
                         "reactant": {
@@ -29246,7 +29246,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29265,7 +29265,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29282,7 +29282,7 @@ M  END
                           {
                             "charge": 3,
                             "children": [],
-                            "em": 103.037112,
+                            "em": 103.03711200000001,
                             "flag": true,
                             "idCode": "gGQihZMBRYliLmU@@",
                             "mf": "C2H8NaO3(+3)",
@@ -29304,12 +29304,12 @@ M  END
   1
 M  END
 ",
-                            "mz": 34.345704,
+                            "mz": 34.345704000000005,
                           },
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 102.029287,
+                          "em": 102.02928700000001,
                           "idCode": "gGQhhZMBRYRYZj@@",
                           "mf": "C2H7NaO3(+2)",
                           "molfile": "
@@ -29330,7 +29330,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                          "mz": 51.0146435,
+                          "mz": 51.014643500000005,
                         },
                         "reaction": {
                           "Label": "Ionization",
@@ -29338,7 +29338,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 102.029287,
+                    "em": 102.02928700000001,
                     "flag": false,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -29360,12 +29360,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 51.0146435,
+                    "mz": 51.014643500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29384,7 +29384,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29392,7 +29392,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29412,7 +29412,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -29561,7 +29561,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29580,7 +29580,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29624,7 +29624,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 118.003227,
+                          "em": 118.00322700000001,
                           "idCode": "gGQhhZLbRYRYZj@@",
                           "mf": "C2H7KO3(+2)",
                           "molfile": "
@@ -29645,7 +29645,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                          "mz": 59.0016135,
+                          "mz": 59.001613500000005,
                         },
                         "reaction": {
                           "Label": "Ionization",
@@ -29653,7 +29653,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 118.003227,
+                    "em": 118.00322700000001,
                     "flag": false,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -29675,12 +29675,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 59.0016135,
+                    "mz": 59.001613500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29699,7 +29699,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29707,7 +29707,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -29727,7 +29727,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -29851,7 +29851,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29870,7 +29870,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29914,7 +29914,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 2,
-                          "em": 118.003227,
+                          "em": 118.00322700000001,
                           "idCode": "gGQhhZLbRYRYZj@@",
                           "mf": "C2H7KO3(+2)",
                           "molfile": "
@@ -29935,7 +29935,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                          "mz": 59.0016135,
+                          "mz": 59.001613500000005,
                         },
                         "reaction": {
                           "Label": "Ionization",
@@ -29943,7 +29943,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 118.003227,
+                    "em": 118.00322700000001,
                     "flag": false,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -29965,12 +29965,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 59.0016135,
+                    "mz": 59.001613500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -29989,7 +29989,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -29997,7 +29997,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30017,7 +30017,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -30174,7 +30174,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30193,7 +30193,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -30317,7 +30317,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30336,7 +30336,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -30344,7 +30344,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30364,7 +30364,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -30496,7 +30496,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30515,7 +30515,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -30639,7 +30639,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30658,7 +30658,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -30666,7 +30666,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30686,7 +30686,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -30766,7 +30766,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30785,7 +30785,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -30793,7 +30793,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -30813,7 +30813,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -30878,7 +30878,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAbIRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -30897,7 +30897,7 @@ M  END
 M  CHG  1   3   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -30905,7 +30905,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAbIRej\`@",
             "mf": "C2H7O3(+)",
@@ -30925,7 +30925,7 @@ M  END
 M  CHG  1   3   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -30959,11 +30959,11 @@ M  END
   },
   {
     "charge": 2,
-    "em": 102.029287,
+    "em": 102.02928700000001,
     "idCode": "gGQhhZMBRYRYZj@@",
     "mf": "C2H7NaO3(+2)",
     "minSteps": 3,
-    "mz": 51.0146435,
+    "mz": 51.014643500000005,
     "reactions": [
       "eMHBN\`\`!gCaIHMBRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -30980,7 +30980,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 102.029287,
+                    "em": 102.02928700000001,
                     "flag": true,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -31002,12 +31002,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 51.0146435,
+                    "mz": 51.014643500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -31026,7 +31026,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -31034,7 +31034,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -31054,7 +31054,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -31094,7 +31094,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 102.029287,
+                    "em": 102.02928700000001,
                     "flag": true,
                     "idCode": "gGQhhZMBRYRYZj@@",
                     "mf": "C2H7NaO3(+2)",
@@ -31116,7 +31116,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 51.0146435,
+                    "mz": 51.014643500000005,
                   },
                 ],
                 "reactant": {
@@ -31206,11 +31206,11 @@ M  END
   },
   {
     "charge": 2,
-    "em": 118.003227,
+    "em": 118.00322700000001,
     "idCode": "gGQhhZLbRYRYZj@@",
     "mf": "C2H7KO3(+2)",
     "minSteps": 3,
-    "mz": 59.0016135,
+    "mz": 59.001613500000005,
     "reactions": [
       "eMHBN\`\`!gCaIHLbRduPD#Qg QIp#!R@FL?XqvJ_@ !R_g?p?[_}G]k",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -31227,7 +31227,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 118.003227,
+                    "em": 118.00322700000001,
                     "flag": true,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -31249,12 +31249,12 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 59.0016135,
+                    "mz": 59.001613500000005,
                   },
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -31273,7 +31273,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -31281,7 +31281,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -31301,7 +31301,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -31341,7 +31341,7 @@ M  END
                   {
                     "charge": 2,
                     "children": [],
-                    "em": 118.003227,
+                    "em": 118.00322700000001,
                     "flag": true,
                     "idCode": "gGQhhZLbRYRYZj@@",
                     "mf": "C2H7KO3(+2)",
@@ -31363,7 +31363,7 @@ M  END
 M  CHG  2   1   1   3   1
 M  END
 ",
-                    "mz": 59.0016135,
+                    "mz": 59.001613500000005,
                   },
                 ],
                 "reactant": {
@@ -31509,7 +31509,7 @@ M  END
                 ],
                 "reactant": {
                   "charge": 1,
-                  "em": 79.03952,
+                  "em": 79.03952000000001,
                   "idCode": "gJQaAciRej\`@",
                   "mf": "C2H7O3(+)",
                   "molfile": "
@@ -31528,7 +31528,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-                  "mz": 79.03952,
+                  "mz": 79.03952000000001,
                 },
                 "reaction": {
                   "Label": "Ionization",
@@ -31536,7 +31536,7 @@ M  END
                 },
               },
             ],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": false,
             "idCode": "gJQaAciRej\`@",
             "mf": "C2H7O3(+)",
@@ -31556,7 +31556,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -31732,11 +31732,11 @@ M  END
   },
   {
     "charge": 1,
-    "em": 79.03952,
+    "em": 79.03952000000001,
     "idCode": "gJQaAbIRej\`@",
     "mf": "C2H7O3(+)",
     "minSteps": 1,
-    "mz": 79.03952,
+    "mz": 79.03952000000001,
     "reactions": [
       "eMHBN\`\`!eMH\`fN\`~b@#Qg Qg#!R@FL?XqtJ_@ !R@FL?XqwZ_@",
     ],
@@ -31746,7 +31746,7 @@ M  END
           {
             "charge": 1,
             "children": [],
-            "em": 79.03952,
+            "em": 79.03952000000001,
             "flag": true,
             "idCode": "gJQaAbIRej\`@",
             "mf": "C2H7O3(+)",
@@ -31766,7 +31766,7 @@ M  END
 M  CHG  1   3   1
 M  END
 ",
-            "mz": 79.03952,
+            "mz": 79.03952000000001,
           },
         ],
         "reactant": {
@@ -32194,7 +32194,7 @@ M  END
                             ],
                             "reactant": {
                               "charge": 0,
-                              "em": 108.00674,
+                              "em": 108.00674000000001,
                               "idCode": "gJPD@DDHRgj\`@",
                               "mf": "C3H8S2",
                               "molfile": "
@@ -32212,7 +32212,7 @@ M  END
   3  5  1  0  0  0  0
 M  END
 ",
-                              "mz": 108.00674,
+                              "mz": 108.00674000000001,
                             },
                             "reaction": {
                               "Label": "SH to SMe",
@@ -32220,7 +32220,7 @@ M  END
                             },
                           },
                         ],
-                        "em": 108.00674,
+                        "em": 108.00674000000001,
                         "idCode": "gJPD@DDHRgj\`@",
                         "mf": "C3H8S2",
                         "molfile": "
@@ -32238,7 +32238,7 @@ M  END
   3  5  1  0  0  0  0
 M  END
 ",
-                        "mz": 108.00674,
+                        "mz": 108.00674000000001,
                       },
                     ],
                     "reactant": {
@@ -32321,7 +32321,7 @@ M  END
                       {
                         "charge": 0,
                         "children": [],
-                        "em": 108.00674,
+                        "em": 108.00674000000001,
                         "idCode": "gJPD@DDHRgj\`@",
                         "mf": "C3H8S2",
                         "molfile": "
@@ -32339,7 +32339,7 @@ M  END
   5  2  1  0  0  0  0
 M  END
 ",
-                        "mz": 108.00674,
+                        "mz": 108.00674000000001,
                       },
                     ],
                     "reactant": {
@@ -32651,7 +32651,7 @@ M  END
             ],
             "reactant": {
               "charge": 1,
-              "em": 63.044605,
+              "em": 63.044605000000004,
               "idCode": "gC\`aAaJRu@@",
               "mf": "C2H7O2(+)",
               "molfile": "
@@ -32668,7 +32668,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-              "mz": 63.044605,
+              "mz": 63.044605000000004,
             },
             "reaction": {
               "Label": "OH by SH",
@@ -32702,7 +32702,7 @@ M  END
             ],
             "reactant": {
               "charge": 1,
-              "em": 63.044605,
+              "em": 63.044605000000004,
               "idCode": "gC\`aAaJRu@@",
               "mf": "C2H7O2(+)",
               "molfile": "
@@ -32719,7 +32719,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-              "mz": 63.044605,
+              "mz": 63.044605000000004,
             },
             "reaction": {
               "Label": "Ionization",
@@ -32727,7 +32727,7 @@ M  END
             },
           },
         ],
-        "em": 63.044605,
+        "em": 63.044605000000004,
         "idCode": "gC\`aAaJRu@@",
         "mf": "C2H7O2(+)",
         "molfile": "
@@ -32744,7 +32744,7 @@ M  END
 M  CHG  1   1   1
 M  END
 ",
-        "mz": 63.044605,
+        "mz": 63.044605000000004,
       },
     ],
     "reactant": {
@@ -32986,11 +32986,11 @@ M  END
   },
   {
     "charge": 0,
-    "em": 108.00674,
+    "em": 108.00674000000001,
     "idCode": "gJPD@DDHRYj\`@",
     "mf": "C3H8S2",
     "minSteps": 4,
-    "mz": 108.00674,
+    "mz": 108.00674000000001,
     "reactions": [
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
       "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
@@ -33008,7 +33008,7 @@ M  END
                   {
                     "charge": 0,
                     "children": [],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": true,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -33027,7 +33027,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
@@ -33117,7 +33117,7 @@ M  END
                   {
                     "charge": 0,
                     "children": [],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": true,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -33136,7 +33136,7 @@ Actelion Java MolfileCreator 1.0
   5  2  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
@@ -33277,7 +33277,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -33295,7 +33295,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -33303,7 +33303,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -33322,7 +33322,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
@@ -33558,7 +33558,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -33576,7 +33576,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -33584,7 +33584,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -33603,7 +33603,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
@@ -33920,7 +33920,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -33938,7 +33938,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -34037,7 +34037,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -34055,7 +34055,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -34063,7 +34063,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -34082,7 +34082,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
@@ -34264,7 +34264,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -34282,7 +34282,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -34381,7 +34381,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -34399,7 +34399,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -34407,7 +34407,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -34426,7 +34426,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
@@ -34565,7 +34565,7 @@ M  END
                         ],
                         "reactant": {
                           "charge": 0,
-                          "em": 108.00674,
+                          "em": 108.00674000000001,
                           "idCode": "gJPD@DDHRYj\`@",
                           "mf": "C3H8S2",
                           "molfile": "
@@ -34583,7 +34583,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                          "mz": 108.00674,
+                          "mz": 108.00674000000001,
                         },
                         "reaction": {
                           "Label": "SH to SMe",
@@ -34591,7 +34591,7 @@ M  END
                         },
                       },
                     ],
-                    "em": 108.00674,
+                    "em": 108.00674000000001,
                     "flag": false,
                     "idCode": "gJPD@DDHRYj\`@",
                     "mf": "C3H8S2",
@@ -34610,7 +34610,7 @@ Actelion Java MolfileCreator 1.0
   5  3  1  0  0  0  0
 M  END
 ",
-                    "mz": 108.00674,
+                    "mz": 108.00674000000001,
                   },
                 ],
                 "reactant": {
