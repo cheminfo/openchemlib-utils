@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.2](https://github.com/cheminfo/openchemlib-utils/compare/v5.0.1...v5.0.2) (2023-08-18)
+
+
+### Bug Fixes
+
+* missing docs and undo digits rounding ([5d859e0](https://github.com/cheminfo/openchemlib-utils/commit/5d859e041fc168494c83e3b04278f6b540efd737))
+
 ## [5.0.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.0.0...v5.0.1) (2023-08-18)
 
 
