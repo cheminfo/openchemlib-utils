@@ -1,4 +1,4 @@
-// run with `node -r esm ./getPathsInfo.js`
+// run with ts-node-transpile-only 
 
 import OCL from 'openchemlib';
 

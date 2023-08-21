@@ -1,10 +1,8 @@
-// run with `node -r esm ./getPathsInfo.js`
+// run with ts-node-transpile-only 
+
 
 import OCL from 'openchemlib';
 
-import { initOCL } from '../src';
-
-initOCL(OCL);
 
 const molecule = OCL.Molecule.fromSmiles('C');
 molecule.addImplicitHydrogens();

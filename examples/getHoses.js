@@ -1,10 +1,8 @@
-// run with `node -r esm ./getPathsInfo.js`
+// run with `ts-node-transpile-only getHoses.js`
 
 import OCL from 'openchemlib';
 
-import { tagAtom, initOCL, getHoseCodesForAtom } from '../src';
-
-initOCL(OCL);
+import { getHoseCodesForAtom } from '../src';
 
 const molecule = OCL.Molecule.fromSmiles('CO');
 

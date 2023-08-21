@@ -2,15 +2,15 @@ import type { Molecule } from 'openchemlib';
 
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
-import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.js';
-import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.js';
-import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.js';
+import { getCanonizedDiaIDs } from './getCanonizedDiaIDs';
+import { getCanonizedHoseCodes } from './getCanonizedHoseCodes';
+import { getDiaIDsAndInfo } from './getDiaIDsAndInfo';
 import {
   getHeterotopicSymmetryRanks,
   getFinalRanks,
-} from './getHeterotopicSymmetryRanks.js';
-import { getMoleculeWithH } from './getMoleculeWithH.js';
-import { getXMolecule } from './getXMolecule.js';
+} from './getHeterotopicSymmetryRanks';
+import { getMoleculeWithH } from './getMoleculeWithH';
+import { getXMolecule } from './getXMolecule';
 
 interface ToMolfileOptions {
   version?: 2 | 3;

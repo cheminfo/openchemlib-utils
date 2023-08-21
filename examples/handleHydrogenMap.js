@@ -1,4 +1,4 @@
-// run with `node -r esm ./getPathsInfo.js`
+// ts-node-transpile-only handleHydrogenMap.js
 
 import OCL from 'openchemlib';
 

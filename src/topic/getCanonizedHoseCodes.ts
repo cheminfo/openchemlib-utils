@@ -1,5 +1,5 @@
 import { getHoseCodesForAtomsInternal } from '../hose/getHoseCodesForAtomsInternal.js';
-import { tagAtom } from '../util/tagAtom.js';
+import { tagAtom } from '../util/tagAtom';
 
 import { HoseCodesOptions } from './HoseCodesOptions.js';
 import { TopicMolecule } from './TopicMolecule.js';
