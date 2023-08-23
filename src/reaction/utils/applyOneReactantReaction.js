@@ -6,6 +6,9 @@ import { getInfo } from './getReactantInfo.js';
  * @param {Object} options options to apply the reaction
  * @param {number} options.currentDepth current depth of the recursion
  * @param {number} options.maxDepth max depth of the recursion
+ * @param {number} options.limitReactions limit the number of reactions
+ * @param {Object} options.stats stats of the recursion
+ * @param {number} options.stats.counter number of reactions
  * @param {Map} options.moleculesInfo map of molecules info
  * @param {Set} options.processedMolecules set of processed molecules
  * @param {Array} options.trees array of trees of previous recursions
@@ -24,6 +27,9 @@ export function applyOneReactantReaction(reactants, reactions, options) {
   }
   const { OCL } = options;
   for (const reactant of reactants) {
+    if (options.stats.counter >= options.limitReactions) {
+      break;
+    }
     const idCode = reactant.getIDCode();
 
     // check if the reactant has already been processed
@@ -34,7 +40,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
     }
     for (const reaction of reactions) {
       if (options.stats.counter >= options.limitReactions) {
-        return [];
+        break;
       }
       options.stats.counter++;
       const reactor = new OCL.Reactor(reaction.oclReaction);
@@ -80,6 +86,9 @@ export function applyOneReactantReaction(reactants, reactions, options) {
         }
       }
     }
+  }
+  if (options.stats.counter >= options.limitReactions) {
+    return [];
   }
   // by returning todoNextDepth, we make sure that the recursion will continue
   return todoNextDepth;
