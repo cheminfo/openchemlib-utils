@@ -8,11 +8,12 @@ import { reactionsDatabase } from './reactionsDatabase.js';
 describe('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
-    const { trees, products } = applyReactions(
+    const { trees, products, stats } = applyReactions(
       [ethanol],
       reactionsDatabase,
       {},
     );
+    expect(stats.counter).toBe(32);
     removeCoordinates(trees, products);
 
     expect(products[0]).toMatchSnapshot();
@@ -27,6 +28,27 @@ describe('applyReactions', () => {
     expect(firstChild.reactant.mf).toBe('C2H6S');
     expect(firstChild.products).toHaveLength(1);
     expect(firstChild.products[0].mf).toBe('C3H8S');
+  });
+
+  it('ethanol with limitReactions:5', () => {
+    const ethanol = Molecule.fromSmiles('CCO');
+    const { trees, products, stats } = applyReactions(
+      [ethanol],
+      reactionsDatabase,
+      { limitReactions: 5 },
+    );
+
+    expect(stats.counter).toBe(5);
+    removeCoordinates(trees, products);
+
+    expect(products[0]).toMatchSnapshot();
+
+    expect(trees).toHaveLength(2);
+    const firstResult = trees[0];
+    expect(firstResult.products).toHaveLength(1);
+    const firstProduct = firstResult.products[0];
+    expect(firstProduct.mf).toBe('C2H6S');
+    expect(firstProduct.children).toHaveLength(0);
   });
 
   it('ethylene glycol', () => {

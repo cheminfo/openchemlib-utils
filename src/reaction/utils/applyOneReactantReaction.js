@@ -33,6 +33,10 @@ export function applyOneReactantReaction(reactants, reactions, options) {
       processedMolecules.add(idCode);
     }
     for (const reaction of reactions) {
+      if (options.stats.counter >= options.limitReactions) {
+        return [];
+      }
+      options.stats.counter++;
       const reactor = new OCL.Reactor(reaction.oclReaction);
       // isMatching is true if the reactant is matching the reaction else we continue to the next reaction
       const isMatching = Boolean(reactor.setReactant(0, reactant));

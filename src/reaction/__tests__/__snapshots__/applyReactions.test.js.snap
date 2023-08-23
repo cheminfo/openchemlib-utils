@@ -32081,6 +32081,68 @@ M  END
 }
 `;
 
+exports[`applyReactions > ethanol with limitReactions:5 1`] = `
+{
+  "charge": 0,
+  "em": 62.01902,
+  "idCode": "eMB@HRZ@",
+  "mf": "C2H6S",
+  "minSteps": 1,
+  "mz": 62.01902,
+  "reactions": [
+    "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+  ],
+  "trees": [
+    {
+      "products": [
+        {
+          "charge": 0,
+          "children": [],
+          "em": 62.01902,
+          "flag": true,
+          "idCode": "eMB@HRZ@",
+          "mf": "C2H6S",
+          "molfile": "
+.0
+
+999 V2000
+ C   0  0  0  0  0  0  0  0  0  0  0  0
+ C   0  0  0  0  0  0  0  0  0  0  0  0
+ S   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  3  2  1  0  0  0  0
+M  END
+",
+          "mz": 62.01902,
+        },
+      ],
+      "reactant": {
+        "charge": 0,
+        "em": 46.041865,
+        "idCode": "eMHAIh@",
+        "mf": "C2H6O",
+        "molfile": "
+.0
+
+999 V2000
+ C   0  0  0  0  0  0  0  0  0  0  0  0
+ C   0  0  0  0  0  0  0  0  0  0  0  0
+ O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+M  END
+",
+        "mz": 46.041865,
+      },
+      "reaction": {
+        "Label": "OH by SH",
+        "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      },
+    },
+  ],
+}
+`;
+
 exports[`applyReactions > ethylene glycol 1`] = `
 {
   "charge": 0,
