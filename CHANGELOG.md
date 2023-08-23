@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.0.2...v5.1.0) (2023-08-23)
+
+
+### Features
+
+* add limitReactions as options for applyReactions ([e855b91](https://github.com/cheminfo/openchemlib-utils/commit/e855b91c1d17ea5e50b70a5c6b2b0eed946f5932))
+
+
+### Documentation
+
+* fix examples ([21c8fbe](https://github.com/cheminfo/openchemlib-utils/commit/21c8fbebd693074807916e607f88579ba477e5a1))
+
 ## [5.0.2](https://github.com/cheminfo/openchemlib-utils/compare/v5.0.1...v5.0.2) (2023-08-18)
 
 
