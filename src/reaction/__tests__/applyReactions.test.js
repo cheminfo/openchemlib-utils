@@ -11,7 +11,7 @@ describe('applyReactions', () => {
     const { trees, products, stats } = applyReactions(
       [ethanol],
       reactionsDatabase,
-      {},
+      { getProductsTrees: true },
     );
     expect(stats.counter).toBe(32);
     removeCoordinates(trees, products);
@@ -35,7 +35,7 @@ describe('applyReactions', () => {
     const { trees, products, stats } = applyReactions(
       [ethanol],
       reactionsDatabase,
-      { limitReactions: 5 },
+      { limitReactions: 5, getProductsTrees: true },
     );
 
     expect(stats.counter).toBe(5);
@@ -50,10 +50,27 @@ describe('applyReactions', () => {
     expect(firstProduct.mf).toBe('C2H6S');
     expect(firstProduct.children).toHaveLength(0);
   });
+  it('ethanol with limitReactions:5 and products false', () => {
+    const ethanol = Molecule.fromSmiles('CCO');
+    const { trees, products, stats } = applyReactions(
+      [ethanol],
+      reactionsDatabase,
+      { limitReactions: 5, getProductsTrees: false },
+    );
 
+    expect(stats.counter).toBe(5);
+    removeCoordinates(trees, products);
+
+    expect(products[0]).toMatchSnapshot();
+
+    expect(trees).toHaveLength(2);
+    expect(products).toHaveLength(0);
+  });
   it('ethylene glycol', () => {
     const diol = Molecule.fromSmiles('OCCO');
-    const { trees, products } = applyReactions([diol], reactionsDatabase, {});
+    const { trees, products } = applyReactions([diol], reactionsDatabase, {
+      getProductsTrees: true,
+    });
     removeCoordinates(trees, products);
     expect(products[0]).toMatchSnapshot();
     expect(trees).toHaveLength(2);
@@ -80,7 +97,7 @@ describe('applyReactions', () => {
     const { trees, products } = applyReactions(
       [propanediol],
       reactionsDatabase,
-      {},
+      { getProductsTrees: true },
     );
     removeCoordinates(trees, products);
     expect(products[0]).toMatchSnapshot();
@@ -116,6 +133,7 @@ describe('applyReactions', () => {
       reactionsDatabase,
       {
         maxDepth: 1,
+        getProductsTrees: true,
       },
     );
     removeCoordinates(trees, products);
@@ -135,6 +153,7 @@ describe('applyReactions', () => {
       reactionsDatabase,
       {
         maxDepth: 5,
+        getProductsTrees: true,
       },
     );
 
@@ -163,6 +182,7 @@ describe('applyReactions', () => {
     const molecule = Molecule.fromSmiles('OCOCO');
     const { products } = applyReactions([molecule], reactionsDatabase, {
       maxDepth: 5,
+      getProductsTrees: true,
     });
     removeCoordinates(undefined, products);
     expect(products).toMatchSnapshot();

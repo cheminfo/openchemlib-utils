@@ -7,13 +7,18 @@ import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
  * @param {object} options options to apply the reaction
  * @param {number} [options.maxDepth=5] max depth of the recursion
  * @param {number} [options.limitReactions=5000] limit the number of reactions to apply
+ * @param {boolean} [options.getProductsTrees=false] if true, the returned object will have a products property with the products trees grouped by idCode else it will be an empty array
  * @returns {Object} The returned object has two properties:
  * - trees: the tree of reactions
  * - products: reactions trees grouped by product idCode
  */
 export function applyReactions(reactants, reactions, options = {}) {
   // Reaction are applied recursively until maximal tree depth is reached (default 10)
-  const { maxDepth = 5, limitReactions = 5000 } = options;
+  const {
+    maxDepth = 5,
+    limitReactions = 5000,
+    getProductsTrees = false,
+  } = options;
   const moleculesInfo = new Map();
   const processedMolecules = new Set();
   if (!reactants.length) {
@@ -44,7 +49,12 @@ export function applyReactions(reactants, reactions, options = {}) {
     }
     todoCurrentLevel = nexts.flat();
   } while (todoCurrentLevel.length > 0);
-  const products = groupTreesByProducts(trees);
+  let products;
+  if (getProductsTrees) {
+    products = groupTreesByProducts(trees);
+  } else {
+    products = [];
+  }
   return { trees, products, stats };
 }
 
