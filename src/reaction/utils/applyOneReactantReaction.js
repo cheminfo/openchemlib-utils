@@ -27,9 +27,6 @@ export function applyOneReactantReaction(reactants, reactions, options) {
   }
   const { OCL } = options;
   for (const reactant of reactants) {
-    if (options.stats.counter >= options.limitReactions) {
-      break;
-    }
     const idCode = reactant.getIDCode();
 
     // check if the reactant has already been processed
@@ -40,7 +37,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
     }
     for (const reaction of reactions) {
       if (options.stats.counter >= options.limitReactions) {
-        break;
+        return [];
       }
       options.stats.counter++;
       const reactor = new OCL.Reactor(reaction.oclReaction);
@@ -86,9 +83,6 @@ export function applyOneReactantReaction(reactants, reactions, options) {
         }
       }
     }
-  }
-  if (options.stats.counter >= options.limitReactions) {
-    return [];
   }
   // by returning todoNextDepth, we make sure that the recursion will continue
   return todoNextDepth;
