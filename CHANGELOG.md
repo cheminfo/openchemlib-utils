@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.1.0...v5.2.0) (2023-08-23)
+
+
+### Features
+
+* getProductsTrees in order to get products tree only when necessary ([2a680bc](https://github.com/cheminfo/openchemlib-utils/commit/2a680bce4b8333f46e779baca4dd41db3bd639a2))
+
+
+### Bug Fixes
+
+* break loop if limit is reached ([aae30c0](https://github.com/cheminfo/openchemlib-utils/commit/aae30c06457637179beb9ebe1bf9a8e147c50e6c))
+
 ## [5.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.0.2...v5.1.0) (2023-08-23)
 
 
