@@ -6,7 +6,7 @@ import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
  * @param {Array} reactions array of reactions objects with rxnCode, label and needChargeToReact
  * @param {object} options options to apply the reaction
  * @param {number} [options.maxDepth=5] max depth of the recursion
- * @param {number} [options.limitReactions=5000] limit the number of reactions to apply
+ * @param {number} [options.limitReactions=200] limit the number of reactions to apply
  * @param {boolean} [options.getProductsTrees=false] if true, the returned object will have a products property with the products trees grouped by idCode else it will be an empty array
  * @returns {Object} The returned object has two properties:
  * - trees: the tree of reactions
@@ -16,7 +16,7 @@ export function applyReactions(reactants, reactions, options = {}) {
   // Reaction are applied recursively until maximal tree depth is reached (default 10)
   const {
     maxDepth = 5,
-    limitReactions = 5000,
+    limitReactions = 200,
     getProductsTrees = false,
   } = options;
   const moleculesInfo = new Map();
