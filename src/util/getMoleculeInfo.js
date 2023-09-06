@@ -16,7 +16,7 @@ export function getMoleculeInfo(molecule, moleculesInfo) {
   const mf = getMF(molecule).mf;
   const mfInfo = new MF(mf).getInfo();
 
-  const reactantInfo = {
+  const moleculeInfo = {
     molfile: molecule.toMolfile(),
     idCode: molecule.getIDCode(),
     mf: getMF(molecule).mf,
@@ -25,6 +25,6 @@ export function getMoleculeInfo(molecule, moleculesInfo) {
     mz: mfInfo.observedMonoisotopicMass,
     charge: mfInfo.charge,
   };
-  moleculesInfo.set(molecule, reactantInfo);
-  return reactantInfo;
+  moleculesInfo.set(molecule, moleculeInfo);
+  return moleculeInfo;
 }

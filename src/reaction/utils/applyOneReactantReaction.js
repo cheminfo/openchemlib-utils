@@ -1,7 +1,7 @@
 import { getMoleculeInfo } from '../../util/getMoleculeInfo.js';
 /**
  * @description apply one reaction to one reactant
- * @param {*} reactants either a molecule or an array of molecules
+ * @param {import('openchemlib').Molecule[]} reactants
  * @param {Array<Object>} reactions rxnCode of the reaction
  * @param {Object} options options to apply the reaction
  * @param {number} options.currentDepth current depth of the recursion
@@ -21,10 +21,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
   const todoNextDepth = [];
   // if the current depth is greater than the max depth, we stop the recursion and return an empty array
   if (currentDepth >= maxDepth) return [];
-  // if the reactants is not an array, we make it an array
-  if (!Array.isArray(reactants)) {
-    reactants = [reactants];
-  }
+
   const { OCL } = options;
   for (const reactant of reactants) {
     const idCode = reactant.getIDCode();
@@ -63,7 +60,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
               products.push(product);
 
               todoNextDepth.push(() => {
-                return applyOneReactantReaction(reactionProduct, reactions, {
+                return applyOneReactantReaction([reactionProduct], reactions, {
                   ...options,
                   currentDepth: options.currentDepth + 1,
                   trees: product.children,
