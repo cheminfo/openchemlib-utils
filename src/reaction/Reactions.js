@@ -1,3 +1,5 @@
+
+
 export class Reactions {
   /**
    *
@@ -23,6 +25,7 @@ export class Reactions {
     }
     this.reactants.push(reactants);
   }
+
 
   applyReactions(reactions, options = {}) {
     const { flattenProducts = true } = options;

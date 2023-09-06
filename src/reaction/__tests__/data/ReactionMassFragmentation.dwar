@@ -5,30 +5,30 @@
 </datawarrior-fileinfo>
 <column properties>
 <columnName="atomMapping">
-<columnProperty="parent	Transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	atomMapping">
 <columnName="idcoordinates2D">
-<columnProperty="parent	Transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	idcoordinates2D">
 <columnName="reactionFP">
-<columnProperty="parent	Transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	RxnFP">
 <columnProperty="version	1.0.0">
 <columnName="reactantFFP">
-<columnProperty="parent	Transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	FragFp">
 <columnProperty="reactionPart	reactants">
 <columnProperty="version	1.2.1">
 <columnName="productFFP">
-<columnProperty="parent	Transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	FragFp">
 <columnProperty="reactionPart	products">
 <columnProperty="version	1.2.1">
-<columnName="Transformation">
+<columnName="rxnCode">
 <columnProperty="isFragment	true">
 <columnProperty="specialType	rxncode">
 </column properties>
-atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	Label	Transformation	Ionization	Reaction	DOI	Section	Description	needToBeCharged
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	label	rxnCode	Ionization	Reaction	DOI	Section	Description	needToBeCharged
 qbq a` qQp	!RtEJHC^h@GPhB !RGUi| !R@FN?Dquz_@	0804#10F4!13!VF*804V!80V!H0F2FF)A#84(2#F&F401#8//!1//%8/(	o@V60J/04////&10	J8//////	Alpha cleavage	gCa@@duPGtF@!fI@Gu` eM@bXzB	Positive	CMF				true
 qbqh qfUH	!Rmwwp_[]|_g|]lcp !R?`BE@[_|b@H]vgp	0cJN8#4F$2!4k!4$80804)k0F#82#F!2F0X#V044013#F&kF01#8//!1//%8/(	uD020F&V/-8///$	F8//*8///$	Alpha cleavage	gJPI@DBTijhCzB@!gK`I@DJTcj`OhH@	Positive	CMF				true
 qbqh qbH qu	!Rw`BH?J_|bMt]|hH !Rwpq?Dquz?@ !R?`@]vgp	VV)2108!l1F208V!8V#404&VZF0202014F&J1102242V43F90k!40F#9910F2F//01//%8/(	yJsZ448!V!41%4/$8///#30	J0V/////+V10	Alpha cleavage	gJPa@eJSKTA}E@!eMH`eIxH eFHBLGtP	Positive	CMF				true
@@ -105,22 +105,22 @@ qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$
 <columnWidth_Table_DOI="80">
 <columnWidth_Table_Description="80">
 <columnWidth_Table_Ionization="80">
-<columnWidth_Table_Label="337">
+<columnWidth_Table_label="337">
 <columnWidth_Table_Reaction="80">
 <columnWidth_Table_Section="80">
-<columnWidth_Table_Transformation="460">
+<columnWidth_Table_rxnCode="460">
 <columnWidth_Table_needToBeCharged="80">
-<detailView="height[Data]=0.5;height[Transformation]=0.5">
+<detailView="height[Data]=0.5;height[rxnCode]=0.5">
 <filter0="#string#	Ionization">
 <filter1="#string#	Reaction">
 <filter2="#string#	DOI">
 <filter3="#string#	Section">
 <filter4="#string#	Description">
-<filter5="#string#	Label	#contains#	remote">
+<filter5="#string#	label	#contains#	remote">
 <filter6="#string#	needToBeCharged">
 <formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
 <formObjectCount_Form View="1">
-<formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
+<formObjectInfo_Form View_0="label	textLine	1, 1, 1, 1, full, full">
 <headerLines_Table="2">
 <mainSplitting="0.75867">
 <mainView="Table">

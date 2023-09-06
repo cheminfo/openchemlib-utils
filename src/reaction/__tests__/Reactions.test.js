@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import { MF } from 'mf-parser';
+import { Molecule } from 'openchemlib';
 
 import { parseDwar } from '../../misc/dwar/parseDwar.js';
 import { getMF } from '../../util/getMF.js';
@@ -12,8 +13,11 @@ test('Reactions', () => {
     join(__dirname, './data/ReactionMassFragmentation.dwar'),
     'utf8',
   );
-  const database = parseDwar(dwar);
-  console.log(database.data);
+  const database = parseDwar(dwar).data;
+
+  console.log(database)
+  const ionizations = database.filter((entry) => entry.Label === 'Ionization');
+  const fragmentations = database.filter((entry) => entry.Label !== 'Ionization');
 
   const xtc = Molecule.fromSmiles('CC(CC1(=CC2(=C(C=C1)OCO2)))NC');
 
@@ -33,9 +37,9 @@ test('Reactions', () => {
 
   reactions.appendOneReactionReactants([xtc]);
 
-  reactions.applyReactions(ionizations, { min: 1, max: 2 });
+  reactions.applyReactions(ionizations, { min: 1, max: 2, flattenProducts: true });
 
-  reactions.applyReactions(fragmentations, { min: 1, max: 3 });
+  reactions.applyReactions(fragmentations, { min: 1, max: 3, flattenProducts: true });
 
   reactions.filterTree((entry) => {
     console.log(reactions);
