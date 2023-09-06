@@ -1,4 +1,4 @@
-import { getInfo } from './getReactantInfo.js';
+import { getMoleculeInfo } from '../../util/getMoleculeInfo.js';
 /**
  * @description apply one reaction to one reactant
  * @param {*} reactants either a molecule or an array of molecules
@@ -50,7 +50,10 @@ export function applyOneReactantReaction(reactants, reactions, options) {
           const products = [];
           for (const reactionProduct of oneReactionProduct) {
             // get the info of the product (molfile, idCode, mf)
-            const moleculeInfo = getInfo(reactionProduct, moleculesInfo);
+            const moleculeInfo = getMoleculeInfo(
+              reactionProduct,
+              moleculesInfo,
+            );
             // if the product has not been processed yet, we add it to the list of products and we add it to the list of todoNextDepth
             if (!processedMolecules.has(moleculeInfo.idCode)) {
               const product = {
@@ -75,7 +78,7 @@ export function applyOneReactantReaction(reactants, reactions, options) {
               reaction;
             const oneReaction = {
               reaction: reactionWithoutOCL,
-              reactant: getInfo(reactant, moleculesInfo),
+              reactant: getMoleculeInfo(reactant, moleculesInfo),
               products,
             };
             trees.push(oneReaction);
