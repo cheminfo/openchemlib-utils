@@ -1,3 +1,4 @@
+import { appendOCLReaction } from './utils/appendOCLReaction.js';
 import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
 import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 
@@ -67,18 +68,4 @@ export function applyReactions(reactants, reactions, options = {}) {
   return { trees, products, stats };
 }
 
-/**
- * @description Append the OCL reaction to the reaction object
- * @param {Array} reactions array of reactions objects with rxnCode and label
- * @param {Object} OCL OCL object
- * @returns {Array} array of reactions objects with rxnCode, label and oclReaction (a decoded version of rxnCode reaction)
- */
-function appendOCLReaction(reactions, OCL) {
-  reactions = JSON.parse(JSON.stringify(reactions)).filter(
-    (reaction) => reaction.rxnCode,
-  );
-  for (const reaction of reactions) {
-    reaction.oclReaction = OCL.ReactionEncoder.decode(reaction.rxnCode);
-  }
-  return reactions;
-}
+
