@@ -1,7 +1,7 @@
 <datawarrior-fileinfo>
 <version="3.3">
-<created="1694435694334">
-<rowcount="99">
+<created="1694445308523">
+<rowcount="77">
 </datawarrior-fileinfo>
 <column properties>
 <columnName="atomMapping">
@@ -60,9 +60,6 @@ Qg a` Qt	!R@FL@[AtJ_@ !RGUi| !R_qL]^kp	$4!V!1!1!1080404&24&1#F20J!V4$8J4F81V#2V0
 qTq Q\ qa	!R@NL?xpAlG_K\ !R@FL]Ngp !R@FL]Akp	#8$V(G0F208VF18V#405%2!F0H)1!4J01V1!2V82FB0N$F#83!F0F//01//%8/(	y4V4%V!4/////#	4FV/$8////&10	Remote Hydrogen rearrangement	gCa@@eMPD!eFHBLGtP eF@HhP	[M-H]-	CRF	10.1039/C5NP00073D	5.1	Fig. 8 c.	reaction
 IO^adkBFU qb^i IO^ IeQ	!Rm?u~_?C}|Gq~_?A}|Gu~_?A||Gwp_Atr{@ !R_g~w_K_}mwvw_AvZo@ !R@Fp@XqtF_@ !ROvL@XquFo@	04!1!V0c05#81F$2180_F2Vo449!1H482FGF4!W$80ZBF$k03W02!8F1FF895!9104088//01)V/V$F#8808-101$	tvLAcAq07Cs29B1!3F89c50H!XV#F8#F$FV#8*2$202&8)2%	kNH!1,8#8,H#8$F/#1/,	Remote Hydrogen rearrangement	dcN@B@J\bRbRaWCUUUL@_ITC@!gFpAEJTjZuRA@ eM`AIhH eM@HvB	[M]+	CRF	10.1039/C5NP00073D	5.1	Fig. 8 d.	reaction
 QX QX	!R@Fp]rgp !R@FL]Nkp	08(F$V0F08208#8$4(8F0F#F$4!2!4104!4!42#F0F$F!10V02F//////0	4F!4/////,	40V/////,10	Oxonium Resonance	eFH`fJGtP!eFHbfLGtP	[M+H]+	Resonance	https://en.wikipedia.org/wiki/Oxonium_ion			resonance
-Qa QI	!R@@Mo@quJo@ !RU`@KTawZ``	VV010108#I!2#K#V!1c0F8!442!88&2040V!V(8!2$N+8//(1//%8/(	40V/////.	40V/////+2!	Ionization	eMHBN`vjMPp_{P!eMJhtJTf`g@	[M+Na]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qa QI	!R@Oto?QuJo@ !Re`AsdawZ``	VV01#8#I!2#J#V!1c!8!4421088&204$k&F#21#N+8//(1//%8/(	40V/////.	40V/////+2!	Ionization	eMHBN`vjMPp_{P!eMJhrJTf`g@	[M+K]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qa Qa@	!RWrL@Hquro@ !R_{zHog~~GUi|	VV0G1!8#I102#J#V!1c!8!442!88&204$V+20F!N&1#8//(1)8/+8/(	40V/////.	40X/////+1!	Ionization	eMHBN`vjMPp_{P!gCiIHM@BTij@~d{|tD	[M+NH4]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
 IyjH\R@ IyjD qbq	!RmpJw?[\B?g~w?[\Bm?t]Pkp !R_vq?Dw}lGWi| !R@AL@[@@SG]i|	#VW2FX01F010FV5NF$4#k!4!202%F104%V#aBH91VJm02V42048N9!V9!2832#8$4-4,1(4/(2!8808/V$	:U979O01F5V04N91#2#Z*Z/0F&8/-F0	qFP0619$F*8-V///(F0	Inductive cleavages assisted by β-hydrogen removal	dayHBDxDeIYujj@OdRJ`!gCi@DDeZ@~b` gChA@IRVdCzB@	[M+H]+	CMF	10.1039/C5NP00073D	6.1.4	Fig 23 c.	reaction
 qbqk qbqk	!R_O@T~pAYDEKp@quJ_@ !R@Fq?[@@S_qM?[AwZ_@	Z2!110V!F8!211#4!F1F0F!BVF4$822F0V4#2#V04JF01V#@V02!NP602V924F97$F/#4,1/,4(8(8(2%	zj_DO2V20i2042!V0k&V0VF!V$F$V*4/*V!1(	yJs5!8!V4F4)82/%V//04,10	Inductive cleavages assisted by β-hydrogen removal	gFqAAYRe|Zj`OiH@!gGQA@IRezY@~``	[M]+	CMF	10.1039/C5NP00073D	6.1.4 	Fig 23 b.	reaction
 IaLJnXP qbqk IxP	!RdArPwY@\dMvPGMy?dMt]Bkp !R@@L@[@@C@Fp@@quz_@ !R@@L]akp	VV!W!Z!1N$104041!910J!B!4#98!F!42!2%4ZFF1V#2V03029P14209#9308VV8-4$4,1#F01*81$4,8#1$4&22$	RuJAB2k01802#V!F80140G!V/#4//-	RNF140V)V%8!1/#k/%2/*	Inductive cleavages assisted by β-hydrogen removal	daxHB@zTeVVjh@~ah@!gGQA@IRUVi@~`` eF@HhP	[M]+	CMF	10.1039/C5NP00073D	6.1.4 	Fig 23 a.	reaction
@@ -101,36 +98,17 @@ IzaIla@ qrLk IxP	!Rm?vH?[\B?g~w?[_}?g|]tep !Rb@Jw@ox@?`Bw@auZp` !R_vp]^gp	8$F#1#
 qJuX qJp q]	!R_g?p?_A||Ot]Bmp !R_g?p?QuZw@ !R_rp]^gp	V0V!F1080428J0211F10VV210k040J04FV080HF2F1#F5F0404022J4GZ#2V0H080s10F40G!B30808V//////0	xNk54$2%V#V////+	4Fc04/!8////)	α-elimination	gJPa@SrRkTA@!eMH`yIdH eFHBJD	[M-H]-	CRF	10.1039/C5NP00073D	6.2	Fig. 26 	reaction
 IxjqaR@ IZa Q[ qy	!R?`BH@k\B?`BH?[_}mpH]xlH !R_?y??awz_@ !R_qL@DqtzO@ !R_vp]Zgp	V$F#8#B0613k10VV!1V0B0K14GFZ84JF0k1$G14!4020F4040V02V42F80k!F20W38R10X08V//01)V/%F$8/(	xtsb4ak40@0R!4Va0V!8&F04!2F(k$V(F&20V#8)4)	JF!4/!8///)V+V!	α-elimination	daxDB@HnrJJHmSHA@!eMHAITH eM@ghvB eFHBND	[M-H]-	CRF	10.1039/C5NP00073D	6.2	Fig. 27 a.	reaction
 IDjsfR@ IDlYH q}	!RmpJw__x@?g~w@k\B?`@]dop !R]?pq@B?MOrXkAAtz`` !R_vp]Fgp	$1F!2#89!10H!V#1X040410kFBB41F0G10F!F04014V20F4040c02V02F82FFN#c18R10X!V$4-4,1#F01/.8#1$4-	xtwbZao4V@0T!4VZBc8084010F0N84!FF018$J0J4#2808V0F#8!20V#8)4)	RsFY4Xk!80@#V4!8$G/&4%4/!8/V!	α-elimination	daDDB@HnRYg[fij@H!gFqAAnRYSVj`H eFHBND	[M-H]-	CRF	10.1039/C5NP00073D	6.2	Fig. 27 b.	reaction
-QP` QX	!R_`BH_]]}GXk| !R_rp]Ngp	V84!9-V!V$8#4&8!4#2!4-804V08!F!7#B0FF02#1//!1//%8/(	!2/////.	!2/////.	Ionization	gCh@AGj@vTTUHXECAjb@!eF``fLGtP	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-QR QX	!R@FL?XqvJo@ !R_rp]Ngp	V!1#8#2!2#L#V!1c%4Z#8!4&4$V8!F,N+48$F//01//%8/(	40V/////.	40V/////,10	Ionization	eMHBN`vjMPp_{P!eFH`fLGtP	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-QX QX	!R_~Ombkp !R_tp]Ngp	//////08/#4,1/(4,8/02%	4F!4/////,	4F!4/////,	Ionization	eFHBJD!eFH`fJGtP	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qa Qd	!R@BM_HqvJo@ !R_tp]Ngp	V0V$4V*8%B08$44F!18#F1$6!V01V%53(F$1#4//*1//%8/(	//,8///$	//,8///$	Ionization	eMB@HchMjcTLG~t!eFB`HIcA}D@	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd QI	!R_rL]Bgp !RE`@sDauZ``	0V0F01$V1&1)VF/!2#VV*8!2/08%8/#4,1//%8/(	4F!4/////,	4F!4/////)2!	Ionization	eFHBJD!eMJhtJTfPg@	[M+Na]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd QI	!R_rL]bgp !RE`@sDawZ``	0V0G&V1/0V(1*2$V0F&F#21/8%8/#4,1//%8/(	4F!4/////,	4F!4/////)2!	Ionization	eFHBJD!eMJhrJTfPg@	[M+K]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd Qa@	!R@AL]|gp !R_?zh?g?~GYi|	0V0F1%V11/V/#2$V-20F*1#8%8/#4,1)8/+8/(	4F!4/////,	4F204/////)1!	Ionization	eFHBJD!gCiIHM@BTif@~d{|tD	[M+K]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Q`P QI	!Ro`BHoY^}GXk| !Rw`BCzatzh`	V8#C,2W!V!8080F)8!4#20140c)108!V08!F!6!8c0F%11//!1//%8/(	!2/////.	!2/////+2!	Ionization	gCh@AGj@vTTUHXECAjb@!eMbhtJTf`g@	[M+Na]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Q`P QI	!RO`BHO^\}GTk| !RW`C}ZawZP`	V8010B,2V!V!808)108!4#201408!F%1F#V18!F!6!8c0F%11//!1//%8/(	!2/////.	!2/////+2!	Ionization	gCh@AGj@vTTUHXECAjb@!eMbhrJTf`g@	[M+K]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Q`P Qa@	!Ruwu~@Ha}GWK| !R_w{H_g}~GUi|	V80F1B&1$2V!V!808+8!4#201408)1$V0N!F!6!8d0F%11//!1)8/+8/(	!2/////.	!2/////+1!	Ionization	gCh@AGj@vTTUHXECAjb@!gCdIAM@BTij@~d{|tD	[M+NH4]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qa Qa	!R_qL@Dqwro@ !R_?zh?awZ_@	V$104Z!F#2!9%8080F!40F!18#F02#60VV!V#2!904#80F)4$F//$1//%8/(	//,8///$	//,8///02!	Ionization	eMB@HchMjcTLG~t!eMA`Hm@fN`g@	[M+Na]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qa QI	!ROvL@Xqwro@ !R@@GH_avz_@	V!1#4Z!F#2!8%808$40F0118#F02#6!V0FV#20F10401080F)4$F//$1//%8/(	//,8///$	//,8///02!	Ionization	eMB@HchMjcTLG~t!eMAcH`beIhOyp	[M+K]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qa Qa@	!R_qL@Dquro@ !R_?zh?g?~GUi|	V!F1!4Z!F1!2!8%808$40F!18#F02#6!V!V#2!104!F80F&104$F//$1)8/+8/(	//,8///$	!2//)8///01!	Ionization	eMB@HchMjcTLG~t!gChEH@cP@eJZ`OiNMA@	[M+NH4]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-QX QX	!R_vp]Bop !R_vp]Vop	//////(8/$F$V%8/&V)8/%	4/////,1410	4/////,14!	Ionization	eFJH|Hp_U@!eFJh|KhpP	[M-H]-		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
+QP` QX	!Ro`BHoY^}GXk| !R_tp]Ngp	V04!1$V$V*88#4V%8*4%1#F!80404#J!1#4!F020V1//#1//%8/(	!2/////.	!2/////.	Ionization	gCh@AGj@vTTUHXECAdEzh`!eF``fLGtP	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
+QR QX	!R@BM_HqvJo@ !R_tp]Ngp	V&F+H(8&VV048!4&4%8!F!8#F02!F+48$F//01//%8/(	40V/////.	40V/////,10	Ionization	eMHBN`vjMPp_yE{P!eFH`fLGtP	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
+QX QX	!R_~L]Bgp !R_pp]vop	////////!V1/(4&2$8/02%	4F!4/////,	4F!4/////,	Ionization	eFHBJGHh!eFH`fJGtP	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
+Qa Qd	!R@DL_PqvJo@ !R_pp]Nop	V0V%V01+8!60804!4BV#8$1$40F!9!4#5202%F$1//.1//%8/(	//,8///$	//,8///$	Ionization	eMB@HchMjcTLG~Q^t!eFB`HIcA}D@	[M+H]+		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
+QX QX	!R_rp]Bop !R_rp]Vop	//////(8/$F$V%8/&V)8/%	4/////,1410	4/////,14!	Ionization	eFJH|Hp_U@!eFJh|KhpP	[M-H]-		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
 QX QX	!R_vp]Rgp !R_vp]vgp	///////-F$W/*4*804/%	40V/////,10	40V/////.	Ionization	eFHBLGtP!eFH`zLD	[M-H]-		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
 a` a`	!R_tp]Rgp !RG[i|	V$401H(8%40808&1#8$F!204%4/F&F#2#4//////#	//,8///$	//,8///$	Ionization	eFB@HcAmWhbMPp_{P!fHpPxB	[M-H]-		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
 Qa Qd	!Ro`BWoQvJ?@ !R_tp]Ngp	W,8%4%80cF02(B$F#F4&F#F#F%F+1FV//%1//%8/(	!2/////.	!2/////.	Ionization	eM`BN`vktQFhXO}h!eF``zLD	[M-H]-		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd Qd	!R@AL]Bkp !Re?y??avZ_@	%G-1&FV0F(8!F*V0V01%B8//!8///&V0V/#V+	4/////,14!	4/////,16!	Ionization	eFJh|KhpP!eMIX|GPnYRZC~]@	[M-H+Na]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd Qd	!R@FL]Bkp !Rewy?_avZ_@	%F0V&V+VV*8!F#V04-14#2/084+8,4!V//(V//	4F/////,4!	4F/////,6!	Ionization	eFJH|HhP!eMIh|GPYRVC~]@	[M-H+Na]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-a` a`	!RGPi| !R_wx]fgp	#101-10V(F/#1!V(V!8$8///&1////	//,8///$	//,8///02!	Ionization	fHpPxB!eFAPHm@zfLG|x@	[M-H+Na]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd QI	!R@AL]Bgp !R@Ozh?atz_@	%101+1)1F+V*V!4#8#8F+V&404,F/(1//4$8/(	!2/////.	!2/////+2!	Ionization	eF``zLD!eMbXtB[df`g@	[M-H+Na]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-QX QF	!R_qp]\op !R@@Fh@Qtz_@	%G-1(V0F!4$8!F*V!104$48%2///&1/+V)8/&8	40V/////.	40V/////+2!	Ionization	eFH`zLD!eMJXtB[df`g@	[M-H+Na]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd QF	!R@FL]Bkp !R@@Fh@Qtz_@	#10F/%FV)18!F,VF1%R$1/-8///&V0V/#V+	4/////,14!	4/////,16!	Ionization	eFJh|KhpP!eMIXrGpInRZC~\@	[M-H+K]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd QF	!R@BL]Bkp !R@HFh`Qtz_@	%F(VV+VV!2&8!F%4(8$k4#2/.8,4!V//(V//	4F/////,4!	4F/////,6!	Ionization	eFJH|HhP!eMIhrGpIRYC~\@	[M-H+K]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-a` aP	!RGPi| !R@HD]vgp	#1/!V/1+1%F$V0F$18///&1////	//,8///$	//,8///02!	Ionization	fHpPxB!eFASH``fzLG|x@	[M-H+K]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-Qd QI	!R@FL]Bgp !R@Gzh_atz_@	#1#1/%1(1#V-J#8!F0F!1(V&404,F/(1//4$8/(	!2/////.	!2/////+2!	Ionization	eF``zLD!eMbXrB[df`g@	[M-H+K]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
-QX QF	!R_vp]|gp !R@Ozh?atz_@	#10F/&V$4#18!F-G04$J$102///&1/+V)8/&8	40V/////.	40V/////+2!	Ionization	eFH`zLD!eMJXrB[df`g@	[M-H+K]		https://www.researchgate.net/profile/Bin_Zhou/publication/228114152/figure/tbl1/AS:669624521740299@1536662335423/Common-types-of-adducts-in-LC-MS.png			ionization
 <hitlist data>
 <hitlistName="<selection>">
-<hitlistData="B@@@@@@@@@@@@@@@@">
+<hitlistData="@@@@@@@@@@@@B">
 </hitlist data>
 <datawarrior properties>
 <columnFilter_Table="">
@@ -149,12 +127,12 @@ QX QF	!R_vp]|gp !R@Ozh?atz_@	#10F/&V$4#18!F-G04$J$102///&1/+V)8/&8	40V/////.	40V
 <filter3="#string#	section">
 <filter4="#string#	description">
 <filter5="#string#	label">
-<filter6="#string#	kind">
+<filter6="#string#	kind	#contains#	ioni">
 <formLayout_Form View="TableLayout,3,6.0,-1.0,6.0,3,4.0,-1.0,4.0">
 <formObjectCount_Form View="1">
 <formObjectInfo_Form View_0="Label	textLine	1, 1, 1, 1, full, full">
 <headerLines_Table="2">
-<mainSplitting="0.78488">
+<mainSplitting="0.77045">
 <mainView="Table">
 <mainViewCount="2">
 <mainViewDockInfo0="root">
@@ -164,6 +142,6 @@ QX QF	!R_vp]|gp !R@Ozh?atz_@	#10F/&V$4#18!F-G04$J$102///&1/+V)8/&8	40V/////.	40V
 <mainViewName1="Form View">
 <mainViewType0="tableView">
 <mainViewType1="formView">
-<rightSplitting="0.68041">
+<rightSplitting="0.68484">
 <rowHeight_Table="80">
 </datawarrior properties>
