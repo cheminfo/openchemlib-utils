@@ -5,30 +5,30 @@
 </datawarrior-fileinfo>
 <column properties>
 <columnName="atomMapping">
-<columnProperty="parent	transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	atomMapping">
 <columnName="idcoordinates2D">
-<columnProperty="parent	transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	idcoordinates2D">
 <columnName="reactionFP">
-<columnProperty="parent	transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	RxnFP">
 <columnProperty="version	1.0.0">
 <columnName="reactantFFP">
-<columnProperty="parent	transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	FragFp">
 <columnProperty="reactionPart	reactants">
 <columnProperty="version	1.2.1">
 <columnName="productFFP">
-<columnProperty="parent	transformation">
+<columnProperty="parent	rxnCode">
 <columnProperty="specialType	FragFp">
 <columnProperty="reactionPart	products">
 <columnProperty="version	1.2.1">
-<columnName="transformation">
+<columnName="rxnCode">
 <columnProperty="isFragment	true">
 <columnProperty="specialType	rxncode">
 </column properties>
-atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	label	transformation	ionization	reaction	doi	section	description	kind
+atomMapping	idcoordinates2D	reactionFP	reactantFFP	productFFP	label	rxnCode	ionization	reaction	doi	section	description	kind
 Qv Qp Qd	!R_vq?Dqur?@ !RG[i| !R@AL]Vkp	10V04!V%1!1-204&808022J!k4!V0804F81V#@V%88#904082//////&	o0V4/////+10	4F/%8////)	Water elimination	eMHAIhOlba`!fI@Gu` eF@HhP	Unkown	CRF	10.1039/C5NP00073D	5.7	Fig. 18	reaction
 qgSuH qrLoX	!RQps~_}?YQwMmc}?FGUH| !RN@s_qox@[[AGCAJpGXXb	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance 	gOpAGJTju`@@D!gOpAGJTju`@@D	[M+H]+	Resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg			resonance
 IaLkit I{MbTh	!Rh@VUDFcl?H`N@HCfGXiB !R[X~@abJwFEL@F[y_GSi\	//////08#2028+V8*VW)4$8V1&8V*8%4)410F#	0F/%8////)	0F/%8////)	Tropylium resonance	gOpAGJTju`@@D!gOpAGJTju`@@D	[M]+	Resonance	https://homework.study.com/cimages/multimages/16/capture2867284230232943485.jpg			resonance
@@ -119,8 +119,8 @@ Qa Qd	!Ro`BWoQvJ?@ !R_tp]Ngp	W,8%4%80cF02(B$F#F4&F#F#F%F+1FV//%1//%8/(	!2/////.	
 <columnWidth_Table_label="337">
 <columnWidth_Table_reaction="80">
 <columnWidth_Table_section="80">
-<columnWidth_Table_transformation="460">
-<detailView="height[Data]=0.5;height[transformation]=0.5">
+<columnWidth_Table_rxnCode="460">
+<detailView="height[Data]=0.5;height[rxnCode]=0.5">
 <filter0="#string#	ionization">
 <filter1="#string#	reaction">
 <filter2="#string#	doi">

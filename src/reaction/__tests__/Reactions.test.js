@@ -15,9 +15,8 @@ test('Reactions', () => {
     'utf8',
   );
   const database = parseDwar(dwar).data;
-
-  const ionizationsDatabase = database.filter((entry) => entry.label === 'Ionization');
-  const fragmentationsDatabase = database.filter((entry) => entry.label !== 'Ionization');
+  const ionizationsDatabase = database.filter((entry) => entry.kind === 'ionization');
+  const fragmentationsDatabase = database.filter((entry) => entry.kind !== 'ionization');
 
   const xtc = Molecule.fromSmiles('CC(CC1(=CC2(=C(C=C1)OCO2)))NC');
 
