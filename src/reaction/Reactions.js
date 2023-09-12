@@ -49,12 +49,19 @@ export class Reactions {
   }
 
   applyOneReactantReactions(reactions, options = {}) {
+    const { leaves = false } = options;
+    let reactants = [];
+    let trees;
+    if (leaves) {
+      trees = this.getLeaves();
+      reactants = trees.map((tree) => this.OCL.Molecule.fromIDCode(tree.idCode));
+    } else {
+      reactants = this.reactantsMatrix.flat(); // array of Molecules
+      trees = this.trees;
+    }
 
 
-
-    const reactants = this.reactantsMatrix.flat();
     reactions = appendOCLReaction(reactions, this.OCL);
-
     const stats = { counter: 0 };
     // Start the recursion by applying the first level of reactions
     let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
@@ -63,7 +70,7 @@ export class Reactions {
       processedMolecules: this.processedMolecules,
       moleculeInfoCallback: this.moleculeInfoCallback,
       maxDepth: this.maxDepth,
-      trees: this.trees,
+      trees,
       stats,
       limitReactions: this.limitReactions,
     });
@@ -75,7 +82,7 @@ export class Reactions {
       todoCurrentLevel = nexts.flat();
     } while (todoCurrentLevel.length > 0);
 
-    // console.log(this.trees)
+    console.log(this.trees)
     //console.log(this.trees[0].products)
 
 

@@ -34,7 +34,8 @@ test('Reactions', () => {
 
   reactions.appendReactants([xtc]);
   reactions.applyOneReactantReactions(ionizationsDatabase);
-  console.log(reactions.getLeaves())
+  reactions.applyOneReactantReactions(fragmentationsDatabase, { leaves: true });
+
 
   // in order to debug the trees
   // https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbd04a6cedc05e54275bc62a29dd0a0cd%2Fview.json&loadversion=true&fillsearch=Trees+debug+fragmentation
