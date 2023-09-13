@@ -1,6 +1,15 @@
+
+/**
+ *
+ * @param {*} processedMolecules
+ * @param {import('openchemlib').Molecule|string} molecule
+ * @param {*} options
+ * @returns
+ */
+
 export function checkIfExistsOrAddInfo(processedMolecules, molecule, options) {
   const { moleculeInfoCallback, asReagent, asProduct } = options;
-  const idCode = molecule.getIDCode();
+  const idCode = typeof molecule === 'string' ? idCode : molecule.getIDCode();
   if (processedMolecules.has(idCode)) {
     const entry = processedMolecules.get(idCode);
     let exists = false;

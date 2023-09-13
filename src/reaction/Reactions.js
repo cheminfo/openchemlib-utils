@@ -1,5 +1,6 @@
 import { appendOCLReaction } from './utils/appendOCLReaction.js';
-import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
+import { applyOneReactantReactions } from './utils/applyOneReactantReactions.js';
+import { checkIfExistsOrAddInfo } from './utils/checkIfExistsOrAddInfo.js';
 import { getLeaves } from './utils/getLeaves.js';
 
 
@@ -13,7 +14,6 @@ export class Reactions {
    * @param {boolean} [options.skipProcessed=true]
    */
   constructor(OCL, options = {}) {
-    this.reactantsMatrix = []; // array of array of molecules
     this.moleculeInfoCallback = options.moleculeInfoCallback;
     this.maxDepth = options.maxDepth ?? 5;
     this.limitReactions = options.limitReactions ?? 200;
@@ -31,61 +31,52 @@ export class Reactions {
    * If there is only one reactant, we call this method with an array of one reactant.
    * If there are multiple reactants, we call this method with an array of the reactants.
    * This method has to be called for all the reactants
-   * @param {import('openchemlib').Molecule[]} reactants
+   * @param {import('openchemlib').Molecule[]} molecules
    * @param {*} reactions
    */
-  appendReactants(reactants) {
-    if (!Array.isArray(reactants)) {
+  appendTree(moleculesOrIDCodes) {
+    if (!Array.isArray(moleculesOrIDCodes)) {
       throw new TypeError('reactants must be an array');
     }
-    if (this.trees.length > 0) {
-      throw new Error('appendReactants can only be called when no trees have been generated yet');
+
+    const molecules = moleculesOrIDCodes.map((molecule) =>
+      checkIfExistsOrAddInfo(this.processedMolecules, molecule, { moleculeInfoCallback: this.moleculeInfoCallback }).info
+    )
+
+    const tree = {
+      molecules,
     }
-    this.reactantsMatrix.push(reactants);
+
+    this.trees.push(tree);
   }
 
   getLeaves() {
     return getLeaves(this.trees)
   }
 
-  applyOneReactantReactions(reactions, options = {}) {
-    const { leaves = false } = options;
-    let reactants = [];
-    let trees;
-    if (leaves) {
-      trees = this.getLeaves();
-      reactants = trees.map((tree) => this.OCL.Molecule.fromIDCode(tree.idCode));
-    } else {
-      reactants = this.reactantsMatrix.flat(); // array of Molecules
-      trees = this.trees;
-    }
-
-
+  applyOneReactantReactions(reactions) {
+    const leaves = this.getLeaves();
     reactions = appendOCLReaction(reactions, this.OCL);
     const stats = { counter: 0 };
     // Start the recursion by applying the first level of reactions
-    let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
-      OCL: this.OCL,
-      currentDepth: 0,
-      processedMolecules: this.processedMolecules,
-      moleculeInfoCallback: this.moleculeInfoCallback,
-      maxDepth: this.maxDepth,
-      trees,
-      stats,
-      limitReactions: this.limitReactions,
-    });
-    do {
-      const nexts = [];
-      for (const todo of todoCurrentLevel) {
-        nexts.push(todo());
-      }
-      todoCurrentLevel = nexts.flat();
-    } while (todoCurrentLevel.length > 0);
-
-    console.log(this.trees)
-    //console.log(this.trees[0].products)
-
-
+    for (const leave of leaves) {
+      let todoCurrentLevel = applyOneReactantReactions(leave, reactions, {
+        OCL: this.OCL,
+        currentDepth: 1,
+        processedMolecules: this.processedMolecules,
+        moleculeInfoCallback: this.moleculeInfoCallback,
+        maxDepth: this.maxDepth,
+        stats,
+        limitReactions: this.limitReactions,
+      });
+      do {
+        const nexts = [];
+        for (const todo of todoCurrentLevel) {
+          nexts.push(todo());
+        }
+        todoCurrentLevel = nexts.flat();
+      } while (todoCurrentLevel.length > 0);
+    }
   }
 
   filterTree(callback) { }

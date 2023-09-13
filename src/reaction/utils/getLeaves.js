@@ -7,18 +7,12 @@ export function getLeaves(trees) {
 }
 
 function getLeavesSS(leaves, currentBranch) {
-
-  if (currentBranch.products.length === 0) {
+  if (!currentBranch.children || currentBranch.children.length === 0) {
     leaves.push(currentBranch)
+    return
   }
 
-  for (const product of currentBranch.products) {
-    if (product.children.length > 0) {
-      for (const child of product.children) {
-        getLeavesSS(leaves, child);
-      }
-    } else {
-      leaves.push(product)
-    }
+  for (const child of currentBranch.children) {
+    getLeavesSS(leaves, child);
   }
 }
