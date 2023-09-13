@@ -32,9 +32,9 @@ test('Reactions', () => {
     skipProcessed: true,
   });
 
-  reactions.appendReactants([xtc]);
+  reactions.appendTree([xtc]);
   reactions.applyOneReactantReactions(ionizationsDatabase);
-  reactions.applyOneReactantReactions(fragmentationsDatabase, { leaves: true });
+  reactions.applyOneReactantReactions(fragmentationsDatabase);
 
 
   // in order to debug the trees

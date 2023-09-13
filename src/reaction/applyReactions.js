@@ -1,5 +1,5 @@
 import { appendOCLReaction } from './utils/appendOCLReaction.js';
-import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
+import { applyOneReactantReaction } from './utils/applyOneReactantReactions.js';
 import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 
 
