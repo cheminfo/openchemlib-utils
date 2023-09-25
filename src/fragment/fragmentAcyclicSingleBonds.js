@@ -28,8 +28,6 @@ export function fragmentAcyclicSingleBonds(molecule) {
     }
   }
 
-  //  console.log(bonds);
-
   const brokenMolecule = molecule.getCompactCopy();
   for (const bond of bonds) {
     if (bond.selected) {

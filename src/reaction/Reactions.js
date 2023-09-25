@@ -2,7 +2,7 @@ import { appendOCLReaction } from './utils/appendOCLReaction.js';
 import { applyOneReactantReactions } from './utils/applyOneReactantReactions.js';
 import { checkIfExistsOrAddInfo } from './utils/checkIfExistsOrAddInfo.js';
 import { getLeaves } from './utils/getLeaves.js';
-
+import { getNodes } from './utils/getNodes.js';
 
 export class Reactions {
   /**
@@ -19,11 +19,10 @@ export class Reactions {
     this.limitReactions = options.limitReactions ?? 200;
     this.skipProcessed = options.skipProcessed ?? true;
     this.logger = options.logger;
-    this.processedMolecules = new Map()
-    this.OCL = OCL
-    this.trees = []
-    this.moleculeInfo = {} // a cache containing molecule information like mw, etc.
-
+    this.processedMolecules = new Map();
+    this.OCL = OCL;
+    this.trees = [];
+    this.moleculeInfo = {}; // a cache containing molecule information like mw, etc.
   }
 
   /**
@@ -39,27 +38,35 @@ export class Reactions {
       throw new TypeError('reactants must be an array');
     }
 
-    const molecules = moleculesOrIDCodes.map((molecule) =>
-      checkIfExistsOrAddInfo(this.processedMolecules, molecule, { moleculeInfoCallback: this.moleculeInfoCallback }).info
-    )
+    const molecules = moleculesOrIDCodes.map(
+      (molecule) =>
+        checkIfExistsOrAddInfo(this.processedMolecules, molecule, {
+          moleculeInfoCallback: this.moleculeInfoCallback,
+        }).info,
+    );
 
     const tree = {
       molecules,
-    }
+    };
 
     this.trees.push(tree);
   }
 
   getLeaves() {
-    return getLeaves(this.trees)
+    return getLeaves(this.trees);
+  }
+
+  getNodes() {
+    return getNodes(this.trees);
   }
 
   applyOneReactantReactions(reactions) {
-    const leaves = this.getLeaves();
+    clearAsFromProcessedMolecules(this.processedMolecules);
+    const nodes = this.getNodes();
     reactions = appendOCLReaction(reactions, this.OCL);
     const stats = { counter: 0 };
     // Start the recursion by applying the first level of reactions
-    for (const leave of leaves) {
+    for (const leave of nodes) {
       let todoCurrentLevel = applyOneReactantReactions(leave, reactions, {
         OCL: this.OCL,
         currentDepth: 1,
@@ -84,3 +91,13 @@ export class Reactions {
   filterProducts(callback) { }
 }
 
+function clearAsFromProcessedMolecules(processedMolecules) {
+  for (const [key, value] of processedMolecules) {
+    if (value.asReagent) {
+      value.asReagent = false;
+    }
+    if (value.asProduct) {
+      value.asProduct = false;
+    }
+  }
+}

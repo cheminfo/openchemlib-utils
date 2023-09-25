@@ -1,3 +1,5 @@
+import { getMF } from '../../util/getMF.js';
+
 import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
 
 /**
@@ -16,13 +18,14 @@ import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
  * @returns {Array} array of results
  */
 export function applyOneReactantReactions(tree, reactions, options) {
-  const { currentDepth, maxDepth, processedMolecules, OCL, logger } =
-    options;
-
+  const { currentDepth, maxDepth, processedMolecules, OCL, logger } = options;
 
   if (tree.molecules.length !== 1) {
-    logger?.warn('applyOneReactantReactions:tree.reactants.length!==1', tree.reactants.length)
-    return []
+    logger?.warn(
+      'applyOneReactantReactions:tree.reactants.length!==1',
+      tree.reactants.length,
+    );
+    return [];
   }
   const reactant = OCL.Molecule.fromIDCode(tree.molecules[0].idCode);
 
@@ -30,7 +33,10 @@ export function applyOneReactantReactions(tree, reactions, options) {
   // if the current depth is greater than the max depth, we stop the recursion and return an empty array
   if (currentDepth >= maxDepth) return [];
 
-  const existsAndInfo = checkIfExistsOrAddInfo(processedMolecules, reactant, { ...options, asReagent: true })
+  const existsAndInfo = checkIfExistsOrAddInfo(processedMolecules, reactant, {
+    ...options,
+    asReagent: true,
+  });
   // check if the reactant has already been processed
   if (existsAndInfo.exists) {
     return [];
@@ -51,7 +57,8 @@ export function applyOneReactantReactions(tree, reactions, options) {
           // get the info of the product (molfile, idCode, mf)
           const productExistsAndInfo = checkIfExistsOrAddInfo(
             processedMolecules,
-            reactionProduct, { ...options, asProduct: true },
+            reactionProduct,
+            { ...options, asProduct: true },
           );
           // if the product has not been processed yet, we add it to the list of products and we add it to the list of todoNextDepth
           if (!productExistsAndInfo.exists) {
@@ -62,10 +69,16 @@ export function applyOneReactantReactions(tree, reactions, options) {
             const oneReaction = {
               reaction: reactionWithoutOCL,
               depth: currentDepth,
-              molecules: [checkIfExistsOrAddInfo(processedMolecules, reactionProduct, options).info],
+              molecules: [
+                checkIfExistsOrAddInfo(
+                  processedMolecules,
+                  reactionProduct,
+                  options,
+                ).info,
+              ],
             };
 
-            if (!tree.children) tree.children = []
+            if (!tree.children) tree.children = [];
             tree.children.push(oneReaction);
 
             todoNextDepth.push(() => {
@@ -74,14 +87,11 @@ export function applyOneReactantReactions(tree, reactions, options) {
                 currentDepth: options.currentDepth + 1,
               });
             });
-
           }
         }
-
       }
     }
   }
   // by returning todoNextDepth, we make sure that the recursion will continue
   return todoNextDepth;
 }
-

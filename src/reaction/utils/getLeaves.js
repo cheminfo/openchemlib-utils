@@ -1,18 +1,18 @@
 export function getLeaves(trees) {
   const leaves = [];
   for (const tree of trees) {
-    getLeavesSS(leaves, tree);
+    appendLeavesSS(leaves, tree);
   }
-  return leaves
+  return leaves;
 }
 
-function getLeavesSS(leaves, currentBranch) {
+function appendLeavesSS(leaves, currentBranch) {
   if (!currentBranch.children || currentBranch.children.length === 0) {
-    leaves.push(currentBranch)
-    return
+    leaves.push(currentBranch);
+    return;
   }
 
   for (const child of currentBranch.children) {
-    getLeavesSS(leaves, child);
+    appendLeavesSS(leaves, child);
   }
 }

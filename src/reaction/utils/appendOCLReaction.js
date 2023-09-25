@@ -10,14 +10,14 @@
 export function appendOCLReaction(reactions, OCL, options = {}) {
   const { logger } = options;
 
-  const newReactions = []
+  const newReactions = [];
 
   for (const reaction of reactions) {
     if (reaction.rxnCode) {
       newReactions.push({
         ...reaction,
         oclReaction: OCL.ReactionEncoder.decode(reaction.rxnCode),
-      })
+      });
     } else if (logger) {
       logger.warn(reaction, 'Reaction without rxnCode');
     }

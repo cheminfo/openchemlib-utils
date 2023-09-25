@@ -1,4 +1,3 @@
-
 /**
  *
  * @param {*} processedMolecules
@@ -34,7 +33,7 @@ export function checkIfExistsOrAddInfo(processedMolecules, molecule, options) {
       molfile: molecule.toMolfile(),
       asReagent,
       asProduct,
-      info: {}
+      info: {},
     };
     if (moleculeInfoCallback) {
       info.info = moleculeInfoCallback(molecule);
@@ -42,5 +41,4 @@ export function checkIfExistsOrAddInfo(processedMolecules, molecule, options) {
     processedMolecules.set(idCode, info);
     return { exists: false, info };
   }
-
 }

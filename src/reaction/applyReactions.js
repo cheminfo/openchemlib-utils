@@ -1,14 +1,12 @@
 import { appendOCLReaction } from './utils/appendOCLReaction.js';
-import { applyOneReactantReaction } from './utils/applyOneReactantReactions.js';
+import { applyOneReactantReactions } from './utils/applyOneReactantReactions.js';
 import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
-
 
 /**
  * @typedef {Object} ReactionEntry
  * @property {string} label
  * @property {string} rxnCode
  */
-
 
 /**
  * Create reaction trees of products based on reactions and reactants
@@ -42,7 +40,7 @@ export function applyReactions(reactants, reactions, options = {}) {
   const stats = { counter: 0 };
   const trees = [];
   // Start the recursion by applying the first level of reactions
-  let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
+  let todoCurrentLevel = applyOneReactantReactions(reactants, reactions, {
     OCL,
     currentDepth: 0,
     moleculesInfo,
@@ -67,5 +65,3 @@ export function applyReactions(reactants, reactions, options = {}) {
   }
   return { trees, products, stats };
 }
-
-
