@@ -3,7 +3,7 @@ import { join } from 'path';
 
 import { MF } from 'mf-parser';
 import OCL, { Molecule } from 'openchemlib';
-import { test } from 'vitest';
+import { test, expect } from 'vitest';
 
 import { parseDwar } from '../../misc/dwar/parseDwar.js';
 import { getMF } from '../../util/getMF.js';
@@ -43,21 +43,17 @@ test('Reactions', () => {
   });
 
   reactions.appendHead([xtc]);
-  reactions.applyOneReactantReactions(ionizationsDatabase, { min: 0, max: 1 });
-  reactions.applyOneReactantReactions(fragmentationsDatabase, { min: 0, max: 2 });
+  reactions.applyOneReactantReactions(ionizationsDatabase, { min: 1, max: 1 });
+  reactions.applyOneReactantReactions(fragmentationsDatabase, {
+    min: 0,
+    max: 2,
+  });
 
   const processedMolecules = Object.fromEntries(reactions.processedMolecules);
+  console.log(processedMolecules)
 
-  const nodes = reactions.getNodes();
-  for (const node of nodes) {
-    node.molecules[0].info.mz = node.depth + node.currentDepth / 100;
-  }
-
-
-  console.log(Object.keys(processedMolecules).length);
-  console.log(reactions.moleculeInfo);
-
-  //  console.log(reactions.trees)
+  const nodes = reactions.getNodes().filter((node) => node.isValid);
+  expect(nodes).toHaveLength(19);
 
   // in order to debug the trees
   // https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbd04a6cedc05e54275bc62a29dd0a0cd%2Fview.json&loadversion=true&fillsearch=Trees+debug+fragmentation

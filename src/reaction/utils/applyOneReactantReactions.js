@@ -17,7 +17,14 @@ import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
  * @returns {Array} array of results
  */
 export function applyOneReactantReactions(tree, reactions, options) {
-  const { currentDepth, maxDepth, maxCurrentDepth, processedMolecules, OCL, logger } = options;
+  const {
+    currentDepth,
+    maxDepth,
+    maxCurrentDepth,
+    processedMolecules,
+    OCL,
+    logger,
+  } = options;
   if (tree.molecules.length !== 1) {
     logger?.warn(
       'applyOneReactantReactions:tree.reactants.length!==1',
@@ -30,7 +37,6 @@ export function applyOneReactantReactions(tree, reactions, options) {
   const todoNextDepth = [];
   // if the current depth is greater than the max depth, we stop the recursion and return an empty array
   if (currentDepth > maxCurrentDepth || tree.depth >= maxDepth) {
-    console.log(currentDepth, maxCurrentDepth, tree.depth, maxDepth, reactions.length)
     return [];
   }
 
@@ -70,7 +76,7 @@ export function applyOneReactantReactions(tree, reactions, options) {
             const oneReaction = {
               reaction: reactionWithoutOCL,
               depth: tree.depth + 1,
-              possibleReagents: true,
+              isValid: true,
               currentDepth,
               molecules: [
                 checkIfExistsOrAddInfo(

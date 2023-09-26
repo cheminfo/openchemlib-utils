@@ -47,26 +47,45 @@ export class Reactions {
     const tree = {
       molecules,
       depth: 0,
-      possibleReagents: true, // this node could be implied in reacxtions
+      isValid: true, // this node could be implied in reactions
     };
 
     this.trees.push(tree);
   }
 
+  /**
+   * Returns all the leaves of the trees
+   * @returns
+   */
   getLeaves() {
     return getLeaves(this.trees);
   }
 
+  /**
+   * Returns all the nodes of the trees
+   * @returns
+   */
   getNodes() {
     return getNodes(this.trees);
+  }
+
+  /**
+   * When applying reactions some branches may be dead because it can not be implied in any reaction.
+   * This is the case when we specify a 'min' reaction depth.
+   * This will returno only the valid nodes
+   * @returns
+   */
+  getValidNodes() {
+    return this.getNodes().filter((node) => node.isValid);
   }
 
   applyOneReactantReactions(reactions, options = {}) {
     const { min = 0, max = 3 } = options;
     clearAsFromProcessedMolecules(this.processedMolecules);
-    const nodes = this.getNodes().filter(node => node.possibleReagents)
-    nodes.forEach(node => node.currentDepth = 0)
-    console.log('---------', nodes.length)
+    const nodes = this.getNodes().filter((node) => node.isValid);
+    nodes.forEach((node) => {
+      node.currentDepth = 0;
+    });
     reactions = appendOCLReaction(reactions, this.OCL);
     const stats = { counter: 0 };
     // Start the recursion by applying the first level of reactions
@@ -90,20 +109,14 @@ export class Reactions {
       } while (todoCurrentLevel.length > 0);
     }
 
-    const newNodes = this.getNodes().filter(node => node.possibleReagents);
+    const newNodes = this.getNodes().filter((node) => node.isValid);
     for (const node of newNodes) {
       if (node.currentDepth < min || node.currentDepth > max) {
-        node.possibleReagents = false;
+        node.isValid = false;
       }
+      delete node.currentDepth;
     }
-
-
-
   }
-
-  filterTree(callback) { }
-
-  filterProducts(callback) { }
 }
 
 function clearAsFromProcessedMolecules(processedMolecules) {
