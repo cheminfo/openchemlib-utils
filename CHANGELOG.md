@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.2.0...v5.3.0) (2023-09-26)
+
+
+### Features
+
+* add method to getMoleculeInfo ([d9ebce2](https://github.com/cheminfo/openchemlib-utils/commit/d9ebce2a4f8dbd7910af5744b0cfa83732034679))
+* new Reactions class ([560f97c](https://github.com/cheminfo/openchemlib-utils/commit/560f97ceb3a5604092cf79750da2f1f0670c9182))
+* new Reactions class ([560f97c](https://github.com/cheminfo/openchemlib-utils/commit/560f97ceb3a5604092cf79750da2f1f0670c9182))
+
 ## [5.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.1.0...v5.2.0) (2023-08-23)
 
 
