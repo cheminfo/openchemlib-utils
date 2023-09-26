@@ -21,6 +21,8 @@ import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
  * - products: reactions trees grouped by product idCode
  */
 export function applyReactions(reactants, reactions, options = {}) {
+  // eslint-disable-next-line no-console
+  console.warn('applyReactions is deprecated');
   // Reaction are applied recursively until maximal tree depth is reached (default 10)
   const {
     maxDepth = 5,

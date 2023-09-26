@@ -6,6 +6,8 @@ import { trimTree } from './trimTree.js';
  * @returns {Array} Array of products with their corresponding trees and reactions
  */
 export function groupTreesByProducts(trees) {
+  // eslint-disable-next-line no-console
+  console.warn('groupTreesByProducts is deprecated');
   const results = {};
   for (const tree of trees) {
     const copyTree = JSON.parse(JSON.stringify(tree));
