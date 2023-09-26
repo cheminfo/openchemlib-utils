@@ -79,6 +79,13 @@ export class Reactions {
     return this.getNodes().filter((node) => node.isValid);
   }
 
+  /**
+   *
+   * @param {object[]} reactions - array of reactions that should be applied
+   * @param {object} [options={}]
+   * @param {number} [options.min=0] min depth of the reaction
+   * @param {number} [options.max=3] max depth of the reaction
+   */
   applyOneReactantReactions(reactions, options = {}) {
     const { min = 0, max = 3 } = options;
     clearAsFromProcessedMolecules(this.processedMolecules);
@@ -120,7 +127,7 @@ export class Reactions {
 }
 
 function clearAsFromProcessedMolecules(processedMolecules) {
-  for (const [key, value] of processedMolecules) {
+  for (const [, value] of processedMolecules) {
     if (value.asReagent) {
       value.asReagent = false;
     }

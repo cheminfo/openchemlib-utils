@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
 
 import { MF } from 'mf-parser';
@@ -49,13 +49,13 @@ test('Reactions', () => {
     max: 2,
   });
 
-  const processedMolecules = Object.fromEntries(reactions.processedMolecules);
-  console.log(processedMolecules)
+  expect(reactions.processedMolecules).toHaveLength(20);
+  expect(reactions.processedMolecules).toMatchSnapshot();
 
-  const nodes = reactions.getNodes().filter((node) => node.isValid);
+  const nodes = reactions.getValidNodes();
   expect(nodes).toHaveLength(19);
 
   // in order to debug the trees
   // https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbd04a6cedc05e54275bc62a29dd0a0cd%2Fview.json&loadversion=true&fillsearch=Trees+debug+fragmentation
-  writeFileSync('trees.json', JSON.stringify(reactions.trees, null, 2));
+  //writeFileSync('trees.json', JSON.stringify(reactions.trees, null, 2));
 });
