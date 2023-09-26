@@ -1,9 +1,17 @@
-import { applyOneReactantReaction } from './utils/applyOneReactantReaction.js';
+import { appendOCLReaction } from './utils/appendOCLReaction.js';
+import { applyOneReactantReactions } from './utils/applyOneReactantReactions.js';
 import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
+
+/**
+ * @typedef {Object} ReactionEntry
+ * @property {string} label
+ * @property {string} rxnCode
+ */
+
 /**
  * Create reaction trees of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
- * @param {Array} reactions array of reactions objects with rxnCode, label and needChargeToReact
+ * @param {ReactionEntry[]} reactions array of reactions objects with rxnCode, label and needChargeToReact
  * @param {object} options options to apply the reaction
  * @param {number} [options.maxDepth=5] max depth of the recursion
  * @param {number} [options.limitReactions=200] limit the number of reactions to apply
@@ -32,7 +40,7 @@ export function applyReactions(reactants, reactions, options = {}) {
   const stats = { counter: 0 };
   const trees = [];
   // Start the recursion by applying the first level of reactions
-  let todoCurrentLevel = applyOneReactantReaction(reactants, reactions, {
+  let todoCurrentLevel = applyOneReactantReactions(reactants, reactions, {
     OCL,
     currentDepth: 0,
     moleculesInfo,
@@ -56,20 +64,4 @@ export function applyReactions(reactants, reactions, options = {}) {
     products = [];
   }
   return { trees, products, stats };
-}
-
-/**
- * @description Append the OCL reaction to the reaction object
- * @param {Array} reactions array of reactions objects with rxnCode and label
- * @param {Object} OCL OCL object
- * @returns {Array} array of reactions objects with rxnCode, label and oclReaction (a decoded version of rxnCode reaction)
- */
-function appendOCLReaction(reactions, OCL) {
-  reactions = JSON.parse(JSON.stringify(reactions)).filter(
-    (reaction) => reaction.rxnCode,
-  );
-  for (const reaction of reactions) {
-    reaction.oclReaction = OCL.ReactionEncoder.decode(reaction.rxnCode);
-  }
-  return reactions;
 }

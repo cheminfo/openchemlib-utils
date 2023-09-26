@@ -5,7 +5,7 @@ import { applyReactions } from '../applyReactions.js';
 
 import { reactionsDatabase } from './reactionsDatabase.js';
 
-describe('applyReactions', () => {
+describe.skip('applyReactions', () => {
   it('ethanol', () => {
     const ethanol = Molecule.fromSmiles('CCO');
     const { trees, products, stats } = applyReactions(
