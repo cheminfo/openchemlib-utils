@@ -1,5 +1,3 @@
-import { getMF } from '../../util/getMF.js';
-
 import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
 
 /**
@@ -9,6 +7,7 @@ import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
  * @param {Object} options options to apply the reaction
  * @param {number} options.currentDepth current depth of the recursion
  * @param {number} options.maxDepth max depth of the recursion
+ * @param {number} options.maxCurrentDepth max depth of the recursion for this set of reactions
  * @param {number} options.limitReactions limit the number of reactions
  * @param {Object} options.stats stats of the recursion
  * @param {number} options.stats.counter number of reactions
@@ -18,8 +17,7 @@ import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
  * @returns {Array} array of results
  */
 export function applyOneReactantReactions(tree, reactions, options) {
-  const { currentDepth, maxDepth, processedMolecules, OCL, logger } = options;
-
+  const { currentDepth, maxDepth, maxCurrentDepth, processedMolecules, OCL, logger } = options;
   if (tree.molecules.length !== 1) {
     logger?.warn(
       'applyOneReactantReactions:tree.reactants.length!==1',
@@ -31,7 +29,10 @@ export function applyOneReactantReactions(tree, reactions, options) {
 
   const todoNextDepth = [];
   // if the current depth is greater than the max depth, we stop the recursion and return an empty array
-  if (currentDepth >= maxDepth) return [];
+  if (currentDepth > maxCurrentDepth || tree.depth >= maxDepth) {
+    console.log(currentDepth, maxCurrentDepth, tree.depth, maxDepth, reactions.length)
+    return [];
+  }
 
   const existsAndInfo = checkIfExistsOrAddInfo(processedMolecules, reactant, {
     ...options,
@@ -45,11 +46,11 @@ export function applyOneReactantReactions(tree, reactions, options) {
     if (options.stats.counter >= options.limitReactions) {
       return [];
     }
-    options.stats.counter++;
     const reactor = new OCL.Reactor(reaction.oclReaction);
     // isMatching is true if the reactant is matching the reaction else we continue to the next reaction
     const isMatching = Boolean(reactor.setReactant(0, reactant));
     if (isMatching) {
+      options.stats.counter++;
       // get the products of the reaction
       const oneReactionProducts = reactor.getProducts();
       for (const oneReactionProduct of oneReactionProducts) {
@@ -68,7 +69,9 @@ export function applyOneReactantReactions(tree, reactions, options) {
 
             const oneReaction = {
               reaction: reactionWithoutOCL,
-              depth: currentDepth,
+              depth: tree.depth + 1,
+              possibleReagents: true,
+              currentDepth,
               molecules: [
                 checkIfExistsOrAddInfo(
                   processedMolecules,

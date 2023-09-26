@@ -30,10 +30,9 @@ export class Reactions {
    * If there is only one reactant, we call this method with an array of one reactant.
    * If there are multiple reactants, we call this method with an array of the reactants.
    * This method has to be called for all the reactants
-   * @param {import('openchemlib').Molecule[]} molecules
-   * @param {*} reactions
+   * @param {import('openchemlib').Molecule[]|string[]} molecules
    */
-  appendTree(moleculesOrIDCodes) {
+  appendHead(moleculesOrIDCodes) {
     if (!Array.isArray(moleculesOrIDCodes)) {
       throw new TypeError('reactants must be an array');
     }
@@ -47,6 +46,8 @@ export class Reactions {
 
     const tree = {
       molecules,
+      depth: 0,
+      possibleReagents: true, // this node could be implied in reacxtions
     };
 
     this.trees.push(tree);
@@ -60,19 +61,23 @@ export class Reactions {
     return getNodes(this.trees);
   }
 
-  applyOneReactantReactions(reactions) {
+  applyOneReactantReactions(reactions, options = {}) {
+    const { min = 0, max = 3 } = options;
     clearAsFromProcessedMolecules(this.processedMolecules);
-    const nodes = this.getNodes();
+    const nodes = this.getNodes().filter(node => node.possibleReagents)
+    nodes.forEach(node => node.currentDepth = 0)
+    console.log('---------', nodes.length)
     reactions = appendOCLReaction(reactions, this.OCL);
     const stats = { counter: 0 };
     // Start the recursion by applying the first level of reactions
-    for (const leave of nodes) {
-      let todoCurrentLevel = applyOneReactantReactions(leave, reactions, {
+    for (const node of nodes) {
+      let todoCurrentLevel = applyOneReactantReactions(node, reactions, {
         OCL: this.OCL,
         currentDepth: 1,
         processedMolecules: this.processedMolecules,
         moleculeInfoCallback: this.moleculeInfoCallback,
         maxDepth: this.maxDepth,
+        maxCurrentDepth: max,
         stats,
         limitReactions: this.limitReactions,
       });
@@ -84,6 +89,16 @@ export class Reactions {
         todoCurrentLevel = nexts.flat();
       } while (todoCurrentLevel.length > 0);
     }
+
+    const newNodes = this.getNodes().filter(node => node.possibleReagents);
+    for (const node of newNodes) {
+      if (node.currentDepth < min || node.currentDepth > max) {
+        node.possibleReagents = false;
+      }
+    }
+
+
+
   }
 
   filterTree(callback) { }

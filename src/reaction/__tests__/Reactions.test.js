@@ -42,11 +42,18 @@ test('Reactions', () => {
     skipProcessed: true,
   });
 
-  reactions.appendTree([xtc]);
-  reactions.applyOneReactantReactions(ionizationsDatabase);
-  reactions.applyOneReactantReactions(fragmentationsDatabase);
+  reactions.appendHead([xtc]);
+  reactions.applyOneReactantReactions(ionizationsDatabase, { min: 0, max: 1 });
+  reactions.applyOneReactantReactions(fragmentationsDatabase, { min: 0, max: 2 });
 
   const processedMolecules = Object.fromEntries(reactions.processedMolecules);
+
+  const nodes = reactions.getNodes();
+  for (const node of nodes) {
+    node.molecules[0].info.mz = node.depth + node.currentDepth / 100;
+  }
+
+
   console.log(Object.keys(processedMolecules).length);
   console.log(reactions.moleculeInfo);
 
