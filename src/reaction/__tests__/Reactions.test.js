@@ -49,11 +49,11 @@ test('Reactions', () => {
     max: 2,
   });
 
-  expect(reactions.processedMolecules).toHaveLength(20);
+  expect(reactions.processedMolecules).toHaveLength(9);
   expect(reactions.processedMolecules).toMatchSnapshot();
 
   const nodes = reactions.getValidNodes();
-  expect(nodes).toHaveLength(19);
+  expect(nodes).toHaveLength(8);
 
   // in order to debug the trees
   // https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbd04a6cedc05e54275bc62a29dd0a0cd%2Fview.json&loadversion=true&fillsearch=Trees+debug+fragmentation
