@@ -1,6 +1,7 @@
 import { appendOCLReaction } from './utils/appendOCLReaction.js';
 import { applyOneReactantReactions } from './utils/applyOneReactantReactions.js';
 import { checkIfExistsOrAddInfo } from './utils/checkIfExistsOrAddInfo.js';
+import { getFilteredTrees } from './utils/getFilteredTrees.js';
 import { getLeaves } from './utils/getLeaves.js';
 import { getNodes } from './utils/getNodes.js';
 
@@ -69,6 +70,19 @@ export class Reactions {
     return getNodes(this.trees);
   }
 
+  getParentMap() {
+    const parentMap = new Map();
+    const nodes = this.getNodes();
+    for (const node of nodes) {
+      if (node.children) {
+        for (const child of node.children) {
+          parentMap.set(child, node);
+        }
+      }
+    }
+    return parentMap;
+  }
+
   /**
    * When applying reactions some branches may be dead because it can not be implied in any reaction.
    * This is the case when we specify a 'min' reaction depth.
@@ -77,6 +91,25 @@ export class Reactions {
    */
   getValidNodes() {
     return this.getNodes().filter((node) => node.isValid);
+  }
+
+  /**
+   *
+   * @param {object} [options={}]
+   * @param {(object):boolean} [options.filter] - a function that will be called for each node and return true if the node should be kept
+   */
+  getFilteredReactions(options = {}) {
+    const filteredReactions = new Reactions();
+    filteredReactions.moleculeInfoCallback = this.moleculeInfoCallback;
+    filteredReactions.maxDepth = this.maxDepth;
+    filteredReactions.limitReactions = this.limitReactions;
+    filteredReactions.skipProcessed = this.skipProcessed;
+    filteredReactions.logger = this.logger;
+    filteredReactions.processedMolecules = this.processedMolecules;
+    filteredReactions.OCL = this.OCL;
+    filteredReactions.moleculeInfo = this.moleculeInfo; // a cache containing molecule information like mw, etc.
+    filteredReactions.trees = getFilteredTrees(this, options);
+    return filteredReactions;
   }
 
   /**

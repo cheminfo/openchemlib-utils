@@ -24,6 +24,7 @@ test('Reactions', () => {
     (entry) => entry.kind !== 'ionization',
   );
 
+  // MDMA example
   const xtc = Molecule.fromSmiles('CC(CC1(=CC2(=C(C=C1)OCO2)))NC');
 
   const reactions = new Reactions(OCL, {
@@ -57,5 +58,23 @@ test('Reactions', () => {
 
   // in order to debug the trees
   // https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbd04a6cedc05e54275bc62a29dd0a0cd%2Fview.json&loadversion=true&fillsearch=Trees+debug+fragmentation
-  //writeFileSync('trees.json', JSON.stringify(reactions.trees, null, 2));
+  // writeFileSync('trees.json', JSON.stringify(reactions.trees, null, 2));
+
+  const experimentalMasses = [88.5571];
+  const accuracy = 100 / 1e6;
+
+  const filteredReactions = reactions.getFilteredReactions({
+    filter: (node) => {
+      for (const molecule of node.molecules) {
+        const mass = molecule.info.mz;
+        for (const experimentalMass of experimentalMasses) {
+          if (Math.abs(mass - experimentalMass) < accuracy) {
+            return true;
+          }
+        }
+      }
+      return false;
+    },
+  });
+  expect(filteredReactions.trees).toMatchSnapshot();
 });
