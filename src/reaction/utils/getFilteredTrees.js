@@ -1,5 +1,3 @@
-
-
 export function getFilteredTrees(reactions, options = {}) {
   const { filter = () => true } = options;
   const nodesToKeep = reactions.getNodes().filter(filter);
@@ -12,35 +10,24 @@ export function getFilteredTrees(reactions, options = {}) {
     }
   }
 
-  return getValidChildren(reactions.trees, { nodesToKeep })
+  return getValidChildren(reactions.trees, { nodesToKeep });
 }
 
 function getValidChildren(nodes, options) {
   const { nodesToKeep } = options;
-  const validNodes = nodes.filter((child) => nodesToKeep.includes(child))
+  const validNodes = nodes
+    .filter((child) => nodesToKeep.includes(child))
+    .map((node) => ({ ...node }));
 
   for (const node of validNodes) {
-    const newChildren = []
     if (node.children) {
-      const validChildren = getValidChildren(node.children, { nodesToKeep })
+      const validChildren = node.children.filter((child) =>
+        nodesToKeep.includes(child),
+      );
       if (validChildren.length > 0) {
-        newChildren.push({
-          ...node
-        })
-      } else {
-        newChildren.push({
-          ...node, children: getValidChildren(node.children, { nodesToKeep })
-        })
+        node.children = getValidChildren(validChildren, { nodesToKeep });
       }
-    } else {
-      newChildren.push({
-        ...node
-      })
-    }
-    if (newChildren.length > 0) {
-      node.children = newChildren
     }
   }
-
-  return validNodes
+  return validNodes;
 }

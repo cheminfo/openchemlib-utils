@@ -80,9 +80,8 @@ export class Reactions {
         }
       }
     }
-    return parentMap
+    return parentMap;
   }
-
 
   /**
    * When applying reactions some branches may be dead because it can not be implied in any reaction.
@@ -99,8 +98,18 @@ export class Reactions {
    * @param {object} [options={}]
    * @param {(object):boolean} [options.filter] - a function that will be called for each node and return true if the node should be kept
    */
-  getFilteredTrees(options = {}) {
-    return getFilteredTrees(this, options)
+  getFilteredReactions(options = {}) {
+    const filteredReactions = new Reactions();
+    filteredReactions.moleculeInfoCallback = this.moleculeInfoCallback;
+    filteredReactions.maxDepth = this.maxDepth;
+    filteredReactions.limitReactions = this.limitReactions;
+    filteredReactions.skipProcessed = this.skipProcessed;
+    filteredReactions.logger = this.logger;
+    filteredReactions.processedMolecules = this.processedMolecules;
+    filteredReactions.OCL = this.OCL;
+    filteredReactions.moleculeInfo = this.moleculeInfo; // a cache containing molecule information like mw, etc.
+    filteredReactions.trees = getFilteredTrees(this, options);
+    return filteredReactions;
   }
 
   /**
