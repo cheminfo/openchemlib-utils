@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.3.0...v5.4.0) (2023-10-09)
+
+
+### Features
+
+* add method getFilteredReactions ([#83](https://github.com/cheminfo/openchemlib-utils/issues/83)) ([a16c2da](https://github.com/cheminfo/openchemlib-utils/commit/a16c2dada1dce00724b92e4c4535fe827390dff7))
+
 ## [5.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.2.0...v5.3.0) (2023-09-26)
 
 
