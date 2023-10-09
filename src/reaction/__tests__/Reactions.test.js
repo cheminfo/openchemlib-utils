@@ -60,13 +60,14 @@ test('Reactions', () => {
   // https://www.cheminfo.org/?viewURL=https%3A%2F%2Fcouch.cheminfo.org%2Fcheminfo-public%2Fbd04a6cedc05e54275bc62a29dd0a0cd%2Fview.json&loadversion=true&fillsearch=Trees+debug+fragmentation
   // writeFileSync('trees.json', JSON.stringify(reactions.trees, null, 2));
 
-  const experimentalMasses = [88.5571];
-  const accuracy = 100 / 1e6;
+  //const experimentalMasses = [163.0753];
+  const experimentalMasses = [194.1176];
 
   const filteredReactions = reactions.getFilteredReactions({
     filter: (node) => {
       for (const molecule of node.molecules) {
         const mass = molecule.info.mz;
+        const accuracy = (100 / 1e6) * molecule.info.mz;
         for (const experimentalMass of experimentalMasses) {
           if (Math.abs(mass - experimentalMass) < accuracy) {
             return true;
@@ -77,4 +78,6 @@ test('Reactions', () => {
     },
   });
   expect(filteredReactions.trees).toMatchSnapshot();
+
+  //  writeFileSync('trees.json', JSON.stringify(filteredReactions.trees, null, 2));
 });

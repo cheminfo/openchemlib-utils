@@ -5,20 +5,18 @@ export function getFilteredTrees(reactions, options = {}) {
 
   for (let currentNode of nodesToKeep) {
     const parent = parentMap.get(currentNode);
-    if (parent) {
+    if (parent && nodesToKeep.includes(parent) === false) {
       nodesToKeep.push(parent);
     }
   }
-
   return getValidChildren(reactions.trees, { nodesToKeep });
 }
 
 function getValidChildren(nodes, options) {
   const { nodesToKeep } = options;
   const validNodes = nodes
-    .filter((child) => nodesToKeep.includes(child))
+    .filter((node) => nodesToKeep.includes(node))
     .map((node) => ({ ...node }));
-
   for (const node of validNodes) {
     if (node.children) {
       const validChildren = node.children.filter((child) =>
@@ -26,6 +24,8 @@ function getValidChildren(nodes, options) {
       );
       if (validChildren.length > 0) {
         node.children = getValidChildren(validChildren, { nodesToKeep });
+      } else {
+        delete node.children;
       }
     }
   }
