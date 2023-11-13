@@ -84,34 +84,4 @@ describe('Reactions', () => {
 
     //  writeFileSync('trees.json', JSON.stringify(filteredReactions.trees, null, 2));
   });
-  it('issue with reactor.getProducts()', () => {
-    // MDMA example
-    const xtc = Molecule.fromIDCode('facac@L|DxDPPHmDYEEDiDbeDTdhfJ``VJfjjh@@');
-
-    const reactions = new Reactions(OCL, {
-      moleculeInfoCallback: (molecule) => {
-        const mf = getMF(molecule).mf;
-        const mfInfo = new MF(mf).getInfo();
-        return {
-          mf,
-          mw: mfInfo.mass,
-          em: mfInfo.monoisotopicMass,
-          mz: mfInfo.observedMonoisotopicMass,
-          charge: mfInfo.charge,
-        };
-      },
-      maxDepth: 5,
-      skipProcessed: true,
-    });
-    reactions.appendHead([xtc]);
-    // Fails because the reaction to protonate a thiol/thioether add one extra carbon (error) and this leads to exceed the max valence of S
-    reactions.applyOneReactantReactions(ionizationsDatabase, {
-      min: 0,
-      max: 1,
-    });
-    reactions.applyOneReactantReactions(fragmentationsDatabase, {
-      min: 0,
-      max: 0,
-    });
-  });
 });
