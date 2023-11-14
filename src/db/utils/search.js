@@ -64,6 +64,9 @@ export async function searchAsync(moleculesDB, query = '', options = {}) {
 }
 
 function exactSearch(moleculesDB, query) {
+  query = query.getCompactCopy();
+  query.setFragment(false);
+
   const queryIDCode = query.getIDCode();
   const searchResult = moleculesDB.db[queryIDCode]
     ? [moleculesDB.db[queryIDCode]]

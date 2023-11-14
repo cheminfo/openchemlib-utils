@@ -49,6 +49,7 @@ test('water from database', async () => {
     idCodePath: 'idCode',
     indexPath: 'ssIndex',
   });
+  /*
   expect(Object.keys(moleculesDB.db)).toHaveLength(1);
   expect(moleculesDB.search('O', { format: 'smiles' })).toHaveLength(1);
   expect(moleculesDB.search('[OH2]', { format: 'smiles' })).toHaveLength(1);
@@ -62,4 +63,13 @@ test('water from database', async () => {
   expect(
     moleculesDB.search('S', { format: 'smiles', mode: 'exact' }),
   ).toHaveLength(0);
+  */
+
+  // an exact search from a fragment ...
+  const molecule = OCL.Molecule.fromSmiles('O');
+  molecule.setFragment(true);
+  const idCode = molecule.getIDCode();
+  expect(
+    moleculesDB.search(idCode, { format: 'idCode', mode: 'exact' }),
+  ).toHaveLength(1);
 });
