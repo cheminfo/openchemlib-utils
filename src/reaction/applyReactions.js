@@ -11,7 +11,7 @@ import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 /**
  * Create reaction trees of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
- * @param {ReactionEntry[]} reactions array of reactions objects with rxnCode, label and needChargeToReact
+ * @param {ReactionEntry[]} reactions array of reactions objects with rxnCode, label
  * @param {object} options options to apply the reaction
  * @param {number} [options.maxDepth=5] max depth of the recursion
  * @param {number} [options.limitReactions=200] limit the number of reactions to apply
