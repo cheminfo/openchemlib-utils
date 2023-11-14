@@ -40,6 +40,7 @@ export default async function appendEntries(
     if (molfilePath && !molecule) {
       molecule = Molecule.fromMolfile(get(entry, molfilePath));
     }
+
     if (!molecule) {
       idCode = get(entry, idCodePath);
       if (idCode) {

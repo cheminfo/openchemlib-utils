@@ -1,0 +1,29 @@
+{
+  "data": {
+    "molecules": [
+      {
+        "idCode": "fI@@",
+        "mf": "H2O",
+        "em": 18.01056468403,
+        "mw": 18.015286432429832,
+        "charge": 0,
+        "noStereoID": "fI@@",
+        "noStereoTautomerID": "fI@@",
+        "logS": -0.5299999713897705,
+        "logP": 0,
+        "acceptorCount": 1,
+        "donorCount": 1,
+        "rotatableBondCount": 0,
+        "stereoCenterCount": 0,
+        "polarSurfaceArea": 9.229999542236328,
+        "ssIndex": [268435456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "nbFragments": 1,
+        "unsaturation": 0,
+        "atoms": {
+          "H": 2,
+          "O": 1
+        }
+      }
+    ]
+  }
+}

@@ -72,41 +72,31 @@ function exactSearch(moleculesDB, query) {
 }
 
 function substructureSearchBegin(moleculesDB, query) {
-  let resetFragment = false;
-  if (!query.isFragment()) {
-    resetFragment = true;
-    query.setFragment(true);
-  }
-
-  const queryMW = getMW(query);
   const searchResult = [];
   if (query.getAllAtoms() === 0) {
     for (const idCode in moleculesDB.db) {
       searchResult.push(moleculesDB.db[idCode]);
     }
   }
-  return { resetFragment, queryMW, searchResult };
+  return { searchResult };
 }
 
-function substructureSearchEnd(searchResult, queryMW, resetFragment, query) {
+function substructureSearchEnd(searchResult, queryMW) {
   searchResult.sort((a, b) => {
     return (
       Math.abs(queryMW - a.properties.mw) - Math.abs(queryMW - b.properties.mw)
     );
   });
 
-  if (resetFragment) {
-    query.setFragment(false);
-  }
-
   return searchResult;
 }
 
 function subStructureSearch(moleculesDB, query) {
-  const { resetFragment, queryMW, searchResult } = substructureSearchBegin(
-    moleculesDB,
-    query,
-  );
+  const queryMW = getMW(query); // we
+  query = query.getCompactCopy();
+  query.setFragment(true);
+
+  const { searchResult } = substructureSearchBegin(moleculesDB, query);
 
   if (searchResult.length === 0) {
     const queryIndex = query.getIndex();
@@ -121,10 +111,14 @@ function subStructureSearch(moleculesDB, query) {
     }
   }
 
-  return substructureSearchEnd(searchResult, queryMW, resetFragment, query);
+  return substructureSearchEnd(searchResult, queryMW);
 }
 
 async function subStructureSearchAsync(moleculesDB, query, options = {}) {
+  const queryMW = getMW(query); // we
+  query = query.getCompactCopy();
+  query.setFragment(true);
+
   const { interval = 100, onStep, controller } = options;
   let shouldAbort = false;
 
@@ -135,10 +129,7 @@ async function subStructureSearchAsync(moleculesDB, query, options = {}) {
     controller.signal.addEventListener('abort', abortEventListener);
   }
 
-  const { resetFragment, queryMW, searchResult } = substructureSearchBegin(
-    moleculesDB,
-    query,
-  );
+  const { searchResult } = substructureSearchBegin(moleculesDB, query);
 
   let begin = performance.now();
 
@@ -169,7 +160,7 @@ async function subStructureSearchAsync(moleculesDB, query, options = {}) {
       index++;
     }
   }
-  return substructureSearchEnd(searchResult, queryMW, resetFragment, query);
+  return substructureSearchEnd(searchResult, queryMW);
 }
 
 function similaritySearch(moleculesDB, query) {
