@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.4.2](https://github.com/cheminfo/openchemlib-utils/compare/v5.4.1...v5.4.2) (2023-11-14)
+
+
+### Bug Fixes
+
+* if searching exact we force query not to be a fragment ([c74d60c](https://github.com/cheminfo/openchemlib-utils/commit/c74d60c3ee4cb78e7c5ed211198f377ad9ab8fc5))
+
 ## [5.4.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.4.0...v5.4.1) (2023-11-14)
 
 
