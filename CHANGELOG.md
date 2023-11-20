@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.4.2...v5.5.0) (2023-11-20)
+
+
+### Features
+
+* remove molfile of applyReactions to improve speed ([0dc4152](https://github.com/cheminfo/openchemlib-utils/commit/0dc4152437a90ad3e3d64865b32a181fbe9129cf))
+
 ## [5.4.2](https://github.com/cheminfo/openchemlib-utils/compare/v5.4.1...v5.4.2) (2023-11-14)
 
 
