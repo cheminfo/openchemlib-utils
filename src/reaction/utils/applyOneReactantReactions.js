@@ -61,7 +61,7 @@ export function applyOneReactantReactions(tree, reactions, options) {
       const oneReactionProducts = reactor.getProducts();
       for (const oneReactionProduct of oneReactionProducts) {
         for (const reactionProduct of oneReactionProduct) {
-          // get the info of the product (molfile, idCode, mf)
+          // get the info of the product (idCode, mf)
           const productExistsAndInfo = checkIfExistsOrAddInfo(
             processedMolecules,
             reactionProduct,

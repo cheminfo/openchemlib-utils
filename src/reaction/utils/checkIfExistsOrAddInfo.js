@@ -30,7 +30,6 @@ export function checkIfExistsOrAddInfo(processedMolecules, molecule, options) {
   } else {
     let info = {
       idCode,
-      molfile: molecule.toMolfile(),
       asReagent,
       asProduct,
       info: {},
