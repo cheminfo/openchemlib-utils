@@ -41,6 +41,32 @@ export class TopicMolecule {
     this.cache = {};
   }
 
+  ensureMapNo() {
+    const existingMapNo: Record<string, boolean> = {};
+    for (let i = 0; i < this.molecule.getAllAtoms(); i++) {
+      const mapNo = this.molecule.getAtomMapNo(i);
+      if (mapNo) {
+        if (existingMapNo[mapNo]) {
+          throw new Error(
+            'The molecule contains several atoms with the same mapNo',
+          );
+        }
+        existingMapNo[mapNo] = true;
+      }
+    }
+    let nextMapNo = 1;
+    for (let i = 0; i < this.molecule.getAllAtoms(); i++) {
+      const mapNo = this.molecule.getAtomMapNo(i);
+      if (!mapNo) {
+        while (existingMapNo[nextMapNo]) {
+          nextMapNo++;
+        }
+        existingMapNo[nextMapNo] = true;
+        this.molecule.setAtomMapNo(i, nextMapNo, false);
+      }
+    }
+  }
+
   toMolfile(options: ToMolfileOptions = {}) {
     const { version = 2 } = options;
     if (version === 2) {
@@ -188,6 +214,53 @@ export class TopicMolecule {
    */
   getGroupedDiastereotopicAtomIDs(options: GroupedDiaIDsOptions = {}) {
     return groupDiastereotopicAtomIDs(this.diaIDs, this.moleculeWithH, options);
+  }
+
+  /**
+   * This method returns a mapping between the diaIDs of the current molecule.
+   * It expects that the initial molfile ad the final molfile contains atomMapNo
+   * in order to track which atom becomes which one.
+   */
+  getDiaIDsMapping(molecule: Molecule) {
+    const topicMolecule = new TopicMolecule(molecule);
+
+    const originalDiaIDs = this.diaIDsAndInfo.filter(
+      (diaID) => diaID.atomMapNo,
+    );
+    const destinationDiaIDs = topicMolecule.diaIDsAndInfo.filter(
+      (diaID) => diaID.atomMapNo,
+    );
+
+    const mapping: Record<string, string> = {};
+    for (const destinationDiaID of destinationDiaIDs) {
+      const originalDiaID = originalDiaIDs.find(
+        (diaID) => diaID.atomMapNo === destinationDiaID.atomMapNo,
+      );
+      const newIDCode = destinationDiaID.idCode;
+      const oldIDCode = originalDiaID.idCode;
+      if (oldIDCode in mapping) {
+        if (mapping[oldIDCode] !== newIDCode) {
+          mapping[oldIDCode] = undefined;
+        }
+      } else {
+        mapping[oldIDCode] = newIDCode;
+      }
+      // we will also add the connected hydrogens
+      for (let i = 0; i < originalDiaID.attachedHydrogensIDCodes.length; i++) {
+        const oldHydrogenIDCode = originalDiaID.attachedHydrogensIDCodes[i];
+        const newHydrogenIDCode = destinationDiaID.attachedHydrogensIDCodes[i];
+        if (oldHydrogenIDCode && newHydrogenIDCode) {
+          if (oldHydrogenIDCode in mapping) {
+            if (mapping[oldHydrogenIDCode] !== newHydrogenIDCode) {
+              mapping[oldHydrogenIDCode] = undefined;
+            }
+          } else {
+            mapping[oldHydrogenIDCode] = newHydrogenIDCode;
+          }
+        }
+      }
+    }
+    return mapping;
   }
 }
 
