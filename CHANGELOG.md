@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.5.0...v5.6.0) (2023-11-27)
+
+
+### Features
+
+* TopicMolecule can map to a new molecule ([6dac09e](https://github.com/cheminfo/openchemlib-utils/commit/6dac09ef408f9e6e35cd71d3d275d425d86933bc))
+
 ## [5.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.4.2...v5.5.0) (2023-11-20)
 
 
