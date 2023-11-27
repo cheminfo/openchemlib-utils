@@ -231,11 +231,11 @@ export class TopicMolecule {
       (diaID) => diaID.atomMapNo,
     );
 
-    const mapping: Record<string, string> = {};
+    const mapping: Record<string, string | undefined> = {};
     for (const destinationDiaID of destinationDiaIDs) {
       const originalDiaID = originalDiaIDs.find(
         (diaID) => diaID.atomMapNo === destinationDiaID.atomMapNo,
-      );
+      ) as DiaIDAndInfo;
       const newIDCode = destinationDiaID.idCode;
       const oldIDCode = originalDiaID.idCode;
       if (oldIDCode in mapping) {
