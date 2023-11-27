@@ -108,7 +108,7 @@ describe('TopicMolecule', () => {
     molecule.setAtomicNo(4, 1);
     // only thenol left
     const topicMolecule = new TopicMolecule(molecule);
-    topicMolecule.ensureMapNo()
+    topicMolecule.ensureMapNo();
     const molfile = topicMolecule.toMolfile();
 
     // imagine we are in the editor
@@ -118,14 +118,14 @@ describe('TopicMolecule', () => {
     modifiedMolecule.setAtomicNo(0, 1);
     // only ethane left
 
-    const mapping = topicMolecule.getDiaIDsMapping(modifiedMolecule)
+    const mapping = topicMolecule.getDiaIDsMapping(modifiedMolecule);
 
     expect(mapping).toStrictEqual({
       'eMHAIhFJhOtdgBj@': 'eF@HpLQP_iHNET',
       'gCaHDIeIjiJ@\x7FRHDRj@': 'eMBBYRZA~d`bUP',
       'eMHAIhFIhOtdWBj@': 'eF@HpLQP_iHNET',
       'gCaHLIeIZ`GzQ@bUP': 'eMBBYRZA~d`bUP',
-      'eMHAIhFHhOtdGrj@': 'eMBBYRZA~d`bUP'
+      'eMHAIhFHhOtdGrj@': 'eMBBYRZA~d`bUP',
     });
   });
 
@@ -133,14 +133,14 @@ describe('TopicMolecule', () => {
     const molecule = Molecule.fromSmiles('CCC(Cl)C');
     molecule.addImplicitHydrogens();
     const topicMolecule = new TopicMolecule(molecule);
-    topicMolecule.ensureMapNo()
+    topicMolecule.ensureMapNo();
     const molfile = topicMolecule.toMolfile();
 
     // imagine we are in the editor
     const modifiedMolecule = Molecule.fromMolfile(molfile);
-    modifiedMolecule.setAtomicNo(6, 6)
+    modifiedMolecule.setAtomicNo(6, 6);
 
-    const mapping = topicMolecule.getDiaIDsMapping(modifiedMolecule)
+    const mapping = topicMolecule.getDiaIDsMapping(modifiedMolecule);
 
     expect(mapping).toStrictEqual({
       'gJPHADILuTe@XahOtbEpj`': 'gGPHADIL}URTAbF`\x7FRHWBj@',
@@ -152,10 +152,9 @@ describe('TopicMolecule', () => {
       'gGPDALjHRZzjdhC}H`QJh': 'gNpDALjHRZ~jjR`OtbADj`',
       'gJPHADILuTe@X`hOtbCpfuP': 'gGPHADIL}URTAbB`\x7FRHOB[U@',
       'gJPHADIMuTe@XbhOtbIpj`': 'gGPHADIMmURTAbJ`\x7FRHgBj@',
-      'gGPDALzHRVzjbHC}H`QJh': 'gNpDALzHRVvjjH`OtbADj`'
+      'gGPDALzHRVzjbHC}H`QJh': 'gNpDALzHRVvjjH`OtbADj`',
     });
   });
-
 
   it('ethanol toggle implicit H', () => {
     const molecule = Molecule.fromSmiles('CCO');
