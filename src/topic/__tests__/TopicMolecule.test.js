@@ -217,6 +217,32 @@ describe('TopicMolecule', () => {
     second = Date.now() - second;
     expect(first).toBeGreaterThan(second * 5);
   });
+
+  it('mapping of ethyl vinyl ether', () => {
+    const ethylvinylether = Molecule.fromMolfile(readFileSync(
+      join(__dirname, 'data/ethylvinylether.mol'),
+      'utf8',
+    ));
+    const propylvinylether = Molecule.fromMolfile(readFileSync(
+      join(__dirname, 'data/propylvinylether.mol'),
+      'utf8',
+    ));
+
+    const topicMolecule = new TopicMolecule(ethylvinylether);
+    const mappings = topicMolecule.getDiaIDsMapping(propylvinylether);
+    expect(mappings).toStrictEqual({
+      'gJQ@@eKS@LRTGzQHxUP': 'gGQ@@eKtt@qIP_iDcaU@',
+      'gJQ@@eKS@LSTGzQLxUP': 'gGQ@@eKtt@qMP_iDsaU@',
+      'gJQ@@eKS@LPTGzQ@~UP': 'gGQ@@eKtt@qAP_iDCyU@',
+      'gJQ@@eKT`LRTGzQHxUP': 'gGQ@@eJuL@qIP_iDcaU@',
+      'gJQ@@eKS@LPtGzQBxUP': 'gGQ@@eKtt@qCP_iDKaU@',
+      'gGQHLIeIUfhRS}H`QJh': 'gNqHLIeIUYjaIOtbADj`',
+      'gGQHLIeIUfhRK}H`QJh': 'gNqHLIeIUYjaHotbADj`',
+      'gGQHDIeIgihA~dPHeT': 'gNqHDIeIgZZ`GzQ@bUP',
+      'gGQHDIeIgjfR`OtbADj`': 'gNqHDIeIeZjYJ@\x7FRHDRj@',
+      'gGQHLIeIUjdA~dPHeT': 'gNqHBIeIgZjYJ@\x7FRHDRj@'
+    })
+  })
 });
 
 function getMolfileAtoms(molfile) {

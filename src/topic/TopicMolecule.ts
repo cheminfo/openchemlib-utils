@@ -232,6 +232,7 @@ export class TopicMolecule {
     );
 
     const mapping: Record<string, string | undefined> = {};
+    // we first check all the atoms present in the molfile
     for (const destinationDiaID of destinationDiaIDs) {
       const originalDiaID = originalDiaIDs.find(
         (diaID) => diaID.atomMapNo === destinationDiaID.atomMapNo,
@@ -245,9 +246,16 @@ export class TopicMolecule {
       } else {
         mapping[oldIDCode] = newIDCode;
       }
-      // we will also add the connected hydrogens
+    }
+
+    // we now check all the attached hydrogens that are not defined in the molfile and were not yet mapped
+    for (const destinationDiaID of destinationDiaIDs) {
+      const originalDiaID = originalDiaIDs.find(
+        (diaID) => diaID.atomMapNo === destinationDiaID.atomMapNo,
+      ) as DiaIDAndInfo;
       for (let i = 0; i < originalDiaID.attachedHydrogensIDCodes.length; i++) {
         const oldHydrogenIDCode = originalDiaID.attachedHydrogensIDCodes[i];
+        if (mapping[oldHydrogenIDCode]) continue;
         const newHydrogenIDCode = destinationDiaID.attachedHydrogensIDCodes[i];
         if (oldHydrogenIDCode && newHydrogenIDCode) {
           if (oldHydrogenIDCode in mapping) {
