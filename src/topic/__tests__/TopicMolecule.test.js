@@ -219,14 +219,12 @@ describe('TopicMolecule', () => {
   });
 
   it('mapping of ethyl vinyl ether', () => {
-    const ethylvinylether = Molecule.fromMolfile(readFileSync(
-      join(__dirname, 'data/ethylvinylether.mol'),
-      'utf8',
-    ));
-    const propylvinylether = Molecule.fromMolfile(readFileSync(
-      join(__dirname, 'data/propylvinylether.mol'),
-      'utf8',
-    ));
+    const ethylvinylether = Molecule.fromMolfile(
+      readFileSync(join(__dirname, 'data/ethylvinylether.mol'), 'utf8'),
+    );
+    const propylvinylether = Molecule.fromMolfile(
+      readFileSync(join(__dirname, 'data/propylvinylether.mol'), 'utf8'),
+    );
 
     const topicMolecule = new TopicMolecule(ethylvinylether);
     const mappings = topicMolecule.getDiaIDsMapping(propylvinylether);
@@ -240,9 +238,9 @@ describe('TopicMolecule', () => {
       'gGQHLIeIUfhRK}H`QJh': 'gNqHLIeIUYjaHotbADj`',
       'gGQHDIeIgihA~dPHeT': 'gNqHDIeIgZZ`GzQ@bUP',
       'gGQHDIeIgjfR`OtbADj`': 'gNqHDIeIeZjYJ@\x7FRHDRj@',
-      'gGQHLIeIUjdA~dPHeT': 'gNqHBIeIgZjYJ@\x7FRHDRj@'
-    })
-  })
+      'gGQHLIeIUjdA~dPHeT': 'gNqHBIeIgZjYJ@\x7FRHDRj@',
+    });
+  });
 });
 
 function getMolfileAtoms(molfile) {
