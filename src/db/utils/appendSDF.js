@@ -16,6 +16,7 @@ export default async function appendSDF(moleculesDB, sdf, options = {}) {
       molecule,
     );
     if (onStep) {
+      // eslint-disable-next-line no-await-in-loop
       await onStep(i + 1, parsed.molecules.length);
     }
   }

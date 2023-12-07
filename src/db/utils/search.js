@@ -157,6 +157,7 @@ async function subStructureSearchAsync(moleculesDB, query, options = {}) {
           onStep(index, length);
         }
         if (controller && !onStep) {
+          // eslint-disable-next-line no-await-in-loop
           await noWait();
         }
       }
@@ -183,7 +184,7 @@ function similaritySearch(moleculesDB, query) {
           queryIndex,
           entry.index,
         ) *
-          1000000 -
+        1000000 -
         Math.abs(queryMW - entry.properties.mw) / 10000;
     }
     searchResult.push({ similarity, entry });

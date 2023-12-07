@@ -54,6 +54,7 @@ export default async function appendEntries(
       moleculesDB.pushEntry(molecule, entry, { index, mw });
     }
     if (onStep) {
+      // eslint-disable-next-line no-await-in-loop
       await onStep(i + 1, entries.length);
     }
   }

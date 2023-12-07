@@ -45,6 +45,7 @@ async function generate(core, rGroups, OCL, options = {}) {
     while (position < currents.length) {
       if (currents[position] < sizes[position]) {
         if (onStep) {
+          // eslint-disable-next-line no-await-in-loop
           await onStep(counter);
         }
         appendMolecule(molecules, core, rGroups, currents, OCL);
@@ -59,6 +60,7 @@ async function generate(core, rGroups, OCL, options = {}) {
     }
     if ((position = currents.length)) {
       if (onStep) {
+        // eslint-disable-next-line no-await-in-loop
         await onStep(counter);
       }
       appendMolecule(molecules, core, rGroups, currents, OCL);

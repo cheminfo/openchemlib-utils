@@ -18,6 +18,7 @@ export default async function appendSmilesList(
     const oneSmiles = smilesArray[i];
     moleculesDB.pushEntry(moleculesDB.OCL.Molecule.fromSmiles(oneSmiles));
     if (onStep) {
+      // eslint-disable-next-line no-await-in-loop
       await onStep(i + 1, smilesArray.length);
     }
   }

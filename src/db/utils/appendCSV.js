@@ -46,6 +46,7 @@ export default async function appendCSV(moleculesDB, csv, options = {}) {
       parsed.data[i],
     );
     if (onStep) {
+      // eslint-disable-next-line no-await-in-loop
       await onStep(i + 1, parsed.data.length);
     }
   }
