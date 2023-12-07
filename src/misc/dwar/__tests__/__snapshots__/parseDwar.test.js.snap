@@ -42,11 +42,11 @@ exports[`parseDwar 1`] = `
   "data": [
     {
       "Label": "OH by SH",
-      "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\\\mp !R@AL]Nmp",
+      "rxnCode": "eFHBLGtV!eFB@HcA}E\`#aP aP#!R@AL]\\mp !R@AL]Nmp",
     },
     {
       "Label": "SH to SMe",
-      "rxnCode": "eFB@HcAa@!eMB@HchH#S\\\\ S\\\\@#!R@FL]bgp !R@FL?XqwZ_@",
+      "rxnCode": "eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@",
     },
     {
       "Label": "SH to OH",
@@ -84,7 +84,7 @@ exports[`parseDwar 1`] = `
     {
       "Label": "OH by SH",
       "atomMapping": "aP aP",
-      "idcoordinates2D": "!R@AL]\\\\mp !R@AL]Nmp",
+      "idcoordinates2D": "!R@AL]\\mp !R@AL]Nmp",
       "productFFP": "//,8///$",
       "reactantFFP": "40V/////,10",
       "reactionFP": "!F!4$840F!1F&2V#F4+F/F01#12V42010k#G$8102!V//////0",
@@ -92,7 +92,7 @@ exports[`parseDwar 1`] = `
     },
     {
       "Label": "SH to SMe",
-      "atomMapping": "S\\\\ S\\\\@",
+      "atomMapping": "S\\ S\\@",
       "idcoordinates2D": "!R@FL]bgp !R@FL?XqwZ_@",
       "productFFP": "2//+8///$",
       "reactantFFP": "//,8///$",

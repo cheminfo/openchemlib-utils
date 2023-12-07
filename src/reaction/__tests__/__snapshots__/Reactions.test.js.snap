@@ -2,10 +2,10 @@
 
 exports[`Reactions > mdma 1`] = `
 Map {
-  "dg~D@MBdie]v\\\\kahHBjh@@" => {
+  "dg~D@MBdie]v\\kahHBjh@@" => {
     "asProduct": undefined,
     "asReagent": false,
-    "idCode": "dg~D@MBdie]v\\\\kahHBjh@@",
+    "idCode": "dg~D@MBdie]v\\kahHBjh@@",
     "info": {
       "charge": 0,
       "em": 193.11027872702,
@@ -62,10 +62,10 @@ Map {
       "mz": 192.10300227469907,
     },
   },
-  "dclDB@iYRfUw\\\\kahHBj@@" => {
+  "dclDB@iYRfUw\\kahHBj@@" => {
     "asProduct": true,
     "asReagent": true,
-    "idCode": "dclDB@iYRfUw\\\\kahHBj@@",
+    "idCode": "dclDB@iYRfUw\\kahHBj@@",
     "info": {
       "charge": 1,
       "em": 163.07590459367,
@@ -208,7 +208,7 @@ exports[`Reactions > mdma 2`] = `
       {
         "asProduct": undefined,
         "asReagent": false,
-        "idCode": "dg~D@MBdie]v\\\\kahHBjh@@",
+        "idCode": "dg~D@MBdie]v\\kahHBjh@@",
         "info": {
           "charge": 0,
           "em": 193.11027872702,
