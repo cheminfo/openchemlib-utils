@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.6.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.6.0...v5.6.1) (2023-12-07)
+
+
+### Bug Fixes
+
+* mapping of atoms with exploded hydrogens could fail ([da0f69b](https://github.com/cheminfo/openchemlib-utils/commit/da0f69befbc8a92a358d831970d82243888c99a6))
+
 ## [5.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.5.0...v5.6.0) (2023-11-27)
 
 
