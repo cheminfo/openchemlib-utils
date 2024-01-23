@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.6.1...v5.7.0) (2024-01-23)
+
+
+### Features
+
+* add GetDiaIDsObject ([abe7d3e](https://github.com/cheminfo/openchemlib-utils/commit/abe7d3ea22c917f1ae7488adbd8ba2bf72074b48))
+* add getTips ([299d84b](https://github.com/cheminfo/openchemlib-utils/commit/299d84bb3609a62065def2e9bbe6f38e37b3e7a3))
+
 ## [5.6.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.6.0...v5.6.1) (2023-12-07)
 
 
