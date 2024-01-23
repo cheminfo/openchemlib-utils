@@ -129,6 +129,15 @@ export class TopicMolecule {
   }
 
   /**
+   * We return the atomIDs corresponding to the specified diaID as well has the attached hydrogens or heavy atoms
+   * @param diaID
+   * @returns
+   */
+  getDiaIDsObject() {
+    return groupDiastereotopicAtomIDsAsObject(this.diaIDs, this.moleculeWithH);
+  }
+
+  /**
    * This is related to the current moleculeWithH. The order is NOT canonized
    */
   get hoseCodes() {
@@ -291,9 +300,24 @@ export interface GroupedDiaID {
   atoms: number[];
   oclID: string;
   atomLabel: string;
+  heavyAtoms: number[];
+  attachedHydrogens: number[];
 }
 
 export function groupDiastereotopicAtomIDs(
+  diaIDs: string[],
+  molecule: Molecule,
+  options: GroupedDiaIDsOptions = {},
+) {
+  const diaIDsObject = groupDiastereotopicAtomIDsAsObject(
+    diaIDs,
+    molecule,
+    options,
+  );
+  return Object.keys(diaIDsObject).map((key) => diaIDsObject[key]);
+}
+
+function groupDiastereotopicAtomIDsAsObject(
   diaIDs: string[],
   molecule: Molecule,
   options: GroupedDiaIDsOptions = {},
@@ -309,11 +333,27 @@ export function groupDiastereotopicAtomIDs(
           atoms: [],
           oclID: diaID,
           atomLabel: molecule.getAtomLabel(i),
+          heavyAtoms: [],
+          attachedHydrogens: [],
         };
+      }
+
+      if (molecule.getAtomicNo(i) === 1) {
+        const connected = molecule.getConnAtom(i, 0);
+        if (!diaIDsObject[diaID].heavyAtoms.includes(connected)) {
+          diaIDsObject[diaID].heavyAtoms.push(connected);
+        }
+      } else {
+        for (let j = 0; j < molecule.getAllConnAtoms(i); j++) {
+          const connected = molecule.getConnAtom(i, j);
+          if (molecule.getAtomicNo(connected) === 1) {
+            diaIDsObject[diaID].attachedHydrogens.push(connected);
+          }
+        }
       }
       diaIDsObject[diaID].counter++;
       diaIDsObject[diaID].atoms.push(i);
     }
   }
-  return Object.keys(diaIDsObject).map((key) => diaIDsObject[key]);
+  return diaIDsObject;
 }

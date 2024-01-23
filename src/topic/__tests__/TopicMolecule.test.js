@@ -197,6 +197,18 @@ describe('TopicMolecule', () => {
     expect(atoms).toMatchSnapshot();
   });
 
+  it('tert-butanol', () => {
+    const molecule = Molecule.fromSmiles('C(C)(C)(C)O');
+    const topicMolecule = new TopicMolecule(molecule);
+    toggleHydrogens(molecule, 0);
+    toggleHydrogens(molecule, 1);
+    toggleHydrogens(molecule, 0);
+    let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
+    const diaIDsObject = advancedMolecule2.getDiaIDsObject();
+    expect(Object.keys(diaIDsObject)).toHaveLength(5)
+    expect(diaIDsObject).toMatchSnapshot()
+  });
+
   it('cyclosporin', () => {
     const molfile = readFileSync(
       join(__dirname, 'data/cyclosporin.mol'),

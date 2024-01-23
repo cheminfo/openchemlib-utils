@@ -173,7 +173,13 @@ exports[`TopicMolecule > ethanol 2`] = `
     "atoms": [
       0,
     ],
+    "attachedHydrogens": [
+      4,
+      5,
+      6,
+    ],
     "counter": 1,
+    "heavyAtoms": [],
     "oclID": "eMHAIhFIhOtdWBj@",
   },
   {
@@ -181,7 +187,12 @@ exports[`TopicMolecule > ethanol 2`] = `
     "atoms": [
       1,
     ],
+    "attachedHydrogens": [
+      7,
+      8,
+    ],
     "counter": 1,
+    "heavyAtoms": [],
     "oclID": "eMHAIhFJhOtdgBj@",
   },
   {
@@ -189,7 +200,11 @@ exports[`TopicMolecule > ethanol 2`] = `
     "atoms": [
       2,
     ],
+    "attachedHydrogens": [
+      3,
+    ],
     "counter": 1,
+    "heavyAtoms": [],
     "oclID": "eMHAIhFHhOtdGrj@",
   },
   {
@@ -197,7 +212,11 @@ exports[`TopicMolecule > ethanol 2`] = `
     "atoms": [
       3,
     ],
+    "attachedHydrogens": [],
     "counter": 1,
+    "heavyAtoms": [
+      2,
+    ],
     "oclID": "gCaHHIeIZ\`GzQ@bUP",
   },
   {
@@ -207,7 +226,11 @@ exports[`TopicMolecule > ethanol 2`] = `
       5,
       6,
     ],
+    "attachedHydrogens": [],
     "counter": 3,
+    "heavyAtoms": [
+      0,
+    ],
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
   },
   {
@@ -216,7 +239,11 @@ exports[`TopicMolecule > ethanol 2`] = `
       7,
       8,
     ],
+    "attachedHydrogens": [],
     "counter": 2,
+    "heavyAtoms": [
+      1,
+    ],
     "oclID": "gCaHDIeIjiJ@RHDRj@",
   },
 ]
@@ -529,4 +556,87 @@ exports[`TopicMolecule > ethanol toggle implicit H 5`] = `
     "gCaHHIeIZ\`GzQ@bUP",
   ],
 ]
+`;
+
+exports[`TopicMolecule > tert-butanol 1`] = `
+{
+  "gGQHHIeIZjhA~dPHeT": {
+    "atomLabel": "H",
+    "atoms": [
+      14,
+    ],
+    "attachedHydrogens": [],
+    "counter": 1,
+    "heavyAtoms": [
+      4,
+    ],
+    "oclID": "gGQHHIeIZjhA~dPHeT",
+  },
+  "gGQHLIeIZjhA~dPHeT": {
+    "atomLabel": "H",
+    "atoms": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+    ],
+    "attachedHydrogens": [],
+    "counter": 9,
+    "heavyAtoms": [
+      1,
+      2,
+      3,
+    ],
+    "oclID": "gGQHLIeIZjhA~dPHeT",
+  },
+  "gJQ@@duU@LPTGzQ@~UP": {
+    "atomLabel": "O",
+    "atoms": [
+      4,
+    ],
+    "attachedHydrogens": [
+      14,
+    ],
+    "counter": 1,
+    "heavyAtoms": [],
+    "oclID": "gJQ@@duU@LPTGzQ@~UP",
+  },
+  "gJQ@@duU@LQTGzQDxUP": {
+    "atomLabel": "C",
+    "atoms": [
+      1,
+      2,
+      3,
+    ],
+    "attachedHydrogens": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+    ],
+    "counter": 3,
+    "heavyAtoms": [],
+    "oclID": "gJQ@@duU@LQTGzQDxUP",
+  },
+  "gJQ@@duU@LRTGzQHxUP": {
+    "atomLabel": "C",
+    "atoms": [
+      0,
+    ],
+    "attachedHydrogens": [],
+    "counter": 1,
+    "heavyAtoms": [],
+    "oclID": "gJQ@@duU@LRTGzQHxUP",
+  },
+}
 `;
