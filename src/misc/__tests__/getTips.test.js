@@ -16,7 +16,9 @@ describe('getTips', () => {
     const answer = OCL.Molecule.fromSmiles('CC(Cl)CC');
     const tips = getTips(correct, answer);
     expect(tips).toHaveLength(1);
-    expect(tips[0].message).toBe('There is only a problem with stereochemistry.');
+    expect(tips[0].message).toBe(
+      'There is only a problem with stereochemistry.',
+    );
   });
 
   it('wrong MF', () => {
@@ -25,8 +27,7 @@ describe('getTips', () => {
     const tips = getTips(correct, answer);
     expect(tips).toHaveLength(1);
     expect(tips[0].message).toBe('You should check the molecular formula.');
-  }
-  )
+  });
 
   it('pyridine versus benzene', () => {
     const correct = OCL.Molecule.fromSmiles('c1ccncc1C');
@@ -35,6 +36,5 @@ describe('getTips', () => {
     expect(tips).toHaveLength(2);
     expect(tips[0].message).toBe('Did you think about pyridine derivatives?');
     expect(tips[1].message).toBe('An aromatic cycle can be an heterocycle.');
-  })
-
+  });
 });

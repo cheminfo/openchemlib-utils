@@ -40,20 +40,20 @@
   },
   "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
-    "@types/node": "^20.10.4",
-    "@vitest/coverage-v8": "^1.0.1",
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
     "cheminfo-build": "^1.2.0",
     "cheminfo-types": "^1.7.2",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "eslint-config-cheminfo-typescript": "^12.1.0",
     "fifo-logger": "^0.6.1",
     "mf-parser": "^3.1.0",
     "openchemlib": "^8.7.2",
-    "prettier": "^3.1.0",
+    "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "vitest": "^1.0.1"
+    "vitest": "^1.2.1"
   },
   "dependencies": {
     "atom-sorter": "^2.0.0",

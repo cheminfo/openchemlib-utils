@@ -205,8 +205,8 @@ describe('TopicMolecule', () => {
     toggleHydrogens(molecule, 0);
     let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     const diaIDsObject = advancedMolecule2.getDiaIDsObject();
-    expect(Object.keys(diaIDsObject)).toHaveLength(5)
-    expect(diaIDsObject).toMatchSnapshot()
+    expect(Object.keys(diaIDsObject)).toHaveLength(5);
+    expect(diaIDsObject).toMatchSnapshot();
   });
 
   it('cyclosporin', () => {
