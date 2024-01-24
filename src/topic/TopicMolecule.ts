@@ -134,7 +134,11 @@ export class TopicMolecule {
    * @returns
    */
   getDiaIDsObject() {
-    return groupDiastereotopicAtomIDsAsObject(this.diaIDs, this.moleculeWithH);
+    return groupDiastereotopicAtomIDsAsObject(
+      this.diaIDs,
+      this.molecule,
+      this.moleculeWithH,
+    );
   }
 
   /**
@@ -227,7 +231,7 @@ export class TopicMolecule {
 
   /**
    * This method returns a mapping between the diaIDs of the current molecule.
-   * It expects that the initial molfile ad the final molfile contains atomMapNo
+   * It expects that the initial molfile and the final molfile contains atomMapNo
    * in order to track which atom becomes which one.
    */
   getDiaIDsMapping(molecule: Molecule) {
@@ -296,12 +300,24 @@ export interface GroupedDiaIDsOptions {
 }
 
 export interface GroupedDiaID {
+  /*
+   * List of atom numbers with the same diaID
+   */
   counter: number;
+  /*
+   * List of atom numbers with the same diaID. The atom numbers could not be in the moecule
+   * because they are hydrogens attached to a heavy atom
+   */
   atoms: number[];
   oclID: string;
   atomLabel: string;
   heavyAtoms: number[];
   attachedHydrogens: number[];
+  /**
+   * List of atom numbers existing in the molecule. In case of implicit hydrogens we will fallback
+   * to the linked heavy atom
+   */
+  existingAtoms: number[];
 }
 
 export function groupDiastereotopicAtomIDs(
@@ -312,6 +328,7 @@ export function groupDiastereotopicAtomIDs(
   const diaIDsObject = groupDiastereotopicAtomIDsAsObject(
     diaIDs,
     molecule,
+    molecule,
     options,
   );
   return Object.keys(diaIDsObject).map((key) => diaIDsObject[key]);
@@ -320,40 +337,52 @@ export function groupDiastereotopicAtomIDs(
 function groupDiastereotopicAtomIDsAsObject(
   diaIDs: string[],
   molecule: Molecule,
+  moleculeWithH: Molecule,
   options: GroupedDiaIDsOptions = {},
 ) {
   const { atomLabel } = options;
   const diaIDsObject: Record<string, GroupedDiaID> = {};
+
   for (let i = 0; i < diaIDs.length; i++) {
-    if (!atomLabel || molecule.getAtomLabel(i) === atomLabel) {
+    if (!atomLabel || moleculeWithH.getAtomLabel(i) === atomLabel) {
       const diaID = diaIDs[i];
       if (!diaIDsObject[diaID]) {
         diaIDsObject[diaID] = {
           counter: 0,
           atoms: [],
           oclID: diaID,
-          atomLabel: molecule.getAtomLabel(i),
+          atomLabel: moleculeWithH.getAtomLabel(i),
           heavyAtoms: [],
           attachedHydrogens: [],
+          existingAtoms: [],
         };
       }
-
-      if (molecule.getAtomicNo(i) === 1) {
-        const connected = molecule.getConnAtom(i, 0);
+      if (moleculeWithH.getAtomicNo(i) === 1) {
+        const connected = moleculeWithH.getConnAtom(i, 0);
         if (!diaIDsObject[diaID].heavyAtoms.includes(connected)) {
           diaIDsObject[diaID].heavyAtoms.push(connected);
         }
+        if (molecule.getAtomicNo(i)) {
+          diaIDsObject[diaID].existingAtoms.push(i);
+        } else if (!diaIDsObject[diaID].existingAtoms.includes(connected)) {
+          diaIDsObject[diaID].existingAtoms.push(connected);
+        }
       } else {
-        for (let j = 0; j < molecule.getAllConnAtoms(i); j++) {
-          const connected = molecule.getConnAtom(i, j);
-          if (molecule.getAtomicNo(connected) === 1) {
+        for (let j = 0; j < moleculeWithH.getAllConnAtoms(i); j++) {
+          const connected = moleculeWithH.getConnAtom(i, j);
+          if (moleculeWithH.getAtomicNo(connected) === 1) {
             diaIDsObject[diaID].attachedHydrogens.push(connected);
           }
         }
+        diaIDsObject[diaID].existingAtoms.push(i);
       }
       diaIDsObject[diaID].counter++;
       diaIDsObject[diaID].atoms.push(i);
     }
+  }
+  for (const diaID in diaIDsObject) {
+    diaIDsObject[diaID].existingAtoms.sort((a, b) => a - b);
+    diaIDsObject[diaID].attachedHydrogens.sort((a, b) => a - b);
   }
   return diaIDsObject;
 }

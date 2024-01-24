@@ -179,6 +179,9 @@ exports[`TopicMolecule > ethanol 2`] = `
       6,
     ],
     "counter": 1,
+    "existingAtoms": [
+      0,
+    ],
     "heavyAtoms": [],
     "oclID": "eMHAIhFIhOtdWBj@",
   },
@@ -192,6 +195,9 @@ exports[`TopicMolecule > ethanol 2`] = `
       8,
     ],
     "counter": 1,
+    "existingAtoms": [
+      1,
+    ],
     "heavyAtoms": [],
     "oclID": "eMHAIhFJhOtdgBj@",
   },
@@ -204,6 +210,9 @@ exports[`TopicMolecule > ethanol 2`] = `
       3,
     ],
     "counter": 1,
+    "existingAtoms": [
+      2,
+    ],
     "heavyAtoms": [],
     "oclID": "eMHAIhFHhOtdGrj@",
   },
@@ -214,6 +223,9 @@ exports[`TopicMolecule > ethanol 2`] = `
     ],
     "attachedHydrogens": [],
     "counter": 1,
+    "existingAtoms": [
+      3,
+    ],
     "heavyAtoms": [
       2,
     ],
@@ -228,6 +240,11 @@ exports[`TopicMolecule > ethanol 2`] = `
     ],
     "attachedHydrogens": [],
     "counter": 3,
+    "existingAtoms": [
+      4,
+      5,
+      6,
+    ],
     "heavyAtoms": [
       0,
     ],
@@ -241,6 +258,10 @@ exports[`TopicMolecule > ethanol 2`] = `
     ],
     "attachedHydrogens": [],
     "counter": 2,
+    "existingAtoms": [
+      7,
+      8,
+    ],
     "heavyAtoms": [
       1,
     ],
@@ -567,6 +588,9 @@ exports[`TopicMolecule > tert-butanol 1`] = `
     ],
     "attachedHydrogens": [],
     "counter": 1,
+    "existingAtoms": [
+      4,
+    ],
     "heavyAtoms": [
       4,
     ],
@@ -587,6 +611,13 @@ exports[`TopicMolecule > tert-butanol 1`] = `
     ],
     "attachedHydrogens": [],
     "counter": 9,
+    "existingAtoms": [
+      2,
+      3,
+      5,
+      6,
+      7,
+    ],
     "heavyAtoms": [
       1,
       2,
@@ -603,6 +634,9 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       14,
     ],
     "counter": 1,
+    "existingAtoms": [
+      4,
+    ],
     "heavyAtoms": [],
     "oclID": "gJQ@@duU@LPTGzQ@~UP",
   },
@@ -625,6 +659,11 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       13,
     ],
     "counter": 3,
+    "existingAtoms": [
+      1,
+      2,
+      3,
+    ],
     "heavyAtoms": [],
     "oclID": "gJQ@@duU@LQTGzQDxUP",
   },
@@ -635,6 +674,9 @@ exports[`TopicMolecule > tert-butanol 1`] = `
     ],
     "attachedHydrogens": [],
     "counter": 1,
+    "existingAtoms": [
+      0,
+    ],
     "heavyAtoms": [],
     "oclID": "gJQ@@duU@LRTGzQHxUP",
   },

@@ -230,6 +230,20 @@ describe('TopicMolecule', () => {
     expect(first).toBeGreaterThan(second * 5);
   });
 
+  it('check getAtomIDsFromDiaID and existing H', () => {
+    const ethaneMol = readFileSync(join(__dirname, 'data/ethane.mol'), 'utf8');
+    // Take care that loading a molfile can reorder atoms !!!
+    const molecule = Molecule.fromMolfile(ethaneMol)
+    const topicMolecule = new TopicMolecule(molecule)
+
+    const result = topicMolecule.getDiaIDsObject();
+    expect(result['eF@HpLQP_iHNET'].existingAtoms).toStrictEqual([0, 1])
+    expect(result['eMBBYRZA~d`bUP'].existingAtoms).toStrictEqual([0, 2, 3, 4])
+
+    //console.log(topicMolecule.diaIDsAndInfo)
+
+  })
+
   it('mapping of ethyl vinyl ether', () => {
     const ethylvinylether = Molecule.fromMolfile(
       readFileSync(join(__dirname, 'data/ethylvinylether.mol'), 'utf8'),
