@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.8.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.7.0...v5.8.0) (2024-01-24)
+
+
+### Features
+
+* getDiaIDsObject returns corresponding present atoms in the molecule (no implicit H) ([d53206a](https://github.com/cheminfo/openchemlib-utils/commit/d53206a25c85a0f4ff4daf29f66c9a8c5723fb6d))
+
 ## [5.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.6.1...v5.7.0) (2024-01-23)
 
 
