@@ -48,4 +48,4 @@ export * from './fragment/fragmentAcyclicSingleBonds';
 
 export * from './reaction/Reactions';
 
-export * from './misc/getTips';
+export * from './misc/getHints';

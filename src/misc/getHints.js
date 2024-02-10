@@ -1,6 +1,6 @@
-// this page allows to debug the tips: https://my.cheminfo.org/?viewURL=https%3A%2F%2Fmyviews.cheminfo.org%2Fdb%2Fvisualizer%2Fentry%2F108024089da99d0cb70a57724486d0c6%2Fview.json
+// this page allows to debug the hints: https://my.cheminfo.org/?viewURL=https%3A%2F%2Fmyviews.cheminfo.org%2Fdb%2Fvisualizer%2Fentry%2F108024089da99d0cb70a57724486d0c6%2Fview.json
 
-const defaultPossibleTips = [
+const defaultPossibleHints = [
   {
     idCode: 'gFp@DiTt@@B',
     message: 'Did you think about benzene derivatives?',
@@ -82,13 +82,13 @@ const defaultPossibleTips = [
   },
 ];
 
-export function getTips(correct, answer, options = {}) {
-  const tips = [
+export function getHints(correct, answer, options = {}) {
+  const hints = [
     ...checkMF(correct, answer),
     ...checkStereoAndTautomer(correct, answer),
   ];
 
-  const { possibleTips = defaultPossibleTips } = options;
+  const { possibleHints = defaultPossibleHints } = options;
   const OCL = correct.getOCL();
   const searcherCorrect = new OCL.SSSearcher();
   searcherCorrect.setMolecule(correct);
@@ -96,7 +96,7 @@ export function getTips(correct, answer, options = {}) {
   const searcherAnswer = new OCL.SSSearcher();
   searcherAnswer.setMolecule(answer);
 
-  for (const possibleTip of possibleTips) {
+  for (const possibleTip of possibleHints) {
     const { anyMatches } = possibleTip;
     if (anyMatches) {
       let match = false;
@@ -118,10 +118,10 @@ export function getTips(correct, answer, options = {}) {
       searcherCorrect.isFragmentInMolecule() &&
       !searcherAnswer.isFragmentInMolecule()
     ) {
-      tips.push(possibleTip);
+      hints.push(possibleTip);
     }
   }
-  return tips;
+  return hints;
 }
 
 function checkMF(correct, answer) {
