@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.9.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.8.0...v5.9.0) (2024-02-10)
+
+
+### Features
+
+* add a Hash to hints ([ba03d24](https://github.com/cheminfo/openchemlib-utils/commit/ba03d24b26e735a97a5522dcb5dd229152e7b5d6))
+
+
+### Bug Fixes
+
+* rename getTips to getHints ([76bb572](https://github.com/cheminfo/openchemlib-utils/commit/76bb57222c4456c283b12f33b2f86b7fa2782d4c))
+
 ## [5.8.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.7.0...v5.8.0) (2024-01-24)
 
 
