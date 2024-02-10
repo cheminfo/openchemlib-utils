@@ -19,6 +19,7 @@ describe('getHints', () => {
     expect(hints[0].message).toBe(
       'There is only a problem with stereochemistry.',
     );
+    expect(hints[0].hash).toBe(6332019985947725);
   });
 
   it('wrong MF', () => {
