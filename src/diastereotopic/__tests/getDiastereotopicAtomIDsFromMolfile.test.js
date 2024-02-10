@@ -125,7 +125,7 @@ M  END`;
 
   const result = getDiastereotopicAtomIDsFromMolfile(OCL, molfile);
 
-  expect(result.diaIDs[20]).toMatchInlineSnapshot(`
+  expect(result.diaIDs[19]).toMatchInlineSnapshot(`
     {
       "heavyAtom": "flu@\`@@HRYYvYU\\eGQBejf\`@@BBAJHTfHThOt\`eGBj@",
       "hydrogenOCLIDs": [],
