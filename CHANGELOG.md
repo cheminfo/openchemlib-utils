@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.10.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.9.0...v5.10.0) (2024-02-28)
+
+
+### Features
+
+* add new method createPolymer ([cbf6730](https://github.com/cheminfo/openchemlib-utils/commit/cbf67309a4eb7369a7c0ba83ab5932377540cf41))
+
 ## [5.9.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.8.0...v5.9.0) (2024-02-10)
 
 
