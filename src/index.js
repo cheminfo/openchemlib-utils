@@ -14,6 +14,8 @@ export * from './hose/getHoseCodesForAtoms';
 export * from './hose/getHoseCodesFromDiastereotopicID';
 export * from './hose/getHoseCodesForPath';
 
+export * from './polymer/createPolymer.js';
+
 export * from './util/combineSmiles';
 export * from './util/getAtomsInfo';
 export * from './util/getConnectivityMatrix';
