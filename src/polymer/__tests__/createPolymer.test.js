@@ -42,8 +42,11 @@ test('all the exceptions', () => {
   expect(() => createPolymer(unit)).toThrow('unit must contain 1 R1');
   unit.setAtomicNo(4, r2);
   const alpha = Molecule.fromSmiles('CCCOC');
-  expect(() => createPolymer(unit, { alpha })).toThrow('alpha must contain 1 R1');
+  expect(() => createPolymer(unit, { alpha })).toThrow(
+    'alpha must contain 1 R1',
+  );
   const gamma = Molecule.fromSmiles('CCCOC');
-  expect(() => createPolymer(unit, { gamma })).toThrow('gamma must contain 1 R2');
-
-})
+  expect(() => createPolymer(unit, { gamma })).toThrow(
+    'gamma must contain 1 R2',
+  );
+});
