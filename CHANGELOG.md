@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.11.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.10.0...v5.11.0) (2024-02-28)
+
+
+### Features
+
+* add option markMonomer to createPolymer ([a8c9c4a](https://github.com/cheminfo/openchemlib-utils/commit/a8c9c4a442dc7cdbd686aa5981091b09a96aaec0))
+
 ## [5.10.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.9.0...v5.10.0) (2024-02-28)
 
 
