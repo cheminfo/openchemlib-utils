@@ -1,5 +1,74 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`R group 1`] = `
+{
+  "columnProperties": {
+    "FragFp": {
+      "parent": "Structure",
+      "specialType": "FragFp",
+      "version": "1.2.1",
+    },
+    "Structure": {
+      "related": {
+        "FragFp": "FragFp",
+        "idcoordinates2D": "idcoordinates2D",
+      },
+      "specialType": "idcode",
+    },
+    "idcoordinates2D": {
+      "parent": "Structure",
+      "specialType": "idcoordinates2D",
+    },
+  },
+  "data": [
+    {
+      "Name": "Polyvinyl ether",
+      "Structure": "gC\`DAxyqRVh@",
+    },
+  ],
+  "datawarriorFileinfo": {
+    "created": "1709104727107",
+    "rowcount": "1",
+    "version": "3.3",
+  },
+  "datawarriorProperties": {
+    "columnFilter_Table": "",
+    "columnWidth_Table_Name": "245",
+    "columnWidth_Table_Structure": "100",
+    "detailView": "height[Data",
+    "filter0": "#string#	Name",
+    "filter1": "#structure#	Structure",
+    "headerLines_Table": "2",
+    "mainSplitting": "0.7145",
+    "mainView": "Table",
+    "mainViewCount": "2",
+    "mainViewDockInfo0": "root",
+    "mainViewDockInfo1": "Structures	center",
+    "mainViewInFront1": "true",
+    "mainViewName0": "Structures",
+    "mainViewName1": "Table",
+    "mainViewType0": "structureView",
+    "mainViewType1": "tableView",
+    "rightSplitting": "0.65301",
+    "rowHeight_Table": "80",
+    "structureGridColumn_Structures": "Structure",
+    "structureGridColumns_Structures": "6",
+  },
+  "hitlistData": {
+    "hitlistData": "A",
+    "hitlistName": "<selection>",
+  },
+  "rawData": [
+    {
+      "FragFp": "t/////-1!",
+      "Name": "Polyvinyl ether",
+      "Structure": "gC\`DAxyqRVh@",
+      "idcoordinates2D": "!B@Lp@tpCL",
+    },
+  ],
+}
+`;
+
 exports[`parseDwar 1`] = `
 {
   "columnProperties": {

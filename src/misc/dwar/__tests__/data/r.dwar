@@ -1,0 +1,45 @@
+<datawarrior-fileinfo>
+<version="3.3">
+<created="1709104727107">
+<rowcount="1">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="Structure">
+<columnProperty="specialType	idcode">
+<columnName="idcoordinates2D">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+</column properties>
+idcoordinates2D	FragFp	Name	Structure
+!B@Lp@tpCL	t/////-1!	Polyvinyl ether	gC`DAxyqRVh@
+<hitlist data>
+<hitlistName="<selection>">
+<hitlistData="A">
+</hitlist data>
+<datawarrior properties>
+<columnFilter_Table="">
+<columnWidth_Table_Name="245">
+<columnWidth_Table_Structure="100">
+<detailView="height[Data]=0.5;height[Structure]=0.5">
+<filter0="#string#	Name">
+<filter1="#structure#	Structure">
+<headerLines_Table="2">
+<mainSplitting="0.7145">
+<mainView="Table">
+<mainViewCount="2">
+<mainViewDockInfo0="root">
+<mainViewDockInfo1="Structures	center">
+<mainViewInFront1="true">
+<mainViewName0="Structures">
+<mainViewName1="Table">
+<mainViewType0="structureView">
+<mainViewType1="tableView">
+<rightSplitting="0.65301">
+<rowHeight_Table="80">
+<structureGridColumn_Structures="Structure">
+<structureGridColumns_Structures="6">
+</datawarrior properties>

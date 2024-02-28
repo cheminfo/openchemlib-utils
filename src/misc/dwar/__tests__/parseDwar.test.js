@@ -12,3 +12,11 @@ it('parseDwar', () => {
   expect(data).toHaveLength(3);
   expect(reactions).toMatchSnapshot();
 });
+
+it('R group', () => {
+  const text = readFileSync(join(__dirname, 'data/r.dwar'), 'utf8');
+  const structures = parseDwar(text);
+  const data = structures.data;
+  expect(data).toHaveLength(1);
+  expect(structures).toMatchSnapshot();
+});
