@@ -6,6 +6,7 @@
  * @param {import('openchemlib').Molecule} molecule an instance of OCL.Molecule
  * @param {object} options
  * @param {number} [options.count=10] number of units
+ * @param {boolean} [options.markMonomer=false] mark the different units of the polymer in the atom map
  * @param {import('openchemlib').Molecule} [options.alpha] alpha end group, default is an hydrogen
  * @param {import('openchemlib').Molecule} [options.gamma] omega end group, default is an hydrogen
  */
@@ -20,15 +21,39 @@ export function createPolymer(unit, options = {}) {
   const { r1AtomicNo, r2AtomicNo } = getR1R2AtomicNo(Molecule);
 
   const polymer = alpha.getCompactCopy();
-  polymer.addMolecule(unit);
+  polymer.addMolecule(getUnit(unit, 1, options));
   addBond(polymer, r1AtomicNo, r1AtomicNo);
   for (let i = 0; i < count - 1; i++) {
-    polymer.addMolecule(unit);
+    polymer.addMolecule(getUnit(unit, i + 2, options));
     addBond(polymer, r2AtomicNo, r1AtomicNo);
   }
   polymer.addMolecule(gamma);
+
   addBond(polymer, r2AtomicNo, r2AtomicNo);
+
+  polymer.ensureHelperArrays(Molecule.cHelperNeighbours);
+  // encoding directly in atomNapNo didn't work out because it was removed when deleting atoms
+  for (let i = 0; i < polymer.getAtoms(); i++) {
+    polymer.setAtomMapNo(
+      i,
+      (polymer.getAtomCustomLabel(i) || '').replace(/monomer_/, ''),
+    );
+    polymer.setAtomCustomLabel(i, '');
+  }
+
   return polymer;
+}
+
+function getUnit(unit, index, options) {
+  const { markMonomer = false } = options;
+  if (markMonomer) {
+    unit = unit.getCompactCopy();
+    unit.ensureHelperArrays(unit.getOCL().Molecule.cHelperNeighbours);
+    for (let j = 0; j < unit.getAtoms(); j++) {
+      unit.setAtomCustomLabel(j, `monomer_${index}`);
+    }
+  }
+  return unit;
 }
 
 function addBond(molecule, firstAtomicNo, secondAtomicNo) {

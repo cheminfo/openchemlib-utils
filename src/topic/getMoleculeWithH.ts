@@ -14,7 +14,7 @@ export function getMoleculeWithH(molecule: Molecule) {
   moleculeWithH.addImplicitHydrogens();
   if (moleculeWithH.getAllAtoms() > MAX_NB_ATOMS) {
     throw new Error(
-      `Too many atoms to add hydrogens: ${moleculeWithH.getAllAtoms()} > ${MAX_NB_ATOMS}`,
+      `too many atoms to add hydrogens: ${moleculeWithH.getAllAtoms()} > ${MAX_NB_ATOMS}`,
     );
   }
   ensureHeterotopicChiralBonds(moleculeWithH);
