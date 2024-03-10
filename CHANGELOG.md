@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.12.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.11.0...v5.12.0) (2024-03-10)
+
+
+### Features
+
+* add new method getNextHint ([#97](https://github.com/cheminfo/openchemlib-utils/issues/97)) ([76b5b29](https://github.com/cheminfo/openchemlib-utils/commit/76b5b29652d0bab5431fd66bc22c727232860533))
+
 ## [5.11.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.10.0...v5.11.0) (2024-02-28)
 
 
