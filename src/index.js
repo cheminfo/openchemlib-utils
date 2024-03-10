@@ -51,3 +51,4 @@ export * from './fragment/fragmentAcyclicSingleBonds';
 export * from './reaction/Reactions';
 
 export * from './misc/getHints';
+export * from './misc/getNextHint';

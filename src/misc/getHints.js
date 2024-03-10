@@ -82,10 +82,18 @@ const defaultPossibleHints = [
   },
 ];
 
-export function getHints(correct, answer, options = {}) {
+/**
+ *
+ * @param {import('openchemlib').Molecule} correct
+ * @param {import('openchemlib').Molecule} proposed
+ * @param {Record<string,any>} [options ={}]
+ * @param {Array} [options.possibleHints=defaultPossibleHints]
+ * @returns
+ */
+export function getHints(correct, proposed, options = {}) {
   const hints = [
-    ...checkMF(correct, answer),
-    ...checkStereoAndTautomer(correct, answer),
+    ...checkMF(correct, proposed),
+    ...checkStereoAndTautomer(correct, proposed),
   ];
 
   const { possibleHints = defaultPossibleHints } = options;
@@ -94,7 +102,7 @@ export function getHints(correct, answer, options = {}) {
   searcherCorrect.setMolecule(correct);
 
   const searcherAnswer = new OCL.SSSearcher();
-  searcherAnswer.setMolecule(answer);
+  searcherAnswer.setMolecule(proposed);
 
   for (const possibleTip of possibleHints) {
     const { anyMatches } = possibleTip;
