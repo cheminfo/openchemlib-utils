@@ -5,7 +5,7 @@ import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopi
 const MAX_NB_ATOMS = 250;
 
 /**
- * Expand all the implicit hydrogens and ensure that the heterotopic bonds
+ * Expand all the implicit hydrogens and ensure chiral bonds on heterotopic bonds
  * @param molecule
  * @returns
  */
