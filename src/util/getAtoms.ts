@@ -6,19 +6,19 @@
 
 import { Molecule } from 'openchemlib';
 
-type NbAtomsByElement = Record<string, number>;
-interface Atoms {
-  atoms: NbAtomsByElement;
-  parts: NbAtomsByElement[];
+type AtomQuantity = Record<string, number>;
+interface AtomsAndParts {
+  atoms: AtomQuantity;
+  parts: AtomQuantity[];
 }
 
-export function getAtoms(molecule: Molecule): Atoms {
+export function getAtoms(molecule: Molecule): AtomsAndParts {
   const entries = molecule.getFragments();
-  const atoms: Record<string, number> = {};
-  const result: Atoms = { atoms, parts: [] };
+  const atoms: AtomQuantity = {};
+  const result: AtomsAndParts = { atoms, parts: [] };
 
   entries.forEach((entry) => {
-    const part: NbAtomsByElement = {};
+    const part: AtomQuantity = {};
     result.parts.push(part);
     appendAtomPart(entry, atoms, part);
   });
@@ -27,8 +27,8 @@ export function getAtoms(molecule: Molecule): Atoms {
 
 function appendAtomPart(
   molecule: Molecule,
-  atoms: NbAtomsByElement,
-  part: NbAtomsByElement,
+  atoms: AtomQuantity,
+  part: AtomQuantity,
 ) {
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     const label = molecule.getAtomLabel(i);
