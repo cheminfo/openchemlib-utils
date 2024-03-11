@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.12.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.12.0...v5.12.1) (2024-03-11)
+
+
+### Bug Fixes
+
+* migrate getAtoms to typescript ([#100](https://github.com/cheminfo/openchemlib-utils/issues/100)) ([afa4e4e](https://github.com/cheminfo/openchemlib-utils/commit/afa4e4e768b356e6fb90a2f667082e53908cd2eb))
+
 ## [5.12.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.11.0...v5.12.0) (2024-03-10)
 
 
