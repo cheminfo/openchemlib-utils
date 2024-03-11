@@ -1,23 +1,35 @@
 /**
  * Calculate the molecular formula in 'chemcalc' notation taking into account fragments, isotopes and charges
  * @param {OCL.Molecule} [molecule] an instance of OCL.Molecule
- * @returns {object}
+ * @returns {}
  */
 
-export function getAtoms(molecule) {
+import { Molecule } from 'openchemlib';
+
+type NbAtomsByElement = Record<string, number>;
+interface Atoms {
+  atoms: NbAtomsByElement;
+  parts: NbAtomsByElement[];
+}
+
+export function getAtoms(molecule: Molecule): Atoms {
   const entries = molecule.getFragments();
-  const atoms = {};
-  const result = { atoms, parts: [] };
+  const atoms: Record<string, number> = {};
+  const result: Atoms = { atoms, parts: [] };
 
   entries.forEach((entry) => {
-    const part = {};
+    const part: NbAtomsByElement = {};
     result.parts.push(part);
     appendAtomPart(entry, atoms, part);
   });
   return result;
 }
 
-function appendAtomPart(molecule, atoms, part) {
+function appendAtomPart(
+  molecule: Molecule,
+  atoms: NbAtomsByElement,
+  part: NbAtomsByElement,
+) {
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     const label = molecule.getAtomLabel(i);
     if (!atoms[label]) {
