@@ -10,6 +10,10 @@ const defaultPossibleHints = [
     message: 'How to get such a high DBE?',
   },
   {
+    idCode: 'eF@HpZpk|X`',
+    message: 'You should consider an aromatic ring.',
+  },
+  {
     idCode: 'gFp@DiTt@@B',
     message: 'Did you think about benzene derivatives?',
   },
@@ -18,8 +22,30 @@ const defaultPossibleHints = [
     message: 'An aromatic cycle can be an heterocycle.',
   },
   {
+    idCode: 'eMHJN`q[N@PBGN@PBJhjU~JU@',
+    anyMatches: ['gFx@@eJf`@@P', 'gKP@Di\\YZ@qas`D@`'],
+    message: 'There could be more than one heteroatom in an aromatic cycle.',
+  },
+  {
+    idCode: 'gFp@DiTvjhCYbKFuXUEIVTUUWxlTeZMX',
+    anyMatches: ['gKP@Di\\Zj@vhbqkPjJRlhj?FbdkQ`'],
+    message: 'Aromatic cycles can have 5 or 6 atoms.',
+    remarks: 'Proposed 5 and it is 6'
+  },
+  {
+    idCode: 'gKP@Di\\Zj@vhbqkPjJRlhj?FbdkQ`',
+    anyMatches: ['gFp@DiTvjhCYbKFuXUEIVTUUWxlTeZMX'],
+    message: 'Aromatic cycles can have 5 or 6 atoms.',
+    remarks: 'Proposed 6 and it is 5'
+  },
+  {
     idCode: 'gFx@@eJf`@@P',
     message: 'Did you think about pyridine derivatives?',
+  },
+  {
+    idCode: 'gNp@LdbLjj@vdrpqSdm_qhXiKT',
+    message: 'I would consider bicyclo products.',
+    remarks: 'One atom bridge',
   },
   {
     idCode: 'eFHBJD',
@@ -28,6 +54,10 @@ const defaultPossibleHints = [
   {
     idCode: 'eMHAIhMi}EqfFBmN?vP',
     message: 'You should consider an alcohol.',
+  },
+  {
+    idCode: 'eMB@HRZCBKSFXXJt{?Y@',
+    message: 'You should consider an thiol.',
   },
   {
     idCode: 'gJQ@@eKU@[KFJtLAa`sAUR]g_zlP',
@@ -39,30 +69,39 @@ const defaultPossibleHints = [
     message: 'An ether can be in a cycle.',
   },
   {
+    idCode: 'gJPH@DIRuPFrqbmC@XXLpUTgYw~kD',
+    message: 'You should consider a thioether.',
+  },
+  {
+    idCode: 'gJPH@DIRuPFrqbmC@XXLhL_qPX}VH',
+    anyMatches: ['gJPH@DIRuPFrqbmC@XXO}VH'],
+    message: 'A thioether can be in a cycle.',
+  },
+  {
     idCode: 'eM`AIhLHmLYa`kSo}d',
-    message: 'You should consider an amine.',
+    message: 'You should consider a primary amine.',
     remarks: 'primary',
   },
   {
     idCode: 'gJX@@eKU@XPVVLUhXCCAUIv]?jq@',
-    message: 'You should consider an amine.',
+    message: 'You should consider a secondary amine.',
     remarks: 'secondary',
   },
   {
     idCode: 'gNx@@eRmUPFDElZxxppVFAppUv\\WUw~xu`',
-    message: 'You should consider an amine.',
+    message: 'You should consider a tertiary amine.',
     remarks: 'tertiary',
   },
   {
     idCode: 'gJX@@eKU@XPVVLUhXCCAeAcUIv]~JCGjq@',
     anyMatches: ['gJX@@eKU@XPVVLUhXCCAfBjd{N?uX`'],
-    message: 'An amine can be in a cycle.',
+    message: 'A secondary amine can be in a cycle.',
     remarks: 'secondary cyclic amine',
   },
   {
     idCode: 'gNx@@eRmUPFDElZxxppVFAppYPXuv\\WUwxhL^xu`',
     anyMatches: ['gNx@@eRmUPFDElZxxppVFAppY`j{NKj{?\\Zp'],
-    message: 'An amine can be in a cycle.',
+    message: 'A tertiary amine can be in a cycle.',
     remarks: 'tertiary cyclic amine',
   },
   {
@@ -89,8 +128,7 @@ const defaultPossibleHints = [
   },
   {
     idCode: 'gC``@dfZ@~bl',
-    message:
-      'You should think about carboxylic acids. The OH signal may be very wide.',
+    message: 'You should think about carboxylic acids. The OH signal may be very wide.',
   },
   {
     idCode: 'eF@Hh\\q@',
@@ -150,6 +188,7 @@ const defaultPossibleHints = [
     message: 'Hydrogens on a carbonyl have very high chemical shifts.',
   },
 ];
+
 
 /**
  *
