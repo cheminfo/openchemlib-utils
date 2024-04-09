@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.13.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.12.1...v5.13.0) (2024-04-09)
+
+
+### Features
+
+* improve and rename getHints to getNMRHints ([9bf8286](https://github.com/cheminfo/openchemlib-utils/commit/9bf828626557ac9a5122134e92caa00471319cbc))
+
 ## [5.12.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.12.0...v5.12.1) (2024-03-11)
 
 
