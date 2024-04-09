@@ -2,38 +2,6 @@
 
 const defaultPossibleHints = [
   {
-    idCode: 'gFp@DiTt@@B',
-    message: 'Did you think about benzene derivatives?',
-  },
-  {
-    idCode: 'gFx@@eJf`@@P',
-    message: 'Did you think about pyridine derivatives?',
-  },
-  {
-    idCode: 'eFHBLFLYpB@QVE_cD',
-    message: 'An aromatic cycle can be an heterocycle.',
-  },
-  {
-    idCode: 'eFHBJD',
-    message: 'Adding a carbonyl could help.',
-  },
-  {
-    idCode: 'gGP`@df]j`MekEZFBpp_zmPl',
-    message: 'What about an ester?',
-  },
-  {
-    idCode: 'gGY@DDf]j`MiXrppUaYl',
-    message: 'There is an amide function in the molecule.',
-  },
-  {
-    idCode: 'gCi@DDfZ@~btl',
-    message: 'There is a primary amide in the molecule.',
-  },
-  {
-    idCode: 'gC``@dfZ@~bl',
-    message: 'You should think about carboxylic acids.',
-  },
-  {
     idCode: 'eF@Hp\\pcc',
     message: 'What about a non-aromatic ring?',
   },
@@ -42,24 +10,125 @@ const defaultPossibleHints = [
     message: 'How to get such a high DBE?',
   },
   {
+    idCode: 'gFp@DiTt@@B',
+    message: 'Did you think about benzene derivatives?',
+  },
+  {
+    idCode: 'eFHBLFLYpB@QVE_cD',
+    message: 'An aromatic cycle can be an heterocycle.',
+  },
+  {
+    idCode: 'gFx@@eJf`@@P',
+    message: 'Did you think about pyridine derivatives?',
+  },
+  {
+    idCode: 'eFHBJD',
+    message: 'Adding a carbonyl could help.',
+  },
+  {
+    idCode: 'eMHAIhMi}EqfFBmN?vP',
+    message: 'You should consider an alcohol.',
+  },
+  {
+    idCode: 'gJQ@@eKU@[KFJtLAa`sAUR]g_zlP',
+    message: 'You should consider an ether.',
+  },
+  {
+    idCode: 'gJQ@@eKU@[KFJtLAa`r`q?EAcuX`',
+    anyMatches: ['gJQ@@eKU@[KFJtLAa`?uX`'],
+    message: 'An ether can be in a cycle.',
+  },
+  {
+    idCode: 'eM`AIhLHmLYa`kSo}d',
+    message: 'You should consider an amine.',
+    remarks: 'primary',
+  },
+  {
+    idCode: 'gJX@@eKU@XPVVLUhXCCAUIv]?jq@',
+    message: 'You should consider an amine.',
+    remarks: 'secondary',
+  },
+  {
+    idCode: 'gNx@@eRmUPFDElZxxppVFAppUv\\WUw~xu`',
+    message: 'You should consider an amine.',
+    remarks: 'tertiary',
+  },
+  {
+    idCode: 'gJX@@eKU@XPVVLUhXCCAeAcUIv]~JCGjq@',
+    anyMatches: ['gJX@@eKU@XPVVLUhXCCAfBjd{N?uX`'],
+    message: 'An amine can be in a cycle.',
+    remarks: 'secondary cyclic amine',
+  },
+  {
+    idCode: 'gNx@@eRmUPFDElZxxppVFAppYPXuv\\WUwxhL^xu`',
+    anyMatches: ['gNx@@eRmUPFDElZxxppVFAppY`j{NKj{?\\Zp'],
+    message: 'An amine can be in a cycle.',
+    remarks: 'tertiary cyclic amine',
+  },
+  {
+    idCode: 'gGP`@df]j`MekEZFBppUa]?ju@',
+    message: 'What about an ester?',
+  },
+  {
+    idCode: 'gGP`@df]j`MekEZFBppYdZpn?FQzmP',
+    anyMatches: ['gGP`@df]j`MekEZFBppUa]?ju@'],
+    message: 'An ester can be in a cycle.',
+  },
+  {
+    idCode: 'gGY@DDf]j`MekEZFBppUa]?ju@',
+    message: 'There is an amide function in the molecule.',
+  },
+  {
+    idCode: 'gGY@DDf]j`MekEZFBppYdZpn?FQzmP',
+    anyMatches: ['gGY@DDf]j`MekEZFBppUa]?ju@@'],
+    message: 'An amide can be in a cycle.',
+  },
+  {
+    idCode: 'gCi@DDfZ@~btl',
+    message: 'There is a primary amide in the molecule.',
+  },
+  {
+    idCode: 'gC``@dfZ@~bl',
+    message:
+      'You should think about carboxylic acids. The OH signal may be very wide.',
+  },
+  {
     idCode: 'eF@Hh\\q@',
     message: 'What about having an olefin?',
   },
   {
-    idCode: 'gFp@DiTt@@CxbyZoV',
-    anyMatches: ['daD@@DjWjXHB@CYL{qQZWUmX', 'gFp@DiTt@@CxbyYnv'],
+    idCode: 'gFp@DiTt@@CqC^LmV[m`',
+    anyMatches: ['gFp@DiTt@@CBqXwd@'],
+    message: 'Did you think about disubstituted aromatic rings?',
+    remarks: 'meta',
+  },
+  {
+    idCode: 'gFp@DiTt@@CqB~LmWkM`',
+    anyMatches: ['gFp@DiTt@@CBqXwd@'],
+    message: 'Did you think about disubstituted aromatic rings?',
+    remarks: 'para',
+  },
+  {
+    idCode: 'gFp@DiTt@@CqB^JoV[m',
+    anyMatches: ['gFp@DiTt@@CBqXwd@'],
+    message: 'Did you think about disubstituted aromatic rings?',
+    remarks: 'ortho',
+  },
+  {
+    idCode: 'gFp@DiTt@@CqB^JoV[m',
+    anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB~LmWkM`'],
     message: 'Disubstituted aromatic ring can be o, m or p.',
     remarks: 'ortho',
   },
   {
-    idCode: 'daD@@DjWjXHB@CYL{qQZWUmX',
-    anyMatches: ['gFp@DiTt@@CxbyZoV', 'gFp@DiTt@@CxbyYnv'],
-    message: 'Disubstituted aromatic ring can be o, m or p.',
+    idCode: 'gFp@DiTt@@CqC^LmV[m`',
+    anyMatches: ['gFp@DiTt@@CqB^JoV[m', 'gFp@DiTt@@CqB~LmWkM`'],
+    message: 'Disubstituted aromatic ring can be o, m ocr p.',
     remarks: 'meta',
   },
   {
-    idCode: 'gFp@DiTt@@CxbyYnv',
-    anyMatches: ['daD@@DjWjXHB@CYL{qQZWUmX', 'gFp@DiTt@@CxbyZoV'],
+    idCode: 'gFp@DiTt@@CqB~LmWkM`',
+    anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB^JoV[m'],
     message: 'Disubstituted aromatic ring can be o, m or p.',
     remarks: 'para',
   },
@@ -90,7 +159,7 @@ const defaultPossibleHints = [
  * @param {Array} [options.possibleHints=defaultPossibleHints]
  * @returns
  */
-export function getHints(correct, proposed, options = {}) {
+export function getNMRHints(correct, proposed, options = {}) {
   const hints = [
     ...checkMF(correct, proposed),
     ...checkStereoAndTautomer(correct, proposed),
@@ -104,9 +173,10 @@ export function getHints(correct, proposed, options = {}) {
   const searcherAnswer = new OCL.SSSearcher();
   searcherAnswer.setMolecule(proposed);
 
-  for (const possibleTip of possibleHints) {
-    const { anyMatches } = possibleTip;
+  for (const possibleHint of possibleHints) {
+    const { anyMatches } = possibleHint;
     if (anyMatches) {
+      // we filter the molecules so they match at least one of the anyMatches
       let match = false;
       for (const anyMatch of anyMatches) {
         const matchFragment = OCL.Molecule.fromIDCode(anyMatch);
@@ -119,14 +189,14 @@ export function getHints(correct, proposed, options = {}) {
       if (!match) continue;
     }
 
-    const fragment = OCL.Molecule.fromIDCode(possibleTip.idCode);
+    const fragment = OCL.Molecule.fromIDCode(possibleHint.idCode);
     searcherCorrect.setFragment(fragment);
     searcherAnswer.setFragment(fragment);
     if (
       searcherCorrect.isFragmentInMolecule() &&
       !searcherAnswer.isFragmentInMolecule()
     ) {
-      hints.push(possibleTip);
+      hints.push(possibleHint);
     }
   }
 

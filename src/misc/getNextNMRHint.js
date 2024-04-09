@@ -1,4 +1,4 @@
-import { getHints } from './getHints.js';
+import { getNMRHints } from './getNMRHints.js';
 
 /**
  *
@@ -6,8 +6,8 @@ import { getHints } from './getHints.js';
  * @param {import('openchemlib').Molecule} proposed
  * @param {Array} providedHints
  */
-export function getNextHint(correct, proposed, providedHints) {
-  const hints = getHints(correct, proposed);
+export function getNextNMRHint(correct, proposed, providedHints) {
+  const hints = getNMRHints(correct, proposed);
 
   const possibleHints = hints.filter(
     (possibleHint) =>
