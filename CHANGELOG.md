@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.14.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.13.0...v5.14.0) (2024-04-09)
+
+
+### Features
+
+* add more NMRHints ([2d25c48](https://github.com/cheminfo/openchemlib-utils/commit/2d25c48c983b429927590219a0d40bfb39b55fcc))
+
 ## [5.13.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.12.1...v5.13.0) (2024-04-09)
 
 
