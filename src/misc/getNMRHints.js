@@ -30,13 +30,13 @@ const defaultPossibleHints = [
     idCode: 'gFp@DiTvjhCYbKFuXUEIVTUUWxlTeZMX',
     anyMatches: ['gKP@Di\\Zj@vhbqkPjJRlhj?FbdkQ`'],
     message: 'Aromatic cycles can have 5 or 6 atoms.',
-    remarks: 'Proposed 5 and it is 6'
+    remarks: 'Proposed 5 and it is 6',
   },
   {
     idCode: 'gKP@Di\\Zj@vhbqkPjJRlhj?FbdkQ`',
     anyMatches: ['gFp@DiTvjhCYbKFuXUEIVTUUWxlTeZMX'],
     message: 'Aromatic cycles can have 5 or 6 atoms.',
-    remarks: 'Proposed 6 and it is 5'
+    remarks: 'Proposed 6 and it is 5',
   },
   {
     idCode: 'gFx@@eJf`@@P',
@@ -128,7 +128,8 @@ const defaultPossibleHints = [
   },
   {
     idCode: 'gC``@dfZ@~bl',
-    message: 'You should think about carboxylic acids. The OH signal may be very wide.',
+    message:
+      'You should think about carboxylic acids. The OH signal may be very wide.',
   },
   {
     idCode: 'eF@Hh\\q@',
@@ -188,7 +189,6 @@ const defaultPossibleHints = [
     message: 'Hydrogens on a carbonyl have very high chemical shifts.',
   },
 ];
-
 
 /**
  *
