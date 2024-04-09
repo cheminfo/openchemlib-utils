@@ -13,8 +13,7 @@ export function getCanonizedHoseCodes(
   const finalRanks = diaMol.finalRanks;
   const canonizedHoseCodes = new Array(moleculeWithH.getAllAtoms());
   moleculeWithH.ensureHelperArrays(
-    //@ts-expect-error TODO
-    diaMol.Molecule.cHelperSymmetryStereoHeterotopicity,
+    diaMol.molecule.getOCL().Molecule.cHelperSymmetryStereoHeterotopicity,
   );
   const cache: Record<string, any> = {};
   for (let i = 0; i < diaMol.moleculeWithH.getAllAtoms(); i++) {

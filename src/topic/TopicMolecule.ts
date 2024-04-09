@@ -24,8 +24,7 @@ export class TopicMolecule {
   private readonly originalMolecule: Molecule;
   molecule: Molecule;
   idCode: string;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  private Molecule: Molecule;
+
   private cache: any;
 
   constructor(molecule: Molecule) {
@@ -35,9 +34,9 @@ export class TopicMolecule {
     this.molecule.ensureHelperArrays(
       molecule.getOCL().Molecule.cHelperNeighbours,
     );
-    this.Molecule = this.molecule.getOCL().Molecule;
-    //@ts-expect-error TODO
-    this.molecule.ensureHelperArrays(this.Molecule.cHelperNeighbours);
+    this.molecule.ensureHelperArrays(
+      this.molecule.getOCL().Molecule.cHelperNeighbours,
+    );
     this.cache = {};
   }
 

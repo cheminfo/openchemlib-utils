@@ -9,8 +9,7 @@ export function getCanonizedDiaIDs(diaMol: TopicMolecule) {
   const finalRanks = diaMol.finalRanks;
   const canonizedDiaIDs = new Array(moleculeWithH.getAllAtoms());
   moleculeWithH.ensureHelperArrays(
-    //@ts-expect-error TODO
-    diaMol.Molecule.cHelperSymmetryStereoHeterotopicity,
+    diaMol.molecule.getOCL().Molecule.cHelperSymmetryStereoHeterotopicity,
   );
   const cache: Record<string, any> = {};
   for (let i = 0; i < diaMol.moleculeWithH.getAllAtoms(); i++) {
@@ -23,8 +22,7 @@ export function getCanonizedDiaIDs(diaMol: TopicMolecule) {
     tagAtom(tempMolecule, i);
     makeRacemic(tempMolecule);
     const diaID = tempMolecule.getCanonizedIDCode(
-      //@ts-expect-error TODO
-      diaMol.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+      diaMol.molecule.getOCL().Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
     );
     canonizedDiaIDs[finalRanks[i]] = diaID;
   }
