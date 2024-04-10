@@ -54,7 +54,9 @@ describe('getNMRHints', () => {
     const hints = getNMRHints(correct, answer);
     expect(hints).toHaveLength(2);
     expect(hints[0].message).toBe('The proposed molecule is too symmetric.');
-    expect(hints[1].message).toBe('Disubstituted aromatic ring can be o, m or p.');
+    expect(hints[1].message).toBe(
+      'Disubstituted aromatic ring can be o, m or p.',
+    );
   });
 
   it('propose meta rather than para', () => {
@@ -62,8 +64,11 @@ describe('getNMRHints', () => {
     const answer = OCL.Molecule.fromSmiles('c1c(C)cc(C)cc1');
     const hints = getNMRHints(correct, answer);
     expect(hints).toHaveLength(2);
-    expect(hints[0].message).toBe('The proposed molecule is not symmetric enough.');
-    expect(hints[1].message).toBe('Disubstituted aromatic ring can be o, m or p.');
+    expect(hints[0].message).toBe(
+      'The proposed molecule is not symmetric enough.',
+    );
+    expect(hints[1].message).toBe(
+      'Disubstituted aromatic ring can be o, m or p.',
+    );
   });
-
 });

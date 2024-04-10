@@ -279,9 +279,13 @@ function checkStereoAndTautomer(correct, answer) {
 }
 
 function checkSymmetry(correct, answer) {
-  const nbCorrectRanks = Object.keys((new TopicMolecule(correct)).getDiaIDsObject()).length
-  const nbAnswerRanks = Object.keys((new TopicMolecule(answer)).getDiaIDsObject()).length
-  if (nbCorrectRanks === nbAnswerRanks) return []
+  const nbCorrectRanks = Object.keys(
+    new TopicMolecule(correct).getDiaIDsObject(),
+  ).length;
+  const nbAnswerRanks = Object.keys(
+    new TopicMolecule(answer).getDiaIDsObject(),
+  ).length;
+  if (nbCorrectRanks === nbAnswerRanks) return [];
   if (nbCorrectRanks > nbAnswerRanks) {
     return [
       {
@@ -296,7 +300,6 @@ function checkSymmetry(correct, answer) {
     ];
   }
 }
-
 
 function getTautomerIDCode(molecule) {
   const OCL = molecule.getOCL();
