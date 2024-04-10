@@ -1,5 +1,7 @@
 // this page allows to debug the hints: https://my.cheminfo.org/?viewURL=https%3A%2F%2Fmyviews.cheminfo.org%2Fdb%2Fvisualizer%2Fentry%2F108024089da99d0cb70a57724486d0c6%2Fview.json
 
+import { TopicMolecule } from '../topic/TopicMolecule';
+
 const defaultPossibleHints = [
   {
     idCode: 'eF@Hp\\pcc',
@@ -202,6 +204,7 @@ export function getNMRHints(correct, proposed, options = {}) {
   const hints = [
     ...checkMF(correct, proposed),
     ...checkStereoAndTautomer(correct, proposed),
+    ...checkSymmetry(correct, proposed),
   ];
 
   const { possibleHints = defaultPossibleHints } = options;
@@ -274,6 +277,26 @@ function checkStereoAndTautomer(correct, answer) {
   }
   return [];
 }
+
+function checkSymmetry(correct, answer) {
+  const nbCorrectRanks = Object.keys((new TopicMolecule(correct)).getDiaIDsObject()).length
+  const nbAnswerRanks = Object.keys((new TopicMolecule(answer)).getDiaIDsObject()).length
+  if (nbCorrectRanks === nbAnswerRanks) return []
+  if (nbCorrectRanks > nbAnswerRanks) {
+    return [
+      {
+        message: 'The proposed molecule is too symmetric.',
+      },
+    ];
+  } else {
+    return [
+      {
+        message: 'The proposed molecule is not symmetric enough.',
+      },
+    ];
+  }
+}
+
 
 function getTautomerIDCode(molecule) {
   const OCL = molecule.getOCL();

@@ -21,11 +21,19 @@ test('getNextNMRHint', () => {
   const hint2 = getNextNMRHint(correct, answer, providedHints);
   expect(hint2).toStrictEqual({
     idCode: 'didD@@QIVUxV`@@@',
+    message: 'The proposed molecule is too symmetric.',
+    hash: 8088209302184228,
+  });
+  providedHints.push(hint2);
+
+  const hint3 = getNextNMRHint(correct, answer, providedHints);
+  expect(hint3).toStrictEqual({
+    idCode: 'didD@@QIVUxV`@@@',
     message: 'What about a non-aromatic ring?',
     hash: 4559403381457072,
   });
+  providedHints.push(hint3);
 
-  providedHints.push(hint2);
-  const hint3 = getNextNMRHint(correct, answer, providedHints);
-  expect(hint3).toBeUndefined();
+  const hint4 = getNextNMRHint(correct, answer, providedHints);
+  expect(hint4).toBeUndefined();
 });
