@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.15.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.14.0...v5.15.0) (2024-04-10)
+
+
+### Features
+
+* getNMRHints checks symmetry of the molecule ([df70382](https://github.com/cheminfo/openchemlib-utils/commit/df7038261428a022e4545882d905ff8653b4bdeb))
+
 ## [5.14.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.13.0...v5.14.0) (2024-04-09)
 
 
