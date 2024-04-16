@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.16.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.15.0...v5.16.0) (2024-04-16)
+
+
+### Features
+
+* add hints about unsaturation ([be9490b](https://github.com/cheminfo/openchemlib-utils/commit/be9490b4787f33ea2822bd36fe167f9769649733))
+
 ## [5.15.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.14.0...v5.15.0) (2024-04-10)
 
 
