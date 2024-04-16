@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.16.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.16.0...v5.16.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* use limited number of elements for unsaturation calculation ([54f72f9](https://github.com/cheminfo/openchemlib-utils/commit/54f72f9a113f75e50edeb933ad16e20890c1bdfe))
+
 ## [5.16.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.15.0...v5.16.0) (2024-04-16)
 
 
