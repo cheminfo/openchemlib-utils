@@ -16,8 +16,10 @@ const unsaturationsObject = {
  * @returns
  */
 export function getUnsaturation(mf) {
+  if (!mf) return undefined;
   // split a molecular formula into its elements
   const elements = mf.match(/[A-Z][a-z]*\d*/g);
+  if (!elements || elements.length === 0) return undefined;
   let unsaturation = 0;
   for (let i = 0; i < elements.length; i++) {
     const element = elements[i];

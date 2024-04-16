@@ -11,4 +11,6 @@ test('getUnsaturation', () => {
   expect(getUnsaturation('ClBrFIC6H8O3')).toBe(1);
   expect(getUnsaturation('CH3OH')).toBe(0);
   expect(getUnsaturation('CH3Cl')).toBe(0);
+  expect(getUnsaturation('')).toBeUndefined();
+  expect(getUnsaturation('1')).toBeUndefined();
 });
