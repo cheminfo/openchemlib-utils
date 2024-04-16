@@ -1,4 +1,14 @@
-import { unsaturationsObject } from 'chemical-elements/src/unsaturationsObject.js';
+const unsaturationsObject = {
+  O: 0,
+  N: 1,
+  H: -1,
+  C: 2,
+  F: -1,
+  Si: 2,
+  Cl: -1,
+  Br: -1,
+  I: -1,
+};
 
 /**
  * Simplified version of the calculation in mf-parser

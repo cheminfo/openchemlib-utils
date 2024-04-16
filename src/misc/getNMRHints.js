@@ -275,7 +275,13 @@ function checkUnsaturation(correct, answer) {
   if (mfCorrect !== mfAnswer) {
     const unsaturationCorrect = getUnsaturation(mfCorrect);
     const unsaturationAnswer = getUnsaturation(mfAnswer);
-    if (unsaturationCorrect === unsaturationAnswer) return [];
+    if (
+      unsaturationCorrect === unsaturationAnswer ||
+      unsaturationAnswer === undefined ||
+      unsaturationCorrect === undefined
+    ) {
+      return [];
+    }
     if (unsaturationCorrect > unsaturationAnswer) {
       return [
         {
