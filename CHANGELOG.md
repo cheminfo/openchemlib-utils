@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.16.3](https://github.com/cheminfo/openchemlib-utils/compare/v5.16.2...v5.16.3) (2024-04-16)
+
+
+### Bug Fixes
+
+* DBE hints was inverted ([72c263f](https://github.com/cheminfo/openchemlib-utils/commit/72c263fcc7264edfb2580edf7dbcc006ed93efb2))
+
 ## [5.16.2](https://github.com/cheminfo/openchemlib-utils/compare/v5.16.1...v5.16.2) (2024-04-16)
 
 
