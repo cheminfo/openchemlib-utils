@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "atom-sorter": "^2.0.0",
+    "chemical-elements": "^2.0.3",
     "ensure-string": "^1.2.0",
     "get-value": "^3.0.1",
     "ml-floyd-warshall": "^3.0.1",

@@ -35,9 +35,9 @@ describe('getNMRHints', () => {
     const answer = OCL.Molecule.fromSmiles('c1ccccc1N');
     const hints = getNMRHints(correct, answer);
     expect(hints).toHaveLength(3);
-    expect(hints[0].message).toBe('The proposed molecule is too symmetric.');
-    expect(hints[1].message).toBe('An aromatic cycle can be an heterocycle.');
-    expect(hints[2].message).toBe('Did you think about pyridine derivatives?');
+    expect(hints[0].message).toBe('An aromatic cycle can be an heterocycle.');
+    expect(hints[1].message).toBe('Did you think about pyridine derivatives?');
+    expect(hints[2].message).toBe('The proposed molecule is too symmetric.');
   });
 
   it('propose carbamate rather than ester', () => {
@@ -53,10 +53,10 @@ describe('getNMRHints', () => {
     const answer = OCL.Molecule.fromSmiles('c1c(C)ccc(C)c1');
     const hints = getNMRHints(correct, answer);
     expect(hints).toHaveLength(2);
-    expect(hints[0].message).toBe('The proposed molecule is too symmetric.');
-    expect(hints[1].message).toBe(
-      'Disubstituted aromatic ring can be o, m or p.',
+    expect(hints[0].message).toBe(
+      'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     );
+    expect(hints[1].message).toBe('The proposed molecule is too symmetric.');
   });
 
   it('propose meta rather than para', () => {
@@ -65,10 +65,10 @@ describe('getNMRHints', () => {
     const hints = getNMRHints(correct, answer);
     expect(hints).toHaveLength(2);
     expect(hints[0].message).toBe(
-      'The proposed molecule is not symmetric enough.',
+      'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     );
     expect(hints[1].message).toBe(
-      'Disubstituted aromatic ring can be o, m or p.',
+      'The proposed molecule is not symmetric enough.',
     );
   });
 });

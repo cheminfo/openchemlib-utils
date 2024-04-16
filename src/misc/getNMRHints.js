@@ -2,14 +2,12 @@
 
 import { TopicMolecule } from '../topic/TopicMolecule';
 
+import { getUnsaturation } from './getUnsaturation';
+
 const defaultPossibleHints = [
   {
     idCode: 'eF@Hp\\pcc',
     message: 'What about a non-aromatic ring?',
-  },
-  {
-    idCode: 'eF@H`_qb@c',
-    message: 'How to get such a high DBE?',
   },
   {
     idCode: 'eF@HpZpk|X`',
@@ -158,19 +156,22 @@ const defaultPossibleHints = [
   {
     idCode: 'gFp@DiTt@@CqB^JoV[m',
     anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB~LmWkM`'],
-    message: 'Disubstituted aromatic ring can be o, m or p.',
+    message:
+      'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     remarks: 'ortho',
   },
   {
     idCode: 'gFp@DiTt@@CqC^LmV[m`',
     anyMatches: ['gFp@DiTt@@CqB^JoV[m', 'gFp@DiTt@@CqB~LmWkM`'],
-    message: 'Disubstituted aromatic ring can be o, m ocr p.',
+    message:
+      'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     remarks: 'meta',
   },
   {
     idCode: 'gFp@DiTt@@CqB~LmWkM`',
     anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB^JoV[m'],
-    message: 'Disubstituted aromatic ring can be o, m or p.',
+    message:
+      'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     remarks: 'para',
   },
   {
@@ -203,8 +204,8 @@ const defaultPossibleHints = [
 export function getNMRHints(correct, proposed, options = {}) {
   const hints = [
     ...checkMF(correct, proposed),
+    ...checkUnsaturation(correct, proposed),
     ...checkStereoAndTautomer(correct, proposed),
-    ...checkSymmetry(correct, proposed),
   ];
 
   const { possibleHints = defaultPossibleHints } = options;
@@ -242,21 +243,56 @@ export function getNMRHints(correct, proposed, options = {}) {
     }
   }
 
+  // we suggest symmetry only if MF is correct
+  if (isMFCorrect(correct, proposed)) {
+    hints.push(...checkSymmetry(correct, proposed));
+  }
+
   return hints.map((hint) => ({
     ...hint,
     hash: getHash(JSON.stringify(hint)),
   }));
 }
 
-function checkMF(correct, answer) {
+function isMFCorrect(correct, answer) {
   const mfCorrect = correct.getMolecularFormula().formula;
   const mfAnswer = answer.getMolecularFormula().formula;
-  if (mfCorrect === mfAnswer) return [];
+  return mfCorrect === mfAnswer;
+}
+
+function checkMF(correct, answer) {
+  if (isMFCorrect(correct, answer)) return [];
   return [
     {
       message: 'You should check the molecular formula.',
     },
   ];
+}
+
+function checkUnsaturation(correct, answer) {
+  const mfCorrect = correct.getMolecularFormula().formula;
+  const mfAnswer = answer.getMolecularFormula().formula;
+  if (mfCorrect !== mfAnswer) {
+    const unsaturationCorrect = getUnsaturation(mfCorrect);
+    const unsaturationAnswer = getUnsaturation(mfAnswer);
+    if (unsaturationCorrect === unsaturationAnswer) return [];
+    if (unsaturationCorrect > unsaturationAnswer) {
+      return [
+        {
+          message:
+            'The proposed molecule has a double bond equivalent (DBE) that is too high. ',
+        },
+      ];
+    } else {
+      return [
+        {
+          message:
+            'The proposed molecule has a double bond equivalent (DBE) that is too low.',
+        },
+      ];
+    }
+  }
+  return [];
 }
 
 function checkStereoAndTautomer(correct, answer) {
