@@ -59,6 +59,16 @@ describe('getNMRHints', () => {
     expect(hints[1].message).toBe('The proposed molecule is too symmetric.');
   });
 
+  it('DBE too low', () => {
+    const correct = OCL.Molecule.fromSmiles('C=C');
+    const answer = OCL.Molecule.fromSmiles('CC');
+    const hints = getNMRHints(correct, answer);
+    expect(hints).toHaveLength(3);
+    expect(hints[1].message).toBe(
+      'The proposed molecule has a double bond equivalent (DBE) that is too low.',
+    );
+  });
+
   it('propose meta rather than para', () => {
     const correct = OCL.Molecule.fromSmiles('c1c(C)ccc(C)c1');
     const answer = OCL.Molecule.fromSmiles('c1c(C)cc(C)cc1');

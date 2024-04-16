@@ -286,14 +286,14 @@ function checkUnsaturation(correct, answer) {
       return [
         {
           message:
-            'The proposed molecule has a double bond equivalent (DBE) that is too high. ',
+            'The proposed molecule has a double bond equivalent (DBE) that is too low.',
         },
       ];
     } else {
       return [
         {
           message:
-            'The proposed molecule has a double bond equivalent (DBE) that is too low.',
+            'The proposed molecule has a double bond equivalent (DBE) that is too high.',
         },
       ];
     }
