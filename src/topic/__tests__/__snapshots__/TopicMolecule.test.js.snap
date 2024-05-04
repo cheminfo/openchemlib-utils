@@ -6,6 +6,11 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      6,
+      7,
+      8,
+    ],
     "attachedHydrogensIDCodes": [
       "gGPDALzHRVzjbHC}H\`QJh",
     ],
@@ -18,6 +23,9 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      5,
+    ],
     "attachedHydrogensIDCodes": [
       "gGPDALjHRZzjdhC}H\`QJh",
     ],
@@ -30,6 +38,7 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
     "atomLabel": "Cl",
     "atomMapNo": 0,
     "atomicNo": 17,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": undefined,
     "idCode": "gJPHADILuTe@X\`hOtbCpfuP",
@@ -40,6 +49,10 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      9,
+      10,
+    ],
     "attachedHydrogensIDCodes": [
       "gGPDALfHRYjjThU@_iDBIU@",
       "gGPDALfHRYjjThQ@_iDBIU@",
@@ -53,6 +66,11 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      11,
+      12,
+      13,
+    ],t
     "attachedHydrogensIDCodes": [
       "gGPDALfHRUjjfHC}H\`QJh",
     ],
@@ -65,6 +83,7 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
     "atomLabel": "H",
     "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "gJPHADILuTe@XdhOtbQpj\`",
     "idCode": "gGPDALjHRZzjdhC}H\`QJh",
@@ -79,6 +98,9 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "O",
     "atomMapNo": 0,
+    "attachedHydrogens": [
+      4,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
@@ -90,6 +112,11 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "C",
     "atomMapNo": 0,
+    "attachedHydrogens": [
+      3,
+      5,
+      6,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
@@ -101,6 +128,10 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "C",
     "atomMapNo": 0,
+    "attachedHydrogens": [
+      7,
+      8,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
@@ -112,6 +143,7 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "H",
     "atomMapNo": 0,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
     "idCode": "gCaHLIeIZ\`GzQ@bUP",
@@ -121,6 +153,7 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "H",
     "atomMapNo": 0,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFHhOtdGrj@",
     "idCode": "gCaHHIeIZ\`GzQ@bUP",
@@ -130,6 +163,7 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "H",
     "atomMapNo": 0,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
     "idCode": "gCaHLIeIZ\`GzQ@bUP",
@@ -139,6 +173,7 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "H",
     "atomMapNo": 0,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
     "idCode": "gCaHLIeIZ\`GzQ@bUP",
@@ -148,6 +183,7 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "H",
     "atomMapNo": 0,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
     "idCode": "gCaHDIeIjiJ@RHDRj@",
@@ -157,6 +193,7 @@ exports[`TopicMolecule > ethanol 1`] = `
   {
     "atomLabel": "H",
     "atomMapNo": 0,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
     "idCode": "gCaHDIeIjiJ@RHDRj@",
@@ -276,6 +313,11 @@ exports[`TopicMolecule > ethanol toggle implicit H 1`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      3,
+      4,
+      5,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
@@ -288,6 +330,10 @@ exports[`TopicMolecule > ethanol toggle implicit H 1`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      6,
+      7,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
@@ -300,6 +346,9 @@ exports[`TopicMolecule > ethanol toggle implicit H 1`] = `
     "atomLabel": "O",
     "atomMapNo": 0,
     "atomicNo": 8,
+    "attachedHydrogens": [
+      8,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
@@ -317,6 +366,11 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      3,
+      4,
+      5,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
@@ -329,6 +383,10 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      6,
+      7,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
@@ -341,6 +399,9 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
     "atomLabel": "O",
     "atomMapNo": 0,
     "atomicNo": 8,
+    "attachedHydrogens": [
+      8,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
@@ -353,6 +414,7 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
     "atomLabel": "H",
     "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
     "idCode": "gCaHLIeIZ\`GzQ@bUP",
@@ -363,6 +425,7 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
     "atomLabel": "H",
     "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
     "idCode": "gCaHLIeIZ\`GzQ@bUP",
@@ -373,6 +436,7 @@ exports[`TopicMolecule > ethanol toggle implicit H 2`] = `
     "atomLabel": "H",
     "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFIhOtdWBj@",
     "idCode": "gCaHLIeIZ\`GzQ@bUP",
@@ -388,6 +452,11 @@ exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      5,
+      6,
+      7,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHLIeIZ\`GzQ@bUP",
     ],
@@ -400,6 +469,10 @@ exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
     "atomLabel": "C",
     "atomMapNo": 0,
     "atomicNo": 6,
+    "attachedHydrogens": [
+      3,
+      4,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHDIeIjiJ@RHDRj@",
     ],
@@ -412,6 +485,9 @@ exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
     "atomLabel": "O",
     "atomMapNo": 0,
     "atomicNo": 8,
+    "attachedHydrogens": [
+      8,
+    ],
     "attachedHydrogensIDCodes": [
       "gCaHHIeIZ\`GzQ@bUP",
     ],
@@ -424,6 +500,7 @@ exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
     "atomLabel": "H",
     "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
     "idCode": "gCaHDIeIjiJ@RHDRj@",
@@ -434,6 +511,7 @@ exports[`TopicMolecule > ethanol toggle implicit H 3`] = `
     "atomLabel": "H",
     "atomMapNo": 0,
     "atomicNo": 1,
+    "attachedHydrogens": [],
     "attachedHydrogensIDCodes": [],
     "heavyAtom": "eMHAIhFJhOtdgBj@",
     "idCode": "gCaHDIeIjiJ@RHDRj@",

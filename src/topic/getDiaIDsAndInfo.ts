@@ -20,6 +20,7 @@ export function getDiaIDsAndInfo(
     const newDiaID: DiaIDAndInfo = {
       idCode: diaID,
       attachedHydrogensIDCodes: [],
+      attachedHydrogens: [],
       nbAttachedHydrogens: 0,
       atomLabel: molecule.getAtomLabel(i),
       nbEquivalentAtoms: counts[diaID],
@@ -34,6 +35,7 @@ export function getDiaIDsAndInfo(
       const atom = molecule.getConnAtom(i, j);
       if (molecule.getAtomicNo(atom) === 1) {
         newDiaID.nbAttachedHydrogens++;
+        newDiaID.attachedHydrogens.push(atom);
         const hydrogenDiaID = canonizedDiaIDs[diaMol.finalRanks[atom]];
         if (!newDiaID.attachedHydrogensIDCodes.includes(hydrogenDiaID)) {
           newDiaID.attachedHydrogensIDCodes.push(hydrogenDiaID);

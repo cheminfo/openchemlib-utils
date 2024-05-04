@@ -287,6 +287,7 @@ export class TopicMolecule {
 export interface DiaIDAndInfo {
   idCode: string;
   attachedHydrogensIDCodes: string[];
+  attachedHydrogens: number[];
   nbAttachedHydrogens: number;
   atomLabel: string;
   nbEquivalentAtoms: number;
