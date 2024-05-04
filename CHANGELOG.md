@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.17.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.16.3...v5.17.0) (2024-05-04)
+
+
+### Features
+
+* add attachedHydrogens in diaIDsAndInfo ([e90034c](https://github.com/cheminfo/openchemlib-utils/commit/e90034c739013740304116be82157fa01f211e49))
+
 ## [5.16.3](https://github.com/cheminfo/openchemlib-utils/compare/v5.16.2...v5.16.3) (2024-04-16)
 
 
