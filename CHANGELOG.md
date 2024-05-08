@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.18.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.17.0...v5.18.0) (2024-05-08)
+
+
+### Features
+
+* Option to specify hose codes min / maxSphereSize  in TopicMolecule ([8e75bd5](https://github.com/cheminfo/openchemlib-utils/commit/8e75bd5e5ecf5db0603e4adaf1ffba4abbfa96af))
+
 ## [5.17.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.16.3...v5.17.0) (2024-05-04)
 
 
