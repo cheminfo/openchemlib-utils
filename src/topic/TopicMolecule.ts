@@ -2,6 +2,7 @@ import type { Molecule } from 'openchemlib';
 
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
+import { HoseCodesOptions } from './HoseCodesOptions.js';
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs';
 import { getCanonizedHoseCodes } from './getCanonizedHoseCodes';
 import { getDiaIDsAndInfo } from './getDiaIDsAndInfo';
@@ -24,11 +25,13 @@ export class TopicMolecule {
   private readonly originalMolecule: Molecule;
   molecule: Molecule;
   idCode: string;
+  options: HoseCodesOptions;
 
   private cache: any;
 
-  constructor(molecule: Molecule) {
+  constructor(molecule: Molecule, options: HoseCodesOptions = {}) {
     this.originalMolecule = molecule;
+    this.options = options;
     this.idCode = molecule.getIDCode();
     this.molecule = this.originalMolecule.getCompactCopy();
     this.molecule.ensureHelperArrays(

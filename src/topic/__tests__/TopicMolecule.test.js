@@ -183,6 +183,19 @@ describe('TopicMolecule', () => {
     expect(hoses).toMatchSnapshot();
     expect(hoses[3]).toStrictEqual(hoses[4]);
     expect(hoses).toMatchSnapshot();
+    expect(hoses[0]).toHaveLength(5);
+  });
+
+  it('ethanol with max sphere size', () => {
+    const molecule = Molecule.fromSmiles('CCO');
+    const topicMolecule = new TopicMolecule(molecule, { maxSphereSize: 5 });
+
+    const hoses = topicMolecule.hoseCodes;
+    expect(hoses).toHaveLength(9);
+    expect(hoses).toMatchSnapshot();
+    expect(hoses[3]).toStrictEqual(hoses[4]);
+    expect(hoses).toMatchSnapshot();
+    expect(hoses[3]).toHaveLength(6);
   });
 
   it('2-chlorobutane', () => {

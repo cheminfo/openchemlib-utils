@@ -1,28 +1,26 @@
 import { getHoseCodesForAtomsInternal } from '../hose/getHoseCodesForAtomsInternal.js';
 import { tagAtom } from '../util/tagAtom';
 
-import { HoseCodesOptions } from './HoseCodesOptions.js';
 import { TopicMolecule } from './TopicMolecule.js';
 
-export function getCanonizedHoseCodes(
-  diaMol: TopicMolecule,
-  options: HoseCodesOptions = {},
-) {
-  const heterotopicSymmetryRanks = diaMol.heterotopicSymmetryRanks;
-  const moleculeWithH = diaMol.moleculeWithH;
-  const finalRanks = diaMol.finalRanks;
+export function getCanonizedHoseCodes(topicMolecule: TopicMolecule) {
+  const options = topicMolecule.options;
+  const heterotopicSymmetryRanks = topicMolecule.heterotopicSymmetryRanks;
+  const moleculeWithH = topicMolecule.moleculeWithH;
+  const finalRanks = topicMolecule.finalRanks;
   const canonizedHoseCodes = new Array(moleculeWithH.getAllAtoms());
   moleculeWithH.ensureHelperArrays(
-    diaMol.molecule.getOCL().Molecule.cHelperSymmetryStereoHeterotopicity,
+    topicMolecule.molecule.getOCL().Molecule
+      .cHelperSymmetryStereoHeterotopicity,
   );
   const cache: Record<string, any> = {};
-  for (let i = 0; i < diaMol.moleculeWithH.getAllAtoms(); i++) {
+  for (let i = 0; i < topicMolecule.moleculeWithH.getAllAtoms(); i++) {
     const rank = heterotopicSymmetryRanks[i];
     if (rank && cache[rank]) {
       canonizedHoseCodes[finalRanks[i]] = cache[rank].diaID;
       continue;
     }
-    const tempMolecule = diaMol.moleculeWithH.getCompactCopy();
+    const tempMolecule = topicMolecule.moleculeWithH.getCompactCopy();
     tagAtom(tempMolecule, i);
     const hoses = getHoseCodesForAtomsInternal(tempMolecule, options);
     canonizedHoseCodes[finalRanks[i]] = hoses;

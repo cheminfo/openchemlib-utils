@@ -657,6 +657,510 @@ exports[`TopicMolecule > ethanol toggle implicit H 5`] = `
 ]
 `;
 
+exports[`TopicMolecule > ethanol toggle implicit H 6`] = `
+[
+  {
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "atomicNo": 6,
+    "attachedHydrogens": [
+      3,
+      4,
+      5,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHLIeIZ\`GzQ@bUP",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "atomicNo": 6,
+    "attachedHydrogens": [
+      6,
+      7,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHDIeIjiJ@RHDRj@",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "O",
+    "atomMapNo": 0,
+    "atomicNo": 8,
+    "attachedHydrogens": [
+      8,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHHIeIZ\`GzQ@bUP",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
+  },
+]
+`;
+
+exports[`TopicMolecule > ethanol toggle implicit H 7`] = `
+[
+  {
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "atomicNo": 6,
+    "attachedHydrogens": [
+      3,
+      4,
+      5,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHLIeIZ\`GzQ@bUP",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "atomicNo": 6,
+    "attachedHydrogens": [
+      6,
+      7,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHDIeIjiJ@RHDRj@",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "O",
+    "atomMapNo": 0,
+    "atomicNo": 8,
+    "attachedHydrogens": [
+      8,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHHIeIZ\`GzQ@bUP",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "atomicNo": 1,
+    "attachedHydrogens": [],
+    "attachedHydrogensIDCodes": [],
+    "heavyAtom": "eMHAIhFIhOtdWBj@",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
+  },
+  {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "atomicNo": 1,
+    "attachedHydrogens": [],
+    "attachedHydrogensIDCodes": [],
+    "heavyAtom": "eMHAIhFIhOtdWBj@",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
+  },
+  {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "atomicNo": 1,
+    "attachedHydrogens": [],
+    "attachedHydrogensIDCodes": [],
+    "heavyAtom": "eMHAIhFIhOtdWBj@",
+    "idCode": "gCaHLIeIZ\`GzQ@bUP",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 3,
+  },
+]
+`;
+
+exports[`TopicMolecule > ethanol toggle implicit H 8`] = `
+[
+  {
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "atomicNo": 6,
+    "attachedHydrogens": [
+      5,
+      6,
+      7,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHLIeIZ\`GzQ@bUP",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFIhOtdWBj@",
+    "nbAttachedHydrogens": 3,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "C",
+    "atomMapNo": 0,
+    "atomicNo": 6,
+    "attachedHydrogens": [
+      3,
+      4,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHDIeIjiJ@RHDRj@",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFJhOtdgBj@",
+    "nbAttachedHydrogens": 2,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "O",
+    "atomMapNo": 0,
+    "atomicNo": 8,
+    "attachedHydrogens": [
+      8,
+    ],
+    "attachedHydrogensIDCodes": [
+      "gCaHHIeIZ\`GzQ@bUP",
+    ],
+    "heavyAtom": undefined,
+    "idCode": "eMHAIhFHhOtdGrj@",
+    "nbAttachedHydrogens": 1,
+    "nbEquivalentAtoms": 1,
+  },
+  {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "atomicNo": 1,
+    "attachedHydrogens": [],
+    "attachedHydrogensIDCodes": [],
+    "heavyAtom": "eMHAIhFJhOtdgBj@",
+    "idCode": "gCaHDIeIjiJ@RHDRj@",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 2,
+  },
+  {
+    "atomLabel": "H",
+    "atomMapNo": 0,
+    "atomicNo": 1,
+    "attachedHydrogens": [],
+    "attachedHydrogensIDCodes": [],
+    "heavyAtom": "eMHAIhFJhOtdgBj@",
+    "idCode": "gCaHDIeIjiJ@RHDRj@",
+    "nbAttachedHydrogens": 0,
+    "nbEquivalentAtoms": 2,
+  },
+]
+`;
+
+exports[`TopicMolecule > ethanol toggle implicit H 9`] = `
+[
+  [
+    "fH@NJ\`Rapj\`",
+    "eF@Hp\\QP^cotdGBj@",
+    "eMHAIhNIhOMcwzRKaU@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+  ],
+  [
+    "fH@NJ\`Rapj\`",
+    "eMHAIhNJhOUgzRSaU@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+  ],
+  [
+    "fI@GEP_iP~UP",
+    "eFHBLGDTGhc}IA|j\`",
+    "eMHAIhNHhOIEgzRCyU@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFJHfXp_tdDRj@",
+    "eMJHfTf\`iHHeT",
+    "gCaHHIeIZ\`OhlRHDRj@",
+    "gCaHHIeIZ\`GzQ@bUP",
+  ],
+]
+`;
+
+exports[`TopicMolecule > ethanol toggle implicit H 10`] = `
+[
+  [
+    "fH@NJ\`Rapj\`",
+    "eF@Hp\\QP^cotdGBj@",
+    "eMHAIhNIhOMcwzRKaU@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+  ],
+  [
+    "fH@NJ\`Rapj\`",
+    "eMHAIhNJhOUgzRSaU@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+  ],
+  [
+    "fI@GEP_iP~UP",
+    "eFHBLGDTGhc}IA|j\`",
+    "eMHAIhNHhOIEgzRCyU@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFJHfXp_tdDRj@",
+    "eMJHfTf\`iHHeT",
+    "gCaHHIeIZ\`OhlRHDRj@",
+    "gCaHHIeIZ\`GzQ@bUP",
+  ],
+]
+`;
+
+exports[`TopicMolecule > ethanol with max sphere size 1`] = `
+[
+  [
+    "fH@NJ\`Rapj\`",
+    "eF@Hp\\QP^cotdGBj@",
+    "eMHAIhNIhOMcwzRKaU@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+  ],
+  [
+    "fH@NJ\`Rapj\`",
+    "eMHAIhNJhOUgzRSaU@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+  ],
+  [
+    "fI@GEP_iP~UP",
+    "eFHBLGDTGhc}IA|j\`",
+    "eMHAIhNHhOIEgzRCyU@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFJHfXp_tdDRj@",
+    "eMJHfTf\`iHHeT",
+    "gCaHHIeIZ\`OhlRHDRj@",
+    "gCaHHIeIZ\`GzQ@bUP",
+    "gCaHHIeIZ\`GzQ@bUP",
+  ],
+]
+`;
+
+exports[`TopicMolecule > ethanol with max sphere size 2`] = `
+[
+  [
+    "fH@NJ\`Rapj\`",
+    "eF@Hp\\QP^cotdGBj@",
+    "eMHAIhNIhOMcwzRKaU@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+    "eMHAIhFIhOtdWBj@",
+  ],
+  [
+    "fH@NJ\`Rapj\`",
+    "eMHAIhNJhOUgzRSaU@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+    "eMHAIhFJhOtdgBj@",
+  ],
+  [
+    "fI@GEP_iP~UP",
+    "eFHBLGDTGhc}IA|j\`",
+    "eMHAIhNHhOIEgzRCyU@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+    "eMHAIhFHhOtdGrj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "eMBBYRZCzlRPQJh",
+    "gCaHLIeIZ\`OeLV_iDBIU@",
+    "gCaHLIeIZ\`GzQ@bUP",
+    "gCaHLIeIZ\`GzQ@bUP",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFBBYcARPQJh",
+    "gCaHDIeIjiJA}IGzQ@bUP",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+    "gCaHDIeIjiJ@RHDRj@",
+  ],
+  [
+    "fHdrARaDj\`",
+    "eFJHfXp_tdDRj@",
+    "eMJHfTf\`iHHeT",
+    "gCaHHIeIZ\`OhlRHDRj@",
+    "gCaHHIeIZ\`GzQ@bUP",
+    "gCaHHIeIZ\`GzQ@bUP",
+  ],
+]
+`;
+
 exports[`TopicMolecule > tert-butanol 1`] = `
 {
   "gGQHHIeIZjhA~dPHeT": {
