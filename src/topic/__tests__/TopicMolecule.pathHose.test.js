@@ -8,11 +8,18 @@ test('TopicMolecule.path', () => {
   const molecule = Molecule.fromSmiles('CCCCCO');
   const topicMolecule = new TopicMolecule(molecule);
 
-  expect(topicMolecule.getAtomPaths(0, 2, { distance: 2 })).toStrictEqual([
+  expect(topicMolecule.getAtomPaths(0, 2, { pathLength: 2 })).toStrictEqual([
     [0, 1, 2],
   ]);
-  expect(topicMolecule.getAtomPaths(0, 2, { distance: 3 })).toStrictEqual([]);
+  expect(topicMolecule.getAtomPaths(0, 2, { pathLength: 3 })).toStrictEqual([]);
 });
+
+test('TopicMolecule.getHoseFragment', async () => {
+  const molecule = Molecule.fromSmiles('ClC=C')
+  const topicMolecule = new TopicMolecule(molecule);
+
+  expect(topicMolecule.atomsPaths).toMatchSnapshot()
+})
 
 test('TopicMolecule.getHoseFragment', async () => {
   const molecule = Molecule.fromSmiles('Cl/C=C/CCCCl');

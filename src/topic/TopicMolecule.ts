@@ -37,7 +37,7 @@ interface GetAtomPathOptions {
   /*
    * The distance between the two atoms. If not specified, all the distances will be considered
    */
-  distance?: number;
+  pathLength?: number;
 }
 
 interface GetHoseFragmentOptions {
@@ -173,15 +173,15 @@ export class TopicMolecule {
   }
 
   getAtomPaths(atom1: number, atom2: number, options: GetAtomPathOptions = {}) {
-    const { distance } = options;
-    if (distance !== undefined && distance > this.options.maxPathLength) {
+    const { pathLength } = options;
+    if (pathLength !== undefined && pathLength > this.options.maxPathLength) {
       throw new Error(
         'The distance is too long, you should increase the maxPathLength when instanciating the TopicMolecule',
       );
     }
     const atomPaths = this.atomsPaths[atom1];
-    const minDistance = distance || 0;
-    const maxDistance = distance || this.options.maxPathLength;
+    const minDistance = pathLength || 0;
+    const maxDistance = pathLength || this.options.maxPathLength;
     const paths = [];
     for (let i = minDistance; i <= maxDistance; i++) {
       for (const atomPath of atomPaths[i]) {

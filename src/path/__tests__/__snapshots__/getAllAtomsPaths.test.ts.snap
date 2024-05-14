@@ -5,29 +5,29 @@ exports[`ethanol 1`] = `
   [
     [
       {
-        "distance": 0,
         "path": [
           0,
         ],
+        "pathLength": 0,
       },
     ],
     [
       {
-        "distance": 1,
         "path": [
           0,
           1,
         ],
+        "pathLength": 1,
       },
     ],
     [
       {
-        "distance": 2,
         "path": [
           0,
           1,
           2,
         ],
+        "pathLength": 2,
       },
     ],
     [],
@@ -37,26 +37,26 @@ exports[`ethanol 1`] = `
   [
     [
       {
-        "distance": 0,
         "path": [
           1,
         ],
+        "pathLength": 0,
       },
     ],
     [
       {
-        "distance": 1,
         "path": [
           1,
           0,
         ],
+        "pathLength": 1,
       },
       {
-        "distance": 1,
         "path": [
           1,
           2,
         ],
+        "pathLength": 1,
       },
     ],
     [],
@@ -67,29 +67,29 @@ exports[`ethanol 1`] = `
   [
     [
       {
-        "distance": 0,
         "path": [
           2,
         ],
+        "pathLength": 0,
       },
     ],
     [
       {
-        "distance": 1,
         "path": [
           2,
           1,
         ],
+        "pathLength": 1,
       },
     ],
     [
       {
-        "distance": 2,
         "path": [
           2,
           1,
           0,
         ],
+        "pathLength": 2,
       },
     ],
     [],

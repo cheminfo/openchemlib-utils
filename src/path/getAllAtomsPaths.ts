@@ -10,7 +10,7 @@ export interface GetAllAtomsPathsOptions {
 
 export interface AtomPath {
   path: number[];
-  distance: number;
+  pathLength: number;
 }
 
 /**
@@ -32,7 +32,7 @@ export function getAllAtomsPaths(
     allAtomsPaths.push(oneAtomPaths);
 
     let atomPaths: AtomPath[] = [];
-    atomPaths.push({ path: [i], distance: 0 });
+    atomPaths.push({ path: [i], pathLength: 0 });
     oneAtomPaths.push(atomPaths);
 
     let nextIndexes = [0];
@@ -51,14 +51,14 @@ export function getAllAtomsPaths(
         const index = currentIndexes[i];
 
         const previousPath = oneAtomPaths[sphere - 1][index].path;
-        for (let conn = 0; conn < molecule.getConnAtoms(atom); conn++) {
+        for (let conn = 0; conn < molecule.getAllConnAtoms(atom); conn++) {
           const connectedAtom = molecule.getConnAtom(atom, conn);
           if (previousPath.includes(connectedAtom)) continue;
           nextIndexes.push(atomPaths.length);
           nextAtoms.push(connectedAtom);
           atomPaths.push({
             path: [...previousPath, connectedAtom],
-            distance: sphere,
+            pathLength: sphere,
           });
         }
       }
