@@ -20,8 +20,18 @@ interface ToMolfileOptions {
 }
 
 interface TopicMoleculeOptions extends HoseCodesOptions {
-  maxPathLength?: 5;
+  /**
+   * The maximum path length to consider when calculating the paths between atoms
+   * @default 5
+   */
+  maxPathLength?: number;
 }
+
+type TopicMoleculeInternalOptions = Omit<
+  TopicMoleculeOptions,
+  'maxPathLength'
+> &
+  Required<Pick<TopicMoleculeOptions, 'maxPathLength'>>;
 
 interface GetAtomPathOptions {
   /*
@@ -55,7 +65,7 @@ export class TopicMolecule {
   private readonly originalMolecule: Molecule;
   molecule: Molecule;
   idCode: string;
-  options: TopicMoleculeOptions;
+  options: TopicMoleculeInternalOptions;
 
   private cache: any;
 
