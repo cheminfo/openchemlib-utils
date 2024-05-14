@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.19.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.18.0...v5.19.0) (2024-05-14)
+
+
+### Features
+
+* add getHoseFragment on TopicMolecule ([455b646](https://github.com/cheminfo/openchemlib-utils/commit/455b6469730faebca8d5b0c8a122ba28b1e015f8))
+* getAllAtomsPaths ([ee15078](https://github.com/cheminfo/openchemlib-utils/commit/ee15078d3cbcd1f45140566e0689c1e6247ca35a))
+
 ## [5.18.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.17.0...v5.18.0) (2024-05-08)
 
 
