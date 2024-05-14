@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.19.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.19.0...v5.19.1) (2024-05-14)
+
+
+### Bug Fixes
+
+* TopicMolecule path was not correctly dealing with hydrogens ([11f1e61](https://github.com/cheminfo/openchemlib-utils/commit/11f1e610a56d13f76108f4cd0484df84b6c9ddc1))
+
 ## [5.19.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.18.0...v5.19.0) (2024-05-14)
 
 
