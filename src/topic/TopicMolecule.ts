@@ -1,6 +1,8 @@
 import type { Molecule } from 'openchemlib';
 
+import { AtomPath, getAllAtomsPaths } from '../path/getAllAtomsPaths.js';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
+import { tagAtom } from '../util/tagAtom.js';
 
 import { HoseCodesOptions } from './HoseCodesOptions.js';
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs';
@@ -17,6 +19,34 @@ interface ToMolfileOptions {
   version?: 2 | 3;
 }
 
+interface TopicMoleculeOptions extends HoseCodesOptions {
+  maxPathLength?: 5;
+}
+
+interface GetAtomPathOptions {
+  /*
+   * The distance between the two atoms. If not specified, all the distances will be considered
+   */
+  distance?: number;
+}
+
+interface GetHoseFragmentOptions {
+  /*
+   * The sphere size around any selected atoms to consider. Default is 2
+   */
+  sphereSize?: number;
+  /**
+   * The atoms to tag in the fragment
+   * @default rootAtoms
+   */
+  tagAtoms?: number[];
+  /**
+   * The function to tag the atoms in place !
+   * @default tagAtom
+   */
+  tagAtomFct?: (molecule: Molecule, iAtom: number) => undefined;
+}
+
 /**
  * This class deals with topicity information and hose codes
  * It is optimized to avoid recalculation of the same information
@@ -25,13 +55,13 @@ export class TopicMolecule {
   private readonly originalMolecule: Molecule;
   molecule: Molecule;
   idCode: string;
-  options: HoseCodesOptions;
+  options: TopicMoleculeOptions;
 
   private cache: any;
 
-  constructor(molecule: Molecule, options: HoseCodesOptions = {}) {
+  constructor(molecule: Molecule, options: TopicMoleculeOptions = {}) {
     this.originalMolecule = molecule;
-    this.options = options;
+    this.options = { maxPathLength: 5, ...options };
     this.idCode = molecule.getIDCode();
     this.molecule = this.originalMolecule.getCompactCopy();
     this.molecule.ensureHelperArrays(
@@ -69,7 +99,99 @@ export class TopicMolecule {
     }
   }
 
-  toMolfile(options: ToMolfileOptions = {}) {
+  getHoseFragment(
+    rootAtoms: number[],
+    options: GetHoseFragmentOptions = {},
+  ): Molecule {
+    const {
+      sphereSize = 2,
+      tagAtoms = rootAtoms,
+      tagAtomFct = tagAtom,
+    } = options;
+    this.moleculeWithH.ensureHelperArrays(
+      this.moleculeWithH.getOCL().Molecule.cHelperNeighbours,
+    );
+
+    const copy = this.moleculeWithH.getCompactCopy();
+    copy.ensureHelperArrays(copy.getOCL().Molecule.cHelperNeighbours);
+
+    for (let i = 0; i < copy.getAllAtoms(); i++) {
+      copy.setAtomMass(i, copy.getAtomMass(i) + 2);
+    }
+
+    const atomMask = new Array(copy.getAllAtoms()).fill(false);
+    const atomList = new Uint8Array(copy.getAllAtoms());
+    const atomMapping = new Array(copy.getAllAtoms()).fill(-1);
+    const Molecule = copy.getOCL().Molecule;
+    const fragment = new Molecule(0, 0);
+    fragment.setFragment(true);
+    let min = 0;
+    let max = 0;
+    for (let sphere = 0; sphere <= sphereSize; sphere++) {
+      if (max === 0) {
+        for (const rootAtom of rootAtoms) {
+          atomList[max] = rootAtom;
+          atomMask[rootAtom] = 1;
+          max++;
+        }
+      } else {
+        let newMax = max;
+        for (let i = min; i < max; i++) {
+          const atom = atomList[i];
+          for (let j = 0; j < this.moleculeWithH.getAllConnAtoms(atom); j++) {
+            const connAtom = this.moleculeWithH.getConnAtom(atom, j);
+            if (!atomMask[connAtom]) {
+              atomMask[connAtom] = 1;
+              atomList[newMax++] = connAtom;
+            }
+          }
+        }
+        min = max;
+        max = newMax;
+      }
+    }
+    copy.copyMoleculeByAtoms(fragment, atomMask, true, atomMapping);
+    for (let i = 0; i < fragment.getAllAtoms(); i++) {
+      fragment.setAtomMass(i, fragment.getAtomMass(i) - 2);
+    }
+
+    for (const atom of tagAtoms) {
+      tagAtomFct(fragment, atomMapping[atom]);
+    }
+
+    return fragment;
+  }
+
+  getAtomPaths(atom1: number, atom2: number, options: GetAtomPathOptions = {}) {
+    const { distance } = options;
+    if (distance !== undefined && distance > this.options.maxPathLength) {
+      throw new Error(
+        'The distance is too long, you should increase the maxPathLength when instanciating the TopicMolecule',
+      );
+    }
+    const atomPaths = this.atomsPaths[atom1];
+    const minDistance = distance || 0;
+    const maxDistance = distance || this.options.maxPathLength;
+    const paths = [];
+    for (let i = minDistance; i <= maxDistance; i++) {
+      for (const atomPath of atomPaths[i]) {
+        if (atomPath.path.at(-1) === atom2) {
+          paths.push(atomPath.path);
+        }
+      }
+    }
+    return paths;
+  }
+
+  get atomsPaths(): AtomPath[][][] {
+    if (this.cache.atomsPaths) return this.cache.atomsPaths;
+    this.cache.atomsPaths = getAllAtomsPaths(this.moleculeWithH, {
+      maxPathLength: this.options.maxPathLength,
+    });
+    return this.cache.atomsPaths;
+  }
+
+  toMolfile(options: ToMolfileOptions = {}): string {
     const { version = 2 } = options;
     if (version === 2) {
       return this.molecule.toMolfile();
@@ -105,13 +227,13 @@ export class TopicMolecule {
   /**
    * Returns a molecule with all the hydrogens added. The order is NOT canonized
    */
-  get moleculeWithH() {
+  get moleculeWithH(): Molecule {
     if (this.cache.moleculeWithH) return this.cache.moleculeWithH;
     this.cache.moleculeWithH = getMoleculeWithH(this.molecule);
     return this.cache.moleculeWithH;
   }
 
-  private get xMolecule() {
+  private get xMolecule(): Molecule {
     if (this.cache.xMolecule) return this.cache.xMolecule;
     this.cache.xMolecule = getXMolecule(this.moleculeWithH);
     return this.cache.xMolecule;

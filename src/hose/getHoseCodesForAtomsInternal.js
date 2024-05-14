@@ -39,8 +39,8 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
   const results = [];
   let min = 0;
   let max = 0;
-  const atomMask = new Array(molecule.getAllAtoms());
-  const atomList = new Array(molecule.getAllAtoms());
+  const atomMask = new Uint8Array(molecule.getAllAtoms());
+  const atomList = new Uint8Array(molecule.getAllAtoms());
 
   for (let sphere = 0; sphere <= maxSphereSize; sphere++) {
     if (max === 0) {

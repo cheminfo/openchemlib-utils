@@ -8,7 +8,7 @@ export interface GetAllAtomsPathsOptions {
   maxPathLength?: number;
 }
 
-interface AtomPath {
+export interface AtomPath {
   path: number[];
   distance: number;
 }
