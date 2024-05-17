@@ -57,7 +57,7 @@ const defaultPossibleHints = [
   },
   {
     idCode: 'eMB@HRZCBKSFXXJt{?Y@',
-    message: 'You should consider an thiol.',
+    message: 'You should consider a thiol.',
   },
   {
     idCode: 'gJQ@@eKU@[KFJtLAa`sAUR]g_zlP',
