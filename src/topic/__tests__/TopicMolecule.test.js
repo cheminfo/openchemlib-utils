@@ -8,6 +8,18 @@ import { toggleHydrogens } from '../../util/toggleHydrogens';
 import { TopicMolecule } from '../TopicMolecule';
 
 describe('TopicMolecule', () => {
+  it('Big molecule', () => {
+    //250 carbons
+    const molecule = Molecule.fromSmiles('C'.repeat(260));
+    const topicMolecule = new TopicMolecule(molecule);
+    expect(() => topicMolecule.toMolfileWithH()).toThrow(
+      'too many atoms to add hydrogens: 782 > 250',
+    );
+
+    const topicMolecule2 = new TopicMolecule(molecule, { maxNbAtoms: 1000 });
+    const molfile = topicMolecule2.toMolfileWithH();
+    expect(molfile.split('\n')).toHaveLength(1569);
+  });
   it('ethanol', () => {
     const molecule = Molecule.fromSmiles('CCCO');
     molecule.setAtomicNo(0, 1);

@@ -12,19 +12,22 @@ import {
   getHeterotopicSymmetryRanks,
   getFinalRanks,
 } from './getHeterotopicSymmetryRanks';
-import { getMoleculeWithH } from './getMoleculeWithH';
+import { getMoleculeWithH, GetMoleculeWithHOptions } from './getMoleculeWithH';
 import { getXMolecule } from './getXMolecule';
 
 interface ToMolfileOptions {
   version?: 2 | 3;
 }
 
-interface TopicMoleculeOptions extends HoseCodesOptions {
+interface TopicMoleculeOptions
+  extends HoseCodesOptions,
+    GetMoleculeWithHOptions {
   /**
    * The maximum path length to consider when calculating the paths between atoms
    * @default 5
    */
   maxPathLength?: number;
+  maxNbAtoms?: number;
 }
 
 type TopicMoleculeInternalOptions = Omit<
@@ -239,7 +242,9 @@ export class TopicMolecule {
    */
   get moleculeWithH(): Molecule {
     if (this.cache.moleculeWithH) return this.cache.moleculeWithH;
-    this.cache.moleculeWithH = getMoleculeWithH(this.molecule);
+    this.cache.moleculeWithH = getMoleculeWithH(this.molecule, {
+      maxNbAtoms: this.options.maxNbAtoms,
+    });
     return this.cache.moleculeWithH;
   }
 
