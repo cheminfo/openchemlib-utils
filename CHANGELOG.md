@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.20.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.19.1...v5.20.0) (2024-05-21)
+
+
+### Features
+
+* give possibility to configure TopicMolecule to set the maxNbAtoms ([88d501c](https://github.com/cheminfo/openchemlib-utils/commit/88d501cc4fb35804aaeb4851f6753d1b449d8e3e))
+
+
+### Bug Fixes
+
+* an thiol -&gt; a thiol ([a5e001c](https://github.com/cheminfo/openchemlib-utils/commit/a5e001c898a687f3f13625c5a248832b4ed432ed))
+
 ## [5.19.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.19.0...v5.19.1) (2024-05-14)
 
 
