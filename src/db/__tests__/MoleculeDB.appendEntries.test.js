@@ -54,5 +54,10 @@ describe('appendEntries', () => {
     });
     expect(moleculesDB.getDB()).toHaveLength(15);
     expect(called).toBe(15);
+
+    const results = await moleculesDB.search('', { format: 'smiles' });
+    expect(results).toHaveLength(15);
+    const results2 = await moleculesDB.search('C', { format: 'smiles' });
+    expect(results2).toHaveLength(10);
   });
 });
