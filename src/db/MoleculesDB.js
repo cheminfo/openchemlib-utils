@@ -21,13 +21,15 @@ export class MoleculesDB {
    * @param {import('openchemlib')} OCL - openchemlib library
    * @param {object} [options={}]
    * @param {boolean} [options.computeProperties=false]
+   * @param {boolean} [options.keepEmptyMolecules=false]
    */
   constructor(OCL, options = {}) {
-    const { computeProperties = false } = options;
+    const { computeProperties = false, keepEmptyMolecules = false } = options;
     this.OCL = OCL;
     this.db = {};
     this.statistics = null;
     this.computeProperties = computeProperties;
+    this.keepEmptyMolecules = keepEmptyMolecules;
     this.searcher = new OCL.SSSearcherWithIndex();
   }
 

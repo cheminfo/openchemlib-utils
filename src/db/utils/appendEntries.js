@@ -40,7 +40,6 @@ export default async function appendEntries(
     if (molfilePath && !molecule) {
       molecule = Molecule.fromMolfile(get(entry, molfilePath));
     }
-
     if (!molecule) {
       idCode = get(entry, idCodePath);
       if (idCode) {
@@ -48,14 +47,26 @@ export default async function appendEntries(
         molecule = Molecule.fromIDCode(idCode, coordinates || false);
       }
     }
+
     const index = get(entry, indexPath);
     const mw = get(entry, mwPath);
-    if (molecule) {
-      moleculesDB.pushEntry(molecule, entry, { index, mw });
-    }
+
     if (onStep) {
       // eslint-disable-next-line no-await-in-loop
       await onStep(i + 1, entries.length);
+    }
+
+    if (
+      !moleculesDB.keepEmptyMolecules &&
+      (!molecule || molecule.getAllAtoms() === 0)
+    ) {
+      continue;
+    } else if (!molecule) {
+      molecule = new moleculesDB.OCL.Molecule(0, 0);
+    }
+
+    if (molecule) {
+      moleculesDB.pushEntry(molecule, entry, { index, mw });
     }
   }
 }

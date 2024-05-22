@@ -1,3 +1,5 @@
+import { v4 } from '@lukeed/uuid';
+
 /**
  *
  * @param {MoleculesDB} moleculesDB
@@ -17,8 +19,13 @@ export default function pushEntry(
   // the following line could be the source of problems if the idCode version
   // changes
 
-  const moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo);
-  let entry = moleculesDB.db[moleculeIDCode];
+  const moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo) || v4();
+
+  let entry;
+  if (moleculeIDCode) {
+    entry = moleculesDB.db[moleculeIDCode];
+  }
+
   if (!entry) {
     // a new molecule
     entry = { molecule, properties: {}, data: [], idCode: moleculeIDCode };
@@ -60,6 +67,10 @@ export default function pushEntry(
 }
 
 function getMoleculeIDCode(molecule, moleculeInfo) {
-  if (moleculeInfo.idCode) return moleculeInfo.idCode;
-  return molecule.getIDCode();
+  let idCode = moleculeInfo.idCode;
+  if (!idCode) {
+    idCode = molecule.getIDCode();
+  }
+  if (idCode === 'd@') return ''; // empty molecule
+  return idCode;
 }

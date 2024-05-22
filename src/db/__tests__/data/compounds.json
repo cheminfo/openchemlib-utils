@@ -1,6 +1,42 @@
 {
   "data": [
     {
+      "_id": 1,
+      "data": {
+        "iupac": "Empty 1"
+      }
+    },
+    {
+      "_id": 2,
+      "data": {
+        "iupac": "Empty 2"
+      }
+    },
+    {
+      "_id": 3,
+      "data": {
+        "iupac": "Empty 3"
+      }
+    },
+    {
+      "_id": 4,
+      "data": {
+        "ocl": {
+          "idCode": "d@"
+        },
+        "iupac": "Empty 4"
+      }
+    },
+    {
+      "_id": 5,
+      "data": {
+        "ocl": {
+          "idCode": "d@"
+        },
+        "iupac": "Empty 5"
+      }
+    },
+    {
       "_id": 11040637,
       "data": {
         "ocl": {
