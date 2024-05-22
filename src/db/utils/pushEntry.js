@@ -19,17 +19,15 @@ export default function pushEntry(
   // the following line could be the source of problems if the idCode version
   // changes
 
-  const moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo) || v4();
+  const moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo);
+  const id = moleculeIDCode || v4();
 
-  let entry;
-  if (moleculeIDCode) {
-    entry = moleculesDB.db[moleculeIDCode];
-  }
+  let entry = moleculesDB.db[id];
 
   if (!entry) {
     // a new molecule
     entry = { molecule, properties: {}, data: [], idCode: moleculeIDCode };
-    moleculesDB.db[moleculeIDCode] = entry;
+    moleculesDB.db[id] = entry;
 
     // ensure helper arrays needed for substructure search
     molecule.ensureHelperArrays(moleculesDB.OCL.Molecule.cHelperRings);
