@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.21.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.21.0...v5.21.1) (2024-05-22)
+
+
+### Bug Fixes
+
+* do not contaminate idCode in MoleculeDB when empty molecule ([9fb307f](https://github.com/cheminfo/openchemlib-utils/commit/9fb307f8103fb6b1ff98adeb6f0b55fcfb5039d2))
+
 ## [5.21.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.20.0...v5.21.0) (2024-05-22)
 
 
