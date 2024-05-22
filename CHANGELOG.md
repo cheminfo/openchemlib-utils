@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.21.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.20.0...v5.21.0) (2024-05-22)
+
+
+### Features
+
+* add option allowEmptyMolecule in MoleculesDB ([3739662](https://github.com/cheminfo/openchemlib-utils/commit/37396627573c6744fc86a23fd6529bbd302b8031))
+
 ## [5.20.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.19.1...v5.20.0) (2024-05-21)
 
 
