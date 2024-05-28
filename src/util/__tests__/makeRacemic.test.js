@@ -24,13 +24,14 @@ describe('makeRacemic', () => {
     const moleculeS = OCL.Molecule.fromSmiles('C[C@@H](Cl)Br');
     const idCodeS = moleculeS.getIDCode();
 
+    expect(moleculeR.getAtomCIPParity(1)).toBe(1);
+    expect(moleculeS.getAtomCIPParity(1)).toBe(2);
+
     makeRacemic(moleculeR);
     const idCodeRacemic = moleculeR.getIDCode();
-    makeRacemic(moleculeS)
+    makeRacemic(moleculeS);
     const idCodeSRacemic = moleculeS.getIDCode();
     expect(idCodeR).not.toBe(idCodeS);
     expect(idCodeSRacemic).toBe(idCodeRacemic);
-
-
-  })
+  });
 });
