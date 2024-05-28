@@ -17,4 +17,20 @@ describe('makeRacemic', () => {
     makeRacemic(molecule);
     expect(molecule.getIDCode()).toBe('gGPDADFHRYjjThQ@@');
   });
+
+  it('2 enantiomers', () => {
+    const moleculeR = OCL.Molecule.fromSmiles('C[C@H](Cl)Br');
+    const idCodeR = moleculeR.getIDCode();
+    const moleculeS = OCL.Molecule.fromSmiles('C[C@@H](Cl)Br');
+    const idCodeS = moleculeS.getIDCode();
+
+    makeRacemic(moleculeR);
+    const idCodeRacemic = moleculeR.getIDCode();
+    makeRacemic(moleculeS)
+    const idCodeSRacemic = moleculeS.getIDCode();
+    expect(idCodeR).not.toBe(idCodeS);
+    expect(idCodeSRacemic).toBe(idCodeRacemic);
+
+
+  })
 });
