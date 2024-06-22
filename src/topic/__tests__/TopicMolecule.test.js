@@ -193,6 +193,7 @@ describe('TopicMolecule', () => {
     const hoses = advancedMolecule2.hoseCodes;
     expect(hoses).toHaveLength(9);
     expect(hoses).toMatchSnapshot();
+    // stereochemistry must be the same
     expect(hoses[3]).toStrictEqual(hoses[4]);
     expect(hoses).toMatchSnapshot();
     expect(hoses[0]).toHaveLength(5);

@@ -58,12 +58,12 @@ M  END`;
     const result = getHoseCodesAndInfo(molecule);
     delete result.moleculeWithHydrogens;
     expect(result).toMatchSnapshot();
-    const hosesString = JSON.stringify(result.hoses);
+    const hosesString = JSON.stringify(result.hoses, undefined, 2);
     const result2 = getHoseCodesAndInfo(molecule, {
       calculateDiastereotopicIDs: false,
     });
     delete result2.moleculeWithHydrogens;
-    expect(JSON.stringify(result2.hoses)).toBe(hosesString);
+    expect(JSON.stringify(result2.hoses, undefined, 2)).toBe(hosesString);
     expect(result2).toMatchSnapshot();
   });
 });

@@ -1,3 +1,4 @@
+import { getXAtomicNumber } from '../util/getXAtomicNumber.js';
 import { isCsp3 } from '../util/isCsp3.js';
 import { makeRacemic } from '../util/makeRacemic.js';
 
@@ -36,6 +37,8 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
   }
 
   const fragment = new OCL.Molecule(0, 0);
+  // keep track of the atoms when creating the fragment
+  const mappings = [];
   const results = [];
   let min = 0;
   let max = 0;
@@ -76,9 +79,17 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
       min = max;
       max = newMax;
     }
-    molecule.copyMoleculeByAtoms(fragment, atomMask, true, null);
+
     if (sphere >= minSphereSize) {
+      molecule.copyMoleculeByAtoms(fragment, atomMask, true, mappings);
+      // we using atomMapNo field in order to keep track of the original atom number even if we remove hydrogens
+      for (let i = 0; i < fragment.getAllAtoms(); i++) {
+        fragment.setAtomMapNo(i, mappings.indexOf(i) + 1);
+      }
+      fragment.removeExplicitHydrogens();
       makeRacemic(fragment);
+      // we encode atom characteristics in the query features
+      addQueryFeaturesAndRemoveMapNo(fragment, molecule);
       results.push(
         fragment.getCanonizedIDCode(
           OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
@@ -87,4 +98,82 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
     }
   }
   return results;
+}
+
+/**
+ * If the atom is not an halogen, X or an hydrogen
+ * we add query features to the atom
+ * This includes aromaticity, ring size, number of hydrogens
+ * @param {import('openchemlib').Molecule} fragment 
+ * @param {import('openchemlib').Molecule} molecule 
+ */
+function addQueryFeaturesAndRemoveMapNo(fragment, molecule) {
+  const Molecule = molecule.getOCL().Molecule;
+  for (let i = 0; i < fragment.getAllAtoms(); i++) {
+    const mapping = fragment.getAtomMapNo(i) - 1;
+    fragment.setAtomMapNo(i, 0);
+    if (
+      [1, 9, 17, 35, 53, getXAtomicNumber(molecule)].includes(
+        fragment.getAtomicNo(i),
+      )
+    ) {
+      continue;
+    }
+
+    // aromaticity
+    const isAromatic = molecule.isAromaticAtom(mapping);
+    if (isAromatic) {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFAromatic, true);
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNotAromatic, false);
+    } else {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFAromatic, false);
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNotAromatic, true);
+    }
+
+    // cycles
+    const smallestRing = molecule.getAtomRingSize(mapping);
+    switch (smallestRing) {
+      case 0:
+        break;
+      case 3:
+        fragment.setAtomQueryFeature(i, Molecule.cAtomQFRingSize3, true);
+        break;
+      case 4:
+        fragment.setAtomQueryFeature(i, Molecule.cAtomQFRingSize4, true);
+        break;
+      case 5:
+        fragment.setAtomQueryFeature(i, Molecule.cAtomQFRingSize5, true);
+        break;
+      case 6:
+        fragment.setAtomQueryFeature(i, Molecule.cAtomQFRingSize6, true);
+        break;
+      case 7:
+        fragment.setAtomQueryFeature(i, Molecule.cAtomQFRingSize7, true);
+        break;
+      default:
+        fragment.setAtomQueryFeature(i, Molecule.cAtomQFRingSizeLarge, true);
+    }
+
+    const nbHydrogens = molecule.getAllHydrogens(mapping);
+    if (nbHydrogens === 0) {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot0Hydrogen, false);
+    } else {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot0Hydrogen, true);
+    }
+    if (nbHydrogens === 1) {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot1Hydrogen, false);
+    } else {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot1Hydrogen, true);
+    }
+    if (nbHydrogens === 2) {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot2Hydrogen, false);
+    } else {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot2Hydrogen, true);
+    }
+    if (nbHydrogens === 3) {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot3Hydrogen, false);
+    } else {
+      fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot3Hydrogen, true);
+    }
+  }
 }

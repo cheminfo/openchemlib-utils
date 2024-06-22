@@ -9,11 +9,11 @@ describe('getHoseCodesForAtom', () => {
     let hoses = getHoseCodesForAtom(molecule, 0);
     hoses = hoses.map((hose) => escape(hose));
     expect(hoses).toStrictEqual([
-      'fH@NJ%60%7FRapj%60',
-      'eF@Hp%5CQP%5EcotdGBj@',
-      'gC%60HADIMUIPNHjCrdKotbIpj%60',
-      'gJPHADIMuTe@xbhOZPnv_iDSaU@',
-      'gJPHADIMuTe@XbhOtbIpj%60',
+      'fH@NJ%60uOkoth%5CJh',
+      'eF@Hp%5CQPZQgr%5DW%7Ed%60xUP',
+      'gC%60HADIMUIPNHjCVbgOmKW%5B_tbIpj%60',
+      'gJPHADIMuTe@xbhMFJ%5Ce%7CYZ%7BZ%5E%7FRHgBj@',
+      'gJPHADIMuTe@xbhMFJ%5Ce%7CYZ%7BZ%5E%7FRHgBj@',
     ]);
   });
 });

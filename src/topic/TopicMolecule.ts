@@ -179,7 +179,7 @@ export class TopicMolecule {
     const { pathLength } = options;
     if (pathLength !== undefined && pathLength > this.options.maxPathLength) {
       throw new Error(
-        'The distance is too long, you should increase the maxPathLength when instanciating the TopicMolecule',
+        'The distance is too long, you should increase the maxPathLength when instantiating the TopicMolecule',
       );
     }
     const atomPaths = this.atomsPaths[atom1];
