@@ -1,8 +1,8 @@
 import type { Molecule } from 'openchemlib';
 
+import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsInternal.js';
 import { AtomPath, getAllAtomsPaths } from '../path/getAllAtomsPaths.js';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
-import { tagAtom } from '../util/tagAtom.js';
 
 import { HoseCodesOptions } from './HoseCodesOptions.js';
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs';
@@ -116,63 +116,17 @@ export class TopicMolecule {
     rootAtoms: number[],
     options: GetHoseFragmentOptions = {},
   ): Molecule {
-    const {
-      sphereSize = 2,
-      tagAtoms = rootAtoms,
-      tagAtomFct = tagAtom,
-    } = options;
-    this.moleculeWithH.ensureHelperArrays(
-      this.moleculeWithH.getOCL().Molecule.cHelperNeighbours,
-    );
+    const { sphereSize = 2, tagAtoms = rootAtoms, tagAtomFct } = options;
 
-    const copy = this.moleculeWithH.getCompactCopy();
-    copy.ensureHelperArrays(copy.getOCL().Molecule.cHelperNeighbours);
+    const fragments = getHoseCodesForAtomsAsFragments(this.moleculeWithH, {
+      rootAtoms,
+      minSphereSize: sphereSize,
+      maxSphereSize: sphereSize,
+      tagAtoms,
+      tagAtomFct,
+    });
 
-    for (let i = 0; i < copy.getAllAtoms(); i++) {
-      copy.setAtomMass(i, copy.getAtomMass(i) + 2);
-    }
-
-    const atomMask = new Array(copy.getAllAtoms()).fill(false);
-    const atomList = new Uint8Array(copy.getAllAtoms());
-    const atomMapping = new Array(copy.getAllAtoms()).fill(-1);
-    const Molecule = copy.getOCL().Molecule;
-    const fragment = new Molecule(0, 0);
-    fragment.setFragment(true);
-    let min = 0;
-    let max = 0;
-    for (let sphere = 0; sphere <= sphereSize; sphere++) {
-      if (max === 0) {
-        for (const rootAtom of rootAtoms) {
-          atomList[max] = rootAtom;
-          atomMask[rootAtom] = 1;
-          max++;
-        }
-      } else {
-        let newMax = max;
-        for (let i = min; i < max; i++) {
-          const atom = atomList[i];
-          for (let j = 0; j < this.moleculeWithH.getAllConnAtoms(atom); j++) {
-            const connAtom = this.moleculeWithH.getConnAtom(atom, j);
-            if (!atomMask[connAtom]) {
-              atomMask[connAtom] = 1;
-              atomList[newMax++] = connAtom;
-            }
-          }
-        }
-        min = max;
-        max = newMax;
-      }
-    }
-    copy.copyMoleculeByAtoms(fragment, atomMask, true, atomMapping);
-    for (let i = 0; i < fragment.getAllAtoms(); i++) {
-      fragment.setAtomMass(i, fragment.getAtomMass(i) - 2);
-    }
-
-    for (const atom of tagAtoms) {
-      tagAtomFct(fragment, atomMapping[atom]);
-    }
-
-    return fragment;
+    return fragments[0];
   }
 
   getAtomPaths(atom1: number, atom2: number, options: GetAtomPathOptions = {}) {

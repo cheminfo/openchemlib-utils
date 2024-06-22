@@ -1,6 +1,7 @@
 import { getXAtomicNumber } from '../util/getXAtomicNumber.js';
 import { isCsp3 } from '../util/isCsp3.js';
 import { makeRacemic } from '../util/makeRacemic.js';
+import { tagAtom } from '../util/tagAtom';
 
 export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
@@ -15,31 +16,55 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * @param {number} [options.kind=FULL_HOSE_CODE] Kind of hose code, default usual sphere
  */
 export function getHoseCodesForAtomsInternal(molecule, options = {}) {
+  const fragments = getHoseCodesForAtomsAsFragments(molecule, options);
+  const OCL = molecule.getOCL();
+  const hoses = [];
+  for (const fragment of fragments) {
+    hoses.push(
+      fragment.getCanonizedIDCode(
+        OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+      ),
+    );
+  }
+  return hoses;
+}
+
+export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
   const OCL = molecule.getOCL();
   const {
     allowedCustomLabels,
     minSphereSize = 0,
     maxSphereSize = 4,
     kind = FULL_HOSE_CODE,
+    tagAtoms = [],
+    tagAtomFct = tagAtom,
   } = options;
+  const rootAtoms = options.rootAtoms ? options.rootAtoms.slice() : [];
 
-  // this force reordering of atoms in order to have hydrogens at the end
-  molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
+  molecule = molecule.getCompactCopy();
 
-  const rootAtoms = [];
-  for (let j = 0; j < molecule.getAllAtoms(); j++) {
-    if (
-      allowedCustomLabels?.includes(molecule.getAtomCustomLabel(j)) ||
-      molecule.getAtomCustomLabel(j)
-    ) {
-      rootAtoms.push(j);
+  if (tagAtoms.length > 0) {
+    internalTagAtoms(molecule, tagAtoms, rootAtoms, tagAtomFct);
+  } else {
+    // this force reordering of atoms in order to have hydrogens at the end
+    molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
+  }
+
+  if (rootAtoms.length === 0) {
+    for (let j = 0; j < molecule.getAllAtoms(); j++) {
+      if (
+        allowedCustomLabels?.includes(molecule.getAtomCustomLabel(j)) ||
+        molecule.getAtomCustomLabel(j)
+      ) {
+        rootAtoms.push(j);
+      }
     }
   }
 
+  const fragments = [];
   const fragment = new OCL.Molecule(0, 0);
   // keep track of the atoms when creating the fragment
   const mappings = [];
-  const results = [];
   let min = 0;
   let max = 0;
   const atomMask = new Uint8Array(molecule.getAllAtoms());
@@ -86,18 +111,15 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
       for (let i = 0; i < fragment.getAllAtoms(); i++) {
         fragment.setAtomMapNo(i, mappings.indexOf(i) + 1);
       }
+
       fragment.removeExplicitHydrogens();
       makeRacemic(fragment);
       // we encode atom characteristics in the query features
       addQueryFeaturesAndRemoveMapNo(fragment, molecule);
-      results.push(
-        fragment.getCanonizedIDCode(
-          OCL.Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
-        ),
-      );
+      fragments.push(fragment.getCompactCopy());
     }
   }
-  return results;
+  return fragments;
 }
 
 /**
@@ -174,6 +196,36 @@ function addQueryFeaturesAndRemoveMapNo(fragment, molecule) {
       fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot3Hydrogen, false);
     } else {
       fragment.setAtomQueryFeature(i, Molecule.cAtomQFNot3Hydrogen, true);
+    }
+  }
+}
+
+// tagging atoms may change the order of the atoms because hydrogens must be at the end of the file
+// in order to remember the rootAtoms we will tag before
+function internalTagAtoms(molecule, tagAtoms, rootAtoms, tagAtomFct) {
+  const OCL = molecule.getOCL();
+
+  if (tagAtoms) {
+    for (let i = 0; i < molecule.getAllAtoms(); i++) {
+      molecule.setAtomMapNo(i, i + 1);
+    }
+    if (tagAtoms.length > 0) {
+      for (const atom of tagAtoms) {
+        tagAtomFct(molecule, atom);
+      }
+    }
+  }
+
+  // this force reordering of atoms in order to have hydrogens at the end
+  molecule.ensureHelperArrays(OCL.Molecule.cHelperNeighbours);
+
+  if (rootAtoms.length > 0) {
+    const mapping = new Int32Array(molecule.getAllAtoms());
+    for (let i = 0; i < molecule.getAllAtoms(); i++) {
+      mapping[molecule.getAtomMapNo(i) - 1] = i;
+    }
+    for (let i = 0; i < rootAtoms.length; i++) {
+      rootAtoms[i] = mapping[rootAtoms[i]];
     }
   }
 }

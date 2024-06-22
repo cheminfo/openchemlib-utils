@@ -1,7 +1,6 @@
 import { Molecule } from 'openchemlib';
 import { test, expect } from 'vitest';
 
-import { makeRacemic } from '../../util/makeRacemic';
 import { TopicMolecule } from '../TopicMolecule';
 
 test('TopicMolecule.path', () => {
@@ -36,14 +35,12 @@ test('TopicMolecule.getHoseFragment', async () => {
     },
   });
 
-  makeRacemic(fragment);
-
   expect(fragment.toIsomericSmiles().replaceAll('255', '*')).toBe(
     '[*H]C/[*C]=C/Cl',
   );
   expect(
     fragment.toIsomericSmiles({ createSmarts: true }).replaceAll('255', '*'),
-  ).toBe('[*H]C/[*C;!H0]=[C;!H0]/Cl');
+  ).toBe('[*H][C;A;H2]/[*C;A;H1]=[C;A;H1]/Cl');
   expect(
     fragment.toIsomericSmiles({ kekulizedOutput: true }).replaceAll('255', '*'),
   ).toBe('[*H]C/[*C]=C/Cl');
