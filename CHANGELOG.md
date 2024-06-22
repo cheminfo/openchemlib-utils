@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.1](https://github.com/cheminfo/openchemlib-utils/compare/v6.0.0...v6.0.1) (2024-06-22)
+
+
+### Bug Fixes
+
+* remove duplicate code and fix getHoseFragment from TopicMolecule ([928b38d](https://github.com/cheminfo/openchemlib-utils/commit/928b38db89b313349592e276af782029e2ea64c6))
+
 ## [6.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.21.1...v6.0.0) (2024-06-22)
 
 
