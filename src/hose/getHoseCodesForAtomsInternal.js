@@ -104,8 +104,8 @@ export function getHoseCodesForAtomsInternal(molecule, options = {}) {
  * If the atom is not an halogen, X or an hydrogen
  * we add query features to the atom
  * This includes aromaticity, ring size, number of hydrogens
- * @param {import('openchemlib').Molecule} fragment 
- * @param {import('openchemlib').Molecule} molecule 
+ * @param {import('openchemlib').Molecule} fragment
+ * @param {import('openchemlib').Molecule} molecule
  */
 function addQueryFeaturesAndRemoveMapNo(fragment, molecule) {
   const Molecule = molecule.getOCL().Molecule;
