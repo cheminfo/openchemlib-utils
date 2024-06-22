@@ -1,5 +1,16 @@
 # Changelog
 
+## [6.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v5.21.1...v6.0.0) (2024-06-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* hose codes changed in order to embed query features including aromaticity, nb H and cycle size.
+
+### Features
+
+* hose codes changed in order to embed query features including aromaticity, nb H and cycle size. ([811cc25](https://github.com/cheminfo/openchemlib-utils/commit/811cc25d7c2fa741636bdc18935d3ba8403d3691))
+
 ## [5.21.1](https://github.com/cheminfo/openchemlib-utils/compare/v5.21.0...v5.21.1) (2024-05-22)
 
 
