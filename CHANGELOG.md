@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.0.1...v6.1.0) (2024-06-29)
+
+
+### Features
+
+* deal with R groups in getMF ([4036501](https://github.com/cheminfo/openchemlib-utils/commit/40365011f403632fc166959ec31983aeb949f4a7))
+
 ## [6.0.1](https://github.com/cheminfo/openchemlib-utils/compare/v6.0.0...v6.0.1) (2024-06-22)
 
 
