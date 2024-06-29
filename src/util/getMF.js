@@ -44,6 +44,7 @@ function getFragmentMF(molecule, allAtoms) {
     atom.label = molecule.getAtomLabel(i);
     atom.mass = molecule.getAtomMass(i);
     atom.implicitHydrogens = molecule.getImplicitHydrogens(i);
+    if (atom.label === '?') atom.label = 'R';
     atoms.push(atom);
     allAtoms.push(atom);
   }

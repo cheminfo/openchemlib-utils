@@ -87,4 +87,10 @@ describe('getMF', () => {
     const mf = getMF(molecule);
     expect(mf).toStrictEqual({ parts: ['2C8H16', '2HORu'], mf: 'C16H34O2Ru2' });
   });
+
+  it('a R group, we would like R at the end', () => {
+    const molecule = OCL.Molecule.fromSmiles('CC([R])O');
+    const result = getMF(molecule);
+    expect(result.mf).toBe('C2H5OR');
+  });
 });
