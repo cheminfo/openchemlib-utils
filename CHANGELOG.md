@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.1.0...v6.2.0) (2024-07-07)
+
+
+### Features
+
+* add TopicMolecule.getAtomPathsFrom ([a8b918b](https://github.com/cheminfo/openchemlib-utils/commit/a8b918b2dca8219fcce805e6f716f28b4a18d86a))
+
 ## [6.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.0.1...v6.1.0) (2024-06-29)
 
 
