@@ -103,6 +103,23 @@ export class TopicMolecule {
     this.cache = {};
   }
 
+  /**
+   * This method ensures that all the atoms have a mapNo corresponding to the atom number.
+   * It will enforce mapNo in molecule and moleculeWithH
+   * We start numbering the atoms at 1
+   */
+  setAtomNoInMapNo() {
+    const molecules = [this.molecule, this.moleculeWithH];
+    for (const molecule of molecules) {
+      for (let i = 0; i < molecule.getAllAtoms(); i++) {
+        molecule.setAtomMapNo(i, i + 1, false);
+      }
+    }
+  }
+
+  /**
+   * This method ensures that all the atoms have a mapNo in the molecule (and not the moleculeWithH! )
+   */
   ensureMapNo() {
     const existingMapNo: Record<string, boolean> = {};
     for (let i = 0; i < this.molecule.getAllAtoms(); i++) {

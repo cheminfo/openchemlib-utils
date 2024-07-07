@@ -122,7 +122,6 @@ describe('TopicMolecule', () => {
     const topicMolecule = new TopicMolecule(molecule);
     topicMolecule.ensureMapNo();
     const molfile = topicMolecule.toMolfile();
-
     // imagine we are in the editor
     const modifiedMolecule = Molecule.fromMolfile(molfile);
     toggleHydrogens(modifiedMolecule, 2);
@@ -139,6 +138,20 @@ describe('TopicMolecule', () => {
       'gCaHLIeIZ`GzQ@bUP': 'eMBBYRZA~d`bUP',
       'eMHAIhFHhOtdGrj@': 'eMBBYRZA~d`bUP',
     });
+  });
+
+  it('atomNo in mapNo', () => {
+    const molecule = Molecule.fromSmiles('CCCOC');
+    molecule.setAtomicNo(0, 1);
+    molecule.setAtomicNo(4, 1);
+    const topicMolecule = new TopicMolecule(molecule);
+    topicMolecule.setAtomNoInMapNo();
+    const molfile = topicMolecule.toMolfile();
+    const molfileMapNos = extratMapNo(molfile);
+    expect(molfileMapNos).toStrictEqual([1, 2, 3, 4, 5]);
+    const molfileWithH = topicMolecule.toMolfileWithH();
+    const molfileWithHMapNos = extratMapNo(molfileWithH);
+    expect(molfileWithHMapNos).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
   it('mapping to original with helpers of 2-chlorobutane', () => {
@@ -328,4 +341,16 @@ function getAtomsAndDiaInfo(topicMolecule) {
     atomsAndDia.push(atom);
   }
   return atomsAndDia;
+}
+
+function extratMapNo(molfile) {
+  const lines = molfile.split(/\r?\n/).slice(4);
+  const atomMapNos = [];
+  for (let line of lines) {
+    const atomMapNo = line.split(/\s+/)[14];
+    if (atomMapNo) {
+      atomMapNos.push(Number(atomMapNo));
+    }
+  }
+  return atomMapNos;
 }
