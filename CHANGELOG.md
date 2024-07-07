@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.2.0...v6.3.0) (2024-07-07)
+
+
+### Features
+
+* add TopicMolecule.setAtomNoInMapNo ([4028628](https://github.com/cheminfo/openchemlib-utils/commit/40286280c86737665290c44431d260b2d8d75749))
+
 ## [6.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.1.0...v6.2.0) (2024-07-07)
 
 
