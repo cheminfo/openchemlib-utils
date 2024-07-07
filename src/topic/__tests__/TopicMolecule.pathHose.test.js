@@ -16,7 +16,6 @@ test('TopicMolecule.path', () => {
 test('TopicMolecule.getHoseFragment', async () => {
   const molecule = Molecule.fromSmiles('ClC=C');
   const topicMolecule = new TopicMolecule(molecule);
-
   expect(topicMolecule.atomsPaths).toMatchSnapshot();
 });
 

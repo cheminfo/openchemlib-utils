@@ -43,6 +43,23 @@ interface GetAtomPathOptions {
   pathLength?: number;
 }
 
+interface GetAtomPathFromOptions {
+  /*
+   * The minimum distance between the two atoms.
+   * @default 1
+   */
+  minPathLength?: number;
+  /*
+   * The maximum distance between the two atoms.
+   * @default maxPathLength
+   */
+  maxPathLength?: number;
+  /*
+   * The atomic number of the final atom. By default we take all path
+   */
+  toAtomicNo?: number;
+}
+
 interface GetHoseFragmentOptions {
   /*
    * The sphere size around any selected atoms to consider. Default is 2
@@ -127,6 +144,34 @@ export class TopicMolecule {
     });
 
     return fragments[0];
+  }
+
+  getAtomPathsFrom(atom: number, options: GetAtomPathFromOptions = {}) {
+    const {
+      minPathLength = 1,
+      maxPathLength = this.options.maxPathLength,
+      toAtomicNo,
+    } = options;
+    if (maxPathLength > this.options.maxPathLength) {
+      throw new Error(
+        'The maxPathLength is too long, you should increase the maxPathLength when instantiating the TopicMolecule',
+      );
+    }
+    const atomPaths = this.atomsPaths[atom];
+    const paths = [];
+    for (let i = minPathLength; i <= maxPathLength; i++) {
+      for (const atomPath of atomPaths[i]) {
+        if (
+          !toAtomicNo ||
+          this.moleculeWithH.getAtomicNo(
+            atomPath.path[atomPath.path.length - 1],
+          ) === toAtomicNo
+        ) {
+          paths.push(atomPath.path);
+        }
+      }
+    }
+    return paths;
   }
 
   getAtomPaths(atom1: number, atom2: number, options: GetAtomPathOptions = {}) {
