@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.4.1](https://github.com/cheminfo/openchemlib-utils/compare/v6.4.0...v6.4.1) (2024-07-29)
+
+
+### Bug Fixes
+
+* return empty array if molecule too big ([89c9198](https://github.com/cheminfo/openchemlib-utils/commit/89c9198bf5fb3c2b10d2084f88d56b310f462fb3))
+
 ## [6.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.3.0...v6.4.0) (2024-07-29)
 
 
