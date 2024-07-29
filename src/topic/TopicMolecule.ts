@@ -288,18 +288,17 @@ export class TopicMolecule {
   /**
    * This is related to the current moleculeWithH. The order is NOT canonized
    */
-  get diaIDs(): string[] | undefined {
+  get diaIDs(): string[] {
     if (this.cache.diaIDs) return this.cache.diaIDs;
+    const diaIDs = [];
     if (this.moleculeWithH.getAllAtoms() > this.options.maxNbAtoms) {
       this.options.logger.warn(
         `too many atoms to evaluate heterotopicity: ${this.moleculeWithH.getAllAtoms()} > ${this.options.maxNbAtoms}`,
       );
-      this.cache.diaIDs = undefined;
-      return undefined;
-    }
-    const diaIDs = [];
-    for (let i = 0; i < this.moleculeWithH.getAllAtoms(); i++) {
-      diaIDs.push(this.canonizedDiaIDs[this.finalRanks[i]]);
+    } else {
+      for (let i = 0; i < this.moleculeWithH.getAllAtoms(); i++) {
+        diaIDs.push(this.canonizedDiaIDs[this.finalRanks[i]]);
+      }
     }
     this.cache.diaIDs = diaIDs;
     return diaIDs;
@@ -334,7 +333,10 @@ export class TopicMolecule {
 
   private get canonizedDiaIDs() {
     if (this.cache.canonizedDiaIDs) return this.cache.canonizedDiaIDs;
-    this.cache.canonizedDiaIDs = getCanonizedDiaIDs(this);
+    this.cache.canonizedDiaIDs = getCanonizedDiaIDs(this, {
+      maxNbAtoms: this.options.maxNbAtoms,
+      logger: this.options.logger,
+    });
     return this.cache.canonizedDiaIDs;
   }
 
@@ -354,7 +356,9 @@ export class TopicMolecule {
   }
 
   get diaIDsAndInfo(): DiaIDAndInfo[] {
-    if (this.cache.diaIDsAndInfo) return this.cache.diaIDsAndInfo;
+    if (this.cache.diaIDsAndInfo) {
+      return this.cache.diaIDsAndInfo;
+    }
     this.cache.diaIDsAndInfo = getDiaIDsAndInfo(this, this.canonizedDiaIDs);
     return this.cache.diaIDsAndInfo;
   }

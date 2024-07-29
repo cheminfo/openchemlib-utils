@@ -15,7 +15,7 @@ describe('TopicMolecule', () => {
     const molecule = Molecule.fromSmiles('C1CCCC1'.repeat(20));
     const topicMolecule = new TopicMolecule(molecule, { logger });
 
-    expect(topicMolecule.diaIDs).toBeUndefined();
+    expect(topicMolecule.diaIDs).toStrictEqual([]);
     expect(topicMolecule.toMolfileWithH().split('\n')).toHaveLength(549);
     expect(logger.getLogs()).toHaveLength(2);
 
@@ -236,6 +236,8 @@ describe('TopicMolecule', () => {
     toggleHydrogens(molecule, 0);
     toggleHydrogens(molecule, 1);
     toggleHydrogens(molecule, 0);
+
+
     let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     let atoms = getAtomsAndDiaInfo(advancedMolecule2);
     expect(atoms).toHaveLength(6);

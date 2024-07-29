@@ -1,11 +1,28 @@
+import { Logger } from 'cheminfo-types';
+
 import { makeRacemic } from '../util/makeRacemic.js';
 import { tagAtom } from '../util/tagAtom';
 
 import { TopicMolecule } from './TopicMolecule.js';
 
-export function getCanonizedDiaIDs(diaMol: TopicMolecule) {
-  const heterotopicSymmetryRanks = diaMol.heterotopicSymmetryRanks;
+export interface GetCanonizedDiaIDsOptions {
+  maxNbAtoms: number;
+  logger: Omit<Logger, 'child' | 'fatal'>;
+}
+
+export function getCanonizedDiaIDs(
+  diaMol: TopicMolecule,
+  options: GetCanonizedDiaIDsOptions,
+) {
+  const { logger, maxNbAtoms } = options;
   const moleculeWithH = diaMol.moleculeWithH;
+  if (moleculeWithH.getAllAtoms() > maxNbAtoms) {
+    logger.warn(
+      `too many atoms to evaluate heterotopic chiral bonds: ${moleculeWithH.getAllAtoms()} > ${maxNbAtoms}`,
+    );
+    return [];
+  }
+  const heterotopicSymmetryRanks = diaMol.heterotopicSymmetryRanks;
   const finalRanks = diaMol.finalRanks;
   const canonizedDiaIDs = new Array(moleculeWithH.getAllAtoms());
   moleculeWithH.ensureHelperArrays(
