@@ -237,7 +237,6 @@ describe('TopicMolecule', () => {
     toggleHydrogens(molecule, 1);
     toggleHydrogens(molecule, 0);
 
-
     let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     let atoms = getAtomsAndDiaInfo(advancedMolecule2);
     expect(atoms).toHaveLength(6);
