@@ -13,7 +13,7 @@ import {
   getHeterotopicSymmetryRanks,
   getFinalRanks,
 } from './getHeterotopicSymmetryRanks';
-import { getMoleculeWithH, GetMoleculeWithHOptions } from './getMoleculeWithH';
+import { getMoleculeWithH } from './getMoleculeWithH';
 import { getXMolecule } from './getXMolecule';
 
 interface ToMolfileOptions {

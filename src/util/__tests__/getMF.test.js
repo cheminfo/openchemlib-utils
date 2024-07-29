@@ -89,7 +89,9 @@ describe('getMF', () => {
   });
 
   it('a R group, we would like R at the end', () => {
-    const molecule = OCL.Molecule.fromSmiles('CC([R])O');
+    const molecule = OCL.Molecule.fromSmiles('CC(Cl)O');
+    const rAtomicNumber = OCL.Molecule.getAtomicNoFromLabel('R');
+    molecule.setAtomicNo(2, rAtomicNumber);
     const result = getMF(molecule);
     expect(result.mf).toBe('C2H5OR');
   });
