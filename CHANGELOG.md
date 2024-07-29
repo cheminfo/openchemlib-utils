@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.3.0...v6.4.0) (2024-07-29)
+
+
+### Features
+
+* TopicMolecule failed if over 250 atoms but the main issues was DiaIDs ([9a9daf5](https://github.com/cheminfo/openchemlib-utils/commit/9a9daf562cccf261e3236b70c8b4c9b40f0cfa5b))
+
 ## [6.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.2.0...v6.3.0) (2024-07-07)
 
 
