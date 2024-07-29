@@ -1,6 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
+import { FifoLogger } from 'fifo-logger';
 import { Molecule } from 'openchemlib';
 import { describe, it, expect } from 'vitest';
 
@@ -10,15 +11,20 @@ import { TopicMolecule } from '../TopicMolecule';
 describe('TopicMolecule', () => {
   it('Big molecule', () => {
     //250 carbons
-    const molecule = Molecule.fromSmiles('C'.repeat(260));
-    const topicMolecule = new TopicMolecule(molecule);
-    expect(() => topicMolecule.toMolfileWithH()).toThrow(
-      'too many atoms to add hydrogens: 782 > 250',
-    );
+    const logger = new FifoLogger('test.log');
+    const molecule = Molecule.fromSmiles('C1CCCC1'.repeat(20));
+    const topicMolecule = new TopicMolecule(molecule, { logger });
 
-    const topicMolecule2 = new TopicMolecule(molecule, { maxNbAtoms: 1000 });
-    const molfile = topicMolecule2.toMolfileWithH();
-    expect(molfile.split('\n')).toHaveLength(1569);
+    expect(topicMolecule.diaIDs).toBeUndefined();
+    expect(topicMolecule.toMolfileWithH().split('\n')).toHaveLength(549);
+    expect(logger.getLogs()).toHaveLength(2);
+
+    const topicMolecule2 = new TopicMolecule(molecule, {
+      maxNbAtoms: 1000,
+      logger,
+    });
+    expect(topicMolecule2.diaIDs).toHaveLength(262);
+    expect(logger.getLogs()).toHaveLength(2);
   });
   it('ethanol', () => {
     const molecule = Molecule.fromSmiles('CCCO');

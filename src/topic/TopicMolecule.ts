@@ -1,3 +1,4 @@
+import { Logger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsInternal.js';
@@ -19,22 +20,30 @@ interface ToMolfileOptions {
   version?: 2 | 3;
 }
 
-interface TopicMoleculeOptions
-  extends HoseCodesOptions,
-    GetMoleculeWithHOptions {
+interface TopicMoleculeOptions extends HoseCodesOptions {
   /**
    * The maximum path length to consider when calculating the paths between atoms
    * @default 5
    */
   maxPathLength?: number;
+  /**
+   * The maximum number of atoms to consider when dealing with diastereotopicity
+   */
   maxNbAtoms?: number;
+  /**
+   * The logger to use in order to retrieve some debug or warning information
+   * @default console
+   */
+  logger?: Omit<Logger, 'child' | 'fatal'>;
 }
 
 type TopicMoleculeInternalOptions = Omit<
   TopicMoleculeOptions,
-  'maxPathLength'
+  'maxPathLength' | 'maxNbAtoms' | 'logger'
 > &
-  Required<Pick<TopicMoleculeOptions, 'maxPathLength'>>;
+  Required<
+    Pick<TopicMoleculeOptions, 'maxPathLength' | 'maxNbAtoms' | 'logger'>
+  >;
 
 interface GetAtomPathOptions {
   /*
@@ -91,7 +100,12 @@ export class TopicMolecule {
 
   constructor(molecule: Molecule, options: TopicMoleculeOptions = {}) {
     this.originalMolecule = molecule;
-    this.options = { maxPathLength: 5, ...options };
+    this.options = {
+      maxPathLength: 5,
+      maxNbAtoms: 250,
+      logger: console,
+      ...options,
+    } as TopicMoleculeInternalOptions;
     this.idCode = molecule.getIDCode();
     this.molecule = this.originalMolecule.getCompactCopy();
     this.molecule.ensureHelperArrays(
@@ -260,6 +274,7 @@ export class TopicMolecule {
     if (this.cache.moleculeWithH) return this.cache.moleculeWithH;
     this.cache.moleculeWithH = getMoleculeWithH(this.molecule, {
       maxNbAtoms: this.options.maxNbAtoms,
+      logger: this.options.logger,
     });
     return this.cache.moleculeWithH;
   }
@@ -273,8 +288,15 @@ export class TopicMolecule {
   /**
    * This is related to the current moleculeWithH. The order is NOT canonized
    */
-  get diaIDs(): string[] {
+  get diaIDs(): string[] | undefined {
     if (this.cache.diaIDs) return this.cache.diaIDs;
+    if (this.moleculeWithH.getAllAtoms() > this.options.maxNbAtoms) {
+      this.options.logger.warn(
+        `too many atoms to evaluate heterotopicity: ${this.moleculeWithH.getAllAtoms()} > ${this.options.maxNbAtoms}`,
+      );
+      this.cache.diaIDs = undefined;
+      return undefined;
+    }
     const diaIDs = [];
     for (let i = 0; i < this.moleculeWithH.getAllAtoms(); i++) {
       diaIDs.push(this.canonizedDiaIDs[this.finalRanks[i]]);
@@ -289,6 +311,7 @@ export class TopicMolecule {
    * @returns
    */
   getDiaIDsObject() {
+    if (!this.diaIDs) return undefined;
     return groupDiastereotopicAtomIDsAsObject(
       this.diaIDs,
       this.molecule,
@@ -381,6 +404,7 @@ export class TopicMolecule {
    * @returns
    */
   getGroupedDiastereotopicAtomIDs(options: GroupedDiaIDsOptions = {}) {
+    if (!this.diaIDs) return undefined;
     return groupDiastereotopicAtomIDs(this.diaIDs, this.moleculeWithH, options);
   }
 

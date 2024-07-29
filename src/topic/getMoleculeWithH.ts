@@ -1,13 +1,11 @@
+import { Logger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
 
 export interface GetMoleculeWithHOptions {
-  /**
-   * @default 250
-   * Maximum number of atoms with hydrogens
-   */
-  maxNbAtoms?: number;
+  maxNbAtoms: number;
+  logger: Omit<Logger, 'child' | 'fatal'>;
 }
 
 /**
@@ -17,16 +15,17 @@ export interface GetMoleculeWithHOptions {
  */
 export function getMoleculeWithH(
   molecule: Molecule,
-  options: GetMoleculeWithHOptions = {},
+  options: GetMoleculeWithHOptions,
 ) {
-  const { maxNbAtoms = 250 } = options;
+  const { logger, maxNbAtoms } = options;
   const moleculeWithH = molecule.getCompactCopy();
   moleculeWithH.addImplicitHydrogens();
   if (moleculeWithH.getAllAtoms() > maxNbAtoms) {
-    throw new Error(
-      `too many atoms to add hydrogens: ${moleculeWithH.getAllAtoms()} > ${maxNbAtoms}`,
+    logger.warn(
+      `too many atoms to evaluate heterotopic chiral bonds: ${moleculeWithH.getAllAtoms()} > ${maxNbAtoms}`,
     );
+  } else {
+    ensureHeterotopicChiralBonds(moleculeWithH);
   }
-  ensureHeterotopicChiralBonds(moleculeWithH);
   return moleculeWithH;
 }
