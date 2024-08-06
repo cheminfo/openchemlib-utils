@@ -15,7 +15,6 @@ let fragment;
  * @param {number} [options.minLength=1]
  * @param {number} [options.maxLength=4]
  * @param {boolean} [options.withHOSES=false]
-
  */
 export function getPathsInfo(molecule, options = {}) {
   const {
@@ -45,21 +44,21 @@ export function getPathsInfo(molecule, options = {}) {
   for (let from = 0; from < molecule.getAllAtoms(); from++) {
     atomsInfo[from].paths = [];
     for (let to = 0; to < molecule.getAllAtoms(); to++) {
-      if (from !== to) {
-        if (molecule.getAtomicNo(from) === fromAtomicNumber) {
-          if (molecule.getAtomicNo(to) === toAtomicNumber) {
-            const pathLength = pathLengthMatrix[from][to];
-            if (pathLength >= minLength && pathLength <= maxLength) {
-              if (withHOSES) {
-                atomsInfo[from].paths.push(
-                  getHoseCodesForPath(molecule, from, to, pathLength),
-                );
-              } else {
-                atomsInfo[from].paths.push(
-                  getPathAndTorsion(molecule, from, to, pathLength),
-                );
-              }
-            }
+      if (
+        from !== to &&
+        molecule.getAtomicNo(from) === fromAtomicNumber &&
+        molecule.getAtomicNo(to) === toAtomicNumber
+      ) {
+        const pathLength = pathLengthMatrix[from][to];
+        if (pathLength >= minLength && pathLength <= maxLength) {
+          if (withHOSES) {
+            atomsInfo[from].paths.push(
+              getHoseCodesForPath(molecule, from, to, pathLength),
+            );
+          } else {
+            atomsInfo[from].paths.push(
+              getPathAndTorsion(molecule, from, to, pathLength),
+            );
           }
         }
       }

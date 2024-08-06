@@ -1,6 +1,6 @@
 /**
  * Returns the charge of a molecule
- * @param {import('openchemlib').Molecule} molecule an instance of OCL.Molecule
+ * @param {import('openchemlib').Molecule} molecule - an instance of OCL.Molecule
  * @returns {number}
  */
 

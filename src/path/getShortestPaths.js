@@ -30,7 +30,7 @@ export function getShortestPaths(molecule, options = {}) {
       ) {
         const path = [];
         molecule.getPath(path, from, to, maxLength);
-        if (path.length) {
+        if (path.length > 0) {
           allShortestPaths[from][to] = path.slice();
           allShortestPaths[to][from] = path.reverse();
         } else {

@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import { Molecule } from 'openchemlib';
 import { expect, it, describe } from 'vitest';
@@ -16,11 +16,11 @@ describe('getHoseCodes', () => {
       maxSphereSize: 1,
     });
     expect(hoseCodes).toStrictEqual([
-      ['fH@NJ`uOk\x7Fth\\Jh', 'fH@NJ`uOk\x7Fth\\Jh'],
-      ['fHdrA\x7FRaDj`', 'eFBBYcAuSzn\x7FRPQJh'],
-      ['fHdrA\x7FRaDj`', 'eFBBYcAuSzn\x7FRPQJh'],
-      ['fHdrA\x7FRaDj`', 'eFBBYcAuSzn\x7FRPQJh'],
-      ['fHdrA\x7FRaDj`', 'eFBBYcAuSzn\x7FRPQJh'],
+      ['fH@NJ`uOk\u007Fth\\Jh', 'fH@NJ`uOk\u007Fth\\Jh'],
+      ['fHdrA\u007FRaDj`', 'eFBBYcAuSzn\u007FRPQJh'],
+      ['fHdrA\u007FRaDj`', 'eFBBYcAuSzn\u007FRPQJh'],
+      ['fHdrA\u007FRaDj`', 'eFBBYcAuSzn\u007FRPQJh'],
+      ['fHdrA\u007FRaDj`', 'eFBBYcAuSzn\u007FRPQJh'],
     ]);
   });
 
@@ -31,11 +31,11 @@ describe('getHoseCodes', () => {
     const distincts = getDistinctHoses(hoses);
     expect(distincts.length).toBe(6);
     expect(distincts).toStrictEqual([
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'eM@HpCbJCVUM{Kk[\x7FRP\\Jj~AHHa@',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'eM@HpCbJCVUM{Kk[\u007FRP\\Jj~AHHa@',
       'gJP@DiP@CbB`uQRUhwjKej}Yo}H`\\Jj}@RADDpPa@',
-      'fHdrA\x7FRaDj`',
-      'eFBBYcAuUzg\x7FRPQJj}A@',
+      'fHdrA\u007FRaDj`',
+      'eFBBYcAuUzg\u007FRPQJj}A@',
       'gC`HALiM@AuiJu{Qu^o}H`QJj~`QALD@',
     ]);
   });
@@ -70,7 +70,7 @@ describe('getHoseCodes', () => {
     const distincts = getDistinctHoses(hoseCodes);
     expect(distincts).toStrictEqual([
       'fH@NJ`uOk_th\\Jj|`@',
-      'eO@HyjCbJCVLk{Mm]\x7FRP\\Jj~HI@h@',
+      'eO@HyjCbJCVLk{Mm]\u007FRP\\Jj~HI@h@',
     ]);
   });
 
@@ -85,20 +85,20 @@ describe('getHoseCodes', () => {
       undefined,
       undefined,
       [
-        'fHdrA\x7FRaDj`',
-        'eFBBYcAuSzk\x7FRPQJh',
+        'fHdrA\u007FRaDj`',
+        'eFBBYcAuSzk\u007FRPQJh',
         'eMBBYRYCie_M[_zRBIU@',
-        'gC`DALzHRVXRORbgrej\x7FtbADj`',
+        'gC`DALzHRVXRORbgrej\u007FtbADj`',
       ],
       [
-        'fHdrA\x7FRaDj`',
-        'eFBBYcAuSzk\x7FRPQJh',
+        'fHdrA\u007FRaDj`',
+        'eFBBYcAuSzk\u007FRPQJh',
         'eMBBYRYCie_M[_zRBIU@',
-        'gC`DALzHRVXRWRbgrej\x7FtbADj`',
+        'gC`DALzHRVXRWRbgrej\u007FtbADj`',
       ],
       [
-        'fHdrA\x7FRaDj`',
-        'eFBBYcAuSzg\x7FRPQJh',
+        'fHdrA\u007FRaDj`',
+        'eFBBYcAuSzg\u007FRPQJh',
         'gC`DALjHRZdCiQsyQ}ozQ@bUP',
         'gC`DALjHRZdCiQsyQ}ozQ@bUP',
       ],
@@ -120,11 +120,11 @@ describe('getHoseCodes', () => {
     expect(nine.getIDCode()).toStrictEqual(ten.getIDCode());
 
     expect(hoseCodes).toStrictEqual([
-      ['gJPHADIMuTe@xbhMFJ\\e|YZ{Z^\x7FRHgBj@'],
-      ['gJPHADILuTe@xdhMFJ\\e|YZw\\^\x7FRIGBj@'],
-      ['gJPHADILuTe@x`hMFJ\\e|YZw\\^\x7FRHOB[U@'],
-      ['gJPHADILuTe@xbhMFJ\\e|YZw\\^\x7FRHgBj@'],
-      ['gJPHADILuTe@xahMFJ\\e|YZw\\^\x7FRHWBj@'],
+      ['gJPHADIMuTe@xbhMFJ\\e|YZ{Z^\u007FRHgBj@'],
+      ['gJPHADILuTe@xdhMFJ\\e|YZw\\^\u007FRIGBj@'],
+      ['gJPHADILuTe@x`hMFJ\\e|YZw\\^\u007FRHOB[U@'],
+      ['gJPHADILuTe@xbhMFJ\\e|YZw\\^\u007FRHgBj@'],
+      ['gJPHADILuTe@xahMFJ\\e|YZw\\^\u007FRHWBj@'],
       ['gJPDALzHRVjhbAuhiK{SUYw}H`QJh'],
       ['gJPDALzHRVjhbAuhiK{SUYw}H`QJh'],
       ['gJPDALzHRVjhbAuhiK{SUYw}H`QJh'],

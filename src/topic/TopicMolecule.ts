@@ -1,4 +1,4 @@
-import { Logger } from 'cheminfo-types';
+import { LightLogger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsInternal.js';
@@ -34,7 +34,7 @@ interface TopicMoleculeOptions extends HoseCodesOptions {
    * The logger to use in order to retrieve some debug or warning information
    * @default console
    */
-  logger?: Omit<Logger, 'child' | 'fatal'>;
+  logger?: LightLogger;
 }
 
 type TopicMoleculeInternalOptions = Omit<
@@ -194,9 +194,8 @@ export class TopicMolecule {
       for (const atomPath of atomPaths[i]) {
         if (
           !toAtomicNo ||
-          this.moleculeWithH.getAtomicNo(
-            atomPath.path[atomPath.path.length - 1],
-          ) === toAtomicNo
+          this.moleculeWithH.getAtomicNo(atomPath.path.at(-1) as number) ===
+            toAtomicNo
         ) {
           paths.push(atomPath.path);
         }
@@ -416,6 +415,7 @@ export class TopicMolecule {
    * This method returns a mapping between the diaIDs of the current molecule.
    * It expects that the initial molfile and the final molfile contains atomMapNo
    * in order to track which atom becomes which one.
+   * @param molecule
    */
   getDiaIDsMapping(molecule: Molecule) {
     const topicMolecule = new TopicMolecule(molecule);

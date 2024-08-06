@@ -8,7 +8,7 @@ export function getParts(text) {
   for (const line of lines) {
     if (line.startsWith('</')) {
       // close existing part
-      if (!currentLabel === line.slice(2, -1)) {
+      if (currentLabel !== line.slice(2, -1)) {
         throw new Error('This should not happen');
       }
       currentLabel = '';

@@ -1,8 +1,8 @@
 /**
  * This method put all the chiral centers in the molecule in the same group and racemic
- * @param {import('openchemlib').Molecule} molecule An instance of a molecule
+ * @param {import('openchemlib').Molecule} molecule - An instance of a molecule
  * @param {object} [options={}]
- * @param {object} [options.OCL] openchemlib library
+ * @param {object} [options.OCL] - openchemlib library
  */
 export function makeRacemic(molecule) {
   const { Molecule } = molecule.getOCL();

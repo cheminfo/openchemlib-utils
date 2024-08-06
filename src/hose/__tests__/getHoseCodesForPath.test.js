@@ -8,9 +8,9 @@ describe('getHoseCodesForPath', () => {
     const molecule = OCL.Molecule.fromSmiles('CC(C)CCCC');
     const path = getHoseCodesForPath(molecule, 0, 4, 3);
 
-    path.hoses.forEach((hose) => {
+    for (const hose of path.hoses) {
       hose.oclID = escape(hose.oclID);
-    });
+    }
     expect(path).toStrictEqual({
       atoms: [0, 1, 3, 4],
       from: 0,
@@ -30,9 +30,9 @@ describe('getHoseCodesForPath', () => {
     molecule.addImplicitHydrogens();
     const path = getHoseCodesForPath(molecule, 6, 7, 3);
 
-    path.hoses.forEach((hose) => {
+    for (const hose of path.hoses) {
       hose.oclID = escape(hose.oclID);
-    });
+    }
 
     expect(path).toStrictEqual({
       atoms: [6, 1, 7],
@@ -53,9 +53,9 @@ describe('getHoseCodesForPath', () => {
 
     const path = getHoseCodesForPath(molecule, 1, 2, 3);
 
-    path.hoses.forEach((hose) => {
+    for (const hose of path.hoses) {
       hose.oclID = escape(hose.oclID);
-    });
+    }
 
     expect(path).toStrictEqual({
       atoms: [1, 2],

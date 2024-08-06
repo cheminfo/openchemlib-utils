@@ -11,9 +11,9 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * @param {import('openchemlib').Molecule} originalMolecule - The OCL molecule to be fragmented
  * @param {number[]} rootAtoms
  * @param {object} [options={}]
- * @param {number} [options.minSphereSize=0] Smallest hose code sphere
- * @param {number} [options.maxSphereSize=4] Largest hose code sphere
- * @param {number} [options.kind=FULL_HOSE_CODE] Kind of hose code, default usual sphere
+ * @param {number} [options.minSphereSize=0] - Smallest hose code sphere
+ * @param {number} [options.maxSphereSize=4] - Largest hose code sphere
+ * @param {number} [options.kind=FULL_HOSE_CODE] - Kind of hose code, default usual sphere
  */
 export function getHoseCodesForAtoms(
   originalMolecule,

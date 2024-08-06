@@ -11,7 +11,7 @@ import get from 'get-value';
  * @param {string} [options.mwPath='mw']
  * @param {string} [options.smilesPath]
  * @param {string} [options.molfilePath]
- * @param {function} [options.onStep] call back to execute after each molecule
+ * @param {Function} [options.onStep] - call back to execute after each molecule
  * @returns
  */
 

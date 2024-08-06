@@ -41,18 +41,18 @@ describe('getHoseCodesForAtoms', () => {
       );
     }
     expect(results).toStrictEqual([
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'fH@NJ`uWj\x7Fth\\Jj|D@',
-      'fHdrA\x7FRaDj`',
-      'fHdrA\x7FRaDj`',
-      'fHdrA\x7FRaDj`',
-      'fHdrA\x7FRaDj`',
-      'fHdrA\x7FRaDj`',
-      'fHdrA\x7FRaDj`',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'fH@NJ`uWj\u007Fth\\Jj|D@',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
     ]);
   });
 });

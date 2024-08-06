@@ -44,7 +44,7 @@ export class MoleculesDB {
    * @param {string} [options.mwPath='mw']
    * @param {string} [options.smilesPath]
    * @param {string} [options.molfilePath]
-   * @param {function} [options.onStep] call back to execute after each molecule
+   * @param {Function} [options.onStep] - call back to execute after each molecule
    */
   appendEntries(entries, options) {
     return appendEntries(this, entries, {
@@ -60,7 +60,7 @@ export class MoleculesDB {
    * @param {boolean} [options.header=true]
    * @param {boolean} [options.dynamicTyping=true]
    * @param {boolean} [options.skipEmptyLines=true]
-   * @param {function} [options.onStep] call back to execute after each molecule
+   * @param {Function} [options.onStep] - call back to execute after each molecule
    */
   appendCSV(csv, options) {
     return appendCSV(this, csv, {
@@ -73,7 +73,7 @@ export class MoleculesDB {
    * Append a SDF to the current database
    * @param {string|ArrayBuffer} sdf - text file containing the sdf
    * @param {object} [options={}]
-   * @param {function} [options.onStep] call back to execute after each molecule
+   * @param {Function} [options.onStep] - call back to execute after each molecule
    * @returns {DB}
    */
   appendSDF(sdf, options) {
@@ -86,8 +86,9 @@ export class MoleculesDB {
   /**
    * Append a SDF to the current database
    * @param {string|ArrayBuffer} smiles - text file containing a list of smiles
+   * @param text
    * @param {object} [options={}]
-   * @param {function} [options.onStep] call back to execute after each molecule
+   * @param {Function} [options.onStep] - call back to execute after each molecule
    * @returns {DB}
    */
   appendSmilesList(text, options) {
@@ -101,7 +102,7 @@ export class MoleculesDB {
    * Add a molecule to the current database
    * @param {import('openchemlib').Molecule} molecule
    * @param {object} [data={}]
-   * @param {object} [moleculeInfo={}] may contain precalculated index and mw
+   * @param {object} [moleculeInfo={}] - may contain precalculated index and mw
    */
 
   pushEntry(molecule, data, moleculeInfo) {
@@ -120,14 +121,14 @@ export class MoleculesDB {
   /**
    * Search in a MoleculesDB
    * Inside the database all the same molecules are group together
-   * @param {string|OCL.Molecule} [query] smiles, molfile, idlCode or instance of Molecule to look for
+   * @param {string|OCL.Molecule} [query] - smiles, molfile, idlCode or instance of Molecule to look for
    * @param {object} [options={}]
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
    * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result
    * @param {number} [options.limit=Number.MAX_SAFE_INTEGER] - maximal number of result
-   * @return {Array} array of object of the type {(molecule), idCode, data, properties}
+   * @returns {Array} array of object of the type {(molecule), idCode, data, properties}
    */
   search(query, options) {
     return search(this, query, options);
@@ -136,7 +137,7 @@ export class MoleculesDB {
   /**
    * Search in a MoleculesDB
    * Inside the database all the same molecules are group together
-   * @param {string|OCL.Molecule} [query] smiles, molfile, idCode or instance of Molecule to look for
+   * @param {string|OCL.Molecule} [query] - smiles, molfile, idCode or instance of Molecule to look for
    * @param {object} [options={}]
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
@@ -144,9 +145,9 @@ export class MoleculesDB {
    * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result
    * @param {number} [options.limit=Number.MAX_SAFE_INTEGER] - maximal number of result
    * @param {number} [options.interval=100] - interval in ms to call the onStep callback
-   * @param {function} [options.onStep] - callback to execute after each interval
+   * @param {Function} [options.onStep] - callback to execute after each interval
    * @param {AbortController} [options.controler] - callback to execute to check if the search should be aborted
-   * @return {Promise<Array>} array of object of the type {(molecule), idCode, data, properties}
+   * @returns {Promise<Array>} array of object of the type {(molecule), idCode, data, properties}
    */
   searchAsync(query, options) {
     return searchAsync(this, query, options);
@@ -172,6 +173,7 @@ export class MoleculesDB {
    * {number} [options.maxHue=360]
    * {number} [options.saturation=65] percent of color saturation
    * {number} [options.lightness=65] percent of color lightness
+   * @param options
    */
   appendColor(options) {
     appendColor(this, options);

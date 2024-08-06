@@ -16,15 +16,15 @@ export function parseData(lines, options = {}) {
   for (const line of lines) {
     const fields = line.split('\t');
     const rawEntry = {};
-    headers.forEach((header, index) => {
+    for (const [index, header] of headers.entries()) {
       rawEntry[header.label] = fields[index];
-    });
+    }
     rawEntries.push(rawEntry);
     const entry = {};
-    headers.forEach((header) => {
-      if (header.parent) return;
+    for (const header of headers) {
+      if (header.parent) continue;
       entry[header.label] = valueEhnhancer(header, rawEntry);
-    });
+    }
     entries.push(entry);
   }
 

@@ -25,7 +25,7 @@ export function getUnsaturation(mf) {
     const element = elements[i];
     const matches = element.match(/([A-Z][a-z]?)(\d*)/);
     const symbol = matches[1];
-    const count = matches[2] ? parseInt(matches[2], 10) : 1;
+    const count = matches[2] ? Number.parseInt(matches[2], 10) : 1;
     const elementObject = unsaturationsObject[symbol];
     if (elementObject === undefined) {
       return undefined;

@@ -4,7 +4,7 @@ export function applyMultipleReactantsReaction(reactants, reactions, options) {
   const { OCL, results, reactantsInfo } = options;
   for (const reaction of reactions) {
     const reactor = new OCL.Reactor(reaction.oclReaction);
-    let isMatching = Boolean(reactants.length);
+    let isMatching = reactants.length > 0;
     for (let i = 0; i < reactants.length; i++) {
       isMatching = isMatching && Boolean(reactor.setReactant(i, reactants[i]));
     }

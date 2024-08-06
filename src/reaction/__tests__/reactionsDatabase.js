@@ -5,7 +5,7 @@ export const reactionsDatabase = [
   },
   {
     Label: 'SH to SMe',
-    rxnCode: 'eFB@HcAa@!eMB@HchH#S\\ S\\@#!R@FL]bgp !R@FL?XqwZ_@',
+    rxnCode: String.raw`eFB@HcAa@!eMB@HchH#S\ S\@#!R@FL]bgp !R@FL?XqwZ_@`,
   },
   {
     Label: 'SH to OH',

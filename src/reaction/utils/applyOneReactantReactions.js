@@ -3,17 +3,18 @@ import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
 /**
  * @description apply one reaction to one reactant
  * @param {import('openchemlib').Molecule[]} reactants
- * @param {Array<Object>} reactions rxnCode of the reaction
- * @param {Object} options options to apply the reaction
- * @param {number} options.currentDepth current depth of the recursion
- * @param {number} options.maxDepth max depth of the recursion
- * @param {number} options.maxCurrentDepth max depth of the recursion for this set of reactions
- * @param {number} options.limitReactions limit the number of reactions
- * @param {Object} options.stats stats of the recursion
- * @param {number} options.stats.counter number of reactions
- * @param {Map} options.processedMolecules set of processed molecules
- * @param {Array} options.trees array of trees of previous recursions
- * @param {import('openchemlib')} options.OCL OCL object
+ * @param tree
+ * @param {Array<object>} reactions - rxnCode of the reaction
+ * @param {object} options - options to apply the reaction
+ * @param {number} options.currentDepth - current depth of the recursion
+ * @param {number} options.maxDepth - max depth of the recursion
+ * @param {number} options.maxCurrentDepth - max depth of the recursion for this set of reactions
+ * @param {number} options.limitReactions - limit the number of reactions
+ * @param {object} options.stats - stats of the recursion
+ * @param {number} options.stats.counter - number of reactions
+ * @param {Map} options.processedMolecules - set of processed molecules
+ * @param {Array} options.trees - array of trees of previous recursions
+ * @param {import('openchemlib')} options.OCL - OCL object
  * @returns {Array} array of results
  */
 export function applyOneReactantReactions(tree, reactions, options) {

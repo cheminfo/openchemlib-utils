@@ -3,7 +3,7 @@ import { applyOneReactantReactions } from './utils/applyOneReactantReactions.js'
 import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 
 /**
- * @typedef {Object} ReactionEntry
+ * @typedef {object} ReactionEntry
  * @property {string} label
  * @property {string} rxnCode
  */
@@ -11,12 +11,12 @@ import { groupTreesByProducts } from './utils/groupTreesByProducts.js';
 /**
  * Create reaction trees of products based on reactions and reactants
  * @param {import('openchemlib').Molecule[]} reactants
- * @param {ReactionEntry[]} reactions array of reactions objects with rxnCode, label
- * @param {object} options options to apply the reaction
- * @param {number} [options.maxDepth=5] max depth of the recursion
- * @param {number} [options.limitReactions=200] limit the number of reactions to apply
- * @param {boolean} [options.getProductsTrees=false] if true, the returned object will have a products property with the products trees grouped by idCode else it will be an empty array
- * @returns {Object} The returned object has two properties:
+ * @param {ReactionEntry[]} reactions - array of reactions objects with rxnCode, label
+ * @param {object} options - options to apply the reaction
+ * @param {number} [options.maxDepth=5] - max depth of the recursion
+ * @param {number} [options.limitReactions=200] - limit the number of reactions to apply
+ * @param {boolean} [options.getProductsTrees=false] - if true, the returned object will have a products property with the products trees grouped by idCode else it will be an empty array
+ * @returns {object} The returned object has two properties:
  * - trees: the tree of reactions
  * - products: reactions trees grouped by product idCode
  */
@@ -31,7 +31,7 @@ export function applyReactions(reactants, reactions, options = {}) {
   } = options;
   const moleculesInfo = new Map();
   const processedMolecules = new Set();
-  if (!reactants.length) {
+  if (reactants.length === 0) {
     throw new Error('Can not extract OCL because there is no reactants');
   }
   // get the OCL object from the first reactant

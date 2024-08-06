@@ -3,12 +3,12 @@ const MAX_R = 10;
 /**
  * Generate molecules and calculate predicted properties form a list of smiles and fragments
  * @param {string} [coreSmiles]
- * @param {array} [fragments] Array of {smiles,R1,R2,...}
+ * @param {Array} [fragments] - Array of {smiles,R1,R2,...}
  * @param {import('openchemlib')} OCL - openchemlib library
  * @param {object} [options={}]
- * @param {function} [options.onStep] method to execute each new molecules
- * @param {boolean} [options.complexity] returns only the number of molecules to evaluate
- * @return {Promise} promise that resolves to molecules or complexity as a number
+ * @param {Function} [options.onStep] - method to execute each new molecules
+ * @param {boolean} [options.complexity] - returns only the number of molecules to evaluate
+ * @returns {Promise} promise that resolves to molecules or complexity as a number
  */
 export async function combineSmiles(coreSmiles, fragments, OCL, options = {}) {
   const { complexity = false } = options;
@@ -106,11 +106,11 @@ function appendMolecule(molecules, core, rGroups, currents, OCL) {
 function getCore(coreSmiles) {
   const core = {
     originalSmiles: coreSmiles,
-    smiles: coreSmiles.replace(/\[R(?<group>[1-4])\]/g, '%5$<group>'),
+    smiles: coreSmiles.replaceAll(/\[R(?<group>[1-4])]/g, '%5$<group>'),
   };
 
   for (let i = 0; i < MAX_R; i++) {
-    if (core.originalSmiles.indexOf(`[R${i}]`) > -1) core[`R${i}`] = true;
+    if (core.originalSmiles.includes(`[R${i}]`)) core[`R${i}`] = true;
   }
   return core;
 }
@@ -121,17 +121,17 @@ function getRGroups(core, fragments) {
     if (fragment.smiles) {
       const smiles = updateRPosition(fragment.smiles);
       for (let i = 0; i < MAX_R; i++) {
-        if (core[`R${i}`]) {
-          // we only consider the R that are in the core
-          if (fragment[`R${i}`]) {
-            if (!rGroups[`R${i}`]) {
-              rGroups[`R${i}`] = {
-                group: `R${i}`,
-                smiles: [],
-              };
-            }
-            rGroups[`R${i}`].smiles.push(smiles.replace(/\[R\]/, `(%5${i})`));
+        if (
+          core[`R${i}`] && // we only consider the R that are in the core
+          fragment[`R${i}`]
+        ) {
+          if (!rGroups[`R${i}`]) {
+            rGroups[`R${i}`] = {
+              group: `R${i}`,
+              smiles: [],
+            };
           }
+          rGroups[`R${i}`].smiles.push(smiles.replace(/\[R]/, `(%5${i})`));
         }
       }
     }
@@ -149,18 +149,18 @@ function updateRPosition(smiles) {
   let level = 0;
   for (let j = 0; j < newSmiles.length; j++) {
     const currentChar = newSmiles.charAt(j);
-    const currentSubstring = newSmiles.substr(j);
+    const currentSubstring = newSmiles.slice(j);
     if (currentChar === '(') {
       level++;
     } else if (currentChar === ')') {
       level--;
     } else if (level === 0) {
       if (currentSubstring.match(/^[a-z]/)) {
-        return `${newSmiles.substr(0, j + 1)}([R])${newSmiles.substr(j + 1)}`;
+        return `${newSmiles.slice(0, Math.max(0, j + 1))}([R])${newSmiles.slice(j + 1)}`;
       } else if (currentSubstring.match(/^[A-Z][a-z]/)) {
-        return `${newSmiles.substr(0, j + 2)}([R])${newSmiles.substr(j + 2)}`;
+        return `${newSmiles.slice(0, Math.max(0, j + 2))}([R])${newSmiles.slice(j + 2)}`;
       } else if (currentSubstring.match(/^[A-Z]/)) {
-        return `${newSmiles.substr(0, j + 1)}([R])${newSmiles.substr(j + 1)}`;
+        return `${newSmiles.slice(0, Math.max(0, j + 1))}([R])${newSmiles.slice(j + 1)}`;
       }
     }
   }

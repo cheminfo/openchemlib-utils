@@ -6,7 +6,7 @@ import { getUnsaturation } from './getUnsaturation';
 
 const defaultPossibleHints = [
   {
-    idCode: 'eF@Hp\\pcc',
+    idCode: String.raw`eF@Hp\pcc`,
     message: 'What about a non-aromatic ring?',
   },
   {
@@ -132,7 +132,7 @@ const defaultPossibleHints = [
       'You should think about carboxylic acids. The OH signal may be very wide.',
   },
   {
-    idCode: 'eF@Hh\\q@',
+    idCode: String.raw`eF@Hh\q@`,
     message: 'What about having an olefin?',
   },
   {
@@ -180,11 +180,11 @@ const defaultPossibleHints = [
     message: 'You should check the orientation of the ester.',
   },
   {
-    idCode: 'gOq@@drm\\@@Aa@',
+    idCode: String.raw`gOq@@drm\@@Aa@`,
     message: 'Alcohols on aromatic ring may have surprising chemical shifts.',
   },
   {
-    idCode: 'gOx@@drm\\@@A}A@',
+    idCode: String.raw`gOx@@drm\@@A}A@`,
     message: 'NH on aromatic ring may have surprising chemical shifts.',
   },
   {
@@ -367,7 +367,7 @@ function getHash(str, seed = 0) {
   let h1 = 0xdeadbeef ^ seed;
   let h2 = 0x41c6ce57 ^ seed;
   for (let i = 0, ch; i < str.length; i++) {
-    ch = str.charCodeAt(i);
+    ch = str.codePointAt(i);
     h1 = Math.imul(h1 ^ ch, 0x85ebca77);
     h2 = Math.imul(h2 ^ ch, 0xc2b2ae3d);
   }

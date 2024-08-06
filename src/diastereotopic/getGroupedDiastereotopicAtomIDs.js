@@ -5,7 +5,7 @@ import { groupDiastereotopicAtomIDs } from './groupDiastereotopicAtomIDs';
  * a set of chemically equivalent atoms(element.atoms) and the groups of magnetically equivalent atoms (element.magneticGroups)
  * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
- * @param {string} [options.atomLabel] Select atoms of the given atomLabel. By default it returns all the explicit atoms in the molecule
+ * @param {string} [options.atomLabel] - Select atoms of the given atomLabel. By default it returns all the explicit atoms in the molecule
  * @returns {Array}
  */
 

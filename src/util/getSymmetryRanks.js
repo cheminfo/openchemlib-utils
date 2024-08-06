@@ -2,7 +2,7 @@ import { getXAtomicNumber } from './getXAtomicNumber.js';
 
 /**
  * Returns an array of symmetry ranks.
- * @param {import('openchemlib').Molecule} molecule An instance of a molecule
+ * @param {import('openchemlib').Molecule} molecule - An instance of a molecule
  * @returns
  */
 export function getSymmetryRanks(molecule) {

@@ -2,7 +2,7 @@ import { atomSorter } from 'atom-sorter';
 
 /**
  * Calculate the molecular formula in 'chemcalc' notation taking into account fragments, isotopes and charges
- * @param {import('openchemlib').Molecule} molecule an instance of OCL.Molecule
+ * @param {import('openchemlib').Molecule} molecule - an instance of OCL.Molecule
  * @returns {object}
  */
 
@@ -12,10 +12,10 @@ export function getMF(molecule) {
   let parts = [];
   const allAtoms = [];
 
-  entries.forEach((entry) => {
+  for (const entry of entries) {
     const mf = getFragmentMF(entry, allAtoms);
     parts.push(mf);
-  });
+  }
 
   const counts = {};
   for (const part of parts) {

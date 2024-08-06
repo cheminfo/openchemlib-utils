@@ -8,10 +8,11 @@ import { getNodes } from './utils/getNodes.js';
 export class Reactions {
   /**
    *
+   * @param OCL
    * @param {object} [options={}]
    * @param {import('cheminfo-types').Logger} logger
    * @param {number} [options.maxDepth=5]
-   * @param {function} [options.moleculeInfoCallback]
+   * @param {Function} [options.moleculeInfoCallback]
    * @param {boolean} [options.skipProcessed=true]
    */
   constructor(OCL, options = {}) {
@@ -32,6 +33,7 @@ export class Reactions {
    * If there are multiple reactants, we call this method with an array of the reactants.
    * This method has to be called for all the reactants
    * @param {import('openchemlib').Molecule[]|string[]} molecules
+   * @param moleculesOrIDCodes
    */
   appendHead(moleculesOrIDCodes) {
     if (!Array.isArray(moleculesOrIDCodes)) {
@@ -116,16 +118,16 @@ export class Reactions {
    *
    * @param {object[]} reactions - array of reactions that should be applied
    * @param {object} [options={}]
-   * @param {number} [options.min=0] min depth of the reaction
-   * @param {number} [options.max=3] max depth of the reaction
+   * @param {number} [options.min=0] - min depth of the reaction
+   * @param {number} [options.max=3] - max depth of the reaction
    */
   applyOneReactantReactions(reactions, options = {}) {
     const { min = 0, max = 3 } = options;
     clearAsFromProcessedMolecules(this.processedMolecules);
     const nodes = this.getNodes().filter((node) => node.isValid);
-    nodes.forEach((node) => {
+    for (const node of nodes) {
       node.currentDepth = 0;
-    });
+    }
     reactions = appendOCLReaction(reactions, this.OCL);
     const stats = { counter: 0 };
     // Start the recursion by applying the first level of reactions

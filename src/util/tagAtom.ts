@@ -4,6 +4,8 @@ import { getXAtomicNumber } from './getXAtomicNumber';
 
 /**
  * Tag an atom to be able to visualize it
+ * @param molecule
+ * @param iAtom
  */
 export function tagAtom(molecule: Molecule, iAtom: number) {
   const customLabel = `${molecule.getAtomLabel(iAtom)}*`;

@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import { FifoLogger } from 'fifo-logger';
 import { Molecule } from 'openchemlib';
@@ -40,8 +40,8 @@ describe('TopicMolecule', () => {
       'gCaHHIeIZ`GzQ@bUP',
       'gCaHLIeIZ`GzQ@bUP',
       'gCaHLIeIZ`GzQ@bUP',
-      'gCaHDIeIjiJ@\x7FRHDRj@',
-      'gCaHDIeIjiJ@\x7FRHDRj@',
+      'gCaHDIeIjiJ@\u007FRHDRj@',
+      'gCaHDIeIjiJ@\u007FRHDRj@',
     ]);
     const diaIDsAndInfo = topicMolecule.diaIDsAndInfo;
     expect(diaIDsAndInfo).toHaveLength(9);
@@ -139,7 +139,7 @@ describe('TopicMolecule', () => {
 
     expect(mapping).toStrictEqual({
       'eMHAIhFJhOtdgBj@': 'eF@HpLQP_iHNET',
-      'gCaHDIeIjiJ@\x7FRHDRj@': 'eMBBYRZA~d`bUP',
+      'gCaHDIeIjiJ@\u007FRHDRj@': 'eMBBYRZA~d`bUP',
       'eMHAIhFIhOtdWBj@': 'eF@HpLQP_iHNET',
       'gCaHLIeIZ`GzQ@bUP': 'eMBBYRZA~d`bUP',
       'eMHAIhFHhOtdGrj@': 'eMBBYRZA~d`bUP',
@@ -174,15 +174,15 @@ describe('TopicMolecule', () => {
     const mapping = topicMolecule.getDiaIDsMapping(modifiedMolecule);
 
     expect(mapping).toStrictEqual({
-      'gJPHADILuTe@XahOtbEpj`': 'gGPHADIL}URTAbF`\x7FRHWBj@',
+      'gJPHADILuTe@XahOtbEpj`': 'gGPHADIL}URTAbF`\u007FRHWBj@',
       'gGPDALfHRUjjfHC}H`QJh': undefined,
-      'gJPHADILuTe@XbhOtbIpj`': 'gGPHADIL}URTAbJ`\x7FRHgBj@',
+      'gJPHADILuTe@XbhOtbIpj`': 'gGPHADIL}URTAbJ`\u007FRHgBj@',
       'gGPDALfHRYjjThU@_iDBIU@': 'gNpDALfHRYfjiRaTA~dPHeT',
       'gGPDALfHRYjjThQ@_iDBIU@': 'gNpDALfHRYfjiRaDA~dPHeT',
-      'gJPHADILuTe@XdhOtbQpj`': 'gGPHADIL}URTAbR`\x7FRIGBj@',
+      'gJPHADILuTe@XdhOtbQpj`': 'gGPHADIL}URTAbR`\u007FRIGBj@',
       'gGPDALjHRZzjdhC}H`QJh': 'gNpDALjHRZ~jjR`OtbADj`',
-      'gJPHADILuTe@X`hOtbCpfuP': 'gGPHADIL}URTAbB`\x7FRHOB[U@',
-      'gJPHADIMuTe@XbhOtbIpj`': 'gGPHADIMmURTAbJ`\x7FRHgBj@',
+      'gJPHADILuTe@X`hOtbCpfuP': 'gGPHADIL}URTAbB`\u007FRHOB[U@',
+      'gJPHADIMuTe@XbhOtbIpj`': 'gGPHADIMmURTAbJ`\u007FRHgBj@',
       'gGPDALzHRVzjbHC}H`QJh': 'gNpDALzHRVvjjH`OtbADj`',
     });
   });
@@ -308,8 +308,8 @@ describe('TopicMolecule', () => {
       'gGQHLIeIUfhRS}H`QJh': 'gNqHLIeIUYjaIOtbADj`',
       'gGQHLIeIUfhRK}H`QJh': 'gNqHLIeIUYjaHotbADj`',
       'gGQHDIeIgihA~dPHeT': 'gNqHDIeIgZZ`GzQ@bUP',
-      'gGQHDIeIgjfR`OtbADj`': 'gNqHDIeIeZjYJ@\x7FRHDRj@',
-      'gGQHLIeIUjdA~dPHeT': 'gNqHBIeIgZjYJ@\x7FRHDRj@',
+      'gGQHDIeIgjfR`OtbADj`': 'gNqHDIeIeZjYJ@\u007FRHDRj@',
+      'gGQHLIeIUjdA~dPHeT': 'gNqHBIeIgZjYJ@\u007FRHDRj@',
     });
   });
 });
@@ -331,7 +331,7 @@ function getMolfileAtomMapNo(molfile) {
   const atomMapNos = [];
   for (let line of lines) {
     if (line.match(/ [A-Z][a-z]? /)) {
-      atomMapNos.push(line.replace(/^.* ([0-9]+) {2}0 {2}0$/, '$1'));
+      atomMapNos.push(line.replace(/^.* (\d+) {2}0 {2}0$/, '$1'));
     }
   }
   return atomMapNos;

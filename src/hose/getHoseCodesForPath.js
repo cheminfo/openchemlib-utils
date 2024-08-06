@@ -7,6 +7,9 @@ let fragment;
 /**
  * Returns the hose code for a specific atom number
  * @param {import('openchemlib').Molecule} molecule
+ * @param from
+ * @param to
+ * @param maxLength
  */
 export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const OCL = molecule.getOCL();

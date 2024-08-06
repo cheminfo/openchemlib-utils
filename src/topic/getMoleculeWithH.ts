@@ -1,16 +1,17 @@
-import { Logger } from 'cheminfo-types';
+import { LightLogger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
 
 export interface GetMoleculeWithHOptions {
   maxNbAtoms: number;
-  logger: Omit<Logger, 'child' | 'fatal'>;
+  logger: LightLogger;
 }
 
 /**
  * Expand all the implicit hydrogens and ensure chiral bonds on heterotopic bonds
  * @param molecule
+ * @param options
  * @returns
  */
 export function getMoleculeWithH(

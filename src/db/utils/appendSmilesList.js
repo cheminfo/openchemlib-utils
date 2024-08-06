@@ -13,7 +13,7 @@ export default async function appendSmilesList(
   const smilesArray = text
     .split(/\r?\n/)
     .map((line) => line.trim())
-    .filter((line) => line);
+    .filter(Boolean);
   for (let i = 0; i < smilesArray.length; i++) {
     const oneSmiles = smilesArray[i];
     moleculesDB.pushEntry(moleculesDB.OCL.Molecule.fromSmiles(oneSmiles));

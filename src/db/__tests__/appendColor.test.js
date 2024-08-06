@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import OCL from 'openchemlib';
 import { expect, it, describe } from 'vitest';
@@ -57,9 +57,6 @@ describe('appendColor', async () => {
 });
 
 function getDistinctColors(db) {
-  const colors = db
-    .map((entry) => entry.data)
-    .flat()
-    .map((entry) => entry.color);
+  const colors = db.flatMap((entry) => entry.data).map((entry) => entry.color);
   return Array.from(new Set(colors));
 }

@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import OCL, { SSSearcher } from 'openchemlib';
 import { expect, test } from 'vitest';

@@ -5,12 +5,12 @@ import { Matrix } from 'ml-matrix';
  * Returns a connectivity matrix
  * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
- * @param {boolean} [options.pathLength=false] get the path length between atoms
- * @param {boolean} [options.mass=false] set the nominal mass of the atoms on diagonal
- * @param {boolean} [options.atomicNo=false] set the atomic number of the atom on diagonal
- * @param {boolean} [options.negativeAtomicNo=false] set the atomic number * -1 of the atom on diagonal
- * @param {boolean} [options.sdt=false] set 1, 2 or 3 depending if single, double or triple bond
- * @param {boolean} [options.sdta=false] set 1, 2, 3 or 4 depending if single, double, triple or aromatic  bond
+ * @param {boolean} [options.pathLength=false] - get the path length between atoms
+ * @param {boolean} [options.mass=false] - set the nominal mass of the atoms on diagonal
+ * @param {boolean} [options.atomicNo=false] - set the atomic number of the atom on diagonal
+ * @param {boolean} [options.negativeAtomicNo=false] - set the atomic number * -1 of the atom on diagonal
+ * @param {boolean} [options.sdt=false] - set 1, 2 or 3 depending if single, double or triple bond
+ * @param {boolean} [options.sdta=false] - set 1, 2, 3 or 4 depending if single, double, triple or aromatic  bond
  */
 export function getConnectivityMatrix(molecule, options = {}) {
   const OCL = molecule.getOCL();

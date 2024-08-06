@@ -192,9 +192,9 @@ describe.skip('applyReactions', () => {
 function removeCoordinates(trees, products) {
   if (trees) {
     for (const tree of trees) {
-      tree.reactant.molfile = tree.reactant.molfile.replace(/^.{30}/gm, '');
+      tree.reactant.molfile = tree.reactant.molfile.replaceAll(/^.{30}/gm, '');
       for (const product of tree.products) {
-        product.molfile = product.molfile.replace(/^.{30}/gm, '');
+        product.molfile = product.molfile.replaceAll(/^.{30}/gm, '');
         if (product.children) {
           removeCoordinates(product.children);
         }
@@ -204,7 +204,7 @@ function removeCoordinates(trees, products) {
   if (products) {
     for (const product of products) {
       if (product.molfile) {
-        product.molfile = product.molfile.replace(/^.{30}/gm, '');
+        product.molfile = product.molfile.replaceAll(/^.{30}/gm, '');
       }
       if (product.trees) removeCoordinates(product.trees);
     }

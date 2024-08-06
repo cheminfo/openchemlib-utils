@@ -1,6 +1,6 @@
 /**
  * Calculate the molecular formula in 'chemcalc' notation taking into account fragments, isotopes and charges
- * @param {OCL.Molecule} [molecule] an instance of OCL.Molecule
+ * @param {OCL.Molecule} [molecule] - an instance of OCL.Molecule
  * @returns {}
  */
 
@@ -17,11 +17,11 @@ export function getAtoms(molecule: Molecule): AtomsAndParts {
   const atoms: AtomQuantity = {};
   const result: AtomsAndParts = { atoms, parts: [] };
 
-  entries.forEach((entry) => {
+  for (const entry of entries) {
     const part: AtomQuantity = {};
     result.parts.push(part);
     appendAtomPart(entry, atoms, part);
-  });
+  }
   return result;
 }
 

@@ -4,5 +4,5 @@
  * @returns {string}
  */
 export function getCamelCase(name) {
-  return name.replace(/[ -][a-z]/g, (string) => string[1].toUpperCase());
+  return name.replaceAll(/[ -][a-z]/g, (string) => string[1].toUpperCase());
 }

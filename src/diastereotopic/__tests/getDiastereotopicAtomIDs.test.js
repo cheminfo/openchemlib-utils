@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import OCL from 'openchemlib';
 import { expect, it, describe } from 'vitest';
@@ -11,9 +11,9 @@ describe('getDiastereotopicAtomIDs', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     const ids = getDiastereotopicAtomIDs(molecule);
     expect(ids).toStrictEqual([
-      'eM@Df`Xb`\x7FRP\\Jh',
+      'eM@Df`Xb`\u007FRP\\Jh',
       'eM@HzAbJC}IApj`',
-      'eM@Df`Xb`\x7FRP\\Jh',
+      'eM@Df`Xb`\u007FRP\\Jh',
     ]);
   });
 
@@ -22,17 +22,17 @@ describe('getDiastereotopicAtomIDs', () => {
     molecule.addImplicitHydrogens();
     const ids = getDiastereotopicAtomIDs(molecule);
     expect(ids).toStrictEqual([
-      'eM@Df`Xb`\x7FRP\\Jh',
+      'eM@Df`Xb`\u007FRP\\Jh',
       'eM@HzAbJC}IApj`',
-      'eM@Df`Xb`\x7FRP\\Jh',
-      'gC`HALiKT@\x7FRHDRj@',
-      'gC`HALiKT@\x7FRHDRj@',
-      'gC`HALiKT@\x7FRHDRj@',
-      'gC`HALiMT@\x7FRHDRj@',
-      'gC`HALiMT@\x7FRHDRj@',
-      'gC`HALiKT@\x7FRHDRj@',
-      'gC`HALiKT@\x7FRHDRj@',
-      'gC`HALiKT@\x7FRHDRj@',
+      'eM@Df`Xb`\u007FRP\\Jh',
+      'gC`HALiKT@\u007FRHDRj@',
+      'gC`HALiKT@\u007FRHDRj@',
+      'gC`HALiKT@\u007FRHDRj@',
+      'gC`HALiMT@\u007FRHDRj@',
+      'gC`HALiMT@\u007FRHDRj@',
+      'gC`HALiKT@\u007FRHDRj@',
+      'gC`HALiKT@\u007FRHDRj@',
+      'gC`HALiKT@\u007FRHDRj@',
     ]);
   });
 

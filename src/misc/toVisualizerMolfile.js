@@ -17,15 +17,14 @@ export function toVisualizerMolfile(molecule, options = {}) {
     for (const diaID of diaIDs) {
       atoms[diaID.oclID] = diaID.atoms;
       highlight.push(diaID.oclID);
-      if (heavyAtomHydrogen) {
-        if (
-          hydrogenInfo[diaID.oclID] &&
-          hydrogenInfo[diaID.oclID].nbHydrogens > 0
-        ) {
-          for (const id of hydrogenInfo[diaID.oclID].hydrogenOCLIDs) {
-            highlight.push(id);
-            atoms[id] = diaID.atoms;
-          }
+      if (
+        heavyAtomHydrogen &&
+        hydrogenInfo[diaID.oclID] &&
+        hydrogenInfo[diaID.oclID].nbHydrogens > 0
+      ) {
+        for (const id of hydrogenInfo[diaID.oclID].hydrogenOCLIDs) {
+          highlight.push(id);
+          atoms[id] = diaID.atoms;
         }
       }
     }

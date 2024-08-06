@@ -10,10 +10,10 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * Returns the hose code for specific atom numbers
  * @param {import('openchemlib').Molecule} molecule - The OCL molecule with expandedImplicitHydrogens and ensureHeterotopicChiralBonds
  * @param {object} [options={}]
- * @param {string[]} [options.allowedCustomLabels] Array of the custom labels that are considered as root atoms. By default all atoms having a customLabel
- * @param {number} [options.minSphereSize=0] Smallest hose code sphere
- * @param {number} [options.maxSphereSize=4] Largest hose code sphere
- * @param {number} [options.kind=FULL_HOSE_CODE] Kind of hose code, default usual sphere
+ * @param {string[]} [options.allowedCustomLabels] - Array of the custom labels that are considered as root atoms. By default all atoms having a customLabel
+ * @param {number} [options.minSphereSize=0] - Smallest hose code sphere
+ * @param {number} [options.maxSphereSize=4] - Largest hose code sphere
+ * @param {number} [options.kind=FULL_HOSE_CODE] - Kind of hose code, default usual sphere
  */
 export function getHoseCodesForAtomsInternal(molecule, options = {}) {
   const fragments = getHoseCodesForAtomsAsFragments(molecule, options);

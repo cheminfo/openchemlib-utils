@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import OCL from 'openchemlib';
 import { describe, expect, it } from 'vitest';
@@ -68,7 +68,7 @@ function getStereoBonds(molecule) {
   const molfile = molecule.toMolfile();
   const lines = molfile.split(/\r?\n/);
   const stereoBonds = lines.filter((line) =>
-    line.match(/ {2}[1,6] {2}0 {2}0 {2}0$/),
+    line.match(/ {2}[,16](?: {2}0){3}$/),
   );
   return stereoBonds;
 }

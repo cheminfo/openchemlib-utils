@@ -1,4 +1,5 @@
 import { getMF } from '../util/getMF';
+import { getRAtomicNumber } from '../util/getRAtomicNumber.js';
 
 export function fragmentAcyclicSingleBonds(molecule) {
   const OCL = molecule.getOCL();
@@ -53,9 +54,13 @@ export function fragmentAcyclicSingleBonds(molecule) {
       if (atomMap[j] > -1) {
         result.atomMap.push(j);
         if (atoms[j].links.length > 0) {
-          atoms[j].links.forEach(() => {
-            fragment.addBond(atomMap[j], fragment.addAtom(154), 1);
-          });
+          for (let k = 0; k < atoms[j].links.length; k++) {
+            fragment.addBond(
+              atomMap[j],
+              fragment.addAtom(getRAtomicNumber(brokenMolecule)),
+              1,
+            );
+          }
         }
       }
     }

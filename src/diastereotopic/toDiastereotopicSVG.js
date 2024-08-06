@@ -16,35 +16,35 @@ export function toDiastereotopicSVG(molecule, options = {}) {
   let diaIDs = [];
 
   const hydrogenInfo = {};
-  getDiastereotopicAtomIDsAndH(molecule).forEach((line) => {
+  for (const line of getDiastereotopicAtomIDsAndH(molecule)) {
     hydrogenInfo[line.oclID] = line;
-  });
+  }
 
   if (heavyAtomHydrogen) {
     for (let i = 0; i < molecule.getAtoms(); i++) {
       diaIDs.push([]);
     }
     const groupedDiaIDs = molecule.getGroupedDiastereotopicAtomIDs();
-    groupedDiaIDs.forEach((diaID) => {
+    for (const diaID of groupedDiaIDs) {
       if (
         hydrogenInfo[diaID.oclID] &&
         hydrogenInfo[diaID.oclID].nbHydrogens > 0
       ) {
-        diaID.atoms.forEach((atom) => {
-          hydrogenInfo[diaID.oclID].hydrogenOCLIDs.forEach((id) => {
+        for (const atom of diaID.atoms) {
+          for (const id of hydrogenInfo[diaID.oclID].hydrogenOCLIDs) {
             if (!diaIDs[atom * 1].includes(id)) diaIDs[atom].push(id);
-          });
-        });
+          }
+        }
       }
-    });
+    }
   } else {
     diaIDs = molecule.getDiastereotopicAtomIDs().map((a) => [a]);
   }
 
   if (!svg) svg = molecule.toSVG(width, height, prefix);
 
-  svg = svg.replace(/Atom:[0-9]+"/g, (value) => {
-    const atom = value.replace(/[^0-9]/g, '');
+  svg = svg.replaceAll(/Atom:\d+"/g, (value) => {
+    const atom = value.replaceAll(/\D/g, '');
     return `${value} data-diaid="${diaIDs[atom].join(',')}"`;
   });
 

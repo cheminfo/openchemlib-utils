@@ -2,7 +2,7 @@ import { trimTree } from './trimTree.js';
 
 /**
  * @description Group reaction trees by product idCode
- * @param {Array} trees Trees of reactions
+ * @param {Array} trees - Trees of reactions
  * @returns {Array} Array of products with their corresponding trees and reactions
  */
 export function groupTreesByProducts(trees) {
@@ -10,7 +10,7 @@ export function groupTreesByProducts(trees) {
   console.warn('groupTreesByProducts is deprecated');
   const results = {};
   for (const tree of trees) {
-    const copyTree = JSON.parse(JSON.stringify(tree));
+    const copyTree = structuredClone(tree);
     groupProductTrees(copyTree, results, tree);
   }
   return Object.values(results);
@@ -18,14 +18,14 @@ export function groupTreesByProducts(trees) {
 
 /**
  * @description For a given reaction tree, recursively group the branches by idCode of the product
- * @param {Object} currentBranch Current recursive branch of the tree of reactions
- * @param {Object} results Object with the branches grouped by idCode
- * @param {Object} originalBranch Original tree of reactions (not modified)
+ * @param {object} currentBranch - Current recursive branch of the tree of reactions
+ * @param {object} results - Object with the branches grouped by idCode
+ * @param {object} originalBranch - Original tree of reactions (not modified)
  */
 function groupProductTrees(currentBranch, results, originalBranch) {
   for (const product of currentBranch.products) {
     // This way is faster than structuredClone
-    const copyBranch = JSON.parse(JSON.stringify(originalBranch));
+    const copyBranch = structuredClone(originalBranch);
     const reactions = [];
     // Trim the tree to get all branches leading to the idCode of the product
     trimTree(product.idCode, copyBranch, reactions);

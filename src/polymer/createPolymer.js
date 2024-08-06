@@ -3,12 +3,13 @@
  * A unit must contain a R1 and a R2
  * An alpha end group must contain a R1
  * An omega end group must contain a R2
- * @param {import('openchemlib').Molecule} molecule an instance of OCL.Molecule
+ * @param {import('openchemlib').Molecule} molecule - an instance of OCL.Molecule
+ * @param unit
  * @param {object} options
- * @param {number} [options.count=10] number of units
- * @param {boolean} [options.markMonomer=false] mark the different units of the polymer in the atom map
- * @param {import('openchemlib').Molecule} [options.alpha] alpha end group, default is an hydrogen
- * @param {import('openchemlib').Molecule} [options.gamma] omega end group, default is an hydrogen
+ * @param {number} [options.count=10] - number of units
+ * @param {boolean} [options.markMonomer=false] - mark the different units of the polymer in the atom map
+ * @param {import('openchemlib').Molecule} [options.alpha] - alpha end group, default is an hydrogen
+ * @param {import('openchemlib').Molecule} [options.gamma] - omega end group, default is an hydrogen
  */
 export function createPolymer(unit, options = {}) {
   const { count = 10 } = options;

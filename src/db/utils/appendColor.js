@@ -14,42 +14,36 @@ export default function appendColor(moleculesDB, options = {}) {
   const db = moleculesDB.getDB();
   let values;
   if (dataLabel) {
-    values = db
-      .map((result) =>
-        result.data.map((datum) => ({ value: datum[dataLabel], data: datum })),
-      )
-      .flat();
+    values = db.flatMap((result) =>
+      result.data.map((datum) => ({ value: datum[dataLabel], data: datum })),
+    );
   } else if (propertyLabel) {
-    values = db
-      .map((result) =>
-        result.data.map((datum) => ({
-          value: result.properties[propertyLabel],
-          data: datum,
-        })),
-      )
-      .flat();
+    values = db.flatMap((result) =>
+      result.data.map((datum) => ({
+        value: result.properties[propertyLabel],
+        data: datum,
+      })),
+    );
   } else {
-    values = db
-      .map((result) =>
-        result.data.map((datum) => ({ value: undefined, data: datum })),
-      )
-      .flat();
+    values = db.flatMap((result) =>
+      result.data.map((datum) => ({ value: undefined, data: datum })),
+    );
   }
 
   if (minValue !== undefined) {
-    values = values.forEach((value) => {
+    for (const value of values) {
       if (value.value !== undefined && value.value < minValue) {
         value.value = minValue;
       }
-    });
+    }
   }
 
   if (maxValue !== undefined) {
-    values = values.forEach((value) => {
+    for (const value of values) {
       if (value.value !== undefined && value.value > maxValue) {
         value.value = maxValue;
       }
-    });
+    }
   }
 
   const definedValues = values.filter((value) => value.value !== undefined);
