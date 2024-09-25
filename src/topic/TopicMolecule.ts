@@ -26,10 +26,12 @@ interface TopicMoleculeOptions extends HoseCodesOptions {
    * @default 5
    */
   maxPathLength?: number;
+
   /**
    * The maximum number of atoms to consider when dealing with diastereotopicity
    */
   maxNbAtoms?: number;
+
   /**
    * The logger to use in order to retrieve some debug or warning information
    * @default console
@@ -74,11 +76,13 @@ interface GetHoseFragmentOptions {
    * The sphere size around any selected atoms to consider. Default is 2
    */
   sphereSize?: number;
+
   /**
    * The atoms to tag in the fragment
    * @default rootAtoms
    */
   tagAtoms?: number[];
+
   /**
    * The function to tag the atoms in place !
    * @default tagAtom
@@ -497,6 +501,7 @@ export interface GroupedDiaID {
   atomLabel: string;
   heavyAtoms: number[];
   attachedHydrogens: number[];
+
   /**
    * List of atom numbers existing in the molecule. In case of implicit hydrogens we will fallback
    * to the linked heavy atom
