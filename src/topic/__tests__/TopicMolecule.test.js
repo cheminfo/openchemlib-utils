@@ -17,6 +17,9 @@ describe('TopicMolecule', () => {
 
     expect(topicMolecule.diaIDs).toStrictEqual([]);
     expect(topicMolecule.toMolfileWithH().split('\n')).toHaveLength(549);
+    expect(
+      topicMolecule.toMolfileWithH({ version: 3 }).split('\n'),
+    ).toHaveLength(556);
     expect(logger.getLogs()).toHaveLength(2);
 
     const topicMolecule2 = new TopicMolecule(molecule, {
