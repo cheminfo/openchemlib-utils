@@ -1,4 +1,4 @@
-import { TopicMolecule, DiaIDAndInfo } from './TopicMolecule.js';
+import type { TopicMolecule, DiaIDAndInfo } from './TopicMolecule.js';
 
 export function getDiaIDsAndInfo(
   diaMol: TopicMolecule,

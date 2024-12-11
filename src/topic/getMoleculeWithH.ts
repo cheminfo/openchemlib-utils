@@ -1,4 +1,4 @@
-import { LightLogger } from 'cheminfo-types';
+import type { LightLogger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';

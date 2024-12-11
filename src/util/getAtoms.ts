@@ -4,7 +4,7 @@
  * @returns {}
  */
 
-import { Molecule } from 'openchemlib';
+import type { Molecule } from 'openchemlib';
 
 type AtomQuantity = Record<string, number>;
 interface AtomsAndParts {

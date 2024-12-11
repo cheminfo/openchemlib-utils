@@ -1,11 +1,12 @@
-import { LightLogger } from 'cheminfo-types';
+import type { LightLogger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsInternal.js';
-import { AtomPath, getAllAtomsPaths } from '../path/getAllAtomsPaths.js';
+import type { AtomPath } from '../path/getAllAtomsPaths.js';
+import { getAllAtomsPaths } from '../path/getAllAtomsPaths.js';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
-import { HoseCodesOptions } from './HoseCodesOptions.js';
+import type { HoseCodesOptions } from './HoseCodesOptions.js';
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs';
 import { getCanonizedHoseCodes } from './getCanonizedHoseCodes';
 import { getDiaIDsAndInfo } from './getDiaIDsAndInfo';

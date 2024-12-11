@@ -22,6 +22,7 @@ export * from './util/getConnectivityMatrix';
 export * from './util/getImplicitHydrogensCount';
 export * from './util/getMF';
 export * from './util/getCharge';
+export * from './util/getMolfilesMapping';
 export * from './util/getProperties';
 export * from './util/getAtoms';
 export * from './util/isCsp3';

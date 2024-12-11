@@ -1,4 +1,4 @@
-import { Molecule } from 'openchemlib';
+import type { Molecule } from 'openchemlib';
 
 export interface GetAllAtomsPathsOptions {
   /**
