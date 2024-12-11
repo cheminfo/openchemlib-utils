@@ -5,7 +5,7 @@ import { MF } from 'mf-parser';
 import OCL, { Molecule } from 'openchemlib';
 import { describe, it, expect } from 'vitest';
 
-import { parseDwar } from '../../misc/dwar/parseDwar.js';
+import { parseDwar } from '../../util/dwar/parseDwar.js';
 import { getMF } from '../../util/getMF.js';
 import { Reactions } from '../Reactions.js';
 

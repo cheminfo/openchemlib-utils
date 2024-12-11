@@ -17,12 +17,15 @@ export * from './hose/getHoseCodesForPath';
 export * from './polymer/createPolymer.js';
 
 export * from './util/combineSmiles';
+export * from './util/dwar/parseDwar';
 export * from './util/getAtomsInfo';
 export * from './util/getConnectivityMatrix';
 export * from './util/getImplicitHydrogensCount';
 export * from './util/getMF';
 export * from './util/getCharge';
 export * from './util/getMolfilesMapping';
+export * from './util/getNMRHints';
+export * from './util/getNextNMRHint';
 export * from './util/getProperties';
 export * from './util/getAtoms';
 export * from './util/isCsp3';
@@ -35,6 +38,7 @@ export * from './util/nbCN';
 export * from './util/nbLabileH';
 export * from './util/tagAtom';
 export * from './util/toggleHydrogens';
+export * from './util/toVisualizerMolfile';
 
 export * from './path/getPathsInfo';
 export * from './path/getPathAndTorsion';
@@ -44,12 +48,6 @@ export * from './db/MoleculesDB';
 
 export * from './features/getAtomFeatures';
 
-export * from './misc/toVisualizerMolfile';
-export * from './misc/dwar/parseDwar';
-
 export * from './fragment/fragmentAcyclicSingleBonds';
 
 export * from './reaction/Reactions';
-
-export * from './misc/getNMRHints';
-export * from './misc/getNextNMRHint';
