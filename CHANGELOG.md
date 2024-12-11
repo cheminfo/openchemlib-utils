@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.4.1...v6.5.0) (2024-12-11)
+
+
+### Features
+
+* add getMolfilesMapping and update dependencies ([6766381](https://github.com/cheminfo/openchemlib-utils/commit/676638140e908f87a85c55c45b5f46836a8a8770))
+
 ## [6.4.1](https://github.com/cheminfo/openchemlib-utils/compare/v6.4.0...v6.4.1) (2024-07-29)
 
 
