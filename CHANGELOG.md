@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.5.1](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.0...v6.5.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* wrongly exported getMolfilesMapping ([18b12b7](https://github.com/cheminfo/openchemlib-utils/commit/18b12b756dc8ce8faab6af2154063334f5bc65ab))
+
 ## [6.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.4.1...v6.5.0) (2024-12-11)
 
 
