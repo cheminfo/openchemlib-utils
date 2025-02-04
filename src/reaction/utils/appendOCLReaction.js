@@ -1,7 +1,7 @@
 /**
  * @description Append the OCL reaction to the reaction object
  * @param {Array} reactions - array of reactions objects with rxnCode and label
- * @param {object} OCL - OCL object
+ * @param {typeof import('openchemlib')} OCL - OCL object
  * @param {object} [options={}]
  * @param {import('cheminfo-types').Logger} [options.logger]
  * @returns {Array} array of reactions objects with rxnCode, label and oclReaction (a decoded version of rxnCode reaction)
