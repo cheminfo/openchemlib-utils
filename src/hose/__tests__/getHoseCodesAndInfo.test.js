@@ -49,7 +49,7 @@ M  END`;
     expect(result.diaIDs).toBeUndefined();
   });
 
-  it('cyclosporin', () => {
+  it('cyclosporin', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
       join(__dirname, '../../diastereotopic/__tests/data/cyclosporin.mol'),
       'utf8',

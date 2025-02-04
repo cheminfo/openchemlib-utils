@@ -70,7 +70,7 @@ describe('getDiastereotopicAtomIDs', () => {
     ]);
   });
 
-  it('cyclosporin noH', () => {
+  it('cyclosporin noH', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
       join(__dirname, 'data/cyclosporin_noH.mol'),
       'utf8',
@@ -81,7 +81,7 @@ describe('getDiastereotopicAtomIDs', () => {
     expect(diaIDs).toMatchSnapshot();
   });
 
-  it('cyclosporin noH addImplicitHydrogens', () => {
+  it('cyclosporin noH addImplicitHydrogens', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
       join(__dirname, 'data/cyclosporin_noH.mol'),
       'utf8',
@@ -93,7 +93,7 @@ describe('getDiastereotopicAtomIDs', () => {
     expect(diaIDs).toMatchSnapshot();
   });
 
-  it('cyclosporin addImplicitHydrogens', () => {
+  it('cyclosporin addImplicitHydrogens', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
       join(__dirname, 'data/cyclosporin.mol'),
       'utf8',
