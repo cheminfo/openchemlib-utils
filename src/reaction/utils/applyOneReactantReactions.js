@@ -14,7 +14,7 @@ import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
  * @param {number} options.stats.counter - number of reactions
  * @param {Map} options.processedMolecules - set of processed molecules
  * @param {Array} options.trees - array of trees of previous recursions
- * @param {import('openchemlib')} options.OCL - OCL object
+ * @param {object} options.OCL - OCL object
  * @returns {Array} array of results
  */
 export function applyOneReactantReactions(tree, reactions, options) {

@@ -6,6 +6,7 @@ import appendSmilesList from './utils/appendSmilesList';
 import pushEntry from './utils/pushEntry';
 import pushMoleculeInfo from './utils/pushMoleculeInfo';
 import { search, searchAsync } from './utils/search';
+
 /*
     this.db is an object with properties 'oclID' that has as value
     an object that contains the following properties:
@@ -14,12 +15,11 @@ import { search, searchAsync } from './utils/search';
     * properties: all the calculates properties
     * data: array containing free data associated with this molecule
   */
-
 export class MoleculesDB {
   /**
    *
-   * @param {import('openchemlib')} OCL - openchemlib library
-   * @param {object} [options={}]
+   * @param {typeof import('openchemlib')} OCL - openchemlib library
+   * @param {object} [options={}] - Options.
    * @param {boolean} [options.computeProperties=false]
    * @param {boolean} [options.keepEmptyMolecules=false]
    */
@@ -72,9 +72,9 @@ export class MoleculesDB {
   /**
    * Append a SDF to the current database
    * @param {string|ArrayBuffer} sdf - text file containing the sdf
-   * @param {object} [options={}]
+   * @param {object} [options={}] - Options.
    * @param {Function} [options.onStep] - call back to execute after each molecule
-   * @returns {DB}
+   * @returns {Promise<void>}
    */
   appendSDF(sdf, options) {
     return appendSDF(this, sdf, {
@@ -84,25 +84,24 @@ export class MoleculesDB {
   }
 
   /**
-   * Append a SDF to the current database
+   * Append a list of SMILES to the current database.
    * @param {string|ArrayBuffer} smiles - text file containing a list of smiles
-   * @param text
-   * @param {object} [options={}]
+   * @param {object} [options={}] - Options
    * @param {Function} [options.onStep] - call back to execute after each molecule
-   * @returns {DB}
+   * @returns {Promise<void>}
    */
-  appendSmilesList(text, options) {
-    return appendSmilesList(this, text, {
+  appendSmilesList(smiles, options) {
+    return appendSmilesList(this, smiles, {
       computeProperties: this.computeProperties,
       ...options,
     });
   }
 
   /**
-   * Add a molecule to the current database
-   * @param {import('openchemlib').Molecule} molecule
-   * @param {object} [data={}]
-   * @param {object} [moleculeInfo={}] - may contain precalculated index and mw
+   * Add a molecule to the current database.
+   * @param {import('openchemlib').Molecule} molecule - The molecule to append.
+   * @param {object} [data={}] - Options.
+   * @param {object} [moleculeInfo={}] - May contain precalculated index and mw.
    */
 
   pushEntry(molecule, data, moleculeInfo) {
@@ -110,7 +109,7 @@ export class MoleculesDB {
   }
 
   /**
-   * Add an entry in the database
+   * Add an entry in the database.
    * @param {object} moleculeInfo - a molecule as a JSON that may contain the following properties: molfile, smiles, idCode, mf, index
    * @param {object} [data={}]
    */
@@ -121,8 +120,8 @@ export class MoleculesDB {
   /**
    * Search in a MoleculesDB
    * Inside the database all the same molecules are group together
-   * @param {string|OCL.Molecule} [query] - smiles, molfile, idlCode or instance of Molecule to look for
-   * @param {object} [options={}]
+   * @param {string|import('openchemlib').Molecule} [query] - smiles, molfile, idlCode or instance of Molecule to look for
+   * @param {object} [options={}] - Options
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
@@ -137,8 +136,8 @@ export class MoleculesDB {
   /**
    * Search in a MoleculesDB
    * Inside the database all the same molecules are group together
-   * @param {string|OCL.Molecule} [query] - smiles, molfile, idCode or instance of Molecule to look for
-   * @param {object} [options={}]
+   * @param {string|import('openchemlib').Molecule} [query] - smiles, molfile, idCode or instance of Molecule to look for
+   * @param {object} [options={}] - Options.
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
    * @param {string} [options.mode='substructure'] - search by 'substructure', 'exact' or 'similarity'
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result

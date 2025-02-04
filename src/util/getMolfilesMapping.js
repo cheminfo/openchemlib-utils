@@ -1,7 +1,7 @@
 /**
  * We have 2 molfiles and we would like to map the atom number from one to the other.
  * We expect that both molfiles contain the same atoms that can be in a different order.
- * @param {import('openchemlib')} OCL - openchemlib library
+ * @param {typeof import('openchemlib')} OCL - openchemlib library
  * @param {string} from
  * @param {string} to
  * @returns {{fromTo: number[], toFrom: number[]}} - fromTo is an array of the same length as the number of atoms in the from molfile. Each element is the index of the corresponding atom in the to molfile. toFrom is the opposite.
