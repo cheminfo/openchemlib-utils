@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.5.2](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.1...v6.5.2) (2025-02-04)
+
+
+### Bug Fixes
+
+* correct types of OCL import and DB ([bf0d1df](https://github.com/cheminfo/openchemlib-utils/commit/bf0d1df9fb0555f6a30afc5271a631cb64428941))
+
 ## [6.5.1](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.0...v6.5.1) (2024-12-11)
 
 
