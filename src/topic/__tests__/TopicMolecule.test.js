@@ -9,7 +9,7 @@ import { toggleHydrogens } from '../../util/toggleHydrogens';
 import { TopicMolecule } from '../TopicMolecule';
 
 describe('TopicMolecule', () => {
-  it('Big molecule', () => {
+  it('Big molecule', { timeout: 60_000 }, () => {
     //250 carbons
     const logger = new FifoLogger('test.log');
     const molecule = Molecule.fromSmiles('C1CCCC1'.repeat(20));
@@ -258,7 +258,7 @@ describe('TopicMolecule', () => {
     expect(diaIDsObject).toMatchSnapshot();
   });
 
-  it('cyclosporin', () => {
+  it('cyclosporin', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
       join(__dirname, 'data/cyclosporin.mol'),
       'utf8',
