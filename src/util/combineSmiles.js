@@ -2,13 +2,13 @@ const MAX_R = 10;
 
 /**
  * Generate molecules and calculate predicted properties form a list of smiles and fragments
- * @param {string} [coreSmiles]
- * @param {Array} [fragments] - Array of {smiles,R1,R2,...}
+ * @param {string} coreSmiles
+ * @param {Array} fragments - Array of {smiles,R1,R2,...}
  * @param {typeof import('openchemlib')} OCL - openchemlib library
  * @param {object} [options={}] - Options
  * @param {Function} [options.onStep] - method to execute each new molecules
  * @param {boolean} [options.complexity] - returns only the number of molecules to evaluate
- * @returns {Promise} promise that resolves to molecules or complexity as a number
+ * @returns {Promise<any>} promise that resolves to molecules or complexity as a number
  */
 export async function combineSmiles(coreSmiles, fragments, OCL, options = {}) {
   const { complexity = false } = options;
