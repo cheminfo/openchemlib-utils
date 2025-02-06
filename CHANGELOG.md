@@ -1,5 +1,13 @@
 # Changelog
 
+## [6.5.3](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.2...v6.5.3) (2025-02-06)
+
+
+### Bug Fixes
+
+* correct type of `combineSmiles` function ([155177c](https://github.com/cheminfo/openchemlib-utils/commit/155177cef9392f84d129a4af371e4c80a202c54e))
+* update OCL ([a111338](https://github.com/cheminfo/openchemlib-utils/commit/a111338064d07764b173717e1210a66dd846a2a1))
+
 ## [6.5.2](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.1...v6.5.2) (2025-02-04)
 
 
