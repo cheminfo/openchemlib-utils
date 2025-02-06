@@ -49,7 +49,7 @@
     "fifo-logger": "^1.0.0",
     "globals": "^15.14.0",
     "mf-parser": "^3.3.0",
-    "openchemlib": "^8.14.0",
+    "openchemlib": "^8.18.1",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
@@ -67,6 +67,6 @@
     "sdf-parser": "^6.0.1"
   },
   "peerDependencies": {
-    "openchemlib": ">=8.14.0"
+    "openchemlib": ">=8.18.1"
   }
 }
