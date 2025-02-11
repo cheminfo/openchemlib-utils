@@ -51,7 +51,7 @@ M  END`;
 
   it('cyclosporin', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
-      join(__dirname, '../../diastereotopic/__tests/data/cyclosporin.mol'),
+      join(__dirname, '../../diastereotopic/__tests__/data/cyclosporin.mol'),
       'utf8',
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);
