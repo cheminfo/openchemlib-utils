@@ -9,5 +9,5 @@
     "target": "es2020",
     "skipLibCheck": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "vitest.config.ts"]
 }
