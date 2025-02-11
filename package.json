@@ -41,7 +41,7 @@
   "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
     "@types/node": "^22.13.1",
-    "@vitest/coverage-v8": "^3.0.5",
+    "@vitest/coverage-istanbul": "^3.0.5",
     "cheminfo-build": "^1.2.1",
     "cheminfo-types": "^1.8.1",
     "eslint": "^9.19.0",
