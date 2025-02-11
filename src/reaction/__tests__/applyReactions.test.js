@@ -1,4 +1,4 @@
-import { Molecule } from 'openchemlib/full.js';
+import { Molecule } from 'openchemlib';
 import { expect, it, describe } from 'vitest';
 
 import { applyReactions } from '../applyReactions.js';
