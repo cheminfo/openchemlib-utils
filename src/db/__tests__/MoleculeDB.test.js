@@ -78,6 +78,45 @@ describe('search', () => {
     expect(result).toHaveLength(1);
     result = moleculesDB.search('CCCO', { format: 'smiles' });
     expect(result).toHaveLength(0);
+    result = moleculesDB.search('CC.O', { format: 'smiles' });
+    expect(result).toHaveLength(0);
+    result = moleculesDB.search('CC.CC', { format: 'smiles' });
+    expect(result).toHaveLength(2);
+    result = moleculesDB.search('CC.N', { format: 'smiles' });
+    expect(result).toHaveLength(1);
+    result = moleculesDB.search('', { format: 'smiles' });
+    expect(result).toHaveLength(6);
+  });
+
+  it('subStructureOR with SMILES', () => {
+    const mode = 'substructureOR';
+    let result;
+    result = moleculesDB.search('CC', {
+      format: 'smiles',
+      mode,
+    });
+    expect(result).toHaveLength(5);
+    expect(result[0].data.name).toBe('Ethane');
+    result = moleculesDB.search('CCC', { format: 'smiles', mode });
+    expect(result).toHaveLength(3);
+    result = moleculesDB.search('CCC', { format: 'smiles', mode, limit: 1 });
+    expect(result).toHaveLength(1);
+    result = moleculesDB.search('CCCO', { format: 'smiles', mode });
+    expect(result).toHaveLength(0);
+    result = moleculesDB.search('CC.O', { format: 'smiles', mode });
+    expect(result).toHaveLength(5);
+    result = moleculesDB.search('CC.CC', { format: 'smiles', mode });
+    expect(result).toHaveLength(5);
+    result = moleculesDB.search('CC.N', {
+      format: 'smiles',
+      mode,
+    });
+    expect(result).toHaveLength(5);
+    result = moleculesDB.search('N.CC', {
+      format: 'smiles',
+      mode,
+    });
+    expect(result).toHaveLength(5);
     result = moleculesDB.search('', { format: 'smiles' });
     expect(result).toHaveLength(6);
   });

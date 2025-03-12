@@ -1,4 +1,5 @@
 import { noWait } from '../../util/noWait.js';
+import { MoleculesDB } from '../MoleculesDB.js';
 
 import getMoleculeCreators from './getMoleculeCreators';
 
@@ -19,18 +20,27 @@ function getQuery(moleculesDB, query, options) {
   return query;
 }
 
+/**
+ * Internal function to search in the database
+ * @param {MoleculesDB} moleculesDB
+ * @param {string} query
+ * @param {Record<string, any>} [options={}]
+ * @param {'exact'|'substructure'|'substructureOR'|'similarity'} [options.mode='substructure']
+ * @returns
+ */
 export function search(moleculesDB, query = '', options = {}) {
   const { mode = 'substructure' } = options;
-
   query = getQuery(moleculesDB, query, options);
-
   let result;
   switch (mode.toLowerCase()) {
     case 'exact':
       result = exactSearch(moleculesDB, query);
       break;
     case 'substructure':
-      result = subStructureSearch(moleculesDB, query);
+      result = substructureSearch(moleculesDB, query);
+      break;
+    case 'substructureor':
+      result = substructureSearchOR(moleculesDB, query);
       break;
     case 'similarity':
       result = similaritySearch(moleculesDB, query);
@@ -54,6 +64,9 @@ export async function searchAsync(moleculesDB, query = '', options = {}) {
     case 'substructure':
       result = await subStructureSearchAsync(moleculesDB, query, options);
       break;
+    case 'substructureor':
+      result = substructureSearchOR(moleculesDB, query);
+      break;
     case 'similarity':
       result = similaritySearch(moleculesDB, query);
       break;
@@ -74,6 +87,12 @@ function exactSearch(moleculesDB, query) {
   return searchResult;
 }
 
+/**
+ * No atoms in the query, we return all the molecules
+ * @param {MoleculesDB} moleculesDB
+ * @param {import('openchemlib').Molecule} query
+ * @returns
+ */
 function substructureSearchBegin(moleculesDB, query) {
   const searchResult = [];
   if (query.getAllAtoms() === 0) {
@@ -94,14 +113,20 @@ function substructureSearchEnd(searchResult, queryMW) {
   return searchResult;
 }
 
-function subStructureSearch(moleculesDB, query) {
-  const queryMW = getMW(query); // we
-  query = query.getCompactCopy();
-  query.setFragment(true);
-
+/**
+ * Search by substructure in the database
+ * If the substructure is composed of many fragments all the fragments must be present
+ * @param {*} moleculesDB
+ * @param {*} query
+ * @returns
+ */
+function substructureSearch(moleculesDB, query) {
+  const queryMW = getMW(query);
   const { searchResult } = substructureSearchBegin(moleculesDB, query);
-
   if (searchResult.length === 0) {
+    query = query.getCompactCopy();
+    query.setFragment(true);
+
     const queryIndex = query.getIndex();
     const searcher = moleculesDB.searcher;
     searcher.setFragment(query, queryIndex);
@@ -110,6 +135,43 @@ function subStructureSearch(moleculesDB, query) {
       searcher.setMolecule(entry.molecule, entry.index);
       if (searcher.isFragmentInMolecule()) {
         searchResult.push(entry);
+      }
+    }
+  }
+
+  return substructureSearchEnd(searchResult, queryMW);
+}
+
+/**
+ * Search by substructure in the database
+ * If the substructure is composed of many fragments only one fragment must be present
+ * @param {*} moleculesDB
+ * @param {import('openchemlib').Molecule} query
+ * @returns
+ */
+function substructureSearchOR(moleculesDB, query) {
+  const queryMW = getMW(query);
+  const { searchResult } = substructureSearchBegin(moleculesDB, query);
+  if (searchResult.length === 0) {
+    query = query.getCompactCopy();
+    query.setFragment(true);
+    const queries = [];
+    for (const fragment of query.getFragments()) {
+      queries.push({
+        fragment,
+        queryIndex: fragment.getIndex(),
+      });
+    }
+    const searcher = moleculesDB.searcher;
+    molecule: for (const idCode in moleculesDB.db) {
+      const entry = moleculesDB.db[idCode];
+      searcher.setMolecule(entry.molecule, entry.index);
+      for (const { fragment, queryIndex } of queries) {
+        searcher.setFragment(fragment, queryIndex);
+        if (searcher.isFragmentInMolecule()) {
+          searchResult.push(entry);
+          continue molecule;
+        }
       }
     }
   }
