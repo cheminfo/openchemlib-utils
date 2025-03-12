@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.3...v6.6.0) (2025-03-12)
+
+
+### Features
+
+* add the possibility to search for many fragments at once in a MoleculeDB ([#132](https://github.com/cheminfo/openchemlib-utils/issues/132)) ([2efca09](https://github.com/cheminfo/openchemlib-utils/commit/2efca09874ba69cec8b028a999d8125dd4b7a09e))
+
 ## [6.5.3](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.2...v6.5.3) (2025-02-06)
 
 
