@@ -52,6 +52,7 @@ describe('TopicMolecule', () => {
     const molfile = topicMolecule.toMolfile();
     expect(getMolfileAtoms(molfile)).toStrictEqual(['O', 'C', 'C', 'H']);
     const molfileWithH = topicMolecule.toMolfileWithH();
+
     expect(getMolfileAtoms(molfileWithH)).toStrictEqual([
       'O',
       'C',
@@ -63,6 +64,9 @@ describe('TopicMolecule', () => {
       'H',
       'H',
     ]);
+
+    const molfileWithoutH = topicMolecule.toMolfileWithoutH();
+    expect(getMolfileAtoms(molfileWithoutH)).toStrictEqual(['O', 'C', 'C']);
 
     function getNewMolecule() {
       const molecule = Molecule.fromSmiles('CCCC');

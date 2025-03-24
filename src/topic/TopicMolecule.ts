@@ -404,6 +404,16 @@ export class TopicMolecule {
     return this.moleculeWithH.toMolfileV3();
   }
 
+  toMolfileWithoutH(options: ToMolfileOptions = {}) {
+    const molecule = this.molecule.getCompactCopy();
+    molecule.removeExplicitHydrogens(false);
+    const { version = 2 } = options;
+    if (version === 2) {
+      return molecule.toMolfile();
+    }
+    return molecule.toMolfileV3();
+  }
+
   /**
    * Returns an array of objects containing the oclID and the corresponding hydrogens and atoms
    * for the specified atomLabel (if any)
