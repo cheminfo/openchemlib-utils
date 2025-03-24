@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.6.0...v6.7.0) (2025-03-24)
+
+
+### Features
+
+* add getMolfileWithoutH on topicMolecule ([e58f1e6](https://github.com/cheminfo/openchemlib-utils/commit/e58f1e621813a69f427e898f8509c185afec1a5e))
+
 ## [6.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.5.3...v6.6.0) (2025-03-12)
 
 
