@@ -3,8 +3,7 @@
  * A unit must contain a R1 and a R2
  * An alpha end group must contain a R1
  * An omega end group must contain a R2
- * @param {import('openchemlib').Molecule} molecule - an instance of OCL.Molecule
- * @param unit
+ * @param {import('openchemlib').Molecule} unit - an instance of OCL.Molecule
  * @param {object} options
  * @param {number} [options.count=10] - number of units
  * @param {boolean} [options.markMonomer=false] - mark the different units of the polymer in the atom map
