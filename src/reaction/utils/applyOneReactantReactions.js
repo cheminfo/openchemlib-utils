@@ -1,4 +1,4 @@
-import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo';
+import { checkIfExistsOrAddInfo } from './checkIfExistsOrAddInfo.js';
 
 /**
  * @description apply one reaction to one reactant

@@ -1,4 +1,4 @@
-import { makeRacemic } from '../util/makeRacemic';
+import { makeRacemic } from '../util/makeRacemic.js';
 
 export function getAtomFeatures(originalMolecule, options = {}) {
   const OCL = originalMolecule.getOCL();

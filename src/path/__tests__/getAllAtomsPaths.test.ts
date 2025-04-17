@@ -2,9 +2,9 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { Molecule } from 'openchemlib';
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
-import { getAllAtomsPaths } from '../getAllAtomsPaths';
+import { getAllAtomsPaths } from '../getAllAtomsPaths.js';
 
 test('ethanol', () => {
   const molecule = Molecule.fromSmiles('CCO');

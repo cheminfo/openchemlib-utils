@@ -1,5 +1,5 @@
-import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
-import { groupDiastereotopicAtomIDs } from './groupDiastereotopicAtomIDs';
+import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs.js';
+import { groupDiastereotopicAtomIDs } from './groupDiastereotopicAtomIDs.js';
 
 /**
  * This function groups the diasterotopic atomIds of the molecule based on equivalence of atoms. The output object contains

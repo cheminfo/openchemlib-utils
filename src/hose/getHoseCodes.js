@@ -1,5 +1,5 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
-import { tagAtom } from '../util/tagAtom';
+import { tagAtom } from '../util/tagAtom.js';
 
 import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js';
 

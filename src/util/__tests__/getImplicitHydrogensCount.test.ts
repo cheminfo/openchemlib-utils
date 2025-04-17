@@ -1,11 +1,11 @@
-import OCL from 'openchemlib';
-import { test, expect } from 'vitest';
+import { Molecule } from 'openchemlib';
+import { expect, test } from 'vitest';
 
-import { getImplicitHydrogensCount } from '../getImplicitHydrogensCount';
-import { toggleHydrogens } from '../toggleHydrogens';
+import { getImplicitHydrogensCount } from '../getImplicitHydrogensCount.js';
+import { toggleHydrogens } from '../toggleHydrogens.js';
 
 test('getImplicitHydrogensCount and toggleHydrogens', () => {
-  const molecule = OCL.Molecule.fromSmiles('CCC');
+  const molecule = Molecule.fromSmiles('CCC');
   expect(getImplicitHydrogensCount(molecule, 0)).toBe(3);
   expect(getImplicitHydrogensCount(molecule, 1)).toBe(2);
   expect(getImplicitHydrogensCount(molecule, 2)).toBe(3);

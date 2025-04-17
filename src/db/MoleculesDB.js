@@ -1,11 +1,11 @@
-import appendCSV from './utils/appendCSV';
-import appendColor from './utils/appendColor';
+import appendCSV from './utils/appendCSV.js';
+import appendColor from './utils/appendColor.js';
 import appendEntries from './utils/appendEntries.js';
-import appendSDF from './utils/appendSDF';
-import appendSmilesList from './utils/appendSmilesList';
-import pushEntry from './utils/pushEntry';
-import pushMoleculeInfo from './utils/pushMoleculeInfo';
-import { search, searchAsync } from './utils/search';
+import appendSDF from './utils/appendSDF.js';
+import appendSmilesList from './utils/appendSmilesList.js';
+import pushEntry from './utils/pushEntry.js';
+import pushMoleculeInfo from './utils/pushMoleculeInfo.js';
+import { search, searchAsync } from './utils/search.js';
 
 /*
     this.db is an object with properties 'oclID' that has as value

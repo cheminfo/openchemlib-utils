@@ -1,8 +1,8 @@
 // this page allows to debug the hints: https://my.cheminfo.org/?viewURL=https%3A%2F%2Fmyviews.cheminfo.org%2Fdb%2Fvisualizer%2Fentry%2F108024089da99d0cb70a57724486d0c6%2Fview.json
 
-import { TopicMolecule } from '../topic/TopicMolecule';
+import { TopicMolecule } from '../topic/TopicMolecule.js';
 
-import { getUnsaturation } from './getUnsaturation';
+import { getUnsaturation } from './getUnsaturation.js';
 
 const defaultPossibleHints = [
   {

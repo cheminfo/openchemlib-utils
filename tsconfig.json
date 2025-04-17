@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "target": "ES2022",
     "outDir": "lib",
-    "sourceMap": true,
+    "module": "NodeNext",
     "strict": true,
-    "target": "es2020",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
   },
   "include": ["./src/**/*", "vitest.config.ts"]
 }

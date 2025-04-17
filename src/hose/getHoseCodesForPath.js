@@ -1,6 +1,6 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
-import { makeRacemic } from '../util/makeRacemic';
-import { tagAtom } from '../util/tagAtom';
+import { makeRacemic } from '../util/makeRacemic.js';
+import { tagAtom } from '../util/tagAtom.js';
 
 let fragment;
 

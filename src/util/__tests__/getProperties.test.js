@@ -1,7 +1,11 @@
-import { Molecule } from 'openchemlib';
-import { expect, it } from 'vitest';
+import { Molecule, Resources } from 'openchemlib';
+import { beforeAll, expect, it } from 'vitest';
 
 import { getProperties } from '../getProperties';
+
+beforeAll(() => {
+  Resources.registerFromNodejs();
+});
 
 it('getProperties, default options', () => {
   const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');

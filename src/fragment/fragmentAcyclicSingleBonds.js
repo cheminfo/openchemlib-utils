@@ -1,4 +1,4 @@
-import { getMF } from '../util/getMF';
+import { getMF } from '../util/getMF.js';
 import { getRAtomicNumber } from '../util/getRAtomicNumber.js';
 
 export function fragmentAcyclicSingleBonds(molecule) {

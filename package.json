@@ -2,27 +2,26 @@
   "name": "openchemlib-utils",
   "version": "6.7.0",
   "description": "Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs",
-  "main": "./lib/index.js",
-  "module": "./lib-esm/index.js",
+  "type": "module",
+  "exports": "./lib/index.js",
   "files": [
-    "src",
     "lib",
-    "lib-esm"
+    "src"
   ],
   "scripts": {
-    "build": "npm run tsc-cjs && cheminfo-build --entry lib/index.js --root OCLUtils",
+    "build": "npm run tsc && cheminfo-build --entry lib/index.js --root OCLUtils",
     "check-types": "tsc --noEmit",
-    "clean": "rimraf lib lib-esm",
+    "clean": "rimraf lib",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "npm run tsc",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-    "test": "npm run test-only && npm run eslint && npm run prettier && npm run check-types",
+    "test": "npm run test-only && npm run eslint && npm run prettier && npm run check-types && npm run verify-build",
     "test-only": "vitest run --coverage",
-    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm",
-    "tsc-cjs": "tsc --project tsconfig.cjs.json",
-    "tsc-esm": "tsc --project tsconfig.esm.json"
+    "tsc": "npm run clean && npm run tsc-build",
+    "tsc-build": "tsc --project tsconfig.build.json",
+    "verify-build": "npm run tsc && node lib/index.js"
   },
   "repository": {
     "type": "git",
@@ -40,21 +39,21 @@
   },
   "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
-    "@types/node": "^22.13.13",
-    "@vitest/coverage-istanbul": "^3.0.9",
+    "@types/node": "^22.14.1",
+    "@vitest/coverage-istanbul": "^3.1.1",
     "cheminfo-build": "^1.2.1",
     "cheminfo-types": "^1.8.1",
-    "eslint": "^9.23.0",
+    "eslint": "^9.24.0",
     "eslint-config-cheminfo-typescript": "^18.0.0",
     "fifo-logger": "^1.0.0",
     "globals": "^16.0.0",
     "mf-parser": "^3.4.2",
-    "openchemlib": "^8.18.1",
+    "openchemlib": "9.0.0",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
   },
   "dependencies": {
     "@lukeed/uuid": "^2.0.1",
@@ -67,6 +66,6 @@
     "sdf-parser": "^7.0.4"
   },
   "peerDependencies": {
-    "openchemlib": ">=8.18.1"
+    "openchemlib": ">=9.0.0"
   }
 }

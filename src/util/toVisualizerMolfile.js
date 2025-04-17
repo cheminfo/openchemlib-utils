@@ -1,5 +1,5 @@
-import { getDiastereotopicAtomIDsAndH } from '../diastereotopic/getDiastereotopicAtomIDsAndH';
-import { getGroupedDiastereotopicAtomIDs } from '../diastereotopic/getGroupedDiastereotopicAtomIDs';
+import { getDiastereotopicAtomIDsAndH } from '../diastereotopic/getDiastereotopicAtomIDsAndH.js';
+import { getGroupedDiastereotopicAtomIDs } from '../diastereotopic/getGroupedDiastereotopicAtomIDs.js';
 
 export function toVisualizerMolfile(molecule, options = {}) {
   const { diastereotopic, heavyAtomHydrogen } = options;

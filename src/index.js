@@ -1,53 +1,53 @@
-export * from './topic/TopicMolecule';
+export * from './topic/TopicMolecule.js';
 
-export * from './diastereotopic/ensureHeterotopicChiralBonds';
-export * from './diastereotopic/getDiastereotopicAtomIDs';
-export * from './diastereotopic/getDiastereotopicAtomIDsAndH';
-export * from './diastereotopic/getGroupedDiastereotopicAtomIDs';
-export * from './diastereotopic/getDiastereotopicAtomIDsFromMolfile';
-export * from './diastereotopic/toDiastereotopicSVG';
+export * from './diastereotopic/ensureHeterotopicChiralBonds.js';
+export * from './diastereotopic/getDiastereotopicAtomIDs.js';
+export * from './diastereotopic/getDiastereotopicAtomIDsAndH.js';
+export * from './diastereotopic/getGroupedDiastereotopicAtomIDs.js';
+export * from './diastereotopic/getDiastereotopicAtomIDsFromMolfile.js';
+export * from './diastereotopic/toDiastereotopicSVG.js';
 
-export * from './hose/getHoseCodes';
-export * from './hose/getHoseCodesAndInfo';
-export * from './hose/getHoseCodesForAtom';
-export * from './hose/getHoseCodesForAtoms';
-export * from './hose/getHoseCodesFromDiastereotopicID';
-export * from './hose/getHoseCodesForPath';
+export * from './hose/getHoseCodes.js';
+export * from './hose/getHoseCodesAndInfo.js';
+export * from './hose/getHoseCodesForAtom.js';
+export * from './hose/getHoseCodesForAtoms.js';
+export * from './hose/getHoseCodesFromDiastereotopicID.js';
+export * from './hose/getHoseCodesForPath.js';
 
 export * from './polymer/createPolymer.js';
 
-export * from './util/combineSmiles';
-export * from './util/dwar/parseDwar';
-export * from './util/getAtomsInfo';
-export * from './util/getConnectivityMatrix';
-export * from './util/getImplicitHydrogensCount';
-export * from './util/getMF';
-export * from './util/getCharge';
-export * from './util/getMolfilesMapping';
-export * from './util/getNMRHints';
-export * from './util/getNextNMRHint';
-export * from './util/getProperties';
-export * from './util/getAtoms';
-export * from './util/isCsp3';
-export * from './util/makeRacemic';
-export * from './util/nbOH';
-export * from './util/nbCOOH';
-export * from './util/nbCHO';
-export * from './util/nbNH2';
-export * from './util/nbCN';
-export * from './util/nbLabileH';
-export * from './util/tagAtom';
-export * from './util/toggleHydrogens';
-export * from './util/toVisualizerMolfile';
+export * from './util/combineSmiles.js';
+export * from './util/dwar/parseDwar.js';
+export * from './util/getAtomsInfo.js';
+export * from './util/getConnectivityMatrix.js';
+export * from './util/getImplicitHydrogensCount.js';
+export * from './util/getMF.js';
+export * from './util/getCharge.js';
+export * from './util/getMolfilesMapping.js';
+export * from './util/getNMRHints.js';
+export * from './util/getNextNMRHint.js';
+export * from './util/getProperties.js';
+export * from './util/getAtoms.js';
+export * from './util/isCsp3.js';
+export * from './util/makeRacemic.js';
+export * from './util/nbOH.js';
+export * from './util/nbCOOH.js';
+export * from './util/nbCHO.js';
+export * from './util/nbNH2.js';
+export * from './util/nbCN.js';
+export * from './util/nbLabileH.js';
+export * from './util/tagAtom.js';
+export * from './util/toggleHydrogens.js';
+export * from './util/toVisualizerMolfile.js';
 
-export * from './path/getPathsInfo';
-export * from './path/getPathAndTorsion';
-export * from './path/getShortestPaths';
+export * from './path/getPathsInfo.js';
+export * from './path/getPathAndTorsion.js';
+export * from './path/getShortestPaths.js';
 
-export * from './db/MoleculesDB';
+export * from './db/MoleculesDB.js';
 
-export * from './features/getAtomFeatures';
+export * from './features/getAtomFeatures.js';
 
-export * from './fragment/fragmentAcyclicSingleBonds';
+export * from './fragment/fragmentAcyclicSingleBonds.js';
 
-export * from './reaction/Reactions';
+export * from './reaction/Reactions.js';

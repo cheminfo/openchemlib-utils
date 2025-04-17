@@ -1,4 +1,4 @@
-import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs';
+import { getDiastereotopicAtomIDs } from './getDiastereotopicAtomIDs.js';
 
 /**
  *

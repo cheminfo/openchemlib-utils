@@ -7,15 +7,15 @@ import { getAllAtomsPaths } from '../path/getAllAtomsPaths.js';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
 import type { HoseCodesOptions } from './HoseCodesOptions.js';
-import { getCanonizedDiaIDs } from './getCanonizedDiaIDs';
-import { getCanonizedHoseCodes } from './getCanonizedHoseCodes';
-import { getDiaIDsAndInfo } from './getDiaIDsAndInfo';
+import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.js';
+import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.js';
+import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.js';
 import {
-  getHeterotopicSymmetryRanks,
   getFinalRanks,
-} from './getHeterotopicSymmetryRanks';
-import { getMoleculeWithH } from './getMoleculeWithH';
-import { getXMolecule } from './getXMolecule';
+  getHeterotopicSymmetryRanks,
+} from './getHeterotopicSymmetryRanks.js';
+import { getMoleculeWithH } from './getMoleculeWithH.js';
+import { getXMolecule } from './getXMolecule.js';
 
 interface ToMolfileOptions {
   version?: 2 | 3;
@@ -110,7 +110,7 @@ export class TopicMolecule {
       maxNbAtoms: 250,
       logger: console,
       ...options,
-    } as TopicMoleculeInternalOptions;
+    };
     this.idCode = molecule.getIDCode();
     this.molecule = this.originalMolecule.getCompactCopy();
     this.molecule.ensureHelperArrays(

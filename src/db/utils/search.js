@@ -1,7 +1,7 @@
 import { noWait } from '../../util/noWait.js';
 import { MoleculesDB } from '../MoleculesDB.js';
 
-import getMoleculeCreators from './getMoleculeCreators';
+import getMoleculeCreators from './getMoleculeCreators.js';
 
 class AbortError extends Error {
   name = 'AbortError';

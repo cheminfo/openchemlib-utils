@@ -1,4 +1,4 @@
-import { getDiastereotopicAtomIDs } from '../diastereotopic/getDiastereotopicAtomIDs';
+import { getDiastereotopicAtomIDs } from '../diastereotopic/getDiastereotopicAtomIDs.js';
 
 /**
  * Returns various information about atoms in the molecule
