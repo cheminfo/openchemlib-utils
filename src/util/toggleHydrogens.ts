@@ -1,6 +1,6 @@
 import type { Molecule } from 'openchemlib';
 
-import { getImplicitHydrogensCount } from './getImplicitHydrogensCount';
+import { getImplicitHydrogensCount } from './getImplicitHydrogensCount.js';
 
 /**
  * Toggle presence of implicity hydrogens on/off

@@ -1,8 +1,8 @@
-import { getSymmetryRanks } from '../util/getSymmetryRanks';
-import { makeRacemic } from '../util/makeRacemic';
-import { tagAtom } from '../util/tagAtom';
+import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
+import { makeRacemic } from '../util/makeRacemic.js';
+import { tagAtom } from '../util/tagAtom.js';
 
-import { ensureHeterotopicChiralBonds } from './ensureHeterotopicChiralBonds';
+import { ensureHeterotopicChiralBonds } from './ensureHeterotopicChiralBonds.js';
 
 /**
  * Returns an array of diastereotopic ID (as idCode)

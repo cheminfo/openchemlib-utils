@@ -1,7 +1,7 @@
 import type { LightLogger } from 'cheminfo-types';
 
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom';
+import { tagAtom } from '../util/tagAtom.js';
 
 import type { TopicMolecule } from './TopicMolecule.js';
 

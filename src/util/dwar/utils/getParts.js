@@ -1,4 +1,4 @@
-import { getCamelCase } from './getCamelCase';
+import { getCamelCase } from './getCamelCase.js';
 
 export function getParts(text) {
   const lines = text.split(/\r?\n/);

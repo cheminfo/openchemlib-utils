@@ -1,4 +1,4 @@
-import { getDiastereotopicAtomIDsAndH } from './getDiastereotopicAtomIDsAndH';
+import { getDiastereotopicAtomIDsAndH } from './getDiastereotopicAtomIDsAndH.js';
 
 /**
  * Returns a SVG

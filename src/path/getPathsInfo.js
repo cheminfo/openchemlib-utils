@@ -1,6 +1,6 @@
-import { getHoseCodesForPath } from '../hose/getHoseCodesForPath';
-import { getAtomsInfo } from '../util/getAtomsInfo';
-import { getConnectivityMatrix } from '../util/getConnectivityMatrix';
+import { getHoseCodesForPath } from '../hose/getHoseCodesForPath.js';
+import { getAtomsInfo } from '../util/getAtomsInfo.js';
+import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
 import { getPathAndTorsion } from './getPathAndTorsion.js';
 

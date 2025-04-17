@@ -2,7 +2,7 @@ import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopi
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom';
+import { tagAtom } from '../util/tagAtom.js';
 
 import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js';
 

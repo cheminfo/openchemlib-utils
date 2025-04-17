@@ -1,6 +1,6 @@
 import type { Molecule } from 'openchemlib';
 
-import { getXAtomicNumber } from './getXAtomicNumber';
+import { getXAtomicNumber } from './getXAtomicNumber.js';
 
 /**
  * Tag an atom to be able to visualize it

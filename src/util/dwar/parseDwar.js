@@ -1,8 +1,8 @@
 import { ensureString } from 'ensure-string';
 
-import { getParts } from './utils/getParts';
-import { parseColumnbProperties } from './utils/parseColumnbProperties';
-import { parseData } from './utils/parseData';
+import { getParts } from './utils/getParts.js';
+import { parseColumnbProperties } from './utils/parseColumnbProperties.js';
+import { parseData } from './utils/parseData.js';
 
 /**
  * Convert a DataWarrior database into a JSON object

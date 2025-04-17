@@ -1,7 +1,7 @@
 import { ensureString } from 'ensure-string';
 import Papa from 'papaparse';
 
-import getMoleculeCreators from './getMoleculeCreators';
+import getMoleculeCreators from './getMoleculeCreators.js';
 
 const defaultCSVOptions = {
   header: true,
