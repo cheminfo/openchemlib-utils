@@ -1,5 +1,16 @@
 # Changelog
 
+## [7.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.7.0...v7.0.0) (2025-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* update OCL to v9 and make package ESM-only ([#138](https://github.com/cheminfo/openchemlib-utils/issues/138))
+
+### Features
+
+* update OCL to v9 and make package ESM-only ([#138](https://github.com/cheminfo/openchemlib-utils/issues/138)) ([ad930a3](https://github.com/cheminfo/openchemlib-utils/commit/ad930a36d252f4123ac9b67fd075297eca6185cb))
+
 ## [6.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.6.0...v6.7.0) (2025-03-24)
 
 
