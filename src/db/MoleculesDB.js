@@ -73,7 +73,10 @@ export class MoleculesDB {
    * Append a SDF to the current database
    * @param {string|ArrayBuffer} sdf - text file containing the sdf
    * @param {object} [options={}] - Options.
-   * @param {Function} [options.onStep] - call back to execute after each molecule
+   * @param {Function} [options.onStep] - callback to execute after each molecule
+   * @param {boolean} [options.dynamicTyping=true] - Dynamically type the data
+   * @param {boolean} [options.mixedEOL=false] - Set to true if you know there is a mixture between \r\n and \n
+   * @param {string} [options.eol] - Specify the end of line character. Default will be the one found in the file
    * @returns {Promise<void>}
    */
   appendSDF(sdf, options) {
