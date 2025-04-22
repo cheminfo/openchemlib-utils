@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v7.0.0...v7.1.0) (2025-04-22)
+
+
+### Features
+
+* add option mixedEOL in appendSDF ([71d6438](https://github.com/cheminfo/openchemlib-utils/commit/71d6438c18927d2fd859874c16c910c9f131a952))
+
 ## [7.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v6.7.0...v7.0.0) (2025-04-17)
 
 
