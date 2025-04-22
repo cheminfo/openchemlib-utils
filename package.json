@@ -40,10 +40,10 @@
   "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
     "@types/node": "^22.14.1",
-    "@vitest/coverage-istanbul": "^3.1.1",
+    "@vitest/coverage-istanbul": "^3.1.2",
     "cheminfo-build": "^1.2.1",
     "cheminfo-types": "^1.8.1",
-    "eslint": "^9.24.0",
+    "eslint": "^9.25.1",
     "eslint-config-cheminfo-typescript": "^18.0.0",
     "fifo-logger": "^1.0.0",
     "globals": "^16.0.0",
@@ -53,7 +53,7 @@
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.2"
   },
   "dependencies": {
     "@lukeed/uuid": "^2.0.1",
