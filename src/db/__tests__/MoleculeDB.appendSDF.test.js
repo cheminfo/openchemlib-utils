@@ -40,4 +40,21 @@ describe('appendSDF', () => {
     expect(firstEntry.properties.logP).toBeDefined();
     expect(firstEntry.properties.polarSurfaceArea).toBeDefined();
   });
+
+  it('stats should be in incremental', async () => {
+    const moleculesDB = new MoleculesDB(OCL, { computeProperties: true });
+    await moleculesDB.appendSDF(sdf);
+    expect(moleculesDB.statistics).toMatchSnapshot();
+    expect(
+      moleculesDB.statistics.data.map((datum) => datum.counter),
+    ).toStrictEqual([20, 20, 20, 19, 19, 9, 19]);
+    const sdfTest = readFileSync(join(__dirname, './data/test.sdf'));
+    await moleculesDB.appendSDF(sdfTest);
+    expect(
+      moleculesDB.statistics.data.map((datum) => datum.counter),
+    ).toStrictEqual([
+      28, 20, 20, 19, 19, 9, 19, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 2, 2, 2, 2,
+    ]);
+    expect(moleculesDB.statistics).toMatchSnapshot();
+  });
 });

@@ -38,7 +38,6 @@ export default async function appendCSV(moleculesDB, csv, options = {}) {
   if (!moleculeCreator) {
     throw new Error('this document does not contain any molecule field');
   }
-  moleculesDB.statistics = stats;
 
   for (let i = 0; i < parsed.data.length; i++) {
     moleculesDB.pushEntry(

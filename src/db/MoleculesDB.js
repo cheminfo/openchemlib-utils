@@ -8,16 +8,22 @@ import pushMoleculeInfo from './utils/pushMoleculeInfo.js';
 import { search, searchAsync } from './utils/search.js';
 
 /*
-    this.db is an object with properties 'oclID' that has as value
-    an object that contains the following properties:
-    * molecule: an OCL molecule instance
-    * index: OCL index used for substructure searching
-    * properties: all the calculates properties
-    * data: array containing free data associated with this molecule
-  */
+ * @typedef {object} InternalStatistics
+ * @property {number} counter - number of entries
+ * @property {'number'|'boolean'|'string'|'object'|'mixed'} kind - kind of value
+ */
+
+/**
+ * this.db is an object with properties 'oclID' that has as value
+ * an object that contains the following properties:
+ * molecule: an OCL molecule instance
+ * index: OCL index used for substructure searching
+ * properties: all the calculates properties
+ * data: array containing free data associated with this molecule
+ */
 export class MoleculesDB {
   /**
-   *
+   * Creates an instance of MoleculesDB.
    * @param {typeof import('openchemlib')} OCL - openchemlib library
    * @param {object} [options={}] - Options.
    * @param {boolean} [options.computeProperties=false]
@@ -27,10 +33,89 @@ export class MoleculesDB {
     const { computeProperties = false, keepEmptyMolecules = false } = options;
     this.OCL = OCL;
     this.db = {};
-    this.statistics = null;
+    /**
+     * @type {Map<string, InternalStatistics>}
+     */
+    this.dataStatistics = new Map();
+    /**
+     * @type {Map<string, InternalStatistics>}
+     */
+    this.calculatedStatistics = new Map();
     this.computeProperties = computeProperties;
     this.keepEmptyMolecules = keepEmptyMolecules;
     this.searcher = new OCL.SSSearcherWithIndex();
+  }
+
+  get nbMolecules() {
+    return Object.keys(this.db).length;
+  }
+  get nbData() {
+    let number = 0;
+    for (const entry of Object.values(this.db)) {
+      number += entry.data.length;
+    }
+    return number;
+  }
+
+  get statistics() {
+    const nbData = this.nbData;
+    const nbMolecules = this.nbMolecules;
+    const statistics = {
+      data: [],
+      calculated: [],
+    };
+    for (const [key, value] of this.dataStatistics.entries()) {
+      const statistic = {
+        label: key,
+        counter: value.counter,
+        kind: value.kind,
+        always: value.counter === nbData,
+        isNumber: false,
+      };
+      statistics.data.push(statistic);
+      // if kind is numeric, add minValue and maxValue. Need to go through all the values
+      if (value.kind === 'number') {
+        statistic.isNumber = true;
+        statistic.minValue = Number.POSITIVE_INFINITY;
+        statistic.maxValue = Number.NEGATIVE_INFINITY;
+        for (const entry of Object.values(this.db)) {
+          for (const data of entry.data) {
+            if (data[key] < statistic.minValue) {
+              statistic.minValue = data[key];
+            }
+            if (data[key] > statistic.maxValue) {
+              statistic.maxValue = data[key];
+            }
+          }
+        }
+      }
+    }
+    for (const [key, value] of this.calculatedStatistics.entries()) {
+      const statistic = {
+        label: key,
+        counter: value.counter,
+        kind: value.kind,
+        always: value.counter === nbMolecules,
+        isNumber: false,
+      };
+      statistics.calculated.push(statistic);
+      // if kind is numeric, add minValue and maxValue. Need to go through all the values
+      if (value.kind === 'number') {
+        statistic.isNumber = true;
+        statistic.minValue = Number.POSITIVE_INFINITY;
+        statistic.maxValue = Number.NEGATIVE_INFINITY;
+        for (const entry of Object.values(this.db)) {
+          if (entry.properties[key] < statistic.minValue) {
+            statistic.minValue = entry.properties[key];
+          }
+          if (entry.properties[key] > statistic.maxValue) {
+            statistic.maxValue = entry.properties[key];
+          }
+        }
+      }
+    }
+
+    return statistics;
   }
 
   /**
@@ -45,6 +130,7 @@ export class MoleculesDB {
    * @param {string} [options.smilesPath]
    * @param {string} [options.molfilePath]
    * @param {Function} [options.onStep] - call back to execute after each molecule
+   * @returns {Promise<void>}
    */
   appendEntries(entries, options) {
     return appendEntries(this, entries, {
@@ -56,23 +142,21 @@ export class MoleculesDB {
   /**
    * append to the current database a CSV file
    * @param {string|ArrayBuffer} csv - text file containing the comma separated value file
-   * @param {object} [options={}]
-   * @param {boolean} [options.header=true]
-   * @param {boolean} [options.dynamicTyping=true]
-   * @param {boolean} [options.skipEmptyLines=true]
+   * @param {object} [options={}] - options.
+   * @param {boolean} [options.header=true] - if the first line of the file is a header
+   * @param {boolean} [options.dynamicTyping=true] - dynamically type the data (convert values to number of boolean if possible)
+   * @param {boolean} [options.skipEmptyLines=true] - skip empty lines
    * @param {Function} [options.onStep] - call back to execute after each molecule
+   * @returns {Promise<void>}
    */
   appendCSV(csv, options) {
-    return appendCSV(this, csv, {
-      computeProperties: this.computeProperties,
-      ...options,
-    });
+    return appendCSV(this, csv, options);
   }
 
   /**
    * Append a SDF to the current database
    * @param {string|ArrayBuffer} sdf - text file containing the sdf
-   * @param {object} [options={}] - Options.
+   * @param {object} [options={}] - options
    * @param {Function} [options.onStep] - callback to execute after each molecule
    * @param {boolean} [options.dynamicTyping=true] - Dynamically type the data
    * @param {boolean} [options.mixedEOL=false] - Set to true if you know there is a mixture between \r\n and \n
@@ -80,10 +164,7 @@ export class MoleculesDB {
    * @returns {Promise<void>}
    */
   appendSDF(sdf, options) {
-    return appendSDF(this, sdf, {
-      computeProperties: this.computeProperties,
-      ...options,
-    });
+    return appendSDF(this, sdf, options);
   }
 
   /**
@@ -94,10 +175,7 @@ export class MoleculesDB {
    * @returns {Promise<void>}
    */
   appendSmilesList(smiles, options) {
-    return appendSmilesList(this, smiles, {
-      computeProperties: this.computeProperties,
-      ...options,
-    });
+    return appendSmilesList(this, smiles, options);
   }
 
   /**
