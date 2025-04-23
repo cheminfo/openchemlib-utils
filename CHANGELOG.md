@@ -1,5 +1,16 @@
 # Changelog
 
+## [8.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v7.1.0...v8.0.0) (2025-04-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* add consistently statistics to DB. Property db.statistics returns now an object with data (previous stats) and predicted.
+
+### Features
+
+* add consistently statistics to DB. Property db.statistics returns now an object with data (previous stats) and predicted. ([e64c84b](https://github.com/cheminfo/openchemlib-utils/commit/e64c84b578df67832f683d1497a2f1edaefa5682))
+
 ## [7.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v7.0.0...v7.1.0) (2025-04-22)
 
 
