@@ -75,7 +75,7 @@ export class MoleculesDB {
       statistics.data.push(statistic);
       // if kind is numeric, add minValue and maxValue. Need to go through all the values
       if (value.kind === 'number') {
-        statistic.isNumber = true;
+        statistic.isNumeric = true;
         statistic.minValue = Number.POSITIVE_INFINITY;
         statistic.maxValue = Number.NEGATIVE_INFINITY;
         for (const entry of Object.values(this.db)) {
@@ -96,12 +96,12 @@ export class MoleculesDB {
         counter: value.counter,
         kind: value.kind,
         always: value.counter === nbMolecules,
-        isNumber: false,
+        isNumeric: false,
       };
       statistics.calculated.push(statistic);
       // if kind is numeric, add minValue and maxValue. Need to go through all the values
       if (value.kind === 'number') {
-        statistic.isNumber = true;
+        statistic.isNumeric = true;
         statistic.minValue = Number.POSITIVE_INFINITY;
         statistic.maxValue = Number.NEGATIVE_INFINITY;
         for (const entry of Object.values(this.db)) {

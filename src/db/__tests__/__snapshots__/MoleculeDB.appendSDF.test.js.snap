@@ -6,7 +6,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "mw",
       "maxValue": 402.48519999999996,
@@ -15,7 +15,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "em",
       "maxValue": 402.20424,
@@ -24,14 +24,14 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": false,
+      "isNumeric": false,
       "kind": "string",
       "label": "mf",
     },
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "acceptorCount",
       "maxValue": 6,
@@ -40,7 +40,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "donorCount",
       "maxValue": 3,
@@ -49,7 +49,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "logP",
       "maxValue": 7.642299979925156,
@@ -58,7 +58,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "logS",
       "maxValue": 0.022000011056661606,
@@ -67,7 +67,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "polarSurfaceArea",
       "maxValue": 97.73999786376953,
@@ -76,7 +76,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "rotatableBondCount",
       "maxValue": 5,
@@ -85,7 +85,7 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": true,
       "counter": 10,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "stereoCenterCount",
       "maxValue": 8,
@@ -124,7 +124,8 @@ exports[`appendSDF > stats should be in incremental 1`] = `
     {
       "always": false,
       "counter": 19,
-      "isNumber": true,
+      "isNumber": false,
+      "isNumeric": true,
       "kind": "number",
       "label": "mw",
       "maxValue": 402.49,
@@ -154,7 +155,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "mw",
       "maxValue": 402.48519999999996,
@@ -163,7 +164,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "em",
       "maxValue": 402.20424,
@@ -172,14 +173,14 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": false,
+      "isNumeric": false,
       "kind": "string",
       "label": "mf",
     },
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "acceptorCount",
       "maxValue": 9,
@@ -188,7 +189,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "donorCount",
       "maxValue": 4,
@@ -197,7 +198,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "logP",
       "maxValue": 7.642299979925156,
@@ -206,7 +207,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "logS",
       "maxValue": 0.022000011056661606,
@@ -215,7 +216,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "polarSurfaceArea",
       "maxValue": 139.53999948501587,
@@ -224,7 +225,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "rotatableBondCount",
       "maxValue": 9,
@@ -233,7 +234,7 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": true,
       "counter": 18,
-      "isNumber": true,
+      "isNumeric": true,
       "kind": "number",
       "label": "stereoCenterCount",
       "maxValue": 8,
@@ -272,7 +273,8 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": false,
       "counter": 19,
-      "isNumber": true,
+      "isNumber": false,
+      "isNumeric": true,
       "kind": "number",
       "label": "mw",
       "maxValue": 402.49,
@@ -323,7 +325,8 @@ exports[`appendSDF > stats should be in incremental 2`] = `
     {
       "always": false,
       "counter": 8,
-      "isNumber": true,
+      "isNumber": false,
+      "isNumeric": true,
       "kind": "number",
       "label": "Molecular Weight",
       "maxValue": 321.33,
