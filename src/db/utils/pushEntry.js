@@ -26,42 +26,65 @@ export default function pushEntry(
 
   if (!entry) {
     // a new molecule
-    entry = { molecule, properties: {}, data: [], idCode: moleculeIDCode };
-    moleculesDB.db[id] = entry;
 
     // ensure helper arrays needed for substructure search
     molecule.ensureHelperArrays(moleculesDB.OCL.Molecule.cHelperRings);
+    let index;
     if (!moleculeInfo.index) {
-      entry.index = molecule.getIndex();
+      index = molecule.getIndex();
     } else {
-      entry.index = moleculeInfo.index;
+      index = moleculeInfo.index;
     }
 
-    let molecularFormula;
-    if (!moleculeInfo.mw) {
-      molecularFormula = molecule.getMolecularFormula();
-      entry.properties.mw = molecularFormula.relativeWeight;
-    } else {
-      entry.properties.mw = moleculeInfo.mw;
-    }
+    const molecularFormula = molecule.getMolecularFormula();
+
+    entry = {
+      molecule,
+      properties: {
+        mw: molecularFormula.relativeWeight,
+        em: molecularFormula.absoluteWeight,
+        mf: molecularFormula.formula,
+      },
+      data: [],
+      idCode: moleculeIDCode,
+      index,
+    };
+    moleculesDB.db[id] = entry;
 
     if (moleculesDB.computeProperties) {
-      if (!molecularFormula) {
-        molecularFormula = molecule.getMolecularFormula();
-      }
       const properties = new moleculesDB.OCL.MoleculeProperties(molecule);
-      entry.properties.em = molecularFormula.absoluteWeight;
-      entry.properties.mf = molecularFormula.formula;
-      entry.properties.acceptorCount = properties.acceptorCount;
-      entry.properties.donorCount = properties.donorCount;
-      entry.properties.logP = properties.logP;
-      entry.properties.logS = properties.logS;
-      entry.properties.polarSurfaceArea = properties.polarSurfaceArea;
-      entry.properties.rotatableBondCount = properties.rotatableBondCount;
-      entry.properties.stereoCenterCount = properties.stereoCenterCount;
+      entry.properties = {
+        ...entry.properties,
+        acceptorCount: properties.acceptorCount,
+        donorCount: properties.donorCount,
+        logP: properties.logP,
+        logS: properties.logS,
+        polarSurfaceArea: properties.polarSurfaceArea,
+        rotatableBondCount: properties.rotatableBondCount,
+        stereoCenterCount: properties.stereoCenterCount,
+      };
     }
+    updateStatistics(moleculesDB.calculatedStatistics, entry.properties);
   }
   entry.data.push(data);
+  updateStatistics(moleculesDB.dataStatistics, data);
+}
+
+function updateStatistics(statistics, data) {
+  for (const key in data) {
+    const value = data[key];
+    if (!statistics.has(key)) {
+      statistics.set(key, {
+        counter: 0,
+        kind: typeof value,
+      });
+    }
+    const stat = statistics.get(key);
+    stat.counter++;
+    if (stat.kind !== typeof value) {
+      stat.kind = 'mixed';
+    }
+  }
 }
 
 function getMoleculeIDCode(molecule, moleculeInfo) {
