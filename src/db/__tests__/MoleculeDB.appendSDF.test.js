@@ -56,5 +56,10 @@ describe('appendSDF', () => {
       28, 20, 20, 19, 19, 9, 19, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 2, 2, 2, 2,
     ]);
     expect(moleculesDB.statistics).toMatchSnapshot();
+    moleculesDB.clear();
+    await moleculesDB.appendSDF(sdf);
+    expect(
+      moleculesDB.statistics.data.map((datum) => datum.counter),
+    ).toStrictEqual([20, 20, 20, 19, 19, 9, 19]);
   });
 });

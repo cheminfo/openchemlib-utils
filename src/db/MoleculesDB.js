@@ -46,6 +46,12 @@ export class MoleculesDB {
     this.searcher = new OCL.SSSearcherWithIndex();
   }
 
+  clear() {
+    this.db = {};
+    this.dataStatistics.clear();
+    this.calculatedStatistics.clear();
+  }
+
   get nbMolecules() {
     return Object.keys(this.db).length;
   }
