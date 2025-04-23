@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.0.1...v8.1.0) (2025-04-23)
+
+
+### Features
+
+* add db.clear method ([faaaaf7](https://github.com/cheminfo/openchemlib-utils/commit/faaaaf77faf626b35f7b584ca9c681bb80d5d243))
+
 ## [8.0.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.0.0...v8.0.1) (2025-04-23)
 
 
