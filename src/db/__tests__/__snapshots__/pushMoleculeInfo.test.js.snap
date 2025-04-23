@@ -10,6 +10,8 @@ exports[`MoleculesDB > pushMoleculeInfo > should add smiles molecule manually 1`
     "idCode": "gC\`@Dij@@",
     "molecule": undefined,
     "properties": {
+      "em": 58.07825,
+      "mf": "C4H10",
       "mw": 58.1234,
     },
   },
@@ -20,6 +22,8 @@ exports[`MoleculesDB > pushMoleculeInfo > should add smiles molecule manually 1`
     "idCode": "gJP@DiZh@",
     "molecule": undefined,
     "properties": {
+      "em": 72.0939,
+      "mf": "C5H12",
       "mw": 72.15028,
     },
   },
