@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.0.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.0.0...v8.0.1) (2025-04-23)
+
+
+### Bug Fixes
+
+* wrong isNumberic property in in statistics ([8f0c2ab](https://github.com/cheminfo/openchemlib-utils/commit/8f0c2ab08ca7ce85f88e674a33cd37101e734248))
+
 ## [8.0.0](https://github.com/cheminfo/openchemlib-utils/compare/v7.1.0...v8.0.0) (2025-04-23)
 
 
