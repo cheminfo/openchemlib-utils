@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.1.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.0...v8.1.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* toMolfileWithoutH with not shuffle atoms ([e005a76](https://github.com/cheminfo/openchemlib-utils/commit/e005a7662802e328d8eccdd658245507e9e4c443))
+
 ## [8.1.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.0.1...v8.1.0) (2025-04-23)
 
 
