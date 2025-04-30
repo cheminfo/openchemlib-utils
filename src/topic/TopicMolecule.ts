@@ -406,7 +406,20 @@ export class TopicMolecule {
 
   toMolfileWithoutH(options: ToMolfileOptions = {}) {
     const molecule = this.molecule.getCompactCopy();
-    molecule.removeExplicitHydrogens(false);
+    molecule.ensureHelperArrays(molecule.getOCL().Molecule.cHelperNeighbours);
+    const atomsToDelete = [];
+    for (let atomID = 0; atomID < molecule.getAtoms(); atomID++) {
+      if (molecule.getExplicitHydrogens(atomID) > 0) {
+        for (let i = 0; i < molecule.getAllConnAtoms(atomID); i++) {
+          const connectedAtom = molecule.getConnAtom(atomID, i);
+          if (molecule.getAtomicNo(connectedAtom) === 1) {
+            atomsToDelete.push(connectedAtom);
+          }
+        }
+      }
+    }
+    molecule.deleteAtoms(atomsToDelete);
+
     const { version = 2 } = options;
     if (version === 2) {
       return molecule.toMolfile();
