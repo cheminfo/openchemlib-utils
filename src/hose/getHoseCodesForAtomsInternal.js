@@ -62,7 +62,7 @@ export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
   }
 
   const fragments = [];
-  const fragment = new OCL.Molecule(0, 0);
+
   // keep track of the atoms when creating the fragment
   const mappings = [];
   let min = 0;
@@ -106,6 +106,7 @@ export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
     }
 
     if (sphere >= minSphereSize) {
+      const fragment = new OCL.Molecule(0, 0);
       molecule.copyMoleculeByAtoms(fragment, atomMask, true, mappings);
       // we using atomMapNo field in order to keep track of the original atom number even if we remove hydrogens
       for (let i = 0; i < fragment.getAllAtoms(); i++) {
@@ -116,7 +117,7 @@ export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
       makeRacemic(fragment);
       // we encode atom characteristics in the query features
       addQueryFeaturesAndRemoveMapNo(fragment, molecule);
-      fragments.push(fragment.getCompactCopy());
+      fragments.push(fragment);
     }
   }
   return fragments;
