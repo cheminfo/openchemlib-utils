@@ -2,20 +2,20 @@ import type { LightLogger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
 import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsInternal.js';
-import type { AtomPath } from '../path/getAllAtomsPaths.js';
-import { getAllAtomsPaths } from '../path/getAllAtomsPaths.js';
+import type { AtomPath } from '../path/getAllAtomsPaths.ts';
+import { getAllAtomsPaths } from '../path/getAllAtomsPaths.ts';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
 import type { HoseCodesOptions } from './HoseCodesOptions.js';
-import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.js';
-import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.js';
-import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.js';
+import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.ts';
+import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.ts';
+import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.ts';
 import {
   getFinalRanks,
   getHeterotopicSymmetryRanks,
-} from './getHeterotopicSymmetryRanks.js';
-import { getMoleculeWithH } from './getMoleculeWithH.js';
-import { getXMolecule } from './getXMolecule.js';
+} from './getHeterotopicSymmetryRanks.ts';
+import { getMoleculeWithH } from './getMoleculeWithH.ts';
+import { getXMolecule } from './getXMolecule.ts';
 
 interface ToMolfileOptions {
   version?: 2 | 3;
@@ -194,9 +194,16 @@ export class TopicMolecule {
       );
     }
     const atomPaths = this.atomsPaths[atom];
+    if (!atomPaths) {
+      throw new Error('Unexpected missing atom path');
+    }
     const paths = [];
     for (let i = minPathLength; i <= maxPathLength; i++) {
-      for (const atomPath of atomPaths[i]) {
+      const atomPathValue = atomPaths[i];
+      if (!atomPathValue) {
+        throw new Error(`Unexpected missing atom path at index ${i}`);
+      }
+      for (const atomPath of atomPathValue) {
         if (
           !toAtomicNo ||
           this.moleculeWithH.getAtomicNo(atomPath.path.at(-1) as number) ===
@@ -217,11 +224,18 @@ export class TopicMolecule {
       );
     }
     const atomPaths = this.atomsPaths[atom1];
+    if (!atomPaths) {
+      throw new Error('Unexpected missing atom path');
+    }
     const minDistance = pathLength || 0;
     const maxDistance = pathLength || this.options.maxPathLength;
     const paths = [];
     for (let i = minDistance; i <= maxDistance; i++) {
-      for (const atomPath of atomPaths[i]) {
+      const atomPathValue = atomPaths[i];
+      if (!atomPathValue) {
+        throw new Error(`Unexpected missing atom path at index ${i}`);
+      }
+      for (const atomPath of atomPathValue) {
         if (atomPath.path.at(-1) === atom2) {
           paths.push(atomPath.path);
         }
@@ -478,7 +492,9 @@ export class TopicMolecule {
         (diaID) => diaID.atomMapNo === destinationDiaID.atomMapNo,
       ) as DiaIDAndInfo;
       for (let i = 0; i < originalDiaID.attachedHydrogensIDCodes.length; i++) {
-        const oldHydrogenIDCode = originalDiaID.attachedHydrogensIDCodes[i];
+        const oldHydrogenIDCode = originalDiaID.attachedHydrogensIDCodes.at(
+          i,
+        ) as string;
         if (mapping[oldHydrogenIDCode]) continue;
         const newHydrogenIDCode = destinationDiaID.attachedHydrogensIDCodes[i];
         if (oldHydrogenIDCode && newHydrogenIDCode) {
@@ -558,7 +574,7 @@ function groupDiastereotopicAtomIDsAsObject(
 
   for (let i = 0; i < diaIDs.length; i++) {
     if (!atomLabel || moleculeWithH.getAtomLabel(i) === atomLabel) {
-      const diaID = diaIDs[i];
+      const diaID = diaIDs[i] as string;
       if (!diaIDsObject[diaID]) {
         diaIDsObject[diaID] = {
           counter: 0,
@@ -593,9 +609,9 @@ function groupDiastereotopicAtomIDsAsObject(
       diaIDsObject[diaID].atoms.push(i);
     }
   }
-  for (const diaID in diaIDsObject) {
-    diaIDsObject[diaID].existingAtoms.sort((a, b) => a - b);
-    diaIDsObject[diaID].attachedHydrogens.sort((a, b) => a - b);
+  for (const diaIDObject of Object.values(diaIDsObject)) {
+    diaIDObject.existingAtoms.sort((a, b) => a - b);
+    diaIDObject.attachedHydrogens.sort((a, b) => a - b);
   }
   return diaIDsObject;
 }

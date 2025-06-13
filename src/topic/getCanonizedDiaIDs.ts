@@ -1,9 +1,9 @@
 import type { LightLogger } from 'cheminfo-types';
 
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom.js';
+import { tagAtom } from '../util/tagAtom.ts';
 
-import type { TopicMolecule } from './TopicMolecule.js';
+import type { TopicMolecule } from './TopicMolecule.ts';
 
 export interface GetCanonizedDiaIDsOptions {
   maxNbAtoms: number;
