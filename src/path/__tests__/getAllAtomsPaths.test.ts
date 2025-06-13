@@ -34,7 +34,10 @@ test('isotopropyl alcohol with hydrogens, maxPathLength: 2', () => {
 });
 
 test('cyclosporin with hydrogens', () => {
-  const molfile = readFileSync(join(__dirname, 'data/cyclosporin.mol'), 'utf8');
+  const molfile = readFileSync(
+    join(import.meta.dirname, 'data/cyclosporin.mol'),
+    'utf8',
+  );
   const molecule = Molecule.fromMolfile(molfile);
   molecule.addImplicitHydrogens();
   const start = Date.now();

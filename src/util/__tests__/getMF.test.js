@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getMF } from '../getMF';
 
@@ -82,7 +82,10 @@ describe('getMF', () => {
   });
 
   it('multipart molfile', () => {
-    const molfile = fs.readFileSync(join(__dirname, 'ru.mol'), 'utf8');
+    const molfile = fs.readFileSync(
+      join(import.meta.dirname, 'ru.mol'),
+      'utf8',
+    );
     const molecule = OCL.Molecule.fromMolfile(molfile);
     const mf = getMF(molecule);
     expect(mf).toStrictEqual({ parts: ['2C8H16', '2HORu'], mf: 'C16H34O2Ru2' });

@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { beforeAll, expect, it, describe } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
@@ -30,7 +30,7 @@ describe('appendSmilesList', () => {
 });
 
 describe('search', () => {
-  const csv = readFileSync(join(__dirname, './data/data.csv'));
+  const csv = readFileSync(join(import.meta.dirname, './data/data.csv'));
   let moleculesDB;
 
   beforeAll(async () => {
@@ -145,7 +145,7 @@ describe('search', () => {
   });
 });
 describe('search async', () => {
-  const csv = readFileSync(join(__dirname, './data/data.csv'));
+  const csv = readFileSync(join(import.meta.dirname, './data/data.csv'));
   let moleculesDB;
 
   beforeAll(async () => {

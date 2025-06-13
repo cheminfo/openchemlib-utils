@@ -1,8 +1,6 @@
-// run with ts-node-transpile-only 
-
 import OCL from 'openchemlib';
 
-import { initOCL } from '../src';
+import { initOCL } from '../src/index.js';
 
 initOCL(OCL);
 

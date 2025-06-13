@@ -1,5 +1,4 @@
 import { noWait } from '../../util/noWait.js';
-import { MoleculesDB } from '../MoleculesDB.js';
 
 import getMoleculeCreators from './getMoleculeCreators.js';
 
@@ -22,7 +21,7 @@ function getQuery(moleculesDB, query, options) {
 
 /**
  * Internal function to search in the database
- * @param {MoleculesDB} moleculesDB
+ * @param {import('../MoleculesDB.js').MoleculesDB} moleculesDB
  * @param {string} query
  * @param {Record<string, any>} [options={}]
  * @param {'exact'|'substructure'|'substructureOR'|'similarity'} [options.mode='substructure']
@@ -89,7 +88,7 @@ function exactSearch(moleculesDB, query) {
 
 /**
  * No atoms in the query, we return all the molecules
- * @param {MoleculesDB} moleculesDB
+ * @param {import('../MoleculesDB.js').MoleculesDB} moleculesDB
  * @param {import('openchemlib').Molecule} query
  * @returns
  */

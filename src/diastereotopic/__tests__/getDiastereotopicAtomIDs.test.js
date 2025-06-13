@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getDiastereotopicAtomIDs } from '../getDiastereotopicAtomIDs';
 
@@ -72,7 +72,7 @@ describe('getDiastereotopicAtomIDs', () => {
 
   it('cyclosporin noH', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
-      join(__dirname, 'data/cyclosporin_noH.mol'),
+      join(import.meta.dirname, 'data/cyclosporin_noH.mol'),
       'utf8',
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);
@@ -83,7 +83,7 @@ describe('getDiastereotopicAtomIDs', () => {
 
   it('cyclosporin noH addImplicitHydrogens', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
-      join(__dirname, 'data/cyclosporin_noH.mol'),
+      join(import.meta.dirname, 'data/cyclosporin_noH.mol'),
       'utf8',
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);
@@ -95,7 +95,7 @@ describe('getDiastereotopicAtomIDs', () => {
 
   it('cyclosporin addImplicitHydrogens', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
-      join(__dirname, 'data/cyclosporin.mol'),
+      join(import.meta.dirname, 'data/cyclosporin.mol'),
       'utf8',
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);

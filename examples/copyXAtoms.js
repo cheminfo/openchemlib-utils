@@ -1,8 +1,4 @@
-// run with ts-node-transpile-only 
-
 import OCL from 'openchemlib';
-
-
 
 const molecule = OCL.Molecule.fromSmiles('C');
 molecule.addImplicitHydrogens();

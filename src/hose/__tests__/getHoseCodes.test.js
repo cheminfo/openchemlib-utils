@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { Molecule } from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getHoseCodes } from '../getHoseCodes';
 
@@ -139,7 +139,10 @@ describe('getHoseCodes', () => {
 
   it('cyclosporin', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
-      join(__dirname, '../../diastereotopic/__tests__/data/cyclosporin.mol'),
+      join(
+        import.meta.dirname,
+        '../../diastereotopic/__tests__/data/cyclosporin.mol',
+      ),
       'utf8',
     );
     const molecule = Molecule.fromMolfile(molfile);
