@@ -1,6 +1,6 @@
 import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom.js';
+import { tagAtom } from '../util/tagAtom.ts';
 
 import { ensureHeterotopicChiralBonds } from './ensureHeterotopicChiralBonds.js';
 

@@ -1,4 +1,4 @@
-import type { TopicMolecule, DiaIDAndInfo } from './TopicMolecule.js';
+import type { DiaIDAndInfo, TopicMolecule } from './TopicMolecule.ts';
 
 export function getDiaIDsAndInfo(
   diaMol: TopicMolecule,
@@ -17,13 +17,20 @@ export function getDiaIDsAndInfo(
 
   for (let i = 0; i < canonizedDiaIDs.length; i++) {
     const diaID = canonizedDiaIDs[diaMol.finalRanks[i]];
+    if (!diaID) {
+      throw new Error(`Unexpected missing canonized diaID for atom ${i}`);
+    }
+    const count = counts[diaID];
+    if (!count) {
+      throw new Error(`Unexpected missing count for diaID ${diaID}`);
+    }
     const newDiaID: DiaIDAndInfo = {
       idCode: diaID,
       attachedHydrogensIDCodes: [],
       attachedHydrogens: [],
       nbAttachedHydrogens: 0,
       atomLabel: molecule.getAtomLabel(i),
-      nbEquivalentAtoms: counts[diaID],
+      nbEquivalentAtoms: count,
       heavyAtom: undefined,
       atomMapNo: molecule.getAtomMapNo(i),
     };
@@ -37,6 +44,11 @@ export function getDiaIDsAndInfo(
         newDiaID.nbAttachedHydrogens++;
         newDiaID.attachedHydrogens.push(atom);
         const hydrogenDiaID = canonizedDiaIDs[diaMol.finalRanks[atom]];
+        if (!hydrogenDiaID) {
+          throw new Error(
+            `Unexpected missing canonized diaID for atom ${atom}`,
+          );
+        }
         if (!newDiaID.attachedHydrogensIDCodes.includes(hydrogenDiaID)) {
           newDiaID.attachedHydrogensIDCodes.push(hydrogenDiaID);
         }

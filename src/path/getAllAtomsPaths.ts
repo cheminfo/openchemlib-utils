@@ -47,10 +47,15 @@ export function getAllAtomsPaths(
       nextAtoms = [];
 
       for (let i = 0; i < currentIndexes.length; i++) {
-        const atom = currentAtoms[i];
-        const index = currentIndexes[i];
+        const atom = currentAtoms[i] as number;
+        const index = currentIndexes[i] as number;
 
-        const previousPath = oneAtomPaths[sphere - 1][index].path;
+        const previousPath = oneAtomPaths[sphere - 1]?.[index]?.path;
+        if (!previousPath) {
+          throw new Error(
+            `Unexpected missing previousPath for sphere ${sphere - 1} and index ${index}`,
+          );
+        }
         for (let conn = 0; conn < molecule.getAllConnAtoms(atom); conn++) {
           const connectedAtom = molecule.getConnAtom(atom, conn);
           if (previousPath.includes(connectedAtom)) continue;

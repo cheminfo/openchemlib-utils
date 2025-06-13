@@ -1,17 +1,9 @@
 {
+  "extends": "@zakodium/tsconfig",
   "compilerOptions": {
-    "target": "ES2022",
-    "outDir": "lib",
-    "module": "NodeNext",
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
     "allowJs": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true
+    "outDir": "lib"
   },
-  "include": ["./src/**/*", "vitest.config.ts"]
+  "include": ["src", "vite*.ts"]
 }

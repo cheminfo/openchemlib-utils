@@ -1,7 +1,7 @@
 import { getXAtomicNumber } from '../util/getXAtomicNumber.js';
 import { isCsp3 } from '../util/isCsp3.js';
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom.js';
+import { tagAtom } from '../util/tagAtom.ts';
 
 export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;

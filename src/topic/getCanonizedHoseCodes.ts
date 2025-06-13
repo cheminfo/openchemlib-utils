@@ -1,7 +1,7 @@
 import { getHoseCodesForAtomsInternal } from '../hose/getHoseCodesForAtomsInternal.js';
-import { tagAtom } from '../util/tagAtom.js';
+import { tagAtom } from '../util/tagAtom.ts';
 
-import type { TopicMolecule } from './TopicMolecule.js';
+import type { TopicMolecule } from './TopicMolecule.ts';
 
 export function getCanonizedHoseCodes(topicMolecule: TopicMolecule) {
   const options = topicMolecule.options;

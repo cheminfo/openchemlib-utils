@@ -41,6 +41,7 @@
   "devDependencies": {
     "@types/node": "^24.0.1",
     "@vitest/coverage-istanbul": "^3.2.3",
+    "@zakodium/tsconfig": "^1.0.1",
     "cheminfo-build": "^1.2.1",
     "cheminfo-types": "^1.8.1",
     "eslint": "^9.28.0",
