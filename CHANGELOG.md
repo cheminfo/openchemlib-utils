@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.1.2](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.1...v8.1.2) (2025-06-13)
+
+
+### Bug Fixes
+
+* remove uuid generator package ([4c3f537](https://github.com/cheminfo/openchemlib-utils/commit/4c3f5370458d9fc846df325b8fc0b92b201ba666))
+
 ## [8.1.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.0...v8.1.1) (2025-04-30)
 
 
