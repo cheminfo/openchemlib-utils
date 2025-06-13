@@ -2,12 +2,12 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
 describe('appendSDF', () => {
-  const sdf = readFileSync(join(__dirname, './data/data.sdf'));
+  const sdf = readFileSync(join(import.meta.dirname, './data/data.sdf'));
   it('should parse all molecules from SDF', async () => {
     const moleculesDB = new MoleculesDB(OCL);
     await moleculesDB.appendSDF(sdf);
@@ -48,7 +48,7 @@ describe('appendSDF', () => {
     expect(
       moleculesDB.statistics.data.map((datum) => datum.counter),
     ).toStrictEqual([20, 20, 20, 19, 19, 9, 19]);
-    const sdfTest = readFileSync(join(__dirname, './data/test.sdf'));
+    const sdfTest = readFileSync(join(import.meta.dirname, './data/test.sdf'));
     await moleculesDB.appendSDF(sdfTest);
     expect(
       moleculesDB.statistics.data.map((datum) => datum.counter),

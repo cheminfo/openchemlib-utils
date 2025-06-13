@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { MF } from 'mf-parser';
 import OCL, { Molecule } from 'openchemlib';
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { parseDwar } from '../../util/dwar/parseDwar.js';
 import { getMF } from '../../util/getMF.js';
@@ -13,7 +13,7 @@ import { Reactions } from '../Reactions.js';
 
 describe('Reactions', () => {
   const dwar = readFileSync(
-    join(__dirname, './data/ReactionMassFragmentation.dwar'),
+    join(import.meta.dirname, './data/ReactionMassFragmentation.dwar'),
     'utf8',
   );
   const database = parseDwar(dwar).data;

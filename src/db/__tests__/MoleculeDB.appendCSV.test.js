@@ -2,12 +2,12 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
 describe('appendCSV', () => {
-  const csv = readFileSync(join(__dirname, './data/data.csv'));
+  const csv = readFileSync(join(import.meta.dirname, './data/data.csv'));
   it('should parse all molecules', async () => {
     const moleculesDB = new MoleculesDB(OCL);
     await moleculesDB.appendCSV(csv);

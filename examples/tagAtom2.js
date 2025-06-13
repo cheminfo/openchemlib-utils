@@ -1,8 +1,6 @@
-// run with ts-node-transpile-only 
-
 import OCL from 'openchemlib';
 
-import { tagAtom, initOCL } from '../src';
+import { initOCL, tagAtom } from '../src/index.js';
 
 initOCL(OCL);
 

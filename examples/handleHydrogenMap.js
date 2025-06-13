@@ -1,5 +1,3 @@
-// ts-node-transpile-only handleHydrogenMap.js
-
 import OCL from 'openchemlib';
 
 const molecule = OCL.Molecule.fromSmiles('CO');

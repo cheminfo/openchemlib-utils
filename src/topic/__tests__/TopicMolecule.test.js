@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { FifoLogger } from 'fifo-logger';
 import { Molecule } from 'openchemlib';
-import { describe, it, expect, test } from 'vitest';
+import { describe, expect, it, test } from 'vitest';
 
 import { toggleHydrogens } from '../../util/toggleHydrogens';
 import { TopicMolecule } from '../TopicMolecule';
@@ -264,7 +264,7 @@ describe('TopicMolecule', () => {
 
   it('cyclosporin', { timeout: 30_000 }, () => {
     const molfile = readFileSync(
-      join(__dirname, 'data/cyclosporin.mol'),
+      join(import.meta.dirname, 'data/cyclosporin.mol'),
       'utf8',
     );
     const molecule = Molecule.fromMolfile(molfile);
@@ -284,7 +284,10 @@ describe('TopicMolecule', () => {
   });
 
   it('check getAtomIDsFromDiaID and existing H', () => {
-    const ethaneMol = readFileSync(join(__dirname, 'data/ethane.mol'), 'utf8');
+    const ethaneMol = readFileSync(
+      join(import.meta.dirname, 'data/ethane.mol'),
+      'utf8',
+    );
     // Take care that loading a molfile can reorder atoms !!!
     const molecule = Molecule.fromMolfile(ethaneMol);
     const topicMolecule = new TopicMolecule(molecule);
@@ -298,10 +301,16 @@ describe('TopicMolecule', () => {
 
   it('mapping of ethyl vinyl ether', () => {
     const ethylvinylether = Molecule.fromMolfile(
-      readFileSync(join(__dirname, 'data/ethylvinylether.mol'), 'utf8'),
+      readFileSync(
+        join(import.meta.dirname, 'data/ethylvinylether.mol'),
+        'utf8',
+      ),
     );
     const propylvinylether = Molecule.fromMolfile(
-      readFileSync(join(__dirname, 'data/propylvinylether.mol'), 'utf8'),
+      readFileSync(
+        join(import.meta.dirname, 'data/propylvinylether.mol'),
+        'utf8',
+      ),
     );
 
     const topicMolecule = new TopicMolecule(ethylvinylether);

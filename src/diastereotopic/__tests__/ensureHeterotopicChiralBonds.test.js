@@ -42,7 +42,7 @@ describe('ensureHeterotopicChiralBonds', () => {
 
   it('ethanol 2H', () => {
     const molfile = readFileSync(
-      join(__dirname, 'data/ethanol_2H.mol'),
+      join(import.meta.dirname, 'data/ethanol_2H.mol'),
       'utf8',
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);
@@ -54,7 +54,7 @@ describe('ensureHeterotopicChiralBonds', () => {
 
   it('cyclosporin', () => {
     const molfile = readFileSync(
-      join(__dirname, 'data/cyclosporin.mol'),
+      join(import.meta.dirname, 'data/cyclosporin.mol'),
       'utf8',
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);

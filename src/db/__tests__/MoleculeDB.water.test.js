@@ -42,7 +42,7 @@ test('water from scratch', async () => {
 
 test('water from database', async () => {
   const json = JSON.parse(
-    readFileSync(join(__dirname, './data/wikipedia.json'), 'utf8'),
+    readFileSync(join(import.meta.dirname, './data/wikipedia.json'), 'utf8'),
   );
   const moleculesDB = new MoleculesDB(OCL);
   moleculesDB.appendEntries(json.data.molecules, {

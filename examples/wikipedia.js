@@ -1,14 +1,11 @@
-// run with ts-node-transpile-only
+import OCL from 'openchemlib';
 
-import OCL from 'openchemlib/minimal.js';
-
-import { MoleculesDB } from '../src';
+import { MoleculesDB } from '../src/index.js';
 
 async function doAll() {
-  const response = await fetch(
-    'https://wikipedia.cheminfo.org/data.json',
-  );
-  const data = (await response.json()).data.molecules;
+  const response = await fetch('https://wikipedia.cheminfo.org/data.json');
+  const wikiJson = await response.json();
+  const data = wikiJson.data.molecules;
 
   // We create a database
 
@@ -38,7 +35,7 @@ async function doAll() {
     mode: 'exact',
   });
 
-  console.log('Number exact: ', exact.length);
+  console.log('Number exact:', exact.length);
   console.log(exact[0]);
 
   const substructure = moleculesDB.search(napthaleneIDCode, {
@@ -46,7 +43,7 @@ async function doAll() {
     mode: 'substructure',
   });
 
-  console.log('Number substructure: ', substructure.length);
+  console.log('Number substructure:', substructure.length);
   console.log(substructure[0]);
 
   const similarity = moleculesDB.search(napthaleneIDCode, {
@@ -54,9 +51,10 @@ async function doAll() {
     mode: 'similarity',
   });
 
-  console.log('Number similarity: ', similarity.length);
+  console.log('Number similarity:', similarity.length);
   console.log(similarity[0]);
-
 }
 
-doAll().then(() => console.log('done'));
+await doAll();
+
+console.log('done');

@@ -1,7 +1,7 @@
 // execute this file with `node rxn/convertDwar.mjs`
 // but first you will have to `npm run prepack`
 
-import { writeFileSync, readFileSync } from 'fs';
+import { writeFileSync, readFileSync } from 'node:fs';
 
 import { parseDwar } from '../lib/index.js';
 

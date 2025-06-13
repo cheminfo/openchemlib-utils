@@ -2,13 +2,13 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
 describe('appendEntries', () => {
   const entries = JSON.parse(
-    readFileSync(join(__dirname, './data/compounds.json'), 'utf8'),
+    readFileSync(join(import.meta.dirname, './data/compounds.json'), 'utf8'),
   ).data;
   it('should parse all molecules and skip empty', async () => {
     const moleculesDB = new MoleculesDB(OCL);

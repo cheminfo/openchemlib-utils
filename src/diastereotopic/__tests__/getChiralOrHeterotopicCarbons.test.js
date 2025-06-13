@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { Molecule } from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getChiralOrHeterotopicCarbons } from '../getChiralOrHeterotopicCarbons';
 
@@ -58,7 +58,7 @@ describe('getChiralOrHeterotopicCarbons', () => {
 
   it('cyclosporin', () => {
     const molfile = readFileSync(
-      join(__dirname, '/data/cyclosporin.mol'),
+      join(import.meta.dirname, '/data/cyclosporin.mol'),
       'utf8',
     );
     const molecule = Molecule.fromMolfile(molfile);
