@@ -1,5 +1,3 @@
-import { v4 } from '@lukeed/uuid';
-
 /**
  *
  * @param {MoleculesDB} moleculesDB
@@ -9,7 +7,6 @@ import { v4 } from '@lukeed/uuid';
  * @param {string} [moleculeInfo.idCode]
  * @param {number[]} [moleculeInfo.index]
  */
-
 export default function pushEntry(
   moleculesDB,
   molecule,
@@ -20,7 +17,7 @@ export default function pushEntry(
   // changes
 
   const moleculeIDCode = getMoleculeIDCode(molecule, moleculeInfo);
-  const id = moleculeIDCode || v4();
+  const id = moleculeIDCode || crypto.randomUUID();
 
   let entry = moleculesDB.db[id];
 
