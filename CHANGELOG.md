@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.1.3](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.2...v8.1.3) (2025-06-17)
+
+
+### Bug Fixes
+
+* update OCL ([6346624](https://github.com/cheminfo/openchemlib-utils/commit/6346624c586e89967108e6632f852c0a3507a77c))
+
 ## [8.1.2](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.1...v8.1.2) (2025-06-13)
 
 
