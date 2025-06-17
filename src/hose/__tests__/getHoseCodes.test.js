@@ -150,13 +150,13 @@ describe('getHoseCodes', () => {
     let hoseCodes = getHoseCodes(molecule, { maxSphereSize: 1 });
     expect(hoseCodes.length).toBe(196);
     let distincts = getDistinctHoses(hoseCodes);
-    expect(distincts.length).toBe(45);
+    expect(distincts.length).toBe(46);
     expect(distincts).toMatchSnapshot();
 
     hoseCodes = getHoseCodes(molecule, { maxSphereSize: 1, atomLabels: ['C'] });
     expect(hoseCodes.length).toBe(196);
     distincts = getDistinctHoses(hoseCodes);
-    expect(distincts.length).toBe(28);
+    expect(distincts.length).toBe(29);
     expect(distincts).toMatchSnapshot();
 
     hoseCodes = getHoseCodes(molecule, { atomLabels: ['C'] });
