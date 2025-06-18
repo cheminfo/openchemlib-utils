@@ -1,10 +1,19 @@
 // this page allows to debug the hints: https://my.cheminfo.org/?viewURL=https%3A%2F%2Fmyviews.cheminfo.org%2Fdb%2Fvisualizer%2Fentry%2F108024089da99d0cb70a57724486d0c6%2Fview.json
 
+import type { Molecule } from 'openchemlib';
+
 import { TopicMolecule } from '../topic/TopicMolecule.ts';
 
-import { getUnsaturation } from './getUnsaturation.js';
+import { getUnsaturation } from './getUnsaturation.ts';
 
-const defaultPossibleHints = [
+interface PossibleHint {
+  idCode: string;
+  message: string;
+  anyMatches?: string[];
+  remarks?: string;
+}
+
+const defaultPossibleHints: PossibleHint[] = [
   {
     idCode: String.raw`eF@Hp\pcc`,
     message: 'What about a non-aromatic ring?',
@@ -193,15 +202,27 @@ const defaultPossibleHints = [
   },
 ];
 
+export interface NMRHint {
+  message: string;
+  hash: number;
+}
+
+export interface GetNMRHintsOptions {
+  possibleHints?: PossibleHint[];
+}
+
 /**
  *
- * @param {import('openchemlib').Molecule} correct
- * @param {import('openchemlib').Molecule} proposed
- * @param {Record<string,any>} [options ={}]
- * @param {Array} [options.possibleHints=defaultPossibleHints]
+ * @param correct
+ * @param proposed
+ * @param options
  * @returns
  */
-export function getNMRHints(correct, proposed, options = {}) {
+export function getNMRHints(
+  correct: Molecule,
+  proposed: Molecule,
+  options: GetNMRHintsOptions = {},
+): NMRHint[] {
   const hints = [
     ...checkMF(correct, proposed),
     ...checkUnsaturation(correct, proposed),
@@ -254,13 +275,13 @@ export function getNMRHints(correct, proposed, options = {}) {
   }));
 }
 
-function isMFCorrect(correct, answer) {
+function isMFCorrect(correct: Molecule, answer: Molecule) {
   const mfCorrect = correct.getMolecularFormula().formula;
   const mfAnswer = answer.getMolecularFormula().formula;
   return mfCorrect === mfAnswer;
 }
 
-function checkMF(correct, answer) {
+function checkMF(correct: Molecule, answer: Molecule) {
   if (isMFCorrect(correct, answer)) return [];
   return [
     {
@@ -269,7 +290,7 @@ function checkMF(correct, answer) {
   ];
 }
 
-function checkUnsaturation(correct, answer) {
+function checkUnsaturation(correct: Molecule, answer: Molecule) {
   const mfCorrect = correct.getMolecularFormula().formula;
   const mfAnswer = answer.getMolecularFormula().formula;
   if (mfCorrect !== mfAnswer) {
@@ -301,7 +322,7 @@ function checkUnsaturation(correct, answer) {
   return [];
 }
 
-function checkStereoAndTautomer(correct, answer) {
+function checkStereoAndTautomer(correct: Molecule, answer: Molecule) {
   if (correct.getIDCode() === answer.getIDCode()) return [];
   if (getNoStereoIDCode(correct) === getNoStereoIDCode(answer)) {
     return [
@@ -320,7 +341,7 @@ function checkStereoAndTautomer(correct, answer) {
   return [];
 }
 
-function checkSymmetry(correct, answer) {
+function checkSymmetry(correct: Molecule, answer: Molecule) {
   const nbCorrectRanks = Object.keys(
     new TopicMolecule(correct).getDiaIDsObject(),
   ).length;
@@ -343,12 +364,12 @@ function checkSymmetry(correct, answer) {
   }
 }
 
-function getTautomerIDCode(molecule) {
+function getTautomerIDCode(molecule: Molecule) {
   const OCL = molecule.getOCL();
   return OCL.CanonizerUtil.getIDCode(molecule, OCL.CanonizerUtil.TAUTOMER);
 }
 
-function getNoStereoIDCode(molecule) {
+function getNoStereoIDCode(molecule: Molecule) {
   const OCL = molecule.getOCL();
   return OCL.CanonizerUtil.getIDCode(molecule, OCL.CanonizerUtil.NOSTEREO);
 }
@@ -363,11 +384,11 @@ function getNoStereoIDCode(molecule) {
     it is not quite final, I may still find improvements.
     So don't expect it to always produce the same output.
 */
-function getHash(str, seed = 0) {
+function getHash(str: string, seed = 0): number {
   let h1 = 0xdeadbeef ^ seed;
   let h2 = 0x41c6ce57 ^ seed;
   for (let i = 0, ch; i < str.length; i++) {
-    ch = str.codePointAt(i);
+    ch = str.codePointAt(i) as number;
     h1 = Math.imul(h1 ^ ch, 0x85ebca77);
     h2 = Math.imul(h2 ^ ch, 0xc2b2ae3d);
   }

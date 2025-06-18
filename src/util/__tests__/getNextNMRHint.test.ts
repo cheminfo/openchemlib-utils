@@ -1,15 +1,14 @@
-import OCL from 'openchemlib';
-import { test, expect } from 'vitest';
+import { Molecule } from 'openchemlib';
+import { expect, test } from 'vitest';
 
-import { getNextNMRHint } from '../getNextNMRHint.js';
-
-const { Molecule } = OCL;
+import type { NMRHint } from '../getNMRHints.js';
+import { getNextNMRHint } from '../getNextNMRHint.ts';
 
 test('getNextNMRHint', () => {
   const correct = Molecule.fromSmiles('c1ccncc1C(=O)OCC');
   const answer = Molecule.fromSmiles('c1ccccc1NC(=O)CO');
 
-  const providedHints = [];
+  const providedHints: NMRHint[] = [];
   const hint = getNextNMRHint(correct, answer, providedHints);
   expect(hint).toStrictEqual({
     hash: 8501907645562099,
@@ -17,14 +16,14 @@ test('getNextNMRHint', () => {
     message: 'An aromatic cycle can be an heterocycle.',
   });
 
-  providedHints.push(hint);
+  providedHints.push(hint as NMRHint);
   const hint2 = getNextNMRHint(correct, answer, providedHints);
   expect(hint2).toStrictEqual({
     hash: 7320388637202908,
     idCode: 'dmvD@DBdfUmYUj`@@@',
     message: 'Did you think about pyridine derivatives?',
   });
-  providedHints.push(hint2);
+  providedHints.push(hint2 as NMRHint);
 
   const hint3 = getNextNMRHint(correct, answer, providedHints);
   expect(hint3).toStrictEqual({
@@ -32,7 +31,7 @@ test('getNextNMRHint', () => {
     idCode: 'dmvD@DBdfUmYUj`@@@',
     message: 'What about an ester?',
   });
-  providedHints.push(hint3);
+  providedHints.push(hint3 as NMRHint);
 
   const hint4 = getNextNMRHint(correct, answer, providedHints);
   expect(hint4).toStrictEqual({
@@ -40,7 +39,7 @@ test('getNextNMRHint', () => {
     idCode: 'dmvD@DBdfUmYUj`@@@',
     hash: 8088209302184228,
   });
-  providedHints.push(hint4);
+  providedHints.push(hint4 as NMRHint);
 
   const hint5 = getNextNMRHint(correct, answer, providedHints);
   expect(hint5).toBeUndefined();
