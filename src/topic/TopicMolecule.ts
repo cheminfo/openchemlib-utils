@@ -387,7 +387,7 @@ export class TopicMolecule {
    * In order to calculate the ranks we replace all the
    * hydrogens with a X atom.
    */
-  get heterotopicSymmetryRanks() {
+  get heterotopicSymmetryRanks(): number[] {
     if (this.cache.heterotopicSymmetryRanks) {
       return this.cache.heterotopicSymmetryRanks;
     }
@@ -553,14 +553,14 @@ export function groupDiastereotopicAtomIDs(
   diaIDs: string[],
   molecule: Molecule,
   options: GroupedDiaIDsOptions = {},
-) {
+): GroupedDiaID[] {
   const diaIDsObject = groupDiastereotopicAtomIDsAsObject(
     diaIDs,
     molecule,
     molecule,
     options,
   );
-  return Object.keys(diaIDsObject).map((key) => diaIDsObject[key]);
+  return Object.values(diaIDsObject);
 }
 
 function groupDiastereotopicAtomIDsAsObject(
@@ -568,7 +568,7 @@ function groupDiastereotopicAtomIDsAsObject(
   molecule: Molecule,
   moleculeWithH: Molecule,
   options: GroupedDiaIDsOptions = {},
-) {
+): Record<string, GroupedDiaID> {
   const { atomLabel } = options;
   const diaIDsObject: Record<string, GroupedDiaID> = {};
 

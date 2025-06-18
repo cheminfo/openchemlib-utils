@@ -5,7 +5,7 @@ import type { Molecule } from 'openchemlib';
  * @param xMolecule
  * @returns
  */
-export function getHeterotopicSymmetryRanks(xMolecule: Molecule) {
+export function getHeterotopicSymmetryRanks(xMolecule: Molecule): number[] {
   xMolecule.ensureHelperArrays(
     xMolecule.getOCL().Molecule.cHelperSymmetryStereoHeterotopicity,
   );
@@ -15,7 +15,8 @@ export function getHeterotopicSymmetryRanks(xMolecule: Molecule) {
   }
   return symmetryRanks;
 }
-export function getFinalRanks(xMolecule: Molecule) {
+
+export function getFinalRanks(xMolecule: Molecule): number[] {
   xMolecule.ensureHelperArrays(
     xMolecule.getOCL().Molecule.cHelperSymmetryStereoHeterotopicity,
   );
