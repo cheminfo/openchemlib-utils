@@ -1,6 +1,6 @@
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
-import { getUnsaturation } from '../getUnsaturation.js';
+import { getUnsaturation } from '../getUnsaturation.ts';
 
 test('getUnsaturation', () => {
   expect(getUnsaturation('C6H6')).toBe(4);

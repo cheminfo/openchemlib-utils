@@ -328,7 +328,6 @@ export class TopicMolecule {
    * @returns
    */
   getDiaIDsObject() {
-    if (!this.diaIDs) return undefined;
     return groupDiastereotopicAtomIDsAsObject(
       this.diaIDs,
       this.molecule,

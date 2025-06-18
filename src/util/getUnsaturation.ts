@@ -1,4 +1,4 @@
-const unsaturationsObject = {
+const unsaturationsObject: Record<string, number> = {
   O: 0,
   N: 1,
   H: -1,
@@ -12,25 +12,23 @@ const unsaturationsObject = {
 
 /**
  * Simplified version of the calculation in mf-parser
- * @param {string} mf
+ * @param mf
  * @returns
  */
-export function getUnsaturation(mf) {
-  if (!mf) return undefined;
+export function getUnsaturation(mf: string): number | undefined {
   // split a molecular formula into its elements
   const elements = mf.match(/[A-Z][a-z]*\d*/g);
   if (!elements || elements.length === 0) return undefined;
   let unsaturation = 0;
-  for (let i = 0; i < elements.length; i++) {
-    const element = elements[i];
-    const matches = element.match(/([A-Z][a-z]?)(\d*)/);
-    const symbol = matches[1];
+  for (const element of elements) {
+    const matches = element.match(/([A-Z][a-z]?)(\d*)/) as RegExpMatchArray;
+    const symbol = matches[1] as string;
     const count = matches[2] ? Number.parseInt(matches[2], 10) : 1;
     const elementObject = unsaturationsObject[symbol];
     if (elementObject === undefined) {
       return undefined;
     }
-    unsaturation += unsaturationsObject[symbol] * count;
+    unsaturation += elementObject * count;
   }
   return unsaturation / 2 + 1;
 }
