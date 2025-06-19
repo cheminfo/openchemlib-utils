@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.1.5](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.4...v8.1.5) (2025-06-18)
+
+
+### Bug Fixes
+
+* NMRHint types ([#159](https://github.com/cheminfo/openchemlib-utils/issues/159)) ([cc8ee24](https://github.com/cheminfo/openchemlib-utils/commit/cc8ee249178caee1bd19bd56a14817478bc55d23))
+
 ## [8.1.4](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.3...v8.1.4) (2025-06-18)
 
 
