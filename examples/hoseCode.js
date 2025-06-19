@@ -9,7 +9,6 @@ function hoseFromCl(molecule) {
   const maxSphereSize = 2;
   const fragments = [];
   const OCL = molecule.getOCL();
-  const fragment = new OCL.Molecule(0, 0);
   // keep track of the atoms when creating the fragment
   const mappings = [];
   let min = 0;
