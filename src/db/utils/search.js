@@ -35,6 +35,9 @@ export function search(moleculesDB, query = '', options = {}) {
     case 'exact':
       result = exactSearch(moleculesDB, query);
       break;
+    case 'exactnostereo':
+      result = exactSearchNoStereo(moleculesDB, query);
+      break;
     case 'substructure':
       result = substructureSearch(moleculesDB, query);
       break;
@@ -60,6 +63,9 @@ export async function searchAsync(moleculesDB, query = '', options = {}) {
     case 'exact':
       result = exactSearch(moleculesDB, query);
       break;
+    case 'exactnostereo':
+      result = exactSearchNoStereo(moleculesDB, query);
+      break;
     case 'substructure':
       result = await subStructureSearchAsync(moleculesDB, query, options);
       break;
@@ -75,6 +81,12 @@ export async function searchAsync(moleculesDB, query = '', options = {}) {
   return processResult(result, options);
 }
 
+/**
+ * Search for an exact match in the database including stereochemistry
+ * @param {import('../MoleculesDB.js').MoleculesDB} moleculesDB
+ * @param {import('openchemlib').Molecule} query
+ * @returns
+ */
 function exactSearch(moleculesDB, query) {
   query = query.getCompactCopy();
   query.setFragment(false);
@@ -84,6 +96,36 @@ function exactSearch(moleculesDB, query) {
     ? [moleculesDB.db[queryIDCode]]
     : [];
   return searchResult;
+}
+
+/**
+ * Search for an exact match without stereo information
+ * @param {import('../MoleculesDB.js').MoleculesDB} moleculesDB
+ * @param {import('openchemlib').Molecule}  query
+ * @returns
+ */
+function exactSearchNoStereo(moleculesDB, query) {
+  query = query.getCompactCopy();
+  query.setFragment(false);
+  query.stripStereoInformation();
+  const queryIDCode = query.getIDCode();
+  // first filter by molecular weight
+  const mw = query.getMolecularFormula().relativeWeight;
+  const results = [];
+  for (const idCode in moleculesDB.db) {
+    const entry = moleculesDB.db[idCode];
+    if (mw !== entry.properties.mw) {
+      continue;
+    }
+    const candidateMolecule = entry.molecule.getCompactCopy();
+    candidateMolecule.stripStereoInformation();
+    const candidateIDCode = candidateMolecule.getIDCode();
+    if (candidateIDCode !== queryIDCode) {
+      continue;
+    }
+    results.push(entry);
+  }
+  return results;
 }
 
 /**
@@ -115,8 +157,8 @@ function substructureSearchEnd(searchResult, queryMW) {
 /**
  * Search by substructure in the database
  * If the substructure is composed of many fragments all the fragments must be present
- * @param {*} moleculesDB
- * @param {*} query
+ * @param {import('../MoleculesDB.js').MoleculesDB} moleculesDB
+ * @param {import('openchemlib').Molecule} query
  * @returns
  */
 function substructureSearch(moleculesDB, query) {
@@ -144,7 +186,7 @@ function substructureSearch(moleculesDB, query) {
 /**
  * Search by substructure in the database
  * If the substructure is composed of many fragments only one fragment must be present
- * @param {*} moleculesDB
+ * @param {import('../MoleculesDB.js').MoleculesDB} moleculesDB
  * @param {import('openchemlib').Molecule} query
  * @returns
  */
