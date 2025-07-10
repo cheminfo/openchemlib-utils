@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.5...v8.2.0) (2025-07-10)
+
+
+### Features
+
+* add search by exactNoStereo ([d271393](https://github.com/cheminfo/openchemlib-utils/commit/d271393138d34660ae6d7ce5b177926a33d5e2d8))
+
 ## [8.1.5](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.4...v8.1.5) (2025-06-18)
 
 
