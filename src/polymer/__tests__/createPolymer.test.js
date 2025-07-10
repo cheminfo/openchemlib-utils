@@ -1,5 +1,5 @@
 import { Molecule } from 'openchemlib';
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { createPolymer } from '../createPolymer';
 
@@ -11,6 +11,7 @@ test('createPolymer, default values', () => {
   unit.setAtomicNo(0, r1);
   unit.setAtomicNo(4, r2);
   const polymer = createPolymer(unit);
+
   expect(polymer.toSmiles()).toBe('CCOCCOCCOCCOCCOCCOCCOCCOCCOCCO');
 });
 
@@ -47,20 +48,25 @@ test('createPolymer, just 2 units of ethylene glycol but mark the units', () => 
     alpha,
     gamma,
   });
+
   expect(polymer.getIDCode()).toBe('daxDPHHLShaIUVjj@@');
+
   let monomerOneCounter = 0;
   for (let i = 0; i < polymer.getAtoms(); i++) {
     if (polymer.getAtomMapNo(i) === 1) {
       monomerOneCounter++;
     }
   }
+
   expect(monomerOneCounter).toBe(3);
+
   let monomerTwoCounter = 0;
   for (let i = 0; i < polymer.getAtoms(); i++) {
     if (polymer.getAtomMapNo(i) === 2) {
       monomerTwoCounter++;
     }
   }
+
   expect(monomerTwoCounter).toBe(3);
 
   expect(polymer.toSmiles()).toBe('ClCCOCCOBr');
@@ -68,18 +74,28 @@ test('createPolymer, just 2 units of ethylene glycol but mark the units', () => 
 
 test('all the exceptions', () => {
   expect(() => createPolymer()).toThrow('unit is required');
+
   const unit = Molecule.fromSmiles('CCCOC');
+
   expect(() => createPolymer(unit)).toThrow('unit must contain 1 R1');
+
   unit.setAtomicNo(0, r1);
+
   expect(() => createPolymer(unit)).toThrow('unit must contain 1 R2');
+
   unit.setAtomicNo(4, r1);
+
   expect(() => createPolymer(unit)).toThrow('unit must contain 1 R1');
+
   unit.setAtomicNo(4, r2);
   const alpha = Molecule.fromSmiles('CCCOC');
+
   expect(() => createPolymer(unit, { alpha })).toThrow(
     'alpha must contain 1 R1',
   );
+
   const gamma = Molecule.fromSmiles('CCCOC');
+
   expect(() => createPolymer(unit, { gamma })).toThrow(
     'gamma must contain 1 R2',
   );

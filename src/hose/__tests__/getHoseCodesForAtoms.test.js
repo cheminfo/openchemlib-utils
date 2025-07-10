@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getHoseCodesForAtoms } from '../getHoseCodesForAtoms';
 
@@ -10,6 +10,7 @@ describe('getHoseCodesForAtoms', () => {
     const molecule = Molecule.fromSmiles('CC(Cl)CC');
     let hoses = getHoseCodesForAtoms(molecule, [0]);
     hoses = hoses.map((hose) => escape(hose));
+
     expect(hoses).toStrictEqual([
       'fH@NJ%60uOkoth%5CJh',
       'eF@Hp%5CQPZQgr%5DW%7Ed%60xUP',
@@ -18,10 +19,12 @@ describe('getHoseCodesForAtoms', () => {
       'gJPHADIMuTe@xbhMFJ%5Ce%7CYZ%7BZ%5E%7FRHgBj@',
     ]);
   });
+
   it('C*C*(Cl)CC double marked atoms', () => {
     const molecule = Molecule.fromSmiles('CC(Cl)CC');
     let hoses = getHoseCodesForAtoms(molecule, [0, 1]);
     hoses = hoses.map((hose) => escape(hose));
+
     expect(hoses).toStrictEqual([
       'eF@Hp%5CIPUAiF_I%5DwzJCaUSaU@',
       'gC%60HADIMUIPNEJATFmEN_ZVnv%7FhdcaUIpj%60',
@@ -30,6 +33,7 @@ describe('getHoseCodesForAtoms', () => {
       'gJPHADIMuTe@xThEPZLTyKxruvt%7D%7EbRNETgBj@',
     ]);
   });
+
   it('Hc1ccccc1 double marked atoms in aromatic', () => {
     const molecule = Molecule.fromSmiles('Cc1ccccc1');
     molecule.setAtomicNo(0, 1);
@@ -40,6 +44,7 @@ describe('getHoseCodesForAtoms', () => {
         getHoseCodesForAtoms(molecule, [i], { maxSphereSize: 0 })[0],
       );
     }
+
     expect(results).toStrictEqual([
       'fH@NJ`uWj\u007Fth\\Jj|D@',
       'fH@NJ`uWj\u007Fth\\Jj|D@',

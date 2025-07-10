@@ -23,6 +23,7 @@ describe('Reactions', () => {
   const fragmentationsDatabase = database.filter(
     (entry) => entry.kind !== 'ionization',
   );
+
   it('mdma', () => {
     // MDMA example
     const xtc = Molecule.fromSmiles('CC(CC1(=CC2(=C(C=C1)OCO2)))NC');
@@ -57,6 +58,7 @@ describe('Reactions', () => {
     expect(reactions.processedMolecules).toMatchSnapshot();
 
     const nodes = reactions.getValidNodes();
+
     expect(nodes).toHaveLength(8);
 
     // in order to debug the trees
@@ -80,6 +82,7 @@ describe('Reactions', () => {
         return false;
       },
     });
+
     expect(filteredReactions.trees).toMatchSnapshot();
 
     //  writeFileSync('trees.json', JSON.stringify(filteredReactions.trees, null, 2));

@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getHoseCodesForPath } from '../getHoseCodesForPath';
 
@@ -11,6 +11,7 @@ describe('getHoseCodesForPath', () => {
     for (const hose of path.hoses) {
       hose.oclID = escape(hose.oclID);
     }
+
     expect(path).toStrictEqual({
       atoms: [0, 1, 3, 4],
       from: 0,

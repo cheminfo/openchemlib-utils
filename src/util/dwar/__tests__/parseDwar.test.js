@@ -1,25 +1,27 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { expect, it } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { parseDwar } from '../parseDwar.js';
 
-it('parseDwar', () => {
+test('parseDwar', () => {
   const text = readFileSync(
     join(import.meta.dirname, 'data/reactions.dwar'),
     'utf8',
   );
   const reactions = parseDwar(text);
   const data = reactions.data;
+
   expect(data).toHaveLength(3);
   expect(reactions).toMatchSnapshot();
 });
 
-it('R group', () => {
+test('R group', () => {
   const text = readFileSync(join(import.meta.dirname, 'data/r.dwar'), 'utf8');
   const structures = parseDwar(text);
   const data = structures.data;
+
   expect(data).toHaveLength(1);
   expect(structures).toMatchSnapshot();
 });

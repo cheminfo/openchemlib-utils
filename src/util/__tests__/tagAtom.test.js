@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { tagAtom } from '../tagAtom';
 
@@ -7,6 +7,7 @@ describe('tagAtom', () => {
   it('CCC', () => {
     let molecule = OCL.Molecule.fromSmiles('CCC');
     tagAtom(molecule, 0);
+
     expect(
       escape(
         molecule.getCanonizedIDCode(
@@ -14,8 +15,10 @@ describe('tagAtom', () => {
         ),
       ),
     ).toBe('eM@Df%60Xb%60%7FRP%5CJh');
+
     molecule = OCL.Molecule.fromSmiles('CCC');
     tagAtom(molecule, 1);
+
     expect(
       escape(
         molecule.getCanonizedIDCode(

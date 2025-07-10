@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getGroupedDiastereotopicAtomIDs } from '../getGroupedDiastereotopicAtomIDs';
 
@@ -8,6 +8,7 @@ describe('getGroupedDiastereotopicIDs test propane', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     molecule.addImplicitHydrogens();
     const diaIDs = getGroupedDiastereotopicAtomIDs(molecule);
+
     expect(diaIDs).toHaveLength(4);
     expect(diaIDs[0].counter).toBe(2);
     expect(diaIDs[0].atoms).toHaveLength(2);
@@ -20,6 +21,7 @@ describe('getGroupedDiastereotopicIDs test propane', () => {
     const diaIDs = getGroupedDiastereotopicAtomIDs(molecule, {
       atomLabel: 'C',
     });
+
     expect(diaIDs).toHaveLength(2);
     expect(diaIDs[0].counter).toBe(2);
     expect(diaIDs[0].atoms).toHaveLength(2);
@@ -32,6 +34,7 @@ describe('getGroupedDiastereotopicIDs test propane', () => {
     const diaIDs = getGroupedDiastereotopicAtomIDs(molecule, {
       atomLabel: 'H',
     });
+
     expect(diaIDs).toHaveLength(2);
     expect(diaIDs[0].counter).toBe(6);
     expect(diaIDs[0].atoms).toHaveLength(6);

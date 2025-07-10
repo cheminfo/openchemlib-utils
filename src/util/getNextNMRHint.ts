@@ -1,7 +1,7 @@
 import type { Molecule } from 'openchemlib';
 
-import { getNMRHints } from './getNMRHints.ts';
 import type { NMRHint } from './getNMRHints.ts';
+import { getNMRHints } from './getNMRHints.ts';
 
 interface NMRHintWithIdCode extends NMRHint {
   idCode: string;

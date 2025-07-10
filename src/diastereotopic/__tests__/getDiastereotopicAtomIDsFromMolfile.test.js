@@ -1,9 +1,9 @@
 import OCL from 'openchemlib';
-import { it, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { getDiastereotopicAtomIDsFromMolfile } from '../getDiastereotopicAtomIDsFromMolfile';
 
-it('getDiastereotopicAtomIDsFromMolfile', () => {
+test('getDiastereotopicAtomIDsFromMolfile', () => {
   const molfile = `$$ Empty String
   ACD/Labs09022211552D
   $$ Empty String
@@ -72,7 +72,7 @@ M  END`;
   `);
 });
 
-it('getDiastereotopicAtomIDsFromMolfile with H', () => {
+test('getDiastereotopicAtomIDsFromMolfile with H', () => {
   const molfile = `Empty String
   ACD/Labs09022211502D
   $$ Empty String

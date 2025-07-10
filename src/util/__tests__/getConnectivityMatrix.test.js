@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getConnectivityMatrix } from '../getConnectivityMatrix';
 
@@ -9,6 +9,7 @@ describe('getConnectivityMatrix', () => {
     molecule.addImplicitHydrogens();
 
     const connectivityMatrix = getConnectivityMatrix(molecule);
+
     expect(connectivityMatrix).toStrictEqual([
       [1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0],
       [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0],
@@ -27,6 +28,7 @@ describe('getConnectivityMatrix', () => {
   it('benzene', () => {
     const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
     const connectivityMatrix = getConnectivityMatrix(molecule);
+
     expect(connectivityMatrix).toStrictEqual([
       [1, 1, 0, 0, 0, 1],
       [1, 1, 1, 0, 0, 0],
@@ -58,6 +60,7 @@ describe('getConnectivityMatrix', () => {
     const connectivityMatrix = getConnectivityMatrix(molecule, {
       mass: true,
     });
+
     expect(connectivityMatrix).toStrictEqual([
       [12, 1, 0, 0, 0, 1],
       [1, 12, 1, 0, 0, 0],
@@ -73,6 +76,7 @@ describe('getConnectivityMatrix', () => {
     const connectivityMatrix = getConnectivityMatrix(molecule, {
       sdta: true,
     });
+
     expect(connectivityMatrix).toStrictEqual([
       [1, 1, 0, 0, 0, 0, 0],
       [1, 1, 4, 0, 0, 0, 4],
@@ -83,11 +87,13 @@ describe('getConnectivityMatrix', () => {
       [0, 4, 0, 0, 0, 4, 1],
     ]);
   });
+
   it('benzene with atomic number on diagonal', () => {
     const molecule = OCL.Molecule.fromSmiles('c1ccccc1');
     const connectivityMatrix = getConnectivityMatrix(molecule, {
       atomicNo: true,
     });
+
     expect(connectivityMatrix).toStrictEqual([
       [6, 1, 0, 0, 0, 1],
       [1, 6, 1, 0, 0, 0],
@@ -103,6 +109,7 @@ describe('getConnectivityMatrix', () => {
     const connectivityMatrix = getConnectivityMatrix(molecule, {
       negativeAtomicNo: true,
     });
+
     expect(connectivityMatrix).toStrictEqual([
       [-6, 1, 0, 0, 0, 1],
       [1, -6, 1, 0, 0, 0],
@@ -118,6 +125,7 @@ describe('getConnectivityMatrix', () => {
     const connectivityMatrix = getConnectivityMatrix(molecule, {
       pathLength: true,
     });
+
     expect(connectivityMatrix).toStrictEqual([
       [0, 1, 2, 3, 2, 1],
       [1, 0, 1, 2, 3, 2],

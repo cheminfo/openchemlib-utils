@@ -10,6 +10,7 @@ describe('getDiastereotopicAtomIDs', () => {
   it('CCC', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     const ids = getDiastereotopicAtomIDs(molecule);
+
     expect(ids).toStrictEqual([
       'eM@Df`Xb`\u007FRP\\Jh',
       'eM@HzAbJC}IApj`',
@@ -17,10 +18,11 @@ describe('getDiastereotopicAtomIDs', () => {
     ]);
   });
 
-  it('CCC', () => {
+  it('CCC - 2', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     molecule.addImplicitHydrogens();
     const ids = getDiastereotopicAtomIDs(molecule);
+
     expect(ids).toStrictEqual([
       'eM@Df`Xb`\u007FRP\\Jh',
       'eM@HzAbJC}IApj`',
@@ -39,6 +41,7 @@ describe('getDiastereotopicAtomIDs', () => {
   it('CC(Cl)CC', () => {
     const molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
     const ids = getDiastereotopicAtomIDs(molecule);
+
     expect(ids).toStrictEqual([
       'gJPHADIMuTe@XbhOtbIpj`',
       'gJPHADILuTe@XdhOtbQpj`',
@@ -48,10 +51,11 @@ describe('getDiastereotopicAtomIDs', () => {
     ]);
   });
 
-  it('CC(Cl)CC', () => {
+  it('CC(Cl)CC - 2', () => {
     const molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
     molecule.addImplicitHydrogens();
     const ids = getDiastereotopicAtomIDs(molecule);
+
     expect(ids).toStrictEqual([
       'gJPHADIMuTe@XbhOtbIpj`',
       'gJPHADILuTe@XdhOtbQpj`',
@@ -77,6 +81,7 @@ describe('getDiastereotopicAtomIDs', () => {
     );
     const molecule = OCL.Molecule.fromMolfile(molfile);
     const diaIDs = getDiastereotopicAtomIDs(molecule);
+
     expect(diaIDs).toHaveLength(85);
     expect(diaIDs).toMatchSnapshot();
   });
@@ -89,6 +94,7 @@ describe('getDiastereotopicAtomIDs', () => {
     const molecule = OCL.Molecule.fromMolfile(molfile);
     molecule.addImplicitHydrogens();
     const diaIDs = getDiastereotopicAtomIDs(molecule);
+
     expect(diaIDs).toHaveLength(196);
     expect(diaIDs).toMatchSnapshot();
   });
@@ -101,6 +107,7 @@ describe('getDiastereotopicAtomIDs', () => {
     const molecule = OCL.Molecule.fromMolfile(molfile);
     molecule.addImplicitHydrogens();
     const diaIDs = getDiastereotopicAtomIDs(molecule);
+
     expect(diaIDs).toHaveLength(196);
     expect(diaIDs).toMatchSnapshot();
   });

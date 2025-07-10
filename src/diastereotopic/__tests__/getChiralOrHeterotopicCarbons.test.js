@@ -10,6 +10,7 @@ describe('getChiralOrHeterotopicCarbons', () => {
   it('CCC', async () => {
     const molecule = Molecule.fromSmiles('CCC');
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(atoms).toStrictEqual([]);
   });
 
@@ -17,6 +18,7 @@ describe('getChiralOrHeterotopicCarbons', () => {
     const molecule = Molecule.fromSmiles('CCO');
     molecule.addImplicitHydrogens();
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(molecule.getConnAtoms(1)).toBe(2);
     expect(atoms).toStrictEqual([1]);
   });
@@ -27,6 +29,7 @@ describe('getChiralOrHeterotopicCarbons', () => {
     molecule.ensureHelperArrays(Molecule.cHelperNeighbours);
 
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(molecule.getConnAtoms(2)).toBe(2);
     expect(atoms).toStrictEqual([2]);
   });
@@ -35,24 +38,28 @@ describe('getChiralOrHeterotopicCarbons', () => {
     const molecule = Molecule.fromSmiles('C1CC1');
     molecule.addImplicitHydrogens();
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(atoms).toStrictEqual([]);
   });
 
   it('CC1CC1', async () => {
     const molecule = Molecule.fromSmiles('CC1CC1');
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(atoms).toStrictEqual([1, 2, 3]);
   });
 
   it('FC(C(C)C)Cl', async () => {
     const molecule = Molecule.fromSmiles('FC(C(C)C)Cl');
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(atoms).toStrictEqual([1, 2]);
   });
 
-  it('FC(C(C)C)Cl', async () => {
+  it('FC(C(C)C)Cl - 2', async () => {
     const molecule = Molecule.fromSmiles('FC(CC(C)C)Cl');
     const atoms = getChiralOrHeterotopicCarbons(molecule);
+
     expect(atoms).toStrictEqual([1, 2, 3]);
   });
 
@@ -63,6 +70,7 @@ describe('getChiralOrHeterotopicCarbons', () => {
     );
     const molecule = Molecule.fromMolfile(molfile);
     const atoms = getChiralOrHeterotopicCarbons(molecule);
-    expect(atoms.length).toBe(25);
+
+    expect(atoms).toHaveLength(25);
   });
 });

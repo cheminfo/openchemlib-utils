@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { combineSmiles } from '../combineSmiles';
 
@@ -17,6 +17,7 @@ describe('combineSmiles', () => {
     ];
     const core = 'c1nc([R1])c([R2])c([R3])c([R4])1';
     const results = await combineSmiles(core, fragments, OCL);
+
     expect(results).toHaveLength(180);
     expect(results[0].mw).toBe(137.18134);
     expect(results[0].mf).toBe('C8H11NO');
@@ -32,6 +33,7 @@ describe('combineSmiles', () => {
     const results = await combineSmiles(core, fragments, OCL, {
       onStep: () => counter++,
     });
+
     expect(results).toHaveLength(4);
     expect(counter).toBe(4);
   });
@@ -45,6 +47,7 @@ describe('combineSmiles', () => {
     const results = await combineSmiles(core, fragments, OCL, {
       complexity: true,
     });
+
     expect(results).toBe(4);
   });
 });
