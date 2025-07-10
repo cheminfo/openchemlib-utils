@@ -26,6 +26,7 @@ describe('appendSmilesList', () => {
     }
 
     await moleculesDB.appendSmilesList(text, { onStep });
+
     expect(called).toBe(3);
   });
 });
