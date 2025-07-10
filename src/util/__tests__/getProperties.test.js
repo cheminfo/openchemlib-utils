@@ -1,5 +1,5 @@
 import { Molecule, Resources } from 'openchemlib';
-import { beforeAll, expect, it } from 'vitest';
+import { beforeAll, expect, test } from 'vitest';
 
 import { getProperties } from '../getProperties';
 
@@ -7,9 +7,10 @@ beforeAll(() => {
   Resources.registerFromNodejs();
 });
 
-it('getProperties, default options', () => {
+test('getProperties, default options', () => {
   const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
   const properties = getProperties(molecule);
+
   expect(properties).toStrictEqual({
     acceptorCount: 3,
     donorCount: 1,
@@ -23,9 +24,10 @@ it('getProperties, default options', () => {
   });
 });
 
-it('getProperties, includeToxicities', () => {
+test('getProperties, includeToxicities', () => {
   const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
   const properties = getProperties(molecule, { includeToxicities: true });
+
   expect(properties).toStrictEqual({
     acceptorCount: 3,
     donorCount: 1,
@@ -43,12 +45,13 @@ it('getProperties, includeToxicities', () => {
   });
 });
 
-it('getProperties, include all', () => {
+test('getProperties, include all', () => {
   const molecule = Molecule.fromSmiles('[NH3+]CC(=O)[O-]');
   const properties = getProperties(molecule, {
     includeToxicities: true,
     includeDruglikeness: true,
   });
+
   expect(properties).toStrictEqual({
     acceptorCount: 3,
     donorCount: 1,

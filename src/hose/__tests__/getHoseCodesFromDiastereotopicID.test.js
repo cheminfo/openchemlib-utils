@@ -8,6 +8,7 @@ describe('getHoseCodesFromDiastereotopicID', () => {
     const molecule = OCL.Molecule.fromIDCode('gJPHADILuTe@X`hOtbCpfuP');
     let hoses = getHoseCodesFromDiastereotopicID(molecule);
     hoses = hoses.map((hose) => escape(hose));
+
     expect(hoses).toMatchInlineSnapshot(`
       [
         "fHdPAqTGzT%5EDvj@",
@@ -25,6 +26,7 @@ describe('getHoseCodesFromDiastereotopicID', () => {
       maxSphereSize: 2,
     });
     hoses = hoses.map((hose) => escape(hose));
+
     expect(hoses).toMatchInlineSnapshot(`
       [
         "fHdPAqTGzT%5EDvj@",

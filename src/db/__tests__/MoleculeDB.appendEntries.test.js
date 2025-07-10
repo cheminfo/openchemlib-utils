@@ -10,6 +10,7 @@ describe('appendEntries', () => {
   const entries = JSON.parse(
     readFileSync(join(import.meta.dirname, './data/compounds.json'), 'utf8'),
   ).data;
+
   it('should parse all molecules and skip empty', async () => {
     const moleculesDB = new MoleculesDB(OCL);
 
@@ -21,7 +22,9 @@ describe('appendEntries', () => {
     }
 
     await moleculesDB.appendEntries(entries);
+
     expect(moleculesDB.getDB()).toHaveLength(0);
+
     await moleculesDB.appendEntries(entries, {
       idCodePath: 'data.ocl.idCode',
       indexPath: 'data.ocl.index',
@@ -29,6 +32,7 @@ describe('appendEntries', () => {
       mwPath: 'data.mw',
       onStep,
     });
+
     expect(moleculesDB.getDB()).toHaveLength(10);
     expect(called).toBe(15);
   });
@@ -52,12 +56,16 @@ describe('appendEntries', () => {
       mwPath: 'data.mw',
       onStep,
     });
+
     expect(moleculesDB.getDB()).toHaveLength(15);
     expect(called).toBe(15);
 
     const results = await moleculesDB.search('', { format: 'smiles' });
+
     expect(results).toHaveLength(15);
+
     const results2 = await moleculesDB.search('C', { format: 'smiles' });
+
     expect(results2).toHaveLength(10);
   });
 });

@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getDiastereotopicAtomIDsAndH } from '../getDiastereotopicAtomIDsAndH';
 

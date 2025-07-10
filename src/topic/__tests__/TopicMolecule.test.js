@@ -26,14 +26,17 @@ describe('TopicMolecule', () => {
       maxNbAtoms: 1000,
       logger,
     });
+
     expect(topicMolecule2.diaIDs).toHaveLength(262);
     expect(logger.getLogs()).toHaveLength(2);
   });
+
   it('ethanol', () => {
     const molecule = Molecule.fromSmiles('CCCO');
     molecule.setAtomicNo(0, 1);
     const topicMolecule = new TopicMolecule(molecule);
     const diaIDs = topicMolecule.diaIDs;
+
     expect(diaIDs).toHaveLength(9);
     expect(diaIDs).toStrictEqual([
       'eMHAIhFHhOtdGrj@',
@@ -46,11 +49,16 @@ describe('TopicMolecule', () => {
       'gCaHDIeIjiJ@\u007FRHDRj@',
       'gCaHDIeIjiJ@\u007FRHDRj@',
     ]);
+
     const diaIDsAndInfo = topicMolecule.diaIDsAndInfo;
+
     expect(diaIDsAndInfo).toHaveLength(9);
     expect(diaIDsAndInfo).toMatchSnapshot();
+
     const molfile = topicMolecule.toMolfile();
+
     expect(getMolfileAtoms(molfile)).toStrictEqual(['O', 'C', 'C', 'H']);
+
     const molfileWithH = topicMolecule.toMolfileWithH();
 
     expect(getMolfileAtoms(molfileWithH)).toStrictEqual([
@@ -66,6 +74,7 @@ describe('TopicMolecule', () => {
     ]);
 
     const molfileWithoutH = topicMolecule.toMolfileWithoutH();
+
     expect(getMolfileAtoms(molfileWithoutH)).toStrictEqual(['O', 'C', 'C']);
 
     function getNewMolecule() {
@@ -76,8 +85,11 @@ describe('TopicMolecule', () => {
     }
 
     const newAdvancedMolecule = topicMolecule.fromMolecule(getNewMolecule());
+
     expect(newAdvancedMolecule.diaIDs).toHaveLength(9);
+
     const groupedDiaIDs = newAdvancedMolecule.getGroupedDiastereotopicAtomIDs();
+
     expect(groupedDiaIDs).toHaveLength(6);
     expect(groupedDiaIDs).toMatchSnapshot();
   });
@@ -119,6 +131,7 @@ describe('TopicMolecule', () => {
         mapping[oldIDCode] = newIDCode;
       }
     }
+
     expect(mapping).toStrictEqual({
       'eMHAIhFJhOtdgBj@': 'eF@HpLQP_iHNET',
       'eMHAIhFIhOtdWBj@': 'eF@HpLQP_iHNET',
@@ -161,9 +174,12 @@ describe('TopicMolecule', () => {
     topicMolecule.setAtomNoInMapNo();
     const molfile = topicMolecule.toMolfile();
     const molfileMapNos = extratMapNo(molfile);
+
     expect(molfileMapNos).toStrictEqual([1, 2, 3, 4, 5]);
+
     const molfileWithH = topicMolecule.toMolfileWithH();
     const molfileWithHMapNos = extratMapNo(molfileWithH);
+
     expect(molfileWithHMapNos).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
@@ -198,6 +214,7 @@ describe('TopicMolecule', () => {
     const molecule = Molecule.fromSmiles('CCO');
     const topicMolecule = new TopicMolecule(molecule);
     let atoms = getAtomsAndDiaInfo(topicMolecule);
+
     expect(atoms).toHaveLength(3);
     expect(atoms).toMatchSnapshot();
 
@@ -205,6 +222,7 @@ describe('TopicMolecule', () => {
 
     let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     atoms = getAtomsAndDiaInfo(advancedMolecule2);
+
     expect(atoms).toHaveLength(6);
     expect(atoms).toMatchSnapshot();
 
@@ -213,10 +231,12 @@ describe('TopicMolecule', () => {
 
     advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     atoms = getAtomsAndDiaInfo(advancedMolecule2);
+
     expect(atoms).toHaveLength(5);
     expect(atoms).toMatchSnapshot();
 
     const hoses = advancedMolecule2.hoseCodes;
+
     expect(hoses).toHaveLength(9);
     expect(hoses).toMatchSnapshot();
     // stereochemistry must be the same
@@ -230,6 +250,7 @@ describe('TopicMolecule', () => {
     const topicMolecule = new TopicMolecule(molecule, { maxSphereSize: 5 });
 
     const hoses = topicMolecule.hoseCodes;
+
     expect(hoses).toHaveLength(9);
     expect(hoses).toMatchSnapshot();
     expect(hoses[3]).toStrictEqual(hoses[4]);
@@ -246,6 +267,7 @@ describe('TopicMolecule', () => {
 
     let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     let atoms = getAtomsAndDiaInfo(advancedMolecule2);
+
     expect(atoms).toHaveLength(6);
     expect(atoms).toMatchSnapshot();
   });
@@ -258,6 +280,7 @@ describe('TopicMolecule', () => {
     toggleHydrogens(molecule, 0);
     let advancedMolecule2 = topicMolecule.fromMolecule(molecule);
     const diaIDsObject = advancedMolecule2.getDiaIDsObject();
+
     expect(Object.keys(diaIDsObject)).toHaveLength(5);
     expect(diaIDsObject).toMatchSnapshot();
   });
@@ -270,16 +293,21 @@ describe('TopicMolecule', () => {
     const molecule = Molecule.fromMolfile(molfile);
     const topicMolecule = new TopicMolecule(molecule);
     let first = Date.now();
+
     expect(topicMolecule.diaIDs).toHaveLength(196);
     expect(topicMolecule.diaIDsAndInfo).toHaveLength(196);
     expect(topicMolecule.hoseCodes).toHaveLength(196);
+
     first = Date.now() - first;
     const copy = topicMolecule.fromMolecule(molecule);
     let second = Date.now();
+
     expect(copy.diaIDs).toHaveLength(196);
     expect(copy.diaIDsAndInfo).toHaveLength(196);
     expect(copy.hoseCodes).toHaveLength(196);
+
     second = Date.now() - second;
+
     expect(first).toBeGreaterThan(second * 5);
   });
 
@@ -293,6 +321,7 @@ describe('TopicMolecule', () => {
     const topicMolecule = new TopicMolecule(molecule);
 
     const result = topicMolecule.getDiaIDsObject();
+
     expect(result['eF@HpLQP_iHNET'].existingAtoms).toStrictEqual([0, 1]);
     expect(result['eMBBYRZA~d`bUP'].existingAtoms).toStrictEqual([0, 2, 3, 4]);
 
@@ -315,6 +344,7 @@ describe('TopicMolecule', () => {
 
     const topicMolecule = new TopicMolecule(ethylvinylether);
     const mappings = topicMolecule.getDiaIDsMapping(propylvinylether);
+
     expect(mappings).toStrictEqual({
       'gJQ@@eKS@LRTGzQHxUP': 'gGQ@@eKtt@qIP_iDcaU@',
       'gJQ@@eKS@LSTGzQLxUP': 'gGQ@@eKtt@qMP_iDsaU@',
@@ -373,12 +403,14 @@ M  END
 
   const molfile1 = topicMolecule.toMolfile();
   const molfile2 = topicMolecule.toMolfileWithoutH();
-  expect(molfile1).toEqual(molfile2);
+
+  expect(molfile1).toStrictEqual(molfile2);
 
   const molfileH = topicMolecule.toMolfileWithH();
   const topicMolecule2 = new TopicMolecule(Molecule.fromMolfile(molfileH));
   const molfile3 = topicMolecule2.toMolfileWithoutH();
-  expect(molfile1).toEqual(molfile3);
+
+  expect(molfile1).toStrictEqual(molfile3);
 });
 
 function getMolfileAtoms(molfile) {

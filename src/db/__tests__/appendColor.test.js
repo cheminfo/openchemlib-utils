@@ -11,6 +11,7 @@ describe('appendColor', async () => {
   const moleculesDB = new MoleculesDB(OCL);
   await moleculesDB.appendSDF(sdf);
   const db = moleculesDB.getDB();
+
   it('test DB', () => {
     expect(db).toHaveLength(10);
   });
@@ -18,11 +19,14 @@ describe('appendColor', async () => {
   it('undefined colors', () => {
     moleculesDB.appendColor({});
     const colors = getDistinctColors(db);
+
     expect(colors).toStrictEqual(['black']);
   });
+
   it('colors based on data label', () => {
     moleculesDB.appendColor({ dataLabel: 'mw' });
     const colors = getDistinctColors(db);
+
     expect(colors).toStrictEqual([
       'hsl(0,65%,65%)',
       'black',
@@ -41,6 +45,7 @@ describe('appendColor', async () => {
   it('colors based on property label', () => {
     moleculesDB.appendColor({ propertyLabel: 'mw' });
     const colors = getDistinctColors(db);
+
     expect(colors).toStrictEqual([
       'hsl(0,65%,65%)',
       'hsl(63,65%,65%)',

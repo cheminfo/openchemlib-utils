@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { toVisualizerMolfile } from '../toVisualizerMolfile';
 
@@ -24,6 +24,7 @@ describe('toVisualizerMolfilen propane', () => {
       heavyAtomHydrogen: true,
       diastereotopic: true,
     });
+
     expect(molfile._atoms).toStrictEqual({
       'eM@Df`Xb`RP\\Jh': [0, 2],
       'gC`HALiKT@RHDRj@': [0, 2],

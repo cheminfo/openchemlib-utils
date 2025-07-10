@@ -1,20 +1,26 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { makeRacemic } from '../makeRacemic';
 
 describe('makeRacemic', () => {
   it('C[C@H](Cl)CC', () => {
     const molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC');
+
     expect(molecule.getIDCode()).toBe('gJPHADILuTb@');
+
     makeRacemic(molecule);
+
     expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
   });
 
   it('C[C@H](Cl)[C@@H](Cl)C', () => {
     const molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)[C@@H](Cl)C');
+
     expect(molecule.getIDCode()).toBe('gGPDADFHRYjjTR`@');
+
     makeRacemic(molecule);
+
     expect(molecule.getIDCode()).toBe('gGPDADFHRYjjThQ@@');
   });
 
@@ -31,6 +37,7 @@ describe('makeRacemic', () => {
     const idCodeRacemic = moleculeR.getIDCode();
     makeRacemic(moleculeS);
     const idCodeSRacemic = moleculeS.getIDCode();
+
     expect(idCodeR).not.toBe(idCodeS);
     expect(idCodeSRacemic).toBe(idCodeRacemic);
   });

@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getAtomsInfo } from '../getAtomsInfo';
 
@@ -88,6 +88,7 @@ describe('getAtomsInfo', () => {
     const molecule = OCL.Molecule.fromSmiles('C=CC');
     // molecule.addImplicitHydrogens();
     const atoms = getAtomsInfo(molecule);
+
     expect(atoms[2]).toStrictEqual({
       oclID: 'eM@DfPXb`RP\\Jh',
       extra: {

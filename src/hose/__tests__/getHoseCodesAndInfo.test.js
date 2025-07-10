@@ -15,6 +15,7 @@ describe('getHoseCodesAndInfo', () => {
     const result = getHoseCodesAndInfo(molecule);
 
     delete result.moleculeWithHydrogens;
+
     expect(result.hoses).toHaveLength(9);
     expect(result.hoses[0]).toHaveLength(5);
     expect(result).toMatchSnapshot();
@@ -46,6 +47,7 @@ M  END`;
     const result = getHoseCodesAndInfo(molecule, {
       calculateDiastereotopicIDs: false,
     });
+
     expect(result.diaIDs).toBeUndefined();
   });
 
@@ -60,12 +62,15 @@ M  END`;
     const molecule = OCL.Molecule.fromMolfile(molfile);
     const result = getHoseCodesAndInfo(molecule);
     delete result.moleculeWithHydrogens;
+
     expect(result).toMatchSnapshot();
+
     const hosesString = JSON.stringify(result.hoses, undefined, 2);
     const result2 = getHoseCodesAndInfo(molecule, {
       calculateDiastereotopicIDs: false,
     });
     delete result2.moleculeWithHydrogens;
+
     expect(JSON.stringify(result2.hoses, undefined, 2)).toBe(hosesString);
     expect(result2).toMatchSnapshot();
   });

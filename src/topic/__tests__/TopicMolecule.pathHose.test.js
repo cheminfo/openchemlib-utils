@@ -1,5 +1,5 @@
 import { Molecule } from 'openchemlib';
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { TopicMolecule } from '../TopicMolecule';
 
@@ -16,10 +16,11 @@ test('TopicMolecule.path', () => {
 test('TopicMolecule.getHoseFragment', async () => {
   const molecule = Molecule.fromSmiles('ClC=C');
   const topicMolecule = new TopicMolecule(molecule);
+
   expect(topicMolecule.atomsPaths).toMatchSnapshot();
 });
 
-test('TopicMolecule.getHoseFragment', async () => {
+test('TopicMolecule.getHoseFragment 2', async () => {
   const molecule = Molecule.fromSmiles('Cl/C=C/CCCCl');
   //const molecule = Molecule.fromSmiles('C1=CC=CC=C1');
   molecule.addImplicitHydrogens();

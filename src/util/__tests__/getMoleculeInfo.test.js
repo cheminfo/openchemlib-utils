@@ -7,6 +7,7 @@ test('getMoleculeInfo', () => {
   const molecule = Molecule.fromSmiles('[12C+]CO');
 
   const info = getMoleculeInfo(molecule, new Map());
+
   expect(info).toStrictEqual({
     molfile:
       '\n' +

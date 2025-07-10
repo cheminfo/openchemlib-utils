@@ -1,10 +1,11 @@
 import { Molecule } from 'openchemlib';
-import { expect, it } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { getPathAndTorsion } from '../getPathAndTorsion.js';
 
-it('getPathAndTorsion', () => {
+test('getPathAndTorsion', () => {
   const molecule = Molecule.fromSmiles('CCOC');
+
   expect(getPathAndTorsion(molecule, 0, 3)).toStrictEqual({
     atoms: [],
     from: 0,

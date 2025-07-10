@@ -32,11 +32,13 @@ test('water from scratch', async () => {
   const ssSearcher = new SSSearcher();
   ssSearcher.setMolecule(molecule);
   ssSearcher.setFragment(fragment);
+
   expect(ssSearcher.isFragmentInMolecule()).toBe(true);
 
   // If fragment is false it will find nothing EVEN if it is the same molecule !!!!
   fragment.setFragment(false);
   ssSearcher.setFragment(fragment);
+
   expect(ssSearcher.isFragmentInMolecule()).toBe(false);
 });
 
@@ -69,6 +71,7 @@ test('water from database', async () => {
   const molecule = OCL.Molecule.fromSmiles('O');
   molecule.setFragment(true);
   const idCode = molecule.getIDCode();
+
   expect(
     moleculesDB.search(idCode, { format: 'idCode', mode: 'exact' }),
   ).toHaveLength(1);

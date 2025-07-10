@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { ensureHeterotopicChiralBonds } from '../../diastereotopic/ensureHeterotopicChiralBonds.js';
 import { getPathsInfo } from '../getPathsInfo';
@@ -92,6 +92,7 @@ describe('getPathsInfo', () => {
         }
       }
     }
+
     expect(pathsInfo).toMatchSnapshot();
   });
 });

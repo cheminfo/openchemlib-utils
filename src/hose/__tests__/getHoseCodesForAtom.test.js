@@ -1,5 +1,5 @@
 import OCL from 'openchemlib';
-import { expect, it, describe } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 import { getHoseCodesForAtom } from '../getHoseCodesForAtom';
 
@@ -8,6 +8,7 @@ describe('getHoseCodesForAtom', () => {
     const molecule = OCL.Molecule.fromSmiles('CC(Cl)CC');
     let hoses = getHoseCodesForAtom(molecule, 0);
     hoses = hoses.map((hose) => escape(hose));
+
     expect(hoses).toStrictEqual([
       'fH@NJ%60uOkoth%5CJh',
       'eF@Hp%5CQPZQgr%5DW%7Ed%60xUP',

@@ -1,5 +1,5 @@
 import OCL, { Molecule } from 'openchemlib';
-import { test, expect } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { getMolfilesMapping } from '../getMolfilesMapping';
 
@@ -40,6 +40,7 @@ M  END`;
 M  END`;
 
   const { fromTo, toFrom } = getMolfilesMapping(OCL, fromMolfile, toMolfile);
+
   expect(fromTo).toStrictEqual([1, 0, 3, 4, 5, 2]);
   expect(toFrom).toStrictEqual([1, 0, 5, 2, 3, 4]);
 });
@@ -48,6 +49,7 @@ test('toluene', () => {
   const aromatic = Molecule.fromSmiles('c1ccccc1C').toMolfile();
   const localized = Molecule.fromSmiles('CC1=CC=CC=C1').toMolfile();
   const { fromTo, toFrom } = getMolfilesMapping(OCL, aromatic, localized);
+
   expect(fromTo).toStrictEqual([2, 3, 4, 5, 6, 1, 0]);
   expect(toFrom).toStrictEqual([6, 5, 0, 1, 2, 3, 4]);
 });
@@ -78,6 +80,7 @@ M  END
 `;
 
   const { fromTo, toFrom } = getMolfilesMapping(OCL, fromMolfile, toMolfile);
+
   expect(fromTo).toStrictEqual([2, 1, 0]);
   expect(toFrom).toStrictEqual([2, 1, 0]);
 });
@@ -85,6 +88,7 @@ M  END
 test('testing different molecules', () => {
   const methane = Molecule.fromSmiles('C').toMolfile();
   const water = Molecule.fromSmiles('O').toMolfile();
+
   expect(() => getMolfilesMapping(OCL, methane, water)).toThrow(
     'Molecules are different',
   );
@@ -95,6 +99,7 @@ test('testing with and without hydrogens', () => {
   const methaneMolecule = Molecule.fromSmiles('C');
   methaneMolecule.addImplicitHydrogens();
   const methaneWithHydrogens = methaneMolecule.toMolfile();
+
   expect(() => getMolfilesMapping(OCL, methane, methaneWithHydrogens)).toThrow(
     'Molecules do not have the same explicit hydrogens',
   );

@@ -15,6 +15,7 @@ describe('getHoseCodes', () => {
     const hoseCodes = getHoseCodes(molecule, {
       maxSphereSize: 1,
     });
+
     expect(hoseCodes).toStrictEqual([
       ['fH@NJ`uOk\u007Fth\\Jh', 'fH@NJ`uOk\u007Fth\\Jh'],
       ['fHdrA\u007FRaDj`', 'eFBBYcAuSzn\u007FRPQJh'],
@@ -29,7 +30,8 @@ describe('getHoseCodes', () => {
     molecule.setAtomicNo(0, 1);
     const hoses = getHoseCodes(molecule, { maxSphereSize: 2 });
     const distincts = getDistinctHoses(hoses);
-    expect(distincts.length).toBe(6);
+
+    expect(distincts).toHaveLength(6);
     expect(distincts).toStrictEqual([
       'fH@NJ`uWj\u007Fth\\Jj|D@',
       'eM@HpCbJCVUM{Kk[\u007FRP\\Jj~AHHa@',
@@ -46,6 +48,7 @@ describe('getHoseCodes', () => {
       atomLabels: ['C', 'O'],
       maxSphereSize: 0,
     });
+
     expect(hoseCodes).toStrictEqual([
       ['fH@NJ`uOkoth\\Jh'],
       ['fH@NJ`uOk_th\\Jh'],
@@ -68,6 +71,7 @@ describe('getHoseCodes', () => {
       atomLabels: ['C'],
     });
     const distincts = getDistinctHoses(hoseCodes);
+
     expect(distincts).toStrictEqual([
       'fH@NJ`uOk_th\\Jj|`@',
       'eO@HyjCbJCVLk{Mm]\u007FRP\\Jj~HI@h@',
@@ -80,6 +84,7 @@ describe('getHoseCodes', () => {
       atomLabels: ['H'],
       maxSphereSize: 3,
     });
+
     expect(hoseCodes).toStrictEqual([
       undefined,
       undefined,
@@ -111,12 +116,15 @@ describe('getHoseCodes', () => {
       maxSphereSize: 3,
       minSphereSize: 3,
     });
+
     // 9 and 10 should be diastereotopic
     expect(hoseCodes[9]).not.toStrictEqual(hoseCodes[10]);
+
     const nine = Molecule.fromIDCode(hoseCodes[9][0]);
     nine.stripStereoInformation();
     const ten = Molecule.fromIDCode(hoseCodes[9][0]);
     ten.stripStereoInformation();
+
     expect(nine.getIDCode()).toStrictEqual(ten.getIDCode());
 
     expect(hoseCodes).toStrictEqual([
@@ -148,19 +156,26 @@ describe('getHoseCodes', () => {
     const molecule = Molecule.fromMolfile(molfile);
 
     let hoseCodes = getHoseCodes(molecule, { maxSphereSize: 1 });
-    expect(hoseCodes.length).toBe(196);
+
+    expect(hoseCodes).toHaveLength(196);
+
     let distincts = getDistinctHoses(hoseCodes);
-    expect(distincts.length).toBe(46);
+
+    expect(distincts).toHaveLength(46);
     expect(distincts).toMatchSnapshot();
 
     hoseCodes = getHoseCodes(molecule, { maxSphereSize: 1, atomLabels: ['C'] });
-    expect(hoseCodes.length).toBe(196);
+
+    expect(hoseCodes).toHaveLength(196);
+
     distincts = getDistinctHoses(hoseCodes);
-    expect(distincts.length).toBe(29);
+
+    expect(distincts).toHaveLength(29);
     expect(distincts).toMatchSnapshot();
 
     hoseCodes = getHoseCodes(molecule, { atomLabels: ['C'] });
-    expect(hoseCodes.length).toBe(196);
+
+    expect(hoseCodes).toHaveLength(196);
     expect(hoseCodes).toMatchSnapshot();
   });
 });
