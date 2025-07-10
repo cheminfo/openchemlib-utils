@@ -210,7 +210,7 @@ export class MoleculesDB {
    * @param {string|import('openchemlib').Molecule} [query] - smiles, molfile, idlCode or instance of Molecule to look for
    * @param {object} [options={}] - Options
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
-   * @param {'substructure'|'substructureOR'|'exact'|'exactNoStereo'|'smiliarity'} [options.mode='substructure'] - search algorithm
+   * @param {'substructure'|'substructureOR'|'exact'|'exactNoStereo'|'similarity'} [options.mode='substructure'] - search algorithm
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
    * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result
    * @param {number} [options.limit=Number.MAX_SAFE_INTEGER] - maximal number of result
@@ -226,7 +226,7 @@ export class MoleculesDB {
    * @param {string|import('openchemlib').Molecule} [query] - smiles, molfile, idCode or instance of Molecule to look for
    * @param {object} [options={}] - Options.
    * @param {'smiles'|'idCode'|'smarts'|'molfile'} [options.format='idCode'] - query format
-   * @param {'substructure'|'substructureOR'|'exact'|'exactNoStereo'|'smiliarity'} [options.mode='substructure'] - search algorithm
+   * @param {'substructure'|'substructureOR'|'exact'|'exactNoStereo'|'similarity'} [options.mode='substructure'] - search algorithm
    * @param {boolean} [options.flattenResult=true] - The database group the data for the same product. This allows to flatten the result
    * @param {boolean} [options.keepMolecule=false] - keep the OCL.Molecule object in the result
    * @param {number} [options.limit=Number.MAX_SAFE_INTEGER] - maximal number of result
