@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import OCL from 'openchemlib';
-import { beforeAll, describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it, test } from 'vitest';
 
 import { MoleculesDB } from '../MoleculesDB';
 
@@ -184,4 +184,29 @@ describe('search async', () => {
 
     await expect(promise).rejects.toHaveProperty('name', 'AbortError');
   });
+});
+
+test('exactNoStereo with SMILES', async () => {
+  const text = 'CC(Cl)Br\nC[C@H](Cl)Br\nC[C@@H](Cl)Br';
+  const moleculesDB = new MoleculesDB(OCL);
+  await moleculesDB.appendSmilesList(text);
+  expect(moleculesDB.getDB()).toHaveLength(3);
+
+  const results1 = moleculesDB.search('CC(Cl)Br', {
+    format: 'smiles',
+    mode: 'exact',
+  });
+  expect(results1).toHaveLength(1);
+
+  const results2 = moleculesDB.search('CC(Cl)Br', {
+    format: 'smiles',
+    mode: 'exactNoStereo',
+  });
+  expect(results2).toHaveLength(3);
+
+  const results3 = moleculesDB.search('C[C@H](Cl)Br', {
+    format: 'smiles',
+    mode: 'exactNoStereo',
+  });
+  expect(results3).toHaveLength(3);
 });
