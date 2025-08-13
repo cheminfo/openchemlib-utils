@@ -1,9 +1,18 @@
 {
   "name": "openchemlib-utils",
   "version": "8.2.0",
+  "license": "MIT",
   "description": "Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs",
+  "keywords": [
+    "openchemlib extended",
+    "chemistry tools",
+    "open chemistry"
+  ],
+  "author": "Luc Patiny",
   "type": "module",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "files": [
     "lib",
     "src"
@@ -11,9 +20,9 @@
   "scripts": {
     "build": "npm run tsc && cheminfo-build --entry lib/index.js --root OCLUtils",
     "check-types": "tsc --noEmit",
-    "clean": "rimraf lib",
+    "clean": "rimraf coverage lib",
     "eslint": "eslint .",
-    "eslint-fix": "npm run eslint -- --fix",
+    "eslint-fix": "eslint . --fix",
     "prepack": "npm run tsc",
     "prettier": "prettier --check .",
     "prettier-write": "prettier --write .",
@@ -23,21 +32,18 @@
     "tsc-build": "tsc --project tsconfig.build.json",
     "verify-build": "npm run tsc && node lib/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cheminfo/openchemlib-utils.git"
+  "dependencies": {
+    "atom-sorter": "^2.2.1",
+    "ensure-string": "^1.2.0",
+    "get-value": "^4.0.1",
+    "ml-floyd-warshall": "^3.0.1",
+    "ml-matrix": "^6.12.1",
+    "papaparse": "^5.5.3",
+    "sdf-parser": "^7.0.4"
   },
-  "keywords": [
-    "openchemlib extended",
-    "chemistry tools",
-    "open chemistry"
-  ],
-  "author": "Luc Patiny",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cheminfo/openchemlib-utils/issues"
+  "peerDependencies": {
+    "openchemlib": ">=9.3.0"
   },
-  "homepage": "https://github.com/cheminfo/openchemlib-utils#readme",
   "devDependencies": {
     "@types/node": "^24.2.1",
     "@vitest/coverage-istanbul": "^3.2.4",
@@ -55,16 +61,12 @@
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
-  "dependencies": {
-    "atom-sorter": "^2.2.1",
-    "ensure-string": "^1.2.0",
-    "get-value": "^4.0.1",
-    "ml-floyd-warshall": "^3.0.1",
-    "ml-matrix": "^6.12.1",
-    "papaparse": "^5.5.3",
-    "sdf-parser": "^7.0.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/openchemlib-utils.git"
   },
-  "peerDependencies": {
-    "openchemlib": ">=9.3.0"
-  }
+  "bugs": {
+    "url": "https://github.com/cheminfo/openchemlib-utils/issues"
+  },
+  "homepage": "https://github.com/cheminfo/openchemlib-utils#readme"
 }
