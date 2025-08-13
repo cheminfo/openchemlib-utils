@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.2.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.2.0...v8.2.1) (2025-08-13)
+
+
+### Bug Fixes
+
+* exports mapping ([20f7fa6](https://github.com/cheminfo/openchemlib-utils/commit/20f7fa6c285e8c094c4f66476de701af9a974806))
+
 ## [8.2.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.1.5...v8.2.0) (2025-07-10)
 
 
