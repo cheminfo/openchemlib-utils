@@ -32,6 +32,7 @@ export function getShortestPaths(molecule, options = {}) {
         molecule.getPath(path, from, to, maxLength);
         if (path.length > 0) {
           allShortestPaths[from][to] = path.slice();
+          // eslint-disable-next-line unicorn/no-array-reverse
           allShortestPaths[to][from] = path.reverse();
         } else {
           allShortestPaths[from][to] = null;
