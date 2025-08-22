@@ -2,9 +2,9 @@
  * Get the shortest path between each pair of atoms in the molecule
  * @param {import('openchemlib').Molecule} molecule
  * @param {object} [options={}]
- * @param {string} [opions.fromLabel='H']
- * @param {string} [opions.toLabel='H']
- * @param {string} [opions.maxLength=4]
+ * @param {string} [options.fromLabel='H']
+ * @param {string} [options.toLabel='H']
+ * @param {number} [options.maxLength=4]
  * @returns {Array<Array>} A matrix containing on each cell (i,j) the shortest path from atom i to atom j
  */
 export function getShortestPaths(molecule, options = {}) {
