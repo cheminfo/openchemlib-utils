@@ -1,4 +1,4 @@
-import { getHoseCodesForAtomsInternal } from '../hose/getHoseCodesForAtomsInternal.js';
+import { getHoseCodesForAtomsAsStrings } from '../hose/getHoseCodesForAtomsAsStrings.js';
 import { tagAtom } from '../util/tagAtom.ts';
 
 import type { TopicMolecule } from './TopicMolecule.ts';
@@ -22,7 +22,7 @@ export function getCanonizedHoseCodes(topicMolecule: TopicMolecule) {
     }
     const tempMolecule = topicMolecule.moleculeWithH.getCompactCopy();
     tagAtom(tempMolecule, i);
-    const hoses = getHoseCodesForAtomsInternal(tempMolecule, options);
+    const hoses = getHoseCodesForAtomsAsStrings(tempMolecule, options);
     canonizedHoseCodes[finalRanks[i]] = hoses;
   }
   return canonizedHoseCodes;

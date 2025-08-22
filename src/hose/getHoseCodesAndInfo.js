@@ -4,7 +4,7 @@ import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
 import { makeRacemic } from '../util/makeRacemic.js';
 import { tagAtom } from '../util/tagAtom.ts';
 
-import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js';
+import { getHoseCodesForAtomsAsStrings } from './getHoseCodesForAtomsAsStrings.js';
 
 /**
  * Returns an object containing a molfile, molfile with hydrogens, hoses codes and optionally the diaIDs
@@ -59,7 +59,7 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
       diaIDs.push(diaID);
     }
 
-    const hose = getHoseCodesForAtomsInternal(tempMolecule, {
+    const hose = getHoseCodesForAtomsAsStrings(tempMolecule, {
       minSphereSize,
       maxSphereSize,
     });
