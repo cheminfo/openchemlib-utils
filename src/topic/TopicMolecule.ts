@@ -1,7 +1,7 @@
 import type { LightLogger } from 'cheminfo-types';
 import type { Molecule } from 'openchemlib';
 
-import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsInternal.js';
+import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsAsFragments.js';
 import type { AtomPath } from '../path/getAllAtomsPaths.ts';
 import { getAllAtomsPaths } from '../path/getAllAtomsPaths.ts';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
