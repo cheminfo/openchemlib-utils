@@ -14,6 +14,7 @@ export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
  * @param {number} [options.minSphereSize=0] - Smallest hose code sphere
  * @param {number} [options.maxSphereSize=4] - Largest hose code sphere
  * @param {number} [options.kind=FULL_HOSE_CODE] - Kind of hose code, default usual sphere
+ * @param {number[]} [options.rootAtoms=[]] - Array of atom from which we should start to create the HOSE. By default we will used the taggedAtoms
  * @param {number[]} [options.tagAtoms=[]] - Array of atom indices to tag as root atoms
  * @param {Function} [options.tagAtomFct=tagAtom] - Function to tag an atom as root atom. By default it is defined internal
  * @returns {Array} - An array of hose code fragments.

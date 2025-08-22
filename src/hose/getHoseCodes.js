@@ -1,7 +1,7 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
 import { tagAtom } from '../util/tagAtom.ts';
 
-import { getHoseCodesForAtomsInternal } from './getHoseCodesForAtomsInternal.js';
+import { getHoseCodesForAtomsAsStrings } from './getHoseCodesForAtomsAsStrings.js';
 
 /**
  * Returns the hose codes for all atoms in the molecule
@@ -36,7 +36,7 @@ export function getHoseCodes(molecule, options = {}) {
       const tempMolecule = internalMolecule.getCompactCopy();
       tagAtom(tempMolecule, i);
       hoses.push(
-        getHoseCodesForAtomsInternal(tempMolecule, {
+        getHoseCodesForAtomsAsStrings(tempMolecule, {
           minSphereSize,
           maxSphereSize,
         }),
