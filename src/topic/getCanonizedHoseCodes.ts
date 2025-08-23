@@ -3,12 +3,19 @@ import { tagAtom } from '../util/tagAtom.ts';
 
 import type { TopicMolecule } from './TopicMolecule.ts';
 
-export function getCanonizedHoseCodes(topicMolecule: TopicMolecule) {
+/**
+ * Get the canonized hose codes for a topic molecule. It will use the moleculeWithH
+ * @param topicMolecule - The topic molecule to get the hose codes for.
+ * @returns The canonized hose codes.
+ */
+export function getCanonizedHoseCodes(
+  topicMolecule: TopicMolecule,
+): string[][] {
   const options = topicMolecule.options;
   const heterotopicSymmetryRanks = topicMolecule.heterotopicSymmetryRanks;
   const moleculeWithH = topicMolecule.moleculeWithH;
   const finalRanks = topicMolecule.finalRanks;
-  const canonizedHoseCodes = new Array(moleculeWithH.getAllAtoms());
+  const canonizedHoseCodes: string[][] = new Array(moleculeWithH.getAllAtoms());
   moleculeWithH.ensureHelperArrays(
     topicMolecule.molecule.getOCL().Molecule
       .cHelperSymmetryStereoHeterotopicity,
