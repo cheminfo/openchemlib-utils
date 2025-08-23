@@ -1,25 +1,25 @@
+import type { Molecule } from 'openchemlib';
+
 import { getXAtomicNumber } from '../util/getXAtomicNumber.js';
 import { isCsp3 } from '../util/isCsp3.js';
 import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom.ts';
+import { tagAtom } from '../util/tagAtom.js';
+
+import type { HoseCodesForAtomsOptions } from './HoseCodesForAtomsOptions.js';
 
 export const FULL_HOSE_CODE = 1;
 export const HOSE_CODE_CUT_C_SP3_SP3 = 2;
 
 /**
  * Returns an array of hose code fragments for the specified molecule.
- * @param {import('openchemlib').Molecule} molecule - The OCL molecule to process.
- * @param {object} options - Options for generating hose codes.
- * @param {string[]} [options.allowedCustomLabels] - Array of the custom labels that are considered as root atoms. By default all atoms having a customLabel
- * @param {number} [options.minSphereSize=0] - Smallest hose code sphere
- * @param {number} [options.maxSphereSize=4] - Largest hose code sphere
- * @param {number} [options.kind=FULL_HOSE_CODE] - Kind of hose code, default usual sphere
- * @param {number[]} [options.rootAtoms=[]] - Array of atom from which we should start to create the HOSE. By default we will used the taggedAtoms
- * @param {number[]} [options.tagAtoms=[]] - Array of atom indices to tag as root atoms
- * @param {Function} [options.tagAtomFct=tagAtom] - Function to tag an atom as root atom. By default it is defined internal
- * @returns {Array} - An array of hose code fragments.
+ * @param molecule - The OCL molecule to process.
+ * @param options - Options for generating hose codes.
+ * @returns An array of hose code fragments.
  */
-export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
+export function getHoseCodesForAtomsAsFragments(
+  molecule: Molecule,
+  options: HoseCodesForAtomsOptions = {},
+): Molecule[] {
   const OCL = molecule.getOCL();
   const {
     allowedCustomLabels,
@@ -51,14 +51,14 @@ export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
     }
   }
 
-  const fragments = [];
+  const fragments: Molecule[] = [];
 
   // keep track of the atoms when creating the fragment
-  const mappings = [];
+  const mappings: number[] = [];
   let min = 0;
   let max = 0;
-  const atomMask = new Uint8Array(molecule.getAllAtoms());
-  const atomList = new Uint8Array(molecule.getAllAtoms());
+  const atomMask = new Array<boolean>(molecule.getAllAtoms()).fill(false);
+  const atomList = new Array<number>(molecule.getAllAtoms());
 
   for (let sphere = 0; sphere <= maxSphereSize; sphere++) {
     if (max === 0) {
@@ -70,7 +70,7 @@ export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
     } else {
       let newMax = max;
       for (let i = min; i < max; i++) {
-        const atom = atomList[i];
+        const atom = atomList[i] as number;
         for (let j = 0; j < molecule.getAllConnAtoms(atom); j++) {
           const connAtom = molecule.getConnAtom(atom, j);
           if (!atomMask[connAtom]) {
@@ -117,10 +117,13 @@ export function getHoseCodesForAtomsAsFragments(molecule, options = {}) {
  * If the atom is not an halogen, X or an hydrogen
  * we add query features to the atom
  * This includes aromaticity, ring size, number of hydrogens
- * @param {import('openchemlib').Molecule} fragment
- * @param {import('openchemlib').Molecule} molecule
+ * @param fragment
+ * @param molecule
  */
-function addQueryFeaturesAndRemoveMapNo(fragment, molecule) {
+function addQueryFeaturesAndRemoveMapNo(
+  fragment: Molecule,
+  molecule: Molecule,
+) {
   const Molecule = molecule.getOCL().Molecule;
   for (let i = 0; i < fragment.getAllAtoms(); i++) {
     const mapping = fragment.getAtomMapNo(i) - 1;
@@ -193,7 +196,12 @@ function addQueryFeaturesAndRemoveMapNo(fragment, molecule) {
 
 // tagging atoms may change the order of the atoms because hydrogens must be at the end of the file
 // in order to remember the rootAtoms we will tag before
-function internalTagAtoms(molecule, tagAtoms, rootAtoms, tagAtomFct) {
+function internalTagAtoms(
+  molecule: Molecule,
+  tagAtoms: number[],
+  rootAtoms: number[],
+  tagAtomFct: (molecule: Molecule, atomIndex: number) => void,
+) {
   const OCL = molecule.getOCL();
 
   if (tagAtoms) {
@@ -216,7 +224,7 @@ function internalTagAtoms(molecule, tagAtoms, rootAtoms, tagAtomFct) {
       mapping[molecule.getAtomMapNo(i) - 1] = i;
     }
     for (let i = 0; i < rootAtoms.length; i++) {
-      rootAtoms[i] = mapping[rootAtoms[i]];
+      rootAtoms[i] = mapping[rootAtoms[i] as number] as number;
     }
   }
 }
