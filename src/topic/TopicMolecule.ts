@@ -179,7 +179,7 @@ export class TopicMolecule {
       tagAtomFct,
     });
 
-    return fragments[0];
+    return fragments[0] as Molecule;
   }
 
   getAtomPathsFrom(atom: number, options: GetAtomPathFromOptions = {}) {
