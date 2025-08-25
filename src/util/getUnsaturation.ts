@@ -22,7 +22,7 @@ export function getUnsaturation(mf: string): number | undefined {
   let unsaturation = 0;
   for (const element of elements) {
     const matches = element.match(/([A-Z][a-z]?)(\d*)/) as RegExpMatchArray;
-    const symbol = matches[1] as string;
+    const symbol = matches[1];
     const count = matches[2] ? Number.parseInt(matches[2], 10) : 1;
     const elementObject = unsaturationsObject[symbol];
     if (elementObject === undefined) {

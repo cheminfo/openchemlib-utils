@@ -29,7 +29,7 @@ export function getNextNMRHint(
 
   if (possibleHints.length === 0) return undefined;
   return {
-    ...(possibleHints[0] as NMRHint),
+    ...possibleHints[0],
     idCode: proposed.getIDCode(),
   };
 }

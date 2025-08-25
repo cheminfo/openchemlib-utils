@@ -70,7 +70,7 @@ export function getHoseCodesForAtomsAsFragments(
     } else {
       let newMax = max;
       for (let i = min; i < max; i++) {
-        const atom = atomList[i] as number;
+        const atom = atomList[i];
         for (let j = 0; j < molecule.getAllConnAtoms(atom); j++) {
           const connAtom = molecule.getConnAtom(atom, j);
           if (!atomMask[connAtom]) {
@@ -224,7 +224,7 @@ function internalTagAtoms(
       mapping[molecule.getAtomMapNo(i) - 1] = i;
     }
     for (let i = 0; i < rootAtoms.length; i++) {
-      rootAtoms[i] = mapping[rootAtoms[i] as number] as number;
+      rootAtoms[i] = mapping[rootAtoms[i]];
     }
   }
 }
