@@ -9,6 +9,11 @@ import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 import type { HoseCodesOptions } from './HoseCodesOptions.js';
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.ts';
 import { getCanonizedHoseCodes } from './getCanonizedHoseCodes.ts';
+import type {
+  HoseCodesForPathOptions,
+  HosesForPath,
+} from './getCanonizedHoseCodesForPaths.ts';
+import { getCanonizedHoseCodesForPath } from './getCanonizedHoseCodesForPaths.ts';
 import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.ts';
 import {
   getFinalRanks,
@@ -55,7 +60,7 @@ interface GetAtomPathOptions {
   pathLength?: number;
 }
 
-interface GetAtomPathFromOptions {
+export interface GetAtomPathFromOptions {
   /*
    * The minimum distance between the two atoms.
    * @default 1
@@ -165,6 +170,22 @@ export class TopicMolecule {
     }
   }
 
+  /**
+   * For each atom we will return an array of objects that contains the
+   * different possible path as well as the canonic hose codes
+   * @param options
+   * @returns
+   */
+  getHoseCodesForPath(options: HoseCodesForPathOptions = {}): HosesForPath[] {
+    return getCanonizedHoseCodesForPath(this, options);
+  }
+
+  /**
+   * Return one fragment for a specific sphere size and specific root atoms
+   * @param rootAtoms
+   * @param options
+   * @returns
+   */
   getHoseFragment(
     rootAtoms: number[],
     options: GetHoseFragmentOptions = {},
@@ -179,7 +200,7 @@ export class TopicMolecule {
       tagAtomFct,
     });
 
-    return fragments[0] as Molecule;
+    return fragments[0];
   }
 
   getAtomPathsFrom(atom: number, options: GetAtomPathFromOptions = {}) {
@@ -573,7 +594,7 @@ function groupDiastereotopicAtomIDsAsObject(
 
   for (let i = 0; i < diaIDs.length; i++) {
     if (!atomLabel || moleculeWithH.getAtomLabel(i) === atomLabel) {
-      const diaID = diaIDs[i] as string;
+      const diaID = diaIDs[i];
       if (!diaIDsObject[diaID]) {
         diaIDsObject[diaID] = {
           counter: 0,

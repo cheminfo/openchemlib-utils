@@ -47,8 +47,8 @@ export function getAllAtomsPaths(
       nextAtoms = [];
 
       for (let i = 0; i < currentIndexes.length; i++) {
-        const atom = currentAtoms[i] as number;
-        const index = currentIndexes[i] as number;
+        const atom = currentAtoms[i];
+        const index = currentIndexes[i];
 
         const previousPath = oneAtomPaths[sphere - 1]?.[index]?.path;
         if (!previousPath) {

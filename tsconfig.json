@@ -3,6 +3,7 @@
   "compilerOptions": {
     "types": ["node"],
     "allowJs": true,
+    "noUncheckedIndexedAccess": false,
     "outDir": "lib"
   },
   "include": ["src", "vite*.ts"]
