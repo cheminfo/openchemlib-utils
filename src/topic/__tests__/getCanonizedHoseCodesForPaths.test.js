@@ -65,97 +65,27 @@ test('ethyl vinyl ether', () => {
     fromAtomicNo: 1,
     toAtomicNo: 1,
   });
-  const results = getCanonizedHoseCodesForPath(topicMolecule, {
+  const results1 = getCanonizedHoseCodesForPath(topicMolecule, {
     fromAtomicNo: 1,
     toAtomicNo: 1,
     minPathLength: 2,
   });
 
-  const pathLengths = results.map((r) => r.paths.length);
+  const pathLengths = results1.map((r) => r.paths.length);
 
-  expect(pathLengths).toStrictEqual([0, 0, 0, 0, 0, 4, 4, 4, 5, 5, 4, 2, 2]);
+  expect(pathLengths).toStrictEqual([0, 0, 0, 0, 0, 5, 5, 5, 7, 7, 7, 4, 4]);
 
   // keep the 2 olefinic protons
-  const olefinicProtons = results.slice(-2);
+  const olefinicProtons = results1.slice(-2);
 
-  expect(olefinicProtons).toMatchInlineSnapshot(`
-    [
-      {
-        "fromDiaID": "gGQHLIeIUfhRS}H\`QJh",
-        "paths": [
-          {
-            "hoses": [
-              "eMABYYeIhNj_TzJBIUJIU@",
-              "gC\`DALjYRZdCiQsyQ}_zI@bURQJh",
-              "gJQDBIeSJS]LAuhyK{Q}Y_}D\`QJiHeT",
-              "gGQDBIeSJS[SPGQcdm_FOkKw_tRADjdbUP",
-              "gNqDBIeSJSZtu@]VNRu[zq}Y^z~QHDRjRIU@",
-            ],
-            "path": [
-              11,
-              4,
-              12,
-            ],
-            "pathLength": 2,
-            "toDiaID": "gGQHLIeIUfhRK}H\`QJh",
-          },
-          {
-            "hoses": [
-              "gC\`DALzYRVXRORbgrcjtRADjlbUP",
-              "gJQDDIdsJS]LHgkQSgvci}_zI@bUQQJh",
-              "gGQDDIfsJSKSPb^cENR~L]OkNhdBIUUDj\`",
-              "gNqDDIfsJSJtuBIzlTyJwuci}Yu}~bPHeUTRj@",
-              "gNqDDIfsJSJtuBIzlTyJwuci}Yu}~bPHeUTRj@",
-            ],
-            "path": [
-              11,
-              4,
-              3,
-              10,
-            ],
-            "pathLength": 3,
-            "toDiaID": "gGQHDIeIgihA~dPHeT",
-          },
-        ],
-      },
-      {
-        "fromDiaID": "gGQHLIeIUfhRK}H\`QJh",
-        "paths": [
-          {
-            "hoses": [
-              "eMABYYeIhNj_TzJBIUJIU@",
-              "gC\`DALjYRZdCiQsyQ}_zI@bURQJh",
-              "gJQDBIeSJS]LAuhyK{Q}Y_}D\`QJiHeT",
-              "gGQDBIeSJS[SPGQcdm_FOkKw_tRADjdbUP",
-              "gNqDBIeSJSZtu@]VNRu[zq}Y^z~QHDRjRIU@",
-            ],
-            "path": [
-              12,
-              4,
-              11,
-            ],
-            "pathLength": 2,
-            "toDiaID": "gGQHLIeIUfhRS}H\`QJh",
-          },
-          {
-            "hoses": [
-              "gC\`DALzYRVXRWRbgrcjtRADjlbUP",
-              "gJQDDIdsJS]LHkkQSgvci}_zI@bUQQJh",
-              "gGQDDIfsJSKSPbncENR~L]OkNhdBIUUDj\`",
-              "gNqDDIfsJSJtuBJzlTyJwuci}Yu}~bPHeUTRj@",
-              "gNqDDIfsJSJtuBJzlTyJwuci}Yu}~bPHeUTRj@",
-            ],
-            "path": [
-              12,
-              4,
-              3,
-              10,
-            ],
-            "pathLength": 3,
-            "toDiaID": "gGQHDIeIgihA~dPHeT",
-          },
-        ],
-      },
-    ]
-  `);
+  expect(olefinicProtons).toMatchSnapshot();
+
+  const results2 = getCanonizedHoseCodesForPath(topicMolecule, {
+    fromAtomicNo: 1,
+    toAtomicNo: 1,
+    minPathLength: 2,
+    maxPathLength: 2,
+  });
+
+  expect(results2[12].paths).toHaveLength(1);
 });

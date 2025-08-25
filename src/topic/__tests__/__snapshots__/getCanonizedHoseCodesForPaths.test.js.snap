@@ -1,0 +1,158 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ethyl vinyl ether 1`] = `
+[
+  {
+    "fromDiaID": "gGQHLIeIUfhRS}H\`QJh",
+    "paths": [
+      {
+        "hoses": [
+          "eMABYYeIhNj_TzJBIUJIU@",
+          "gC\`DALjYRZdCiQsyQ}_zI@bURQJh",
+          "gJQDBIeSJS]LAuhyK{Q}Y_}D\`QJiHeT",
+          "gGQDBIeSJS[SPGQcdm_FOkKw_tRADjdbUP",
+          "gNqDBIeSJSZtu@]VNRu[zq}Y^z~QHDRjRIU@",
+        ],
+        "path": [
+          11,
+          4,
+          12,
+        ],
+        "pathLength": 2,
+        "toDiaID": "gGQHLIeIUfhRK}H\`QJh",
+      },
+      {
+        "hoses": [
+          "gC\`DALzYRVXRORbgrcjtRADjlbUP",
+          "gJQDDIdsJS]LHgkQSgvci}_zI@bUQQJh",
+          "gGQDDIfsJSKSPb^cENR~L]OkNhdBIUUDj\`",
+          "gNqDDIfsJSJtuBIzlTyJwuci}Yu}~bPHeUTRj@",
+          "gNqDDIfsJSJtuBIzlTyJwuci}Yu}~bPHeUTRj@",
+        ],
+        "path": [
+          11,
+          4,
+          3,
+          10,
+        ],
+        "pathLength": 3,
+        "toDiaID": "gGQHDIeIgihA~dPHeT",
+      },
+      {
+        "hoses": [
+          "gGQDLIfsJRkMPdncENR~LmWgMhdBIUUDj\`",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+        ],
+        "path": [
+          11,
+          4,
+          3,
+          2,
+          1,
+          8,
+        ],
+        "pathLength": 5,
+        "toDiaID": "gGQHDIeIgjfR\`OtbADj\`",
+      },
+      {
+        "hoses": [
+          "gGQDLIfsJRkMPdncENR~LmWgMhdBIUUDj\`",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdRWUbgIV~lmWgMootRADjjbUP",
+        ],
+        "path": [
+          11,
+          4,
+          3,
+          2,
+          1,
+          9,
+        ],
+        "pathLength": 5,
+        "toDiaID": "gGQHDIeIgjfR\`OtbADj\`",
+      },
+    ],
+  },
+  {
+    "fromDiaID": "gGQHLIeIUfhRK}H\`QJh",
+    "paths": [
+      {
+        "hoses": [
+          "eMABYYeIhNj_TzJBIUJIU@",
+          "gC\`DALjYRZdCiQsyQ}_zI@bURQJh",
+          "gJQDBIeSJS]LAuhyK{Q}Y_}D\`QJiHeT",
+          "gGQDBIeSJS[SPGQcdm_FOkKw_tRADjdbUP",
+          "gNqDBIeSJSZtu@]VNRu[zq}Y^z~QHDRjRIU@",
+        ],
+        "path": [
+          12,
+          4,
+          11,
+        ],
+        "pathLength": 2,
+        "toDiaID": "gGQHLIeIUfhRS}H\`QJh",
+      },
+      {
+        "hoses": [
+          "gC\`DALzYRVXRWRbgrcjtRADjlbUP",
+          "gJQDDIdsJS]LHkkQSgvci}_zI@bUQQJh",
+          "gGQDDIfsJSKSPbncENR~L]OkNhdBIUUDj\`",
+          "gNqDDIfsJSJtuBJzlTyJwuci}Yu}~bPHeUTRj@",
+          "gNqDDIfsJSJtuBJzlTyJwuci}Yu}~bPHeUTRj@",
+        ],
+        "path": [
+          12,
+          4,
+          3,
+          10,
+        ],
+        "pathLength": 3,
+        "toDiaID": "gGQHDIeIgihA~dPHeT",
+      },
+      {
+        "hoses": [
+          "gGQDLIfsJRkMPd^cENR~LmWgMhdBIUUDj\`",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+        ],
+        "path": [
+          12,
+          4,
+          3,
+          2,
+          1,
+          8,
+        ],
+        "pathLength": 5,
+        "toDiaID": "gGQHDIeIgjfR\`OtbADj\`",
+      },
+      {
+        "hoses": [
+          "gGQDLIfsJRkMPd^cENR~LmWgMhdBIUUDj\`",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+          "gNqDLIfsJRkSUPdROUbgIV~lmWgMootRADjjbUP",
+        ],
+        "path": [
+          12,
+          4,
+          3,
+          2,
+          1,
+          9,
+        ],
+        "pathLength": 5,
+        "toDiaID": "gGQHDIeIgjfR\`OtbADj\`",
+      },
+    ],
+  },
+]
+`;

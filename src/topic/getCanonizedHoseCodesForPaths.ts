@@ -71,7 +71,7 @@ export function getCanonizedHoseCodesForPath(
     }
     for (
       let pathLength = minPathLength;
-      pathLength < maxPathLength;
+      pathLength <= maxPathLength;
       pathLength++
     ) {
       const pathOfSpecificLength = atomsPaths[fromAtom][pathLength];
