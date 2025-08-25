@@ -47,6 +47,15 @@ test('methane', () => {
     paths: [],
   }); // carbon has no links
   expect(result3[1].paths.map((p) => p.pathLength)).toStrictEqual([2, 2, 2]); // one of the hydrogens
+
+  const result4 = getCanonizedHoseCodesForPath(topicMolecule, {
+    fromAtomicNo: 1,
+    toAtomicNo: 1,
+    minPathLength: 2,
+    maxSphereSize: 2,
+  });
+
+  expect(result4[1].paths[0].hoses).toHaveLength(3);
 });
 
 test('ethyl vinyl ether', () => {
