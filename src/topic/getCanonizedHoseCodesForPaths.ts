@@ -85,6 +85,7 @@ export function getCanonizedHoseCodesForPath(
           pathLength: path.pathLength,
           path: path.path,
           hoses: getHoseCodesForAtomsAsStrings(topicMolecule.moleculeWithH, {
+            ...options,
             rootAtoms: path.path,
             tagAtoms: [fromAtom, toAtom],
           }),
