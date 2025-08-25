@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.3.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.3.0...v8.3.1) (2025-08-25)
+
+
+### Bug Fixes
+
+* hose options for getCanonizedHoseCodesForPath were not taken into account ([5ecef00](https://github.com/cheminfo/openchemlib-utils/commit/5ecef00fc1356da28986d1b4aef6a2a2b29cd0cf))
+* maxPathLength in getCanonizedHoseCodesForPath was not taking into account the last value ([9a6ac3c](https://github.com/cheminfo/openchemlib-utils/commit/9a6ac3cb1051caaa5eef4537985a209401cfa14f))
+
 ## [8.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.2.1...v8.3.0) (2025-08-25)
 
 
