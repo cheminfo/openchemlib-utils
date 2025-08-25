@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.3.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.2.1...v8.3.0) (2025-08-25)
+
+
+### Features
+
+* add function getCanonizedHoseCodesForPath on TopicMolecule ([232bfad](https://github.com/cheminfo/openchemlib-utils/commit/232bfad11f8fea85f1c077234c5e921f42b1e1ff))
+
 ## [8.2.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.2.0...v8.2.1) (2025-08-13)
 
 
