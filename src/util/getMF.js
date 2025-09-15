@@ -23,7 +23,9 @@ export function getMF(molecule) {
     counts[part]++;
   }
   parts = [];
-  for (const key of Object.keys(counts).sort()) {
+  const sortedKeys = Object.keys(counts);
+  sortedKeys.sort();
+  for (const key of sortedKeys) {
     if (counts[key] > 1) {
       parts.push(counts[key] + key);
     } else {
@@ -72,7 +74,8 @@ function toMFString(atoms) {
   }
 
   let mf = '';
-  const keys = Object.keys(mfs).sort(atomSorter);
+  const keys = Object.keys(mfs);
+  keys.sort(atomSorter);
   for (const key of keys) {
     mf += key;
     if (mfs[key] > 1) mf += mfs[key];

@@ -43,7 +43,7 @@ export function getHoseCodesForAtomsAsFragments(
   if (rootAtoms.length === 0) {
     for (let j = 0; j < molecule.getAllAtoms(); j++) {
       if (
-        allowedCustomLabels?.includes(molecule.getAtomCustomLabel(j)) ||
+        allowedCustomLabels?.includes(molecule.getAtomCustomLabel(j) ?? '') ||
         molecule.getAtomCustomLabel(j)
       ) {
         rootAtoms.push(j);

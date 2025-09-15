@@ -6,7 +6,7 @@ import { getHoseCodesForAtomsAsStrings } from '../getHoseCodesForAtomsAsStrings.
 test('tagged ethyl vinyl ether', () => {
   const taggedMolecule = Molecule.fromIDCode('gGQHLIeIUjdA~dPHeT');
 
-  expect(taggedMolecule.toSmiles()).toBe('[X]CCOC=C');
+  expect(taggedMolecule.toSmiles()).toBe('C=COCC[X]');
 
   const hoses = getHoseCodesForAtomsAsStrings(taggedMolecule, {});
 

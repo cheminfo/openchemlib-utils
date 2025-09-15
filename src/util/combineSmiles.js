@@ -67,9 +67,9 @@ async function generate(core, rGroups, OCL, options = {}) {
       break;
     }
   }
-  return Object.keys(molecules)
-    .map((key) => molecules[key])
-    .sort((m1, m2) => m1.mw - m2.mw);
+  const mols = Object.values(molecules);
+  mols.sort((m1, m2) => m1.mw - m2.mw);
+  return mols;
 }
 
 function appendMolecule(molecules, core, rGroups, currents, OCL) {
