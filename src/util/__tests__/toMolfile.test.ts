@@ -50,6 +50,7 @@ test('encode in V', () => {
   molecule.setAtomCustomLabel(2, 'O3');
   const molfile = toMolfile(molecule, {
     includeCustomAtomLabelsAsVLines: true,
+    customLabelPosition: 'superscript',
   });
 
   expect(molfile).toMatchInlineSnapshot(`
@@ -67,22 +68,22 @@ test('encode in V', () => {
     M  SAL   1  1   1
     M  SDT   1 NOSEARCH_OCL_CUSTOM_LABEL
     M  SDD   1     1.7321    0.5000    DA    ALL  1       5
-    M  SED   1 C1
+    M  SED   1 ]C1
     M  STY  1   2 DAT
     M  SLB  1   2   2
     M  SAL   2  1   2
     M  SDT   2 NOSEARCH_OCL_CUSTOM_LABEL
     M  SDD   2     0.8660    0.0000    DA    ALL  1       5
-    M  SED   2 C2
+    M  SED   2 ]C2
     M  STY  1   3 DAT
     M  SLB  1   3   3
     M  SAL   3  1   3
     M  SDT   3 NOSEARCH_OCL_CUSTOM_LABEL
     M  SDD   3     0.0000    0.5000    DA    ALL  1       5
-    M  SED   3 O3
-    V    1 C1
-    V    2 C2
-    V    3 O3
+    M  SED   3 ]O3
+    V    1 ]C1
+    V    2 ]C2
+    V    3 ]O3
     M  END
     "
   `);

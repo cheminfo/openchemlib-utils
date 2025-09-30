@@ -1,5 +1,19 @@
 import type * as OCLType from 'openchemlib';
 
+import { changeMolfileCustomLabelPosition } from './changeMolfileCustomLabelPosition.ts';
+
+interface FromMolfileOptions {
+  /**
+   * If set to 'superscript', it will add a ']' at the beginning of the custom label to be
+   * compatible with the way to represent superscript in OCL
+   * If set to 'normal', it will remove the ']' at the beginning of the custom label if present
+   * If not set, it will keep the label as is
+   * Default: undefined (keep as is)
+   * @default undefined
+   */
+  customLabelPosition?: 'normal' | 'superscript' | undefined;
+}
+
 /**
  * Try to extract A and V field from a molfile and set the custom atom label to their value
  * Those fileds only exists in molfiles V2000
@@ -9,8 +23,12 @@ import type * as OCLType from 'openchemlib';
  * @param options
  * @returns - instance of Molecule with custom atom labels set when A or V lines were found
  */
-export function fromMolfile(OCL: OCLType, molfile: string, options = {}) {
-  const { asSuperscript = false } = options;
+export function fromMolfile(
+  OCL: typeof OCLType,
+  molfile: string,
+  options: FromMolfileOptions = {},
+) {
+  const { customLabelPosition } = options;
 
   const molecule = OCL.Molecule.fromMolfile(molfile);
 
@@ -53,5 +71,6 @@ export function fromMolfile(OCL: OCLType, molfile: string, options = {}) {
       }
     }
   }
+  changeMolfileCustomLabelPosition(molecule, customLabelPosition);
   return molecule;
 }

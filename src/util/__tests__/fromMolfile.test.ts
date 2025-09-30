@@ -28,7 +28,9 @@ V    5 3
 V    6 4'
 V    7 2
 M  END`;
-  const molecule = fromMolfile(OCL, molfile);
+  const molecule = fromMolfile(OCL, molfile, {
+    customLabelPosition: 'superscript',
+  });
   const customAtomLabels = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     customAtomLabels.push(molecule.getAtomCustomLabel(i));
@@ -36,13 +38,13 @@ M  END`;
 
   expect(customAtomLabels).toHaveLength(7);
   expect(customAtomLabels).toStrictEqual([
-    "5'",
-    "6'",
+    "]5'",
+    "]6'",
     null,
     null,
-    '3',
-    "4'",
-    '2',
+    ']3',
+    "]4'",
+    ']2',
   ]);
 });
 
