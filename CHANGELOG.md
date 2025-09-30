@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.3.1...v8.4.0) (2025-09-30)
+
+
+### Features
+
+* add fromMolfile and toMolfile to deal with old custom atom labels ([#185](https://github.com/cheminfo/openchemlib-utils/issues/185)) ([7f570a5](https://github.com/cheminfo/openchemlib-utils/commit/7f570a5664a940f9786446e9d93e4aa01a3976d0))
+
 ## [8.3.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.3.0...v8.3.1) (2025-08-25)
 
 
