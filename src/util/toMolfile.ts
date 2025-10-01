@@ -19,7 +19,7 @@ interface ToMolfileOptions {
    * Default: undefined (keep as is)
    * @default undefined
    */
-  customLabelPosition?: 'normal' | 'superscript' | undefined;
+  customLabelPosition?: 'normal' | 'superscript' | 'auto' | undefined;
 }
 
 /**
