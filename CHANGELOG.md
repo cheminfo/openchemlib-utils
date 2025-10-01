@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.4.0...v8.5.0) (2025-10-01)
+
+
+### Features
+
+* fromMolfile and toMolfile allow an 'auto' custom label position ([69b42f7](https://github.com/cheminfo/openchemlib-utils/commit/69b42f7e478fbfe380c61a8f597726a7885b2c3e))
+
 ## [8.4.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.3.1...v8.4.0) (2025-09-30)
 
 
