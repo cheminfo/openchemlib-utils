@@ -2,22 +2,38 @@ import type { Molecule } from 'openchemlib';
 
 export function changeMolfileCustomLabelPosition(
   molecule: Molecule,
-  customLabelPosition: 'normal' | 'superscript' | undefined,
+  customLabelPosition: 'normal' | 'superscript' | 'auto' | undefined,
 ) {
   switch (customLabelPosition) {
     case 'superscript':
       for (let i = 0; i < molecule.getAllAtoms(); i++) {
-        const label = molecule.getAtomCustomLabel(i);
-        if (label && !label.startsWith(']')) {
-          molecule.setAtomCustomLabel(i, `]${label}`);
+        const customLabel = molecule.getAtomCustomLabel(i);
+        if (customLabel && !customLabel.startsWith(']')) {
+          molecule.setAtomCustomLabel(i, `]${customLabel}`);
         }
       }
       break;
     case 'normal':
       for (let i = 0; i < molecule.getAllAtoms(); i++) {
-        const label = molecule.getAtomCustomLabel(i);
-        if (label?.startsWith(']')) {
-          molecule.setAtomCustomLabel(i, label.slice(1));
+        const customLabel = molecule.getAtomCustomLabel(i);
+        if (customLabel?.startsWith(']')) {
+          molecule.setAtomCustomLabel(i, customLabel.slice(1));
+        }
+      }
+      break;
+    case 'auto':
+      for (let i = 0; i < molecule.getAllAtoms(); i++) {
+        const customLabel = molecule.getAtomCustomLabel(i);
+        if (customLabel) {
+          const atomLabel = molecule.getAtomLabel(i);
+          if (atomLabel === 'C') {
+            // normal
+            if (customLabel.startsWith(']')) {
+              molecule.setAtomCustomLabel(i, customLabel.slice(1));
+            }
+          } else if (!customLabel.startsWith(']')) {
+            molecule.setAtomCustomLabel(i, `]${customLabel}`);
+          }
         }
       }
       break;

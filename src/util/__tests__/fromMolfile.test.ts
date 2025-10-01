@@ -14,7 +14,7 @@ ChemDraw09292517232D
     0.3572   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
     0.3572    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
    -0.3572    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
-    1.0717    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.0717    0.8250    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
   1  2  1  0        0
   2  3  1  0        0
   3  4  1  0        0
@@ -44,6 +44,26 @@ M  END`;
     null,
     ']3',
     "]4'",
+    ']2',
+  ]);
+
+  const molecule2 = fromMolfile(OCL, molfile, {
+    customLabelPosition: 'auto',
+  });
+
+  const customAtomLabels2 = [];
+  for (let i = 0; i < molecule2.getAllAtoms(); i++) {
+    customAtomLabels2.push(molecule2.getAtomCustomLabel(i));
+  }
+
+  expect(customAtomLabels2).toHaveLength(7);
+  expect(customAtomLabels2).toStrictEqual([
+    "5'",
+    "6'",
+    null,
+    null,
+    '3',
+    "4'",
     ']2',
   ]);
 });
