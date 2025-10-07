@@ -18,7 +18,6 @@ export * from './polymer/createPolymer.js';
 
 export * from './util/combineSmiles.js';
 export * from './util/dwar/parseDwar.js';
-export * from './util/fromMolfile.js';
 export * from './util/getAtomsInfo.js';
 export * from './util/getConnectivityMatrix.js';
 export * from './util/getImplicitHydrogensCount.ts';
@@ -39,7 +38,6 @@ export * from './util/nbCN.js';
 export * from './util/nbLabileH.js';
 export * from './util/tagAtom.ts';
 export * from './util/toggleHydrogens.ts';
-export * from './util/toMolfile.ts';
 export * from './util/toVisualizerMolfile.js';
 
 export * from './path/getPathsInfo.js';
