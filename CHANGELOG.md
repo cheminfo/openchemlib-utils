@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.5.0...v8.6.0) (2025-10-07)
+
+
+### Features
+
+* remove fromMolfile and toMolfile to move the code to openchemlib-js ([f41ff8e](https://github.com/cheminfo/openchemlib-utils/commit/f41ff8ecac7e3de46831b600ffad22be96239a6c))
+
 ## [8.5.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.4.0...v8.5.0) (2025-10-01)
 
 
