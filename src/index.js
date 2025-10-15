@@ -16,6 +16,7 @@ export * from './hose/getHoseCodesForPath.js';
 
 export * from './polymer/createPolymer.js';
 
+export * from './util/applyFragmentLabels.ts';
 export * from './util/combineSmiles.js';
 export * from './util/dwar/parseDwar.js';
 export * from './util/getAtomsInfo.js';
