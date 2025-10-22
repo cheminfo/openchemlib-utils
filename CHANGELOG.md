@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.6.0...v8.7.0) (2025-10-22)
+
+
+### Features
+
+* new utility function applyFragmentLabels to label atoms ([#192](https://github.com/cheminfo/openchemlib-utils/issues/192)) ([60b2ccf](https://github.com/cheminfo/openchemlib-utils/commit/60b2ccf67eca8975ce17fba28d3ebd3294b8f5a4))
+* remove atomCustomLabels for diaID and hose codes generation ([de8c1c3](https://github.com/cheminfo/openchemlib-utils/commit/de8c1c3e0be765cee69b5853664479cc55fd7571))
+
 ## [8.6.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.5.0...v8.6.0) (2025-10-07)
 
 
