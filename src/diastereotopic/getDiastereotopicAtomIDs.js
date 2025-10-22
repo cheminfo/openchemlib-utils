@@ -1,3 +1,4 @@
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
 import { makeRacemic } from '../util/makeRacemic.js';
 import { tagAtom } from '../util/tagAtom.ts';
@@ -23,7 +24,7 @@ export function getDiastereotopicAtomIDs(molecule) {
       ids[iAtom] = cache[rank];
       continue;
     }
-    const tempMolecule = molecule.getCompactCopy();
+    const tempMolecule = getCompactCopyWithoutCustomLabels(molecule);
     tagAtom(tempMolecule, iAtom);
     makeRacemic(tempMolecule);
     // We need to ensure the helper array in order to get correctly the result of racemisation

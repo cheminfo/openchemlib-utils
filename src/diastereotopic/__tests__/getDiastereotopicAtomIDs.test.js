@@ -18,6 +18,18 @@ describe('getDiastereotopicAtomIDs', () => {
     ]);
   });
 
+  it('CCC with custom labels', () => {
+    const molecule = OCL.Molecule.fromSmiles('CCC');
+    molecule.setAtomCustomLabel(0, 'A');
+    const ids = getDiastereotopicAtomIDs(molecule);
+
+    expect(ids).toStrictEqual([
+      'eM@Df`Xb`\u007FRP\\Jh',
+      'eM@HzAbJC}IApj`',
+      'eM@Df`Xb`\u007FRP\\Jh',
+    ]);
+  });
+
   it('CCC - 2', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     molecule.addImplicitHydrogens();

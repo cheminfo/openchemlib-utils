@@ -212,6 +212,9 @@ describe('TopicMolecule', () => {
 
   it('ethanol toggle implicit H', () => {
     const molecule = Molecule.fromSmiles('CCO');
+    // set custom label to identify the atom later
+    // it should have no effect on the hose codes generation
+    molecule.setAtomCustomLabel(0, 'R1');
     const topicMolecule = new TopicMolecule(molecule);
     let atoms = getAtomsAndDiaInfo(topicMolecule);
 
@@ -236,6 +239,20 @@ describe('TopicMolecule', () => {
     expect(atoms).toMatchSnapshot();
 
     const hoses = advancedMolecule2.hoseCodes;
+
+    const firstLayers = hoses.map((hose) => hose[0]);
+
+    expect(firstLayers).toStrictEqual([
+      'fH@NJ`uOkoth\\Jh',
+      'fH@NJ`uOk_th\\Jh',
+      'fI@GEPZgu_zTOeT',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+      'fHdrA\u007FRaDj`',
+    ]);
 
     expect(hoses).toHaveLength(9);
     expect(hoses).toMatchSnapshot();
