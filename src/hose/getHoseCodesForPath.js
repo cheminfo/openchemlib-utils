@@ -1,4 +1,5 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { makeRacemic } from '../util/makeRacemic.js';
 import { tagAtom } from '../util/tagAtom.ts';
 
@@ -15,7 +16,7 @@ export function getHoseCodesForPath(molecule, from, to, maxLength) {
   const OCL = molecule.getOCL();
   const originalFrom = from;
   const originalTo = to;
-  molecule = molecule.getCompactCopy();
+  molecule = getCompactCopyWithoutCustomLabels(molecule);
 
   const originalAtoms = []; // path before renumbering
   molecule.getPath(originalAtoms, from, to, maxLength + 1);

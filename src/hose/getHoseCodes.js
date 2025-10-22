@@ -1,4 +1,5 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { tagAtom } from '../util/tagAtom.ts';
 
 import { getHoseCodesForAtomsAsStrings } from './getHoseCodesForAtomsAsStrings.js';
@@ -20,7 +21,7 @@ export function getHoseCodes(molecule, options = {}) {
     Molecule.getAtomicNoFromLabel(label),
   );
 
-  const internalMolecule = molecule.getCompactCopy();
+  const internalMolecule = getCompactCopyWithoutCustomLabels(molecule);
   internalMolecule.addImplicitHydrogens();
   ensureHeterotopicChiralBonds(internalMolecule);
 

@@ -1,4 +1,5 @@
 import { getHoseCodesForAtomsAsStrings } from '../hose/getHoseCodesForAtomsAsStrings.js';
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { tagAtom } from '../util/tagAtom.ts';
 
 import type { TopicMolecule } from './TopicMolecule.ts';
@@ -27,7 +28,7 @@ export function getCanonizedHoseCodes(
       canonizedHoseCodes[finalRanks[i]] = cache[rank].diaID;
       continue;
     }
-    const tempMolecule = topicMolecule.moleculeWithH.getCompactCopy();
+    const tempMolecule = getCompactCopyWithoutCustomLabels(moleculeWithH);
     tagAtom(tempMolecule, i);
     const hoses = getHoseCodesForAtomsAsStrings(tempMolecule, options);
     canonizedHoseCodes[finalRanks[i]] = hoses;

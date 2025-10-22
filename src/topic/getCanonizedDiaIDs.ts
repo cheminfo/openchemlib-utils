@@ -1,5 +1,6 @@
 import type { LightLogger } from 'cheminfo-types';
 
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { makeRacemic } from '../util/makeRacemic.js';
 import { tagAtom } from '../util/tagAtom.ts';
 
@@ -35,7 +36,9 @@ export function getCanonizedDiaIDs(
       canonizedDiaIDs[finalRanks[i]] = cache[rank].diaID;
       continue;
     }
-    const tempMolecule = diaMol.moleculeWithH.getCompactCopy();
+    const tempMolecule = getCompactCopyWithoutCustomLabels(
+      diaMol.moleculeWithH,
+    );
     tagAtom(tempMolecule, i);
     makeRacemic(tempMolecule);
     const diaID = tempMolecule.getCanonizedIDCode(

@@ -1,4 +1,5 @@
 import { ensureHeterotopicChiralBonds } from '../diastereotopic/ensureHeterotopicChiralBonds.js';
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 import { getSymmetryRanks } from '../util/getSymmetryRanks.js';
 import { makeRacemic } from '../util/makeRacemic.js';
@@ -47,7 +48,7 @@ export function getHoseCodesAndInfo(molecule, options = {}) {
       hoses.push(cache[rank].hose);
       continue;
     }
-    const tempMolecule = molecule.getCompactCopy();
+    const tempMolecule = getCompactCopyWithoutCustomLabels(molecule);
     tagAtom(tempMolecule, i);
 
     let diaID;
