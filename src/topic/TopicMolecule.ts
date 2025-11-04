@@ -548,25 +548,47 @@ export interface GroupedDiaIDsOptions {
 }
 
 export interface GroupedDiaID {
+  counter: number;
+  /*
+   * Number of atoms with the same diaID.
+   */
+  /**
+   * Diastereotopic ID of the group
+   */
+  oclID: string;
+  /**
+   * Atom label (C, N, O, etc.)
+   */
+  atomLabel: string;
   /*
    * List of atom numbers with the same diaID
    */
-  counter: number;
-  /*
-   * List of atom numbers with the same diaID. The atom numbers could not be in the moecule
-   * because they are hydrogens attached to a heavy atom
-   */
   atoms: number[];
-  oclID: string;
-  atomLabel: string;
-  heavyAtoms: number[];
-  attachedHydrogens: number[];
-
   /**
    * List of atom numbers existing in the molecule. In case of implicit hydrogens we will fallback
    * to the linked heavy atom
    */
   existingAtoms: number[];
+  /**
+   * List of connected heavy atoms in the case of hydrogens
+   */
+  heavyAtoms: number[];
+  /**
+   * Lists of connected hydrogens in the case of heavy atoms
+   */
+  attachedHydrogens: number[];
+  /**
+   * List of custom labels found for the atoms in the group
+   */
+  customLabels: string[];
+  /**
+   * In the case of heavy atoms, list of custom labels found for the attached hydrogens in the group
+   */
+  attachedHydrogensCustomLabels: string[];
+  /**
+   * In the case of hydrogens, list of custom labels found for the connected heavy atoms in the group
+   */
+  heavyAtomsCustomLabels: string[];
 }
 
 export function groupDiastereotopicAtomIDs(
@@ -598,18 +620,38 @@ function groupDiastereotopicAtomIDsAsObject(
       if (!diaIDsObject[diaID]) {
         diaIDsObject[diaID] = {
           counter: 0,
-          atoms: [],
           oclID: diaID,
           atomLabel: moleculeWithH.getAtomLabel(i),
+          atoms: [],
+          existingAtoms: [],
           heavyAtoms: [],
           attachedHydrogens: [],
-          existingAtoms: [],
+          customLabels: [],
+          attachedHydrogensCustomLabels: [],
+          heavyAtomsCustomLabels: [],
         };
+      }
+
+      const customLabel = moleculeWithH.getAtomCustomLabel(i);
+      if (
+        customLabel &&
+        !diaIDsObject[diaID].customLabels.includes(customLabel)
+      ) {
+        diaIDsObject[diaID].customLabels.push(customLabel);
       }
       if (moleculeWithH.getAtomicNo(i) === 1) {
         const connected = moleculeWithH.getConnAtom(i, 0);
         if (!diaIDsObject[diaID].heavyAtoms.includes(connected)) {
           diaIDsObject[diaID].heavyAtoms.push(connected);
+        }
+        const heavyAtomCustomLabel = molecule.getAtomCustomLabel(connected);
+        if (
+          heavyAtomCustomLabel &&
+          !diaIDsObject[diaID].heavyAtomsCustomLabels.includes(
+            heavyAtomCustomLabel,
+          )
+        ) {
+          diaIDsObject[diaID].heavyAtomsCustomLabels.push(heavyAtomCustomLabel);
         }
         if (molecule.getAtomicNo(i)) {
           diaIDsObject[diaID].existingAtoms.push(i);
@@ -620,6 +662,18 @@ function groupDiastereotopicAtomIDsAsObject(
         for (let j = 0; j < moleculeWithH.getAllConnAtoms(i); j++) {
           const connected = moleculeWithH.getConnAtom(i, j);
           if (moleculeWithH.getAtomicNo(connected) === 1) {
+            const attachedHydrogenCustomLabel =
+              molecule.getAtomCustomLabel(connected);
+            if (
+              attachedHydrogenCustomLabel &&
+              !diaIDsObject[diaID].attachedHydrogensCustomLabels.includes(
+                attachedHydrogenCustomLabel,
+              )
+            ) {
+              diaIDsObject[diaID].attachedHydrogensCustomLabels.push(
+                attachedHydrogenCustomLabel,
+              );
+            }
             diaIDsObject[diaID].attachedHydrogens.push(connected);
           }
         }
