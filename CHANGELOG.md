@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.8.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.7.0...v8.8.0) (2025-11-04)
+
+
+### Features
+
+* groupedDiaID have new customLabels properties ([200a3b5](https://github.com/cheminfo/openchemlib-utils/commit/200a3b5d6ceee08ca32c2f790fc5e3bac15dee93))
+
 ## [8.7.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.6.0...v8.7.0) (2025-10-22)
 
 
