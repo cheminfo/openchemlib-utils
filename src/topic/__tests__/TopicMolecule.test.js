@@ -309,6 +309,7 @@ describe('TopicMolecule', () => {
     );
     const molecule = Molecule.fromMolfile(molfile);
     const topicMolecule = new TopicMolecule(molecule);
+
     let first = Date.now();
 
     expect(topicMolecule.diaIDs).toHaveLength(196);
@@ -343,6 +344,33 @@ describe('TopicMolecule', () => {
     expect(result['eMBBYRZA~d`bUP'].existingAtoms).toStrictEqual([0, 2, 3, 4]);
 
     //console.log(topicMolecule.diaIDsAndInfo)
+  });
+
+  it('check gietDiaIDsObject with atomCustomLabels', () => {
+    const molecule = Molecule.fromSmiles('CCC');
+    molecule.addImplicitHydrogens();
+    molecule.setAtomCustomLabel(0, 'R1');
+    molecule.setAtomCustomLabel(1, 'R2');
+    molecule.setAtomCustomLabel(2, 'R3');
+    molecule.setAtomCustomLabel(3, 'H1');
+    molecule.setAtomCustomLabel(4, 'H2');
+    toggleHydrogens(molecule, 2);
+
+    const topicMolecule = new TopicMolecule(molecule);
+
+    const result = topicMolecule.getDiaIDsObject();
+    const customLabels = Object.values(result).map(
+      (entry) => entry.customLabels,
+    );
+
+    expect(customLabels).toStrictEqual([
+      ['R1', 'R3'],
+      ['R2'],
+      ['H1', 'H2'],
+      [],
+    ]);
+
+    expect(result).toMatchSnapshot();
   });
 
   it('mapping of ethyl vinyl ether', () => {

@@ -93,6 +93,118 @@ exports[`TopicMolecule > 2-chlorobutane 1`] = `
 ]
 `;
 
+exports[`TopicMolecule > check gietDiaIDsObject with atomCustomLabels 1`] = `
+{
+  "eM@Df\`Xb\`RP\\Jh": {
+    "atomLabel": "C",
+    "atoms": [
+      0,
+      2,
+    ],
+    "attachedHydrogens": [
+      3,
+      4,
+      5,
+      8,
+      9,
+      10,
+    ],
+    "attachedHydrogensCustomLabels": [
+      "H1",
+      "H2",
+    ],
+    "counter": 2,
+    "customLabels": [
+      "R1",
+      "R3",
+    ],
+    "existingAtoms": [
+      0,
+      2,
+    ],
+    "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
+    "oclID": "eM@Df\`Xb\`RP\\Jh",
+  },
+  "eM@HzAbJC}IApj\`": {
+    "atomLabel": "C",
+    "atoms": [
+      1,
+    ],
+    "attachedHydrogens": [
+      6,
+      7,
+    ],
+    "attachedHydrogensCustomLabels": [],
+    "counter": 1,
+    "customLabels": [
+      "R2",
+    ],
+    "existingAtoms": [
+      1,
+    ],
+    "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
+    "oclID": "eM@HzAbJC}IApj\`",
+  },
+  "gC\`HALiKT@RHDRj@": {
+    "atomLabel": "H",
+    "atoms": [
+      3,
+      4,
+      5,
+      8,
+      9,
+      10,
+    ],
+    "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
+    "counter": 6,
+    "customLabels": [
+      "H1",
+      "H2",
+    ],
+    "existingAtoms": [
+      2,
+      3,
+      4,
+      5,
+    ],
+    "heavyAtoms": [
+      0,
+      2,
+    ],
+    "heavyAtomsCustomLabels": [
+      "R1",
+      "R3",
+    ],
+    "oclID": "gC\`HALiKT@RHDRj@",
+  },
+  "gC\`HALiMT@RHDRj@": {
+    "atomLabel": "H",
+    "atoms": [
+      6,
+      7,
+    ],
+    "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
+    "counter": 2,
+    "customLabels": [],
+    "existingAtoms": [
+      6,
+      7,
+    ],
+    "heavyAtoms": [
+      1,
+    ],
+    "heavyAtomsCustomLabels": [
+      "R2",
+    ],
+    "oclID": "gC\`HALiMT@RHDRj@",
+  },
+}
+`;
+
 exports[`TopicMolecule > ethanol 1`] = `
 [
   {
@@ -215,11 +327,14 @@ exports[`TopicMolecule > ethanol 2`] = `
       5,
       6,
     ],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       0,
     ],
     "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
     "oclID": "eMHAIhFIhOtdWBj@",
   },
   {
@@ -231,11 +346,14 @@ exports[`TopicMolecule > ethanol 2`] = `
       7,
       8,
     ],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       1,
     ],
     "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
     "oclID": "eMHAIhFJhOtdgBj@",
   },
   {
@@ -246,11 +364,14 @@ exports[`TopicMolecule > ethanol 2`] = `
     "attachedHydrogens": [
       3,
     ],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       2,
     ],
     "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
     "oclID": "eMHAIhFHhOtdGrj@",
   },
   {
@@ -259,13 +380,16 @@ exports[`TopicMolecule > ethanol 2`] = `
       3,
     ],
     "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       3,
     ],
     "heavyAtoms": [
       2,
     ],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gCaHHIeIZ\`GzQ@bUP",
   },
   {
@@ -276,7 +400,9 @@ exports[`TopicMolecule > ethanol 2`] = `
       6,
     ],
     "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
     "counter": 3,
+    "customLabels": [],
     "existingAtoms": [
       4,
       5,
@@ -285,6 +411,7 @@ exports[`TopicMolecule > ethanol 2`] = `
     "heavyAtoms": [
       0,
     ],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gCaHLIeIZ\`GzQ@bUP",
   },
   {
@@ -294,7 +421,9 @@ exports[`TopicMolecule > ethanol 2`] = `
       8,
     ],
     "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
     "counter": 2,
+    "customLabels": [],
     "existingAtoms": [
       7,
       8,
@@ -302,6 +431,7 @@ exports[`TopicMolecule > ethanol 2`] = `
     "heavyAtoms": [
       1,
     ],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gCaHDIeIjiJ@RHDRj@",
   },
 ]
@@ -819,13 +949,16 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       14,
     ],
     "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       4,
     ],
     "heavyAtoms": [
       4,
     ],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gGQHHIeIZjhA~dPHeT",
   },
   "gGQHLIeIZjhA~dPHeT": {
@@ -842,7 +975,9 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       13,
     ],
     "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
     "counter": 9,
+    "customLabels": [],
     "existingAtoms": [
       2,
       3,
@@ -855,6 +990,7 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       2,
       3,
     ],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gGQHLIeIZjhA~dPHeT",
   },
   "gJQ@@duU@LPTGzQ@~UP": {
@@ -865,11 +1001,14 @@ exports[`TopicMolecule > tert-butanol 1`] = `
     "attachedHydrogens": [
       14,
     ],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       4,
     ],
     "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gJQ@@duU@LPTGzQ@~UP",
   },
   "gJQ@@duU@LQTGzQDxUP": {
@@ -890,13 +1029,16 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       12,
       13,
     ],
+    "attachedHydrogensCustomLabels": [],
     "counter": 3,
+    "customLabels": [],
     "existingAtoms": [
       1,
       2,
       3,
     ],
     "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gJQ@@duU@LQTGzQDxUP",
   },
   "gJQ@@duU@LRTGzQHxUP": {
@@ -905,11 +1047,14 @@ exports[`TopicMolecule > tert-butanol 1`] = `
       0,
     ],
     "attachedHydrogens": [],
+    "attachedHydrogensCustomLabels": [],
     "counter": 1,
+    "customLabels": [],
     "existingAtoms": [
       0,
     ],
     "heavyAtoms": [],
+    "heavyAtomsCustomLabels": [],
     "oclID": "gJQ@@duU@LRTGzQHxUP",
   },
 }
