@@ -632,7 +632,9 @@ function groupDiastereotopicAtomIDsAsObject(
         };
       }
 
-      const customLabel = moleculeWithH.getAtomCustomLabel(i);
+      const customLabel = moleculeWithH
+        .getAtomCustomLabel(i)
+        ?.replace(/^\]/, '');
       if (
         customLabel &&
         !diaIDsObject[diaID].customLabels.includes(customLabel)
@@ -644,7 +646,9 @@ function groupDiastereotopicAtomIDsAsObject(
         if (!diaIDsObject[diaID].heavyAtoms.includes(connected)) {
           diaIDsObject[diaID].heavyAtoms.push(connected);
         }
-        const heavyAtomCustomLabel = molecule.getAtomCustomLabel(connected);
+        const heavyAtomCustomLabel = molecule
+          .getAtomCustomLabel(connected)
+          ?.replace(/^\]/, '');
         if (
           heavyAtomCustomLabel &&
           !diaIDsObject[diaID].heavyAtomsCustomLabels.includes(
@@ -662,8 +666,9 @@ function groupDiastereotopicAtomIDsAsObject(
         for (let j = 0; j < moleculeWithH.getAllConnAtoms(i); j++) {
           const connected = moleculeWithH.getConnAtom(i, j);
           if (moleculeWithH.getAtomicNo(connected) === 1) {
-            const attachedHydrogenCustomLabel =
-              molecule.getAtomCustomLabel(connected);
+            const attachedHydrogenCustomLabel = molecule
+              .getAtomCustomLabel(connected)
+              ?.replace(/^\]/, '');
             if (
               attachedHydrogenCustomLabel &&
               !diaIDsObject[diaID].attachedHydrogensCustomLabels.includes(
