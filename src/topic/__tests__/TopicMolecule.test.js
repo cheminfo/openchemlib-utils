@@ -351,9 +351,9 @@ describe('TopicMolecule', () => {
     molecule.addImplicitHydrogens();
     molecule.setAtomCustomLabel(0, 'R1');
     molecule.setAtomCustomLabel(1, 'R2');
-    molecule.setAtomCustomLabel(2, 'R3');
+    molecule.setAtomCustomLabel(2, ']R3');
     molecule.setAtomCustomLabel(3, 'H1');
-    molecule.setAtomCustomLabel(4, 'H2');
+    molecule.setAtomCustomLabel(4, ']H2');
     toggleHydrogens(molecule, 2);
 
     const topicMolecule = new TopicMolecule(molecule);
