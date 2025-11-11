@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.8.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.8.0...v8.8.1) (2025-11-06)
+
+
+### Bug Fixes
+
+* getDiaIDsObject remove superscript of atomCustomLabels if needed ([5783726](https://github.com/cheminfo/openchemlib-utils/commit/578372664ba56b332695f824e4e7ca05e7fd8368))
+
 ## [8.8.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.7.0...v8.8.0) (2025-11-04)
 
 
