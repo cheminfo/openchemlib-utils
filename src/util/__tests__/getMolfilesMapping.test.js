@@ -100,7 +100,7 @@ test('testing with and without hydrogens', () => {
   methaneMolecule.addImplicitHydrogens();
   const methaneWithHydrogens = methaneMolecule.toMolfile();
 
-  expect(() => getMolfilesMapping(OCL, methane, methaneWithHydrogens)).toThrowError(
-    'Molecules do not have the same explicit hydrogens',
-  );
+  expect(() =>
+    getMolfilesMapping(OCL, methane, methaneWithHydrogens),
+  ).toThrowError('Molecules do not have the same explicit hydrogens');
 });
