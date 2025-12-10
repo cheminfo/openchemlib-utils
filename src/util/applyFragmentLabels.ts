@@ -17,6 +17,8 @@ export interface ApplyFragmentLabelsOptions {
     | 'overlapping'
     | 'rigorous'
     | 'unique';
+  prefix?: string;
+  suffix?: string;
 }
 
 /**
@@ -32,7 +34,7 @@ export function applyFragmentLabels(
   fragment: Molecule,
   options: ApplyFragmentLabelsOptions = {},
 ): number {
-  const { algorithm = 'overlapping' } = options;
+  const { algorithm = 'overlapping', prefix = '', suffix = '' } = options;
   const sssearcher = new SSSearcher();
   sssearcher.setMolecule(molecule);
   sssearcher.setFragment(fragment);
@@ -47,7 +49,7 @@ export function applyFragmentLabels(
       const moleculeAtomIndex = match[fragmentAtomIndex];
       const label = fragment.getAtomCustomLabel(fragmentAtomIndex);
       if (label) {
-        molecule.setAtomCustomLabel(moleculeAtomIndex, label);
+        molecule.setAtomCustomLabel(moleculeAtomIndex, prefix + label + suffix);
       }
     }
   }
