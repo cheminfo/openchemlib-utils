@@ -43,10 +43,10 @@ describe('search', () => {
   it('invalid arguments', () => {
     expect(() => {
       moleculesDB.search(null);
-    }).toThrow(/toSearch must be a Molecule or string/);
+    }).toThrowError(/toSearch must be a Molecule or string/);
     expect(() => {
       moleculesDB.search('CCC', { mode: 'abc' });
-    }).toThrow(/unknown search mode: abc/);
+    }).toThrowError(/unknown search mode: abc/);
   });
 
   it('exact with SMILES', () => {

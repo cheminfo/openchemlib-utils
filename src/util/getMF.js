@@ -41,11 +41,12 @@ export function getMF(molecule) {
 function getFragmentMF(molecule, allAtoms) {
   const atoms = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
-    const atom = {};
-    atom.charge = molecule.getAtomCharge(i);
-    atom.label = molecule.getAtomLabel(i);
-    atom.mass = molecule.getAtomMass(i);
-    atom.implicitHydrogens = molecule.getImplicitHydrogens(i);
+    const atom = {
+      charge: molecule.getAtomCharge(i),
+      label: molecule.getAtomLabel(i),
+      mass: molecule.getAtomMass(i),
+      implicitHydrogens: molecule.getImplicitHydrogens(i),
+    };
     if (atom.label === '?') atom.label = 'R';
     atoms.push(atom);
     allAtoms.push(atom);
