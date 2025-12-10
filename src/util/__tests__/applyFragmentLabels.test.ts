@@ -74,3 +74,41 @@ test('separated, we can not reuse twice the same atoms', () => {
   ]);
   expect(molecule.toMolfile()).toMatchSnapshot();
 });
+
+test('with prefix and suffix', () => {
+  const molecule = Molecule.fromSmiles('CCC(=O)CCCCCCC(=O)CC');
+  const fragment = Molecule.fromSmiles('CCC(=O)');
+  fragment.setAtomCustomLabel(0, 'B');
+  fragment.setAtomCustomLabel(1, 'A');
+  fragment.setFragment(true);
+
+  const found = applyFragmentLabels(molecule, fragment, {
+    prefix: 'pre-',
+    suffix: '-suf',
+  });
+
+  expect(found).toBe(4);
+
+  const labels = [];
+  for (let i = 0; i < molecule.getAllAtoms(); i++) {
+    labels.push(molecule.getAtomCustomLabel(i));
+  }
+
+  expect(labels).toStrictEqual([
+    'pre-B-suf',
+    'pre-A-suf',
+    null,
+    null,
+    'pre-A-suf',
+    'pre-B-suf',
+    null,
+    null,
+    'pre-B-suf',
+    'pre-A-suf',
+    null,
+    null,
+    'pre-A-suf',
+    'pre-B-suf',
+  ]);
+  expect(molecule.toMolfile()).toMatchSnapshot();
+});
