@@ -73,30 +73,30 @@ test('createPolymer, just 2 units of ethylene glycol but mark the units', () => 
 });
 
 test('all the exceptions', () => {
-  expect(() => createPolymer()).toThrow('unit is required');
+  expect(() => createPolymer()).toThrowError('unit is required');
 
   const unit = Molecule.fromSmiles('CCCOC');
 
-  expect(() => createPolymer(unit)).toThrow('unit must contain 1 R1');
+  expect(() => createPolymer(unit)).toThrowError('unit must contain 1 R1');
 
   unit.setAtomicNo(0, r1);
 
-  expect(() => createPolymer(unit)).toThrow('unit must contain 1 R2');
+  expect(() => createPolymer(unit)).toThrowError('unit must contain 1 R2');
 
   unit.setAtomicNo(4, r1);
 
-  expect(() => createPolymer(unit)).toThrow('unit must contain 1 R1');
+  expect(() => createPolymer(unit)).toThrowError('unit must contain 1 R1');
 
   unit.setAtomicNo(4, r2);
   const alpha = Molecule.fromSmiles('CCCOC');
 
-  expect(() => createPolymer(unit, { alpha })).toThrow(
+  expect(() => createPolymer(unit, { alpha })).toThrowError(
     'alpha must contain 1 R1',
   );
 
   const gamma = Molecule.fromSmiles('CCCOC');
 
-  expect(() => createPolymer(unit, { gamma })).toThrow(
+  expect(() => createPolymer(unit, { gamma })).toThrowError(
     'gamma must contain 1 R2',
   );
 });

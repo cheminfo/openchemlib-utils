@@ -89,7 +89,7 @@ test('testing different molecules', () => {
   const methane = Molecule.fromSmiles('C').toMolfile();
   const water = Molecule.fromSmiles('O').toMolfile();
 
-  expect(() => getMolfilesMapping(OCL, methane, water)).toThrow(
+  expect(() => getMolfilesMapping(OCL, methane, water)).toThrowError(
     'Molecules are different',
   );
 });
@@ -100,7 +100,7 @@ test('testing with and without hydrogens', () => {
   methaneMolecule.addImplicitHydrogens();
   const methaneWithHydrogens = methaneMolecule.toMolfile();
 
-  expect(() => getMolfilesMapping(OCL, methane, methaneWithHydrogens)).toThrow(
+  expect(() => getMolfilesMapping(OCL, methane, methaneWithHydrogens)).toThrowError(
     'Molecules do not have the same explicit hydrogens',
   );
 });
