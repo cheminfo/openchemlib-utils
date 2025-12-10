@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.9.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.8.1...v8.9.0) (2025-12-10)
+
+
+### Features
+
+* allow prefix and suffix in applyFragmentLabels ([94a9630](https://github.com/cheminfo/openchemlib-utils/commit/94a9630ae7704f15260c802c404972f118adfb88))
+
 ## [8.8.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.8.0...v8.8.1) (2025-11-06)
 
 
