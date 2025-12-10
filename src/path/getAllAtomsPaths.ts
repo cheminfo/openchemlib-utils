@@ -31,7 +31,7 @@ export function getAllAtomsPaths(
     const oneAtomPaths: AtomPath[][] = [];
     allAtomsPaths.push(oneAtomPaths);
 
-    let atomPaths: AtomPath[] = [ { path: [i], pathLength: 0 }];
+    let atomPaths: AtomPath[] = [{ path: [i], pathLength: 0 }];
     oneAtomPaths.push(atomPaths);
 
     let nextIndexes = [0];

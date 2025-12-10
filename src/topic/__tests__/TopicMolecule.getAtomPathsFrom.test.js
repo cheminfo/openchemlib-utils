@@ -23,9 +23,9 @@ test('TopicMolecule.getAtomPathsFrom maxPathLength: 2 and ask for 3', () => {
   const molecule = Molecule.fromSmiles('CCCO');
   const topicMolecule = new TopicMolecule(molecule, { maxPathLength: 2 });
 
-  expect(() => topicMolecule.getAtomPathsFrom(0, { maxPathLength: 3 })).toThrowError(
-    'The maxPathLength is too long',
-  );
+  expect(() =>
+    topicMolecule.getAtomPathsFrom(0, { maxPathLength: 3 }),
+  ).toThrowError('The maxPathLength is too long');
 });
 
 test('TopicMolecule.getAtomPathsFrom maxPathLength: 2 and filter H', () => {

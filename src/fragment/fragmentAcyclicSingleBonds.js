@@ -41,7 +41,7 @@ export function fragmentAcyclicSingleBonds(molecule) {
   const nbFragments = brokenMolecule.getFragmentNumbers(fragmentMap);
   const results = [];
   for (let i = 0; i < nbFragments; i++) {
-    const result = { atomMap: [],};
+    const result = { atomMap: [] };
     const includeAtom = fragmentMap.map((id) => {
       return id === i;
     });
