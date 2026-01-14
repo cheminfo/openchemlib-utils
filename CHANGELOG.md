@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.10.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.9.0...v8.10.0) (2026-01-14)
+
+
+### Features
+
+* add new method autoLabel ([d03deea](https://github.com/cheminfo/openchemlib-utils/commit/d03deea76e281925648404a67bad2324c4a4993a))
+* expose autoLabelDatabase ([bfb1767](https://github.com/cheminfo/openchemlib-utils/commit/bfb17671cf44840a7cd1ae1e5ece5f47e8828223))
+
 ## [8.9.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.8.1...v8.9.0) (2025-12-10)
 
 
