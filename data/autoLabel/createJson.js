@@ -29,6 +29,7 @@ async function createAutoLabelingJson() {
       idCode,
       mf: molecule.getMolecularFormula().formula,
       mw: molecule.getMolecularFormula().relativeWeight,
+      label: file.replace('.mol', ''),
     });
   }
   return moleculeDatabase;
@@ -37,7 +38,7 @@ async function createAutoLabelingJson() {
 const moleculeDatabase = await createAutoLabelingJson();
 moleculeDatabase.sort((a, b) => b.mw - a.mw);
 
-const target = join(import.meta.dirname, '../../src/util/autoLabelDatabase.js');
+const target = join(import.meta.dirname, '../../src/util/autoLabelDatabase.ts');
 writeFileSync(
   target,
   `export const autoLabelDatabase = ${JSON.stringify(moleculeDatabase, null, 2)};`,

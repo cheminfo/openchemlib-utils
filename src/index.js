@@ -17,6 +17,7 @@ export * from './hose/getHoseCodesForPath.js';
 export * from './polymer/createPolymer.js';
 
 export * from './util/autoLabel.js';
+export * from './util/autoLabelDatabase.js';
 export * from './util/applyFragmentLabels.js';
 export * from './util/combineSmiles.js';
 export * from './util/dwar/parseDwar.js';
