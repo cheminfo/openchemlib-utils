@@ -1,4 +1,4 @@
-export * from './topic/TopicMolecule.ts';
+export * from './topic/TopicMolecule.js';
 
 export * from './diastereotopic/ensureHeterotopicChiralBonds.js';
 export * from './diastereotopic/getDiastereotopicAtomIDs.js';
@@ -16,19 +16,20 @@ export * from './hose/getHoseCodesForPath.js';
 
 export * from './polymer/createPolymer.js';
 
-export * from './util/applyFragmentLabels.ts';
+export * from './util/autoLabel.js';
+export * from './util/applyFragmentLabels.js';
 export * from './util/combineSmiles.js';
 export * from './util/dwar/parseDwar.js';
 export * from './util/getAtomsInfo.js';
 export * from './util/getConnectivityMatrix.js';
-export * from './util/getImplicitHydrogensCount.ts';
+export * from './util/getImplicitHydrogensCount.js';
 export * from './util/getMF.js';
 export * from './util/getCharge.js';
 export * from './util/getMolfilesMapping.js';
-export * from './util/getNMRHints.ts';
-export * from './util/getNextNMRHint.ts';
+export * from './util/getNMRHints.js';
+export * from './util/getNextNMRHint.js';
 export * from './util/getProperties.js';
-export * from './util/getAtoms.ts';
+export * from './util/getAtoms.js';
 export * from './util/isCsp3.js';
 export * from './util/makeRacemic.js';
 export * from './util/nbOH.js';
@@ -37,8 +38,8 @@ export * from './util/nbCHO.js';
 export * from './util/nbNH2.js';
 export * from './util/nbCN.js';
 export * from './util/nbLabileH.js';
-export * from './util/tagAtom.ts';
-export * from './util/toggleHydrogens.ts';
+export * from './util/tagAtom.js';
+export * from './util/toggleHydrogens.js';
 export * from './util/toVisualizerMolfile.js';
 
 export * from './path/getPathsInfo.js';
