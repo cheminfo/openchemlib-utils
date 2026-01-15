@@ -19,16 +19,20 @@ async function createAutoLabelingJson() {
       'utf8',
     );
     const molecule = Molecule.fromMolfile(molfile);
+    const mf = molecule.getMolecularFormula().formula;
+    const mw = molecule.getMolecularFormula().relativeWeight;
     molecule.setFragment(true);
 
     const canonizer = new Canonizer(molecule, { encodeAtomCustomLabels: true });
 
     const idCode = canonizer.getIDCode();
+    const coordinates = canonizer.getEncodedCoordinates(false);
 
     moleculeDatabase.push({
       idCode,
-      mf: molecule.getMolecularFormula().formula,
-      mw: molecule.getMolecularFormula().relativeWeight,
+      coordinates,
+      mf,
+      mw,
       label: file.replace('.mol', ''),
     });
   }
