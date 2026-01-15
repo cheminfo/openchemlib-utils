@@ -33,7 +33,7 @@ async function createAutoLabelingJson() {
       coordinates,
       mf,
       mw,
-      label: file.replace('.mol', ''),
+      label: file.replace('.mol', '').replaceAll('_', ' '),
     });
   }
   return moleculeDatabase;
