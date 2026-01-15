@@ -1,0 +1,129 @@
+
+Actelion Java MolfileCreator 1.0
+
+ 19 21  0  0  0  0  0  0  0  0999 V2000
+   22.8990  -10.9115    0.0000 N   0  0  0  0  0  0  0  0  0  1  0  0
+   22.8990  -12.3006    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0
+   21.6963  -12.9975    0.0000 N   0  0  0  0  0  0  0  0  0  3  0  0
+   20.4912  -12.3006    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0
+   20.4912  -10.9115    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0
+   21.6963  -10.2170    0.0000 C   0  0  0  0  0  0  0  0  0  6  0  0
+   19.1709  -12.7301    0.0000 N   0  0  0  0  0  0  0  0  0  7  0  0
+   18.3535  -11.6061    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0
+   19.1709  -10.4819    0.0000 N   0  0  0  0  0  0  0  0  0  9  0  0
+   21.6963   -8.8277    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   16.1250  -16.3085    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0
+   18.4616  -16.3085    0.0000 C   0  0  0  0  0  0  0  0  0 12  0  0
+   19.1709  -15.4935    0.0000 C   0  0  0  0  0  0  0  0  0 13  0  0
+   17.2907  -14.7966    0.0000 O   0  0  0  0  0  0  0  0  0 14  0  0
+   15.4009  -15.4935    0.0000 C   0  0  0  0  0  0  0  0  0 15  0  0
+   14.1958  -13.6824    0.0000 O   0  0  0  0  0  0  0  0  0 16  0  0
+   16.1250  -17.2264    0.0000 O   0  0  0  0  0  0  0  0  0 17  0  0
+   15.4009  -14.3794    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0
+   24.1986  -13.0496    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  1  6  1  0  0  0  0
+  4  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  5  9  1  0  0  0  0
+  6 10  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 11  1  0  0  0  0
+ 18 16  1  0  0  0  0
+ 11 17  1  0  0  0  0
+  7 13  1  0  0  0  0
+ 15 18  1  0  0  0  0
+  2 19  1  0  0  0  0
+M  STY  1   1 DAT
+M  SLB  1   1   1
+M  SAL   1  1   1
+M  SDT   1 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   1    22.8990   10.9115    DA    ALL  1       5
+M  SED   1 1
+M  STY  1   2 DAT
+M  SLB  1   2   2
+M  SAL   2  1   2
+M  SDT   2 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   2    22.8990   12.3006    DA    ALL  1       5
+M  SED   2 2
+M  STY  1   3 DAT
+M  SLB  1   3   3
+M  SAL   3  1   3
+M  SDT   3 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   3    21.6963   12.9975    DA    ALL  1       5
+M  SED   3 3
+M  STY  1   4 DAT
+M  SLB  1   4   4
+M  SAL   4  1   4
+M  SDT   4 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   4    20.4912   12.3006    DA    ALL  1       5
+M  SED   4 4
+M  STY  1   5 DAT
+M  SLB  1   5   5
+M  SAL   5  1   5
+M  SDT   5 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   5    20.4912   10.9115    DA    ALL  1       5
+M  SED   5 5
+M  STY  1   6 DAT
+M  SLB  1   6   6
+M  SAL   6  1   6
+M  SDT   6 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   6    21.6963   10.2170    DA    ALL  1       5
+M  SED   6 6
+M  STY  1   7 DAT
+M  SLB  1   7   7
+M  SAL   7  1   7
+M  SDT   7 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   7    19.1709   12.7301    DA    ALL  1       5
+M  SED   7 9
+M  STY  1   8 DAT
+M  SLB  1   8   8
+M  SAL   8  1   8
+M  SDT   8 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   8    18.3535   11.6061    DA    ALL  1       5
+M  SED   8 8
+M  STY  1   9 DAT
+M  SLB  1   9   9
+M  SAL   9  1   9
+M  SDT   9 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD   9    19.1709   10.4819    DA    ALL  1       5
+M  SED   9 7
+M  STY  1  10 DAT
+M  SLB  1  10  10
+M  SAL  10  1  11
+M  SDT  10 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD  10    16.1250   16.3085    DA    ALL  1       5
+M  SED  10 3′
+M  STY  1  11 DAT
+M  SLB  1  11  11
+M  SAL  11  1  12
+M  SDT  11 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD  11    18.4616   16.3085    DA    ALL  1       5
+M  SED  11 2′
+M  STY  1  12 DAT
+M  SLB  1  12  12
+M  SAL  12  1  13
+M  SDT  12 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD  12    19.1709   15.4935    DA    ALL  1       5
+M  SED  12 1′
+M  STY  1  13 DAT
+M  SLB  1  13  13
+M  SAL  13  1  15
+M  SDT  13 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD  13    15.4009   15.4935    DA    ALL  1       5
+M  SED  13 4′
+M  STY  1  14 DAT
+M  SLB  1  14  14
+M  SAL  14  1  18
+M  SDT  14 NOSEARCH_OCL_CUSTOM_LABEL
+M  SDD  14    15.4009   14.3794    DA    ALL  1       5
+M  SED  14 5′
+M  END

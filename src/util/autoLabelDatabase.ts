@@ -1,7 +1,7 @@
 export const autoLabelDatabase = [
   {
     idCode:
-      'fmo@@@LddTTVbvebQbrTyjUcNBfjjjjjjjjjh@Oz[PG]cAhMv\\anulMvLSnqiuFzNYwXt[c][B[iZS]SJ{lXmin}c]vLflw\\sn{Fs^{lZlGnqnt^{FGI{lYmgni`q^zfSU{jZLwnilw^zfKC{jZmOninr~zf[@',
+      'fmo@@@LddTTVbvebQbrTyjUcNBfjjjjjjjjjh@Oz[PCFCPirJmbcDXtzdNXqhwIlJKRdrfLVu]cLYMZsNXv[sFkAXwZKFGIXs[JfCETrZjfcMTv[jfKCTuZZf{KTsX',
     coordinates:
       '!BetK~gzaBM`BWO_z`esvhOZ`}etK~gy]BjDK~hL~esyhqXNLxi]BWP`QLesvWPi\\}?i~WP`',
     mf: 'C27H48',
@@ -9,8 +9,15 @@ export const autoLabelDatabase = [
     label: 'cholesterol',
   },
   {
+    idCode: String.raw`fluhP@DTxIPCQSdTRbbUTRRSNRT{sUKMUUUP@_t\dIlbcXjqIMR{LbwKMJGJivfLflidsdlf|ydpVlf@`,
+    coordinates: '!B?oum~QKy?ouBuo{}Dog]aYkMPlg~_ySz^bTT~Rc~?cK~eQKz',
+    mf: 'C10H13N5O4',
+    mw: 267.24422,
+    label: 'deoxyguanosine',
+  },
+  {
     idCode:
-      'flm@@@LddTTVbvebyjUcNBfjjjjjjj@C~fTAwXpZC]gH[m[C]cD{lZ]Qncf]vMFxwVpfzVdwTrn{FKZ[oXw]cIkMwL{nqlwn{FkA{l[mGnqar^{F[@',
+      'flm@@@LddTTVbvebyjUcNBfjjjjjjj@C~fT@q`tJ\\bkXhqFMNiCfLZMr[BbtiLicEmWXsFSVlsfMf|qjpVMvbqarVLv@',
     coordinates: '!BetK~gzaBM`BWO_z`esvhOZ`}etK~gy]BjDK~hL~esyhqXNLx',
     mf: 'C19H32',
     mw: 260.46308,
@@ -18,38 +25,76 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
+      'fdei`@LZlFHIJrQQQSIQEYDhZw`uUUPHEP@G}GIAcIdIYMbgDTrZcfSLZr[dVECmVXuVm]gR[tvCQ`',
+    coordinates: '!Bj?dT~_x@^bTEI_xrO]ZZtozUDoim~_{|i]Im~fwz?os~?@',
+    mf: 'C10H13N5O3',
+    mw: 251.24521999999996,
+    label: 'deoxyadenosine',
+  },
+  {
+    idCode:
+      'fhiQP@DX@IW`yEEDeDdbdsakMUMMUU@ASRPdrJMbsDfuFLfYEnUZRfSFRrZsfSNZrX',
+    coordinates: '!B@yhCi_xl@yk~_pNZ?brT~ghe?bpCfaSyJO{~LozUDoh',
+    mf: 'C10H14N2O5',
+    mw: 242.23016,
+    label: 'deoxythymidine',
+  },
+  {
+    idCode:
       'fhe@@@LdbbbTReryHQmN|Fjjjjjj`@iE@TzCFCHavFMFIUjTYcFK\\npfLfeMeQ[TfLqlufMV]YoL[lEcM`',
     coordinates: '!BbOvw?_x@?g~H@k\\B?g~w@k_}bOvH?_x@GvVH@a|ZTq`',
     mf: 'C17H28',
     mw: 232.40931999999998,
-    label: 'steroid-core',
+    label: 'steroid core',
   },
   {
-    idCode: 'daDD@@qJYnnjjh@hrPwXrMvlS]STwRsMums]s@',
+    idCode: 'f`qQP@DX@ISoILrl{jsfcMUMMUT@G}MIBSHhvKLR[TXrYdVyUiJYMiKIcNYMYkI`',
+    coordinates: '!B@yhCi_xl@yk~_pNZ?brT~ghe?bpT~Rc~?cK~eQKz',
+    mf: 'C9H12N2O5',
+    mw: 228.20328,
+    label: 'deoxyuridine',
+  },
+  {
+    idCode:
+      'f`qpP@DXxBSoYEDhihTdjBtYijjji`@iiHRYEfqQbQZdvXqdpjliSImIYLYsIkMYL',
+    coordinates: '!B@yk~K@Ne@yhCfoy??bpCiYSz^bTT~Rc~?cK~eQKz',
+    mf: 'C9H13N3O4',
+    mw: 227.21921999999998,
+    label: 'deoxycytidine',
+  },
+  {
+    idCode: 'dazH`Jx@aJ]nji`dG}JPGJVapyd\\M[GBfIpq`',
+    coordinates: '!B?g~H@k_}?g~H?[_}?g|',
+    mf: 'C5H11NOS',
+    mw: 133.21434,
+    label: 'methionine',
+  },
+  {
+    idCode: 'daDD@@qJYnnjjh@htQcIkESUKM[]s@',
     coordinates: '!Bm?vH?[_|?g?~_x`BbOt',
     mf: 'C6H12O2',
     mw: 116.15928000000001,
     label: 'pyranose',
   },
   {
-    idCode: 'gOp`AdifMjj`OzUHwXr[iXmuMV{f[]k@',
+    idCode: 'gOp`AdifMjj`OzVIcJVMM^Yzp',
     coordinates: '!BTv]`YW?~KF_~_q`l',
     mf: 'C5H10O2',
     mw: 102.1324,
     label: 'furanose',
   },
   {
-    idCode: 'gOp`Adigkjj`OzUHwXr[mXmuMVzV[]s@',
+    idCode: 'gOp`Adigkjj`OzVIcKVMMYY|p',
     coordinates: '!Bm?vH?[_|?g?~_xc}',
     mf: 'C5H10O2',
     mw: 102.1324,
-    label: 'pyranose-core',
+    label: 'pyranose core',
   },
   {
-    idCode: 'gFp`AdidvjhC~aRMvLfzVK]SUny`',
+    idCode: 'gFp`AdidvjhC~abXrecSWf@',
     coordinates: '!BTv]`YW?~KF_~_p',
     mf: 'C4H8O2',
     mw: 88.10552,
-    label: 'furanose-core',
+    label: 'furanose core',
   },
 ];
