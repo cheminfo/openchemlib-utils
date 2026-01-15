@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.11.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.10.0...v8.11.0) (2026-01-15)
+
+
+### Features
+
+* add coordinates in autoLabelDatabase ([39504c5](https://github.com/cheminfo/openchemlib-utils/commit/39504c51bf2e0a573eb3436e4ca742f6d371c059))
+
 ## [8.10.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.9.0...v8.10.0) (2026-01-14)
 
 
