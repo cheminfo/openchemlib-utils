@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.12.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.11.0...v8.12.0) (2026-01-15)
+
+
+### Features
+
+* add more templates ([24ef70d](https://github.com/cheminfo/openchemlib-utils/commit/24ef70decf5cc2368a3b80fb593948cace394908))
+
 ## [8.11.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.10.0...v8.11.0) (2026-01-15)
 
 
