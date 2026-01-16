@@ -7,7 +7,7 @@ export const autoLabelDatabase = [
     "label": "cholesterol"
   },
   {
-    "idCode": "fluhP@DTxIPCQSdTRbbUTRRSNRT{sUKMUUUP@_t\\dIlbcXjqIMR{LbwKMJGJivfMrlinSdmr|ynPVmr@",
+    "idCode": String.raw`fluhP@DTxIPCQSdTRbbUTRRSNRT{sUKMUUUP@_t\dIlbcXjqIMR{LbwKMJGJivfMrlinSdmr|ynPVmr@`,
     "coordinates": "!B?oum~QKy?ouBuo{}Dog]aYkMPlg~_ySz^bTT~Rc~?cK~eQKz",
     "mf": "C10H13N5O4",
     "mw": 267.24422,
