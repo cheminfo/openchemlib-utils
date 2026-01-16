@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.12.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.12.0...v8.12.1) (2026-01-16)
+
+
+### Bug Fixes
+
+* use standard ASCII in autoLabel database ([712f966](https://github.com/cheminfo/openchemlib-utils/commit/712f9666f23247b3698ad9d154457425f704fbd0))
+
 ## [8.12.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.11.0...v8.12.0) (2026-01-15)
 
 
