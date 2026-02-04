@@ -1,6 +1,6 @@
 {
   "name": "openchemlib-utils",
-  "version": "8.12.1",
+  "version": "8.13.0",
   "license": "MIT",
   "description": "Various utilities that extends openchemlib-js like HOSE codes or diastereotopic IDs",
   "keywords": [
