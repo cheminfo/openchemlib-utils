@@ -9,11 +9,8 @@ import { Canonizer, Molecule } from 'openchemlib';
 // this database will be ordered by molecule size
 
 async function createAutoLabelingJson() {
-  const files = (
-    await readdir(join(import.meta.dirname, 'templates'), {
-      recursive: true,
-    })
-  ).filter((file) => file.endsWith('.mol'));
+  const allFiles = await readdir(join(import.meta.dirname, 'templates'));
+  const files = allFiles.filter((file) => file.endsWith('.mol'));
   const moleculeDatabase = [];
 
   for (const file of files) {
