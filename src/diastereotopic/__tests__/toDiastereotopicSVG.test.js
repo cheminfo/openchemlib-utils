@@ -9,6 +9,5 @@ describe('toDiastereotopicSVG', () => {
     const svg = toDiastereotopicSVG(molecule);
 
     expect(svg).toMatchSnapshot();
-    expect(svg).toHaveLength(1028);
   });
 });
