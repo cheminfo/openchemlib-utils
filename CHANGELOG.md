@@ -1,5 +1,17 @@
 # Changelog
 
+## [8.13.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.12.1...v8.13.0) (2026-02-16)
+
+
+### Features
+
+* add molecule templates ([9479e34](https://github.com/cheminfo/openchemlib-utils/commit/9479e3408ec66a29276da714c0d03f9c9f497f78))
+
+
+### Bug Fixes
+
+* update dependencies ([#215](https://github.com/cheminfo/openchemlib-utils/issues/215)) ([bd1309a](https://github.com/cheminfo/openchemlib-utils/commit/bd1309a3c9ecd51140c9485de3e3e8bc5a6cb419))
+
 ## [8.12.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.12.0...v8.12.1) (2026-01-16)
 
 
