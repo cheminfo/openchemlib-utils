@@ -23,6 +23,32 @@ describe('combineSmiles', () => {
     expect(results[0].mf).toBe('C8H11NO');
   });
 
+  it('real case with problem smiles core starting with R', async () => {
+    const fragments = [
+      { i: 1, R1: true, R2: true, R3: true, R4: true, smiles: 'CC([R])=O' },
+      { i: 2, R1: true, R2: true, R3: true, R4: true, smiles: 'OC[R]' },
+      { i: 3, R1: true, R2: true, R3: true, R4: true, smiles: 'CNC[R]' },
+      { i: 4, R1: true, R2: true, R3: true, R4: true, smiles: 'CCOC[R]' },
+      {
+        i: 5,
+        R1: true,
+        R2: true,
+        R3: true,
+        R4: true,
+        smiles: '[R]C1=CC=CC=C1',
+      },
+      { i: 6, R1: true, R2: true, R3: true, R4: true, smiles: 'CC[R]' },
+      { i: 7, R1: true, R2: true, R3: true, R4: true, smiles: 'CCC[R]' },
+      { i: 8, R1: true, R2: true, R3: true, R4: true, smiles: '[R]' },
+    ];
+    const core = '[R4]C(C([R3])=C1[R2])=CN=C1[R1]';
+    const results = await combineSmiles(core, fragments, OCL);
+
+    expect(results).toHaveLength(3872);
+    expect(results[0].mw).toBe(79.1017);
+    expect(results[0].mf).toBe('C5H5N');
+  });
+
   it('onStep', async () => {
     let counter = 0;
     const fragments = [
