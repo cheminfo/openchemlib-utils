@@ -106,7 +106,10 @@ function appendMolecule(molecules, core, rGroups, currents, OCL) {
 function getCore(coreSmiles) {
   const core = {
     originalSmiles: coreSmiles,
-    smiles: coreSmiles.replaceAll(/\[R(?<group>[1-4])]/g, '%5$<group>'),
+    smiles: updateRPosition(coreSmiles).replaceAll(
+      /\[R(?<group>[1-4])]/g,
+      '%5$<group>',
+    ),
   };
 
   for (let i = 0; i < MAX_R; i++) {
@@ -139,12 +142,24 @@ function getRGroups(core, fragments) {
   return Object.keys(rGroups).map((key) => rGroups[key]);
 }
 
+/**
+ * Repositions an R-group marker when it appears at the beginning of a SMILES string.
+ * R-group markers (`[R]`, `[R1]`, `[R2]`, ..., `[R9]`) at position 0 are not valid in
+ * SMILES notation, so this function moves them after the first atom at the top level
+ * of the molecular graph.
+ * @param {string} smiles - SMILES string potentially starting with an R-group marker
+ * @returns {string} SMILES string with the R-group marker repositioned if needed
+ */
 function updateRPosition(smiles) {
-  // R group should not be at the beginning
-  if (smiles.indexOf('[R]') !== 0) return smiles;
-  if (smiles.length === 3) return '[H][R]';
+  // Match R group at the beginning: [R], [R1], [R2], ..., [R9]
+  const match = smiles.match(/^\[R\d?]/);
+  if (!match) return smiles;
+
+  const rGroup = match[0];
+
+  if (smiles.length === rGroup.length) return `[H]${rGroup}`;
   // we are in trouble ... we need to move the R
-  const newSmiles = smiles.replace('[R]', '');
+  const newSmiles = smiles.slice(rGroup.length);
   // we need to check where we should put the R group
   let level = 0;
   for (let j = 0; j < newSmiles.length; j++) {
@@ -156,11 +171,11 @@ function updateRPosition(smiles) {
       level--;
     } else if (level === 0) {
       if (currentSubstring.match(/^[a-z]/)) {
-        return `${newSmiles.slice(0, Math.max(0, j + 1))}([R])${newSmiles.slice(j + 1)}`;
+        return `${newSmiles.slice(0, Math.max(0, j + 1))}(${rGroup})${newSmiles.slice(j + 1)}`;
       } else if (currentSubstring.match(/^[A-Z][a-z]/)) {
-        return `${newSmiles.slice(0, Math.max(0, j + 2))}([R])${newSmiles.slice(j + 2)}`;
+        return `${newSmiles.slice(0, Math.max(0, j + 2))}(${rGroup})${newSmiles.slice(j + 2)}`;
       } else if (currentSubstring.match(/^[A-Z]/)) {
-        return `${newSmiles.slice(0, Math.max(0, j + 1))}([R])${newSmiles.slice(j + 1)}`;
+        return `${newSmiles.slice(0, Math.max(0, j + 1))}(${rGroup})${newSmiles.slice(j + 1)}`;
       }
     }
   }
