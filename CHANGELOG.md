@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.13.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.0...v8.13.1) (2026-02-20)
+
+
+### Bug Fixes
+
+* deal correctly with combineSmiles having a core starting with R ([c80f16f](https://github.com/cheminfo/openchemlib-utils/commit/c80f16f97c5e09513f22926ad3d99df98c6326b2))
+
 ## [8.13.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.12.1...v8.13.0) (2026-02-16)
 
 
