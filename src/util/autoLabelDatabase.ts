@@ -1,7 +1,7 @@
 export const autoLabelDatabase = [
   {
     idCode:
-      'ea^P@@@LdbVRRbbvRRbLVRbrTVRdsRuMTmSSMLuSPEdEaLWEiATSUCRu]_QKPW@M]gIhM]GIdC]cAdvAnqirXcW^rZ`wXtYLqkkYMp[lYLfDuvlfdMvMfSJFzBKImC]cCdqanqbrZpwTpYLx[hKLf|MvMVSAFzBSIhm]cUdc]AQdvVnqbqQnqnrZhwXsYLukl[MuklYLMkjXMMklZLmklXMlklxyWQuvnqisrn}oe][@j{VaUtlcklX]bknXeWTuJnqf]]c]n]]cM`',
+      'ea^P@@@LdbVRRbbvRRbLVRbrTVRdsRuMTmSSMLuSPEdEaLWEiATSUCRu]_QKPiHn{FkY]vLVZ{l[MuwXrX[ni`tw]cQen{FC[Mv\\\\wQuw]cSgf{v~[kXEnuhVzVQ{lX]bw\\qK]STmvLswXw[gnqfwxeXN@@AkhB\\@S@XM]@C`BXB`[hBL@C@DpG@wPDXAN@I`IFn`NpALAhMtAF@Q`BXBqkhAl@S@^C]@Q`BX@f@bZz@k@DpFPwPDXAf@I`Jan`@P@l@S@]C]@Q`@x@f@fFz@c@BpALAlMt@f@A`BXBx[h@D@s@DpGpwPDXAV@I`HQn`@PAL@S@Xm]@Q`EX@d[h@D@c@DpGKWPDX@V@EFz@c@NpALAjMtAF@M`BXBukhBL@s@Nm]@Q`BX@MkhAL@C@Im]@Q`DX@mkhBL@C@Me]@S`Arn`ApB{WPDXAN@OJz@{@Oe]@M`@Jn`JpBEWPAX@ckhBL@G@LU]@Y`AJn`DpBeWPDX@skhBL@{@N]]@Q`CX@',
     coordinates:
       '!BmpJH@oy?mwvH_[\\Bb@Jw_Xa}mpK~_x`B?g~w_Xa}mpJH@k]}bGw~_{\\Bb@JH__x@b@JH_X`BbGw~@H`BbGvH@ha}?`BH@ha}b@K~@Ha}',
     mf: 'C40H56',
@@ -10,7 +10,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'eaYP@@@LdbbTbsbrTVRTVRbrbbdWBaOKUMUMLtsSMLuUU@RTVdyAVUUCRu]_tEpCWVrZCWZrYCW^r[CWXrXcWRrZ`wXpyLqkhyMqkjYLH[l[lfdMvLvSJZ{fSZZ{NSFF{FCIkC]cSdsanqhr[pwXrYLD[l[LfbMvLVSIFzfCIlc]cUdqVnqjuVnqbsVnqlwVnqdpvni`tvnqhrvnq`vrnsce]GWZ{FgOJ{v~UulBkmZEWXrJnel]]cCbU]STz{F{Lz{F[\\j{f@',
+      'eaYP@@@LdbbTbsbrTVRTVRbrbbdWBaOKUMUMLtsSMLuUU@RTVdyAVUUCRu]_tJPknqjuW]cEfn{Fs]]vLfF{jXMMwXtY[nq`vs]gGMt]]wXtyyn}ofzvA[mZEnqdVzVq{lX\\RwTuO]c]f^{F[\\mwM~IVC`@@Zz@[@DpFCWPEX@f@hZz@{@DpGCWPDX@f@dZz@K@DpF`wPDX@N@I`KFn`ApALAxut@f@I`Han`HpCl@S@YC]@Q`CX@f@jZz@s@DpGSWPDx@f@fFz@c@@pALAlMtAF@S`BXBx[hBL@c@DpGpwPDX@f@I`HQn`HpCL@S@Xc]@Q`AX@f@iFz@S@@pALArMtAF@U`BXBUkhBL@k@Jm]@Q`AX@ukhBL@s@Nm]@Q`BX@MkhAL@C@Im]@Q`DX@mkhBL@C@Me]@S`Arn`ApB{WPDXAN@OJz@{@Oe]@M`@Jn`JpBEWPDX@bkh@l@qutAF@C`AJn`DpBgWPDXAv@Lzz@c@FpCeWPFX@',
     coordinates:
       '!B?`BH_[]}mpJH?H`BmpIt^pnGmwvH_X`B?g~H_X`BbGvH@oy?bGvH@ha}b@JH__x@b@JH_X`BbGw~@H`BbGw~_x`BbGvw_Xa}f~atnH`B',
     mf: 'C40H56',
@@ -161,7 +161,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'eglPD@@@MlbbbbbRRqfbbbRRsDbeagaSPqrusP@PAE@D@HPP@@_tNrCWYrY@wYrZM`[hyMFHMtlfcTZ{FSLV{FCIhwFncdpfnedtanq`rYSWTr[SWZrXsW^rZsW\\rYsWXp[sWVrXKWRtZHwXpZLeklzMdkiXkWQtZiWZsRnsne]cCJ{ffUt\\lkkXyWTurn}`',
+      'eglPD@@@MlbbbbbRRqfbbbRRsDbeagaSPqrusP@PAE@D@HPP@@_tTQsnq`vS]KUMvltwYwS]cCMwMLwQrs][GMuM\\w^wxiXN@AAkhB\\@S@TC]@S`BXCFxXFz@G@DpFMpHMt@V@I`L[aQkhBL@S@VK]@Q`@X@f@qnGFn`ApALADut@V@I`Lan`Hp@L@S@UM]@I`BXCikhBl@S@SM]@]`BXCYkhCL@S@WM]@Q`@XAykhAl@S@Pm]@E`D[aD[hBL@C@HwAKWPDxAFxYJz@K@Bm]@C`D[aTkhBl@ZUtAN@]Jz@c@Ae]@Y`Drn`ApAYWPCX@\\khAL@nUtAv@@',
     coordinates:
       '!B?`Bw@h`B?`Bw__x@bOvw?H`BmpJH@h`Bm?w~@Hc}mpJH@ox@m?w~@Hc}b@Jw@k\\Bb@JH@ox@m?vH?P',
     mf: 'C28H18O2',
@@ -197,7 +197,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fj}@p@@FmxI\\dTTTRbTRR~XJSdyhJHBb`JCBDqB`OlHadBc}@hAnqh]t]FPwTvNzVcD[hzg]cIfMwMqnuaMtmIn}e]ulfuwTrYs][Q{mYLgnydv^zVS@',
+      'fj}@p@@FmxI\\dTTTRbTRR~XJSdyhJHBb`JCBDqB`OlHadBc}AHAnqdMuLQncfMwMqnuaMtmIn}gMum~HdG@@@wPDXACn`ApBMpPwPBXAcn`BpBMpHwP@xASn`HpALAXwPFXAqn`Jp@S]@E`Dfz@{@E]t@v@I`Nnz@S@DpEs]@M`D^z@k@DpEO]@Y`BXCgn`BpALA@',
     coordinates: '!BbOvw?_y?bOrw?Oy?bGvw_Xc}m?w~@K]}?g~H@oy?bOrw?K\\B?`Bw@`',
     mf: 'C15H14O6',
     mw: 290.27016000000003,
@@ -213,14 +213,15 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fj}@p@@LDhI\\bbbbbfqbRvxKUdyZBhb@`JAFEq@~QbNQ~`T`wRrNzVcX[nXg]GQjMvmqniaMvMIncmMul[nqduf{v]wVr[w]SIh}vlfSw\\r[O]KI`',
+      'fj}@p@@LDhI\\bbbbbfqbRvxKUdyZBhb@`JAFEq@~QbNQ~`d`wRvF{fhwZwFzfDwXtfzNtwVuf{vDRC`@P[h@l@QwPAXAFxX[hCL@IwP@xAFxT[hBl@xwPBX@In`HpBS]@C`Ffz@[@C]tAF@I`Mfz@{@G]t@v@I`Onz@S@DpFO]@U`BXBgn`LpALAswPAX@f@`',
     coordinates: '!B?`BH@k\\B?`BH_[]}?`Bw?Hc|?g~H@k_|bOvw?_x@bOrw?K\\B?`Bw@`',
     mf: 'C15H12O6',
     mw: 288.25428,
     label: 'Dihydroflavonol',
   },
   {
-    idCode: String.raw`fj}@p@@DEiI\bbbfbTtQRQXHwhyZdJH@BJ@@OzARC]KH[n[G]KQjMuLsnchwF{VDwXtn{FSJ[hxs][V{kYL{nidwf{vCwZrZO]sIl}tlf@`,
+    idCode:
+      'fj}@p@@DEiI\\bbbfbTtQRQXHwhyZdJH@BJ@@OzBRC]KH[nZc]S\\[mXS]cJ[hxs][^[o[|QHN@AAn`BpAC]@Y`FNz@K@HwBc]@I`CNz@G@HwCc]@U`@fz@c@I]tAF@I`Jfz@G@CMt@v@V{hAl@S@W]t@f@I`Ofz@{@@}tAV@I`L^z@s@DpGO]@E`BXB',
     coordinates: '!B?`Bw@h`Bmww~@Ox@bGvH?K_|bOs~_x`Bm?w~@Hc}m?rw@hc|?`Bw@`',
     mf: 'C15H10O6',
     mw: 286.23839999999996,
@@ -228,7 +229,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fbmAP@@Fm{NRJJJIQJYIy`iNbf`h`JHB`PaLPOdHad_hE@MvMCnchrFzfqwRtXc]GT{lYLqnynMvlIneiMwlknmdvnzfSN[kXO]kIh}wLfSwRrX',
+      'fbmAP@@Fm{NRJJJIQJYIy`iNbf`h`JHB`PaLPOdHad_hI@MvLanibMt\\qnynMvlIneiMwlynmoqD`x@@Fz@c@H]t@N@QnBFz@S@L]t@V@QnAFz@G@J]tAF@I`KFz@s@NMtAV@B[h@l@dwPGX@kn`FpALAuwPBX@f@n[hAl@CwPEX@f@q{hCL@S@T}t@V@I`H',
     coordinates: '!BbOvw?_y?bOrw?Oy?bGvw_Xc}m?w~@K]}?g~H@hc|m?rw@ox@mpH',
     mf: 'C15H14O5',
     mw: 274.27116,
@@ -236,7 +237,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fbmAP@@\\e{NQQQJJKFIKYgEFbehJH`HB``q@~`rOtBdFzVQwRt[C]sD{hzMQnufMuMqnqaMt\\inmm]vLfLw^unzvSN{jYLGnudt^{fSI{iYL',
+      'fbmAP@@\\e{NQQQJJKFIKYgEFbehJH`HB``q@~`rOtDdFzVpw\\uF{VXwTwF{FDwQrfzvLw^wxbP\\@BC]@E`BNz@K@HwCC]@Y`ANz@G@HwBc]@U`CFz@S@NMtAF@B[h@\\@TwPCXAkn`HpALALwPGXA[n`FpALA]wPBX@f@a{hBl@S@X}tAf@I`J^z@K@DpD',
     coordinates: '!B?`BH@k\\B?`BH?_x@m?rH?Oy?b@Jw?Hc}m?w~@Hc|m?rw@ox@mpH',
     mf: 'C15H12O5',
     mw: 272.25527999999997,
@@ -244,7 +245,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fbmAPD@\\}GHIrQQQQQHiQItDXKd`PP@ADP@@_tB`F{F`wTrNzNcX[nXg]cIj]tmFXwQpfzVewVrYW]SImMvlYn}k]vlf]w\\rXK][I{iYL',
+      'fbmAPD@\\}GHIrQQQQQHiQItDXKd`PP@ADP@@_tD`F{F`wTvF{fXwQpfzVtwZqf{vBwVwxbP\\@@C]@Q`DFz@S@D]t@N@QnFFz@s@B]tAF@I`MNz@K@HwAc]@C`@fz@K@I]t@v@I`Jnz@S@DpGS]@U`Afz@{@K]tAV@I`Knz@s@DpDK]@M`B^z@K@DpD',
     coordinates: '!Bm?vH?_y?m?s~_xc|mwvH_[_}?`BH_Xc}m?rw@oy?b@JH?Ox@mpH',
     mf: 'C15H11O5',
     mw: 271.24734,
@@ -252,7 +253,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fbmAP@@\\e{NQQQJJKFIKYgEFbehFH`HB`@C~`T`wRrNzVcX[nXg]GQjMvlqninMvLInceMumknqdqf{vmwVrYw]SI`}vlfcw\\rYO]KI`',
+      'fbmAP@@\\e{NQQQJJKFIKYgEFbehFH`HB`@C~`d`wRvF{fhwZsFzfxwXpfzNTwVqf{vDRC`@P[h@l@QwPAXAFxX[hCL@IwP@xAFxT[hBl@XwPBXAqn`Hp@S]@C`Bfz@[@M]tAF@I`Ifz@{@K]t@v@I`Knz@S@DpDO]@U`BXCGn`LpALASwPAX@f@`',
     coordinates: '!B?`BH@k\\B?`BH?_x@mpJH@oy?b@Jw@hc}m?w~@H`BmpJw@ox@mpH',
     mf: 'C15H10O5',
     mw: 270.2394,
@@ -267,7 +268,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fbm@`@@HRY[UfUWISrXyZjj@@@H@@heHMv]ancb]v\\fiwQrYc]{\\{oYLInqi]vLfTwVvfzfMwVrZw]SIgMvmyny`}vlfcw\\rYK]KY{iYL',
+      'fbm@`@@HRY[UfUWISrXyZjj@@@H@@iIHMv]ancfMwlInqeMuminigMvmynydmtm~LdG@@`wPDxAan`Ap@g]@S`BXCSn`ApALAXwPGXAsn`NpALADwPDXAKn`HpALATwPCXAin`Dp@w]@M`BXC[n`DpALA\\wPEXAyn`Lp@O]@U`BXCGn`LpALARwPAXAgn`BpALA@',
     coordinates: '!BFfASFF@ZKAc~@Hc}b@K~_xc}m?vH?_y?b@K~_?y?bOvH?Xc}b@H',
     mf: 'C18H18O2',
     mw: 266.33892,
@@ -275,7 +276,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fb}@`@@FrQQJIIIHsIDiHvgIsUPTE@@T@@_tRdF{vQwYr[C]cD[hzg]GIfMumqniaMv]Kn}drf{Vtw\\un{FSN[i[w][I`}uLfcwZrYO]sIl}tlf@',
+      'fb}@`@@FrQQJIIIHsIDiHvgIsUPTE@@T@@_tddF{vpwXqFzNXwVwFzfDwYrf{Vtw\\sfzVFRC`@P[hCl@QwPDx@f@x[hBL@HwP@xASn`ApALAXwPCXAqn`Dp@S]@S`Dnz@{@DpES]@U`Ffz@s@K]tAF@I`Kfz@K@O]t@v@I`H^z@S@DpFO]@U`BXBgn`LpALAswPAX@f@`',
     coordinates: String.raw`!Bb@J{UHc}f\CRtOy?b@KRtIg@bOvH?[mTs}JH@f]SLXCOtl?RLX@`,
     mf: 'C18H18O2',
     mw: 266.33892,
@@ -283,7 +284,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fb}@`@@HRY[efuWHrRoIcejjh@@@h@@heHMv]ancb]v\\fhw^sNzNS\\{kYLInqi]wlfUwXr[W]kIcMumYnig]uLf}wRrXK]kQ[nYO]sIlmtl',
+      'fb}@`@@HRY[efuWHrRoIcejjh@@@h@@iIHMv]ancjMwlInqcMumYni`mvmEnylmtm~LdG@@`wPDxAan`Ap@g]@S`BXCQn`NpAg]@C`BXCsn`FpALADwPDXAKn`NpALAUwPDX@f@z{hBl@S@SMt@v@V[hAL@]wPBX@f@~{h@l@S@PmtAV@Q[hCL@SwPFX@f@y[h@l@@',
     coordinates: '!BFfASFF@ZKAbH?_x@b@K~_x`B?`BH?[_}bOvH@h`B?g?~_xc}bOt',
     mf: 'C18H16O2',
     mw: 264.32304,
@@ -307,7 +308,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fle@P@@\\\\eIfVWyWyZCEhFB@`H@Pi_t|dF{NQwXr[C]GD{jYMSnmdsF{vEw\\rZW]kIeMvMknedqfzvlwTwf{VBw\\tVzV@',
+      'fle@P@@\\\\eIfVWyWyZCEhFB@`H@Pi_tddF{NpwQsF{vTwXqfzvlwTwf{VBw\\tVzVEbC`@P[hB\\@QwPDX@f@x[h@\\@IwPBX@f@t{hAl@S@VMtAv@B{hCL@S@Y]tAV@I`Jfz@c@M]t@V@I`Ifz@[@KMt@f@^[hBl@BwPFXAEn`Bp@',
     coordinates: '!B?`BH@k\\BbGw~@Ox@?g~H@hc|m?s~@K_}?`BH?K_|mpK~@K\\B',
     mf: 'C15H12O4',
     mw: 256.25628,
@@ -315,7 +316,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fluA@@@ISLrrn~QchaSUTDD@A@@G}DiCn}drF{vqwXrXg]GIjMvLqncn]ulfEwTrZW]gIeMuminicMv][nudsn{fS^[mXK]sQ{iYLene`',
+      'fluA@@@ISLrrn~QchaSUTDD@A@@G}IHan}jMvLqnceMuminicMv]ynu`mwLeneoqd`x@DNz@{@DpEC]@]`FNz@c@DpDg]@C`BXCQn`HpAc]@C`GNz@[@DpDW]@I`BXCKn`IpALATwPCXAin`Dp@s]@S`Enz@k@DpEw]@Y`BXCyn`Jp@K]@Y`D^z@K@DpEK]@E`@',
     coordinates: '!BsA_LZNU_HNkeHBCeEOm?VVcSEOa?IfcLyU?eW~T`yRA?VW|f',
     mf: 'C18H20O',
     mw: 252.35579999999996,
@@ -323,7 +324,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fluA@@@ISKJn}jRfkQSUPTD@A@@G}DiAn}d]v\\fpwXqFzNiwQrYc][\\[jXS]gR{oYLinumMwL[nqdufzV]wVr[w]SI`}vlfcw\\rYO]KI`',
+      'fluA@@@ISKJn}jRfkQSUPTD@A@@G}IIAn}lMvLQncfMumqniaMv\\inumMwMYneoqd`x@DFz@{@D]tAN@I`NFz@c@BMt@N@T{h@\\@S@VMt@v@\\[hAL@DwPDxAKn`NpALATwPEXAin`Lp@w]@Q`BXCYn`BpAw]@M`BXC{n`DpALACwPEX@f@q{hCL@S@T}t@V@I`H',
     coordinates: String.raw`!BG@\\^LE?lEjpIY\]fOwhw^cBp^?A{~c]fOw~{~cBzMwhw^cB`,
     mf: 'C18H20O',
     mw: 252.35579999999996,
@@ -331,7 +332,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fluA@@@IRjkLjo`chaSUUP@@A@@G}DiCnsdrF{NqwQrXc]GT{oYLqn}n]vLfDwXtnzvSJ{jYMinmcMuM[nudsn{fS^[mXK]sQ{iYLene`',
+      'fluA@@@IRjkLjo`chaSUUP@@A@@G}IHansbMt\\qn}aMvMinmcMuMynu`mwLeneoqd`x@DNz@g@DpEC]@S`FNz@G@DpDc]@C`ENz@{@DpEc]@]`GNz@c@DpDS]@Q`Dnz@[@DpEW]@I`BXCin`Fp@s]@I`Enz@k@DpEw]@Y`BXCyn`Jp@K]@Y`D^z@K@DpEK]@E`@',
     coordinates: '!BKA`lYvAeXAjH@ha}bGw~_?y?b@Jw_Xa}bGvH__y??g~H@ha}',
     mf: 'C18H20O',
     mw: 252.35579999999996,
@@ -362,21 +363,24 @@ export const autoLabelDatabase = [
     label: 'deoxythymidine',
   },
   {
-    idCode: String.raw`fdy@@@DjU^{yVg@qBBJj@@@@he@]vLfawVrYG]SIl]wlfIwZrZg]sIf]t\fywRrXS]GR{lyLin}mMv\YnqkMulynioMvlEnyhmtl`,
+    idCode:
+      'fdy@@@DjU^{yVg@qBBJj@@@@iIAMt\\in}mMv\\YnqkMulynioMvlEnyhmtm~LdG@@AwPDX@f@p{hAl@S@T]t@f@I`NNz@{@DpDg]@U`BXCSn`LpALAYwP@x@f@|{h@l@S@QMt@N@R{hB\\@S@UMtAv@Z[hB\\@LwPDXAYn`FpAs]@I`Gfz@k@@mtAf@Q[h@l@@',
     coordinates: String.raw`!B?g~H@k\BbOvH?[_}b@K~_{\BbOvw?_y?m?vH?_y??g~H?P`,
     mf: 'C18H22',
     mw: 238.37267999999997,
     label: 'Dibenzylbutane',
   },
   {
-    idCode: String.raw`fde@@@LdbbTRtVRKIBTFHQEDE@D@AQJ@{kYMCnqdrN{VSX[oXg]SIj]wlfYwRr[c]cB[hzW]sIe]t\ftwVqfzflwYsn{NS^[mXK]sQ[iX`,
+    idCode:
+      'fde@@@LdbbTRtVRKIBTFHQEDE@D@ARRX[o[c]cB[h{S][F[jZs]g^[mXK]sQ[i[|YHN@@Cn`FpALAawPDX@f@h{hBl@S@\\MtAv@D{hAL@S@Z]tAv@I`KNz@K@DpGc]@Q`@fz@G@I]tAf@I`Jnz@G@DpGS]@M`Afz@S@KMtAN@N{hB\\@S@_MtAV@A[hCL@bwPAX@',
     coordinates: '!B?`BH?[_}b@Jw@h`B?g~w@hc}m?vw?Xc}GvT_Foy??g~H?P',
     mf: 'C18H20',
     mw: 236.35679999999996,
     label: 'Arylnaphthalene',
   },
   {
-    idCode: String.raw`fde@@@LdbbbTRVQpcZ][t@DDDUA@AQJ@[kZG]SIdMvManub]vLfiw\rYc]S\[oXS]KR{kYLkn}dvnzVSF[nZs]GN{mYM{ncdpV{NcwYrX`,
+    idCode:
+      'fde@@@LdbbbTRVQpcZ][t@DDDUA@ARR@[kYC]cX[mYc]S\\[oXS]KF[nZs]GA[l{|YHN@@An`FpBG]@I`BXBan`HpCC]@U`ANz@c@DpFg]@Y`BXBqn`DpCc]@]`@fz@K@I]t@v@I`Jnz@{@DpGW]@E`BXBYn`LpBs]@C`Cnz@k@DpGw]@C`BXBEn`IpBO]@S`BXB',
     coordinates: '!B?g~[iBAzfyl`AWh`_?yzHGi__?yzWrAzfyl`AYndKwHoCP',
     mf: 'C18H20',
     mw: 236.35679999999996,
@@ -416,7 +420,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fhy@`@@BrJJJJIPy[`eV|EhJ`@@`@C~`T`wRrNzVcX[nXg]GQjMvlsnqdwFzfDwXtfzNTwVvnzvSF{jYMYn}g]vlf}w\\rXO]KI`',
+      'fhy@`@@BrJJJJIPy[`eV|EhJ`@@`@C~`d`wRvF{fhwZwFzfDwXtfzNTwVuf{vDRC`@P[h@l@QwPAXAFxX[hCL@IwP@xAFxT[hBl@YwPDX@f@|[hAL@DwPDXAIn`ApAS]@M`Fnz@[@DpDw]@I`BXCYn`NpAw]@U`BXC{n`LpALACwPAX@f@`',
     coordinates: '!B?`BH@k\\B?`BH_[]}?`Bw@h`Bb@K~_{\\BbGvw_[]}mpH',
     mf: 'C15H12O2',
     mw: 224.25827999999998,
@@ -424,7 +428,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fhy@`@@JRYfYU_XhwgAZd@`@H@@hEHMtlanyl]tmFIwXrZc]SL{hzMqnua]ulfewTrYS]cZ[hxs][V{mYL{nydwf{vCwRrX',
+      'fhy@`@@JRYfYU_XhwgAZd@`@H@@hIHMtlanyjMuMqnueMvMinccMumyn}oqD`x@DFz@K@DMtAf@X{h@l@c\\B]tAF@I`MFz@S@F]t@N@QnGFz@k@A]t@v@I`Lnz@S@DpES]@Q`Ffz@G@CMt@v@V{hBl@S@W]tAf@I`Ofz@{@@}t@V@I`H',
     coordinates: '!B?`Bw@h`Bm?w~@Ox@bOw~_{\\Bb@JH@h`Bm?vw?Xc}mpH',
     mf: 'C15H10O2',
     mw: 222.24239999999998,
@@ -432,7 +436,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'f`i@`@@VRYfYU]`eNMyh@`AB@@OzNrBnsdZ{NcXut]FIkiZMQWXsC]cAhwE]GBuvLFdkiYRnimJ{VLkoYrnyoJzv@',
+      'f`i@`@@VRYfYU]`eNMyh@`AB@@OzJRC]gT[l[c]GB{lXMIneeMuMinucMwlynyoMum~ILE@@`khgAFnb\\HwqkhGBMrZzBpc^bnbLFFzHpCBM~JzApEkhc@LIJzBpTkhSCRnblCJzNp\\khsCrnal@',
     coordinates: '!B?g~w_Xa}?g~w@oy?b@JH_[]}mwvH_Xa}?g~w@h`B',
     mf: 'C14H8O2',
     mw: 208.21552,
@@ -440,7 +444,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'foQ@`@@BRYfYWvBUXsf`B@@`@C~cl`klyFnshvM]GQbZzVcTUvLpwXpZMqWQpm]cAiJzVTkj[RnucJ{vlknYrnm`',
+      'foQ@`@@BRYfYWvBUXsf`B@@`@C~bd`wYuF{FxwQpn{FCR[iYS]SZ[mXs]{V[nYs][_bSAP@HJzIpQkhgBM|ZzApc\\fn`lHwhkhcAanbL@pc_bn`\\AZzHpCBRn`lEJzDptkhk@rnclKJzLp\\kh[@',
     coordinates: '!B?g~w?Xc}?g~w@oy?b@JH?[_}m?vH?Xc}mpJH@`',
     mf: 'C13H8O2',
     mw: 196.20452,
@@ -448,7 +452,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'foQA@@@YEEEEDdbrRkF\\t@D@D@@_t]dE]gHuv]FqkhzLSWRtZbnqfF{FCQnJzNDkiZVnq`re]SZUvlYW^ue]sNUul',
+      'foQA@@@YEEEEDdbrRkF\\t@D@D@@_tTdF{NhwXwFzNDwRtn{FCJ[j[S]kF[oZs]sN[k[|RXJ@AAWQNBM]DxQocWPND[dutEaF}E]DXLMtQ`FD[|UtC`IWPVDm]DXA`iWPfFe]EXFUt]aYWQfCe]CX@',
     coordinates: '!B?g~w?Xc}?g~w@oy?b@Jw?Xc}m?vH?Xc}mpJH@`',
     mf: 'C14H10O',
     mw: 194.23239999999998,
@@ -456,7 +460,7 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'dg|@@DjU_eZx{BAH@@BJozN`]vLfcnmdr]uLfsnilq]vlfknyds]vMf{nedpmvMK][JwTvmvl[]sVwRp',
+      'dg|@@DjU_eZx{BAH@@BJozL`mvMK][JwTvmvl[]sVwRwxb`x@@]tAF@I`L]t@v@I`J]t@f@I`N]t@f@Y`I]tAV@I`M]tAf@I`K]tAF@Y`O]t@V@I`HmtAF@RwPCX@k]@I`FmtAV@FwPFXA[]@E`@',
     coordinates: '!B?`Bw?Xc}mpJw?Hc|m?vH?_y?bOrH?Xc}b@H',
     mf: 'C14H12',
     mw: 180.24928,
@@ -464,14 +468,15 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'fgA@@@DjYU_VByHu`@@@@@@OzNpFnshtM]KQdJ{NpklXfnq`uE]KLut]FxkjXQnq`tZRnyeJzNtkmXrn}kJzv@',
+      'fgA@@@DjYU_VByHu`@@@@@@OzJQC]gX[lXg]cAjMtmqniiMwLincmMvlYn}kMum~ILE@@AkhgBMxZzBpc]Bnb\\LJzHpIkhc@LJJzBpYkhGBM~JzDpD[hc@LHwdkhsARn`\\MJzJpLkh{Brnal@',
     coordinates: String.raw`!B?g~H@k\BbOvw?Xc}m?vH@k\Bb@JH?Xc}b@H`,
     mf: 'C14H10',
     mw: 178.2334,
     label: 'Anthracene',
   },
   {
-    idCode: 'dclD@@UIfV][iuhFAH@OzJdMtlg]KQl[nXnzNcTwZsMuMs]cBwQtmumk]{@',
+    idCode:
+      'dclD@@UIfV][iuhFAH@OzBdMtmc]sTwZsMuMs]cBwQtmumk]{_bbB`@PwPVB]tEaF~MtY`W]@xQoS]EXLwPfGMtQ`K]@xRwPvFmt]`',
     coordinates: '!B?`BH@k\\B?`BH?_x@mpJH@h`B?`BH?P',
     mf: 'C10H6O2',
     mw: 158.15563999999998,
@@ -492,7 +497,8 @@ export const autoLabelDatabase = [
     label: 'methionine',
   },
   {
-    idCode: 'detH@@rQQJHtpsPT@`AQTAnqh{hzLc]SYwRtXfzNinyf[i[f{VEn}i[kX',
+    idCode:
+      'detH@@rQQJHtpsPT@`APTAnqd[jXfzNinyf[i[f{VEn}i[k[|TPT@@FzHpcn`\\HwQnaLL{hKBMr[hGBfzLpYn`lN[hk@VzNpenal@',
     coordinates: '!BbOvw?_y?b@K~_{_}bOvH?X`B',
     mf: 'C9H8O',
     mw: 132.16152,
