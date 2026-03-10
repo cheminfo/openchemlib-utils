@@ -436,30 +436,6 @@ export const autoLabelDatabase = [
   },
   {
     idCode:
-      'f`i@`@@VRYfYU]`eNMyh@`AB@@OzJRC]gT[l[c]GB{lXMIneeMuMinucMwlynyoMum~ILE@@`khgAFnb\\HwqkhGBMrZzBpc^bnbLFFzHpCBM~JzApEkhc@LIJzBpTkhSCRnblCJzNp\\khsCrnal@',
-    coordinates: '!B?g~w_Xa}?g~w@oy?b@JH_[]}mwvH_Xa}?g~w@h`B',
-    mf: 'C14H8O2',
-    mw: 208.21552,
-    label: 'Anthraquinone',
-  },
-  {
-    idCode:
-      'foQ@`@@BRYfYWvBUXsf`B@@`@C~bd`wYuF{FxwQpn{FCR[iYS]SZ[mXs]{V[nYs][_bSAP@HJzIpQkhgBM|ZzApc\\fn`lHwhkhcAanbL@pc_bn`\\AZzHpCBRn`lEJzDptkhk@rnclKJzLp\\kh[@',
-    coordinates: '!B?g~w?Xc}?g~w@oy?b@JH?[_}m?vH?Xc}mpJH@`',
-    mf: 'C13H8O2',
-    mw: 196.20452,
-    label: 'Xanthone',
-  },
-  {
-    idCode:
-      'foQA@@@YEEEEDdbrRkF\\t@D@D@@_tTdF{NhwXwFzNDwRtn{FCJ[j[S]kF[oZs]sN[k[|RXJ@AAWQNBM]DxQocWPND[dutEaF}E]DXLMtQ`FD[|UtC`IWPVDm]DXA`iWPfFe]EXFUt]aYWQfCe]CX@',
-    coordinates: '!B?g~w?Xc}?g~w@oy?b@Jw?Xc}m?vH?Xc}mpJH@`',
-    mf: 'C14H10O',
-    mw: 194.23239999999998,
-    label: 'Anthrone',
-  },
-  {
-    idCode:
       'dg|@@DjU_eZx{BAH@@BJozL`mvMK][JwTvmvl[]sVwRwxb`x@@]tAF@I`L]t@v@I`J]t@f@I`N]t@f@Y`I]tAV@I`M]tAf@I`K]tAF@Y`O]t@V@I`HmtAF@RwPCX@k]@I`FmtAV@FwPFXA[]@E`@',
     coordinates: '!B?`Bw?Xc}mpJw?Hc|m?vH?_y?bOrH?Xc}b@H',
     mf: 'C14H12',
@@ -473,14 +449,6 @@ export const autoLabelDatabase = [
     mf: 'C14H10',
     mw: 178.2334,
     label: 'Anthracene',
-  },
-  {
-    idCode:
-      'dclD@@UIfV][iuhFAH@OzBdMtmc]sTwZsMuMs]cBwQtmumk]{_bbB`@PwPVB]tEaF~MtY`W]@xQoS]EXLwPfGMtQ`K]@xRwPvFmt]`',
-    coordinates: '!B?`BH@k\\B?`BH?_x@mpJH@h`B?`BH?P',
-    mf: 'C10H6O2',
-    mw: 158.15563999999998,
-    label: 'Naphtoquinone',
   },
   {
     idCode: 'dmLD@@QIe[VfeVi@B@C~`iC]SHwXvMwMS]K\\wQpmvmK]{JwVp',

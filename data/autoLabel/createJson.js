@@ -29,6 +29,13 @@ async function createAutoLabelingJson() {
     const canonizer = new Canonizer(molecule, { encodeAtomCustomLabels: true });
     const idCode = canonizer.getIDCode();
 
+    try {
+      Molecule.fromIDCode(idCode);
+    } catch {
+      console.log(molfile);
+      continue;
+    }
+
     const coordinates = canonizer.getEncodedCoordinates(false);
 
     moleculeDatabase.push({
