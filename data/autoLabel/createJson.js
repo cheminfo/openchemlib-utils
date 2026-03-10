@@ -32,6 +32,7 @@ async function createAutoLabelingJson() {
     try {
       Molecule.fromIDCode(idCode);
     } catch {
+      // eslint-disable-next-line no-console
       console.log(molfile);
       continue;
     }
