@@ -9,11 +9,14 @@ import { Canonizer, Molecule } from 'openchemlib';
 // this database will be ordered by molecule size
 
 async function createAutoLabelingJson() {
-  const allFiles = await readdir(join(import.meta.dirname, 'templates'));
+  const allFiles = await readdir(join(import.meta.dirname, 'templates'), {
+    recursive: true,
+  });
   const files = allFiles.filter((file) => file.endsWith('.mol'));
   const moleculeDatabase = [];
 
   for (const file of files) {
+    // console.log(file);
     const molfile = await readFile(
       join(import.meta.dirname, 'templates', file),
       'utf8',
@@ -24,8 +27,8 @@ async function createAutoLabelingJson() {
     molecule.setFragment(true);
 
     const canonizer = new Canonizer(molecule, { encodeAtomCustomLabels: true });
-
     const idCode = canonizer.getIDCode();
+
     const coordinates = canonizer.getEncodedCoordinates(false);
 
     moleculeDatabase.push({
