@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.13.2](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.1...v8.13.2) (2026-03-10)
+
+
+### Bug Fixes
+
+* ensure database is useable ([55ac262](https://github.com/cheminfo/openchemlib-utils/commit/55ac26231fd772848a142650b8bf877c2fce6d02))
+* update database for auto labelling ([5ec8acc](https://github.com/cheminfo/openchemlib-utils/commit/5ec8acca72e584558cbd73ce593a2c9d76deb249))
+
 ## [8.13.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.0...v8.13.1) (2026-02-20)
 
 
