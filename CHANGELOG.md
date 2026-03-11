@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.13.3](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.2...v8.13.3) (2026-03-11)
+
+
+### Bug Fixes
+
+* autoLabelDatabase and UTF8 labels ([de9a78d](https://github.com/cheminfo/openchemlib-utils/commit/de9a78d2a43a4dc01a758ea2902033c7a40d42a6))
+
 ## [8.13.2](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.1...v8.13.2) (2026-03-10)
 
 
