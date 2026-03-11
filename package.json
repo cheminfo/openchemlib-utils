@@ -42,7 +42,7 @@
     "sdf-parser": "^8.0.0"
   },
   "peerDependencies": {
-    "openchemlib": ">=9.12.0"
+    "openchemlib": ">=9.20.1"
   },
   "devDependencies": {
     "@types/node": "^25.4.0",
@@ -55,7 +55,7 @@
     "fifo-logger": "^2.0.1",
     "globals": "^17.4.0",
     "mf-parser": "^3.7.1",
-    "openchemlib": "^9.20.0",
+    "openchemlib": "^9.20.1",
     "prettier": "^3.8.1",
     "rimraf": "^6.1.3",
     "typescript": "^5.9.3",
