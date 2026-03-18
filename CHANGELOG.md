@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.14.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.3...v8.14.0) (2026-03-18)
+
+
+### Features
+
+* expose ensureMapNo as standalone exported function ([#225](https://github.com/cheminfo/openchemlib-utils/issues/225)) ([3be3a6d](https://github.com/cheminfo/openchemlib-utils/commit/3be3a6d6de047e15aed71aa39a34bcd8bdb9923a))
+
 ## [8.13.3](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.2...v8.13.3) (2026-03-11)
 
 
