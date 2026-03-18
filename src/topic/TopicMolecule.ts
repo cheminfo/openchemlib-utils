@@ -4,6 +4,7 @@ import type { Molecule } from 'openchemlib';
 import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsAsFragments.js';
 import type { AtomPath } from '../path/getAllAtomsPaths.ts';
 import { getAllAtomsPaths } from '../path/getAllAtomsPaths.ts';
+import { ensureMapNo } from '../util/ensureMapNo.ts';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
 
 import type { HoseCodesOptions } from './HoseCodesOptions.js';
@@ -145,29 +146,7 @@ export class TopicMolecule {
    * This method ensures that all the atoms have a mapNo in the molecule (and not the moleculeWithH! )
    */
   ensureMapNo() {
-    const existingMapNo: Record<string, boolean> = {};
-    for (let i = 0; i < this.molecule.getAllAtoms(); i++) {
-      const mapNo = this.molecule.getAtomMapNo(i);
-      if (mapNo) {
-        if (existingMapNo[mapNo]) {
-          throw new Error(
-            'The molecule contains several atoms with the same mapNo',
-          );
-        }
-        existingMapNo[mapNo] = true;
-      }
-    }
-    let nextMapNo = 1;
-    for (let i = 0; i < this.molecule.getAllAtoms(); i++) {
-      const mapNo = this.molecule.getAtomMapNo(i);
-      if (!mapNo) {
-        while (existingMapNo[nextMapNo]) {
-          nextMapNo++;
-        }
-        existingMapNo[nextMapNo] = true;
-        this.molecule.setAtomMapNo(i, nextMapNo, false);
-      }
-    }
+    ensureMapNo(this.molecule);
   }
 
   /**

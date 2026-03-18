@@ -20,6 +20,7 @@ export * from './util/autoLabel.js';
 export * from './util/autoLabelDatabase.js';
 export * from './util/applyFragmentLabels.js';
 export * from './util/combineSmiles.js';
+export * from './util/ensureMapNo.js';
 export * from './util/dwar/parseDwar.js';
 export * from './util/getAtomsInfo.js';
 export * from './util/getConnectivityMatrix.js';
