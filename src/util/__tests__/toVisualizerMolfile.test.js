@@ -10,7 +10,7 @@ test('diastereotopic grouping on propane', () => {
   expect(molfile._atoms).toStrictEqual({
     'eM@Df`Xb`RP\\Jh': [0, 2],
     'eM@HzAbJC}IApj`': [1],
-});
+  });
   expect(molfile._highlight).toStrictEqual([
     'eM@Df`Xb`RP\\Jh',
     'eM@HzAbJC}IApj`',
@@ -29,7 +29,7 @@ test('atomMapNo grouping on propane', () => {
   expect(molfile._atoms).toStrictEqual({
     1: [0, 2],
     2: [1],
-});
+  });
 });
 
 test('customAtomLabel grouping on propane', () => {
@@ -43,7 +43,7 @@ test('customAtomLabel grouping on propane', () => {
   expect(molfile._atoms).toStrictEqual({
     alpha: [0, 2],
     beta: [1],
-});
+  });
 });
 
 test('heavyAtomHydrogen with diastereotopic on propane', () => {
@@ -51,14 +51,14 @@ test('heavyAtomHydrogen with diastereotopic on propane', () => {
   const molfile = toVisualizerMolfile(molecule, {
     heavyAtomHydrogen: true,
     diastereotopic: true,
-});
+  });
 
   expect(molfile._atoms).toStrictEqual({
     'eM@Df`Xb`RP\\Jh': [0, 2],
     'gC`HALiKT@RHDRj@': [0, 2],
     'eM@HzAbJC}IApj`': [1],
     'gC`HALiMT@RHDRj@': [1],
-});
+  });
   expect(molfile._highlight).toStrictEqual([
     'eM@Df`Xb`RP\\Jh',
     'eM@HzAbJC}IApj`',
@@ -87,13 +87,13 @@ test('collapseHydrogens transfers customAtomLabel to heavy atoms', () => {
   const molfile = toVisualizerMolfile(molecule, {
     customAtomLabel: true,
     collapseHydrogens: true,
-});
+  });
 
   expect(molfile._highlight).toStrictEqual(['Ha', 'Hb']);
   expect(molfile._atoms).toStrictEqual({
     Ha: [0],
     Hb: [1],
-});
+  });
 });
 
 test('collapseHydrogens transfers atomMapNo to heavy atoms', () => {
@@ -111,12 +111,12 @@ test('collapseHydrogens transfers atomMapNo to heavy atoms', () => {
   const molfile = toVisualizerMolfile(molecule, {
     atomMapNo: true,
     collapseHydrogens: true,
-});
+  });
 
   expect(molfile._highlight).toStrictEqual([1]);
   expect(molfile._atoms).toStrictEqual({
     1: [0],
-});
+  });
 });
 
 test('collapseHydrogens with diastereotopic on propane', () => {
@@ -125,7 +125,7 @@ test('collapseHydrogens with diastereotopic on propane', () => {
   const molfile = toVisualizerMolfile(molecule, {
     collapseHydrogens: true,
     diastereotopic: true,
-});
+  });
 
   // After collapse, all highlight entries should point to heavy atom indices only
   for (const atomIndices of Object.values(molfile._atoms)) {
