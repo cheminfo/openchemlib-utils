@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.15.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.14.0...v8.15.0) (2026-03-19)
+
+
+### Features
+
+* enhance toVisualizerMolfile with new highlight modes ([#227](https://github.com/cheminfo/openchemlib-utils/issues/227)) ([49bc61d](https://github.com/cheminfo/openchemlib-utils/commit/49bc61d7b8d53661ac3963db390f9a57a266b7b5))
+
 ## [8.14.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.13.3...v8.14.0) (2026-03-18)
 
 
