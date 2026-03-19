@@ -8,14 +8,31 @@ import { getGroupedDiastereotopicAtomIDs } from '../diastereotopic/getGroupedDia
  * @param {boolean} [options.diastereotopic] - If true, group atoms by diastereotopic IDs.
  * @param {boolean} [options.heavyAtomHydrogen] - If true, include hydrogen diastereotopic IDs linked to their parent heavy atom. Only used when `diastereotopic` is true.
  * @param {boolean} [options.atomMapNo] - If true, group atoms by their atom map number. Atoms with no map number (0) are excluded from highlighting.
+ * @param {boolean} [options.customAtomLabel] - If true, group atoms by their custom atom label. Atoms with no custom label are excluded from highlighting.
  * @returns {{ type: string, value: string, _highlight: Array, _atoms: object }} A molfile object with highlight and atom mapping information.
  */
 export function toVisualizerMolfile(molecule, options = {}) {
-  const { diastereotopic, heavyAtomHydrogen, atomMapNo } = options;
+  const { diastereotopic, heavyAtomHydrogen, atomMapNo, customAtomLabel } =
+    options;
 
   let highlight = [];
   let atoms = {};
-  if (atomMapNo) {
+  if (customAtomLabel) {
+    const groups = {};
+    const size = molecule.getAllAtoms();
+    for (let i = 0; i < size; i++) {
+      const label = molecule.getAtomCustomLabel(i);
+      if (!label) continue;
+      if (!groups[label]) {
+        groups[label] = [];
+      }
+      groups[label].push(i);
+    }
+    for (const label of Object.keys(groups)) {
+      highlight.push(label);
+      atoms[label] = groups[label];
+    }
+  } else if (atomMapNo) {
     const groups = {};
     const size = molecule.getAllAtoms();
     for (let i = 0; i < size; i++) {

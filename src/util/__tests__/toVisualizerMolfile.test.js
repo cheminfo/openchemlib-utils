@@ -33,6 +33,20 @@ describe('toVisualizerMolfilen propane', () => {
     });
   });
 
+  it('should yield the right molfile with customAtomLabel', () => {
+    const molecule = OCL.Molecule.fromSmiles('CCC');
+    molecule.setAtomCustomLabel(0, 'alpha');
+    molecule.setAtomCustomLabel(1, 'beta');
+    molecule.setAtomCustomLabel(2, 'alpha');
+    const molfile = toVisualizerMolfile(molecule, { customAtomLabel: true });
+
+    expect(molfile._highlight).toStrictEqual(['alpha', 'beta']);
+    expect(molfile._atoms).toStrictEqual({
+      alpha: [0, 2],
+      beta: [1],
+    });
+  });
+
   it('should yield the right molfile with ID on the heavy atom', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC');
     const molfile = toVisualizerMolfile(molecule, {
