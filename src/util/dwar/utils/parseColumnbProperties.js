@@ -11,15 +11,14 @@ export function parseColumnbProperties(lines) {
         currentColumnName = line.value;
         columnProperties[currentColumnName] = {};
         break;
-      case 'columnProperty':
-        {
-          if (!currentColumnName) {
-            throw new Error('This should not happen');
-          }
-          const [key, value] = line.value.split('\t');
-          columnProperties[currentColumnName][key] = value;
+      case 'columnProperty': {
+        if (!currentColumnName) {
+          throw new Error('This should not happen');
         }
+        const [key, value] = line.value.split('\t');
+        columnProperties[currentColumnName][key] = value;
         break;
+      }
       default:
         throw new Error('This should not happen');
     }

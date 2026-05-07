@@ -43,7 +43,7 @@ Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.
   5  8  1  0     0  0
   7  6  2  0     0  0
 M  END`;
-    const molecule = OCL.Molecule.fromMolfile(molfile);
+    const molecule = Molecule.fromMolfile(molfile);
     const result = getHoseCodesAndInfo(molecule, {
       calculateDiastereotopicIDs: false,
     });
@@ -59,7 +59,7 @@ M  END`;
       ),
       'utf8',
     );
-    const molecule = OCL.Molecule.fromMolfile(molfile);
+    const molecule = Molecule.fromMolfile(molfile);
     const result = getHoseCodesAndInfo(molecule);
     delete result.moleculeWithHydrogens;
 

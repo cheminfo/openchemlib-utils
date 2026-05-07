@@ -4,7 +4,8 @@
     "types": ["node"],
     "allowJs": true,
     "noUncheckedIndexedAccess": false,
+    "rootDir": "src",
     "outDir": "lib"
   },
-  "include": ["src", "vite*.ts"]
+  "include": ["src"]
 }

@@ -253,7 +253,8 @@ export function getNMRHints(
       if (!match) continue;
     }
 
-    const fragment = OCL.Molecule.fromIDCode(possibleHint.idCode);
+    const { idCode } = possibleHint;
+    const fragment = OCL.Molecule.fromIDCode(idCode);
     searcherCorrect.setFragment(fragment);
     searcherAnswer.setFragment(fragment);
     if (

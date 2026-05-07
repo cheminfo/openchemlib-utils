@@ -33,7 +33,7 @@ test('throws on duplicate mapNo', () => {
   molecule.setAtomMapNo(0, 3, false);
   molecule.setAtomMapNo(1, 3, false);
 
-  expect(() => ensureMapNo(molecule)).toThrowError(
+  expect(() => ensureMapNo(molecule)).toThrow(
     'The molecule contains several atoms with the same mapNo',
   );
 });
