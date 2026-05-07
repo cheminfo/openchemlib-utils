@@ -1,5 +1,7 @@
-import type { Molecule } from 'openchemlib';
-import { SSSearcher } from 'openchemlib';
+import type * as OCLNamespace from 'openchemlib';
+
+type OCLLibrary = typeof OCLNamespace;
+type Molecule = OCLNamespace.Molecule;
 
 export interface ApplyFragmentLabelsOptions {
   /**
@@ -24,6 +26,10 @@ export interface ApplyFragmentLabelsOptions {
 /**
  * Applies fragment labels from a fragment molecule to a target molecule. This method is in
  * place and modifies the target molecule directly.
+ *
+ * The OpenChemLib library is recovered from the molecule itself via
+ * `molecule.getOCL()`, so this package never imports `openchemlib` at
+ * runtime (avoids version conflicts and keeps it out of consumer bundles).
  * @param molecule - The target molecule to which fragment labels will be applied.
  * @param fragment - The fragment molecule containing the labels to apply.
  * @param options
@@ -35,7 +41,8 @@ export function applyFragmentLabels(
   options: ApplyFragmentLabelsOptions = {},
 ): number {
   const { algorithm = 'overlapping', prefix = '', suffix = '' } = options;
-  const sssearcher = new SSSearcher();
+  const OCL = molecule.getOCL() as OCLLibrary;
+  const sssearcher = new OCL.SSSearcher();
   sssearcher.setMolecule(molecule);
   sssearcher.setFragment(fragment);
   const found = sssearcher.findFragmentInMolecule({ countMode: algorithm });
