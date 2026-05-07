@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.15.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.15.0...v8.15.1) (2026-05-07)
+
+
+### Bug Fixes
+
+* avoid runtime import of openchemlib in applyFragmentLabels ([cabfb7c](https://github.com/cheminfo/openchemlib-utils/commit/cabfb7c8ce4ac6dfe6e5208131a8fac55612a1a5))
+
 ## [8.15.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.14.0...v8.15.0) (2026-03-19)
 
 
