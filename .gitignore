@@ -45,3 +45,6 @@ docs
 dist
 
 .DS_Store
+
+.claude
+

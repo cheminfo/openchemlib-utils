@@ -25,6 +25,8 @@ export function applyOneReactantReactions(tree, reactions, options) {
     processedMolecules,
     OCL,
     logger,
+    stats,
+    limitReactions,
   } = options;
   if (tree.molecules.length !== 1) {
     logger?.warn(
@@ -50,14 +52,14 @@ export function applyOneReactantReactions(tree, reactions, options) {
     return [];
   }
   for (const reaction of reactions) {
-    if (options.stats.counter >= options.limitReactions) {
+    if (stats.counter >= limitReactions) {
       return [];
     }
     const reactor = new OCL.Reactor(reaction.oclReaction);
     // isMatching is true if the reactant is matching the reaction else we continue to the next reaction
     const isMatching = Boolean(reactor.setReactant(0, reactant));
     if (isMatching) {
-      options.stats.counter++;
+      stats.counter++;
       // get the products of the reaction
       const oneReactionProducts = reactor.getProducts();
       for (const oneReactionProduct of oneReactionProducts) {
@@ -94,7 +96,7 @@ export function applyOneReactantReactions(tree, reactions, options) {
             todoNextDepth.push(() => {
               return applyOneReactantReactions(oneReaction, reactions, {
                 ...options,
-                currentDepth: options.currentDepth + 1,
+                currentDepth: currentDepth + 1,
               });
             });
           }
