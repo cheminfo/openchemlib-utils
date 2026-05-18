@@ -29,6 +29,13 @@ describe('ensureHeterotopicChiralBonds', () => {
     expect(molecule.getIDCode()).toBe('gJPHADILuTe@@');
   });
 
+  it('C[C@H](Cl)CC', () => {
+    const molecule = OCL.Molecule.fromSmiles('C[C@H](Cl)CC');
+    ensureHeterotopicChiralBonds(molecule);
+
+    expect(molecule.getIDCode()).toBe('gJPHADILuTb@');
+  });
+
   it('CCC(C)C', () => {
     const molecule = OCL.Molecule.fromSmiles('CCC(C)C');
     ensureHeterotopicChiralBonds(molecule);
