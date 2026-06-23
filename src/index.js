@@ -28,6 +28,7 @@ export * from './util/getImplicitHydrogensCount.js';
 export * from './util/getMF.js';
 export * from './util/getCharge.js';
 export * from './util/getMolfilesMapping.js';
+export * from './util/getNonUniqueCustomLabels.js';
 export * from './util/getNMRHints.js';
 export * from './util/getNextNMRHint.js';
 export * from './util/getProperties.js';
