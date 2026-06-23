@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.17.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.16.0...v8.17.0) (2026-06-23)
+
+
+### Features
+
+* add proR proS and enantioIDs ([#238](https://github.com/cheminfo/openchemlib-utils/issues/238)) ([cc73acf](https://github.com/cheminfo/openchemlib-utils/commit/cc73acf9a0f7d54fd2d2623e34dcb71c2108830b))
+
 ## [8.16.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.15.1...v8.16.0) (2026-06-23)
 
 
