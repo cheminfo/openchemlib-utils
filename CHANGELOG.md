@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.16.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.15.1...v8.16.0) (2026-06-23)
+
+
+### Features
+
+* add getNonUniqueCustomLabels utility ([#236](https://github.com/cheminfo/openchemlib-utils/issues/236)) ([ef2d4fd](https://github.com/cheminfo/openchemlib-utils/commit/ef2d4fde6d354c37f3601dc9e798945783cbc9fa))
+
 ## [8.15.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.15.0...v8.15.1) (2026-05-07)
 
 
