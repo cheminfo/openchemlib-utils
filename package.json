@@ -18,6 +18,7 @@
     "src"
   ],
   "scripts": {
+    "bench": "vitest bench",
     "build": "npm run tsc && cheminfo-build --entry lib/index.js --root OCLUtils",
     "check-types": "tsc --noEmit",
     "clean": "rimraf coverage lib",

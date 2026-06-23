@@ -1,50 +1,22 @@
-import type { LightLogger } from 'cheminfo-types';
-
-import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
-import { makeRacemic } from '../util/makeRacemic.js';
-import { tagAtom } from '../util/tagAtom.ts';
-
 import type { TopicMolecule } from './TopicMolecule.ts';
+import { getEnantioIDs } from './getEnantioIDs.ts';
 
-export interface GetCanonizedDiaIDsOptions {
-  maxNbAtoms: number;
-  logger: LightLogger;
-}
-
-export function getCanonizedDiaIDs(
-  diaMol: TopicMolecule,
-  options: GetCanonizedDiaIDsOptions,
-) {
-  const { logger, maxNbAtoms } = options;
-  const moleculeWithH = diaMol.moleculeWithH;
-  if (moleculeWithH.getAllAtoms() > maxNbAtoms) {
-    logger.warn(
-      `too many atoms to evaluate heterotopic chiral bonds: ${moleculeWithH.getAllAtoms()} > ${maxNbAtoms}`,
-    );
-    return [];
+/**
+ * Computes canonical diastereotopic IDs indexed by `finalRanks` (not by atom
+ * position). The rank-indexed layout is required so that the cached array can
+ * be reused across `TopicMolecule` instances with the same `idCode` but
+ * different atom orderings (see `fromMolecule`).
+ * @param topicMolecule
+ */
+export function getCanonizedDiaIDs(topicMolecule: TopicMolecule): string[] {
+  // `racemic: true` collapses the absolute enantioIDs into diaIDs that are
+  // identical for both enantiomers (they encode the diastereotopic environment
+  // only, not the absolute configuration).
+  const atomIDs = getEnantioIDs(topicMolecule, { racemic: true });
+  const finalRanks = topicMolecule.finalRanks;
+  const canonized = new Array<string>(atomIDs.length);
+  for (let i = 0; i < atomIDs.length; i++) {
+    canonized[finalRanks[i]] = atomIDs[i];
   }
-  const heterotopicSymmetryRanks = diaMol.heterotopicSymmetryRanks;
-  const finalRanks = diaMol.finalRanks;
-  const canonizedDiaIDs = new Array(moleculeWithH.getAllAtoms());
-  moleculeWithH.ensureHelperArrays(
-    diaMol.molecule.getOCL().Molecule.cHelperSymmetryStereoHeterotopicity,
-  );
-  const cache: Record<string, any> = {};
-  for (let i = 0; i < diaMol.moleculeWithH.getAllAtoms(); i++) {
-    const rank = heterotopicSymmetryRanks[i];
-    if (rank && cache[rank]) {
-      canonizedDiaIDs[finalRanks[i]] = cache[rank].diaID;
-      continue;
-    }
-    const tempMolecule = getCompactCopyWithoutCustomLabels(
-      diaMol.moleculeWithH,
-    );
-    tagAtom(tempMolecule, i);
-    makeRacemic(tempMolecule);
-    const diaID = tempMolecule.getCanonizedIDCode(
-      diaMol.molecule.getOCL().Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
-    );
-    canonizedDiaIDs[finalRanks[i]] = diaID;
-  }
-  return canonizedDiaIDs;
+  return canonized;
 }
