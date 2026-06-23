@@ -5,7 +5,9 @@ import { getHoseCodesForAtomsAsFragments } from '../hose/getHoseCodesForAtomsAsF
 import type { AtomPath } from '../path/getAllAtomsPaths.ts';
 import { getAllAtomsPaths } from '../path/getAllAtomsPaths.ts';
 import { ensureMapNo } from '../util/ensureMapNo.ts';
+import { getCompactCopyWithoutCustomLabels } from '../util/getCompactCopyWithoutCustomLabels.ts';
 import { getConnectivityMatrix } from '../util/getConnectivityMatrix.js';
+import { tagAtom } from '../util/tagAtom.ts';
 
 import type { HoseCodesOptions } from './HoseCodesOptions.js';
 import { getCanonizedDiaIDs } from './getCanonizedDiaIDs.ts';
@@ -16,6 +18,7 @@ import type {
 } from './getCanonizedHoseCodesForPaths.ts';
 import { getCanonizedHoseCodesForPath } from './getCanonizedHoseCodesForPaths.ts';
 import { getDiaIDsAndInfo } from './getDiaIDsAndInfo.ts';
+import { getEnantioIDs } from './getEnantioIDs.ts';
 import {
   getFinalRanks,
   getHeterotopicSymmetryRanks,
@@ -281,6 +284,7 @@ export class TopicMolecule {
     topicMolecule.cache = {
       canonizedDiaIDs: this.cache.canonizedDiaIDs,
       canonizedHoseCodes: this.cache.canonizedHoseCodes,
+      prochiralityByEnantioID: this.cache.prochiralityByEnantioID,
     };
     return topicMolecule;
   }
@@ -323,6 +327,22 @@ export class TopicMolecule {
   }
 
   /**
+   * Computes a canonical ID for each atom in `moleculeWithH` that encodes
+   * absolute stereochemistry (no `makeRacemic` step). Unlike `diaIDs`,
+   * these IDs differ between enantiomers and are used as cache keys for
+   * pro-R / pro-S assignment so that each enantiomer gets an independent
+   * computation.
+   */
+  get enantioIDs(): string[] {
+    if (this.cache.enantioIDs) return this.cache.enantioIDs;
+    this.cache.enantioIDs =
+      this.moleculeWithH.getAllAtoms() <= this.options.maxNbAtoms
+        ? getEnantioIDs(this)
+        : [];
+    return this.cache.enantioIDs;
+  }
+
+  /**
    * We return the atomIDs corresponding to the specified diaID as well has the attached hydrogens or heavy atoms
    * @param diaID
    * @returns
@@ -350,10 +370,14 @@ export class TopicMolecule {
 
   private get canonizedDiaIDs() {
     if (this.cache.canonizedDiaIDs) return this.cache.canonizedDiaIDs;
-    this.cache.canonizedDiaIDs = getCanonizedDiaIDs(this, {
-      maxNbAtoms: this.options.maxNbAtoms,
-      logger: this.options.logger,
-    });
+    if (this.moleculeWithH.getAllAtoms() > this.options.maxNbAtoms) {
+      this.options.logger.warn(
+        `too many atoms to evaluate heterotopic chiral bonds: ${this.moleculeWithH.getAllAtoms()} > ${this.options.maxNbAtoms}`,
+      );
+      this.cache.canonizedDiaIDs = [];
+      return [];
+    }
+    this.cache.canonizedDiaIDs = getCanonizedDiaIDs(this);
     return this.cache.canonizedDiaIDs;
   }
 
@@ -453,6 +477,101 @@ export class TopicMolecule {
   }
 
   /**
+   * Returns an array, indexed by atom number in `moleculeWithH`, holding the
+   * pro-R / pro-S descriptor (`'r'` or `'s'`) for every hydrogen of a CH2
+   * whose two hydrogens are diastereotopic. Atoms that are not labelled
+   * prochiral hydrogens hold `undefined`. The underlying hash
+   * (`prochiralityByEnantioID`) is keyed by `enantioID`, which encodes
+   * absolute stereochemistry, so two enantiomers receive independent
+   * assignments. Hydrogens are never R or S themselves (that is a
+   * stereocenter descriptor), so the label is always lowercase regardless
+   * of whether the prochiral carbon is a true or a pseudoasymmetric centre.
+   * The assignment is determined by replacing one H with a higher-priority
+   * pseudo-atom (via `tagAtom`) and reading `getAtomCIPParity` of the carbon.
+   * @returns array of `'r'` / `'s'` / `undefined` indexed by atom number
+   */
+  get prochiralities(): Array<'r' | 's' | undefined> {
+    if (this.cache.prochiralities) return this.cache.prochiralities;
+    const map = this.prochiralityByEnantioID;
+    const enantioIDs = this.enantioIDs;
+    const result = new Array<'r' | 's' | undefined>(enantioIDs.length);
+    for (let atom = 0; atom < enantioIDs.length; atom++) {
+      result[atom] = map[enantioIDs[atom]];
+    }
+    this.cache.prochiralities = result;
+    return result;
+  }
+
+  /**
+   * Hash from `enantioID` to the pro-R / pro-S descriptor (`'r'` or `'s'`).
+   * Only entries for hydrogens that actually carry a prochiral descriptor
+   * are present. Keyed by absolute IDs (no `makeRacemic`), so enantiomers
+   * get independent entries. Transferred across instances by `fromMolecule()`.
+   * @returns map from enantioID string to `'r'` or `'s'`
+   */
+  private get prochiralityByEnantioID(): Record<string, 'r' | 's'> {
+    if (this.cache.prochiralityByEnantioID) {
+      return this.cache.prochiralityByEnantioID;
+    }
+    this.cache.prochiralityByEnantioID = computeProchiralityByEnantioID(this);
+    return this.cache.prochiralityByEnantioID;
+  }
+
+  /**
+   * Set a pro-R / pro-S `customLabel` on each diastereotopic CH2 hydrogen,
+   * appended as lowercase `r` or `s`. Idempotent: calling it again replaces
+   * any trailing pro-R / pro-S letter rather than stacking. The label is
+   * appended to whatever `customLabel` the hydrogen already has, falling
+   * back to the parent carbon's `customLabel` when the hydrogen has none.
+   * Both `molecule` and `moleculeWithH` are labelled in place, sharing the
+   * same cached `prochiralityByEnantioID` hash; on `molecule` only hydrogens
+   * that are explicit (i.e. exist as atoms there) receive a label.
+   * Repeated calls do no extra CIP work.
+   * @returns The number of hydrogens labelled in `moleculeWithH`
+   */
+  setProchiralHydrogenLabels(): number {
+    const moleculeWithH = this.moleculeWithH;
+    const molecule = this.molecule;
+    const moleculeAtoms = molecule.getAllAtoms();
+    const map = this.prochiralityByEnantioID;
+    const enantioIDs = this.enantioIDs;
+    let count = 0;
+    for (let atom = 0; atom < enantioIDs.length; atom++) {
+      const letter = map[enantioIDs[atom]];
+      if (!letter) continue;
+      appendProchiralLabel(
+        moleculeWithH,
+        atom,
+        moleculeWithH.getConnAtom(atom, 0),
+        letter,
+      );
+      count++;
+      if (atom < moleculeAtoms && molecule.getAtomicNo(atom) === 1) {
+        appendProchiralLabel(
+          molecule,
+          atom,
+          molecule.getConnAtom(atom, 0),
+          letter,
+        );
+      }
+    }
+    return count;
+  }
+
+  /**
+   * Remove a trailing pro-R / pro-S character (`r` or `s`) from the
+   * `customLabel` of every hydrogen that carries one, in both `molecule`
+   * and `moleculeWithH`. Idempotent. Hydrogens whose `customLabel` does
+   * not end with `r` or `s` are left untouched.
+   * @returns The number of labels that were stripped from `moleculeWithH`
+   */
+  removeProchiralHydrogenLabels(): number {
+    const count = stripTrailingProchiralLetter(this.moleculeWithH);
+    stripTrailingProchiralLetter(this.molecule);
+    return count;
+  }
+
+  /**
    * This method returns a mapping between the diaIDs of the current molecule.
    * It expects that the initial molfile and the final molfile contains atomMapNo
    * in order to track which atom becomes which one.
@@ -509,6 +628,88 @@ export class TopicMolecule {
     }
     return mapping;
   }
+}
+
+function computeProchiralityByEnantioID(
+  topicMolecule: TopicMolecule,
+): Record<string, 'r' | 's'> {
+  const target = topicMolecule.moleculeWithH;
+  const { Molecule } = target.getOCL();
+  const enantioIDs = topicMolecule.enantioIDs;
+  const result: Record<string, 'r' | 's'> = {};
+
+  for (let atom = 0; atom < target.getAllAtoms(); atom++) {
+    if (target.getAtomicNo(atom) !== 6) continue;
+
+    const hydrogens: number[] = [];
+    let nonHydrogenCount = 0;
+    for (let j = 0; j < target.getAllConnAtoms(atom); j++) {
+      const connected = target.getConnAtom(atom, j);
+      if (target.getAtomicNo(connected) === 1) {
+        hydrogens.push(connected);
+      } else {
+        nonHydrogenCount++;
+      }
+    }
+
+    if (hydrogens.length !== 2 || nonHydrogenCount !== 2) continue;
+
+    const enantioID0 = enantioIDs[hydrogens[0]];
+    const enantioID1 = enantioIDs[hydrogens[1]];
+    if (enantioID0 === enantioID1) continue;
+    if (result[enantioID0] && result[enantioID1]) continue;
+
+    const probe = getCompactCopyWithoutCustomLabels(target);
+    tagAtom(probe, hydrogens[0]);
+    probe.ensureHelperArrays(Molecule.cHelperCIP);
+    const cipParity = probe.getAtomCIPParity(atom);
+
+    if (cipParity === Molecule.cAtomCIPParityRorM) {
+      result[enantioID0] = 'r';
+      result[enantioID1] = 's';
+    } else if (cipParity === Molecule.cAtomCIPParitySorP) {
+      result[enantioID0] = 's';
+      result[enantioID1] = 'r';
+    }
+  }
+
+  return result;
+}
+
+function appendProchiralLabel(
+  molecule: Molecule,
+  hydrogen: number,
+  parent: number,
+  letter: 'r' | 's',
+) {
+  const existing = molecule.getAtomCustomLabel(hydrogen);
+  if (existing) {
+    molecule.setAtomCustomLabel(
+      hydrogen,
+      existing.replace(/[rs]$/, '') + letter,
+    );
+    return;
+  }
+  const parentLabel = molecule.getAtomCustomLabel(parent);
+  if (parentLabel) {
+    molecule.setAtomCustomLabel(hydrogen, parentLabel + letter);
+    return;
+  }
+  molecule.setAtomCustomLabel(hydrogen, letter);
+}
+
+function stripTrailingProchiralLetter(molecule: Molecule): number {
+  let count = 0;
+  for (let atom = 0; atom < molecule.getAllAtoms(); atom++) {
+    if (molecule.getAtomicNo(atom) !== 1) continue;
+    const customLabel = molecule.getAtomCustomLabel(atom);
+    if (!customLabel) continue;
+    const stripped = customLabel.replace(/[rs]$/, '');
+    if (stripped === customLabel) continue;
+    molecule.setAtomCustomLabel(atom, stripped || null);
+    count++;
+  }
+  return count;
 }
 
 export interface DiaIDAndInfo {

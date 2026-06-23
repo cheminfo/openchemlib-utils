@@ -1,11 +1,11 @@
 import type { DiaIDAndInfo, TopicMolecule } from './TopicMolecule.ts';
 
 export function getDiaIDsAndInfo(
-  diaMol: TopicMolecule,
+  topicMolecule: TopicMolecule,
   canonizedDiaIDs: string[],
 ) {
   const newDiaIDs: DiaIDAndInfo[] = [];
-  const molecule = diaMol.moleculeWithH;
+  const molecule = topicMolecule.moleculeWithH;
 
   const counts: Record<string, number> = {};
   for (const diaID of canonizedDiaIDs) {
@@ -16,7 +16,7 @@ export function getDiaIDsAndInfo(
   }
 
   for (let i = 0; i < canonizedDiaIDs.length; i++) {
-    const diaID = canonizedDiaIDs[diaMol.finalRanks[i]];
+    const diaID = canonizedDiaIDs[topicMolecule.finalRanks[i]];
     if (!diaID) {
       throw new Error(`Unexpected missing canonized diaID for atom ${i}`);
     }
@@ -36,14 +36,14 @@ export function getDiaIDsAndInfo(
     };
     if (molecule.getAtomicNo(i) === 1) {
       const atom = molecule.getConnAtom(i, 0);
-      newDiaID.heavyAtom = canonizedDiaIDs[diaMol.finalRanks[atom]];
+      newDiaID.heavyAtom = canonizedDiaIDs[topicMolecule.finalRanks[atom]];
     }
     for (let j = 0; j < molecule.getAllConnAtoms(i); j++) {
       const atom = molecule.getConnAtom(i, j);
       if (molecule.getAtomicNo(atom) === 1) {
         newDiaID.nbAttachedHydrogens++;
         newDiaID.attachedHydrogens.push(atom);
-        const hydrogenDiaID = canonizedDiaIDs[diaMol.finalRanks[atom]];
+        const hydrogenDiaID = canonizedDiaIDs[topicMolecule.finalRanks[atom]];
         if (!hydrogenDiaID) {
           throw new Error(
             `Unexpected missing canonized diaID for atom ${atom}`,
