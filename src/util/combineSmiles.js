@@ -84,7 +84,7 @@ function appendMolecule(molecules, core, rGroups, currents, OCL) {
   if (!molecules[idCode]) {
     const molecule = {};
     molecules[idCode] = molecule;
-    molecule.smiles = currentMol.toSmiles();
+    molecule.smiles = currentMol.toIsomericSmiles();
     molecule.combinedSmiles = newSmiles;
     molecule.idCode = idCode;
     molecule.molfile = currentMol.toMolfile();

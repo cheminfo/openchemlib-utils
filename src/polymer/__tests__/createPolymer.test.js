@@ -12,7 +12,7 @@ test('createPolymer, default values', () => {
   unit.setAtomicNo(4, r2);
   const polymer = createPolymer(unit);
 
-  expect(polymer.toSmiles()).toBe('CCOCCOCCOCCOCCOCCOCCOCCOCCOCCO');
+  expect(polymer.toIsomericSmiles()).toBe('CCOCCOCCOCCOCCOCCOCCOCCOCCOCCO');
 });
 
 test('createPolymer, just 2 units of ethylene glycol', () => {
@@ -30,7 +30,7 @@ test('createPolymer, just 2 units of ethylene glycol', () => {
     gamma,
   });
 
-  expect(polymer.toSmiles()).toBe('ClCCOCCOBr');
+  expect(polymer.toIsomericSmiles()).toBe('ClCCOCCOBr');
 });
 
 test('createPolymer, just 2 units of ethylene glycol but mark the units', () => {
@@ -69,7 +69,7 @@ test('createPolymer, just 2 units of ethylene glycol but mark the units', () => 
 
   expect(monomerTwoCounter).toBe(3);
 
-  expect(polymer.toSmiles()).toBe('ClCCOCCOBr');
+  expect(polymer.toIsomericSmiles()).toBe('ClCCOCCOBr');
 });
 
 test('all the exceptions', () => {
