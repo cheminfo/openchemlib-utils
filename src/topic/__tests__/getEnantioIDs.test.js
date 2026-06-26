@@ -51,6 +51,16 @@ function getSortedHydrogenLabels(topicMolecule) {
   return labels.toSorted();
 }
 
+// idCode that encodes the custom labels. The labels sit on hydrogens, which a
+// canonizer drops as "simple"; switching to fragment mode keeps every explicit
+// hydrogen so the pro-R / pro-S labels survive the round-trip.
+function getLabeledIDCode(molecule) {
+  const { Canonizer } = molecule.getOCL();
+  const copy = molecule.getCompactCopy();
+  copy.setFragment(true);
+  return new Canonizer(copy, { encodeAtomCustomLabels: true }).getIDCode();
+}
+
 /**
  * Returns the SMILES of `molecule` with `hydrogen` turned into a deuterium
  * (mass 2). Marking a single CH2 hydrogen makes its carbon a stereocenter, so
@@ -99,7 +109,9 @@ test('ethanol (CCO): the CH2 hydrogens are enantiotopic — same diaID, differen
   expect(new Set(topicMolecule.diaIDs).size).toBe(6);
   expect(new Set(enantioIDs).size).toBe(7);
 
-  const count = topicMolecule.setProchiralHydrogenLabels();
+  const count = topicMolecule.setProchiralHydrogenLabels({
+    includeEnantiotopic: true,
+  });
 
   expect(count).toBe(2);
 
@@ -110,7 +122,11 @@ test('ethanol (CCO): the CH2 hydrogens are enantiotopic — same diaID, differen
     ch2.hydrogens[1],
   );
 
-  expect([label0, label1].toSorted()).toStrictEqual(['r', 's']);
+  expect([label0, label1].toSorted()).toStrictEqual([']r', ']s']);
+
+  expect(getLabeledIDCode(topicMolecule.moleculeWithH)).toBe(
+    String.raw`gJQDAh@pBSUUHa|aB{}Df[n\muN`,
+  );
 
   // The exact enantioID → pro-R / pro-S mapping, for verification in external
   // software. Snapshotted because idCodes can contain non-printable bytes. The
@@ -156,15 +172,21 @@ test('propan-1-ol (CCCO): both CH2 groups are enantiotopic and prochiral', () =>
   expect(new Set(topicMolecule.diaIDs).size).toBe(8);
   expect(new Set(topicMolecule.enantioIDs).size).toBe(10);
 
-  const count = topicMolecule.setProchiralHydrogenLabels();
+  const count = topicMolecule.setProchiralHydrogenLabels({
+    includeEnantiotopic: true,
+  });
 
   expect(count).toBe(4);
   expect(getSortedHydrogenLabels(topicMolecule)).toStrictEqual([
-    'r',
-    'r',
-    's',
-    's',
+    ']r',
+    ']r',
+    ']s',
+    ']s',
   ]);
+
+  expect(getLabeledIDCode(topicMolecule.moleculeWithH)).toBe(
+    'daxHH@r@J@Z@z@RZZjjdaH`~PHkotIL[n\\fzgYny~[j\\',
+  );
 
   const mapping = {};
   for (const group of groups) {
@@ -206,17 +228,23 @@ test('butan-1-ol (CCCCO): all three CH2 groups are enantiotopic and prochiral', 
   expect(new Set(topicMolecule.diaIDs).size).toBe(10);
   expect(new Set(topicMolecule.enantioIDs).size).toBe(13);
 
-  const count = topicMolecule.setProchiralHydrogenLabels();
+  const count = topicMolecule.setProchiralHydrogenLabels({
+    includeEnantiotopic: true,
+  });
 
   expect(count).toBe(6);
   expect(getSortedHydrogenLabels(topicMolecule)).toStrictEqual([
-    'r',
-    'r',
-    'r',
-    's',
-    's',
-    's',
+    ']r',
+    ']r',
+    ']r',
+    ']s',
+    ']s',
+    ']s',
   ]);
+
+  expect(getLabeledIDCode(topicMolecule.moleculeWithH)).toBe(
+    'dmTHX@r@J@Z@z@f@V@rJQRFRjjjrDbiA|`PO_hrXw\\yMuNs]s|wT|mwNk]S`',
+  );
 
   const mapping = {};
   for (const group of groups) {

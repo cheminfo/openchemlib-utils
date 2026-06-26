@@ -2,7 +2,7 @@
 
 exports[`CC[C@H](C)Cl: diaIDs and pro-R/pro-S assignment of the CH2 hydrogens 1`] = `
 {
-  "gGPDALfHRYjjThQ@_iDBIU@": "s",
-  "gGPDALfHRYjjThU@_iDBIU@": "r",
+  "gGPDALfHRYjjThQ@_iDBIU@": "]s",
+  "gGPDALfHRYjjThU@_iDBIU@": "]r",
 }
 `;

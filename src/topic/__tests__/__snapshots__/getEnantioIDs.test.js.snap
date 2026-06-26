@@ -3,27 +3,27 @@
 exports[`butan-1-ol (CCCCO): all three CH2 groups are enantiotopic and prochiral 1`] = `
 {
   "gGQHBIeIejjQA~dPHeT": {
-    "proChirality": "s",
+    "proChirality": "]s",
     "smiles": "[H]C([H])(C)[C@]([H])([2H])C([H])([H])O",
   },
   "gGQHBIeIejjRA~dPHeT": {
-    "proChirality": "r",
+    "proChirality": "]r",
     "smiles": "[H]C([H])(C)[C@@]([H])([2H])C([H])([H])O",
   },
   "gGQHDIeImjjQA~dPHeT": {
-    "proChirality": "s",
+    "proChirality": "]s",
     "smiles": "[H]C([H])(C)C([H])([H])[C@]([H])([2H])O",
   },
   "gGQHDIeImjjRA~dPHeT": {
-    "proChirality": "r",
+    "proChirality": "]r",
     "smiles": "[H]C([H])(C)C([H])([H])[C@@]([H])([2H])O",
   },
   "gGQHJIeIgjjQA~dPHeT": {
-    "proChirality": "s",
+    "proChirality": "]s",
     "smiles": "[H]C([H])(C([H])([H])O)[C@@]([H])([2H])C",
   },
   "gGQHJIeIgjjRA~dPHeT": {
-    "proChirality": "r",
+    "proChirality": "]r",
     "smiles": "[H]C([H])(C([H])([H])O)[C@]([H])([2H])C",
   },
 }
@@ -32,11 +32,11 @@ exports[`butan-1-ol (CCCCO): all three CH2 groups are enantiotopic and prochiral
 exports[`ethanol (CCO): the CH2 hydrogens are enantiotopic — same diaID, different enantioID 1`] = `
 {
   "gCaHDIeIjiDGzQ@bUP": {
-    "proChirality": "s",
+    "proChirality": "]s",
     "smiles": "[H][C@]([2H])(C)O",
   },
   "gCaHDIeIjiHGzQ@bUP": {
-    "proChirality": "r",
+    "proChirality": "]r",
     "smiles": "[H][C@@]([2H])(C)O",
   },
 }
@@ -45,19 +45,19 @@ exports[`ethanol (CCO): the CH2 hydrogens are enantiotopic — same diaID, diffe
 exports[`propan-1-ol (CCCO): both CH2 groups are enantiotopic and prochiral 1`] = `
 {
   "gJQHBIeIfjdP_iDBIU@": {
-    "proChirality": "s",
+    "proChirality": "]s",
     "smiles": "[H]C([H])([C@@]([H])([2H])C)O",
   },
   "gJQHBIeIfjd\`_iDBIU@": {
-    "proChirality": "r",
+    "proChirality": "]r",
     "smiles": "[H]C([H])([C@]([H])([2H])C)O",
   },
   "gJQHDIeInjdP_iDBIU@": {
-    "proChirality": "s",
+    "proChirality": "]s",
     "smiles": "[H]C([H])(C)[C@]([H])([2H])O",
   },
   "gJQHDIeInjd\`_iDBIU@": {
-    "proChirality": "r",
+    "proChirality": "]r",
     "smiles": "[H]C([H])(C)[C@@]([H])([2H])O",
   },
 }
