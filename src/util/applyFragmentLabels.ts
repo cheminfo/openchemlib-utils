@@ -14,11 +14,7 @@ export interface ApplyFragmentLabelsOptions {
    * @default 'overlapping'
    */
   algorithm?:
-    | 'firstMatch'
-    | 'separated'
-    | 'overlapping'
-    | 'rigorous'
-    | 'unique';
+    'firstMatch' | 'separated' | 'overlapping' | 'rigorous' | 'unique';
   prefix?: string;
   suffix?: string;
 }
