@@ -1,5 +1,5 @@
 import { Molecule } from 'openchemlib';
-import { expect, test } from 'vitest';
+import { expect, onTestFinished, test, vi } from 'vitest';
 
 import { TopicMolecule } from '../TopicMolecule';
 
@@ -10,22 +10,14 @@ test('symmetric atoms with the same heterotopic rank share a cached diaID (no re
   const topicMolecule = new TopicMolecule(molecule);
 
   const oclModule = molecule.getOCL().Molecule;
-  let canonizationCalls = 0;
-  const originalGetCanonizedIDCode = oclModule.prototype.getCanonizedIDCode;
-  oclModule.prototype.getCanonizedIDCode = function spy(...args) {
-    canonizationCalls++;
-    return originalGetCanonizedIDCode.apply(this, args);
-  };
+  const spy = vi.spyOn(oclModule.prototype, 'getCanonizedIDCode');
+  onTestFinished(() => spy.mockRestore());
 
-  try {
-    const diaIDs = topicMolecule.diaIDs;
+  const diaIDs = topicMolecule.diaIDs;
 
-    expect(diaIDs).toHaveLength(12);
-    expect(canonizationCalls).toBe(2);
-    expect(new Set(diaIDs).size).toBe(2);
-  } finally {
-    oclModule.prototype.getCanonizedIDCode = originalGetCanonizedIDCode;
-  }
+  expect(diaIDs).toHaveLength(12);
+  expect(spy).toHaveBeenCalledTimes(2);
+  expect(new Set(diaIDs).size).toBe(2);
 });
 
 test('a molecule with all-distinct atoms still gets one canonization per atom', () => {
