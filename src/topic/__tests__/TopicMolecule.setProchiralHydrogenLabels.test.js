@@ -1,5 +1,5 @@
 import { Molecule } from 'openchemlib';
-import { expect, test } from 'vitest';
+import { expect, onTestFinished, test, vi } from 'vitest';
 
 import { TopicMolecule } from '../TopicMolecule';
 
@@ -205,6 +205,17 @@ test('canonizedProchiralities is transferred across TopicMolecule instances with
   const molecule = Molecule.fromSmiles('CC(Cl)CC');
   const original = new TopicMolecule(molecule);
 
+  // Compute the original labels once, populating its prochirality cache.
+  expect(
+    original.prochiralities.filter((l) => l !== undefined).toSorted(),
+  ).toStrictEqual(['r', 's']);
+
+  // Count only the dedicated CIP computation (the exact cHelperCIP bit);
+  // composite requests that merely include that bit are unrelated.
+  const oclMolecule = molecule.getOCL().Molecule;
+  const spy = vi.spyOn(oclMolecule.prototype, 'ensureHelperArrays');
+  onTestFinished(() => spy.mockRestore());
+
   const reused = original.fromMolecule(molecule);
 
   // The transferred entry is the very same object: that shared reference is the
@@ -216,6 +227,12 @@ test('canonizedProchiralities is transferred across TopicMolecule instances with
   expect(
     reused.prochiralities.filter((l) => l !== undefined).toSorted(),
   ).toStrictEqual(['r', 's']);
+
+  const cipCalls = spy.mock.calls.filter(
+    ([bits]) => bits === oclMolecule.cHelperCIP,
+  ).length;
+
+  expect(cipCalls).toBe(0);
 });
 
 test('CC(Cl)CC: implicit-H molecule gets no labels, only moleculeWithH does', () => {
