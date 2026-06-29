@@ -16,4 +16,10 @@ export default defineConfig(
       'jsdoc/no-defaults': 'off', // this would remove our default values https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-defaults.md#readme
     },
   },
+  {
+    files: ['examples/**'],
+    rules: {
+      'no-console': 'off',
+    },
+  },
 );

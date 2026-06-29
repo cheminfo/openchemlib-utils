@@ -498,7 +498,7 @@ function extratMapNo(molfile) {
   const lines = molfile.split(/\r?\n/).slice(4);
   const atomMapNos = [];
   for (let line of lines) {
-    const atomMapNo = line.split(/\s+/)[14];
+    const atomMapNo = line.split(/\s+/, 15)[14];
     if (atomMapNo) {
       atomMapNos.push(Number(atomMapNo));
     }

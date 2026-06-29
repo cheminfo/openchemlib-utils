@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/better-dom-traversing */
+
 import { Molecule } from 'openchemlib';
 import { describe, expect, it } from 'vitest';
 
