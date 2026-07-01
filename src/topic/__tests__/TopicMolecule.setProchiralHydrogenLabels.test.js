@@ -92,7 +92,13 @@ test('CC[C@H](C)Cl: diaIDs and pro-R/pro-S assignment of the CH2 hydrogens', () 
   const label0 = moleculeWithH.getAtomCustomLabel(ch2Hydrogens[0]);
   const label1 = moleculeWithH.getAtomCustomLabel(ch2Hydrogens[1]);
 
-  expect([label0, label1].toSorted()).toStrictEqual(['r', 's']);
+  expect([label0, label1].toSorted()).toStrictEqual([']r', ']s']);
+
+  expect(
+    moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe(String.raw`gNpLADV@\@dsUURbRC}De[n]muN`);
 
   // Snapshot captures the diaID → r/s mapping for verification in external software
   expect({ [diaID0]: label0, [diaID1]: label1 }).toMatchSnapshot();
@@ -138,7 +144,13 @@ test('CC(Cl)CC: the CH2 hydrogens get distinct pro-R / pro-S labels', () => {
     .map((l) => l.label)
     .toSorted();
 
-  expect(labels).toStrictEqual(['r', 's']);
+  expect(labels).toStrictEqual([']r', ']s']);
+
+  expect(
+    topicMolecule.moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe(String.raw`gNpLADV@\@dsUUReBP_hdk]smnip`);
 });
 
 test('CC1CCC1 (methylcyclobutane): the four CH2 hydrogens at C2/C4 are labelled, the apex CH2 is not', () => {
@@ -152,7 +164,13 @@ test('CC1CCC1 (methylcyclobutane): the four CH2 hydrogens at C2/C4 are labelled,
     .map((l) => l.label)
     .toSorted();
 
-  expect(labels).toStrictEqual(['r', 'r', 's', 's']);
+  expect(labels).toStrictEqual([']r', ']r', ']s', ']s']);
+
+  expect(
+    topicMolecule.moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe('did@HL`B`N`A`LddTlRjjjdAT`_hRXw\\yMuOs]sbwTx');
 });
 
 test('CC(Cl)CC: heavy-atom customLabel is inherited by the labelled hydrogens', () => {
@@ -178,10 +196,52 @@ test('CC(Cl)CC: heavy-atom customLabel is inherited by the labelled hydrogens', 
   topicMolecule.setProchiralHydrogenLabels();
   const labels = getHydrogenLabels(topicMolecule)
     .map((l) => l.label)
-    .filter((l) => l.startsWith('3'))
+    .filter((l) => l.startsWith(']3'))
     .toSorted();
 
-  expect(labels).toStrictEqual(['3r', '3s']);
+  expect(labels).toStrictEqual([']3r', ']3s']);
+
+  expect(
+    moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe('gNpLADV@\\@dsUUReBP_idUfo]sYww\\r\\');
+});
+
+test('CCO (ethanol): enantiotopic CH2 hydrogens are not labelled by default', () => {
+  const molecule = Molecule.fromSmiles('CCO');
+  const topicMolecule = new TopicMolecule(molecule);
+
+  expect(topicMolecule.setProchiralHydrogenLabels()).toBe(0);
+
+  const labels = getHydrogenLabels(topicMolecule).map((l) => l.label);
+
+  expect(labels).toStrictEqual([]);
+});
+
+test('CCO (ethanol): enantiotopic CH2 hydrogens are labelled with includeEnantiotopic', () => {
+  const molecule = Molecule.fromSmiles('CCO');
+  const topicMolecule = new TopicMolecule(molecule);
+
+  expect(
+    topicMolecule.setProchiralHydrogenLabels({ includeEnantiotopic: true }),
+  ).toBe(2);
+
+  const labels = getHydrogenLabels(topicMolecule)
+    .map((l) => l.label)
+    .toSorted();
+
+  expect(labels).toStrictEqual([']r', ']s']);
+});
+
+test('OCc1ccccc1 (benzyl alcohol): enantiotopic CH2 is skipped by default, kept when requested', () => {
+  const def = new TopicMolecule(Molecule.fromSmiles('OCc1ccccc1'));
+
+  expect(def.setProchiralHydrogenLabels()).toBe(0);
+
+  const all = new TopicMolecule(Molecule.fromSmiles('OCc1ccccc1'));
+
+  expect(all.setProchiralHydrogenLabels({ includeEnantiotopic: true })).toBe(2);
 });
 
 test('prochiralities is an atom-indexed cached array of r/s/undefined', () => {
@@ -254,7 +314,7 @@ test('CC(Cl)CC: implicit-H molecule gets no labels, only moleculeWithH does', ()
     .map((l) => l.label)
     .toSorted();
 
-  expect(inMoleculeWithH).toStrictEqual(['r', 's']);
+  expect(inMoleculeWithH).toStrictEqual([']r', ']s']);
 });
 
 test('explicit-H molecule: both molecule and moleculeWithH get labels', () => {
@@ -271,13 +331,13 @@ test('explicit-H molecule: both molecule and moleculeWithH get labels', () => {
     if (label) inMolecule.push(label);
   }
 
-  expect(inMolecule.toSorted()).toStrictEqual(['r', 's']);
+  expect(inMolecule.toSorted()).toStrictEqual([']r', ']s']);
 
   const inMoleculeWithH = getHydrogenLabels(topicMolecule)
     .map((l) => l.label)
     .toSorted();
 
-  expect(inMoleculeWithH).toStrictEqual(['r', 's']);
+  expect(inMoleculeWithH).toStrictEqual([']r', ']s']);
 
   // removeProchiralHydrogenLabels strips both targets.
   topicMolecule.removeProchiralHydrogenLabels();
@@ -303,7 +363,7 @@ test('setProchiralHydrogenLabels replaces an existing trailing r/s rather than s
     .map((l) => l.label)
     .toSorted();
 
-  expect(labels).toStrictEqual(['r', 's']);
+  expect(labels).toStrictEqual([']r', ']s']);
 });
 
 test('setProchiralHydrogenLabels preserves a heavy-atom prefix when retagging', () => {
@@ -331,10 +391,10 @@ test('setProchiralHydrogenLabels preserves a heavy-atom prefix when retagging', 
 
   const labels = getHydrogenLabels(topicMolecule)
     .map((l) => l.label)
-    .filter((l) => l.startsWith('3'))
+    .filter((l) => l.startsWith(']3'))
     .toSorted();
 
-  expect(labels).toStrictEqual(['3r', '3s']);
+  expect(labels).toStrictEqual([']3r', ']3s']);
 });
 
 test('removeProchiralHydrogenLabels strips the trailing pro-R / pro-S letter', () => {
@@ -375,5 +435,5 @@ test('removeProchiralHydrogenLabels is idempotent and preserves the heavy-atom p
     .map((l) => l.label)
     .toSorted();
 
-  expect(labels).toStrictEqual(['3', '3']);
+  expect(labels).toStrictEqual([']3', ']3']);
 });

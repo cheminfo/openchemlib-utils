@@ -100,6 +100,17 @@ interface GetHoseFragmentOptions {
   tagAtomFct?: (molecule: Molecule, iAtom: number) => undefined;
 }
 
+export interface SetProchiralHydrogenLabelsOptions {
+  /**
+   * Also label enantiotopic CH2 hydrogens. They carry a genuine pro-R / pro-S
+   * descriptor but are equivalent in an achiral environment (e.g. the CH2 of
+   * ethanol), so they are skipped by default; diastereotopic (NMR-inequivalent)
+   * hydrogens are always labelled.
+   * @default false
+   */
+  includeEnantiotopic?: boolean;
+}
+
 /**
  * This class deals with topicity information and hose codes
  * It is optimized to avoid recalculation of the same information
@@ -518,27 +529,32 @@ export class TopicMolecule {
   }
 
   /**
-   * Set a pro-R / pro-S `customLabel` on each diastereotopic CH2 hydrogen,
-   * appended as lowercase `r` or `s`. Idempotent: calling it again replaces
-   * any trailing pro-R / pro-S letter rather than stacking. The label is
-   * appended to whatever `customLabel` the hydrogen already has, falling
-   * back to the parent carbon's `customLabel` when the hydrogen has none.
-   * Both `molecule` and `moleculeWithH` are labelled in place, sharing the
-   * same cached `prochiralityByEnantioID` hash; on `molecule` only hydrogens
-   * that are explicit (i.e. exist as atoms there) receive a label.
-   * Repeated calls do no extra CIP work.
+   * Set a pro-R / pro-S `customLabel` (lowercase `r` / `s`) on each prochiral
+   * CH2 hydrogen, in both `molecule` and `moleculeWithH`. The label is prefixed
+   * with `']'` so OCL renders it as a superscript, and appended to the
+   * hydrogen's existing `customLabel` (or the parent carbon's). By default only
+   * diastereotopic hydrogens are labelled; pass `includeEnantiotopic` to also
+   * label enantiotopic ones. Idempotent and does no extra CIP work on repeat.
+   * @param options - controls which prochiral hydrogens are labelled
    * @returns The number of hydrogens labelled in `moleculeWithH`
    */
-  setProchiralHydrogenLabels(): number {
+  setProchiralHydrogenLabels(
+    options: SetProchiralHydrogenLabelsOptions = {},
+  ): number {
+    const { includeEnantiotopic = false } = options;
     const moleculeWithH = this.moleculeWithH;
     const molecule = this.molecule;
     const moleculeAtoms = molecule.getAllAtoms();
     const map = this.prochiralityByEnantioID;
     const enantioIDs = this.enantioIDs;
+    const diaIDs = includeEnantiotopic ? null : this.diaIDs;
     let count = 0;
     for (let atom = 0; atom < enantioIDs.length; atom++) {
       const letter = map[enantioIDs[atom]];
       if (!letter) continue;
+      if (diaIDs && !isDiastereotopicHydrogen(moleculeWithH, diaIDs, atom)) {
+        continue;
+      }
       appendProchiralLabel(
         moleculeWithH,
         atom,
@@ -561,7 +577,8 @@ export class TopicMolecule {
   /**
    * Remove a trailing pro-R / pro-S character (`r` or `s`) from the
    * `customLabel` of every hydrogen that carries one, in both `molecule`
-   * and `moleculeWithH`. Idempotent. Hydrogens whose `customLabel` does
+   * and `moleculeWithH`. A label left as just the superscript marker `']'`
+   * is removed entirely. Idempotent. Hydrogens whose `customLabel` does
    * not end with `r` or `s` are left untouched.
    * @returns The number of labels that were stripped from `moleculeWithH`
    */
@@ -676,6 +693,24 @@ function computeProchiralityByEnantioID(
   return result;
 }
 
+// Two geminal CH2 hydrogens are diastereotopic when their (racemic) diaIDs
+// differ; an equal diaID means they are enantiotopic (equivalent in an achiral
+// environment) and should be skipped unless explicitly requested.
+function isDiastereotopicHydrogen(
+  molecule: Molecule,
+  diaIDs: string[],
+  hydrogen: number,
+): boolean {
+  const carbon = molecule.getConnAtom(hydrogen, 0);
+  for (let j = 0; j < molecule.getAllConnAtoms(carbon); j++) {
+    const connected = molecule.getConnAtom(carbon, j);
+    if (connected !== hydrogen && molecule.getAtomicNo(connected) === 1) {
+      return diaIDs[hydrogen] !== diaIDs[connected];
+    }
+  }
+  return false;
+}
+
 function appendProchiralLabel(
   molecule: Molecule,
   hydrogen: number,
@@ -686,16 +721,23 @@ function appendProchiralLabel(
   if (existing) {
     molecule.setAtomCustomLabel(
       hydrogen,
-      existing.replace(/[rs]$/, '') + letter,
+      toSuperscript(existing.replace(/[rs]$/, '')) + letter,
     );
     return;
   }
   const parentLabel = molecule.getAtomCustomLabel(parent);
   if (parentLabel) {
-    molecule.setAtomCustomLabel(hydrogen, parentLabel + letter);
+    molecule.setAtomCustomLabel(hydrogen, toSuperscript(parentLabel) + letter);
     return;
   }
-  molecule.setAtomCustomLabel(hydrogen, letter);
+  molecule.setAtomCustomLabel(hydrogen, `]${letter}`);
+}
+
+// OCL renders a custom label as a superscript at the top-left of the atom when
+// it starts with ']'. Keep the prochiral descriptor (and any inherited prefix)
+// superscript, matching the skeleton numbering produced by `applyFragmentLabels`.
+function toSuperscript(label: string): string {
+  return label.startsWith(']') ? label : `]${label}`;
 }
 
 function stripTrailingProchiralLetter(molecule: Molecule): number {
@@ -706,7 +748,10 @@ function stripTrailingProchiralLetter(molecule: Molecule): number {
     if (!customLabel) continue;
     const stripped = customLabel.replace(/[rs]$/, '');
     if (stripped === customLabel) continue;
-    molecule.setAtomCustomLabel(atom, stripped || null);
+    molecule.setAtomCustomLabel(
+      atom,
+      stripped && stripped !== ']' ? stripped : null,
+    );
     count++;
   }
   return count;
