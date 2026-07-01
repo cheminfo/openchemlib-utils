@@ -52,16 +52,6 @@ function getHydrogenLabels(topicMolecule) {
   return labels;
 }
 
-// idCode that encodes the custom labels. The labels sit on hydrogens, which a
-// canonizer drops as "simple"; switching to fragment mode keeps every explicit
-// hydrogen so the pro-R / pro-S labels survive the round-trip.
-function getLabeledIDCode(molecule) {
-  const { Canonizer } = molecule.getOCL();
-  const copy = molecule.getCompactCopy();
-  copy.setFragment(true);
-  return new Canonizer(copy, { encodeAtomCustomLabels: true }).getIDCode();
-}
-
 test('CC[C@H](C)Cl: diaIDs and pro-R/pro-S assignment of the CH2 hydrogens', () => {
   const molecule = Molecule.fromSmiles('CC[C@H](C)Cl');
   const topicMolecule = new TopicMolecule(molecule);
@@ -104,9 +94,11 @@ test('CC[C@H](C)Cl: diaIDs and pro-R/pro-S assignment of the CH2 hydrogens', () 
 
   expect([label0, label1].toSorted()).toStrictEqual([']r', ']s']);
 
-  expect(getLabeledIDCode(moleculeWithH)).toBe(
-    'gNpLADV@\\@dsUURbRGvd[cwzIJw\\{[j\\',
-  );
+  expect(
+    moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe(String.raw`gNpLADV@\@dsUURbRC}De[n]muN`);
 
   // Snapshot captures the diaID → r/s mapping for verification in external software
   expect({ [diaID0]: label0, [diaID1]: label1 }).toMatchSnapshot();
@@ -154,9 +146,11 @@ test('CC(Cl)CC: the CH2 hydrogens get distinct pro-R / pro-S labels', () => {
 
   expect(labels).toStrictEqual([']r', ']s']);
 
-  expect(getLabeledIDCode(topicMolecule.moleculeWithH)).toBe(
-    'gNpLADV@\\@dsUUReBP~tc\\^\u007FQIV{g[]S`',
-  );
+  expect(
+    topicMolecule.moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe(String.raw`gNpLADV@\@dsUUReBP_hdk]smnip`);
 });
 
 test('CC1CCC1 (methylcyclobutane): the four CH2 hydrogens at C2/C4 are labelled, the apex CH2 is not', () => {
@@ -172,9 +166,11 @@ test('CC1CCC1 (methylcyclobutane): the four CH2 hydrogens at C2/C4 are labelled,
 
   expect(labels).toStrictEqual([']r', ']r', ']s', ']s']);
 
-  expect(getLabeledIDCode(topicMolecule.moleculeWithH)).toBe(
-    'did@HL`B`N`A`LddTlRjjjdAT`~rHSF{}BSF{gIni~[n\\Vzg@',
-  );
+  expect(
+    topicMolecule.moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe('did@HL`B`N`A`LddTlRjjjdAT`_hRXw\\yMuOs]sbwTx');
 });
 
 test('CC(Cl)CC: heavy-atom customLabel is inherited by the labelled hydrogens', () => {
@@ -205,9 +201,11 @@ test('CC(Cl)CC: heavy-atom customLabel is inherited by the labelled hydrogens', 
 
   expect(labels).toStrictEqual([']3r', ']3s']);
 
-  expect(getLabeledIDCode(moleculeWithH)).toBe(
-    'gNpLADV@\\@dsUUReBP~tc\\^\u007FSHkM^{fsonydx',
-  );
+  expect(
+    moleculeWithH.getCanonizedIDCode(
+      Molecule.CANONIZER_ENCODE_ATOM_CUSTOM_LABELS,
+    ),
+  ).toBe('gNpLADV@\\@dsUUReBP_idUfo]sYww\\r\\');
 });
 
 test('CCO (ethanol): enantiotopic CH2 hydrogens are not labelled by default', () => {
