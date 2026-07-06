@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.17.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.17.0...v8.17.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* update sdf-parser to v9 ([#241](https://github.com/cheminfo/openchemlib-utils/issues/241)) ([91390f5](https://github.com/cheminfo/openchemlib-utils/commit/91390f55065163b886977c7a824a5dcccffebe94))
+
 ## [8.17.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.16.0...v8.17.0) (2026-06-23)
 
 
