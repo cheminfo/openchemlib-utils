@@ -1,4 +1,5 @@
 export * from './topic/TopicMolecule.js';
+export * from './topic/getMagneticEquivalenceGroups.js';
 
 export * from './diastereotopic/ensureHeterotopicChiralBonds.js';
 export * from './diastereotopic/getDiastereotopicAtomIDs.js';

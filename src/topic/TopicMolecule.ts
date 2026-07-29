@@ -23,6 +23,11 @@ import {
   getFinalRanks,
   getHeterotopicSymmetryRanks,
 } from './getHeterotopicSymmetryRanks.ts';
+import type {
+  MagneticEquivalenceGroup,
+  MagneticEquivalenceOptions,
+} from './getMagneticEquivalenceGroups.ts';
+import { getMagneticEquivalenceGroups } from './getMagneticEquivalenceGroups.ts';
 import { getMoleculeWithH } from './getMoleculeWithH.ts';
 import { getXMolecule } from './getXMolecule.ts';
 
@@ -402,6 +407,37 @@ export class TopicMolecule {
     }
     this.cache.diaIDsAndInfo = getDiaIDsAndInfo(this, this.canonizedDiaIDs);
     return this.cache.diaIDsAndInfo;
+  }
+
+  /**
+   * Sets of magnetically equivalent atoms of the current moleculeWithH.
+   * This is stricter than the diastereotopic equivalence of `diaIDs`: atoms of
+   * one group not only share a chemical shift, they also relate identically to
+   * every other atom and therefore share all their coupling constants. The
+   * three hydrogens of a methyl form one group, while the four aromatic
+   * hydrogens of p-xylene, which share one diaID, form four groups.
+   * Singletons are included, so every atom belongs to exactly one group.
+   * @returns the groups, sorted by their first atom
+   */
+  get magneticEquivalenceGroups(): MagneticEquivalenceGroup[] {
+    if (this.cache.magneticEquivalenceGroups) {
+      return this.cache.magneticEquivalenceGroups;
+    }
+    this.cache.magneticEquivalenceGroups = getMagneticEquivalenceGroups(this);
+    return this.cache.magneticEquivalenceGroups;
+  }
+
+  /**
+   * Same as the `magneticEquivalenceGroups` getter but allows to tune the hose
+   * codes and the largest path length that still counts as a coupling. The
+   * result is not cached.
+   * @param options - hose code options, plus the largest coupling path length
+   * @returns the groups, sorted by their first atom
+   */
+  getMagneticEquivalenceGroups(
+    options: MagneticEquivalenceOptions = {},
+  ): MagneticEquivalenceGroup[] {
+    return getMagneticEquivalenceGroups(this, options);
   }
 
   /**
