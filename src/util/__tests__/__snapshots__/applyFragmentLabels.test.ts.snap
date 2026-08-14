@@ -2,7 +2,7 @@
 
 exports[`default option find all matching 1`] = `
 "
-Actelion Java MolfileCreator 1.0
+OCL MolfileCreator  2D
 
  14 13  0  0  0  0  0  0  0  0999 V2000
     9.5263    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
@@ -86,7 +86,7 @@ M  END
 
 exports[`separated, we can not reuse twice the same atoms 1`] = `
 "
-Actelion Java MolfileCreator 1.0
+OCL MolfileCreator  2D
 
  14 13  0  0  0  0  0  0  0  0999 V2000
     9.5263    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
@@ -146,7 +146,7 @@ M  END
 
 exports[`with prefix and suffix 1`] = `
 "
-Actelion Java MolfileCreator 1.0
+OCL MolfileCreator  2D
 
  14 13  0  0  0  0  0  0  0  0999 V2000
     9.5263    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
