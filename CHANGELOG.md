@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.18.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.17.1...v8.18.0) (2026-08-14)
+
+
+### Features
+
+* prochiral labels use superscript and skip enantiotopic by default ([#243](https://github.com/cheminfo/openchemlib-utils/issues/243)) ([00a6047](https://github.com/cheminfo/openchemlib-utils/commit/00a6047f2efd1db3343e26ed2c3273de5e1a1a2e))
+* update OCL to v9.25.0 ([#245](https://github.com/cheminfo/openchemlib-utils/issues/245)) ([239d08f](https://github.com/cheminfo/openchemlib-utils/commit/239d08f34eb349d4a19ec2f9a9c0fc20b8209cfd))
+
 ## [8.17.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.17.0...v8.17.1) (2026-06-29)
 
 
