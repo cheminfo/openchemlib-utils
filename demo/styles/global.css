@@ -1,0 +1,449 @@
+/* This is a debug view: density beats breathing room everywhere. Blueprint 6
+   derives almost every padding, height and gap from `--bp-surface-spacing`, so
+   shrinking that token plus the typography scale compacts the whole design
+   system at once; the rules below only fix up what Blueprint hard-codes. */
+:root {
+  --demo-surface: #ffffff;
+  --demo-line: rgb(138 155 168 / 40%);
+  --demo-tint: rgb(138 155 168 / 15%);
+
+  /* One spacing step for every block, card and row of the demo. */
+  --demo-gap: 6px;
+
+  --bp-surface-spacing: 3px;
+  --bp-typography-size-body-large: 13px;
+  --bp-typography-size-body-medium: 12px;
+  --bp-typography-size-body-small: 11px;
+  --bp-typography-line-height-default: 1.25;
+  --bp-typography-line-height-large: 1.35;
+}
+
+body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.bp6-card {
+  padding: var(--demo-gap);
+}
+
+.bp6-heading {
+  margin: 0 0 var(--demo-gap);
+}
+
+h3.bp6-heading {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+h4.bp6-heading {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+h5.bp6-heading,
+h6.bp6-heading {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.bp6-tab {
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.bp6-callout {
+  padding: var(--demo-gap);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.bp6-callout.bp6-callout-icon,
+.bp6-callout[class*='bp6-icon-'] {
+  padding-left: 24px;
+}
+
+.bp6-callout[class*='bp6-icon-']::before {
+  top: var(--demo-gap);
+  left: var(--demo-gap);
+}
+
+.bp6-callout ul {
+  margin: 2px 0;
+  padding-left: 16px;
+}
+
+/* Control labels sit in flex rows here, so the stacking margin is never wanted. */
+.bp6-control {
+  margin-bottom: 0;
+}
+
+.bp6-control.bp6-switch:not(.bp6-align-right) {
+  padding-inline-start: 30px;
+}
+
+.bp6-control.bp6-switch:not(.bp6-align-right) .bp6-control-indicator {
+  margin-inline-start: -30px;
+}
+
+.bp6-menu {
+  min-width: 0;
+  padding: 2px;
+}
+
+.bp6-menu-item {
+  padding: 1px 5px;
+  line-height: 17px;
+}
+
+.bp6-menu-header > h6 {
+  padding: 5px 5px 0;
+  line-height: 14px;
+}
+
+.bp6-menu-divider,
+.bp6-menu-header {
+  margin: 2px -2px;
+}
+
+table.bp6-html-table {
+  font-size: 12px;
+}
+
+table.bp6-html-table.bp6-compact th,
+table.bp6-html-table.bp6-compact td {
+  padding: 2px 5px;
+}
+
+.bp6-non-ideal-state {
+  padding: var(--demo-gap) 0;
+}
+
+.bp6-non-ideal-state > * {
+  margin-bottom: var(--demo-gap);
+}
+
+.bp6-non-ideal-state .bp6-heading {
+  margin-bottom: 2px;
+}
+
+.bp6-non-ideal-state-description {
+  font-size: 11px;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-gap);
+  padding: var(--demo-gap);
+}
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--demo-gap);
+  border-bottom: 1px solid var(--demo-line);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.app-header a {
+  margin-left: auto;
+}
+
+.tab-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-gap);
+  padding-top: var(--demo-gap);
+}
+
+.diastereotopic-layout,
+.autolabel-layout {
+  display: grid;
+  gap: var(--demo-gap);
+  align-items: start;
+}
+
+/* Both tabs put the wide table on the side that gets 3fr, so it never has to
+   scroll sideways. */
+.diastereotopic-layout {
+  grid-template-columns: minmax(360px, 2fr) minmax(0, 3fr);
+}
+
+.autolabel-layout {
+  grid-template-columns: minmax(0, 3fr) minmax(340px, 2fr);
+}
+
+@media (width <= 1200px) {
+  .diastereotopic-layout,
+  .autolabel-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* A value that copies itself has to be a real button, but must read as a code cell. */
+.code-button {
+  padding: 0;
+  border: none;
+  background: none;
+  line-height: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.header-cell/* A value that copies itself has to be a real button, but must read as a code cell. */
+.code-button {
+  padding: 0;
+  border: none;
+  background: none;
+  line-height: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+/* Tables that must fit their column instead of scrolling sideways. Cells wrap
+   rather than forcing a minimum width the container cannot honour. */
+.fit-table table {
+  width: 100%;
+}
+
+.fit-table th,
+.fit-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-gap);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--demo-gap);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--demo-gap);
+  padding: 3px var(--demo-gap);
+  border: 1px solid var(--demo-line);
+  border-radius: 6px;
+}
+
+.filter-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #5f6b7c;
+  white-space: nowrap;
+}
+
+.filter-grow {
+  flex: 1 1 260px;
+  min-width: 200px;
+}
+
+.stack-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.25;
+}
+
+/* Presets, paste and the drawing share one row; each side column scrolls inside
+   the height the editor imposes. */
+.molecule-input-layout {
+  display: grid;
+  gap: var(--demo-gap);
+  align-items: stretch;
+  grid-template-columns:
+    minmax(190px, 1fr) minmax(230px, 1.2fr)
+    minmax(320px, 2.4fr);
+}
+
+@media (width <= 1200px) {
+  .molecule-input-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.input-column {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* The dividers bleed 4px on each side, so the horizontal padding is kept: with
+   `padding: 0` they overflow and `overflow-y: auto` turns that into a horizontal
+   scrollbar. */
+.preset-list {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 4px;
+  background: none;
+}
+
+.paste-text {
+  flex: 1 1 auto;
+  min-height: 60px;
+  resize: none;
+}
+
+/* The canvas measures its container in pixels, so the wrapper is taken out of the
+   height computation, or container and canvas grow each other forever. The frame
+   height itself is the measured toolbar height, set inline. */
+.editor-frame {
+  position: relative;
+}
+
+.editor-frame > div {
+  position: absolute;
+  inset: 0;
+}
+
+.scroll-table {
+  max-height: 420px;
+  overflow: auto;
+}
+
+.header-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--demo-gap);
+  align-items: center;
+}
+
+.sort-header {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sort-header .bp6-icon {
+  opacity: 35%;
+}
+
+.sort-header:hover .bp6-icon,
+.sort-header-active .bp6-icon {
+  opacity: 100%;
+}
+
+.scroll-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--demo-surface);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-gap);
+  padding: var(--demo-gap);
+  border: 1px solid var(--demo-line);
+  border-radius: 4px;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-gap);
+}
+
+.error-card {
+  white-space: pre-wrap;
+}
+
+.section-title {
+  display: flex;
+  gap: var(--demo-gap);
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.section-title > span {
+  white-space: nowrap;
+}
+
+.section-title .filter-group {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: normal;
+}
+
+.chip-row,
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--demo-gap);
+  align-items: center;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--demo-gap);
+  align-items: baseline;
+}
+
+.thumb-cell {
+  display: inline-block;
+  line-height: 0;
+}
+
+.mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.code-block {
+  margin: 0;
+  padding: var(--demo-gap);
+  overflow: auto;
+  background-color: var(--demo-tint);
+  white-space: pre-wrap;
+}
+
+.muted {
+  opacity: 0.6;
+}
+
+.hose-saturated {
+  background-color: var(--demo-tint);
+  font-style: italic;
+}
+
+.selected {
+  background-color: rgb(255 201 64 / 35%);
+}
