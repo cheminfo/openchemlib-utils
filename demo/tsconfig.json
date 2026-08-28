@@ -1,0 +1,14 @@
+{
+  "extends": "@zakodium/tsconfig/jsx",
+  "compilerOptions": {
+    "allowJs": true,
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "noUncheckedIndexedAccess": false,
+    "types": ["node"],
+    "rootDir": ".."
+  },
+  "include": ["."]
+}

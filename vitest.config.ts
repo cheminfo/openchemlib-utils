@@ -10,6 +10,10 @@ export default defineConfig({
     snapshotFormat: {
       maxOutputLength: Number.MAX_SAFE_INTEGER,
     },
-    include: ['./src/**/*.test.js', './src/**/*.test.ts'],
+    include: [
+      './src/**/*.test.js',
+      './src/**/*.test.ts',
+      './demo/**/*.test.ts',
+    ],
   },
 });

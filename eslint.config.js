@@ -1,4 +1,5 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
+import cheminfoReact from 'eslint-config-cheminfo-react/base';
 import cheminfo from 'eslint-config-cheminfo-typescript';
 import globals from 'globals';
 
@@ -20,6 +21,13 @@ export default defineConfig(
     files: ['examples/**'],
     rules: {
       'no-console': 'off',
+    },
+  },
+  {
+    files: ['demo/**'],
+    extends: [cheminfoReact],
+    rules: {
+      'jsdoc/require-param': ['warn', { checkDestructured: false }],
     },
   },
 );
