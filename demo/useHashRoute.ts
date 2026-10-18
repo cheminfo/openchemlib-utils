@@ -1,6 +1,6 @@
 import { useCallback, useSyncExternalStore } from 'react';
 
-export type RouteId = 'diastereotopic' | 'autolabel';
+export type RouteId = 'diastereotopic' | 'autolabel' | 'peptide';
 
 const DEFAULT_ROUTE: RouteId = 'diastereotopic';
 
@@ -24,7 +24,7 @@ export function useHashRoute(): [RouteId, (route: RouteId) => void] {
  */
 export function parseHash(hash: string): RouteId {
   const name = hash.replace(/^#\/?/, '');
-  return name === 'autolabel' ? 'autolabel' : DEFAULT_ROUTE;
+  return name === 'autolabel' || name === 'peptide' ? name : DEFAULT_ROUTE;
 }
 
 function subscribe(onStoreChange: () => void): () => void {

@@ -193,6 +193,8 @@ export const PRESETS: Preset[] = buildPresets();
 export const PRESETS_BY_TAB: Record<RouteId, Preset[]> = {
   diastereotopic: PRESETS.filter((preset) => preset.tab === 'diastereotopic'),
   autolabel: PRESETS.filter((preset) => preset.tab === 'autolabel'),
+  // The peptide tab carries its own input and examples.
+  peptide: [],
 };
 
 function buildPresets(): Preset[] {

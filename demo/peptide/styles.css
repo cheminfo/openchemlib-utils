@@ -1,0 +1,182 @@
+.peptide-tab {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 24px 48px;
+}
+
+.peptide-tab header h1 {
+  font-size: 20px;
+  margin: 12px 0 4px;
+}
+
+.peptide-tab header p {
+  margin: 0 0 16px;
+  color: #555;
+}
+
+.peptide-tab .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.peptide-tab .controls label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* The drawing and its text share one row; the text stretches to the editor's
+   height, and drops under it on a narrow window. */
+.peptide-tab .structure-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.peptide-tab .structure-editor {
+  flex: 3 1 480px;
+  min-width: 0;
+}
+
+.peptide-tab textarea {
+  flex: 2 1 320px;
+  min-height: 90px;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.peptide-tab .error {
+  color: #a11;
+  font-weight: 600;
+}
+
+.peptide-tab .warning {
+  color: #8a6d00;
+}
+
+.peptide-tab .panels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 16px;
+  align-items: flex-start;
+}
+
+.peptide-tab .structure {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.peptide-tab .table {
+  flex: 1;
+  min-width: 320px;
+  max-height: 560px;
+  overflow: auto;
+}
+
+.peptide-tab table.atoms {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.peptide-tab table.atoms th,
+.peptide-tab table.atoms td {
+  border-bottom: 1px solid #eee;
+  padding: 3px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.peptide-tab table.atoms th {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+}
+
+.peptide-tab table.atoms tr.highlighted {
+  background: #fbe6c2;
+}
+
+.peptide-tab td.mono {
+  font-family: ui-monospace, monospace;
+}
+
+.peptide-tab .empty {
+  color: #777;
+}
+
+.peptide-tab .residues {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.peptide-tab .residue-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.peptide-tab .residue-tabs button {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #dfe3e8;
+  border-radius: 6px;
+  background: #f5f7fa;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.peptide-tab .residue-tabs button.active {
+  border-color: #2d72d2;
+  background: #2d72d2;
+  color: #fff;
+}
+
+.peptide-tab .residue-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.peptide-tab .residue-meta {
+  flex: 1 1 260px;
+  min-width: 260px;
+}
+
+.peptide-tab .residue-meta h3 {
+  margin: 0 0 0.4rem;
+}
+
+.peptide-tab .residue-count {
+  color: #5b6875;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.peptide-tab .residue-names {
+  overflow-wrap: anywhere;
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.peptide-tab .residue-meta details code {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 0.7rem;
+}
