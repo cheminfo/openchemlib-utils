@@ -6,6 +6,7 @@ import { AutoLabelTab } from './autolabel/AutoLabelTab.tsx';
 import { ErrorBoundary } from './components/ErrorBoundary.tsx';
 import { MoleculeInput } from './components/MoleculeInput.tsx';
 import { DiastereotopicTab } from './diastereotopic/DiastereotopicTab.tsx';
+import { PeptideTab } from './peptide/PeptideTab.tsx';
 import { useHashRoute } from './useHashRoute.ts';
 
 const REPOSITORY = 'https://github.com/cheminfo/openchemlib-utils';
@@ -19,7 +20,7 @@ export function App() {
   const [route, setRoute] = useHashRoute();
 
   function handleTabChange(id: TabId) {
-    setRoute(id === 'autolabel' ? 'autolabel' : 'diastereotopic');
+    setRoute(id === 'autolabel' || id === 'peptide' ? id : 'diastereotopic');
   }
 
   return (
@@ -35,19 +36,22 @@ export function App() {
         >
           <Tab id="diastereotopic" title="Diastereotopic protons" />
           <Tab id="autolabel" title="autoLabel database" />
+          <Tab id="peptide" title="Peptide labelling" />
         </Tabs>
         <a href={REPOSITORY} target="_blank" rel="noreferrer">
           cheminfo/openchemlib-utils
         </a>
       </header>
 
-      <Card elevation={1}>
-        <MoleculeInput
-          molfile={molfile}
-          tab={route}
-          onMolfileChange={setMolfile}
-        />
-      </Card>
+      {route === 'peptide' ? null : (
+        <Card elevation={1}>
+          <MoleculeInput
+            molfile={molfile}
+            tab={route}
+            onMolfileChange={setMolfile}
+          />
+        </Card>
+      )}
 
       <div
         role="tabpanel"
@@ -65,6 +69,15 @@ export function App() {
       >
         <ErrorBoundary title="The autoLabel tab failed to render">
           <AutoLabelTab molfile={molfile} />
+        </ErrorBoundary>
+      </div>
+      <div
+        role="tabpanel"
+        id="playground-panel-peptide"
+        hidden={route !== 'peptide'}
+      >
+        <ErrorBoundary title="The peptide tab failed to render">
+          <PeptideTab />
         </ErrorBoundary>
       </div>
     </div>

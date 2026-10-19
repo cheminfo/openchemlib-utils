@@ -18,6 +18,10 @@ test('the autolabel route is recognised', () => {
   expect(parseHash('#/autolabel')).toBe('autolabel');
 });
 
+test('the peptide route is recognised', () => {
+  expect(parseHash('#/peptide')).toBe('peptide');
+});
+
 test('the diastereotopic route is recognised', () => {
   expect(parseHash('#/diastereotopic')).toBe('diastereotopic');
 });

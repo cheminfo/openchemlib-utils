@@ -14,6 +14,8 @@ export * from './hose/getHoseCodesForAtoms.js';
 export * from './hose/getHoseCodesFromDiastereotopicID.js';
 export * from './hose/getHoseCodesForPath.js';
 
+export * from './peptide/labelPeptide.js';
+
 export * from './polymer/createPolymer.js';
 
 export * from './util/autoLabel.js';
