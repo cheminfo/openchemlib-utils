@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.19.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.18.0...v8.19.0) (2026-10-19)
+
+
+### Features
+
+* add labelPeptide, the IUPAC atom names of a peptide ([#249](https://github.com/cheminfo/openchemlib-utils/issues/249)) ([04267b2](https://github.com/cheminfo/openchemlib-utils/commit/04267b292cbfbbdb2484b25617e335f259022322))
+
 ## [8.18.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.17.1...v8.18.0) (2026-08-14)
 
 
