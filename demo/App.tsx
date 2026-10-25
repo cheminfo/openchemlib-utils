@@ -6,8 +6,9 @@ import { AutoLabelTab } from './autolabel/AutoLabelTab.tsx';
 import { ErrorBoundary } from './components/ErrorBoundary.tsx';
 import { MoleculeInput } from './components/MoleculeInput.tsx';
 import { DiastereotopicTab } from './diastereotopic/DiastereotopicTab.tsx';
+import { NMRHintsTab } from './nmrhints/NMRHintsTab.tsx';
 import { PeptideTab } from './peptide/PeptideTab.tsx';
-import { useHashRoute } from './useHashRoute.ts';
+import { toRouteId, useHashRoute } from './useHashRoute.ts';
 
 const REPOSITORY = 'https://github.com/cheminfo/openchemlib-utils';
 
@@ -20,7 +21,7 @@ export function App() {
   const [route, setRoute] = useHashRoute();
 
   function handleTabChange(id: TabId) {
-    setRoute(id === 'autolabel' || id === 'peptide' ? id : 'diastereotopic');
+    setRoute(toRouteId(String(id)));
   }
 
   return (
@@ -37,13 +38,15 @@ export function App() {
           <Tab id="diastereotopic" title="Diastereotopic protons" />
           <Tab id="autolabel" title="autoLabel database" />
           <Tab id="peptide" title="Peptide labelling" />
+          <Tab id="nmrhints" title="NMR hints" />
         </Tabs>
         <a href={REPOSITORY} target="_blank" rel="noreferrer">
           cheminfo/openchemlib-utils
         </a>
       </header>
 
-      {route === 'peptide' ? null : (
+      {/* The peptide and NMR hints tabs bring their own input. */}
+      {route === 'peptide' || route === 'nmrhints' ? null : (
         <Card elevation={1}>
           <MoleculeInput
             molfile={molfile}
@@ -78,6 +81,15 @@ export function App() {
       >
         <ErrorBoundary title="The peptide tab failed to render">
           <PeptideTab />
+        </ErrorBoundary>
+      </div>
+      <div
+        role="tabpanel"
+        id="playground-panel-nmrhints"
+        hidden={route !== 'nmrhints'}
+      >
+        <ErrorBoundary title="The NMR hints tab failed to render">
+          <NMRHintsTab />
         </ErrorBoundary>
       </div>
     </div>

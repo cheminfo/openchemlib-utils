@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import { parseHash } from '../useHashRoute.ts';
+import { parseHash, toRouteId } from '../useHashRoute.ts';
 
 test('an empty hash falls back to the diastereotopic route', () => {
   expect(parseHash('')).toBe('diastereotopic');
@@ -28,4 +28,15 @@ test('the diastereotopic route is recognised', () => {
 
 test('an unknown route falls back to the diastereotopic route', () => {
   expect(parseHash('#/nonsense')).toBe('diastereotopic');
+});
+
+test('the nmrhints route is recognised', () => {
+  expect(parseHash('#/nmrhints')).toBe('nmrhints');
+});
+
+test('a tab id resolves to its route', () => {
+  expect(toRouteId('nmrhints')).toBe('nmrhints');
+  expect(toRouteId('autolabel')).toBe('autolabel');
+  expect(toRouteId('peptide')).toBe('peptide');
+  expect(toRouteId('nonsense')).toBe('diastereotopic');
 });

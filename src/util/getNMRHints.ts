@@ -6,14 +6,19 @@ import { TopicMolecule } from '../topic/TopicMolecule.ts';
 
 import { getUnsaturation } from './getUnsaturation.ts';
 
-interface PossibleHint {
+export interface PossibleHint {
+  /** fragment present in the correct molecule but missing from the proposed one */
   idCode: string;
   message: string;
+  /** fragments of which the proposed molecule must contain at least one for the hint to apply */
   anyMatches?: string[];
   remarks?: string;
 }
 
-const defaultPossibleHints: PossibleHint[] = [
+/**
+ * The fragment-based hints `getNMRHints` uses when no `possibleHints` option is given.
+ */
+export const defaultPossibleHints: PossibleHint[] = [
   {
     idCode: String.raw`eF@Hp\pcB`,
     message: 'What about a non-aromatic ring?',
@@ -208,15 +213,19 @@ export interface NMRHint {
 }
 
 export interface GetNMRHintsOptions {
+  /**
+   * fragment-based hints to check, in the order they are returned
+   * @default defaultPossibleHints
+   */
   possibleHints?: PossibleHint[];
 }
 
 /**
- *
- * @param correct
- * @param proposed
- * @param options
- * @returns
+ * Hints that could help a student move from a proposed structure towards the correct one.
+ * @param correct - the expected structure
+ * @param proposed - the structure the student proposed
+ * @param options - the possible hints to check
+ * @returns the hints, global checks first then fragment hints in list order
  */
 export function getNMRHints(
   correct: Molecule,
