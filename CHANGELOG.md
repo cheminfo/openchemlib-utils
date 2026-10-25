@@ -1,5 +1,17 @@
 # Changelog
 
+## [8.20.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.19.0...v8.20.0) (2026-10-25)
+
+
+### Features
+
+* export defaultPossibleHints and add an NMR hints debug tab to the playground ([371eec5](https://github.com/cheminfo/openchemlib-utils/commit/371eec5b414cfb47eea221769103d3f165303152))
+
+
+### Bug Fixes
+
+* repair corrupted idCodes in the default NMR hints ([4de59ce](https://github.com/cheminfo/openchemlib-utils/commit/4de59ce748952012dcfe189926176ce4f56227f7))
+
 ## [8.19.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.18.0...v8.19.0) (2026-10-19)
 
 
