@@ -1,6 +1,13 @@
 import { useCallback, useSyncExternalStore } from 'react';
 
-export type RouteId = 'diastereotopic' | 'autolabel' | 'peptide';
+export type RouteId = 'diastereotopic' | 'autolabel' | 'peptide' | 'nmrhints';
+
+const ROUTES: readonly RouteId[] = [
+  'diastereotopic',
+  'autolabel',
+  'peptide',
+  'nmrhints',
+];
 
 const DEFAULT_ROUTE: RouteId = 'diastereotopic';
 
@@ -23,8 +30,16 @@ export function useHashRoute(): [RouteId, (route: RouteId) => void] {
  * @returns the matching route, or `'diastereotopic'` when nothing matches
  */
 export function parseHash(hash: string): RouteId {
-  const name = hash.replace(/^#\/?/, '');
-  return name === 'autolabel' || name === 'peptide' ? name : DEFAULT_ROUTE;
+  return toRouteId(hash.replace(/^#\/?/, ''));
+}
+
+/**
+ * Resolves a tab name to a route id.
+ * @param name - the tab id, without any hash prefix
+ * @returns the matching route, or `'diastereotopic'` when nothing matches
+ */
+export function toRouteId(name: string): RouteId {
+  return ROUTES.find((route) => route === name) ?? DEFAULT_ROUTE;
 }
 
 function subscribe(onStoreChange: () => void): () => void {

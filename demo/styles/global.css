@@ -164,7 +164,8 @@ table.bp6-html-table.bp6-compact td {
 }
 
 .diastereotopic-layout,
-.autolabel-layout {
+.autolabel-layout,
+.nmrhints-layout {
   display: grid;
   gap: var(--demo-gap);
   align-items: start;
@@ -176,13 +177,15 @@ table.bp6-html-table.bp6-compact td {
   grid-template-columns: minmax(360px, 2fr) minmax(0, 3fr);
 }
 
-.autolabel-layout {
+.autolabel-layout,
+.nmrhints-layout {
   grid-template-columns: minmax(0, 3fr) minmax(340px, 2fr);
 }
 
 @media (width <= 1200px) {
   .diastereotopic-layout,
-  .autolabel-layout {
+  .autolabel-layout,
+  .nmrhints-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 }
@@ -227,6 +230,11 @@ table.bp6-html-table.bp6-compact td {
 .fit-table td {
   white-space: normal;
   overflow-wrap: anywhere;
+}
+
+.fit-table .nowrap {
+  white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .filter-bar {
@@ -285,6 +293,50 @@ table.bp6-html-table.bp6-compact td {
 
 @media (width <= 1200px) {
   .molecule-input-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Pairs, then each structure as its own paste + drawing column pair. */
+.pair-input-layout {
+  display: grid;
+  gap: var(--demo-gap);
+  align-items: start;
+  grid-template-columns: minmax(170px, 0.7fr) minmax(0, 2fr) minmax(0, 2fr);
+}
+
+.pair-presets {
+  max-height: 400px;
+}
+
+.pair-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-gap);
+  min-width: 0;
+}
+
+.pair-side-body {
+  display: grid;
+  gap: var(--demo-gap);
+  align-items: stretch;
+  grid-template-columns: minmax(150px, 1fr) minmax(260px, 2fr);
+}
+
+@media (width <= 1500px) {
+  .pair-input-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .pair-presets {
+    grid-column: 1 / -1;
+    max-height: 200px;
+  }
+}
+
+@media (width <= 900px) {
+  .pair-input-layout,
+  .pair-side-body {
     grid-template-columns: minmax(0, 1fr);
   }
 }

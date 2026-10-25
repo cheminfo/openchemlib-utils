@@ -195,6 +195,8 @@ export const PRESETS_BY_TAB: Record<RouteId, Preset[]> = {
   autolabel: PRESETS.filter((preset) => preset.tab === 'autolabel'),
   // The peptide tab carries its own input and examples.
   peptide: [],
+  // the NMR hints tab compares two structures and ships its own pair presets
+  nmrhints: [],
 };
 
 function buildPresets(): Preset[] {
