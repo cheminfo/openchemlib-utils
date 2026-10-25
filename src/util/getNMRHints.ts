@@ -15,7 +15,7 @@ interface PossibleHint {
 
 const defaultPossibleHints: PossibleHint[] = [
   {
-    idCode: String.raw`eF@Hp\pcc`,
+    idCode: String.raw`eF@Hp\pcB`,
     message: 'What about a non-aromatic ring?',
   },
   {
@@ -157,13 +157,13 @@ const defaultPossibleHints: PossibleHint[] = [
     remarks: 'para',
   },
   {
-    idCode: 'gFp@DiTt@@CqB^JoV[m',
+    idCode: 'gFp@DiTt@@CqB^JoV[m`',
     anyMatches: ['gFp@DiTt@@CBqXwd@'],
     message: 'Did you think about disubstituted aromatic rings?',
     remarks: 'ortho',
   },
   {
-    idCode: 'gFp@DiTt@@CqB^JoV[m',
+    idCode: 'gFp@DiTt@@CqB^JoV[m`',
     anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB~LmWkM`'],
     message:
       'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
@@ -171,14 +171,14 @@ const defaultPossibleHints: PossibleHint[] = [
   },
   {
     idCode: 'gFp@DiTt@@CqC^LmV[m`',
-    anyMatches: ['gFp@DiTt@@CqB^JoV[m', 'gFp@DiTt@@CqB~LmWkM`'],
+    anyMatches: ['gFp@DiTt@@CqB^JoV[m`', 'gFp@DiTt@@CqB~LmWkM`'],
     message:
       'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     remarks: 'meta',
   },
   {
     idCode: 'gFp@DiTt@@CqB~LmWkM`',
-    anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB^JoV[m'],
+    anyMatches: ['gFp@DiTt@@CqC^LmV[m`', 'gFp@DiTt@@CqB^JoV[m`'],
     message:
       'Disubstituted aromatic ring can be ortho (1,2), meta (1,3) or para (1,4).',
     remarks: 'para',
