@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.20.1](https://github.com/cheminfo/openchemlib-utils/compare/v8.20.0...v8.20.1) (2026-10-27)
+
+
+### Bug Fixes
+
+* update openchemlib to 9.25.2 ([#253](https://github.com/cheminfo/openchemlib-utils/issues/253)) ([ada0043](https://github.com/cheminfo/openchemlib-utils/commit/ada004361d5e46c6b8e17e53bcf257b4d552513a))
+
 ## [8.20.0](https://github.com/cheminfo/openchemlib-utils/compare/v8.19.0...v8.20.0) (2026-10-25)
 
 
