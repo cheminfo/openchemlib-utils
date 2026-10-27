@@ -64,7 +64,7 @@
     "fifo-logger": "^2.0.1",
     "globals": "^17.11.0",
     "mf-parser": "^3.9.2",
-    "openchemlib": "^9.25.0",
+    "openchemlib": "^9.25.2",
     "prettier": "^3.9.6",
     "react": "^19.2.8",
     "react-cheminfo": "^0.57.0",

@@ -48,14 +48,15 @@ test('a non-canonical idCode is reported with its canonical form', () => {
   expect(entry?.fragment.smarts).toBe('C@C');
 });
 
-test('a truncated idCode is reported as not canonical', () => {
+test('a truncated idCode cannot be decoded', () => {
   const [entry] = buildHintCatalog([
     { idCode: 'gFp@DiTt@@CqB^JoV[m', message: 'truncated' },
   ]);
 
-  expect(entry?.issues.map((issue) => issue.label)).toStrictEqual([
-    'idCode not canonical',
-  ]);
+  expect(entry?.fragment.molecule).toBeUndefined();
+  expect(
+    entry?.issues.map((issue) => [issue.level, issue.label]),
+  ).toStrictEqual([['danger', 'invalid idCode']]);
 });
 
 test('an idCode with a doubled backslash cannot be decoded', () => {
@@ -69,9 +70,16 @@ test('an idCode with a doubled backslash cannot be decoded', () => {
   ).toStrictEqual([['danger', 'invalid idCode']]);
 });
 
-test('an idCode that decodes to no atom is invalid', () => {
+test('a one-character idCode cannot be decoded', () => {
   expect(decodeFragment('g')).toStrictEqual({
     idCode: 'g',
+    error: expect.stringContaining('IDCodeParser: unexpected end of ID code'),
+  });
+});
+
+test('an idCode that decodes to no atom is invalid', () => {
+  expect(decodeFragment('')).toStrictEqual({
+    idCode: '',
     error: 'decodes to an empty molecule',
   });
 });
